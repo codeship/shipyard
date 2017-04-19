@@ -1,0 +1,11 @@
+@mixin root($selector)
+  @at-root #{selector-nest($selector, &)}
+    @content
+
+@mixin prepend-to-root($selector)
+  @at-root #{selector-append($selector, &)}
+    @content
+
+@mixin append-to-root($selector)
+  @at-root #{selector-append(&, $selector)}
+    @content

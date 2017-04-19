@@ -1,0 +1,103 @@
+// Responsive Variables
+$breakpoints: (x1: 770px, x2: 920px, x3: 1200px, x4: 1600px);
+$margins: (x0: 10px, x1: 20px, x2: 30px, x3: 30px, x4: 40px);
+
+// Brand Colors: Gray
+$gray: #788594;
+$gray-light: #bac5d2;
+$gray-lighter: #dfe6eb;
+$gray-lightest: #f2f5f7;
+$gray-dark: #313a44;
+$gray-darkest: #1e252c;
+
+// Brand Colors: Green
+$green: #3acc7c;
+$green-light: #97ffc6;
+$green-lightest: #b5ffd6;
+$green-dark: #2c995d;
+$green-darkest: #1d663e;
+
+// Brand Colors: Blue
+$blue: #1ca1e3;
+$blue-light: #5eb9e6;
+$blue-lightest: #9ed8f5;
+$blue-dark: #0075b0;
+$blue-darkest: #004d73;
+
+// Brand Colors: Teal
+$teal: #20a5a8;
+$teal-light: #6ab7b9;
+$teal-lightest: #b2dbdc;
+$teal-dark: #0e6e70;
+$teal-darkest: #00494b;
+
+// Brand Colors: Red
+$red: #e06158;
+$red-light: #f7a09e;
+$red-lightest: #ffc6cb;
+$red-dark: #b13b39;
+$red-darkest: #892120;
+
+// Brand Colors: Yellow
+$yellow: #ffca49;
+$yellow-light: #ffd87e;
+$yellow-lightest: lighten($yellow-light, 10%);
+$yellow-dark: #99782d;
+$yellow-darker: #66501e;
+$yellow-darkest: #33280f;
+
+// Brand Colors: Orange
+$orange: #ff9f49;
+$orange-light: #ffba7d;
+$orange-lightest: #ffd6b1;
+$orange-dark: #cc7f3a;
+$orange-darkest: #995f2c;
+
+// Brand Colors: Coral
+$coral: #f9657a;
+$coral-light: lighten($coral, 10%);
+$coral-lighter: lighten($coral, 15%);
+$coral-lightest: lighten($coral, 20%);
+$coral-dark: darken($coral, 10%);
+$coral-darker: darken($coral, 15%);
+$coral-darkest: darken($coral, 20%);
+
+// Brand Colors: Purple
+$purple: #bf84ff;
+$purple-light: lighten($purple, 10%);
+$purple-lighter: lighten($purple, 15%);
+$purple-lightest: lighten($purple, 20%);
+$purple-dark: darken($purple, 10%);
+$purple-darker: darken($purple, 15%);
+$purple-darkest: darken($purple, 20%);
+
+$bg-color: $gray-lightest;
+
+// Font
+$font-family: "Museo Sans Rounded", Arial, sans-serif;
+
+// Font: Weights
+$normal: 300;
+$italic: 400;
+$medium: 500;
+$medium-italic: 600;
+$bold: 700;
+$bold-italic: 800;
+
+$font-size: 16px;
+$font-size-sm: 14px;
+$font: $normal 16px / 1.6 $font-family;
+$text-color: $gray-dark;
+$text-color-disabled: lighten($gray, 15%);
+$text-color-lightest: lighten($gray, 10%);
+$text-color-lighter: lighten($gray, 7%);
+$text-color-light: lighten($gray, 4%);
+$text-color-darkest: $gray-dark;
+$text-color-darker: lighten($gray-dark, 4%);
+$text-color-dark: lighten($gray-dark, 7%);
+
+$border-color: darken($bg-color, 12%);
+$border-color-dark: darken($border-color, 10%);
+$border-color-light: darken($bg-color, 6%);
+$border-color-lighter: darken($bg-color, 4%);
+$border-color-lightest: darken($bg-color, 2%);

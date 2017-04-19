@@ -1,0 +1,70 @@
+// Used to define the base component class (e.g. "alert") and save it for use later.
+@mixin component($name)
+  $component: $name !global
+  .#{$name}
+    @content
+
+@mixin sub-component($name)
+  $sub-component: "#{$component}-#{$name}" !global
+  &-#{$name}
+    @content
+
+// Uses the base component class defined earlier (e.g. "alert").
+//
+// Notes:
+//   - This mixin only works in tandem with the +component mixin, which must be used first.
+//   - Makes defining styles for states more readable (see example below):
+//
+//   Example Usage:
+//
+//     +component('alert')
+//       &-title
+//         +when('success')
+//           color: green
+//         +when('error')
+//           color: red
+//         +when('warning')
+//           color: yellow
+//         +when('info, default')
+//           color: gray
+//         +when('celebrate', $not: 'success')
+//           color: purple
+//
+//   The above code outputs to:
+//
+//     .alert-success .alert-title { color: green }
+//     .alert-error .alert-title { color: red }
+//     .alert-warning .alert-title { color: yellow }
+//     .alert-info .alert-title,
+//     .alert-default .alert-title { color: gray }
+//     .alert-celebrate:not(.alert-success) .alert-title { color: purple }
+//
+@mixin when($classes: null, $state: null, $not: null, $and: null)
+  +handle-states($component, $classes, $state, $not, $and)
+    @content
+
+@mixin when-sub-state($class)
+  +prepend-to-root(".#{$component}-#{$class}")
+    @content
+
+@mixin sub-state($classes: null, $state: null, $not: null, $and: null)
+  +handle-states($sub-component, $classes, $state, $not, $and)
+    @content
+
+@mixin handle-states($component-name, $classes: null, $state: null, $not: null, $and: null)
+  @if $classes
+    $classes: selector-append(".#{$component-name}-", $classes)
+  @if $state
+    $classes: selector-append(".#{$component-name}", ":#{$state}")
+  @if $not
+    $not: selector-append(".#{$component-name}-", $not)
+    $classes: selector-append($classes, ":not(#{$not})")
+  @if $and
+    $and: selector-append(".#{$component-name}-", $and)
+    $classes: selector-append($classes, $and)
+  @at-root #{selector-nest($classes, &)}
+    @content
+
+@mixin and($class)
+  @at-root #{selector-append(".#{$component}-#{$class}", &)}
+    @content

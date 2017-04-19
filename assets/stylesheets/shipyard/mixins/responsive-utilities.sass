@@ -1,0 +1,112 @@
+// --------------------------------------------------
+// Responsive Mixins (Utilities)
+// --------------------------------------------------
+// Usage:
+// +media(max-width $mobile-max)                          -> styles any screens *smaller* then $mobile-max
+// +media(min-width $tablet-min)                          -> styles any screens *larger* then $tablet-min
+// +media(max-width $tablet-max)                          -> styles any screens *smaller* then $tablet-max
+// +media(min-width $desktop-min)                         -> styles any screens *larger* then $desktop-min
+// +media(min-width 500px)                                -> styles any screens *larger* then 500px
+// +media(max-width 500px)                                -> styles any screens *smaller* then 500px
+// +media(min-height 500px)                               -> styles any screens *taller* then 500px
+// +media(max-height 500px)                               -> styles any screens *shorter* then 500px
+// +media(min-width $tablet-min max-width $tablet-max)    -> styles any screens *between* $tablet-min and $tablet-max
+// +media(min-width 500px max-width 1000px)               -> styles any screens *between* 500px and 1000px wide
+// +media(min-height 500px max-height 1000px)             -> styles any screens *between* 500px and 1000px tall
+@mixin media($args)
+  @if length($args) > 6
+    @media screen and (#{nth($args, 1)}: nth($args, 2)) and (#{nth($args, 3)}: nth($args, 4)), screen and (#{nth($args, 5)}: nth($args, 6)) and (#{nth($args, 7)}: nth($args, 8))
+      @content
+  @else if length($args) > 4
+    @media screen and (#{nth($args, 1)}: nth($args, 2)), screen and (#{nth($args, 3)}: nth($args, 4)) and (#{nth($args, 5)}: nth($args, 6))
+      @content
+  @else if length($args) > 2
+    @media screen and (#{nth($args, 1)}: nth($args, 2)) and (#{nth($args, 3)}: nth($args, 4))
+      @content
+  @else
+    @media screen and (#{nth($args, 1)}: nth($args, 2))
+      @content
+
+@mixin all-media-sizes
+  @content
+  +media-sizes
+    @content
+
+@mixin media-sizes
+  @each $breakpoint, $min-width in $breakpoints
+    &-#{$breakpoint}
+      +media(min-width $min-width)
+        @content
+
+@mixin breakpoint-x0
+  +media(max-width map-get($breakpoints, x1) - 1)
+    @content
+
+@mixin breakpoint-x1
+  +media(min-width map-get($breakpoints, x1))
+    @content
+
+@mixin breakpoint-x2
+  +media(min-width map-get($breakpoints, x2))
+    @content
+
+@mixin breakpoint-x3
+  +media(min-width map-get($breakpoints, x3))
+    @content
+
+@mixin breakpoint-x4
+  +media(min-width map-get($breakpoints, x4))
+    @content
+
+@mixin responsive-padding($properties: null, $divisor: 2)
+  transition: padding 500ms ease
+  @if $properties
+    @each $property in $properties
+      padding-#{$property}: map-get($margins, x0) / $divisor
+    +breakpoint-x1
+      @each $property in $properties
+        padding-#{$property}: map-get($margins, x1) / $divisor
+    +breakpoint-x2
+      @each $property in $properties
+        padding-#{$property}: map-get($margins, x2) / $divisor
+  @else
+    +respond-to(padding, (x0: map-get($margins, x0), x1: map-get($margins, x1), x2: map-get($margins, x2)))
+
+@mixin responsive-margin($properties, $divisor: 2)
+  transition: margin 500ms ease
+  @each $property in $properties
+    margin-#{$property}: map-get($margins, x0) / $divisor
+  +breakpoint-x1
+    @each $property in $properties
+      margin-#{$property}: map-get($margins, x1) / $divisor
+  +breakpoint-x2
+    @each $property in $properties
+      margin-#{$property}: map-get($margins, x2) / $divisor
+
+@mixin respond-to($property, $breakpoints)
+  @if map-has-key($breakpoints, x0)
+    #{$property}: map-get($breakpoints, x0)
+  @if map-has-key($breakpoints, x1)
+    +breakpoint-x1
+      #{$property}: map-get($breakpoints, x1)
+  @if map-has-key($breakpoints, x2)
+    +breakpoint-x2
+      #{$property}: map-get($breakpoints, x2)
+  @if map-has-key($breakpoints, x3)
+    +breakpoint-x3
+      #{$property}: map-get($breakpoints, x3)
+
+@mixin responsive-left
+  +respond-to(left, (x0: map-get($margins, x0), x1: map-get($margins, x1), x2: map-get($margins, x2)))
+
+@mixin responsive-right
+  +respond-to(right, (x0: map-get($margins, x0), x1: map-get($margins, x1), x2: map-get($margins, x2)))
+
+@mixin responsive-padding-left
+  +respond-to(padding-left, (x0: map-get($margins, x0), x1: map-get($margins, x1), x2: map-get($margins, x2)))
+
+@mixin responsive-padding-right
+  +respond-to(padding-right, (x0: map-get($margins, x0), x1: map-get($margins, x1), x2: map-get($margins, x2)))
+
+@function merge-and-add($map1, $map2)
+  @return (x0: map-get($map1, x0) + map-get($map2, x0), x1: map-get($map1, x1) + map-get($map2, x1), x2: map-get($map1, x2) + map-get($map2, x2))

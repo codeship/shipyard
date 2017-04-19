@@ -1,0 +1,104 @@
+@mixin btn-color($color, $text-color: null, $border-color: null)
+  background: $color
+  @if $border-color
+    border-color: $border-color
+  @else
+    border-color: $color
+  @if $text-color
+    color: $text-color
+
+@mixin btn-hover($color, $text-color: null, $border-color: null)
+  &:hover, &:focus, &:active
+    +btn-color($color, $text-color, $border-color)
+
+@mixin btn-size($size)
+  @if $size == xs
+    font-size: 12px
+    padding: 0 10px
+    height: 30px
+    min-width: 30px
+    line-height: 26px
+  @else if $size == sm
+    font-size: 14px
+    padding: 0 15px
+    height: 40px
+    min-width: 40px
+    line-height: 36px
+  @else if $size == md
+    font-size: 16px
+    padding: 0 20px
+    height: 50px
+    min-width: 50px
+    line-height: 46px
+  @else if $size == lg
+    font-size: 18px
+    padding: 0 30px
+    height: 60px
+    min-width: 60px
+    line-height: 56px
+  @else if $size == xl
+    font-size: 20px
+    padding: 0 35px
+    height: 70px
+    min-width: 70px
+    line-height: 66px
+
++component('btn')
+  position: relative
+  display: inline-block
+  border-radius: 5px
+  border: 0
+  cursor: pointer
+  color: #fff
+  transition: background 300ms ease, color 300ms ease, border-color 300ms ease, opacity 300ms ease
+  outline: none
+  border-width: 2px
+  border-style: solid
+  font: $bold 16px / 1.6 $font-family
+  +btn-size(md)
+  +btn-color($gray, #fff)
+  +btn-hover(darken($gray, 10%))
+
+  // Button: Sizes
+  +all-media-sizes
+    @each $size in (xs, sm, md, lg, xl)
+      &-#{$size}
+        +btn-size($size)
+
+  &-margin
+    margin: 0 5px
+
+  // Button: Types
+  &-full
+    display: block
+    width: 100%
+    max-width: 600px
+    margin: 0 auto
+
+  &-primary
+    +btn-color($blue)
+    +btn-hover(darken($blue, 10%))
+
+  &-secondary
+    +btn-color(none, $text-color-light, darken($gray-lightest, 7%))
+    +btn-hover(none, darken($text-color-light, 15%), darken($gray-lightest, 17%))
+
+  &-disabled
+    cursor: not-allowed
+    &, &:hover, &:focus
+      color: $text-color-lightest
+      +btn-color(darken($gray-lightest, 7%))
+    &:active
+      animation: shake .35s infinite
+
+  &-inverse
+    +btn-color(#fff, inherit)
+    +btn-hover($blue, #fff)
+    &.btn-current
+      +btn-hover(#fff, inherit)
+    &-secondary
+      +btn-color(lighten($gray-dark, 10%))
+      +btn-hover($blue, #fff)
+
+  &-current
+    cursor: default

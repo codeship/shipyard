@@ -1,0 +1,55 @@
+@import core
+
+$widths: (auto, 5, 10, 15, 20, 25, 30, 33, 35, 40, 45, 50, 55, 60, 65, 66, 70, 75, 80, 85, 90, 95, 100)
+
+@mixin column-sizes
+  @each $width in $widths
+    &-#{$width}
+      @if $width == auto
+        width: auto
+      @else if $width == 66
+        width: 66.6666666666%
+      @else if $width == 33
+        width: 33.3333333333%
+      @else
+        width: percentage($width / 100)
+
+.container
+  +clearfix
+  margin: 0 auto
+  max-width: 1440px
+  position: relative
+  +responsive-padding(left right, $divisor: 1)
+
+.content
+  @extend .container
+  +responsive-padding(top bottom, $divisor: 1)
+
+.col
+  display: block
+  float: left
+  position: relative
+  +responsive-padding(left right)
+
+  &-container
+    +clearfix
+    +responsive-margin(left right, $divisor: -2)
+
+  &-center
+    float: none
+    margin: 0 auto
+
+  +all-media-sizes
+    +column-sizes
+
+.float
+  +all-media-sizes
+    @each $value in (none, left, right)
+      &-#{$value}
+        float: $value
+
+.display
+  +all-media-sizes
+    @each $value in (block, inline, none)
+      &-#{$value}
+        display: $value
