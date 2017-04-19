@@ -1,6 +1,6 @@
 module Shipyard
   module Rails
-    module ViewHelpers
+    module ButtonHelper
       def btn(name, *args, &block)
         if block_given?
           args << name
