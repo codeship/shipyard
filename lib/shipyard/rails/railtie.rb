@@ -1,4 +1,4 @@
-require 'shipyard/rails/button_helper'
+require 'shipyard/rails/view_helpers'
 
 module Shipyard
   module Rails
