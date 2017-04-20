@@ -1,3 +1,21 @@
+@import core
+
+@mixin btn($size: md, $position: relative, $bg: $gray)
+  position: $position
+  display: inline-block
+  border-radius: 5px
+  border: 0
+  cursor: pointer
+  color: #fff
+  transition: background 300ms ease, color 300ms ease, border-color 300ms ease, opacity 300ms ease
+  outline: none
+  border-width: 2px
+  border-style: solid
+  font: $bold 16px / 1.6 $font-family
+  +btn-size($size)
+  +btn-color($bg, #fff)
+  +btn-hover(darken($bg, 10%))
+
 @mixin btn-color($color, $text-color: null, $border-color: null)
   background: $color
   @if $border-color
@@ -44,20 +62,7 @@
     line-height: 66px
 
 +component('btn')
-  position: relative
-  display: inline-block
-  border-radius: 5px
-  border: 0
-  cursor: pointer
-  color: #fff
-  transition: background 300ms ease, color 300ms ease, border-color 300ms ease, opacity 300ms ease
-  outline: none
-  border-width: 2px
-  border-style: solid
-  font: $bold 16px / 1.6 $font-family
-  +btn-size(md)
-  +btn-color($gray, #fff)
-  +btn-hover(darken($gray, 10%))
+  +btn
 
   // Button: Sizes
   +all-media-sizes
