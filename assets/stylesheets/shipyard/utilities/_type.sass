@@ -1,0 +1,63 @@
+body
+  margin: 0
+  padding: 0 // TODO: Remove this when the new layout is fully launched.
+  font: $font !important // TODO: Remove once the new layout is fully launched for everyone.
+  background: $gray-lightest
+  color: $gray-dark
+  -webkit-font-smoothing: antialiased
+  -moz-osx-font-smoothing: grayscale
+  .legacy-content &
+    background: #fff
+    padding-top: 0 !important
+    text-align: left
+
+a
+  cursor: pointer
+  text-decoration: none
+  color: $blue
+  transition: color 300ms ease, background-color 300ms ease, border-color 300ms ease, box-shadow 300ms ease
+
+hr
+  border: 0 solid $border-color-light
+  border-width: 2px 0 0
+  height: 0
+  margin: 30px 0
+
+.italic
+  font-style: italic
+
+strong, .strong, .bold
+  font-weight: $bold
+
+ul, ol
+  list-style: none
+
+img
+  display: block
+
+button
+  background: none
+  border: none
+  cursor: pointer
+
+p
+  margin: 20px 0
+
+h1, .h1
+  font-size: 28px
+  margin: 15px 0
+h2, .h2
+  font-size: 18px
+  margin: 15px 0
+
+.h-primary
+  margin-bottom: 0
+  +respond-to(font-size, (x0: 24px, x1: 28px))
+.h-secondary
+  color: $text-color-light
+  font-weight: $regular
+  margin-top: 5px
+  +respond-to(font-size, (x0: 16px, x1: 18px))
+
+.white-space-nowrap
+  white-space: nowrap

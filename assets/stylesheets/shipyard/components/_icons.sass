@@ -1,0 +1,54 @@
+svg, path, circle, polyline
+  transition: fill 300ms ease, stroke 300ms ease, opacity 300ms ease
+
++component('icon')
+  fill: $gray
+  display: inline-block
+  transition: fill 300ms ease, stroke 300ms ease, opacity 300ms ease
+  overflow: visible
+  transform-origin: center center
+
+  // Icons w/ Strokes
+  &-outline
+    stroke: $gray
+    &, &-inverse
+      fill: transparent
+      stroke-width: 2px
+      stroke-linecap: round
+      stroke-linejoin: round
+    &-inverse
+      stroke: #fff !important
+
+  &-arrow-down
+    @extend .icon-outline
+    +width-height(10px, 6px)
+
+  &-plus
+    @extend .icon-outline
+    +width-height(6px, 6px)
+
+  // Icon: Sizes
+  $sizes: (xs: 8px, sm: 16px, md: 24px, lg: 32px, xl: 44px)
+  +all-media-sizes
+    @each $size, $value in $sizes
+      &-#{$size}
+        +width-height($value, $value)
+
+  &-btn
+    position: relative
+    display: inline-block
+    border: 2px solid $gray
+    border-radius: 50%
+    text-align: center
+    transition: border-color 300ms ease
+    @each $size, $value in (xs: 16px, sm: 24px, md: 32px, lg: 40px, xl: 48px)
+      &-#{$size}
+        +width-height($value, $value)
+    a:hover &
+      border-color: darken($gray, 12%)
+
+    &-inverse
+      border-color: #fff !important
+
+  &-inverse
+    fill: #fff

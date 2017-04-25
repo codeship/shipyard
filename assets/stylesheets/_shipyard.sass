@@ -1,12 +1,22 @@
-// Shipyard Core
-@import shipyard/variables
-@import shipyard/mixins/grid-utilities
-@import shipyard/mixins/selector-utilities
-@import shipyard/mixins/responsive-utilities
-@import shipyard/mixins/component-utilities
+// Fonts
+@import url('https://fonts.googleapis.com/css?family=Lato')
 
-// Components
-@import shipyard/buttons
+// Shipyard Core
+@import "shipyard/variables"
+@import "shipyard/mixins/box-model"
+@import "shipyard/mixins/selectors"
+@import "shipyard/mixins/responsive"
+@import "shipyard/mixins/components"
+@import "shipyard/mixins/positioning"
+
+// Shipyard Utilities
+@import "shipyard/utilities/reset"
+@import "shipyard/utilities/type"
+@import "shipyard/utilities/grid"
 
 // Component Utilities
-@import shipyard/grid
+@import "shipyard/components/buttons"
+@import "shipyard/components/icons"
+
+// Components
+@import "shipyard/components/hero"

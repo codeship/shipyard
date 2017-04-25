@@ -1,6 +1,7 @@
 // Responsive Variables
 $breakpoints: (x1: 770px, x2: 920px, x3: 1200px, x4: 1600px);
 $margins: (x0: 10px, x1: 20px, x2: 30px, x3: 30px, x4: 40px);
+$header-height: (x0: 50px, x1: 60px, x2: 70px);
 
 // Brand Colors: Gray
 $gray: #788594;
@@ -74,19 +75,17 @@ $purple-darkest: darken($purple, 20%);
 $bg-color: $gray-lightest;
 
 // Font
-$font-family: "Museo Sans Rounded", Arial, sans-serif;
+$font-family: 'Lato', sans-serif;
 
 // Font: Weights
-$normal: 300;
-$italic: 400;
-$medium: 500;
-$medium-italic: 600;
-$bold: 700;
-$bold-italic: 800;
+$light: 300;
+$regular: 400;
+$medium: 700;
+$bold: 900;
 
 $font-size: 16px;
 $font-size-sm: 14px;
-$font: $normal 16px / 1.6 $font-family;
+$font: $light 16px / 1.6 $font-family;
 $text-color: $gray-dark;
 $text-color-disabled: lighten($gray, 15%);
 $text-color-lightest: lighten($gray, 10%);

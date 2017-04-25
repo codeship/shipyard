@@ -1,0 +1,12 @@
+@mixin center($vertical: false, $horizontal: false)
+  position: absolute
+  @if $vertical
+    top: 50%
+    transform: translatey(-50%)
+  @else if $horizontal
+    left: 50%
+    transform: translatex(-50%)
+  @else
+    top: 50%
+    left: 50%
+    transform: translate(-50%, -50%)

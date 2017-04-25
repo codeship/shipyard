@@ -1,0 +1,17 @@
+.align
+  +all-media-sizes
+    @each $value in (center, left, right)
+      &-#{$value}
+        text-align: $value
+
+.center
+  +all-media-sizes
+    +center
+
+.v-center
+  +all-media-sizes
+    +center($vertical: true)
+
+.h-center
+  +all-media-sizes
+    +center($horizontal: true)

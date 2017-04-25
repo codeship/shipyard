@@ -1,0 +1,38 @@
+.rjw-alert
+  display: block
+  border-radius: 5px
+  background: $blue
+  color: #fff
+  min-height: 60px
+  position: relative
+  +respond-to(padding, (x0: 10px, x1: 12px 20px, x2: 12px 30px))
+  +respond-to(margin-bottom, (x0: 10px, x1: 20px, x2: 30px))
+  a
+    color: #fff
+    &:not(.btn)
+      font-weight: $medium
+  &-txt
+    margin: 0
+    +breakpoint-x1
+      top: 50%
+      position: absolute
+      transform: translatey(-50%)
+  &-success
+    background: $green
+  &-warning
+    background: $yellow
+  &-error
+    background: $red
+  &-description
+    opacity: 0.75
+  &-cta
+    +btn-color(darken($blue, 10%))
+    +breakpoint-x0
+      display: block
+      text-align: center
+      margin-top: 10px
+    +breakpoint-x1
+      top: 50%
+      right: 10px
+      position: absolute
+      transform: translatey(-50%)

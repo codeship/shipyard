@@ -1,0 +1,86 @@
++component('hero')
+  $hero-height: (x0: 120px, x1: 180px, x2: 190px)
+  overflow: hidden
+  text-align: center
+  position: relative
+  background: $gray-darkest
+  transition: height 500ms ease, padding 500ms ease
+  +respond-to(height, merge-and-add($hero-height, $header-height))
+  +respond-to(padding-top, $header-height)
+
+  &-container
+    height: 100%
+    position: relative
+    z-index: 1
+
+  &-title
+    margin: 0
+    color: #fff
+    width: 100%
+    overflow: hidden
+    line-height: 1.275
+    white-space: nowrap
+    text-overflow: ellipsis
+    +responsive-padding(left right, $divisor: 1)
+    +respond-to(font-size, (x0: 20px, x1: 24px, x2: 26px))
+    &-margin
+      margin: 0 0 10px
+    &-x0-absolute
+      +breakpoint-x0
+        top: 50%
+        left: 50%
+        position: absolute
+        transform: translate(-50%, -50%)
+    &-link
+      color: inherit
+      &:hover
+        color: lighten($blue-light, 5%)
+
+  &-chart
+    position: absolute
+    right: 0
+    bottom: 0
+    height: auto !important
+    &-container
+      position: absolute
+      height: 100%
+      +responsive-right
+    &-bar
+      stroke: lighten($gray-darkest, 7%)
+      stroke-width: 6px
+      stroke-linecap: round
+      stroke-linejoin: round
+      stroke-dasharray: 0, 10px
+
+  &-content
+    position: relative
+    +width-height(100%, 100%)
+    +responsive-padding(left right, $divisor: 1)
+    &-auto
+      @extend .hero-content
+      +breakpoint-x1
+        height: auto
+
+  &-cta
+    +breakpoint-x0
+      position: fixed
+      top: 10px
+      right: 10px
+      z-index: 1000
+      border: none
+      &, &:hover
+        background: none
+    +respond-to(margin, (x1: 10px 5px))
+
+    &-icon
+      stroke: $gray-light
+      +when('cta:hover')
+        stroke: #fff
+      +breakpoint-x0
+        +width-height(20px, 20px)
+        +center
+      +breakpoint-x1
+        +width-height(12px, 12px)
+        margin-right: 5px
+        position: relative
+        top: 2px
