@@ -1,26 +1,27 @@
-.rjw-alert
+.alert
   display: block
   border-radius: 5px
   background: $blue
-  color: #fff
-  min-height: 60px
+  color: rgba(#fff,.9)
   position: relative
-  +respond-to(padding, (x0: 10px, x1: 12px 20px, x2: 12px 30px))
-  +respond-to(margin-bottom, (x0: 10px, x1: 20px, x2: 30px))
-  a
+  +respond-to(min-height, (x0: 50px, x1: 60px))
+  +respond-to(margin-bottom, (x0: 10px, x1: 15px))
+  +respond-to(padding, (x0: 12px 10px, x1: 17px 20px, x2: 17px 30px))
+  &:last-child
+    +respond-to(margin-bottom, (x0: 10px, x1: 15px, x2: 30px))
+  &-closeable
+    +respond-to(padding-right, (x0: 60px, x1: 70px, x2: 80px))
+  a, strong, .strong
     color: #fff
     &:not(.btn)
-      font-weight: $medium
+      font-weight: $bold
   &-txt
     margin: 0
-    +breakpoint-x1
-      top: 50%
-      position: absolute
-      transform: translatey(-50%)
+    font-weight: $regular
   &-success
-    background: $green
+    background: darken($green, 5%)
   &-warning
-    background: $yellow
+    background: darken($yellow, 20%)
   &-error
     background: $red
   &-description
@@ -36,3 +37,17 @@
       right: 10px
       position: absolute
       transform: translatey(-50%)
+  &-close
+    display: none
+    position: absolute
+    transition: opacity 300ms ease
+    +width-height(30px, 30px)
+    +respond-to(right, (x0: 10px, x2: 20px))
+    .alert-closeable &
+      display: inline-block
+    &:not(:hover)
+      opacity: 0.75
+    &:focus
+      outline: 0
+    &-icon
+      +width-height(14px, 14px)
