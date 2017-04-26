@@ -59,8 +59,8 @@ module Shipyard
 
     # Reloads icons when files are changed.
     def reload_icons
-      # ::Rails.application.reloaders << Icons.instance
-      # ::Rails.application.config.to_prepare { Icons.instance.execute_if_updated }
+      # ::Rails.application.reloaders << Shipyard::Icons.instance
+      # ::Rails.application.config.to_prepare { Shipyard::Icons.instance.execute_if_updated }
     end
   end
 end
