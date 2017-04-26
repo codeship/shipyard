@@ -26,6 +26,10 @@ module Shipyard
       File.join assets_path, 'javascripts'
     end
 
+    def icons_path
+      File.join assets_path, 'icons'
+    end
+
     def assets_path
       @assets_path ||= File.join gem_path, 'assets'
     end

@@ -71,7 +71,8 @@ module Shipyard
     end
 
     def files
-      Dir[Pathname(@path).join('**/*.svg')]
+      files = Dir[Pathname(Shipyard.icons_path).join('**/*.svg')]
+      files.concat Dir[Pathname(@path).join('**/*.svg')]
     end
 
     def raise_error(name)
