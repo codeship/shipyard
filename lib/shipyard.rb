@@ -21,6 +21,10 @@ module Shipyard
       File.join assets_path, 'stylesheets'
     end
 
+    def javascripts_path
+      File.join assets_path, 'javascripts'
+    end
+
     def assets_path
       @assets_path ||= File.join gem_path, 'assets'
     end
@@ -48,6 +52,7 @@ module Shipyard
 
     def register_sprockets
       Sprockets.append_path(stylesheets_path)
+      Sprockets.append_path(javascripts_path)
     end
   end
 end

@@ -20,6 +20,12 @@ Or install it yourself as:
 
     $ gem install shipyard
 
+The add this line to your application's CSS file(s):
+
+```css
+@import "shipyard"
+```
+
 ## Usage
 
 TODO: Write usage instructions here
@@ -38,4 +44,3 @@ Bug reports and pull requests are welcome on GitHub at https://github.com/[USERN
 ## License
 
 The gem is available as open source under the terms of the [MIT License](http://opensource.org/licenses/MIT).
-
