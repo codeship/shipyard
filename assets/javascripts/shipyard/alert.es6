@@ -1,9 +1,10 @@
 class Alert extends Shipyard {
   constructor () {
     super()
-    if (document.querySelector('[data-shipyard="alert"]')) {
-      shipyard.alerts = new Vue({
-        el: '[data-shipyard="alert"]',
+    var alerts = document.querySelectorAll('[data-shipyard="alert"]');
+    for (var alert of alerts) {
+      new Vue({
+        el: alert,
         data: {
           visible: true
         },
