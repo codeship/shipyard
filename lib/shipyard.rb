@@ -1,10 +1,12 @@
 require 'shipyard/version'
+require 'shipyard/icons'
 
 module Shipyard
   class << self
     def load!
       if rails?
         register_rails_engine
+        reload_icons if ::Rails.env.development?
       elsif sprockets?
         register_sprockets
       end
@@ -53,6 +55,12 @@ module Shipyard
     def register_sprockets
       Sprockets.append_path(stylesheets_path)
       Sprockets.append_path(javascripts_path)
+    end
+
+    # Reloads icons when files are changed.
+    def reload_icons
+      # ::Rails.application.reloaders << Icons.instance
+      # ::Rails.application.config.to_prepare { Icons.instance.execute_if_updated }
     end
   end
 end
