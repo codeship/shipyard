@@ -36,7 +36,7 @@ module Shipyard
         options[:data] ||= {}
         options[:data][:content] = current_page
         content_tag :div, options do
-          concat render(partial: '/layouts/alerts')
+          concat render(partial: 'shipyard/alerts')
           concat capture(&block)
         end
       end

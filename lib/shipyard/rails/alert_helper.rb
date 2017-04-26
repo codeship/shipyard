@@ -8,7 +8,7 @@ module Shipyard
 
         args.each do |arg|
           if arg.is_a? Symbol
-            class_list << "alert-#{arg.to_s.tr('_', '-')}"
+            class_list << "alert-#{alert_type(arg)}"
           elsif arg.is_a? Hash
             options = options.merge(arg) if arg.is_a?(Hash)
           else
@@ -23,6 +23,16 @@ module Shipyard
           concat content_tag(:button,
                              icon('x', class: 'alert-close-icon icon-outline-inverse center'),
                              class: 'alert-close v-center')
+        end
+      end
+
+      private
+
+      def alert_type(type)
+        case type.to_sym
+        when :notice then :success
+        when :alert then :error
+        else type.to_s.tr('_', '-')
         end
       end
     end
