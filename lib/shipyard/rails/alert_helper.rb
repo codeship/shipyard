@@ -4,6 +4,10 @@ module Shipyard
       def flash_alert(*args, &block)
         alert_txt = capture(&block) if block_given?
         options = {}
+        options[:role] ||= 'alert'
+        options[:data] ||= {}
+        options[:data][:shipyard] = 'alert'
+        options['v-show'] = 'visible'
         class_list = ['alert']
 
         args.each do |arg|
@@ -22,7 +26,8 @@ module Shipyard
           concat content_tag(:p, raw(alert_txt), class: 'alert-txt')
           concat content_tag(:button,
                              icon('x', class: 'alert-close-icon icon-outline-inverse center'),
-                             class: 'alert-close v-center')
+                             class: 'alert-close v-center',
+                             '@click': 'close')
         end
       end
 

@@ -1,3 +1,5 @@
-//= require ./shipyard/alerts
+//= require ./shipyard/core
+//= require ./shipyard/alert
 
-console.log('shipyard installed')
+var shipyard = new Shipyard()
+var alert = new Alert()
