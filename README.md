@@ -26,10 +26,9 @@ The add this line to your application's CSS file(s):
 @import "shipyard"
 ```
 
-If you're using Jekyll, make sure you add the following the instructions for adding the `jekyll-assets` gem to your project, and also make sure you have the following code in your `_config.yml` file:
+If you're using Jekyll, make sure you add the following the code in your `_config.yml` file:
 ```yml
 plugins:
-  - jekyll-assets
   - shipyard
 ```
 
