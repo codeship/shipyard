@@ -3,7 +3,7 @@ $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 require 'shipyard/version'
 
 Gem::Specification.new do |spec|
-  spec.name          = 'shipyard'
+  spec.name          = 'shipyard-framework'
   spec.version       = Shipyard::VERSION
   spec.authors       = ['Shipyard']
   spec.email         = ['ryanwilke@gmail.com']
