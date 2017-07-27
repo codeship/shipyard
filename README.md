@@ -29,7 +29,7 @@ The add this line to your application's CSS file(s):
 If you're using Jekyll, make sure you add the following the code in your `_config.yml` file:
 ```yml
 plugins:
-  - shipyard-framework
+  - shipyard
 ```
 
 ## Usage
