@@ -5,17 +5,6 @@ module Shipyard
         "#{layout_name}-layout #{current_page} #{'legacy-content' unless content_for? :new_layout}"
       end
 
-      def header_classes
-        case @hero_type
-        when :default
-          'header header-with-hero'
-        when :playful
-          'header header-with-hero header-inverse'
-        else
-          'header'
-        end
-      end
-
       def current_page
         "#{controller.controller_name.dasherize}-#{controller.action_name}"
       end
