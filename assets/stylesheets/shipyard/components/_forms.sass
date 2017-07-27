@@ -2,16 +2,21 @@
   font-weight: $bold
   display: block
   margin: 0 0 10px
+  &-note
+    color: $text-color-light
+    margin: -10px 0 15px
+    font-size: $font-size-sm
+    font-weight: $medium
 
-.input
++component('input')
   font: $font
   color: $text-color
   font-weight: $medium
   -webkit-appearance: none
   background: #fff
-  &::-webkit-input-placeholder
-    color: $text-color-light
-    font-weight: $regular
+  +placeholder
+    color: $text-color-lightest
+    font-weight: $normal
 
   &-group
     +clearfix
@@ -29,7 +34,7 @@
     background: #fff
     height: 50px
     font-size: 16px
-    color: $text-color-light
+    color: $text-color-lighter
     outline: none
     +respond-to(padding, (x0: 0 15px, x1: 0 20px))
     &:focus
@@ -37,69 +42,26 @@
     &-container
       position: relative
       &::after
-        +width-height(30px, 30px)
+        +width-height(30px)
         display: block
         position: absolute
-        top: 10px
+        top: 50%
         right: 10px
         content: " "
-        background: url(/assets/images/arrows/down.svg) no-repeat center center
+        background: asset-url('arrows/down.svg') no-repeat center center
         background-size: 10px 6px
         text-align: center
         font-weight: $bold
+        margin-top: -15px
     &-chosen
       color: $text-color
       font-weight: $medium
   &-option
     &-placeholder
-      color: $text-color-light
-
-  &-switch
-    border: 2px solid $border-color
-    border-radius: 50px
-    +width-height(110px, 50px)
-    text-align: left
-    outline: none
-    transition: background 300ms ease, border-color 300ms ease
-    position: relative
-    &::after
-      content: ""
-      display: block
-      background: #fff
-      border-radius: 50%
-      +width-height(46px, 46px)
-      font-size: 14px
-      color: $text-color-light
-      font-weight: $bold
-      border: none
-      line-height: 46px
-      text-align: center
-      position: absolute
-      top: 0
-      left: 0
-      transition: left 300ms ease, color 300ms ease
-    &-true
-      @extend  .input-switch
-      background: $green
-      border-color: darken($green, 8%)
-      &::after
-        content: "Yes"
-        color: darken($green, 8%)
-        left: 60px
-    &-false
-      @extend  .input-switch
-      background: $red
-      border-color: darken($red, 8%)
-      &::after
-        content: "No"
-        color: darken($red, 8%)
-    &-label
-      padding-left: 20px
-      line-height: 50px
-      font-weight: $medium
-      color: $text-color-light
+      color: $text-color-lighter
 
   &-text
+    position: relative
     height: 50px
     border-radius: 5px
     border: 2px solid $border-color
@@ -109,6 +71,19 @@
     +respond-to(padding, (x0: 0 15px, x1: 0 20px))
     &:focus
       border-color: $border-color-dark
+    &-connect
+      &-top:focus,
+      &-middle:focus,
+      &-bottom:focus
+        z-index: 1
+      &-top
+        border-radius: 5px 5px 0 0
+      &-middle
+        margin: -2px 0 0
+        border-radius: 0
+      &-bottom
+        margin: -2px 0 0
+        border-radius: 0 0 5px 5px
 
   &-full
     width: 100%
@@ -116,10 +91,38 @@
   &-description
     font-size: 14px
     margin: 5px 0 0
-    color: $text-color-light
+    color: $text-color-lighter
 
   &-box
     background: $border-color-light
     border-radius: 4px
     +respond-to(padding, (x0: 10px 15px, x1: 15px 20px))
     margin: 0
+
+.form-error
+  &-container
+    background: $red
+    border-radius: 5px
+    color: #fff
+    padding: 20px
+    margin: 15px 0
+    text-shadow: 0 1px 1px rgba($gray-darkest, .1)
+  &-text
+    margin: 0 0 15px
+    font-weight: $bold
+  &-list
+    list-style: none
+    margin: 0
+  &-item
+    color: #fff
+    font-weight: $medium
+    &:before
+      content: ""
+      border: 1px solid rgba(#fff,.5)
+      margin: 0 15px 0 1px
+      display: inline-block
+      border-radius: 50%
+      +width-height(6px)
+      vertical-align: middle
+      position: relative
+      top: -1px

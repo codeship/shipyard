@@ -15,9 +15,22 @@
     color: #fff
     &:not(.btn)
       font-weight: $bold
-  &-txt
+  &-timer
+    top: 0
+    left: 0
+    height: 4px
+    width: 100%
+    position: absolute
+    background: rgba(#fff, .25)
+    transform: translatex(-100%)
+    animation: slide-in-from-left 10s linear 0s forwards
+  &-txt,
+  &-txt p
     margin: 0
-    font-weight: $regular
+    font-weight: $medium
+    .legacy-content &
+      font-size: $font-size
+      line-height: inherit
   &-success
     background: darken($green, 5%)
   &-warning
@@ -26,10 +39,9 @@
     background: $red
   &-description
     opacity: 0.75
-
   &-cta
+    +btn-color(darken($blue, 10%))
     +breakpoint-x0
-      width: 100%
       display: block
       text-align: center
       margin-top: 10px
@@ -38,29 +50,15 @@
       right: 10px
       position: absolute
       transform: translatey(-50%)
-    +btn-color(darken($blue, 10%))
-    +btn-hover(darken($blue, 15%))
-    +when('success')
-      +btn-color(darken($green, 16%))
-      +btn-hover(darken($green, 21%))
-    +when('warning')
-      +btn-color(darken($yellow, 32%))
-      +btn-hover(darken($yellow, 37%))
-    +when('error')
-      +btn-color(darken($red-dark, 3%))
-      +btn-hover(darken($red-dark, 8%))
-
   &-close
-    display: none
     position: absolute
+    display: inline-block
     transition: opacity 300ms ease
-    +width-height(30px, 30px)
+    +width-height(30px)
     +respond-to(right, (x0: 10px, x2: 20px))
-    +when('closeable')
-      display: inline-block
     &:not(:hover)
       opacity: 0.75
     &:focus
       outline: 0
     &-icon
-      +width-height(14px, 14px)
+      +width-height(14px)

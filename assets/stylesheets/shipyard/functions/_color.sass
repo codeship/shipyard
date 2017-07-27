@@ -1,0 +1,9 @@
+@function color($name, $shade: null)
+  $color: map-get($colors, $name)
+  @if $color
+    @if $shade
+      @return map-get(map-get($colors, $name), $shade)
+    @else
+      @return map-get(map-get($colors, $name), base)
+  @else
+    @warn "Sorry, but the color `#{$name}` hasn't been defined in the $colors variable."

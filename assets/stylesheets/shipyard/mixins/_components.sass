@@ -9,6 +9,18 @@
   &-#{$name}
     @content
 
+@mixin extend($modifier: null)
+  @if $modifier
+    @extend .#{$component}-#{$modifier}
+  @else
+    @extend .#{$component}
+
+@mixin z-index($value: null)
+  @if $value
+    z-index: $value
+  @else if $component && map-get($z-index, $component)
+    z-index: map-get($z-index, $component)
+
 // Uses the base component class defined earlier (e.g. "alert").
 //
 // Notes:
