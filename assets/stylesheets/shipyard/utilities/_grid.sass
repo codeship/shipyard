@@ -1,16 +1,21 @@
 $widths: (auto, 5, 10, 15, 20, 25, 30, 33, 35, 40, 45, 50, 55, 60, 65, 66, 70, 75, 80, 85, 90, 95, 100)
 
+@mixin column-style($property, $width)
+  @if $width == auto
+    #{$property}: auto
+  @else if $width == 66
+    #{$property}: 66.6666666666%
+  @else if $width == 33
+    #{$property}: 33.3333333333%
+  @else
+    #{$property}: percentage($width / 100)
+
 @mixin column-sizes
   @each $width in $widths
     &-#{$width}
-      @if $width == auto
-        width: auto
-      @else if $width == 66
-        width: 66.6666666666%
-      @else if $width == 33
-        width: 33.3333333333%
-      @else
-        width: percentage($width / 100)
+      +column-style(width, $width)
+    &-offset-#{$width}
+      +column-style(margin-left, $width)
 
 .container
   +clearfix
@@ -40,6 +45,14 @@ $widths: (auto, 5, 10, 15, 20, 25, 30, 33, 35, 40, 45, 50, 55, 60, 65, 66, 70, 7
   +all-media-sizes
     +column-sizes
 
++component('flex')
+  display: flex
+  +all-media-sizes
+    &-col
+      flex-direction: column
+    &-col-reverse
+      flex-direction: column-reverse
+
 .float
   +all-media-sizes
     @each $value in (none, left, right)
@@ -48,6 +61,9 @@ $widths: (auto, 5, 10, 15, 20, 25, 30, 33, 35, 40, 45, 50, 55, 60, 65, 66, 70, 7
 
 .display
   +all-media-sizes
-    @each $value in (block, inline, none)
+    @each $value in (block, inline, inline-block, none)
       &-#{$value}
         display: $value
+
+.clearfix
+  +clearfix
