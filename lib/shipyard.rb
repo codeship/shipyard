@@ -1,5 +1,4 @@
 require 'shipyard/version'
-require 'shipyard/icons'
 
 module Shipyard
   class << self
@@ -51,6 +50,7 @@ module Shipyard
     end
 
     def register_rails_engine
+      require 'shipyard/icons'
       require 'shipyard/rails/engine'
       require 'shipyard/rails/railtie'
     end
