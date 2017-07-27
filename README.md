@@ -9,7 +9,7 @@ TODO: Delete this and the text above, and describe your gem
 Add this line to your application's Gemfile:
 
 ```ruby
-gem 'shipyard'
+gem 'shipyard-framework'
 ```
 
 And then execute:
@@ -18,7 +18,7 @@ And then execute:
 
 Or install it yourself as:
 
-    $ gem install shipyard
+    $ gem install shipyard-framework
 
 The add this line to your application's CSS file(s):
 
@@ -29,7 +29,7 @@ The add this line to your application's CSS file(s):
 If you're using Jekyll, make sure you add the following the code in your `_config.yml` file:
 ```yml
 plugins:
-  - shipyard
+  - shipyard-framework
 ```
 
 ## Usage
