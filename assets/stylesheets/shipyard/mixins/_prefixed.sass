@@ -1,0 +1,19 @@
+@mixin rotate($deg)
+  -ms-transform: rotate($deg)
+  -moz-transform: rotate($deg)
+  -webkit-transform: rotate($deg)
+  transform: rotate($deg)
+
+@mixin backdrop-filter($content)
+  backdrop-filter: $content
+  -webkit-backdrop-filter: $content
+
+@mixin placeholder
+  &:-moz-placeholder
+    @content
+  &:-ms-input-placeholder
+    @content
+  &::-moz-placeholder
+    @content
+  &::-webkit-input-placeholder
+    @content
