@@ -29,6 +29,7 @@ module Shipyard
         css_classes << 'icon'
         css_classes << "icon-#{svg[:id]}"
         css_classes << 'icon-outline' if svg[:is_outlined] == true
+        css_classes << "#{options[:prefix]}-icon" if options[:prefix]
         css_classes << "#{options[:prefix]}-icon-#{svg[:id]}" if options[:prefix]
         css_classes << options[:class]
         css_classes.join(' ').strip
@@ -36,7 +37,7 @@ module Shipyard
 
       def svg_use_tag(svg, options)
         content_tag :svg, svg_options(svg, options) do
-          content_tag :use, nil, 'xlink:href' => "/assets/icons.svg##{svg[:id]}"
+          content_tag :use, nil, 'xlink:href' => Icons.instance.asset_path(svg[:id])
         end
       end
 

@@ -9,6 +9,7 @@ module Shipyard
     def initialize
       @path = "#{::Rails.root}/app/assets/icons/"
       @public = "#{::Rails.root}/public/assets"
+      @fingerprint = ::Rails.application.config.try(:icons_version)
       reload
     end
 
@@ -21,6 +22,18 @@ module Shipyard
       icon = @icons.detect { |i| i[hash.keys.first] == hash.values.first }
       raise_error(hash.values.first) unless icon
       icon
+    end
+
+    def base_path
+      if @fingerprint && !::Rails.env.development?
+        "/assets/icons-#{@fingerprint}.svg"
+      else
+        '/assets/icons.svg'
+      end
+    end
+
+    def asset_path(svg_id)
+      "#{base_path}##{svg_id}"
     end
 
     private
@@ -44,28 +57,27 @@ module Shipyard
     def save_external_svg_defs
       html = []
       @icons.each do |icon|
-        html << svg_group(icon)
+        html << svg_symbol(icon)
       end
       Dir.mkdir(@public) unless File.exists?(@public) || Dir.exists?(@public)
       File.write("#{@public}/icons.svg", svg_template(html.join))
+      File.write("#{@public}/icons-#{@fingerprint}.svg", svg_template(html.join)) if @fingerprint
     end
 
     def sanitize_svg(html)
       sanitize(html,
-               tags: %w(g circle rect path line polyline),
-               attributes: %w(x x1 x2 y y1 y2 d cx cy r vector-effect points class))
+               tags: %w(g circle rect path line polyline polygon ellipse),
+               attributes: %w(x x1 x2 y y1 y2 d cx cy r rx ry vector-effect points class fill stroke opacity))
     end
 
-    def svg_group(icon)
+    def svg_symbol(icon)
       %(<g id="#{icon[:id]}">#{icon[:inner_html]}</g>)
     end
 
     def svg_template(html)
       %(
-        <?xml version="1.0" standalone="no"?>
-        <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
-        <svg xmlns="http://www.w3.org/2000/svg" version="1.1">
-          <defs>#{html}</defs>
+        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+          #{html}
         </svg>
       ).gsub(/\n|\s+\s+/, '')
     end
