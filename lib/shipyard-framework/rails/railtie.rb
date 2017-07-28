@@ -1,7 +1,7 @@
-require 'shipyard/rails/layout_helpers'
-require 'shipyard/rails/icon_helper'
-require 'shipyard/rails/button_helper'
-require 'shipyard/rails/alert_helper'
+require 'shipyard-framework/rails/layout_helpers'
+require 'shipyard-framework/rails/icon_helper'
+require 'shipyard-framework/rails/button_helper'
+require 'shipyard-framework/rails/alert_helper'
 
 module Shipyard
   module Rails
