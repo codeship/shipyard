@@ -5,14 +5,17 @@
   border: 0
   cursor: pointer
   color: #fff
-  transition: background 300ms ease, color 300ms ease, border-color 300ms ease, opacity 300ms ease
+  transition: background-color 300ms ease, color 300ms ease, border-color 300ms ease, opacity 300ms ease
   outline: none
   border-width: 2px
   border-style: solid
-  font: $bold 16px / 1.6 $font-family
+  font-weight: $bold
+  font-family: $font-family
+  text-align: center
+  text-decoration: none
   +btn-size($size)
   +btn-color($bg, #fff)
-  +btn-hover(darken($bg, 10%))
+  +btn-hover(darken($bg, 10%), #fff)
 
 @mixin btn-color($color, $text-color: null, $border-color: null)
   background: $color
@@ -25,10 +28,17 @@
 
 @mixin btn-hover($color, $text-color: null, $border-color: null)
   &:hover, &:focus, &:active
+    text-decoration: none
     +btn-color($color, $text-color, $border-color)
 
 @mixin btn-size($size)
-  @if $size == xs
+  @if $size == xxs
+    font-size: 12px
+    padding: 0 8px
+    height: 20px
+    min-width: 20px
+    line-height: 16px
+  @else if $size == xs
     font-size: 12px
     padding: 0 10px
     height: 30px
@@ -64,12 +74,12 @@
 
   // Button: Sizes
   +all-media-sizes
-    @each $size in (xs, sm, md, lg, xl)
+    @each $size in (xxs, xs, sm, md, lg, xl)
       &-#{$size}
         +btn-size($size)
 
-  &-margin
-    margin: 0 5px
+  &-rounded
+    border-radius: 100px
 
   // Button: Types
   &-full
@@ -78,19 +88,32 @@
     max-width: 600px
     margin: 0 auto
 
+  &-margin
+    margin: 0 5px
+    &-lg
+      margin: 0 10px
+
   &-primary
     +btn-color($blue)
     +btn-hover(darken($blue, 10%))
+    &-dark
+      +btn-color(darken($blue, 7%))
+      +btn-hover(darken($blue, 12%))
 
   &-secondary
     +btn-color(none, $text-color-light, darken($gray-lightest, 7%))
     +btn-hover(none, darken($text-color-light, 15%), darken($gray-lightest, 17%))
+    &-dark
+      +btn-color(none, darken($text-color-light, 5%), lighten($gray-light, 5%))
+      +btn-hover(none, darken($text-color-light, 20%), darken($gray-light, 5%))
+
+  &-checked
+    +btn-color($green-dark, #fff)
 
   &-disabled
     cursor: not-allowed
     &, &:hover, &:focus
-      color: $text-color-lightest
-      +btn-color(darken($gray-lightest, 7%))
+      +btn-color(lighten($gray-lighter, 1%), $text-color-lightest)
     &:active
       animation: shake .35s infinite
 
@@ -100,8 +123,8 @@
     &.btn-current
       +btn-hover(#fff, inherit)
     &-secondary
-      +btn-color(lighten($gray-dark, 10%))
-      +btn-hover($blue, #fff)
+      +btn-color(transparent, #fff, rgba(#fff,.2))
+      +btn-hover(transparent, #fff, rgba(#fff,.5))
 
   &-current
     cursor: default

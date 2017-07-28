@@ -7,7 +7,11 @@
     margin: 12px 0 20px
     font-size: 18px
     font-weight: $medium
-    color: $text-color-light
+    color: $text-color-lighter
+    &-sm
+      @extend .empty-txt
+      font-size: $font-size
+      margin: 0 0 15px
     &-dark
       @extend .empty-txt
       color: darken($gray, 10%)

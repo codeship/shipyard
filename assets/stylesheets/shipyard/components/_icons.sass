@@ -2,15 +2,27 @@ svg, path, circle, polyline
   transition: fill 300ms ease, stroke 300ms ease, opacity 300ms ease
 
 +component('icon')
-  fill: $gray
+  fill: currentColor
   display: inline-block
-  transition: fill 300ms ease, stroke 300ms ease, opacity 300ms ease
+  transition: fill 300ms ease, stroke 300ms ease, opacity 300ms ease, transform 300ms ease
   overflow: visible
+  line-height: 1
   transform-origin: center center
+  +width-height(1em)
+
+  // Icons w/ Margins
+  &-margin-left
+    margin-left: 5px
+  &-margin-left-lg
+    margin-left: 8px
+  &-margin-right
+    margin-right: 5px
+  &-margin-right-lg
+    margin-right: 8px
 
   // Icons w/ Strokes
   &-outline
-    stroke: $gray
+    stroke: currentColor
     &, &-inverse
       fill: transparent
       stroke-width: 2px
@@ -19,20 +31,29 @@ svg, path, circle, polyline
     &-inverse
       stroke: #fff !important
 
+  &-slack,
+  &-github,
+  &-gitlab,
+  &-hipchat,
+  &-webhook,
+  &-invision,
+  &-bitbucket
+    +width-height(16px)
+
   &-arrow-down
     @extend .icon-outline
     +width-height(10px, 6px)
 
   &-plus
     @extend .icon-outline
-    +width-height(6px, 6px)
+    +width-height(6px)
 
   // Icon: Sizes
-  $sizes: (xs: 8px, sm: 16px, md: 24px, lg: 32px, xl: 44px)
+  $sizes: (xxs: 8px, xs: 10px, sm: 12px, md: 16px, lg: 24px, xl: 32px)
   +all-media-sizes
     @each $size, $value in $sizes
       &-#{$size}
-        +width-height($value, $value)
+        +width-height($value)
 
   &-btn
     position: relative
@@ -43,7 +64,7 @@ svg, path, circle, polyline
     transition: border-color 300ms ease
     @each $size, $value in (xs: 16px, sm: 24px, md: 32px, lg: 40px, xl: 48px)
       &-#{$size}
-        +width-height($value, $value)
+        +width-height($value)
     a:hover &
       border-color: darken($gray, 12%)
 
