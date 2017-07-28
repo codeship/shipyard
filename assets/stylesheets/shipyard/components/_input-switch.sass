@@ -1,0 +1,33 @@
+$sizes: (sm: 18px, md: 20px)
+
++component('input-switch')
+  position: relative
+  background: $gray-light
+  display: block
+  border-radius: 50px
+  outline: none
+  transition: background-color 300ms ease
+  &::before
+    content: ''
+    display: block
+    position: absolute
+    top: 2px
+    left: 2px
+    background: #fff
+    border-radius: 50%
+    transition: transform 300ms ease
+
+  @each $name, $size in $sizes
+    &-#{$name}
+      +extend
+      +width-height($size * 2 - 4px, $size)
+      &::before
+        +width-height($size - 4px)
+
+  &-false
+    background: $red
+
+  &-true
+    background: $green
+    &::before
+      transform: translatex(100%)

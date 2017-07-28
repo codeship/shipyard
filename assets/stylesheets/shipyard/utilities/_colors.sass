@@ -1,0 +1,8 @@
+@each $color, $shades in $colors
+  @each $shade, $value in $shades
+    @if $shade == base
+      .#{$color}
+        color: $value
+    @else
+      .#{$color}-#{$shade}
+        color: $value

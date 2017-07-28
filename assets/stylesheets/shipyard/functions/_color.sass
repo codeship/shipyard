@@ -1,4 +1,5 @@
 @function color($name, $shade: null)
+  $colors: $colors !global
   $color: map-get($colors, $name)
   @if $color
     @if $shade

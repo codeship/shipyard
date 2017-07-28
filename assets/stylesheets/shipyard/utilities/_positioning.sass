@@ -1,9 +1,3 @@
-.align
-  +all-media-sizes
-    @each $value in (center, left, right)
-      &-#{$value}
-        text-align: $value
-
 .center
   +all-media-sizes
     +center
@@ -15,3 +9,6 @@
 .h-center
   +all-media-sizes
     +center($horizontal: true)
+
+.align-middle
+  vertical-align: middle

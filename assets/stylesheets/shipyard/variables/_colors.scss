@@ -8,4 +8,4 @@ $colors: (
   orange: (base: #ff9f49, light: #ffba7d, lightest: #ffd6b1, dark: #cc7f3a, darkest: #995f2c),
   purple: (base: #bf84ff, light: lighten(#bf84ff, 10%), lighter: lighten(#bf84ff, 15%), lightest: lighten(#bf84ff, 20%), dark: darken(#bf84ff, 10%), darker: darken(#bf84ff, 15%), darkest: darken(#bf84ff, 20%)),
   coral: (base: #f9657a, light: lighten(#f9657a, 10%), lighter: lighten(#f9657a, 15%), lightest: lighten(#f9657a, 20%), dark: darken(#f9657a, 10%), darker: darken(#f9657a, 15%), darkest: darken(#f9657a, 20%))
-);
+) !default;

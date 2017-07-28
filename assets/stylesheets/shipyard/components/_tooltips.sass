@@ -1,0 +1,44 @@
++component('tooltip')
+  overflow: visible
+  position: relative
+  &:before
+    content: ''
+    top: -7px
+    +width-height(0px)
+    border-radius: 0 0 3px 0
+    transform: rotate(45deg) translatey(50%)
+    transform-origin: center center
+    border: 4px solid transparent
+    border-right-color: $gray-dark
+    border-bottom-color: $gray-dark
+    margin-top: 0
+  &:after
+    top: -34px
+    color: #fff
+    width: auto
+    line-height: 28px
+    padding: 0 10px
+    text-align: center
+    border-radius: 3px
+    content: attr(tooltip)
+    background: $gray-dark
+    font-size: $font-size-xxs
+    font-weight: $bold
+    transform: translate(-50%, 6px)
+    white-space: nowrap
+  &::after,
+  &::before
+    left: 50%
+    opacity: 0
+    position: absolute
+    visibility: hidden
+    transition: opacity 300ms ease 300ms, transform 300ms ease 300ms, visibility 0ms ease 500ms
+  &:hover::after,
+  &:hover::before
+    opacity: 1
+    transition-delay: 500ms
+    +respond-to(visibility, (x1: visible))
+  &:hover::after
+    transform: translate(-50%, 0)
+  &:hover::before
+    transform: rotate(45deg) translate(-5px, 0)
