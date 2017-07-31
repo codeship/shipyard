@@ -1,0 +1,51 @@
+// --------------------------------------------------
+// Hamburger "Icon"
+// --------------------------------------------------
++component('hamburger')
+  top: 25px
+  left: 5px
+  outline: none
+  .hamburger-button-clicked &
+    background: transparent
+
+  &, &:after, &:before
+    border-radius: 4px
+    background: $gray-light
+    +width-height(30px, 2px)
+    position: absolute
+    margin-top: -1px
+    transition: background-color 300ms ease, transform 300ms ease, top 300ms 200ms ease, bottom 300ms 200ms ease
+    .hamburger-button-clicked &
+      transition: background-color 300ms ease, transform 300ms 200ms ease, top 300ms ease, bottom 300ms ease
+  &:before, &:after
+    left: 0
+    content: " "
+  &:before
+    +respond-to(top, (x0: -7px, x1: -8px))
+    .hamburger-button-clicked &
+      top: 0
+      +rotate(45deg)
+  &:after
+    +respond-to(bottom, (x0: -8px, x1: -9px))
+    .hamburger-button-clicked &
+      bottom: 0
+      +rotate(-45deg)
+
+  // --------------------------------------------------
+  // Hamburger: Button
+  // --------------------------------------------------
+  &-button
+    cursor: pointer
+    position: absolute
+    +width-height(36px)
+    padding: 0
+    text-indent: -1000px
+    overflow: hidden
+    left: -3px
+    top: -17px
+
+  // --------------------------------------------------
+  // Page: Prevent Scrolling When Clicked
+  // --------------------------------------------------
+  &-button-clicked
+    +respond-to(overflow, (x0: hidden, x1: auto))

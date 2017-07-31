@@ -29,7 +29,7 @@ svg, path, circle, polyline
       stroke-linecap: round
       stroke-linejoin: round
     &-inverse
-      stroke: #fff !important
+      stroke: #fff
 
   &-slack,
   &-github,
@@ -69,7 +69,8 @@ svg, path, circle, polyline
       border-color: darken($gray, 12%)
 
     &-inverse
-      border-color: #fff !important
+      &, a:hover &
+        border-color: #fff
 
   &-inverse
     fill: #fff
