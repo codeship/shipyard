@@ -3,8 +3,8 @@
   $color: map-get($colors, $name)
   @if $color
     @if $shade
-      @return map-get(map-get($colors, $name), $shade)
+      @return map-get($color, $shade)
     @else
-      @return map-get(map-get($colors, $name), base)
+      @return map-get($color, base)
   @else
-    @warn "Sorry, but the color `#{$name}` hasn't been defined in the $colors variable."
+    @error "Sorry, but the color `#{$name}` hasn't been defined in the $colors variable."
