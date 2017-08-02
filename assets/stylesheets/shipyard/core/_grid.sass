@@ -52,18 +52,3 @@ $widths: (auto, 5, 10, 15, 20, 25, 30, 33, 35, 40, 45, 50, 55, 60, 65, 66, 70, 7
       flex-direction: column
     &-col-reverse
       flex-direction: column-reverse
-
-.float
-  +all-media-sizes
-    @each $value in (none, left, right)
-      &-#{$value}
-        float: $value
-
-.display
-  +all-media-sizes
-    @each $value in (block, inline, inline-block, none)
-      &-#{$value}
-        display: $value
-
-.clearfix
-  +clearfix

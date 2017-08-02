@@ -1,0 +1,14 @@
+.float
+  +all-media-sizes
+    @each $value in (none, left, right)
+      &-#{$value}
+        float: $value
+
+.display
+  +all-media-sizes
+    @each $value in (block, inline, inline-block, none)
+      &-#{$value}
+        display: $value
+
+.clearfix
+  +clearfix
