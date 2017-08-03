@@ -108,7 +108,8 @@
       +btn-hover(none, darken($text-color-light, 20%), darken($gray-light, 5%))
 
   &-checked
-    +btn-color($green-dark, #fff)
+    &, &:active, &:hover, &:focus
+      +btn-color($green-dark, #fff)
 
   &-disabled
     cursor: not-allowed

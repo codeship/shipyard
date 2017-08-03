@@ -27,8 +27,12 @@
   &-padding
     +respond-to(padding, $margins)
 
+  // Box: Margins
   &-margin
-    margin: 15px 0
+    +all-media-sizes
+      @each $size, $margin in (sm: 10px 0, md: 15px 0, lg: 30px 0)
+        &-#{$size}
+          margin: $margin
 
   // Box Sizes
   +all-media-sizes

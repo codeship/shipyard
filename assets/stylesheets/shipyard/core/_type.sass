@@ -26,9 +26,14 @@ hr
     border-width: 1px 0 0
 
 .medium
-  font-weight: $medium
+  +all-media-sizes
+    font-weight: $medium
 
-strong, .strong, .bold
+.strong, .bold
+  +all-media-sizes
+    font-weight: $bold
+
+strong
   font-weight: $bold
 
 ul, ol
@@ -108,7 +113,7 @@ h1, h2, h3, h4, h5, h6
   @each $direction in (top, right, bottom, left)
     &-#{$direction}
       +all-media-sizes
-        @each $size, $value in (xxs: 5px, xs: 10px, sm: 15px, md: 20px, lg: 30px, xl: 40px, xxl: 50px)
+        @each $size, $value in (none: 0, xxs: 5px, xs: 10px, sm: 15px, md: 20px, lg: 30px, xl: 40px, xxl: 50px)
           &-#{$size}
             margin-#{$direction}: $value
 
@@ -145,9 +150,10 @@ h1, h2, h3, h4, h5, h6
       color: rgba(#fff,.6)
 
   // Font Sizes
-  @each $size, $value in $font-sizes
-    &-#{$size}
-      font-size: $value
+  +all-media-sizes
+    @each $size, $value in $font-sizes
+      &-#{$size}
+        font-size: $value
 
 .rotate-45
   transform: rotate(45deg)
