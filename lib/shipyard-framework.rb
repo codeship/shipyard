@@ -7,6 +7,8 @@ module Shipyard
         register_rails_engine
       elsif sprockets?
         register_sprockets
+      elsif jekyll?
+        register_jekyll_tags
       end
 
       configure_sass
@@ -43,6 +45,10 @@ module Shipyard
       defined?(::Rails)
     end
 
+    def jekyll?
+      defined?(::Jekyll) && defined?(::Liquid)
+    end
+
     def configure_sass
       require 'sass'
 
@@ -58,6 +64,11 @@ module Shipyard
     def register_sprockets
       Sprockets.append_path(stylesheets_path)
       Sprockets.append_path(javascripts_path)
+    end
+
+    def register_jekyll_tags
+      require 'shipyard-framework/jekyll/button_helper'
+      Liquid::Template.register_tag('btn', Jekyll::Button)
     end
   end
 end
