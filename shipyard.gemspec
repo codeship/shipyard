@@ -15,6 +15,7 @@ Gem::Specification.new do |spec|
   # spec.add_runtime_dependency 'sassc-rails', '~> 1.3', '>= 1.3.0'
   # spec.add_runtime_dependency 'slim-rails', '~> 3.1', '>= 3.1.0'
   # spec.add_runtime_dependency 'sassc', '~> 1.11.4'
+  spec.add_runtime_dependency 'actionview'
 
   spec.add_development_dependency 'bundler', '~> 1.15', '>= 1.15.3'
 

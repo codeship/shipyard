@@ -1,9 +1,11 @@
 module Shipyard
   module Rails
     module ButtonHelper
-      def btn(name, *args, &block)
+      include ActionView::Helpers::TagHelper
+
+      def btn(text, *args, &block)
         if block_given?
-          args << name
+          args << text
           name = capture(&block)
         end
 
@@ -14,11 +16,8 @@ module Shipyard
         end
 
         # Output the appropriate button.
-        if options.key?(:href)
-          link_to name, options[:href], btn_options(args, options)
-        else
-          content_tag :button, name, btn_options(args, options)
-        end
+        tag = options.key?(:href) ? :a : :button
+        content_tag tag, text, btn_options(args, options)
       end
 
       private
@@ -30,7 +29,7 @@ module Shipyard
           options[:class] += " btn-#{arg.to_s.tr('_', '-')}" if arg.is_a?(Symbol)
         end
         options[:class].strip!
-        options.except(:href)
+        options
       end
     end
   end

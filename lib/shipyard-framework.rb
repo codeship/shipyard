@@ -1,4 +1,5 @@
 require 'shipyard-framework/version'
+require 'action_view'
 
 module Shipyard
   class << self
@@ -68,7 +69,7 @@ module Shipyard
 
     def register_jekyll_tags
       require 'shipyard-framework/jekyll/button_helper'
-      Liquid::Template.register_tag('btn', Jekyll::Button)
+      Liquid::Template.register_tag('btn', Shipyard::Jekyll::Button)
     end
   end
 end
