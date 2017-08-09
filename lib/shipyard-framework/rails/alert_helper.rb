@@ -1,12 +1,9 @@
-require 'shipyard-framework/rails/icon_helper'
-
 module Shipyard
   module Rails
     module AlertHelper
       include ActionView::Context
       include ActionView::Helpers::TagHelper
       include ActionView::Helpers::TextHelper
-      include Shipyard::Rails::IconHelper
 
       def flash_alert(*args, &block)
         alert_txt = capture(&block) if block_given?
