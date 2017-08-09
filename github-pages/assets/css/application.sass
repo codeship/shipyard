@@ -1,0 +1,41 @@
+---
+---
+$font-family: Catamaran, sans-serif
+@import shipyard
+@import url('https://fonts.googleapis.com/css?family=Catamaran')
+
+body
+  padding-top: 50px
+
+header
+  $height: 50px
+  background: $gray-dark
+  position: fixed
+  top: 0
+  left: 0
+  right: 0
+  height: $height
+  line-height: $height
+  color: #fff
+  z-index: 100
+  h6
+    font-weight: $bold
+    font-size: 24px
+    float: left
+  ul
+    float: right
+    font-weight: $medium
+    font-size: 18px
+    margin-right: -10px
+  li
+    display: inline
+    margin: 0 10px
+  a
+    color: rgba(#fff,.8)
+    &, &:hover
+      text-decoration: none
+    &:hover
+      color: #fff
+
+footer
+  padding: 30px 0
