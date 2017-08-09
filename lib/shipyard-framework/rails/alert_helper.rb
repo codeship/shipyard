@@ -1,6 +1,13 @@
+require 'shipyard-framework/rails/icon_helper'
+
 module Shipyard
   module Rails
     module AlertHelper
+      include ActionView::Context
+      include ActionView::Helpers::TagHelper
+      include ActionView::Helpers::TextHelper
+      include Shipyard::Rails::IconHelper
+
       def flash_alert(*args, &block)
         alert_txt = capture(&block) if block_given?
         options = {}
@@ -24,10 +31,10 @@ module Shipyard
 
         content_tag :div, options do
           concat content_tag(:p, raw(alert_txt), class: 'alert-txt')
-          concat content_tag(:button,
-                             icon('x', class: 'alert-close-icon icon-outline-inverse center'),
-                             class: 'alert-close v-center',
-                             '@click': 'close')
+          # concat content_tag(:button,
+          #                    icon('x', class: 'alert-close-icon icon-outline-inverse center'),
+          #                    class: 'alert-close v-center',
+          #                    '@click': 'close')
         end
       end
 
