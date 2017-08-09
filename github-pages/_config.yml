@@ -15,7 +15,7 @@
 # in the templates via {{ site.myvariable }}.
 title: Shipyard
 description: A sweet front-end framework for Ruby on Rails and Jekyll.
-baseurl: '' # the subpath of your site, e.g. /blog
+baseurl: /shipyard # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 # source: ./app
 # destination: ./tmp
