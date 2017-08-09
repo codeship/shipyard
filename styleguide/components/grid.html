@@ -1,0 +1,20 @@
+---
+title: Grid
+columns: [5,10,15,20,25,30,33,35,40,45,50,55,60,65,70,75,80,85,90,95,100]
+examples: [10,20,25,33]
+---
+
+<h1>Shipyard Grid</h1>
+
+<hr />
+
+{% for example in page.examples %}
+  <div class="col-container margin-top-md">
+    {% assign num = 100 | divided_by: example %}
+    {% for i in (1..num) %}
+      <div class="col col-{{ example }} align-center">
+        <div class="box text-lighter">{{ example }}</div>
+      </div>
+    {% endfor %}
+  </div>
+{% endfor %}

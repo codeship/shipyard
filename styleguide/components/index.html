@@ -1,9 +1,11 @@
 ---
 title: Components
+components: [grid, boxes, buttons, alerts, forms, icons, modals, tooltips]
 ---
 
 <h2>Components</h2>
 <ul>
-  <li><a href="{{ site.baseurl }}/components/buttons">Buttons</a></li>
-  <li><a href="{{ site.baseurl }}/components/alerts">Alerts</a></li>
+  {% for component in page.components %}
+    <li><a href="{{ site.baseurl }}/components/{{ component }}">{{ component | capitalize }}</a></li>
+  {% endfor %}
 </ul>
