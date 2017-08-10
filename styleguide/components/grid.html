@@ -1,20 +1,44 @@
 ---
-title: Grid
-columns: [5,10,15,20,25,30,33,35,40,45,50,55,60,65,70,75,80,85,90,95,100]
-examples: [10,20,25,33]
+title: Shipyard Grid
+example_one: [10,20,25,33]
+example_two: [50,55,60,65,70,75,80,85,90,95,100]
 ---
 
-<h1>Shipyard Grid</h1>
+<h1>{{ page.title }}</h1>
 
 <hr />
 
-{% for example in page.examples %}
+{% for example in page.example_one %}
   <div class="col-container margin-top-md">
     {% assign num = 100 | divided_by: example %}
     {% for i in (1..num) %}
       <div class="col col-{{ example }} align-center">
-        <div class="box text-lighter">{{ example }}</div>
+        <div class="box-secondary text-light text-sm strong">{{ example }}</div>
       </div>
     {% endfor %}
+  </div>
+{% endfor %}
+
+<div class="col-container margin-top-md">
+  <div class="col col-66 align-center">
+    <div class="box-secondary text-light text-sm strong">66</div>
+  </div>
+  <div class="col col-33 align-center">
+    <div class="box-secondary text-light text-sm strong">33</div>
+  </div>
+</div>
+
+<hr />
+
+{% for i in page.example_two %}
+  <div class="col-container margin-top-md">
+    <div class="col col-{{ i }} align-center">
+      <div class="box-secondary text-light text-sm strong">{{ i }}</div>
+    </div>
+    {% if i < 100 %}
+      <div class="col col-{{ 100 | minus: i }} align-center">
+        <div class="box-secondary text-light text-sm strong">{{ 100 | minus: i }}</div>
+      </div>
+    {% endif %}
   </div>
 {% endfor %}

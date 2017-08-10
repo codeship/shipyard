@@ -1,0 +1,37 @@
+---
+title: Shipyard Boxes
+box_sizes: [xxs, xs, sm, md, lg, xl]
+---
+
+<h1>{{ page.title }}</h1>
+
+<hr />
+
+<div class="box box-padding">
+  <h4>Default Box</h4>
+  <p>Donec id elit non mi porta gravida at eget metus. Aenean lacinia bibendum nulla sed consectetur. Etiam porta sem malesuada magna mollis euismod. Cras mattis consectetur purus sit amet fermentum. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Integer posuere erat a ante venenatis dapibus posuere velit aliquet.</p>
+</div>
+
+<hr />
+
+<div class="box-link box-padding">
+  <h4>Linked Box</h4>
+  <p>Donec id elit non mi porta gravida at eget metus. Aenean lacinia bibendum nulla sed consectetur. Etiam porta sem malesuada magna mollis euismod. Cras mattis consectetur purus sit amet fermentum. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Integer posuere erat a ante venenatis dapibus posuere velit aliquet.</p>
+</div>
+
+<hr />
+
+<div class="box-secondary box-padding">
+  <h4>Secondary Box</h4>
+  <p>Donec id elit non mi porta gravida at eget metus. Aenean lacinia bibendum nulla sed consectetur. Etiam porta sem malesuada magna mollis euismod. Cras mattis consectetur purus sit amet fermentum. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Integer posuere erat a ante venenatis dapibus posuere velit aliquet.</p>
+</div>
+
+<hr />
+
+<h2>Boxes Sizes</h2>
+
+{% for size in page.box_sizes %}
+  <div class="box box-{{ size }} margin-top-md">
+    <strong class="center text-lighter text-sm">.box-{{ size }}</strong>
+  </div>
+{% endfor %}
