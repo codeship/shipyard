@@ -3,6 +3,10 @@
     @if $shade == base
       .#{$color}
         color: $value
+      .bg-#{$color}
+        background-color: $value
     @else
       .#{$color}-#{$shade}
         color: $value
+      .bg-#{$color}-#{$shade}
+        background-color: $value
