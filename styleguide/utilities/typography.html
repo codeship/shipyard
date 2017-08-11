@@ -1,14 +1,56 @@
 ---
 title: Shipyard Typography
+text_sizes: [xxs, xs, sm, md, lg, xl, xxl, xxxl]
+text_shades: [normal, light, lighter, lightest]
 ---
 
 <h1>{{ page.title }}</h1>
 
 <hr />
 
-<h1>h1. Heading</h1>
-<h2>h2. Heading</h2>
-<h3>h3. Heading</h3>
-<h4>h4. Heading</h4>
-<h5>h5. Heading</h5>
-<h6>h6. Heading</h6>
+<div class="col-container">
+  <div class="col col-20">
+    <h1>h1. Heading</h1>
+    <h2>h2. Heading</h2>
+    <h3>h3. Heading</h3>
+    <h4>h4. Heading</h4>
+    <h5>h5. Heading</h5>
+    <h6>h6. Heading</h6>
+  </div>
+  <div class="col col-20">
+    <h3>Text Sizes</h3>
+    {% for size in page.text_sizes %}
+      <p class="text-{{ size }}">.text-{{ size }}</p>
+    {% endfor %}
+  </div>
+  <div class="col col-20">
+    <h3>Text Shades</h3>
+    <div class="box box-padding margin-top-xs">
+      <ul class="list strong">
+        {% for shade in page.text_shades %}
+          <li class="text-{{ shade }}">.text-{{ shade }}</li>
+        {% endfor %}
+      </ul>
+    </div>
+  </div>
+  <div class="col col-20">
+    <h3>Inverse Text Shades</h3>
+    <div class="box-secondary box-padding bg-gray-dark margin-top-xs">
+      <ul class="list strong">
+        {% for shade in page.text_shades %}
+          <li class="text-inverse{{ '-' | append: shade | replace: '-normal', '' }}">
+            .text-inverse{{ '-' | append: shade | replace: '-normal', '' }}
+          </li>
+        {% endfor %}
+      </ul>
+    </div>
+  </div>
+  <div class="col col-20">
+    <h3>Text Alignment</h3>
+    <ul>
+      <li class="align-left">.align-left</li>
+      <li class="align-center">.align-center</li>
+      <li class="align-right">.align-right</li>
+    </ul>
+  </div>
+</div>
