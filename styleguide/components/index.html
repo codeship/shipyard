@@ -5,10 +5,10 @@ components: [Grid, Boxes, Buttons, Empty States, Alerts, Forms, Icons, Modals, T
 
 <h1>{{ page.title }}</h1>
 <hr />
-<ul class="list">
+<ul class="col-container">
   {% for component in page.components %}
-    <li>
-      <a href="{{ site.baseurl }}/components/{{ component | replace: ' ', '-' | downcase }}">
+    <li class="margin-bottom-xs margin-bottom-x1-sm margin-bottom-x2-lg col col-100 col-x1-25">
+      <a href="{{ site.baseurl }}/components/{{ component | replace: ' ', '-' | downcase }}" class="box-link box-padding align-center text-xl">
         {{ component }}
       </a>
     </li>
