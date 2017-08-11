@@ -10,9 +10,7 @@ module Shipyard
         @params = params.split(',')
         @text = @params[0]
         @args = @params[1].to_s.tr(':','').split(' ').map(&:to_sym)
-        if @params[2]
-          @args << eval("{#{@params[2].gsub(/([a-z-_]*)(:)/,'$1 =>')}}")
-        end
+        @args << eval("{#{@params[2]}}") if @params[2]
       end
 
       def render(context)
