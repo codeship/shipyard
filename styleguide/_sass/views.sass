@@ -1,5 +1,5 @@
 // Utilities: Colors
-.shade
++component('shade')
   &-list
     display: table
     width: 100%
@@ -13,11 +13,15 @@
       border-right: 10px solid transparent
   &-box
     height: 168px
-    border: 5px solid #fff
+    padding: 5px
     white-space: nowrap
     &:hover
       cursor: default
-      background: $gray-darkest
-      border-color: $gray-darkest
+    &:not(:hover)
+      background: #fff !important
   &-color
     height: 120px
+    border-radius: 2px 2px 0 0
+  &-text
+    +when('box:hover')
+      color: #fff
