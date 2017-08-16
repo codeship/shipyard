@@ -28,10 +28,15 @@ module Shipyard
 
         content_tag :div, options do
           concat content_tag(:p, raw(alert_txt), class: 'alert-txt')
-          # concat content_tag(:button,
-          #                    icon('x', class: 'alert-close-icon icon-outline-inverse center'),
-          #                    class: 'alert-close v-center',
-          #                    '@click': 'close')
+          if defined? icon
+            svg_html = icon('x', class: 'alert-close-icon icon-outline-inverse center')
+          else
+            svg_html = 'x'
+          end
+          concat content_tag(:button,
+                             svg_html,
+                             class: 'alert-close v-center',
+                             '@click': 'close')
         end
       end
 
