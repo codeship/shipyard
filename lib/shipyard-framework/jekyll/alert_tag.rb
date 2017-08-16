@@ -1,9 +1,9 @@
-require 'shipyard-framework/rails/alert_helper'
+require '../app/helpers/shipyard/alert_helper'
 
 module Shipyard
   module Jekyll
     class Alert < Liquid::Tag
-      include Shipyard::Rails::AlertHelper
+      include Shipyard::AlertHelper
 
       def initialize(tag_name, params, options)
         super

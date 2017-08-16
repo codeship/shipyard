@@ -1,9 +1,9 @@
-require 'shipyard-framework/rails/button_helper'
+require '../app/helpers/shipyard/button_helper'
 
 module Shipyard
   module Jekyll
     class Button < Liquid::Tag
-      include Shipyard::Rails::ButtonHelper
+      include Shipyard::ButtonHelper
 
       def initialize(tag_name, params, options)
         super
