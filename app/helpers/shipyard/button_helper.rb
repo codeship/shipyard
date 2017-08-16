@@ -15,8 +15,11 @@ module Shipyard
       end
 
       # Output the appropriate button.
-      tag = options.key?(:href) ? :a : :button
-      content_tag tag, text, btn_options(args, options)
+      if options.key?(:href)
+        link_to text, options[:href], btn_options(args, options)
+      else
+        content_tag :button, text, btn_options(args, options)
+      end
     end
 
     private
