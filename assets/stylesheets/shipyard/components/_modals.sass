@@ -1,21 +1,31 @@
 +component('modal')
   width: 100%
   max-width: 800px
-  padding: 10px
+  margin: auto
+
+  &-open
+    overflow: hidden
 
   &-container
-    position: fixed
+    +z-index
     top: 0
+    left: 0
     right: 0
     bottom: 0
-    left: 0
+    display: flex
+    overflow: auto
+    position: fixed
+    align-items: center
+    justify-content: center
     background: rgba($gray-darkest,.9)
-    +z-index
+    transition: 300ms padding ease
+    -webkit-overflow-scrolling: touch
+    +respond-to(padding, $margins)
 
   &-content
     background: #fff
     border-radius: 5px 5px 0 0
-    +respond-to(padding, (x0: 20px, x2: 30px))
+    +respond-to(padding, (x0: 15px, x2: 30px))
 
   &-title
     margin: 0 0 10px
