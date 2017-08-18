@@ -99,28 +99,20 @@
     &::after
       position: absolute
     &::before
-      top: 6px
-      right: 6px
       z-index: 1
       content: "*"
-      line-height: 18px
-      font-weight: $bold
-      color: darken($purple, 13%)
+      +component-styles(required-asterisk)
       +when('error')
-        color: #fff
+        +component-styles(required-asterisk-error)
     &::after
-      top: 2px
-      right: 2px
       content: ""
       display: block
+      border-style: solid
       border-radius: 0 3px 0 0
-      border: 12px solid transparent
-      background: $border-color-light
-      border-left-color: #fff
-      border-bottom-color: #fff
+      border-color: transparent
+      +component-styles(required-corner)
       +when('error')
-        border-top-color: $red
-        border-right-color: $red
+        +component-styles(required-corner-error)
 
   &-full
     width: 100%
@@ -140,31 +132,3 @@
     border-radius: 4px
     +respond-to(padding, (x0: 10px 15px, x1: 15px 20px))
     margin: 0
-
-.form-error
-  &-container
-    background: $red
-    border-radius: 5px
-    color: #fff
-    padding: 20px
-    margin: 15px 0
-    text-shadow: 0 1px 1px rgba($gray-darkest, .1)
-  &-text
-    margin: 0 0 15px
-    font-weight: $bold
-  &-list
-    list-style: none
-    margin: 0
-  &-item
-    color: #fff
-    font-weight: $medium
-    &:before
-      content: ""
-      border: 1px solid rgba(#fff,.5)
-      margin: 0 15px 0 1px
-      display: inline-block
-      border-radius: 50%
-      +width-height(6px)
-      vertical-align: middle
-      position: relative
-      top: -1px

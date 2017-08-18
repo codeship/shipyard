@@ -8,6 +8,7 @@
   $sub-component: "#{$component}-#{$name}" !global
   &-#{$name}
     @content
+    +component-styles($name)
 
 @mixin extend($modifier: null)
   @if $modifier
@@ -20,6 +21,12 @@
     z-index: $value
   @else if $component && map-get($z-index, $component)
     z-index: map-get($z-index, $component)
+
+@mixin component-styles($modifier)
+  $component-styles: map-get($components, $component)
+  @if $component-styles
+    @each $property, $value in map-get($component-styles, $modifier)
+      #{$property}: $value
 
 // Uses the base component class defined earlier (e.g. "alert").
 //

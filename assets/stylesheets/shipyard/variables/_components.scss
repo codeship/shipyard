@@ -1,0 +1,43 @@
+$component-defaults: (
+  input: (
+    required-asterisk: (
+      top: 6px,
+      right: 6px,
+      line-height: 18px,
+      font-weight: $bold,
+      color: darken($purple, 13%)
+    ),
+    required-asterisk-error: (
+      color: #fff
+    ),
+    required-corner: (
+      top: 2px,
+      right: 2px,
+      border-width: 12px,
+      border-top-color: $border-color-light,
+      border-right-color: $border-color-light
+    ),
+    required-corner-error: (
+      border-top-color: $red,
+      border-right-color: $red
+    )
+  ),
+  form-error: (
+    container: (
+      color: #fff,
+      background: $red,
+      border-radius: 5px,
+      text-shadow: 0 1px 1px rgba($gray-darkest, .1)
+    ),
+    text: (
+      font-weight: $bold
+    ),
+    item: (
+      color: #fff,
+      font-weight: $medium
+    )
+  )
+) !default;
+
+$component-options: () !default;
+$components: map-merge-options($component-defaults, $component-options);

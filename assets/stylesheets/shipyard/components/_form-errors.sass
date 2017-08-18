@@ -1,0 +1,23 @@
++component('form-error')
+
+  +sub-component('container')
+    padding: 20px
+    margin: 15px 0
+
+  +sub-component('text')
+    margin: 0 0 15px
+
+  +sub-component('list')
+    list-style: none
+
+  +sub-component('item')
+    &:before
+      content: ""
+      border: 1px solid rgba(#fff,.5)
+      margin: 0 15px 0 1px
+      display: inline-block
+      border-radius: 50%
+      +width-height(6px)
+      vertical-align: middle
+      position: relative
+      top: -1px
