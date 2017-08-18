@@ -37,8 +37,12 @@
     color: $text-color-lighter
     outline: none
     +respond-to(padding, (x0: 0 15px, x1: 0 20px))
+    +when('error')
+      border-color: $red
     &:focus
       border-color: $border-color-dark
+      +when('error')
+        border-color: darken($red, 15%)
     &-container
       position: relative
       &::after
@@ -69,8 +73,12 @@
     transition: border-color 300ms ease
     outline: none
     +respond-to(padding, (x0: 10px 15px, x1: 10px 20px))
+    +when('error')
+      border-color: $red
     &:focus
       border-color: $border-color-dark
+      +when('error')
+        border-color: darken($red, 15%)
     &-connect
       &-top:focus,
       &-middle:focus,
@@ -84,6 +92,29 @@
       &-bottom
         margin: -2px 0 0
         border-radius: 0 0 5px 5px
+
+  &-required
+    position: relative
+    &::after
+      top: 2px
+      right: 2px
+      content: "*"
+      display: block
+      line-height: 0
+      text-align: left
+      text-indent: 3px
+      font-weight: $bold
+      position: absolute
+      +width-height(0px)
+      border-radius: 0 3px 0 0
+      color: darken($purple, 13%)
+      border: 12px solid transparent
+      border-top-color: $border-color-light
+      border-right-color: $border-color-light
+      +when('error')
+        color: #fff
+        border-top-color: $red
+        border-right-color: $red
 
   &-full
     width: 100%

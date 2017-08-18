@@ -66,7 +66,30 @@ title: Shipyard Forms
 
 <hr />
 
-<h2>Form Errors</h2>
+<h2 class="margin-bottom-xs">Required Fields</h2>
+<div class="col-container">
+  <div class="col col-50">
+    <div class="input-required">
+      <input type="text" class="input input-text input-full" placeholder=".input .input-text .input-full" />
+    </div>
+  </div>
+  <div class="col col-50">
+    <div class="input-required">
+      <div class="input-select-container">
+        <select class="input input-select">
+          <option class="input-option-placeholder">.input-select</option>
+          {% for i in (1..10) %}
+            <option>{{ i }}</option>
+          {% endfor %}
+        </select>
+      </div>
+    </div>
+  </div>
+</div>
+
+<hr />
+
+<h2 class="margin-bottom-xs">Form Errors</h2>
 <div class="form-error-container">
   <ul class="form-error-list">
     <li class="form-error-item">
@@ -80,3 +103,26 @@ title: Shipyard Forms
     </li>
   </ul>
 </div>
+<div class="col-container margin-top-md margin-bottom-md">
+  <div class="col col-50 input-error">
+    <label class="label">Required Select Box</label>
+    <div class="input-required">
+      <div class="input-select-container">
+        <select class="input input-select">
+          <option class="input-option-placeholder">.input-select</option>
+          {% for i in (1..10) %}
+            <option>{{ i }}</option>
+          {% endfor %}
+        </select>
+      </div>
+    </div>
+  </div>
+  <div class="col col-50 input-error">
+    <label class="label">Required Textbox</label>
+    <div class="input-required">
+      <input type="text" class="input input-text input-full" placeholder=".input .input-text .input-full" />
+    </div>
+  </div>
+</div>
+
+<hr />

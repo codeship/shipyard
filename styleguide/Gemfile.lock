@@ -1,8 +1,8 @@
 PATH
   remote: ..
   specs:
-    shipyard-framework (0.3.3)
-      actionview
+    shipyard-framework (0.3.7)
+      actionview (~> 5.0)
 
 GEM
   remote: https://rubygems.org/
