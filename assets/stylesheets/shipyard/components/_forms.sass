@@ -95,24 +95,30 @@
 
   &-required
     position: relative
+    &::before,
+    &::after
+      position: absolute
+    &::before
+      top: 6px
+      right: 6px
+      z-index: 1
+      content: "*"
+      line-height: 18px
+      font-weight: $bold
+      color: darken($purple, 13%)
+      +when('error')
+        color: #fff
     &::after
       top: 2px
       right: 2px
-      content: "*"
+      content: ""
       display: block
-      line-height: 0
-      text-align: left
-      text-indent: 3px
-      font-weight: $bold
-      position: absolute
-      +width-height(0px)
       border-radius: 0 3px 0 0
-      color: darken($purple, 13%)
       border: 12px solid transparent
-      border-top-color: $border-color-light
-      border-right-color: $border-color-light
+      background: $border-color-light
+      border-left-color: #fff
+      border-bottom-color: #fff
       +when('error')
-        color: #fff
         border-top-color: $red
         border-right-color: $red
 

@@ -1,7 +1,7 @@
 PATH
   remote: ..
   specs:
-    shipyard-framework (0.3.8)
+    shipyard-framework (0.3.9)
       actionview (~> 5.0)
 
 GEM
