@@ -22,6 +22,18 @@
   &-color
     height: 120px
     border-radius: 2px 2px 0 0
-  &-text
+    display: flex
+    align-items: center
+    justify-content: center
+    color: transparent
+    transition: 300ms color ease
     +when('box:hover')
       color: #fff
+    +when('light:hover')
+      color: $gray-dark
+  &-text
+    transition: 300ms color ease
+    +when('box:hover')
+      color: #fff
+    +when('light:hover')
+      color: $gray-dark
