@@ -27,7 +27,7 @@ sass:
 
 # Build settings
 markdown: kramdown
-plugins_dir:
+plugins:
   - shipyard-framework
 
 defaults:
