@@ -1,0 +1,70 @@
+body
+  background: $gray-lightest
+  color: $gray-dark
+  font-family: $font-family
+  -webkit-font-smoothing: antialiased
+  -moz-osx-font-smoothing: grayscale
+
+a, .link
+  cursor: pointer
+  text-decoration: none
+  color: $blue
+  transition: color 300ms ease, background-color 300ms ease, border-color 300ms ease, box-shadow 300ms ease
+  &:hover
+    color: darken($blue, 10%)
+    text-decoration: underline
+
+hr
+  height: 0
+  border: 0 solid $border-color-light
+  border-width: 2px 0 0
+  +respond-to(margin, (x0: 20px 0, x1: 30px 0))
+  &.dark
+    border-color: $border-color
+  &.lightest
+    border-color: $border-color-lightest
+  &.thin
+    border-width: 1px 0 0
+
+strong
+  font-weight: $bold
+
+ul, ol
+  list-style: none
+
+.list
+  list-style: circle
+  &, &-disc
+    color: $gray-light
+    margin: 20px 0 0 18px
+  &-disc
+    list-style: disc
+  li
+    margin: 10px 0
+
+img
+  display: block
+
+button
+  background: none
+  border: none
+  cursor: pointer
+
+h1, .h1
+  +respond-to(font-size, (x0: 20px, x1: 24px))
+h2, .h2
+  font-size: 18px
+
+h1, h2, h3, h4, h5, h6
+  @extend .strong
+
+.h-primary
+  margin-bottom: 0
+  +respond-to(font-size, (x0: 24px, x1: 28px))
+.h-secondary
+  color: $text-color-lighter
+  font-weight: $normal
+  margin: 5px 0 30px
+  +respond-to(font-size, (x0: 16px, x1: 18px))
+.h-margin
+  margin: 0 0 30px
