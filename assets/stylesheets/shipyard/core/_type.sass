@@ -58,16 +58,21 @@ button
   border: none
   cursor: pointer
 
-.code
-  color: desaturate(darken($purple, 15%), 25%)
++component('code')
+  color: $purple-dark
   background: darken($gray-lightest, 3%)
   border: 1px solid darken($gray-lighter, 5%)
-  +prepend-to-root('code')
+  font-family: $font-monospace
+  font-size: $font-size-sm
+  &-inline
+    +extend
     padding: 2px 4px
     margin: 0 2px
     border-radius: 4px
-  +prepend-to-root('pre')
+  &-block
+    +extend 
     padding: 20px 30px
+    line-height: 1.6
     +border-radius
 
 .em
