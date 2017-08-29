@@ -4,14 +4,33 @@
   border: 1px solid darken($gray-lighter, 5%)
   font-family: $font-monospace
   font-size: $font-size-sm
+
+  &-block
+    +extend
+    padding: 20px 30px
+    line-height: 1.6
+    +border-radius
+
   &-inline
     +extend
     padding: 2px 4px
     border-radius: 4px
     font-weight: $normal
     white-space: nowrap
-  &-block
-    +extend
-    padding: 20px 30px
-    line-height: 1.6
-    +border-radius
+
+  // Code blocks inside of alerts
+  .alert &
+    color: #fff
+    margin: 0 2px
+  .alert-info &
+    border-color: darken($blue, 10%)
+    background-color: darken($blue, 5%)
+  .alert-error &
+    border-color: $red-dark
+    background-color: lighten($red-dark, 7%)
+  .alert-warning &
+    border-color: $yellow-darker
+    background-color: darken($yellow-dark, 5%)
+  .alert-success &
+    border-color: darken($green, 15%)
+    background-color: darken($green, 10%)

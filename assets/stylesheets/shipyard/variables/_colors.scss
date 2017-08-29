@@ -30,10 +30,12 @@ $colors: (
   ),
   "red": (
     base: #e06158,
-    light: #f7a09e,
-    lightest: #ffc6cb,
+    light: lighten(#e06158, 8%),
+    lighter: lighten(#e06158, 16%),
+    lightest: lighten(#e06158, 25%),
     dark: #b13b39,
-    darkest: #892120
+    darker: #892120,
+    darkest: desaturate(darken(#892120, 8%), 0%)
   ),
   "yellow": (
     base: #ffca49,
