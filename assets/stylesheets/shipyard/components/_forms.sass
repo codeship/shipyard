@@ -12,8 +12,8 @@
   font: $font
   color: $text-color
   font-weight: $medium
-  -webkit-appearance: none
   background: #fff
+  +appearance(none)
   +placeholder
     color: $text-color-lightest
     font-weight: $normal
@@ -27,7 +27,6 @@
       border-bottom: 2px solid $border-color-light
 
   &-select
-    -webkit-appearance: none
     display: block
     width: 100%
     border: 2px solid $border-color
@@ -36,6 +35,8 @@
     font-size: 16px
     color: $text-color-lighter
     outline: none
+    +border-radius
+    +appearance(none)
     +respond-to(padding, (x0: 0 15px, x1: 0 20px))
     +when('error')
       border-color: $red
@@ -67,11 +68,11 @@
   &-text
     position: relative
     height: 50px
-    border-radius: 5px
     border: 2px solid $border-color
     font-size: 16px
     transition: border-color 300ms ease
     outline: none
+    +border-radius
     +respond-to(padding, (x0: 10px 15px, x1: 10px 20px))
     +when('error')
       border-color: $red

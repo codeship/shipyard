@@ -4,9 +4,14 @@
   -webkit-transform: rotate($deg)
   transform: rotate($deg)
 
-@mixin backdrop-filter($content)
-  backdrop-filter: $content
-  -webkit-backdrop-filter: $content
+@mixin appearance($value)
+  appearance: $value
+  -moz-appearance: $value
+  -webkit-appearance: $value
+
+@mixin backdrop-filter($value)
+  backdrop-filter: $value
+  -webkit-backdrop-filter: $value
 
 @mixin placeholder
   &:-moz-placeholder
