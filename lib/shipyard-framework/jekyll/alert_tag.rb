@@ -2,18 +2,16 @@ require_relative '../../../app/helpers/shipyard/alert_helper'
 
 module Shipyard
   module Jekyll
-    class Alert < Liquid::Tag
+    class Alert < Liquid::Block
       include Shipyard::AlertHelper
 
-      def initialize(tag_name, params, options)
+      def initialize(tag_name, type, options)
         super
-        @params = params.split(',')
-        @type = @params[0].tr(':','').to_sym
-        @text = @params[1]
+        @type = type.tr(':','').to_sym
       end
 
       def render(context)
-        flash_alert @type, @text
+        flash_alert @type, super
       end
     end
   end
