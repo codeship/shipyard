@@ -1,7 +1,7 @@
 PATH
   remote: ..
   specs:
-    shipyard-framework (0.4.9)
+    shipyard-framework (0.5.0)
       actionview (~> 5.0)
 
 GEM
@@ -84,4 +84,4 @@ DEPENDENCIES
   shipyard-framework!
 
 BUNDLED WITH
-   1.15.4
+   1.16.0.pre.2
