@@ -16,27 +16,61 @@
       </div>
     </header>
     <div class="container"><h1 id="shipyard-alerts">Shipyard Alerts</h1>
+<p class="text-light text-lg margin-top-xxs">Alerts should be used to grab a user's attention before proceeding to the next action. They are commonly found at the very top of the page directly above the content.</p>
 
 <hr />
 
-<div role="alert" data-shipyard="alert" v-show="visible" class="alert alert-info  "><p class="alert-txt">
-  Ten other people are also viewing tickets for this flight.
+<h3 id="default-alert">Default <code class="highlighter-rouge">.alert</code></h3>
+<p class="text-light margin-bottom-sm">Used to display notes, tips, and other non-critical information.</p>
+
+<div role="alert" data-shipyard="alert" v-show="visible" class="alert "><p class="alert-txt">
+  Ten other people are also viewing tickets for <a href="#">this flight</a>.
   Use the code <code class="code-inline">Travel_Light_2017</code> before you book your flight.
+  <button class="alert-cta btn btn-sm">Call to Action</button>
 </p></div>
+
+<hr />
+
+<h3 id="info-alert-info">Info <code class="highlighter-rouge">.alert-info</code></h3>
+<p class="text-light margin-bottom-sm">Useful when drawing attention to non-critical information or actions we want the user to take.</p>
+
+<div role="alert" data-shipyard="alert" v-show="visible" class="alert alert-info  "><p class="alert-txt">
+  Ten other people are also viewing tickets for <a href="#">this flight</a>.
+  Use the code <code class="code-inline">Travel_Light_2017</code> before you book your flight.
+  <button class="alert-cta btn btn-sm">Call to Action</button>
+</p></div>
+
+<hr />
+
+<h3 id="success-alert-success">Success <code class="highlighter-rouge">.alert-success</code></h3>
+<p class="text-light margin-bottom-sm">Useful when drawing attention to interactions that have produced successful results.</p>
 
 <div role="alert" data-shipyard="alert" v-show="visible" class="alert alert-success  "><p class="alert-txt">
   Pack your bags! You'll be on the next flight to Hawaii.
-  Use the code <code class="code-inline">Travel_Light_2017</code> on your next flight.
+  Use the code <code class="code-inline">Travel_Light_2017</code> on your next flight. In the meantime you can <a href="#">invite a friend</a> to this flight.
+  <button class="alert-cta btn btn-sm">Call to Action</button>
 </p></div>
+
+<hr />
+
+<h3 id="warning-alert-warning">Warning <code class="highlighter-rouge">.alert-warning</code></h3>
+<p class="text-light margin-bottom-sm">Useful when drawing attention to critical, time-sensitive information &mdash; even if nothing has gone wrong.</p>
 
 <div role="alert" data-shipyard="alert" v-show="visible" class="alert alert-warning  "><p class="alert-txt">
   There are only 2 seats left on this flight! We recommend to book your tickets as soon as possible.
   Use the code <code class="code-inline">Travel_Light_2017</code> before you book your flight.
+  <button class="alert-cta btn btn-sm">Call to Action</button>
 </p></div>
+
+<hr />
+
+<h3 id="error-alert-error">Error <code class="highlighter-rouge">.alert-error</code></h3>
+<p class="text-light margin-bottom-sm">Useful when drawing attention to something that has gone critically wrong.</p>
 
 <div role="alert" data-shipyard="alert" v-show="visible" class="alert alert-error  "><p class="alert-txt">
   This flight is now sold out. Let's get you on the next flight to Kauai.
   We hope the code <code class="code-inline">Travel_Light_2017</code> will be useful for your next flight.
+  <button class="alert-cta btn btn-sm">Call to Action</button>
 </p></div>
 </div>
     <footer class="align-center text-lightest">
