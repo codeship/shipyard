@@ -8,23 +8,27 @@ $colors: (
     darkest: #1e252c
   ),
   "green": (
-    base: #3acc7c,
-    light: #97ffc6,
-    lightest: #b5ffd6,
-    dark: #2c995d,
-    darkest: #1d663e
+    base: darken(#3acc7c, 3%),
+    light: lighten(#3acc7c, 15%),
+    lighter: lighten(#3acc7c, 30%),
+    lightest: lighten(#3acc7c, 41%),
+    dark: darken(#3acc7c, 18%),
+    darker: darken(#3acc7c, 26%),
+    darkest: darken(#3acc7c, 32%)
   ),
   "blue": (
     base: #1ca1e3,
     light: #5eb9e6,
-    lightest: #9ed8f5,
+    lighter: #9ed8f5,
+    lightest: lighten(#9ed8f5, 10%),
     dark: #0075b0,
     darkest: #004d73
   ),
   "teal": (
     base: #20a5a8,
     light: #6ab7b9,
-    lightest: #b2dbdc,
+    lighter: #b2dbdc,
+    lightest: lighten(#b2dbdc, 13%),
     dark: #0e6e70,
     darkest: #00494b
   ),
@@ -32,7 +36,7 @@ $colors: (
     base: #e06158,
     light: lighten(#e06158, 8%),
     lighter: lighten(#e06158, 16%),
-    lightest: lighten(#e06158, 25%),
+    lightest: lighten(#e06158, 32%),
     dark: #b13b39,
     darker: #892120,
     darkest: desaturate(darken(#892120, 8%), 0%)

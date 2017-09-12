@@ -1,9 +1,10 @@
 +component('alert')
   display: block
   border-radius: 5px
-  background: $blue
-  color: rgba(#fff,.9)
+  background: $gray
+  color: $gray-lightest
   position: relative
+  text-shadow: 0 1px 0 rgba(#000,.08)
   +respond-to(min-height, (x0: 50px, x1: 60px))
   +respond-to(margin-bottom, (x0: 10px, x1: 15px))
   +respond-to(padding, (x0: 12px 10px, x1: 17px 20px, x2: 17px 30px))
@@ -24,23 +25,27 @@
     background: rgba(#fff, .25)
     transform: translatex(-100%)
     animation: slide-in-from-left 10s linear 0s forwards
+
+  // Alert: Types
+  &-success
+    color: $green-lightest
+    background: darken($green, 5%)
+  &-warning
+    color: $yellow-lightest
+    background: darken($yellow, 20%)
+  &-error
+    color: $red-lightest
+    background: $red
+  &-info
+    background: $blue
+    color: $blue-lightest
+
+  // Alert: Sub-components
   &-txt,
   &-txt p
     margin: 0
     font-weight: $medium
-    .legacy-content &
-      font-size: $font-size
-      line-height: inherit
-  &-success
-    background: darken($green, 5%)
-  &-warning
-    background: darken($yellow, 20%)
-  &-error
-    background: $red
-  &-description
-    opacity: 0.75
   &-cta
-    +btn-color(darken($blue, 10%))
     +breakpoint-x0
       display: block
       text-align: center

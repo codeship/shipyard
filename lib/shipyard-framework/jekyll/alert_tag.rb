@@ -7,11 +7,15 @@ module Shipyard
 
       def initialize(tag_name, type, options)
         super
-        @type = type.tr(':','').to_sym
+        @type = type.tr(':','').to_sym unless type.blank?
       end
 
       def render(context)
-        flash_alert @type, super
+        if @type
+          flash_alert @type, super
+        else
+          flash_alert super
+        end
       end
     end
   end

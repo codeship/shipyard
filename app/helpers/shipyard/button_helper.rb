@@ -16,6 +16,7 @@ module Shipyard
 
       # Output the appropriate button.
       if options.key?(:href)
+        options[:role] = :button
         link_to text, options[:href], btn_options(args, options)
       else
         content_tag :button, text, btn_options(args, options)

@@ -88,6 +88,21 @@
     max-width: 600px
     margin: 0 auto
 
+  // Alert Buttons
+  .alert &
+    +btn-color(darken($gray, 20%))
+    +btn-hover(darken($gray, 25%))
+  .alert-info &
+    +btn-color(darken($blue, 10%))
+    +btn-hover(darken($blue, 15%))
+  .alert-warning &
+    +btn-color($yellow-darker)
+    +btn-hover($yellow-darkest)
+  .alert-success &
+    +extend('cta')
+  .alert-error &
+    +extend('caution')
+
   &-margin
     margin: 0 5px
     &-lg
@@ -106,6 +121,14 @@
     &-dark
       +btn-color(none, darken($text-color-light, 5%), lighten($gray-light, 5%))
       +btn-hover(none, darken($text-color-light, 20%), darken($gray-light, 5%))
+
+  &-caution
+    +btn-color($red-dark)
+    +btn-hover($red-darker)
+
+  &-cta
+    +btn-color($green-dark)
+    +btn-hover($green-darker)
 
   &-checked
     &, &:active, &:hover, &:focus
