@@ -4,7 +4,8 @@ $colors: (
     light: #bac5d2,
     lighter: #dfe6eb,
     lightest: #f2f5f7,
-    dark: #313a44,
+    dark: darken(#788594, 18%),
+    darker: #313a44,
     darkest: #1e252c
   ),
   "green": (
@@ -22,15 +23,17 @@ $colors: (
     lighter: #9ed8f5,
     lightest: lighten(#9ed8f5, 10%),
     dark: #0075b0,
-    darkest: #004d73
+    darker: darken(#0075b0, 7%),
+    darkest: darken(#004d73, 5%)
   ),
   "teal": (
     base: #20a5a8,
     light: #6ab7b9,
     lighter: #b2dbdc,
     lightest: lighten(#b2dbdc, 13%),
-    dark: #0e6e70,
-    darkest: #00494b
+    dark: darken(#20a5a8, 8%),
+    darker: darken(#20a5a8, 16%),
+    darkest: darken(#20a5a8, 24%)
   ),
   "red": (
     base: #e06158,
