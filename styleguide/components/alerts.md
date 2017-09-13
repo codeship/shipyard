@@ -44,7 +44,7 @@ title: Shipyard Alerts
 <p class="text-light margin-bottom-sm">Useful when drawing attention to critical, time-sensitive information &mdash; even if nothing has gone wrong.</p>
 
 {% alert :warning %}
-  There are only 2 seats left on this flight! We recommend to book your tickets as soon as possible.
+  There are only 2 seats left on this flight! We recommend to <a href="#">book your tickets</a> as soon as possible.
   Use the code <code class="code-inline">Travel_Light_2017</code> before you book your flight.
   {% btn Call to Action, :sm, class: 'alert-cta' %}
 {% endalert %}
@@ -55,7 +55,7 @@ title: Shipyard Alerts
 <p class="text-light margin-bottom-sm">Useful when drawing attention to something that has gone critically wrong.</p>
 
 {% alert :error %}
-  This flight is now sold out. Let's get you on the next flight to Kauai.
+  This flight is now sold out. Let's get you on the <a href="#">next flight to Kauai</a>.
   We hope the code <code class="code-inline">Travel_Light_2017</code> will be useful for your next flight.
   {% btn Call to Action, :sm, class: 'alert-cta' %}
 {% endalert %}

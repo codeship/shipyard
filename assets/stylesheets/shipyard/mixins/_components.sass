@@ -3,12 +3,13 @@
   $component: $name !global
   .#{$name}
     @content
+    +component-styles($name)
 
 @mixin sub-component($name)
   $sub-component: "#{$component}-#{$name}" !global
   &-#{$name}
     @content
-    +component-styles($name)
+    +sub-component-styles($name)
 
 @mixin extend($modifier: null)
   @if $modifier
@@ -23,6 +24,13 @@
     z-index: map-get($z-index, $component)
 
 @mixin component-styles($modifier)
+  $component-styles: map-get($components, $component)
+  @if $component-styles
+    @each $property, $value in $component-styles
+      @if type-of($value) != map
+        #{$property}: $value
+
+@mixin sub-component-styles($modifier)
   $component-styles: map-get($components, $component)
   @if $component-styles
     @each $property, $value in map-get($component-styles, $modifier)

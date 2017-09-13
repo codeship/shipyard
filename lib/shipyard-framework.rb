@@ -70,10 +70,12 @@ module Shipyard
     def register_jekyll_tags
       require 'shipyard-framework/jekyll/button_tag'
       require 'shipyard-framework/jekyll/box_tag'
+      require 'shipyard-framework/jekyll/note_tag'
       require 'shipyard-framework/jekyll/alert_tag'
       require 'shipyard-framework/jekyll/shipyard_version_tag'
       Liquid::Template.register_tag('btn', Shipyard::Jekyll::Button)
       Liquid::Template.register_tag('box', Shipyard::Jekyll::Box)
+      Liquid::Template.register_tag('note', Shipyard::Jekyll::Note)
       Liquid::Template.register_tag('alert', Shipyard::Jekyll::Alert)
       Liquid::Template.register_tag('shipyard_version', Shipyard::Jekyll::ShipyardVersion)
     end

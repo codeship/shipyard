@@ -102,18 +102,18 @@
     &::before
       z-index: 1
       content: "*"
-      +component-styles(required-asterisk)
+      +sub-component-styles(required-asterisk)
       +when('error')
-        +component-styles(required-asterisk-error)
+        +sub-component-styles(required-asterisk-error)
     &::after
       content: ""
       display: block
       border-style: solid
       border-radius: 0 3px 0 0
       border-color: transparent
-      +component-styles(required-corner)
+      +sub-component-styles(required-corner)
       +when('error')
-        +component-styles(required-corner-error)
+        +sub-component-styles(required-corner-error)
 
   &-full
     width: 100%

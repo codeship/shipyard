@@ -36,6 +36,22 @@ $component-defaults: (
       color: #fff,
       font-weight: $medium
     )
+  ),
+  note: (
+    background: $gray-lighter,
+    border-radius: $border-radius,
+    info: (
+      color: $blue-darkest,
+      background: $blue-lighter
+    ),
+    success: (
+      color: $green-darkest,
+      background: $green-lighter
+    ),
+    warning: (
+      color: $yellow-darkest,
+      background: $yellow-lighter
+    )
   )
 ) !default;
 

@@ -103,6 +103,17 @@
   .alert-error &
     +extend('caution')
 
+  // Note Buttons
+  .note-info &
+    +btn-color($blue-dark)
+    +btn-hover($blue-darker)
+  .note-warning &
+    +btn-color($yellow-dark)
+    +btn-hover($yellow-darker)
+  .note-success &
+    +btn-color($green-dark)
+    +btn-hover($green-darker)
+
   &-margin
     margin: 0 5px
     &-lg

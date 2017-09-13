@@ -10,8 +10,8 @@ $colors: (
   ),
   "green": (
     base: darken(#3acc7c, 3%),
-    light: lighten(#3acc7c, 15%),
-    lighter: lighten(#3acc7c, 30%),
+    light: lighten(#3acc7c, 22%),
+    lighter: lighten(#3acc7c, 34%),
     lightest: lighten(#3acc7c, 41%),
     dark: darken(#3acc7c, 18%),
     darker: darken(#3acc7c, 26%),
@@ -19,9 +19,9 @@ $colors: (
   ),
   "blue": (
     base: #1ca1e3,
-    light: #5eb9e6,
-    lighter: #9ed8f5,
-    lightest: lighten(#9ed8f5, 10%),
+    light: lighten(#5eb9e6, 15%),
+    lighter: lighten(#9ed8f5, 9%),
+    lightest: lighten(#9ed8f5, 15%),
     dark: #0075b0,
     darker: darken(#0075b0, 7%),
     darkest: darken(#004d73, 5%)
@@ -46,12 +46,12 @@ $colors: (
   ),
   "yellow": (
     base: #ffca49,
-    light: lighten(#ffca49, 7%),
-    lighter: darken(#ffe7b1, 3%),
+    light: lighten(#ffca49, 8%),
+    lighter: #ffe7b1,
     lightest: lighten(#ffe7b1, 7%),
     dark: darken(#ffca49, 20%),
     darker: darken(#ffca49, 30%),
-    darkest: darken(#ffca49, 40%)
+    darkest: darken(#ffca49, 47%)
   ),
   "orange": (
     base: #ff9f49,

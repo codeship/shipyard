@@ -1,10 +1,10 @@
 +component('alert')
   display: block
-  border-radius: 5px
   background: $gray
   color: $gray-lightest
   position: relative
   text-shadow: 0 1px 0 rgba(#000,.08)
+  +border-radius
   +respond-to(min-height, (x0: 50px, x1: 60px))
   +respond-to(margin-bottom, (x0: 10px, x1: 15px))
   +respond-to(padding, (x0: 12px 10px, x1: 17px 20px, x2: 17px 30px))
@@ -37,8 +37,8 @@
     color: $red-lightest
     background: $red
   &-info
-    background: $blue
     color: $blue-lightest
+    background: $blue
 
   // Alert: Sub-components
   &-txt,
