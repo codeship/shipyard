@@ -22,7 +22,7 @@ RSpec.describe Shipyard::ButtonHelper, type: :helper do
   end
 
   it 'should return a button with a custom CSS class' do
-    expect(btn('Save', class: 'test-cta')).to match(%r{<button class="test-cta btn">Save</button>})
+    expect(btn('Save', class: 'shipyard-cta')).to match(%r{<button class="shipyard-cta btn">Save</button>})
   end
 
   it 'should return all button sizes' do
