@@ -12,7 +12,7 @@ module Shipyard
         register_jekyll_tags
       end
 
-      configure_sass
+      # configure_sass
     end
 
     # Paths

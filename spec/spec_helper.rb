@@ -1,6 +1,6 @@
 require 'bundler/setup'
 Bundler.setup
-# require 'shipyard-framework'
+require 'shipyard-framework'
 
 RSpec.configure do |config|
   # some (optional) config here
