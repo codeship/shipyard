@@ -33,6 +33,7 @@ plugins:
 ```
 
 ## Status
+[![Gem Version](https://badge.fury.io/rb/shipyard-framework.svg)](https://badge.fury.io/rb/shipyard-framework)
 [![Codeship Status for shipyard-framework/shipyard](https://app.codeship.com/projects/a1a079a0-800a-0135-2025-3e18bae1bf89/status?branch=master)](https://app.codeship.com/projects/246583)
 
 ## Usage
