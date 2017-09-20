@@ -13,6 +13,7 @@ module Shipyard
       end
 
       require_relative '../app/helpers/shipyard/button_helper'
+      require_relative '../app/helpers/shipyard/icon_helper'
       # configure_sass
     end
 

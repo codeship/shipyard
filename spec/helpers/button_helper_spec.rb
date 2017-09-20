@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-RSpec.describe Shipyard::ButtonHelper do
+RSpec.describe Shipyard::ButtonHelper, type: :helper do
   include Shipyard::ButtonHelper
 
   it 'should return a default button' do
