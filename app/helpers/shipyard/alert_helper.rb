@@ -23,7 +23,7 @@ module Shipyard
         end
       end
 
-      options[:class] = "#{class_list.join(' ')} #{options[:class]}"
+      options[:class] = "#{class_list.join(' ')} #{options[:class]}".strip
 
       content_tag :div, options do
         concat content_tag(:p, raw(alert_txt), class: 'alert-txt')
