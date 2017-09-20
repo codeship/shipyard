@@ -17,7 +17,7 @@ Gem::Specification.new do |spec|
   # spec.add_runtime_dependency 'sassc', '~> 1.11.4'
   spec.add_runtime_dependency 'actionview', '~> 5.0'
 
-  spec.add_development_dependency 'bundler', '~> 1.15', '>= 1.15.3'
+  spec.add_development_dependency 'bundler'
   spec.add_development_dependency 'rspec'
 
   spec.executables = `git ls-files -- bin/*`.split("\n").map{ |f| File.basename(f) }
