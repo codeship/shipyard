@@ -2,7 +2,7 @@ require 'spec_helper'
 
 RSpec.describe Shipyard::ButtonHelper do
   include Shipyard::ButtonHelper
-  
+
   it 'should return a default button' do
     expect(btn('Save')).to match(%r{<button class="btn">Save</button>})
   end
@@ -16,7 +16,7 @@ RSpec.describe Shipyard::ButtonHelper do
   end
 
   it 'should return a linked button' do
-    expect(btn('Save', href: root_path)).to match(%r{<a class="btn" href="#{root_path}">Save</a>})
+    expect(btn('Save', href: '#')).to match(%r{<a href="#" role="button" class="btn">Save</a>})
   end
 
   it 'should return a button with a data attribute' do
