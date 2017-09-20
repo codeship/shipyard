@@ -12,6 +12,7 @@ module Shipyard
         register_jekyll_tags
       end
 
+      require_relative '../app/helpers/shipyard/button_helper'
       # configure_sass
     end
 
