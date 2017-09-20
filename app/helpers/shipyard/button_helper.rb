@@ -1,6 +1,7 @@
 module Shipyard
   module ButtonHelper
     include ActionView::Helpers::TagHelper
+    include ActionView::Helpers::UrlHelper
 
     def btn(text, *args, &block)
       if block_given?

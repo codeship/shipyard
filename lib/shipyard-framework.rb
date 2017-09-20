@@ -12,6 +12,7 @@ module Shipyard
         register_jekyll_tags
       end
 
+      register_helpers
       configure_sass
     end
 
@@ -52,7 +53,6 @@ module Shipyard
 
     def configure_sass
       require 'sass'
-
       ::Sass.load_paths << stylesheets_path
     end
 
@@ -78,6 +78,12 @@ module Shipyard
       Liquid::Template.register_tag('note', Shipyard::Jekyll::Note)
       Liquid::Template.register_tag('alert', Shipyard::Jekyll::Alert)
       Liquid::Template.register_tag('shipyard_version', Shipyard::Jekyll::ShipyardVersion)
+    end
+
+    def register_helpers
+      Dir['app/helpers/shipyard/*.rb'].each do |file|
+        require_relative "../#{file}"
+      end
     end
   end
 end
