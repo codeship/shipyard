@@ -1,5 +1,6 @@
 require 'shipyard-framework/version'
 require 'action_view'
+require 'sass'
 
 module Shipyard
   class << self
@@ -13,7 +14,7 @@ module Shipyard
       end
 
       register_helpers
-      # configure_sass
+      configure_sass
     end
 
     # Paths
@@ -39,6 +40,10 @@ module Shipyard
 
     private
 
+    def sass?
+      defined?(::Sass)
+    end
+
     def sprockets?
       defined?(::Sprockets)
     end
@@ -52,8 +57,6 @@ module Shipyard
     end
 
     def configure_sass
-      require 'sass'
-
       ::Sass.load_paths << stylesheets_path
     end
 
