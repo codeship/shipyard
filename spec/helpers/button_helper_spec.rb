@@ -7,40 +7,28 @@ RSpec.describe Shipyard::ButtonHelper, type: :helper do
     expect(btn('Save')).to match(%r{<button class="btn">Save</button>})
   end
 
-  it 'should return a primary button' do
-    expect(btn('Save', :primary)).to match(%r{<button class="btn btn-primary">Save</button>})
-  end
-
-  it 'should return a secondary button' do
-    expect(btn('Save', :secondary)).to match(%r{<button class="btn btn-secondary">Save</button>})
+  it 'should return all other button types' do
+    %w(primary secondary disabled cta caution inverse inverse-secondary).each do |type|
+      expect(btn('Save', type.to_sym)).to match(%r{<button class="btn btn-#{type}">Save</button>})
+    end
   end
 
   it 'should return a linked button' do
     expect(btn('Save', href: '#')).to match(%r{<a href="#" role="button" class="btn">Save</a>})
   end
 
-  it 'should return a button with a data attribute' do
+  it 'should return a button with a custom data attribute' do
     expect(btn('Save', data: { btn_type: 'save' })).to match(%r{<button data-btn-type="save" class="btn">Save</button>})
   end
 
-  it 'should return a x-small button' do
-    expect(btn('Save', :xs)).to match(%r{<button class="btn btn-xs">Save</button>})
+  it 'should return a button with a custom CSS class' do
+    expect(btn('Save', class: 'test-cta')).to match(%r{<button class="test-cta btn">Save</button>})
   end
 
-  it 'should return a small button' do
-    expect(btn('Save', :sm)).to match(%r{<button class="btn btn-sm">Save</button>})
-  end
-
-  it 'should return a medium button' do
-    expect(btn('Save', :md)).to match(%r{<button class="btn btn-md">Save</button>})
-  end
-
-  it 'should return a large button' do
-    expect(btn('Save', :lg)).to match(%r{<button class="btn btn-lg">Save</button>})
-  end
-
-  it 'should return a x-large button' do
-    expect(btn('Save', :xl)).to match(%r{<button class="btn btn-xl">Save</button>})
+  it 'should return all button sizes' do
+    %w(xxs xs sm md lg xl).each do |size|
+      expect(btn('Save', size.to_sym)).to match(%r{<button class="btn btn-#{size}">Save</button>})
+    end
   end
 
   it 'should return a responsive button' do
