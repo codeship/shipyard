@@ -32,6 +32,9 @@ plugins:
   - shipyard-framework
 ```
 
+## Status
+[![Codeship Status for shipyard-framework/shipyard](https://app.codeship.com/projects/a1a079a0-800a-0135-2025-3e18bae1bf89/status?branch=master)](https://app.codeship.com/projects/246583)
+
 ## Usage
 
 TODO: Write usage instructions here
@@ -45,7 +48,6 @@ To install this gem onto your local machine, run `bundle exec rake install`. To 
 ## Contributing
 
 Bug reports and pull requests are welcome on GitHub at https://github.com/[USERNAME]/shipyard. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](http://contributor-covenant.org) code of conduct.
-
 
 ## License
 
