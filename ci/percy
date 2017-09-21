@@ -9,4 +9,4 @@ echo -e "\n\n************** Jekyll Build **************"
 bundle exec jekyll build --baseurl=''
 
 echo -e "\n\n************** Percy Snapshot **************"
-bundle exec percy snapshot _site/
+bundle exec percy snapshot --widths "375,1280" _site/
