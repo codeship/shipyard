@@ -3,6 +3,7 @@ cd ./styleguide
 pwd
 
 echo -e "\n\n************** Bundle Install **************"
+gem install bundler
 bundle install
 
 echo -e "\n\n************** Jekyll Build **************"
