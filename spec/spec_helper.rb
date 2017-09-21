@@ -1,4 +1,5 @@
 require 'bundler/setup'
+# require 'percy/capybara'
 require 'shipyard-framework'
 Bundler.setup
 
@@ -18,6 +19,15 @@ Bundler.setup
 #
 # See http://rubydoc.info/gems/rspec-core/RSpec/Core/Configuration
 RSpec.configure do |config|
+  # Percy::Capybara.use_loader(:native)
+  # config.before(:suite) {
+  #   # Percy::Capybara.use_loader(:native)
+  #   Percy::Capybara.initialize_build
+  # }
+  # config.after(:suite) {
+  #   # Percy::Capybara.finalize_build
+  # }
+
   # rspec-expectations config goes here. You can use an alternate
   # assertion/expectation library such as wrong or the stdlib/minitest
   # assertions if you prefer.
