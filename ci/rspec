@@ -1,1 +1,4 @@
-bundle exec rspec
+if [ "$CI_BRANCH" != "gh-pages" ]
+then
+  bundle exec rspec
+fi

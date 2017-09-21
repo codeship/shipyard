@@ -1,3 +1,6 @@
-rvm use $(cat .ruby-version)
-gem install bundler --pre
-bundle install
+if [ "$CI_BRANCH" != "gh-pages" ]
+then
+  rvm use $(cat .ruby-version)
+  gem install bundler --pre
+  bundle install
+fi
