@@ -1,0 +1,1 @@
+rvm use $(cat .ruby-version)

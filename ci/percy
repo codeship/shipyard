@@ -1,0 +1,4 @@
+cd ./styleguide
+bundle install
+bundle exec jekyll build --baseurl=''
+bundle exec percy snapshot ./_site/

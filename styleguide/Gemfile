@@ -2,5 +2,6 @@ source 'https://rubygems.org'
 
 group :jekyll_plugins do
   gem 'jekyll'
+  gem 'percy-cli', '~> 1.2.9'
   gem 'shipyard-framework', path: '../'
 end
