@@ -1,1 +1,3 @@
 rvm use $(cat .ruby-version)
+bundle install
+cd ./styleguide && bundle install && cd ../
