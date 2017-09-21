@@ -1,6 +1,3 @@
-echo -e "************** Bundle **************"
-bundle install
-
 echo -e "************** Changed to Styleguide Directory **************"
 cd ./styleguide
 pwd
