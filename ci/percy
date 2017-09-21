@@ -1,3 +1,6 @@
+echo -e "************** Bundle **************"
+bundle install
+
 echo -e "************** Changed to Styleguide Directory **************"
 cd ./styleguide
 pwd
@@ -8,5 +11,9 @@ bundle install
 echo -e "\n\n************** Jekyll Build **************"
 bundle exec jekyll build --baseurl=''
 
+echo -e "\n\n************** Changed to Root Directory **************"
+cd ../
+pwd
+
 echo -e "\n\n************** Percy Snapshot **************"
-bundle exec percy snapshot --widths "375,1280" _site/
+bundle exec percy snapshot --widths "375,1280" styleguide/_site/
