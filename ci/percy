@@ -1,4 +1,11 @@
+echo '************** Changed to Styleguide Directory **************'
 cd ./styleguide
+
+echo '************** Bundle Install **************'
 bundle install
+
+echo '************** Jekyll Build **************'
 bundle exec jekyll build --baseurl=''
-bundle exec percy snapshot ./_site/
+
+echo '************** Percy Snapshot **************'
+bundle exec percy snapshot _site/
