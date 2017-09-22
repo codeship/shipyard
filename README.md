@@ -42,7 +42,7 @@ To install this gem onto your local machine, run `bundle exec rake install`. To 
 
 ## Bugs & Feature Requests
 
-Have a bug or a feature request? Please first read [the issue guidelines](https://github.com/codeship/shipyard/wiki/issues) and search for (existing and closed issues)[https://github.com/codeship/shipyard/issues?utf8=%E2%9C%93&q=is%3Aissue]. If your problem or idea is not addressed yet, please [open a new issue](https://github.com/codeship/shipyard/issues/new).
+Have a bug or a feature request? Please first read [the issue guidelines](https://github.com/codeship/shipyard/wiki/issues) and search for [existing and closed issues](https://github.com/codeship/shipyard/issues?utf8=%E2%9C%93&q=is%3Aissue). If your problem or idea is not addressed yet, please [open a new issue](https://github.com/codeship/shipyard/issues/new).
 
 ## License
 
