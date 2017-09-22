@@ -16,7 +16,7 @@ shades: [Lightest, Lighter, Light, Base, Dark, Darker, Darkest]
         <div class="shade-box box bg-{{ color | append: '-' | append: shade | downcase | replace: '-base', '' }} shade-{{ shade | downcase | replace: 'er', '' | replace: 'est', '' }}">
           <div class="shade-color text-xxl bold bg-{{ color | append: '-' | append: shade | downcase | replace: '-base', '' }}"></div>
           <p class="shade-text text-sm medium {{ color | append: '-' | append: shade | downcase | replace: '-base', '' }}">
-            ${{ color | append: '-' | append: shade | downcase| replace: '-base', '' }}
+            ${{ color | append: '-' | append: shade | downcase | replace: '-base', '' }}
           </p>
         </div>
       </li>
