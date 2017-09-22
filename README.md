@@ -36,10 +36,6 @@ plugins:
 [![Gem Version](https://badge.fury.io/rb/shipyard-framework.svg)](https://badge.fury.io/rb/shipyard-framework)
 [![Codeship Status for codeship/shipyard](https://app.codeship.com/projects/30419df0-80ff-0135-f7fb-06994b6b032d/status?branch=master)](https://app.codeship.com/projects/246808)
 
-## Usage
-
-TODO: Write usage instructions here
-
 ## Development
 
 After checking out the repo, run `bin/setup` to install dependencies. Then, run `rake spec` to run the tests. You can also run `bin/console` for an interactive prompt that will allow you to experiment.
