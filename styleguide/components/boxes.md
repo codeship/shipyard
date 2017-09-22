@@ -1,10 +1,10 @@
 ---
 title: Shipyard Boxes
+description: Boxes should be used to grab a draw attention to specific groups of content, and are most useful to linked content. By default, all boxes need to have the base class of `.box` in order to function properly.
 box_sizes: [xxs, xs, sm, md, lg, xl]
 ---
 
-# {{ page.title }}
-<p class="text-light text-lg margin-top-xxs">Boxes should be used to grab a draw attention to specific groups of content, and are most useful to linked content. By default, all boxes need to have the base class of <code class="code-inline">.box</code> in order to function properly.</p>
+{% include page-heading.html page=page %}
 
 ---
 

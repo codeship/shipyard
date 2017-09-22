@@ -1,9 +1,9 @@
 ---
 title: Shipyard Notes
+description: Notes should be used to grab a user's attention along side of other content.
 ---
 
-# {{ page.title }}
-<p class="text-light text-lg margin-top-xxs">Notes should be used to grab a user's attention along side of other content.</p>
+{% include page-heading.html page=page %}
 
 ---
 

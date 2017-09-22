@@ -2,11 +2,11 @@
 title: Empty States
 ---
 
-<h1>{{ page.title }}</h1>
+{% include page-heading.html page=page %}
 
 <hr />
 
 <div class="empty-container align-center">
-  <p class="empty-txt">Get started by creating your first project.</p>
+  <p class="empty-txt">Welcome to Shipyard!<br /> Get started by creating your first project.</p>
   {% btn Create Project, :primary, class: 'empty-cta' %}
 </div>

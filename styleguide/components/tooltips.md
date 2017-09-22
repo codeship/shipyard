@@ -1,16 +1,13 @@
 ---
 title: Shipyard Tooltips
+description: Tooltips are used primarily by setting the tooltip attribute on any element (e.g. `tooltip="..."`).
 ---
 
-<h1>{{ page.title }}</h1>
-<p class="text-light text-lg">
-  Tooltips are used primarily by setting the tooltip attribute on any element
-  (e.g. <code class="code-inline">tooltip="..."</code>).
-</p>
+{% include page-heading.html page=page %}
 
-<hr />
+---
 
-<div class="box-padding align-center">
+<div class="align-center">
   {% btn Default Tooltip, :secondary :margin, tooltip: 'What a lovely tooltip' %}
   {% btn Top, :secondary :margin, tooltip: 'What a lovely tooltip' %}
   {% btn Bottom, :secondary :margin, tooltip: 'What a lovely tooltip' %}
