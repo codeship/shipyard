@@ -1,0 +1,54 @@
++component('header')
+  $height: 70px
+  background: #fff
+  position: fixed
+  top: 0
+  left: 0
+  right: 0
+  color: $text-color-light
+  z-index: 100
+  +box-shadow
+  +respond-to(height, (x0: 50px, x1: 60px, x2: 70px))
+  +respond-to(line-height, (x0: 50px, x1: 60px, x2: 70px))
+  &-logo
+    font-weight: $bold
+    font-size: 24px
+    float: left
+    a
+      color: $blue-darkest
+
+  &-list
+    float: right
+    font-weight: $medium
+    margin-right: -15px
+
+  &-item
+    display: inline
+    margin: 0 15px
+
+  &-link
+    color: inherit
+    +when('item-current')
+      position: relative
+      color: $blue
+      font-weight: $bold
+      cursor: default
+      &::after
+        content: ''
+        position: absolute
+        left: 0
+        bottom: -2px
+        background: $blue-lighter
+        +border-radius
+        +width-height(100%, 2px)
+    &, &:hover
+      text-decoration: none
+    &:hover
+      color: $blue
+    &-cta
+      color: darken($green, 5%)
+      font-weight: $bold
+      &:hover
+        color: $green-dark
+      &, &:hover
+        text-decoration: none
