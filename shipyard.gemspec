@@ -5,10 +5,10 @@ require 'shipyard-framework/version'
 Gem::Specification.new do |spec|
   spec.name          = 'shipyard-framework'
   spec.version       = Shipyard::VERSION
-  spec.authors       = ['Shipyard']
-  spec.email         = ['ryanwilke@gmail.com']
+  spec.authors       = ['Codeship']
+  spec.email         = ['design@codeship.com']
   spec.summary       = 'A lightweight CSS framework for developing mobile-first projects in Ruby on Rails.'
-  spec.homepage      = 'https://github.com/shipyard-framework'
+  spec.homepage      = 'https://github.com/codeship/shipyard'
   spec.license       = 'MIT'
 
   # Rails Dependencies
