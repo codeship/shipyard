@@ -12,14 +12,14 @@ gem 'shipyard-framework'
 
 And then execute:
 
-```sh
-    $ bundle
+```bash
+$ bundle
 ```
 
 Or install it yourself as:
 
-```sh
-    $ gem install shipyard-framework
+```bash
+$ gem install shipyard-framework
 ```
 
 The add this line to your application's CSS file(s):
