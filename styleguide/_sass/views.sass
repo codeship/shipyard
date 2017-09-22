@@ -1,7 +1,7 @@
 // Global Styles
 p, h1, h2, h3
   code
-    margin: 0 5px
+    margin: 0 3px
     @extend .code-inline
 
 hr
@@ -21,7 +21,7 @@ hr
     &:not(:last-child)
       border-right: 10px solid transparent
   &-box
-    height: 168px
+    height: 165px
     padding: 5px
     white-space: nowrap
     &:hover
@@ -41,6 +41,7 @@ hr
     +when('light:hover')
       color: $gray-darker
   &-text
+    line-height: 40px
     transition: 300ms color ease
     +when('box:hover')
       color: rgba(#fff,.7)

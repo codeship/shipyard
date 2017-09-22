@@ -1,5 +1,6 @@
 ---
 title: Shipyard Colors
+description: Shipyard includes **9 standard colors** by default, and each color can be accessed with the corresponding CSS utility class `.color-shade` or by using the SASS variable `$color-shade` in your SASS files.
 colors: [Gray, Blue, Teal, Green, Yellow, Orange, Red, Coral, Purple]
 shades: [Lightest, Lighter, Light, Base, Dark, Darker, Darkest]
 ---
@@ -14,8 +15,8 @@ shades: [Lightest, Lighter, Light, Base, Dark, Darker, Darkest]
       <li class="shade-item shade-{{ shade | downcase }}">
         <div class="shade-box box bg-{{ color | append: '-' | append: shade | downcase | replace: '-base', '' }} shade-{{ shade | downcase | replace: 'er', '' | replace: 'est', '' }}">
           <div class="shade-color text-xxl bold bg-{{ color | append: '-' | append: shade | downcase | replace: '-base', '' }}"></div>
-          <p class="shade-text text-sm medium margin-top-xs medium {{ color | append: '-' | append: shade | downcase | replace: '-base', '' }}">
-            {{ shade | append: ' ' | append: color | replace: 'Base ', '' }}
+          <p class="shade-text text-sm medium {{ color | append: '-' | append: shade | downcase | replace: '-base', '' }}">
+            ${{ color | append: '-' | append: shade | downcase| replace: '-base', '' }}
           </p>
         </div>
       </li>
