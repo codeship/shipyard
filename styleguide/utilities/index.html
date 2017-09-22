@@ -3,8 +3,10 @@ title: Shipyard Utilities
 utilities: [Responsive, Typography, Colors]
 ---
 
-<h1>{{ page.title }}</h1>
+{% include page-heading.html page=page %}
+
 <hr />
+
 <ul class="col-container">
   {% for utility in page.utilities %}
     <li class="margin-bottom-xs margin-bottom-x1-sm margin-bottom-x2-lg col col-100 col-x1-25">

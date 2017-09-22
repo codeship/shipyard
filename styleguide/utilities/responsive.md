@@ -1,13 +1,14 @@
 ---
-title: Shipyard Responsive
+title: Mobile-first Methodology
+description: Shipyard is a CSS Framework is built from mobile-first approach to front-end development. This means that by default, a class applies to all screen sizes unless otherwise specifed. In order to make something truly responsive, you need to first think about how you want it to look on all screen sizes, and then using the modifiers `(x1-x4)` to define how the style will change as the screen size grows.
 ---
 
-<h1 class="text-xxxl">Mobile-first Methodology</h1>
-<p class="text-light text-xl">Shipyard is a CSS Framework is built from mobile-first approach to front-end development. This means that by default, a class applies to all screen sizes unless otherwise specifed. In order to make something truly responsive, you need to first think about how you want it to look on all screen sizes, and then using the modifiers (x1-x4) to define how the style will change as the screen size grows.</p>
+{% include page-heading.html page=page %}
 
-<hr />
+---
 
-<h2>Responsive Demo</h2>
+## Responsive Demo
+
 <div class="box-secondary box-padding align-center">
   <button class="btn btn-xs btn-x1-sm btn-x2-md btn-x3-lg btn-x4-xl">
     <span class="display-inline display-x1-none">All Screens (.btn-xs)</span>

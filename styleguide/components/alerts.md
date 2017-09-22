@@ -1,9 +1,9 @@
 ---
 title: Shipyard Alerts
+description: Alerts should be used to grab a user's attention before proceeding to the next action. They are commonly found at the very top of the page directly above the content.
 ---
 
-# {{ page.title }}
-<p class="text-light text-lg margin-top-xxs">Alerts should be used to grab a user's attention before proceeding to the next action. They are commonly found at the very top of the page directly above the content.</p>
+{% include page-heading.html page=page %}
 
 ---
 
