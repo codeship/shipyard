@@ -1,3 +1,7 @@
 language: ruby
 rvm:
- - 2.4.1
+  - 2.4.1
+install:
+  - source ci/setup
+script:
+  - source ci/rspec
