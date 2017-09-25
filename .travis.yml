@@ -5,3 +5,4 @@ install:
   - source ci/setup
 script:
   - source ci/rspec
+  - source ci/jekyll
