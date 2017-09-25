@@ -6,3 +6,7 @@ install:
 script:
   - source ci/rspec
   - source ci/jekyll
+branches:
+  except:
+  - gh-pages
+  - skip-ci/*
