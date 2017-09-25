@@ -7,7 +7,7 @@ shades: [Lightest, Lighter, Light, Base, Dark, Darker, Darkest]
 
 {% include page-heading.html page=page %}
 
-<hr />
+---
 
 {% for color in page.colors %}
   <ul class="shade-list margin-bottom-xxl">
@@ -23,20 +23,3 @@ shades: [Lightest, Lighter, Light, Base, Dark, Darker, Darkest]
     {% endfor %}
   </ul>
 {% endfor %}
-
-<script type="text/javascript">
-  $.fn.backgroundColorHex = function(){
-    let rgb = this.css('background-color');
-    if (rgb.match(/rgba/)) return '#';
-    let hex = rgb.substr(4, rgb.indexOf(')') - 4).split(',').map(
-                (color) => String('0' + parseInt(color).toString(16)).slice(-2)
-              ).join('');
-    return `#${hex}`;
-  };
-
-  $(document).ready(function(){
-    $('.shade-color').each(function(index, shade){
-      $(shade).html($(shade).backgroundColorHex());
-    });
-  });
-</script>
