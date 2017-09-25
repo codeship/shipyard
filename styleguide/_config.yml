@@ -28,6 +28,7 @@ sass:
 # Build settings
 markdown: kramdown
 plugins:
+  - jekyll-assets
   - shipyard-framework
 
 defaults:
