@@ -15,4 +15,4 @@ cd ../
 pwd
 
 echo -e "\n\n************** HTML Proofer **************"
-bundle exec htmlproofer ./styleguide/_site --disable-external --allow-hash-href --assume-extension
+bundle exec htmlproofer ./styleguide/_site --disable-external --allow-hash-href --assume-extension --log-level :debug
