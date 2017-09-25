@@ -1,6 +1,8 @@
 language: ruby
 rvm:
 - 2.4.1
+before_install:
+- chmod +x ci/setup
 install:
 - source ci/setup
 before_script:
