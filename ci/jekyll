@@ -9,8 +9,10 @@ bundle install
 echo -e "\n\n************** Jekyll Build **************"
 set -e # halt script on error
 bundle exec jekyll build --baseurl=''
-bundle exec htmlproofer ./_site --disable-external
 
 echo -e "\n\n************** Change Back to the Root Directory **************"
 cd ../
 pwd
+
+echo -e "\n\n************** HTML Proofer **************"
+bundle exec htmlproofer ./styleguide/_site --disable-external
