@@ -9,4 +9,4 @@ script:
 branches:
   except:
   - gh-pages
-  - skip-ci/*
+  - /skip-ci.*$/
