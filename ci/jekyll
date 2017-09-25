@@ -1,0 +1,14 @@
+echo -e "************** Changed to Styleguide Directory **************"
+cd ./styleguide
+pwd
+
+echo -e "\n\n************** Jekyll Build **************"
+set -e # halt script on error
+bundle exec jekyll build --baseurl=''
+
+echo -e "\n\n************** Change Back to the Root Directory **************"
+cd ../
+pwd
+
+echo -e "\n\n************** HTML Proofer **************"
+bundle exec htmlproofer ./styleguide/_site --disable-external --allow-hash-href --assume-extension --log-level :debug
