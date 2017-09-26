@@ -4,7 +4,7 @@ pwd
 
 echo -e "\n\n************** Jekyll Build **************"
 set -e # halt script on error
-bundle exec jekyll build --baseurl=''
+JEKYLL_ENV=production bundle exec jekyll build --baseurl=''
 
 echo -e "\n\n************** Change Back to the Root Directory **************"
 cd ../
