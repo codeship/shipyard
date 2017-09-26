@@ -67,6 +67,7 @@ module Shipyard
     end
 
     def register_jekyll_tags
+      require 'shipyard-framework/jekyll/shipyard_variables'
       require 'shipyard-framework/jekyll/button_tag'
       require 'shipyard-framework/jekyll/box_tag'
       require 'shipyard-framework/jekyll/note_tag'
