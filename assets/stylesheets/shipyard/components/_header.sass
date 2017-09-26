@@ -1,14 +1,10 @@
 +component('header')
   $height: 70px
-  background: #fff
   position: fixed
   top: 0
   left: 0
   right: 0
-  color: $text-color-light
-  z-index: 100
   transition: height 250ms ease, background-color 250ms ease
-  +box-shadow
   +respond-to(overflow, (x0: hidden, x1: visible))
   +respond-to(height, (x0: 50px, x1: 60px, x2: 70px))
   +respond-to(text-align, (x0: center, x1: left))

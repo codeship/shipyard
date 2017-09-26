@@ -1,4 +1,10 @@
 $component-defaults: (
+  header: (
+    z-index: 100,
+    background: #fff,
+    color: $text-color-light
+    box-shadow: $box-shadow
+  ),
   input: (
     required-asterisk: (
       top: 6px,
