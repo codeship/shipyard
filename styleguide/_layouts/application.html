@@ -10,8 +10,8 @@ navigation:
 <html class="{% shipyard_css_classes %}">
   <head>
     <title>{{ page.title }}</title>
-    <link rel="stylesheet" media="all" href="{{ site.baseurl }}/assets/css/application.css" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <link rel="stylesheet" media="all" href="{{ site.baseurl }}/assets/css/application.css" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="{{ site.baseurl }}/assets/js/application.es6"></script>
   </head>
@@ -19,13 +19,16 @@ navigation:
     <header class="header">
       <div class="container">
         <h6 class="header-logo"><a href="{{ site.baseurl }}/">{{ site.title }}</a></h6>
+        <button class="hamburger" shipyard="hamburger">
+          <span class="hamburger-button">Menu</span>
+        </button>
         <ul class="header-list">
           {% for link in layout.navigation %}
             <li class="header-item {% if page.url == link.url %}header-item-current{% endif %}">
               <a href="{{ site.baseurl | append: link.url }}" class="header-link">{{ link.name }}</a>
             </li>
           {% endfor %}
-          <li class="header-item">
+          <li class="header-item header-item-cta">
             <a href="https://github.com/codeship/shipyard" target="_blank" class="header-link-cta">Download</a>
           </li>
         </ul>
