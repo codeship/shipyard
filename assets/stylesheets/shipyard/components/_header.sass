@@ -9,6 +9,7 @@
   z-index: 100
   transition: height 250ms ease, background-color 250ms ease
   +box-shadow
+  +respond-to(overflow, (x0: hidden, x1: visible))
   +respond-to(height, (x0: 50px, x1: 60px, x2: 70px))
   +respond-to(text-align, (x0: center, x1: left))
   +respond-to(line-height, (x0: 50px, x1: 60px, x2: 70px))
@@ -16,10 +17,10 @@
     height: 100%
 
   &-logo
-    font-weight: $bold
-    font-size: 24px
     width: 100px
+    font-weight: $bold
     +respond-to(margin, (x0: 0 auto, x1: 0))
+    +respond-to(font-size, (x0: 20px, x1: 24px))
     +respond-to(float, (x1: left))
     a
       color: $blue-darkest
@@ -27,14 +28,15 @@
   &-list
     font-weight: $medium
     +respond-to(float, (x1: right))
-    +respond-to(display, (x0: none, x1: block))
     +respond-to(margin-right, (x1: -15px))
-    .hamburger-button-clicked &
-      display: block
 
   &-item
     +respond-to(margin, (x1: 0 15px))
     +respond-to(display, (x0: block, x1: inline))
+    &-cta
+      +respond-to(top, (x0: 0, x1: auto))
+      +respond-to(right, (x0: 10px, x1: auto))
+      +respond-to(position, (x0: fixed, x1: static))
 
   &-link
     color: inherit
