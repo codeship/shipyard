@@ -7,24 +7,34 @@
   right: 0
   color: $text-color-light
   z-index: 100
+  transition: height 250ms ease, background-color 250ms ease
   +box-shadow
   +respond-to(height, (x0: 50px, x1: 60px, x2: 70px))
+  +respond-to(text-align, (x0: center, x1: left))
   +respond-to(line-height, (x0: 50px, x1: 60px, x2: 70px))
+  .hamburger-button-clicked &
+    height: 100%
+
   &-logo
     font-weight: $bold
     font-size: 24px
-    float: left
+    width: 100px
+    +respond-to(margin, (x0: 0 auto, x1: 0))
+    +respond-to(float, (x1: left))
     a
       color: $blue-darkest
 
   &-list
-    float: right
     font-weight: $medium
-    margin-right: -15px
+    +respond-to(float, (x1: right))
+    +respond-to(display, (x0: none, x1: block))
+    +respond-to(margin-right, (x1: -15px))
+    .hamburger-button-clicked &
+      display: block
 
   &-item
-    display: inline
-    margin: 0 15px
+    +respond-to(margin, (x1: 0 15px))
+    +respond-to(display, (x0: block, x1: inline))
 
   &-link
     color: inherit

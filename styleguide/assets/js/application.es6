@@ -1,4 +1,8 @@
 $(document).ready(() => {
+  $('[shipyard="hamburger"]').on('click', () => {
+    $('html').toggleClass('hamburger-button-clicked')
+  })
+
   if ($('html.utilities-colors').length > 0) {
     $.fn.backgroundColorHex = function(){
       let rgb = this.css('background-color');
