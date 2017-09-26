@@ -6,7 +6,7 @@ before_install:
 - chmod +x ci/setup
 install:
 - source ci/setup
-- gem install jekyll-assets
+- cd styleguide && gem install jekyll-assets && cd ..
 before_script:
  - chmod +x ci/rspec
  - chmod +x ci/jekyll
