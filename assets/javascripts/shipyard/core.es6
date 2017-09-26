@@ -1,3 +1,5 @@
 class Shipyard {
-  constructor () {}
+  constructor () {
+    console.log('shipyard')
+  }
 }
