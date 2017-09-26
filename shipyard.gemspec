@@ -24,6 +24,7 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency 'percy-cli', '~> 1.2.9'
   spec.add_development_dependency 'html-proofer', '~> 3.7.3'
   spec.add_development_dependency 'jekyll'
+  spec.add_development_dependency 'jekyll-assets'
 
   spec.executables = `git ls-files -- bin/*`.split("\n").map{ |f| File.basename(f) }
   spec.files = `git ls-files`.split("\n")
