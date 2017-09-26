@@ -1,3 +1,3 @@
-//= require shipyard
+// require shipyard
 //= require layout
 //= require views

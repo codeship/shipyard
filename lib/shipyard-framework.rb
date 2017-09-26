@@ -8,10 +8,9 @@ module Shipyard
         register_rails_engine
       elsif sprockets?
         register_sprockets
-      elsif jekyll?
-        register_jekyll_tags
       end
 
+      register_jekyll_tags if jekyll?
       register_helpers
       configure_sass
     end
