@@ -3,7 +3,13 @@ $component-defaults: (
     z-index: 100,
     background: #fff,
     color: $text-color-light,
-    box-shadow: $box-shadow
+    box-shadow: $box-shadow,
+    logo: (
+      font-weight: $bold
+    ),
+    list: (
+      font-weight: $medium
+    )
   ),
   input: (
     required-asterisk: (
