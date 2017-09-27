@@ -1,0 +1,22 @@
+echo -e "\n\n************** Git Clone **************"
+git clone git@github.com:codeship/shipyard.git dist
+
+echo -e "\n\n************** Copy Directory **************"
+cp -R dist _site
+mv _site dist/styleguide/
+
+echo -e "\n\n************** Switch to GH-Pages Branch **************"
+cd dist/styleguide/_site
+git checkout gh-pages || git checkout --orphan gh-pages
+
+echo -e "\n\n************** Jekyll Build **************"
+cd ..
+JEKYLL_ENV=production bundle exec jekyll build --verbose
+
+echo -e "\n\n************** Commit & Push to GitHub Pages **************"
+cd _site
+git config user.email "ben+codeship+deploy@codeship.com"
+git config user.name "Codeship Deploy Bot"
+git add .
+git commit -m "Deploy to GitHub Pages: ${CI_COMMIT_ID} --skip-ci"
+git push origin gh-pages
