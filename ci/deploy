@@ -8,6 +8,8 @@ git clone git@github.com:codeship/shipyard.git --branch gh-pages --single-branch
 
 echo -e "\n\n************** Jekyll Build **************"
 cd styleguide
+gem install bundler --pre
+bundle install
 JEKYLL_ENV=production bundle exec jekyll build --verbose
 
 echo -e "\n\n************** Commit & Push to GitHub Pages **************"
