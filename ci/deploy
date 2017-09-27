@@ -12,7 +12,7 @@ mv _site dist/styleguide/
 
 echo -e "\n\n************** Switch to GH-Pages Branch **************"
 cd dist/styleguide/_site
-git checkout gh-pages || git checkout --orphan gh-pages
+git checkout gh-pages
 
 echo -e "\n\n************** Jekyll Build **************"
 cd ..
