@@ -12,9 +12,10 @@ JEKYLL_ENV=production bundle exec jekyll build --verbose
 
 echo -e "\n\n************** Commit & Push to GitHub Pages **************"
 cd _site
-git status
 git config user.email "${GITHUB_DEPLOY_USER_EMAIL}"
 git config user.name "${GITHUB_DEPLOY_USER_NAME}"
-git add .
+git status
+git add --all
+git status
 git commit --allow-empty -m "Deploy to GitHub Pages: ${CI_COMMIT_ID} --skip-ci"
 git push origin gh-pages
