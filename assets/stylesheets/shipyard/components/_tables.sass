@@ -1,0 +1,14 @@
++component('table')
+  width: 100%
+  text-align: left
+  border-spacing: 0
+  
+  tr
+    &:nth-child(even)
+      background: $gray-lighter
+
+  td
+    &:first-child
+      border-radius: $border-radius 0 0 $border-radius
+    &:last-child
+      border-radius: 0 $border-radius $border-radius 0
