@@ -33,8 +33,6 @@ plugins:
 
 assets:
   autowrite: true
-  cache: .asset-cache
-  prefix: "/assets"
   sources:
     - _assets/css
     - _assets/js

@@ -14,12 +14,11 @@ Gem::Specification.new do |spec|
   # Rails Dependencies
   # spec.add_runtime_dependency 'sassc-rails', '~> 1.3', '>= 1.3.0'
   # spec.add_runtime_dependency 'slim-rails', '~> 3.1', '>= 3.1.0'
-  # spec.add_runtime_dependency 'sassc', '~> 1.11.4'
   spec.add_runtime_dependency 'actionview', '~> 5.0'
   spec.add_runtime_dependency 'sprockets-es6', '~> 0.9.2'
 
   spec.add_development_dependency 'bundler', '~> 1.15'
-  spec.add_development_dependency 'sass', '~> 3.5', '>= 3.5.1'
+  spec.add_development_dependency 'sassc', '~> 1.11.4'
   spec.add_development_dependency 'rspec', '~> 3.6'
   spec.add_development_dependency 'percy-cli', '~> 1.2.9'
   spec.add_development_dependency 'html-proofer', '~> 3.7.3'
