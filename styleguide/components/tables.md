@@ -1,11 +1,11 @@
 ---
 title: Shipyard Tables
-description: Tables are useful for tabular data.
+description: Tables are useful for tabular data and can be used simple by applying the `.table` class to any table you're working on.
 ---
 
 {% include page-heading.html page=page %}
 
-<hr />
+---
 
 <table class="table">
   <thead>
