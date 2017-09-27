@@ -1,14 +1,18 @@
-<html class="components-tooltips">
+<html class="env-production components-tooltips">
   <head>
     <title>Shipyard Tooltips</title>
-    <link rel="stylesheet" media="all" href="/shipyard/assets/css/application.css" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <link type="text/css" rel="stylesheet" href="/shipyard/assets/application-19219cd059ef82c6eb8fcd3690bd0e1d7d4df3324f4b9fa22c8809b57e680b52.css">
+    <script src="https://unpkg.com/vue"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   </head>
   <body>
     <header class="header">
       <div class="container">
         <h6 class="header-logo"><a href="/shipyard/">Shipyard</a></h6>
+        <button class="hamburger" shipyard="hamburger">
+          <span class="hamburger-button">Menu</span>
+        </button>
         <ul class="header-list">
           
             <li class="header-item ">
@@ -23,7 +27,7 @@
               <a href="/shipyard/utilities/" class="header-link">Utilities</a>
             </li>
           
-          <li class="header-item">
+          <li class="header-item header-item-cta">
             <a href="https://github.com/codeship/shipyard" target="_blank" class="header-link-cta">Download</a>
           </li>
         </ul>
@@ -46,5 +50,6 @@
     <footer class="align-center text-lightest">
       &copy; Shipyard Framework 2017
     </footer>
+    <script type="text/javascript" src="/shipyard/assets/application-6297f07041960c2e9d86681cc602dabc44d1fee410167d51395a15898c2d8360.js"></script>
   </body>
 </html>
