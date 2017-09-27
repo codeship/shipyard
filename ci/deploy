@@ -8,9 +8,6 @@ git clone git@github.com:codeship/shipyard.git --branch gh-pages --single-branch
 
 echo -e "\n\n************** Jekyll Build **************"
 cd styleguide
-rvm use $(cat .ruby-version)
-gem install bundler --pre
-bundle install
 JEKYLL_ENV=production bundle exec jekyll build --verbose
 
 echo -e "\n\n************** Commit & Push to GitHub Pages **************"
@@ -19,5 +16,5 @@ git status
 git config user.email "${GITHUB_DEPLOY_USER_EMAIL}"
 git config user.name "${GITHUB_DEPLOY_USER_NAME}"
 git add .
-git commit -m "Deploy to GitHub Pages: ${CI_COMMIT_ID} --skip-ci"
+git commit --allow-empty -m "Deploy to GitHub Pages: ${CI_COMMIT_ID} --skip-ci"
 git push origin gh-pages
