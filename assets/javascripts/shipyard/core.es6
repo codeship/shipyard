@@ -22,4 +22,8 @@ class Shipyard {
     })
     return this
   }
+
+  css (el, value) {
+    return window.getComputedStyle(el).getPropertyValue(value)
+  }
 }
