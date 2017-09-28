@@ -1,11 +1,12 @@
 #!/bin/bash
+set -e # halt script on error
 
 echo -e "************** Changed to Styleguide Directory **************"
 cd ./styleguide
 pwd
 
 echo -e "\n\n************** Jekyll Build **************"
-JEKYLL_ENV=production bundle exec jekyll build --baseurl=''
+JEKYLL_ENV=test bundle exec jekyll build --baseurl=''
 
 echo -e "\n\n************** Changed to Root Directory **************"
 cd ../
