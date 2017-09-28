@@ -1,13 +1,25 @@
 class Shipyard {
   constructor (el) {
-    this.el = document.querySelectorAll(el)
+    this.el = typeof el === 'string' ? document.querySelectorAll(el) : [el]
     this.html = document.documentElement
     return this
   }
 
-  on (eventName, callback) {
+  on (events, callback) {
     this.el.forEach((el) => {
-      el.addEventListener(eventName, callback)
+      events.split(' ').forEach((eventName) => {
+        el.addEventListener(eventName, callback)
+      })
     })
+    return this
+  }
+
+  trigger (events) {
+    this.el.forEach((el) => {
+      events.split(' ').forEach((eventName) => {
+        el.dispatchEvent(new Event(eventName))
+      })
+    })
+    return this
   }
 }
