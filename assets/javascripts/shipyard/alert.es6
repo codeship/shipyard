@@ -1,19 +1,10 @@
 class Alert extends Shipyard {
-  constructor () {
-    super()
-    var alerts = document.querySelectorAll('[data-shipyard="alert"]');
-    for (var alert of alerts) {
-      new Vue({
-        el: alert,
-        data: {
-          visible: true
-        },
-        methods: {
-          close () {
-            this.visible = false;
-          }
-        }
-      });
-    }
+  constructor (el) {
+    super(el)
+    this.on('click', () => { this.close() })
+  }
+
+  close () {
+    this.addClass('alert-closed')
   }
 }

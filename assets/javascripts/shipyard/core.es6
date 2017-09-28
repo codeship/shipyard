@@ -26,4 +26,11 @@ class Shipyard {
   css (el, value) {
     return window.getComputedStyle(el).getPropertyValue(value)
   }
+
+  addClass(className) {
+    this.el.forEach((el) => {
+      el.classList.add(className)
+    })
+    return this
+  }
 }

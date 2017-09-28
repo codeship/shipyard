@@ -8,8 +8,7 @@ module Shipyard
       alert_txt = capture(&block) if block_given?
       options = {}
       options[:role] ||= 'alert'
-      options[:data] ||= {}
-      options[:data][:shipyard] = 'alert'
+      options[:shipyard] = 'alert'
       options['v-show'] = 'visible'
       class_list = ['alert']
 
