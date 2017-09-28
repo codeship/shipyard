@@ -1,2 +1,2 @@
 //= require shipyard
-//= require views
+//= require views/utilities/colors
