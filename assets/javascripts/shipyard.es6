@@ -1,9 +1,9 @@
 //= require ./shipyard/core
 //= require ./shipyard/scroll
 //= require ./shipyard/hamburger
-//= require ./shipyard/alert
+//= require ./shipyard/alerts
 
 var shipyard = new Shipyard('html')
 var windowScroll = new Scroll(window)
 var hamburger = new Hamburger('[shipyard="hamburger"]')
-var shipyardAlerts = new Alert('[shipyard="alert"]')
+var shipyardAlerts = new Alerts('[shipyard="alert"]')
