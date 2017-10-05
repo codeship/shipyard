@@ -7,11 +7,13 @@ module Shipyard
 
       def initialize(tag_name, params, options)
         super
-        @args = eval(params)
+        @args = params.strip.split(',')
+        @name = eval(@args[0])
+        @options = @args[1] ? eval("{#{@args[1]}}") : {}
       end
 
       def render(context)
-        icon @args
+        icon @name, @options
       end
     end
   end
