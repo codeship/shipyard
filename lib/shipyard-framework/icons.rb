@@ -57,7 +57,6 @@ module Shipyard
       end
       Dir.mkdir(@public) unless File.exists?(@public) || Dir.exists?(@public)
       File.write("#{@public}/icons.svg", svg_template(html.join))
-      File.write("#{@public}/icons-#{@fingerprint}.svg", svg_template(html.join)) if @fingerprint
     end
 
     def sanitize_svg(html)
