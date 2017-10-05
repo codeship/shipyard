@@ -50,7 +50,7 @@ module Shipyard
       @icons.each do |icon|
         html << svg_symbol(icon)
       end
-      Dir.mkdir(@public) unless File.exists?(@public) || Dir.exists?(@public)
+      FileUtils.mkdir_p(@public) unless File.exists?(@public) || Dir.exists?(@public)
       File.write("#{@public}/icons.svg", svg_template(html.join))
     end
 
