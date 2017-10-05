@@ -1,13 +1,15 @@
 ---
 title: Shipyard Icons
-description: Some description
+description: Shipyard comes with several default icons that you're welcome to use on any project. Each icon has been designed on a pixel grid at the small size possible, but can be scaled up to any size you like simply by changing the `width` and `height` in the CSS.
 ---
 
 {% include page-heading.html page=page %}
 
 ---
 
-### All Icons
+### Miscellaneous Icons
+<p class="text-light margin-bottom-sm">Something awesome</p>
+
 {% icon :plus %}
 {% icon :restart %}
 {% icon :gear %}
@@ -37,4 +39,14 @@ description: Some description
 ---
 
 ### Multi-color Icons
-{% icon 'lock' %}
+<p class="text-light margin-bottom-sm">If you need to style several paths inside of the icon, it's important to make sure you use the *injected* version of the icon.</p>
+{% icon 'email-color', class: 'icon-xl' %}
+
+---
+
+### Icon Sizes
+{% icon :plus, class: 'icon-xs' %}
+{% icon :plus, class: 'icon-sm' %}
+{% icon :plus, class: 'icon-md' %}
+{% icon :plus, class: 'icon-lg' %}
+{% icon :plus, class: 'icon-xl' %}
