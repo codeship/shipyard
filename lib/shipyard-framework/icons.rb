@@ -16,12 +16,7 @@ module Shipyard
     def reload
       @icons = load_svgs.freeze
       save_external_svg_defs
-    end
-
-    def find_by(hash)
-      icon = @icons.detect { |i| i[hash.keys.first] == hash.values.first }
-      raise_error(hash.values.first) unless icon
-      icon
+      @icons
     end
 
     def base_path
@@ -66,7 +61,7 @@ module Shipyard
     end
 
     def svg_symbol(icon)
-      %(<g id="#{icon[:id]}" viewBox="#{icon[:view_box]}">#{icon[:inner_html]}</g>)
+      %(<symbol id="#{icon[:id]}" viewBox="#{icon[:view_box]}">#{icon[:inner_html]}</symbol>)
     end
 
     def svg_template(html)
