@@ -7,7 +7,7 @@ module Shipyard
     delegate :each, :find, to: :icons
     delegate :execute_if_updated, :execute, :updated?, to: :updater
 
-    def initialize(icon_directory, output_directory, base_path = '/assets')
+    def initialize(icon_directory, output_directory, base_path = '')
       @path = icon_directory
       @public = output_directory
       @base_path = base_path
