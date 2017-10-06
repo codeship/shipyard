@@ -2,7 +2,8 @@ class Alerts extends Shipyard {
   constructor (el) {
     super(el)
     this.el.forEach((el) => {
-      this.on('click', () => { this.close(el) })
+      el.querySelector('[shipyard="alert-close"]')
+        .addEventListener('click', () => { this.close(el) })
     })
   }
 

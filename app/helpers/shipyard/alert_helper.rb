@@ -9,13 +9,13 @@ module Shipyard
       alert_txt = capture(&block) if block_given?
       options = {}
       options[:role] ||= 'alert'
-      options[:shipyard] = 'alert'
       class_list = ['alert']
       dismissable = false
 
       args.each do |arg|
         if arg == :dismissable
           dismissable = true
+          options[:shipyard] = 'alert'
         elsif arg.is_a? Symbol
           class_list << "alert-#{alert_type(arg)}"
         elsif arg.is_a? Hash
@@ -32,7 +32,8 @@ module Shipyard
         if dismissable
           concat content_tag(:button,
                    icon(:x, class: 'alert-close-icon icon-outline-inverse center'),
-                   class: 'alert-close v-center'
+                   class: 'alert-close v-center',
+                   shipyard: 'alert-close'
                  )
         end
       end
