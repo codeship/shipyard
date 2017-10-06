@@ -10,11 +10,11 @@ module Shipyard
       options = {}
       options[:role] ||= 'alert'
       class_list = ['alert']
-      dismissable = false
+      dismissible = false
 
       args.each do |arg|
-        if arg == :dismissable
-          dismissable = true
+        if arg == :dismissible
+          dismissible = true
           options[:shipyard] = 'alert'
         elsif arg.is_a? Symbol
           class_list << "alert-#{alert_type(arg)}"
@@ -29,7 +29,7 @@ module Shipyard
 
       content_tag :div, options do
         concat content_tag(:p, raw(alert_txt), class: 'alert-txt')
-        if dismissable
+        if dismissible
           concat content_tag(:button,
                    icon(:x, class: 'alert-close-icon icon-outline-inverse center'),
                    class: 'alert-close v-center',
