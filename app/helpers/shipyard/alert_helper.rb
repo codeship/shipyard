@@ -1,5 +1,6 @@
 module Shipyard
   module AlertHelper
+    include Shipyard::IconHelper
     include ActionView::Context
     include ActionView::Helpers::TagHelper
     include ActionView::Helpers::TextHelper
@@ -9,11 +10,13 @@ module Shipyard
       options = {}
       options[:role] ||= 'alert'
       options[:shipyard] = 'alert'
-      options['v-show'] = 'visible'
       class_list = ['alert']
+      dismissable = false
 
       args.each do |arg|
-        if arg.is_a? Symbol
+        if arg == :dismissable
+          dismissable = true
+        elsif arg.is_a? Symbol
           class_list << "alert-#{alert_type(arg)}"
         elsif arg.is_a? Hash
           options = options.merge(arg) if arg.is_a?(Hash)
@@ -26,13 +29,11 @@ module Shipyard
 
       content_tag :div, options do
         concat content_tag(:p, raw(alert_txt), class: 'alert-txt')
-        if defined? icon
-          concat content_tag(
-                  icon('x', class: 'alert-close-icon icon-outline-inverse center'),
-                  svg_html,
-                  class: 'alert-close v-center',
-                  '@click': 'close'
-                )
+        if dismissable
+          concat content_tag(:button,
+                   icon(:x, class: 'alert-close-icon icon-outline-inverse center'),
+                   class: 'alert-close v-center'
+                 )
         end
       end
     end

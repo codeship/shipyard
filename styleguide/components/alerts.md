@@ -7,13 +7,12 @@ description: Alerts should be used to grab a user's attention before proceeding 
 
 ---
 
-### Dismissable `btn.alert-close`
+### Dismissable
 <p class="text-light margin-bottom-sm">Used to display notes, tips, and other non-critical information.</p>
 
-{% alert %}
+{% alert :dismissable %}
   Ten other people are also viewing tickets for <a href="#">this flight</a>.
   Use the code <code class="code-inline">Travel_Light_2017</code> before you book your flight.
-  {% btn Dismiss, :sm, class: 'alert-close' %}
 {% endalert %}
 
 ---

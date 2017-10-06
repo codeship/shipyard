@@ -7,7 +7,7 @@ module Shipyard
 
       def initialize(tag_name, type, options)
         super
-        @type = type.tr(':','').to_sym unless type.blank?
+        @type = type.strip.tr(':','').to_sym unless type.blank?
       end
 
       def render(context)
