@@ -11,27 +11,33 @@ description: Shipyard comes with several default icons that you're welcome to us
 <p class="text-light margin-bottom-sm">Something awesome</p>
 
 <ul class="icon-list col-container">
-  <li class="icon-item col col-50 col-x1-20 margin-bottom-xs margin-bottom-x1-md margin-bottom-x2-lg">
-    <div class="box box-md box-x1-xxl">{% icon :plus, class: 'center' %}</div>
-  </li>
-  <li class="icon-item col col-50 col-x1-20 margin-bottom-xs margin-bottom-x1-md margin-bottom-x2-lg">
-    <div class="box box-md box-x1-xxl">{% icon :restart, class: 'center' %}</div>
-  </li>
-  <li class="icon-item col col-50 col-x1-20 margin-bottom-xs margin-bottom-x1-md margin-bottom-x2-lg">
-    <div class="box box-md box-x1-xxl">{% icon :gear, class: 'center' %}</div>
-  </li>
-  <li class="icon-item col col-50 col-x1-20 margin-bottom-xs margin-bottom-x1-md margin-bottom-x2-lg">
-    <div class="box box-md box-x1-xxl">{% icon :lock, class: 'center' %}</div>
-  </li>
-  <li class="icon-item col col-50 col-x1-20 margin-bottom-xs margin-bottom-x1-md margin-bottom-x2-lg">
-    <div class="box box-md box-x1-xxl">{% icon :tag, class: 'center' %}</div>
-  </li>
-  <li class="icon-item col col-50 col-x1-20 margin-bottom-xs margin-bottom-x1-md margin-bottom-x2-lg">
-    <div class="box box-md box-x1-xxl">{% icon :x, class: 'center' %}</div>
-  </li>
-  <li class="icon-item col col-50 col-x1-20 margin-bottom-xs margin-bottom-x1-md margin-bottom-x2-lg">
-    <div class="box box-md box-x1-xxl">{% icon :arrow_down, class: 'center' %}</div>
-  </li>
+  {% iconitem %}
+    {% icon :plus, class: 'center' %}
+  {% endiconitem %}
+
+  {% iconitem %}
+    {% icon :restart, class: 'center' %}
+  {% endiconitem %}
+
+  {% iconitem %}
+    {% icon :gear, class: 'center' %}
+  {% endiconitem %}
+
+  {% iconitem %}
+    {% icon :lock, class: 'center' %}
+  {% endiconitem %}
+
+  {% iconitem %}
+    {% icon :tag, class: 'center' %}
+  {% endiconitem %}
+
+  {% iconitem %}
+    {% icon :x, class: 'center' %}
+  {% endiconitem %}
+
+  {% iconitem %}
+    {% icon :arrow_down, class: 'center' %}
+  {% endiconitem %}
 </ul>
 
 ---
@@ -40,58 +46,72 @@ description: Shipyard comes with several default icons that you're welcome to us
 <p class="text-light margin-bottom-sm">If you need to style several paths inside of the icon, it's important to make sure you use the *injected* version of the icon.</p>
 
 <ul class="icon-list col-container">
-  <li class="icon-item col col-50 col-x1-20 margin-bottom-xs margin-bottom-x1-md margin-bottom-x2-lg">
-    <div class="box box-md box-x1-xxl">{% icon :bitbucket, class: 'center' %}</div>
-  </li>
-  <li class="icon-item col col-50 col-x1-20 margin-bottom-xs margin-bottom-x1-md margin-bottom-x2-lg">
-    <div class="box box-md box-x1-xxl">{% icon :campfire_color, class: 'center' %}</div>
-  </li>
-  <li class="icon-item col col-50 col-x1-20 margin-bottom-xs margin-bottom-x1-md margin-bottom-x2-lg">
-    <div class="box box-md box-x1-xxl">{% icon :codeship, class: 'center' %}</div>
-  </li>
-  <li class="icon-item col col-50 col-x1-20 margin-bottom-xs margin-bottom-x1-md margin-bottom-x2-lg">
-    <div class="box box-md box-x1-xxl">{% icon :email_color, class: 'center' %}</div>
-  </li>
-  <li class="icon-item col col-50 col-x1-20 margin-bottom-xs margin-bottom-x1-md margin-bottom-x2-lg">
-    <div class="box box-md box-x1-xxl">{% icon :flowdock_color, class: 'center' %}</div>
-  </li>
-  <li class="icon-item col col-50 col-x1-20 margin-bottom-xs margin-bottom-x1-md margin-bottom-x2-lg">
-    <div class="box box-md box-x1-xxl">{% icon :github, class: 'center' %}</div>
-  </li>
-  <li class="icon-item col col-50 col-x1-20 margin-bottom-xs margin-bottom-x1-md margin-bottom-x2-lg">
-    <div class="box box-md box-x1-xxl">{% icon :gitlab, class: 'center' %}</div>
-  </li>
-  <li class="icon-item col col-50 col-x1-20 margin-bottom-xs margin-bottom-x1-md margin-bottom-x2-lg">
-    <div class="box box-md box-x1-xxl">{% icon :grove_color, class: 'center' %}</div>
-  </li>
-  <li class="icon-item col col-50 col-x1-20 margin-bottom-xs margin-bottom-x1-md margin-bottom-x2-lg">
-    <div class="box box-md box-x1-xxl">{% icon :hipchat, class: 'center' %}</div>
-  </li>
-  <li class="icon-item col col-50 col-x1-20 margin-bottom-xs margin-bottom-x1-md margin-bottom-x2-lg">
-    <div class="box box-md box-x1-xxl">{% icon :hipchat_color, class: 'center' %}</div>
-  </li>
-  <li class="icon-item col col-50 col-x1-20 margin-bottom-xs margin-bottom-x1-md margin-bottom-x2-lg">
-    <div class="box box-md box-x1-xxl">{% icon :slack, class: 'center' %}</div>
-  </li>
-  <li class="icon-item col col-50 col-x1-20 margin-bottom-xs margin-bottom-x1-md margin-bottom-x2-lg">
-    <div class="box box-md box-x1-xxl">{% icon :slack_color, class: 'center' %}</div>
-  </li>
-  <li class="icon-item col col-50 col-x1-20 margin-bottom-xs margin-bottom-x1-md margin-bottom-x2-lg">
-    <div class="box box-md box-x1-xxl">{% icon :webhook, class: 'center' %}</div>
-  </li>
-  <li class="icon-item col col-50 col-x1-20 margin-bottom-xs margin-bottom-x1-md margin-bottom-x2-lg">
-    <div class="box box-md box-x1-xxl">{% icon :webhook_color, class: 'center' %}</div>
-  </li>
+  {% iconitem %}
+    {% icon :bitbucket, class: 'center' %}
+  {% endiconitem %}
+
+  {% iconitem %}
+    {% icon :campfire_color, class: 'center' %}
+  {% endiconitem %}
+
+  {% iconitem %}
+    {% icon :codeship, class: 'center' %}
+  {% endiconitem %}
+
+  {% iconitem %}
+    {% icon :email_color, class: 'center' %}
+  {% endiconitem %}
+
+  {% iconitem %}
+    {% icon :flowdock_color, class: 'center' %}
+  {% endiconitem %}
+
+  {% iconitem %}
+    {% icon :github, class: 'center' %}
+  {% endiconitem %}
+
+  {% iconitem %}
+    {% icon :gitlab, class: 'center' %}
+  {% endiconitem %}
+
+  {% iconitem %}
+    {% icon :grove_color, class: 'center' %}
+  {% endiconitem %}
+
+  {% iconitem %}
+    {% icon :hipchat, class: 'center' %}
+  {% endiconitem %}
+
+  {% iconitem %}
+    {% icon :hipchat_color, class: 'center' %}
+  {% endiconitem %}
+
+  {% iconitem %}
+    {% icon :slack, class: 'center' %}
+  {% endiconitem %}
+
+  {% iconitem %}
+    {% icon :slack_color, class: 'center' %}
+  {% endiconitem %}
+
+  {% iconitem %}
+    {% icon :webhook, class: 'center' %}
+  {% endiconitem %}
+
+  {% iconitem %}
+    {% icon :webhook_color, class: 'center' %}
+  {% endiconitem %}
 </ul>
 
 ---
 
 ### Multi-color Icons
 <p class="text-light margin-bottom-sm">If you need to style several paths inside of the icon, it's important to make sure you use the *injected* version of the icon.</p>
+
 <ul class="icon-list col-container">
-  <li class="icon-item col col-50 col-x1-20 margin-bottom-xs margin-bottom-x1-md margin-bottom-x2-lg">
-    <div class="box box-md box-x1-xxl">{% icon 'email-color', class: 'icon-xl center' %}</div>
-  </li>
+  {% iconitem %}
+    {% icon 'email-color', class: 'icon-xl center' %}
+  {% endiconitem %}
 </ul>
 
 ---
@@ -100,19 +120,23 @@ description: Shipyard comes with several default icons that you're welcome to us
 <p class="text-light margin-bottom-sm">Blah blah `icon-[xs, sm, md, lg, xl]`</p>
 
 <ul class="icon-list col-container">
-  <li class="icon-item col col-50 col-x1-20 margin-bottom-xs margin-bottom-x1-md margin-bottom-x2-lg">
-    <div class="box box-md box-x1-xxl">{% icon :plus, class: 'center icon-xs' %}</div>
-  </li>
-  <li class="icon-item col col-50 col-x1-20 margin-bottom-xs margin-bottom-x1-md margin-bottom-x2-lg">
-    <div class="box box-md box-x1-xxl">{% icon :plus, class: 'center icon-sm' %}</div>
-  </li>
-  <li class="icon-item col col-50 col-x1-20 margin-bottom-xs margin-bottom-x1-md margin-bottom-x2-lg">
-    <div class="box box-md box-x1-xxl">{% icon :plus, class: 'center icon-md' %}</div>
-  </li>
-  <li class="icon-item col col-50 col-x1-20 margin-bottom-xs margin-bottom-x1-md margin-bottom-x2-lg">
-    <div class="box box-md box-x1-xxl">{% icon :plus, class: 'center icon-lg' %}</div>
-  </li>
-  <li class="icon-item col col-50 col-x1-20 margin-bottom-xs margin-bottom-x1-md margin-bottom-x2-lg">
-    <div class="box box-md box-x1-xxl">{% icon :plus, class: 'center icon-xl' %}</div>
-  </li>
+  {% iconitem %}
+    {% icon :plus, class: 'center icon-xs' %}
+  {% endiconitem %}
+
+  {% iconitem %}
+    {% icon :plus, class: 'center icon-sm' %}
+  {% endiconitem %}
+
+  {% iconitem %}
+    {% icon :plus, class: 'center icon-md' %}
+  {% endiconitem %}
+
+  {% iconitem %}
+    {% icon :plus, class: 'center icon-lg' %}
+  {% endiconitem %}
+
+  {% iconitem %}
+    {% icon :plus, class: 'center icon-xl' %}
+  {% endiconitem %}
 </ul>
