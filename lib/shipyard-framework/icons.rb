@@ -61,7 +61,7 @@ module Shipyard
     end
 
     def svg_symbol(icon)
-      %(<symbol id="#{icon[:id]}" viewBox="#{icon[:view_box]}">#{icon[:inner_html]}</symbol>)
+      %(<g id="#{icon[:id]}" viewBox="#{icon[:view_box]}">#{icon[:inner_html]}</g>)
     end
 
     def svg_template(html)
