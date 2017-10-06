@@ -3,7 +3,7 @@
     <meta charset="utf-8" />
     <title>Shipyard Alerts</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-    <link type="text/css" rel="stylesheet" href="/shipyard/assets/application-970900306a575cc67b35a1e3038422d1eaef9f16cc1a87001db77bcf97b54f5b.css">
+    <link type="text/css" rel="stylesheet" href="/shipyard/assets/application-ef881cafb7a2d2e194f3044c3fc8c4d727d24a6c9549996c3efd9b344ed3426d.css">
   </head>
   <body>
     <header class="header">
@@ -38,10 +38,20 @@
 
 <hr />
 
+<h3 id="dismissible">Dismissible</h3>
+<p class="text-light margin-bottom-sm">Used to display notes, tips, and other non-critical information.</p>
+
+<div role="alert" shipyard="alert" class="alert"><p class="alert-txt">
+  Ten other people are also viewing tickets for <a href="#">this flight</a>.
+  Use the code <code class="code-inline">Travel_Light_2017</code> before you book your flight.
+</p><button class="alert-close v-center" shipyard="alert-close"><svg class="icon icon-x icon-outline alert-close-icon icon-outline-inverse center" viewBox="0 0 6 6" preserveAspectRatio="xMinYMin meet"><use xlink:href="/shipyard/assets/icons.svg#x"></use></svg></button></div>
+
+<hr />
+
 <h3 id="default-alert">Default <code class="highlighter-rouge">.alert</code></h3>
 <p class="text-light margin-bottom-sm">Used to display notes, tips, and other non-critical information.</p>
 
-<div role="alert" data-shipyard="alert" v-show="visible" class="alert"><p class="alert-txt">
+<div role="alert" class="alert"><p class="alert-txt">
   Ten other people are also viewing tickets for <a href="#">this flight</a>.
   Use the code <code class="code-inline">Travel_Light_2017</code> before you book your flight.
   <button class="alert-cta btn btn-sm">Call to Action</button>
@@ -52,7 +62,7 @@
 <h3 id="info-alert-info">Info <code class="highlighter-rouge">.alert-info</code></h3>
 <p class="text-light margin-bottom-sm">Useful when drawing attention to non-critical information or actions we want the user to take.</p>
 
-<div role="alert" data-shipyard="alert" v-show="visible" class="alert alert-info"><p class="alert-txt">
+<div role="alert" class="alert alert-info"><p class="alert-txt">
   Ten other people are also viewing tickets for <a href="#">this flight</a>.
   Use the code <code class="code-inline">Travel_Light_2017</code> before you book your flight.
   <button class="alert-cta btn btn-sm">Call to Action</button>
@@ -63,7 +73,7 @@
 <h3 id="success-alert-success">Success <code class="highlighter-rouge">.alert-success</code></h3>
 <p class="text-light margin-bottom-sm">Useful when drawing attention to interactions that have produced successful results.</p>
 
-<div role="alert" data-shipyard="alert" v-show="visible" class="alert alert-success"><p class="alert-txt">
+<div role="alert" class="alert alert-success"><p class="alert-txt">
   Pack your bags! You'll be on the next flight to Hawaii.
   Use the code <code class="code-inline">Travel_Light_2017</code> on your next flight. In the meantime you can <a href="#">invite a friend</a> to this flight.
   <button class="alert-cta btn btn-sm">Call to Action</button>
@@ -74,7 +84,7 @@
 <h3 id="warning-alert-warning">Warning <code class="highlighter-rouge">.alert-warning</code></h3>
 <p class="text-light margin-bottom-sm">Useful when drawing attention to critical, time-sensitive information &mdash; even if nothing has gone wrong.</p>
 
-<div role="alert" data-shipyard="alert" v-show="visible" class="alert alert-warning"><p class="alert-txt">
+<div role="alert" class="alert alert-warning"><p class="alert-txt">
   There are only 2 seats left on this flight! We recommend to <a href="#">book your tickets</a> as soon as possible.
   Use the code <code class="code-inline">Travel_Light_2017</code> before you book your flight.
   <button class="alert-cta btn btn-sm">Call to Action</button>
@@ -85,7 +95,7 @@
 <h3 id="error-alert-error">Error <code class="highlighter-rouge">.alert-error</code></h3>
 <p class="text-light margin-bottom-sm">Useful when drawing attention to something that has gone critically wrong.</p>
 
-<div role="alert" data-shipyard="alert" v-show="visible" class="alert alert-error"><p class="alert-txt">
+<div role="alert" class="alert alert-error"><p class="alert-txt">
   This flight is now sold out. Let's get you on the <a href="#">next flight to Kauai</a>.
   We hope the code <code class="code-inline">Travel_Light_2017</code> will be useful for your next flight.
   <button class="alert-cta btn btn-sm">Call to Action</button>
@@ -94,6 +104,6 @@
     <footer class="align-center text-lightest">
       &copy; Shipyard Framework 2017
     </footer>
-    <script type="text/javascript" src="/shipyard/assets/application-8f8b607a45b23a152162bdc7eda70a29a374ad0e80d56d497334a969748d96af.js"></script>
+    <script type="text/javascript" src="/shipyard/assets/application-48388f9d1a4515faaca646b7dc161d1b5f180eff8706110fa0ed0a680671dd39.js"></script>
   </body>
 </html>
