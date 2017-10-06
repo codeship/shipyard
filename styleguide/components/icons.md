@@ -124,35 +124,35 @@ description: Shipyard comes with several default icons that you're welcome to us
 
 <ul class="icon-list col-container">
   {% iconitem %}
-    {% icon :plus, class: 'center icon-xxs' %}
+    {% icon :gear, class: 'center icon-xxs' %}
   {% endiconitem %}
 
   {% iconitem %}
-    {% icon :plus, class: 'center icon-xs' %}
+    {% icon :gear, class: 'center icon-xs' %}
   {% endiconitem %}
 
   {% iconitem %}
-    {% icon :plus, class: 'center icon-sm' %}
+    {% icon :gear, class: 'center icon-sm' %}
   {% endiconitem %}
 
   {% iconitem %}
-    {% icon :plus, class: 'center icon-md' %}
+    {% icon :gear, class: 'center icon-md' %}
   {% endiconitem %}
 
   {% iconitem %}
-    {% icon :plus, class: 'center icon-lg' %}
+    {% icon :gear, class: 'center icon-lg' %}
   {% endiconitem %}
 
   {% iconitem %}
-    {% icon :plus, class: 'center icon-xl' %}
+    {% icon :gear, class: 'center icon-xl' %}
   {% endiconitem %}
 </ul>
 
 ```html
-<%= icon :plus, class: 'icon-xxs' %>
-<%= icon :plus, class: 'icon-xs' %>
-<%= icon :plus, class: 'icon-sm' %>
-<%= icon :plus, class: 'icon-md' %>
-<%= icon :plus, class: 'icon-lg' %>
-<%= icon :plus, class: 'icon-xl' %>
+<%= icon :gear, class: 'icon-xxs' %>
+<%= icon :gear, class: 'icon-xs' %>
+<%= icon :gear, class: 'icon-sm' %>
+<%= icon :gear, class: 'icon-md' %>
+<%= icon :gear, class: 'icon-lg' %>
+<%= icon :gear, class: 'icon-xl' %>
 ```
