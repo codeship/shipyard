@@ -9,7 +9,7 @@ RSpec.describe Shipyard::AlertHelper, type: :helper do
     )
   end
 
-  it 'should return a dismissible alert' do
+  xit 'should return a dismissible alert' do
     expect(flash_alert(:dismissible) { 'test' }).to match(
       %r{<div role="alert" data-shipyard="alert" class="alert"><p class="alert-txt">test</p></div>}
     )
