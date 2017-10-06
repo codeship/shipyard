@@ -17,6 +17,21 @@ description: Alerts should be used to grab a user's attention before proceeding 
 
 ---
 
+### Timed Alerts
+<p class="text-light margin-bottom-sm">Useful when you want to display an alert for a pretedermined amount of time.</p>
+
+{% alert :success, :dismissible, class: 'display-none' %}
+  <div class="alert-timer alert-timer-on"></div>
+  Ten other people are also viewing tickets for <a href="#">this flight</a>.
+  Use the code <code class="code-inline">Travel_Light_2017</code> before you book your flight.
+{% endalert %}
+
+<div class="box-secondary box-padding align-center">
+  {% btn Insert Timed Alert Example, :cta %}
+</div>
+
+---
+
 ### Default `.alert`
 <p class="text-light margin-bottom-sm">Used to display notes, tips, and other non-critical information.</p>
 

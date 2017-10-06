@@ -5,17 +5,21 @@ module Shipyard
     class Alert < Liquid::Block
       include Shipyard::AlertHelper
 
-      def initialize(tag_name, type, options)
+      def initialize(tag_name, params, options)
         super
-        @type = type.tr(':','').to_sym unless type.blank?
+        @params = params.strip.split(',').map(&:strip)
+        @args = []
+        @params.each do |param|
+          if param.start_with?(':')
+            @args << param.tr(':','').to_sym
+          else
+            @args << eval("{#{param}}")
+          end
+        end
       end
 
       def render(context)
-        if @type
-          flash_alert @type, super
-        else
-          flash_alert super
-        end
+        flash_alert(*@args, super)
       end
     end
   end
