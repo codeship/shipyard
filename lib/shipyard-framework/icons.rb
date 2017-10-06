@@ -20,7 +20,7 @@ module Shipyard
     end
 
     def base_path
-      "#{@base_path}/icons.svg"
+      "#{@base_path}/assets/icons.svg"
     end
 
     def asset_path(svg_id)
