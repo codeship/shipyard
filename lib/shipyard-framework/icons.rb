@@ -15,7 +15,6 @@ module Shipyard
 
     def reload
       @icons = load_svgs.freeze
-      save_external_svg_defs
       @icons
     end
 
@@ -25,6 +24,15 @@ module Shipyard
 
     def asset_path(svg_id)
       "#{base_path}##{svg_id}"
+    end
+
+    def write
+      html = []
+      @icons.each do |icon|
+        html << svg_symbol(icon)
+      end
+      FileUtils.mkdir_p(@public) unless File.exists?(@public) || Dir.exists?(@public)
+      File.write("#{@public}/icons.svg", svg_template(html.join))
     end
 
     private
@@ -43,15 +51,6 @@ module Shipyard
           is_outlined: html.include?('non-scaling-stroke')
         }
       end
-    end
-
-    def save_external_svg_defs
-      html = []
-      @icons.each do |icon|
-        html << svg_symbol(icon)
-      end
-      FileUtils.mkdir_p(@public) unless File.exists?(@public) || Dir.exists?(@public)
-      File.write("#{@public}/icons.svg", svg_template(html.join))
     end
 
     def sanitize_svg(html)

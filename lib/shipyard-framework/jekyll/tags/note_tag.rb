@@ -1,4 +1,4 @@
-require_relative '../../../app/helpers/shipyard/note_helper'
+require_relative '../../../../app/helpers/shipyard/note_helper'
 
 module Shipyard
   module Jekyll

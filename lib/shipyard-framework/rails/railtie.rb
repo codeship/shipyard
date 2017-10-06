@@ -8,6 +8,7 @@ module Shipyard
           "#{::Rails.root}/app/assets/icons/",
           "#{::Rails.root}/public/assets"
         )
+        $icons.write
         ::Rails.application.reloaders << $icons
       end
     end
