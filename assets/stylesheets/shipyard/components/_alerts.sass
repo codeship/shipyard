@@ -16,6 +16,10 @@
     color: #fff
     &:not(.btn)
       font-weight: $bold
+
+  &-closed
+    display: none
+
   &-timer
     top: 0
     left: 0
@@ -24,7 +28,10 @@
     position: absolute
     background: rgba(#fff, .25)
     transform: translatex(-100%)
-    animation: slide-in-from-left 10s linear 0s forwards
+    transition: transform 10s linear 0s
+    &-on
+      transition-delay: 5s
+      transform: translatex(0)
 
   // Alert: Types
   &-success
