@@ -1,4 +1,4 @@
-require_relative '../../../app/helpers/shipyard/icon_helper'
+require_relative '../../../../app/helpers/shipyard/icon_helper'
 
 module Shipyard
   module Jekyll

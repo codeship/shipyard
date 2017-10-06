@@ -12,7 +12,7 @@ module Shipyard
       register_icons
 
       if jekyll?
-        register_jekyll_icons
+        register_jekyll_hooks
         register_jekyll_tags
       end
 
@@ -74,18 +74,18 @@ module Shipyard
       Sprockets.append_path(javascripts_path)
     end
 
-    def register_jekyll_icons
-      $icons = Shipyard::Icons.new '_assets/icons/', '_site/assets/'
+    def register_jekyll_hooks
+      require 'shipyard-framework/jekyll/hooks'
     end
 
     def register_jekyll_tags
       require 'shipyard-framework/jekyll/shipyard_variables'
-      require 'shipyard-framework/jekyll/button_tag'
-      require 'shipyard-framework/jekyll/icon_tag'
-      require 'shipyard-framework/jekyll/box_tag'
-      require 'shipyard-framework/jekyll/note_tag'
-      require 'shipyard-framework/jekyll/alert_tag'
-      require 'shipyard-framework/jekyll/shipyard_version_tag'
+      require 'shipyard-framework/jekyll/tags/button_tag'
+      require 'shipyard-framework/jekyll/tags/icon_tag'
+      require 'shipyard-framework/jekyll/tags/box_tag'
+      require 'shipyard-framework/jekyll/tags/note_tag'
+      require 'shipyard-framework/jekyll/tags/alert_tag'
+      require 'shipyard-framework/jekyll/tags/shipyard_version_tag'
       require 'shipyard-framework/jekyll/shipyard_css_classes'
       Liquid::Template.register_tag('btn', Shipyard::Jekyll::Button)
       Liquid::Template.register_tag('icon', Shipyard::Jekyll::Icon)
