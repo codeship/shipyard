@@ -7,9 +7,10 @@ module Shipyard
     delegate :each, :find, to: :icons
     delegate :execute_if_updated, :execute, :updated?, to: :updater
 
-    def initialize(icon_directory, output_directory)
+    def initialize(icon_directory, output_directory, base_path = '/assets')
       @path = icon_directory
       @public = output_directory
+      @base_path = base_path
       reload
     end
 
@@ -19,7 +20,7 @@ module Shipyard
     end
 
     def base_path
-      '/assets/icons.svg'
+      "#{@base_path}/assets/icons.svg"
     end
 
     def asset_path(svg_id)
