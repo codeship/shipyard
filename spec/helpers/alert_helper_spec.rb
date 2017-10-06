@@ -22,4 +22,6 @@ RSpec.describe Shipyard::AlertHelper, type: :helper do
       )
     end
   end
+
+  # TODO: Mock the $icons variable for the helper.
 end
