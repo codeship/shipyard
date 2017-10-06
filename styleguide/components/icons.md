@@ -1,0 +1,158 @@
+---
+title: Shipyard Icons
+description: Shipyard comes with several default icons that you're welcome to use on any project. Each icon has been designed on a pixel grid at the small size possible, but can be scaled up to any size you like simply by changing the `width` and `height` in the CSS.
+---
+
+{% include page-heading.html page=page %}
+
+---
+
+### Common Icons
+<p class="text-light margin-bottom-md" markdown="1">The following icons are the most frequently used in just about any application.</p>
+
+<ul class="icon-list col-container">
+  {% iconitem %}
+    {% icon :plus, class: 'center' %}
+  {% endiconitem %}
+
+  {% iconitem %}
+    {% icon :restart, class: 'center' %}
+  {% endiconitem %}
+
+  {% iconitem %}
+    {% icon :gear, class: 'center' %}
+  {% endiconitem %}
+
+  {% iconitem %}
+    {% icon :lock, class: 'center' %}
+  {% endiconitem %}
+
+  {% iconitem %}
+    {% icon :tag, class: 'center' %}
+  {% endiconitem %}
+
+  {% iconitem %}
+    {% icon :x, class: 'center' %}
+  {% endiconitem %}
+
+  {% iconitem %}
+    {% icon :arrow_down, class: 'center' %}
+  {% endiconitem %}
+</ul>
+
+---
+
+### Brand Icons
+<p class="text-light margin-bottom-md" markdown="1">If you need to style several paths inside of the icon, it's important to make sure you use the *injected* version of the icon.</p>
+
+<ul class="icon-list col-container">
+  {% iconitem %}
+    {% icon :bitbucket, class: 'center' %}
+  {% endiconitem %}
+
+  {% iconitem %}
+    {% icon :campfire_color, class: 'center' %}
+  {% endiconitem %}
+
+  {% iconitem %}
+    {% icon :codeship, class: 'center' %}
+  {% endiconitem %}
+
+  {% iconitem %}
+    {% icon :email_color, class: 'center' %}
+  {% endiconitem %}
+
+  {% iconitem %}
+    {% icon :flowdock_color, class: 'center' %}
+  {% endiconitem %}
+
+  {% iconitem %}
+    {% icon :github, class: 'center' %}
+  {% endiconitem %}
+
+  {% iconitem %}
+    {% icon :gitlab, class: 'center' %}
+  {% endiconitem %}
+
+  {% iconitem %}
+    {% icon :grove_color, class: 'center' %}
+  {% endiconitem %}
+
+  {% iconitem %}
+    {% icon :hipchat, class: 'center' %}
+  {% endiconitem %}
+
+  {% iconitem %}
+    {% icon :hipchat_color, class: 'center' %}
+  {% endiconitem %}
+
+  {% iconitem %}
+    {% icon :slack, class: 'center' %}
+  {% endiconitem %}
+
+  {% iconitem %}
+    {% icon :slack_color, class: 'center' %}
+  {% endiconitem %}
+
+  {% iconitem %}
+    {% icon :webhook, class: 'center' %}
+  {% endiconitem %}
+
+  {% iconitem %}
+    {% icon :webhook_color, class: 'center' %}
+  {% endiconitem %}
+</ul>
+
+---
+
+### Multi-color Icons
+<p class="text-light margin-bottom-md" markdown="1">If you need to style several paths inside of the icon, it's important to make sure you use the *injected* version of the icon.</p>
+
+<ul class="icon-list col-container">
+  {% iconitem %}
+    {% icon 'email-color', class: 'icon-xl center' %}
+  {% endiconitem %}
+</ul>
+```html
+<%= icon 'email-color' %>
+```
+
+---
+
+### Icon Sizes
+<p class="text-light margin-bottom-md">The icon size utility classes can be applied to any icon, and are useful when you want to override the default icon size.</p>
+
+<ul class="icon-list col-container">
+  {% iconitem %}
+    {% icon :plus, class: 'center icon-xxs' %}
+  {% endiconitem %}
+
+  {% iconitem %}
+    {% icon :plus, class: 'center icon-xs' %}
+  {% endiconitem %}
+
+  {% iconitem %}
+    {% icon :plus, class: 'center icon-sm' %}
+  {% endiconitem %}
+
+  {% iconitem %}
+    {% icon :plus, class: 'center icon-md' %}
+  {% endiconitem %}
+
+  {% iconitem %}
+    {% icon :plus, class: 'center icon-lg' %}
+  {% endiconitem %}
+
+  {% iconitem %}
+    {% icon :plus, class: 'center icon-xl' %}
+  {% endiconitem %}
+</ul>
+
+```html
+<%= icon :plus, class: 'icon-xxs' %>
+<%= icon :plus, class: 'icon-xs' %>
+<%= icon :plus, class: 'icon-sm' %>
+<%= icon :plus, class: 'icon-md' %>
+<%= icon :plus, class: 'icon-lg' %>
+<%= icon :plus, class: 'icon-xl' %>
+```

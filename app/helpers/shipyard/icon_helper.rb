@@ -5,15 +5,21 @@ module Shipyard
 
     def icon(name, options={})
       if name.is_a? Symbol
-        svg = Icons.instance.find_by(symbol: name)
+        svg = find_icon(symbol: name)
         svg_use_tag svg, options
       else
-        svg = Icons.instance.find_by(id: name)
+        svg = find_icon(id: name)
         svg_tag svg, options
       end
     end
 
     private
+
+    def find_icon(hash)
+      icon = $icons.icons.detect { |i| i[hash.keys.first] == hash.values.first }
+      raise_error(hash.values.first) unless icon
+      icon
+    end
 
     def svg_options(svg, options)
       options[:class] = svg_classes(svg, options)
@@ -36,7 +42,7 @@ module Shipyard
 
     def svg_use_tag(svg, options)
       content_tag :svg, svg_options(svg, options) do
-        content_tag :use, nil, 'xlink:href' => Icons.instance.asset_path(svg[:id])
+        content_tag :use, nil, 'xlink:href' => $icons.asset_path(svg[:id])
       end
     end
 

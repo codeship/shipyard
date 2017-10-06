@@ -1,35 +1,26 @@
+require 'action_view'
+
 module Shipyard
   class Icons
     include ActionView::Helpers::SanitizeHelper
-    include Singleton
     attr_reader :icons
     delegate :each, :find, to: :icons
     delegate :execute_if_updated, :execute, :updated?, to: :updater
 
-    def initialize
-      @path = "#{::Rails.root}/app/assets/icons/"
-      @public = "#{::Rails.root}/public/assets"
-      @fingerprint = ::Rails.application.config.try(:icons_version)
+    def initialize(icon_directory, output_directory)
+      @path = icon_directory
+      @public = output_directory
       reload
     end
 
     def reload
       @icons = load_svgs.freeze
       save_external_svg_defs
-    end
-
-    def find_by(hash)
-      icon = @icons.detect { |i| i[hash.keys.first] == hash.values.first }
-      raise_error(hash.values.first) unless icon
-      icon
+      @icons
     end
 
     def base_path
-      if @fingerprint && !::Rails.env.development?
-        "/assets/icons-#{@fingerprint}.svg"
-      else
-        '/assets/icons.svg'
-      end
+      '/assets/icons.svg'
     end
 
     def asset_path(svg_id)
@@ -59,9 +50,8 @@ module Shipyard
       @icons.each do |icon|
         html << svg_symbol(icon)
       end
-      Dir.mkdir(@public) unless File.exists?(@public) || Dir.exists?(@public)
+      FileUtils.mkdir_p(@public) unless File.exists?(@public) || Dir.exists?(@public)
       File.write("#{@public}/icons.svg", svg_template(html.join))
-      File.write("#{@public}/icons-#{@fingerprint}.svg", svg_template(html.join)) if @fingerprint
     end
 
     def sanitize_svg(html)
@@ -71,7 +61,7 @@ module Shipyard
     end
 
     def svg_symbol(icon)
-      %(<g id="#{icon[:id]}">#{icon[:inner_html]}</g>)
+      %(<g id="#{icon[:id]}" viewBox="#{icon[:view_box]}">#{icon[:inner_html]}</g>)
     end
 
     def svg_template(html)

@@ -9,8 +9,13 @@ module Shipyard
       elsif sprockets?
         register_sprockets
       end
+      register_icons
 
-      register_jekyll_tags if jekyll?
+      if jekyll?
+        register_jekyll_icons
+        register_jekyll_tags
+      end
+
       register_helpers
       configure_sass
     end
@@ -55,8 +60,11 @@ module Shipyard
       ::Sass.load_paths << stylesheets_path
     end
 
-    def register_rails_engine
+    def register_icons
       require 'shipyard-framework/icons'
+    end
+
+    def register_rails_engine
       require 'shipyard-framework/rails/engine'
       require 'shipyard-framework/rails/railtie'
     end
@@ -66,15 +74,21 @@ module Shipyard
       Sprockets.append_path(javascripts_path)
     end
 
+    def register_jekyll_icons
+      $icons = Shipyard::Icons.new '_assets/icons/', '_site/assets/'
+    end
+
     def register_jekyll_tags
       require 'shipyard-framework/jekyll/shipyard_variables'
       require 'shipyard-framework/jekyll/button_tag'
+      require 'shipyard-framework/jekyll/icon_tag'
       require 'shipyard-framework/jekyll/box_tag'
       require 'shipyard-framework/jekyll/note_tag'
       require 'shipyard-framework/jekyll/alert_tag'
       require 'shipyard-framework/jekyll/shipyard_version_tag'
       require 'shipyard-framework/jekyll/shipyard_css_classes'
       Liquid::Template.register_tag('btn', Shipyard::Jekyll::Button)
+      Liquid::Template.register_tag('icon', Shipyard::Jekyll::Icon)
       Liquid::Template.register_tag('box', Shipyard::Jekyll::Box)
       Liquid::Template.register_tag('note', Shipyard::Jekyll::Note)
       Liquid::Template.register_tag('alert', Shipyard::Jekyll::Alert)
