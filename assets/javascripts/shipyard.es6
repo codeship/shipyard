@@ -5,5 +5,5 @@
 
 var shipyard = new Shipyard('html')
 var windowScroll = new Scroll(window)
-var hamburger = new Hamburger('[shipyard="hamburger"]')
-var shipyardAlerts = new Alerts('[shipyard="alert"]')
+var hamburger = new Hamburger('[shipyard=hamburger]')
+var shipyardAlerts = new Alerts('[shipyard=alert]')
