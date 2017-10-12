@@ -8,9 +8,12 @@ install:
   - ./ci/setup
 before_script:
   - chmod +x ci/jekyll
-script:
-  - bundle exec rspec
-  - ./ci/jekyll
+jobs:
+  include:
+    - stage: Jekyll
+      script: ./ci/jekyll
+    - stage: RSpec
+      script: bundle exec rspec
 env:
   global:
     - NOKOGIRI_USE_SYSTEM_LIBRARIES=true
