@@ -23,6 +23,7 @@ branches:
     - gh-pages
     - /skip-ci(.*)/
 notifications:
+  email: false
   slack:
     on_success: always
     rooms:
