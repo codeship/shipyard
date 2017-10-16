@@ -14,6 +14,11 @@ jobs:
       script: ./ci/jekyll
     - stage: RSpec
       script: bundle exec rspec
+deploy:
+  provider: script
+  script: ci/deploy
+  on:
+    all_branches: true
 env:
   global:
     - NOKOGIRI_USE_SYSTEM_LIBRARIES=true

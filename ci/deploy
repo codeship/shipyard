@@ -13,7 +13,7 @@ cd _site
 git diff --cached ./
 
 echo -e "\n\n************** Commit & Push to GitHub Pages **************"
-if [ $CI = "Codeship" ]
+if [ $CI_NAME = "codeship" ]
 then
   git config user.email "${GITHUB_DEPLOY_USER_EMAIL}"
   git config user.name "${GITHUB_DEPLOY_USER_NAME}"

@@ -1,8 +1,6 @@
 #!/bin/bash
 set -e # halt script on error
 
-echo $CI_NAME
-
 echo -e "************** Changed to Styleguide Directory **************"
 cd ./styleguide
 pwd
