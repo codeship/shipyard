@@ -15,6 +15,7 @@ jobs:
     - script: bundle exec rspec
     - stage: Deploy
       script: ./ci/deploy
+      if: branch = master
 env:
   global:
     - NOKOGIRI_USE_SYSTEM_LIBRARIES=true
