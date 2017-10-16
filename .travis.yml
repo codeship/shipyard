@@ -8,6 +8,7 @@ install:
   - ./ci/setup
 before_script:
   - chmod +x ci/jekyll
+  - chmod +x ci/deploy
 jobs:
   include:
     - script: ./ci/jekyll
