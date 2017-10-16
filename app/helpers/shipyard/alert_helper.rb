@@ -1,3 +1,5 @@
+require_relative 'icon_helper'
+
 module Shipyard
   module AlertHelper
     include Shipyard::IconHelper

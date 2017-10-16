@@ -10,6 +10,7 @@ module Shipyard
         register_sprockets
       end
       register_icons
+      load_icons if rspec?
 
       if jekyll?
         register_jekyll_hooks
@@ -45,6 +46,10 @@ module Shipyard
 
     def sprockets?
       defined?(::Sprockets)
+    end
+
+    def rspec?
+      defined?(::RSpec)
     end
 
     def rails?
@@ -100,6 +105,10 @@ module Shipyard
       Dir['app/helpers/shipyard/*.rb'].each do |file|
         require_relative "../#{file}"
       end
+    end
+
+    def load_icons
+      $icons = Shipyard::Icons.new 'assets/icons/', 'tmp/assets/'
     end
   end
 end
