@@ -14,7 +14,6 @@ jobs:
     - script: ./ci/jekyll
     - script: bundle exec rspec
     - stage: Deploy
-      install: skip
       script: ./ci/deploy
 env:
   global:
