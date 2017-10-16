@@ -24,6 +24,6 @@ then
   git commit --allow-empty -m "Deploy to GitHub Pages: ${CI_COMMIT_ID} --skip-ci"
   git push origin gh-pages
 else
-  git commit --allow-empty -m "Test Run --skip-ci"
+  git commit --allow-empty -m "Dry Run Deploy: --skip-ci"
   git push --dry-run origin gh-pages
 fi
