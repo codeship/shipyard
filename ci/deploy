@@ -10,7 +10,7 @@ JEKYLL_ENV=production bundle exec jekyll build --verbose
 
 echo -e "\n\n************** Git File Diffs **************"
 cd _site
-git diff --cached ./
+git diff
 
 echo -e "\n\n************** Commit & Push to GitHub Pages **************"
 git config user.email "${GITHUB_DEPLOY_USER_EMAIL}"
