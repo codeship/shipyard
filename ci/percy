@@ -13,4 +13,4 @@ cd ../
 pwd
 
 echo -e "\n\n************** Percy Snapshot **************"
-bundle exec percy snapshot --widths "375,1280" styleguide/_site/
+bundle exec percy snapshot --widths "375,768,1280" styleguide/_site/
