@@ -13,7 +13,8 @@ $widths: (auto, 5, 10, 15, 20, 25, 30, 33, 35, 40, 45, 50, 55, 60, 65, 66, 70, 7
 @mixin column-sizes
   @each $width in $widths
     &-#{$width}
-      +column-style(width, $width)
+      +column-style(max-width, $width)
+      +column-style(flex-basis, $width)
     &-offset-#{$width}
       +column-style(margin-left, $width)
 
@@ -30,11 +31,15 @@ $widths: (auto, 5, 10, 15, 20, 25, 30, 33, 35, 40, 45, 50, 55, 60, 65, 66, 70, 7
 
 .col
   display: block
-  float: left
   position: relative
+  flex-basis: 0
+  flex-grow: 1
+  flex-shrink: 1
   +responsive-padding(left right)
 
   &-container
+    display: flex
+    justify-content: space-evenly
     +clearfix
     +responsive-margin(left right, $divisor: -2)
 
