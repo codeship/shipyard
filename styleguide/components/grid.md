@@ -87,3 +87,30 @@ example_offsets: [5,10,15,20,25,30,35,40,45,50,55,60,65,70,75]
   <div class="col col-20 col-offset-10"><!-- column contents --></div>
 </div>
 ```
+
+---
+
+### Responsive Columns `.col-{ n }-(x1..x4)`
+<p class="text-light margin-bottom-md">Useful when you want to build a grid that works for any size of screen.</p>
+
+<div class="col-container margin-top-xs margin-top-x1-sm margin-top-x2-md margin-bottom-md">
+  {% for i in (1..5) %}
+    <div class="col col-100 col-x1-33 col-x2-25 col-x3-20 align-center">
+      <div class="box-secondary text-light text-sm strong">
+        <span class="display-block display-x1-none">100</span>
+        <span class="display-none display-x1-block display-x2-none">33</span>
+        <span class="display-none display-x2-block display-x3-none">25</span>
+        <span class="display-none display-x3-block">20</span>
+      </div>
+    </div>
+  {% endfor %}
+</div>
+```html
+<div class="col-container">
+  <div class="col col-100 col-x1-33 col-x2-25 col-x3-20"><!-- column 1 --></div>
+  <div class="col col-100 col-x1-33 col-x2-25 col-x3-20"><!-- column 2 --></div>
+  <div class="col col-100 col-x1-33 col-x2-25 col-x3-20"><!-- column 3 --></div>
+  <div class="col col-100 col-x1-33 col-x2-25 col-x3-20"><!-- column 4 --></div>
+  <div class="col col-100 col-x1-33 col-x2-25 col-x3-20"><!-- column 5 --></div>
+</div>
+```
