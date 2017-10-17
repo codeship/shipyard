@@ -1,7 +1,9 @@
 ---
 title: Shipyard Grid
 description: The Shipyard grid is a percentage-based, flexbox grid and is entirely responsive. Each class needs the foundational `.col` class in order to function properly, and also should be contained inside the `.col-container` as well.
-example_one: [10,20,25,33,50]
+container_classes: col-container margin-top-xs margin-top-x1-sm margin-top-x2-md
+box_classes: box-secondary text-light text-sm strong align-center
+example_flex_columns: [10,20,25,33,50]
 example_sizes: [5,10,15,20,25,30,33,35,40,45,50,55,60,65,66,70,75,80,85,90,95,100]
 example_offsets: [5,10,15,20,25,30,35,40,45,50,55,60,65,70,75]
 ---
@@ -13,16 +15,24 @@ example_offsets: [5,10,15,20,25,30,35,40,45,50,55,60,65,70,75]
 ### Flexible Columns `.col`
 <p class="text-light margin-bottom-md">By default, the flexbox-based grid will automatically size each column inside the container.</p>
 
-{% for example in page.example_one %}
-  <div class="col-container margin-top-xs margin-top-x1-sm margin-top-x2-md margin-bottom-md">
+{% for example in page.example_flex_columns %}
+  <div class="{{ page.container_classes }}">
     {% assign num = 100 | divided_by: example %}
     {% for i in (1..num) %}
-      <div class="col align-center">
-        <div class="box-secondary text-light text-sm strong">{{ example }}</div>
+      <div class="col">
+        <div class="{{ page.box_classes }}">{{ example }}</div>
       </div>
     {% endfor %}
   </div>
 {% endfor %}
+<div class="{{ page.container_classes }}">
+  <div class="col col-66 align-center">
+    <div class="{{ page.box_classes }}">66</div>
+  </div>
+  <div class="col align-center">
+    <div class="{{ page.box_classes }}">auto</div>
+  </div>
+</div>
 
 ```html
 <div class="col-container">
@@ -38,18 +48,18 @@ example_offsets: [5,10,15,20,25,30,35,40,45,50,55,60,65,70,75]
 <p class="text-light margin-bottom-md" markdown="1">The column sizes are percentage-based and available in any size from `5-100` in increments of 5.</p>
 
 {% for example in page.example_sizes %}
-  <div class="col-container margin-top-xs margin-top-x1-sm margin-top-x2-md margin-bottom-md">
+  <div class="{{ page.container_classes }}">
     {% assign num = 100 | divided_by: example %}
     {% for i in (1..num) %}
-      <div class="col col-{{ example }} align-center">
-        <div class="box-secondary text-light text-sm strong">{{ example }}</div>
+      <div class="col col-{{ example }}">
+        <div class="{{ page.box_classes }}">{{ example }}</div>
       </div>
     {% endfor %}
 
     {% assign remainder = 100 | modulo: example %}
     {% if remainder > 1 %}
-      <div class="col align-center">
-        <div class="box-secondary text-light text-sm strong">Auto</div>
+      <div class="col col-{{ remainder }}">
+        <div class="{{ page.box_classes }}">{{ remainder }}</div>
       </div>
     {% endif %}
   </div>
@@ -70,13 +80,13 @@ example_offsets: [5,10,15,20,25,30,35,40,45,50,55,60,65,70,75]
 
 {% assign example_offsets = page.example_offsets | reverse %}
 {% for i in example_offsets %}
-  <div class="col-container margin-top-xs margin-top-x1-sm margin-top-x2-md margin-bottom-md">
-    <div class="col col-{{ i }} align-center">
-      <div class="box-secondary text-light text-sm strong">{{ i }}</div>
+  <div class="{{ page.container_classes }}">
+    <div class="col col-{{ i }}">
+      <div class="{{ page.box_classes }}">{{ i }}</div>
     </div>
     {% if i < 100 %}
-      <div class="col col-20 col-offset-{{ 80 | minus: i }} align-center">
-        <div class="box-secondary text-light text-sm strong">offset {{ 80 | minus: i }}</div>
+      <div class="col col-20 col-offset-{{ 80 | minus: i }}">
+        <div class="{{ page.box_classes }}">offset {{ 80 | minus: i }}</div>
       </div>
     {% endif %}
   </div>
@@ -93,10 +103,10 @@ example_offsets: [5,10,15,20,25,30,35,40,45,50,55,60,65,70,75]
 ### Responsive Columns `.col-{ n }-(x1..x4)`
 <p class="text-light margin-bottom-md">Useful when you want to build a grid that works for any size of screen.</p>
 
-<div class="col-container margin-top-xs margin-top-x1-sm margin-top-x2-md margin-bottom-md">
+<div class="{{ page.container_classes }}">
   {% for i in (1..5) %}
-    <div class="col col-100 col-x1-33 col-x2-25 col-x3-20 align-center">
-      <div class="box-secondary text-light text-sm strong">
+    <div class="col col-100 col-x1-33 col-x2-25 col-x3-20">
+      <div class="{{ page.box_classes }}">
         <span class="display-block display-x1-none">100</span>
         <span class="display-none display-x1-block display-x2-none">33</span>
         <span class="display-none display-x2-block display-x3-none">25</span>
