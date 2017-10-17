@@ -1,6 +1,6 @@
 ---
 title: Shipyard Grid
-description: The grid is percentage-based and also entirely responsive. Each class needs the foundational `.col` class in order to function properly, and also should be contained inside the `.col-container` as well.
+description: The Shipyard grid is a percentage-based, flexbox grid and is entirely responsive. Each class needs the foundational `.col` class in order to function properly, and also should be contained inside the `.col-container` as well.
 example_one: [10,20,25,33,50]
 example_sizes: [5,10,15,20,25,30,33,35,40,45,50,55,60,65,66,70,75,80,85,90,95,100]
 example_offsets: [5,10,15,20,25,30,35,40,45,50,55,60,65,70,75]
