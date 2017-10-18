@@ -14,8 +14,8 @@ jobs:
   include:
     - script: ./ci/jekyll
     - script: bundle exec rspec
+    - script: ruby ./ci/build.rb
     - stage: Deploy
-      script: ruby ./ci/build.rb
       script: ./ci/deploy
       if: branch = master
 env:
