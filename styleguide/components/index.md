@@ -1,11 +1,11 @@
 ---
 title: Shipyard Components
-components: [Grid, Boxes, Buttons, Empty States, Alerts, Notes, Forms, Icons, Modals, Tooltips, Code, Tables]
+components: [Boxes, Buttons, Empty States, Alerts, Notes, Forms, Icons, Modals, Tooltips, Code, Tables]
 ---
 
 {% include page-heading.html page=page %}
 
-<hr />
+---
 
 <ul class="col-container">
   {% for component in page.components %}
