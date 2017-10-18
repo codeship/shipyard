@@ -101,9 +101,9 @@ example_offsets: [5,10,15,20,25,30,35,40,45,50,55,60,65,70,75]
 ---
 
 ### Responsive Columns `.col-{ n }-(x1..x4)`
-<p class="text-light margin-bottom-md" markdown="1">Useful when you want to build a grid that works for any size of screen. Note: Be sure to use the `.col-container-wrap` class in order to achieve the results you're after.</p>
+<p class="text-light margin-bottom-md" markdown="1">Useful when you want to build a grid that works for any size of screen.</p>
 
-<div class="{{ page.container_classes | replace: 'col-container', 'col-container-wrap' }}">
+<div class="{{ page.container_classes }}">
   {% for i in (1..5) %}
     <div class="col col-100 col-x1-33 col-x2-25 col-x3-20">
       <div class="{{ page.box_classes }}">
@@ -128,10 +128,10 @@ example_offsets: [5,10,15,20,25,30,35,40,45,50,55,60,65,70,75]
 
 ---
 
-### Take-Up-The-Rest Columns `.col.col-100`
-<p class="text-light margin-bottom-md" markdown="1">This type of layout is useful in all kinds of scenarios, especially when you have the auto-sized column contains some kind of call-to-action. The secret is in the `.col-container` class.</p>
+### Take-Up-The-Rest Columns `.col-container-nowrap`
+<p class="text-light margin-bottom-md" markdown="1">This type of layout is useful in all kinds of scenarios, especially when you have the auto-sized column contains some kind of call-to-action.</p>
 
-<div class="{{ page.container_classes }}">
+<div class="{{ page.container_classes | replace: 'col-container', 'col-container-nowrap' }}">
   <div class="col col-100">
     <div class="{{ page.box_classes }}">Take-up-the-rest Column</div>
   </div>
@@ -141,7 +141,7 @@ example_offsets: [5,10,15,20,25,30,35,40,45,50,55,60,65,70,75]
 </div>
 
 ```html
-<div class="col-container">
+<div class="col-container-nowrap">
   <div class="col col-100">
     <!-- Take-Up-The-Rest Column -->
   </div>

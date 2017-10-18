@@ -10,7 +10,7 @@ description: Shipyard comes with several default icons that you're welcome to us
 ### Common Icons
 <p class="text-light margin-bottom-md" markdown="1">The following icons are the most frequently used in just about any application.</p>
 
-<ul class="icon-list col-container-wrap">
+<ul class="icon-list col-container">
   {% iconitem %}
     {% icon :plus, class: 'center' %}
   {% endiconitem %}
@@ -45,7 +45,7 @@ description: Shipyard comes with several default icons that you're welcome to us
 ### Brand Icons
 <p class="text-light margin-bottom-md" markdown="1">If you need to style several paths inside of the icon, it's important to make sure you use the *injected* version of the icon.</p>
 
-<ul class="icon-list col-container-wrap">
+<ul class="icon-list col-container">
   {% iconitem %}
     {% icon :bitbucket, class: 'center' %}
   {% endiconitem %}
@@ -108,7 +108,7 @@ description: Shipyard comes with several default icons that you're welcome to us
 ### Multi-color Icons
 <p class="text-light margin-bottom-md" markdown="1">If you need to style several paths inside of the icon, it's important to make sure you use the *injected* version of the icon.</p>
 
-<ul class="icon-list col-container-wrap">
+<ul class="icon-list col-container">
   {% iconitem %}
     {% icon 'email-color', class: 'icon-xl center' %}
   {% endiconitem %}
@@ -122,7 +122,7 @@ description: Shipyard comes with several default icons that you're welcome to us
 ### Icon Sizes
 <p class="text-light margin-bottom-md">The icon size utility classes can be applied to any icon, and are useful when you want to override the default icon size.</p>
 
-<ul class="icon-list col-container-wrap">
+<ul class="icon-list col-container">
   {% iconitem %}
     {% icon :gear, class: 'center icon-xxs' %}
   {% endiconitem %}
