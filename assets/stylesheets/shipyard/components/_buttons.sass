@@ -26,48 +26,40 @@
   @if $text-color
     color: $text-color
 
-@mixin btn-hover($color, $text-color: null, $border-color: null)
+@mixin btn-hover($color, $text-color: null, $border-color: null, $text-decoration: none)
   &:hover, &:focus, &:active
-    text-decoration: none
+    text-decoration: $text-decoration
     +btn-color($color, $text-color, $border-color)
 
-@mixin btn-size($size)
+@mixin btn-size($size, $min-width: null)
   @if $size == xxs
     font-size: 12px
     padding: 0 8px
-    height: 20px
-    min-width: 20px
-    line-height: 16px
+    +btn-size(20px)
   @else if $size == xs
     font-size: 12px
     padding: 0 10px
-    height: 30px
-    min-width: 30px
-    line-height: 26px
+    +btn-size(30px)
   @else if $size == sm
     font-size: 14px
     padding: 0 15px
-    height: 40px
-    min-width: 40px
-    line-height: 36px
+    +btn-size(40px)
   @else if $size == md
     font-size: 16px
     padding: 0 20px
-    height: 50px
-    min-width: 50px
-    line-height: 46px
+    +btn-size(50px)
   @else if $size == lg
     font-size: 18px
     padding: 0 30px
-    height: 60px
-    min-width: 60px
-    line-height: 56px
+    +btn-size(60px)
   @else if $size == xl
     font-size: 20px
     padding: 0 35px
-    height: 70px
-    min-width: 70px
-    line-height: 66px
+    +btn-size(70px)
+  @else if type-of($size) == 'number'
+    height: $size
+    line-height: $size - 4px
+    min-width: if($min-width, $min-width, $size)
 
 +component('btn')
   +btn
@@ -140,6 +132,10 @@
   &-cta
     +btn-color($green-dark)
     +btn-hover($green-darker)
+
+  &-link
+    +btn-color(transparent, $blue)
+    +btn-hover(transparent, $blue-dark, $text-decoration: underline)
 
   &-checked
     &, &:active, &:hover, &:focus

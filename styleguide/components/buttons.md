@@ -4,9 +4,9 @@ title: Shipyard Buttons
 
 {% include page-heading.html page=page %}
 
-<hr />
+---
 
-<h2>Button Types</h2>
+## Button Types
 <div class="box-padding align-center">
   {% btn Default %}
   {% btn Primary, :primary %}
@@ -14,13 +14,14 @@ title: Shipyard Buttons
   {% btn Disabled, :disabled %}
   {% btn CTA, :cta %}
   {% btn Caution, :caution %}
+  {% btn Link, :link %}
 </div>
 <div class="box-secondary box-padding align-center bg-gray-dark">
   {% btn Inverse, :inverse %}
   {% btn Inverse, :inverse_secondary, class: 'margin-left-xs' %}
 </div>
 
-<hr />
+---
 
 <div class="box-padding align-center">
   {% btn Button %}
@@ -28,9 +29,9 @@ title: Shipyard Buttons
   <input type="button" class="btn" value="Input" />
 </div>
 
-<hr />
+---
 
-<h2>Button Sizes (default: md)</h2>
+## Button Sizes (default: md)
 <div class="box-padding align-center">
   {% btn XX-Small, :xxs %}
   {% btn X-Small, :xs %}
@@ -40,7 +41,7 @@ title: Shipyard Buttons
   {% btn X-Large, :xl %}
 </div>
 
-<h2>XX-Small, Responsive Buttons</h2>
+## XX-Small, Responsive Buttons
 <div class="box-padding align-center">
   {% btn All Screens, :xxs %}
   {% btn Tablets, :x1_xxs %}
@@ -49,7 +50,7 @@ title: Shipyard Buttons
   {% btn Giant Screens, :x4_xxs %}
 </div>
 
-<h2>X-Small, Responsive Buttons</h2>
+## X-Small, Responsive Buttons
 <div class="box-padding align-center">
   {% btn All Screens, :xs %}
   {% btn Tablets, :x1_xs %}
@@ -58,7 +59,7 @@ title: Shipyard Buttons
   {% btn Giant Screens, :x4_xs %}
 </div>
 
-<h2>Small, Responsive Buttons</h2>
+## Small, Responsive Buttons
 <div class="box-padding align-center">
   {% btn All Screens, :sm %}
   {% btn Tablets, :x1_sm %}
@@ -67,7 +68,7 @@ title: Shipyard Buttons
   {% btn Giant Screens, :x4_sm %}
 </div>
 
-<h2>Medium, Responsive Buttons (Default Size)</h2>
+## Medium, Responsive Buttons (Default Size)
 <div class="box-padding align-center">
   {% btn All Screens %}
   {% btn Tablets, :sm :x1_md %}
