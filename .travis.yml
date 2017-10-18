@@ -9,11 +9,13 @@ install:
 before_script:
   - chmod +x ci/jekyll
   - chmod +x ci/deploy
+  - chmod +x ci/build.rb
 jobs:
   include:
     - script: ./ci/jekyll
     - script: bundle exec rspec
     - stage: Deploy
+      script: ruby ./ci/build.rb
       script: ./ci/deploy
       if: branch = master
 env:
