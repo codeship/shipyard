@@ -13,9 +13,6 @@ jobs:
   include:
   - script: "./ci/jekyll"
   - script: bundle exec rspec
-  - stage: Deploy
-    script: "./ci/deploy"
-    if: branch = master
 deploy:
   provider: rubygems
   api_key:
