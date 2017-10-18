@@ -7,7 +7,7 @@ components: [Grid, Boxes, Buttons, Empty States, Alerts, Notes, Forms, Icons, Mo
 
 <hr />
 
-<ul class="col-container">
+<ul class="col-container-wrap">
   {% for component in page.components %}
     <li class="margin-bottom-xs margin-bottom-x1-sm margin-bottom-x2-lg col col-100 col-x1-33 col-x2-25">
       <a href="{{ site.baseurl }}/components/{{ component | replace: ' ', '-' | downcase }}" class="box-link box-padding align-center text-md text-x1-lg text-x2-xl">
