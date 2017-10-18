@@ -1,7 +1,7 @@
 ---
 title: Shipyard Grid
 description: The Shipyard grid is a percentage-based, flexbox grid and is entirely responsive. Each class needs the foundational `.col` class in order to function properly, and also should be contained inside the `.col-container` as well.
-container_classes: col-container margin-top-xs margin-top-x1-sm margin-top-x2-md
+container_classes: col-container margin-top-xs margin-top-x1-sm margin-top-x2-md margin-bottom-md
 box_classes: box-secondary text-light text-sm strong align-center
 example_flex_columns: [10,20,25,33,50]
 example_sizes: [5,10,15,20,25,30,33,35,40,45,50,55,60,65,66,70,75,80,85,90,95,100]
@@ -101,7 +101,7 @@ example_offsets: [5,10,15,20,25,30,35,40,45,50,55,60,65,70,75]
 ---
 
 ### Responsive Columns `.col-{ n }-(x1..x4)`
-<p class="text-light margin-bottom-md">Useful when you want to build a grid that works for any size of screen.</p>
+<p class="text-light margin-bottom-md" markdown="1">Useful when you want to build a grid that works for any size of screen.</p>
 
 <div class="{{ page.container_classes }}">
   {% for i in (1..5) %}
@@ -115,12 +115,38 @@ example_offsets: [5,10,15,20,25,30,35,40,45,50,55,60,65,70,75]
     </div>
   {% endfor %}
 </div>
+
 ```html
-<div class="col-container">
+<div class="col-container-wrap">
   <div class="col col-100 col-x1-33 col-x2-25 col-x3-20"><!-- column 1 --></div>
   <div class="col col-100 col-x1-33 col-x2-25 col-x3-20"><!-- column 2 --></div>
   <div class="col col-100 col-x1-33 col-x2-25 col-x3-20"><!-- column 3 --></div>
   <div class="col col-100 col-x1-33 col-x2-25 col-x3-20"><!-- column 4 --></div>
   <div class="col col-100 col-x1-33 col-x2-25 col-x3-20"><!-- column 5 --></div>
+</div>
+```
+
+---
+
+### Take-Up-The-Rest Columns `.col-container-nowrap`
+<p class="text-light margin-bottom-md" markdown="1">This type of layout is useful in all kinds of scenarios, especially when you have the auto-sized column contains some kind of call-to-action.</p>
+
+<div class="{{ page.container_classes | replace: 'col-container', 'col-container-nowrap' }}">
+  <div class="col col-100">
+    <div class="{{ page.box_classes }}">Take-up-the-rest Column</div>
+  </div>
+  <div class="col">
+    <div class="white-space-nowrap {{ page.box_classes }}">Variable Column</div>
+  </div>
+</div>
+
+```html
+<div class="col-container-nowrap">
+  <div class="col col-100">
+    <!-- Take-Up-The-Rest Column -->
+  </div>
+  <div class="col">
+    <!-- Variable Column -->
+  </div>
 </div>
 ```

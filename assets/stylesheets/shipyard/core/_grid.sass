@@ -29,7 +29,7 @@ $widths: (auto, 5, 10, 15, 20, 25, 30, 33, 35, 40, 45, 50, 55, 60, 65, 66, 70, 7
   @extend .container
   +responsive-padding(top bottom, $divisor: 1)
 
-.col
++component('col')
   display: block
   position: relative
   flex-basis: 0
@@ -40,8 +40,12 @@ $widths: (auto, 5, 10, 15, 20, 25, 30, 33, 35, 40, 45, 50, 55, 60, 65, 66, 70, 7
   &-container
     display: flex
     flex-wrap: wrap
-    +clearfix
     +responsive-margin(left right, $divisor: -2)
+    &-nowrap
+      +all-media-sizes
+        display: flex
+        flex-wrap: nowrap
+        +responsive-margin(left right, $divisor: -2)
 
   &-center
     float: none
