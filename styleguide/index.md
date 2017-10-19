@@ -7,7 +7,7 @@ title: Shipyard
 Add this line to your application's Gemfile:
 
 ```ruby
-gem 'shipyard-framework', '~> {% shipyard_version %}
+gem 'shipyard-framework', '~> {% shipyard_version %}'
 ```
 
 Then add this line to your application's CSS file(s):
