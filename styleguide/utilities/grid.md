@@ -100,7 +100,7 @@ example_offsets: [5,10,15,20,25,30,35,40,45,50,55,60,65,70,75]
 
 ---
 
-### Responsive Columns `.col-{ n }-(x1..x4)`
+### Responsive Columns `.col-(x1..x4)-{ n }`
 <p class="text-light margin-bottom-md" markdown="1">Useful when you want to build a grid that works for any size of screen.</p>
 
 <div class="{{ page.container_classes }}">
