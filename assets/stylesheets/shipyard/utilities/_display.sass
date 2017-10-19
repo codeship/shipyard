@@ -6,7 +6,7 @@
 
 .display
   +all-media-sizes
-    @each $value in (block, table, inline, inline-block, none)
+    @each $value in (flex, block, table, inline, inline-block, none)
       &-#{$value}
         display: $value
 
