@@ -8,7 +8,7 @@ module Shipyard
       def initialize(tag_name, params, options)
         super
         @params = params.split(',')
-        @text = @params[0]
+        @text = @params[0].strip
         @args = @params[1].to_s.tr(':','').split(' ').map(&:to_sym)
         @args << eval("{#{@params[2]}}") if @params[2]
       end

@@ -19,11 +19,14 @@
   &-link
     color: $blue
     cursor: pointer
-    &:hover, &-selected, &-active
+    &:hover, &:active, &-selected, &-active
       color: $blue-dark
+      outline: none
       box-shadow: 0 0 4px 1px rgba($blue,.5)
     &-active-green,
-    &-active-green:hover
+    &-active-green:hover,
+    &-active-green:active
+      outline: none
       cursor: default
       box-shadow: 0 0 4px 1px rgba(darken($green, 5%),.75)
 

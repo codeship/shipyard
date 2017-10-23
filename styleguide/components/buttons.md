@@ -10,11 +10,14 @@ title: Shipyard Buttons
 <div class="box-padding align-center">
   {% btn Default %}
   {% btn Primary, :primary %}
+  {% btn Primary Dark, :primary_dark %}
   {% btn Secondary, :secondary %}
+  {% btn Secondary Dark, :secondary_dark %}
   {% btn Disabled, :disabled %}
   {% btn CTA, :cta %}
   {% btn Caution, :caution %}
   {% btn Link, :link %}
+  {% btn Rounded, :rounded %}
 </div>
 <div class="box-secondary box-padding align-center bg-gray-dark">
   {% btn Inverse, :inverse %}
@@ -23,11 +26,32 @@ title: Shipyard Buttons
 
 ---
 
+### Full-Screen Buttons
+
 <div class="box-padding align-center">
+  {% btn Save Changes, :full %}
+</div>
+
+```html
+{% btn Save Changes, :full %}
+```
+
+---
+
+### Common Buttons Tags
+<p class="text-light margin-bottom-md" markdown="1">The button classes can be applied to any type of html tag to achieve the desired result. The most common examples being the `button`, `a`, and `input` tags as seen in the example below.</p>
+
+<div class="margin-bottom-lg">
   {% btn Button %}
   <a href="#" class="btn">Link</a>
   <input type="button" class="btn" value="Input" />
 </div>
+
+```html
+{% btn Button %}
+<a href="#" class="btn">Link</a>
+<input type="button" class="btn" value="Input" />
+```
 
 ---
 
