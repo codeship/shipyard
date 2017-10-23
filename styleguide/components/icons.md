@@ -156,3 +156,19 @@ description: Shipyard comes with several default icons that you're welcome to us
 <%= icon :gear, class: 'icon-lg' %>
 <%= icon :gear, class: 'icon-xl' %>
 ```
+
+---
+
+### Centered Icons
+<p class="text-light margin-bottom-md" markdown="1">One of the most common problems when using an icon is that doesn't line up with the text content next to it. Don't worry though, we've got you covered — simply apply the `.icon-center` class to any icon to fix this issue.</p>
+
+<div class="margin-bottom-lg">
+  <button class="btn btn-secondary">{% icon :plus, class: 'icon-center icon-sm margin-right-xxs' %} Create</button>
+</div>
+
+```html
+<button class="btn btn-secondary">
+  <%= icon :plus, class: 'icon-center icon-sm' %>
+  Create
+</button>
+```
