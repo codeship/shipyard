@@ -10,7 +10,9 @@ title: Shipyard Buttons
 <div class="box-padding align-center">
   {% btn Default %}
   {% btn Primary, :primary %}
+  {% btn Primary Dark, :primary_dark %}
   {% btn Secondary, :secondary %}
+  {% btn Secondary Dark, :secondary_dark %}
   {% btn Disabled, :disabled %}
   {% btn CTA, :cta %}
   {% btn Caution, :caution %}

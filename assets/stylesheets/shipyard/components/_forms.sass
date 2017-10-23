@@ -40,7 +40,7 @@
     +respond-to(padding, (x0: 0 15px, x1: 0 20px))
     +when('error')
       border-color: $red
-    &:focus
+    &:hover, &:focus
       border-color: $border-color-dark
       +when('error')
         border-color: darken($red, 15%)
@@ -77,7 +77,7 @@
     +respond-to(padding, (x0: 10px 15px, x1: 10px 20px))
     +when('error')
       border-color: $red
-    &:focus
+    &:hover, &:focus
       border-color: $border-color-dark
       +when('error')
         border-color: darken($red, 15%)
