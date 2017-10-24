@@ -3,7 +3,7 @@
     <meta charset="utf-8" />
     <title>Shipyard Grid</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-    <link type="text/css" rel="stylesheet" href="/shipyard/assets/application-b4837c292ea2732bdeeac80014e021c8da064a37d53719ce7b287359a84c98b3.css">
+    <link type="text/css" rel="stylesheet" href="/shipyard/assets/application-f1d7c88b54a2039a9f456c2be99a5b6cd802377d3e8548d404985a87978a596d.css">
   </head>
   <body>
     <header class="header">
@@ -998,6 +998,60 @@
       <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col"</span><span class="nt">&gt;</span><span class="c">&lt;!-- auto column --&gt;</span><span class="nt">&lt;/div&gt;</span>
       <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col"</span><span class="nt">&gt;</span><span class="c">&lt;!-- auto column --&gt;</span><span class="nt">&lt;/div&gt;</span>
       <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col"</span><span class="nt">&gt;</span><span class="c">&lt;!-- auto column --&gt;</span><span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+</code></pre></div></div>
+
+<hr />
+
+<h3 id="reversible-columns-flex--x1x4---col--col-reverse--row--row-reverse-">Reversible Columns <code class="highlighter-rouge">.flex-{ x1..x4 }-{ col | col-reverse | row | row-reverse }</code></h3>
+<p class="text-light margin-bottom-md">Useful when the flow of the content should be different at a certain breakpoint.</p>
+
+<div class="col-container margin-top-xs margin-top-x1-sm margin-top-x2-md margin-bottom-xs margin-bottom-x1-sm margin-bottom-x2-md">
+  <div class="col flex-col flex-x2-col-reverse">
+    <div class="utilities-grid-box box-secondary text-light text-sm strong align-center bg-teal-lighter">
+      <span class="teal-darker display-inline display-x2-none">top (mobile)</span>
+      <span class="teal-darker display-none display-x2-inline">bottom (desktop)</span>
+    </div>
+    <div class="col-container margin-top-xs margin-top-x2-sm margin-bottom-xs margin-bottom-x2-sm flex-row flex-x2-row-reverse">
+      <div class="col">
+        <div class="utilities-grid-box box-secondary text-light text-sm strong align-center bg-blue-lighter">
+          <span class="blue-darker display-inline display-x2-none">left (mobile)</span>
+          <span class="blue-darker display-none display-x2-inline">right (desktop)</span>
+        </div>
+      </div>
+      <div class="col">
+        <div class="utilities-grid-box box-secondary text-light text-sm strong align-center bg-green-lighter">
+          <span class="green-darker">middle</span>
+        </div>
+      </div>
+      <div class="col">
+        <div class="utilities-grid-box box-secondary text-light text-sm strong align-center bg-yellow-lighter">
+          <span class="yellow-darker display-inline display-x2-none">right (mobile)</span>
+          <span class="yellow-darker display-none display-x2-inline">left (desktop)</span>
+        </div>
+      </div>
+    </div>
+    <div class="utilities-grid-box box-secondary text-light text-sm strong align-center bg-orange-lightest">
+      <span class="orange-darker display-inline display-x2-none">bottom (mobile)</span>
+      <span class="orange-darker display-none display-x2-inline">top (desktop)</span>
+    </div>
+  </div>
+</div>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-container"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col flex-col flex-x2-col-reverse"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div&gt;</span>
+      <span class="c">&lt;!-- top on mobile; bottom on desktop --&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-container flex-row flex-x2-row-reverse"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col"</span><span class="nt">&gt;</span><span class="c">&lt;!-- left on mobile; right on desktop --&gt;</span><span class="nt">&lt;/div&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col"</span><span class="nt">&gt;</span><span class="c">&lt;!-- middle on all breakpoints --&gt;</span><span class="nt">&lt;/div&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col"</span><span class="nt">&gt;</span><span class="c">&lt;!-- right on mobile; left on desktop --&gt;</span><span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;div&gt;</span>
+      <span class="c">&lt;!-- bottom on mobile; top on desktop --&gt;</span>
     <span class="nt">&lt;/div&gt;</span>
   <span class="nt">&lt;/div&gt;</span>
 <span class="nt">&lt;/div&gt;</span>
