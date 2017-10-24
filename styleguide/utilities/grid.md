@@ -154,7 +154,7 @@ example_offsets: [5,10,15,20,25,30,35,40,45,50,55,60,65,70,75]
 ---
 
 ### Nested Columns
-<p class="text-light margin-bottom-md" markdown="1">This type of layout is useful in all kinds of scenarios, especially when you have the auto-sized column contains some kind of call-to-action.</p>
+<p class="text-light margin-bottom-md" markdown="1">Nested grids can be tricky to build and somewhat fragile by nature. For the best results, pay special attention to how you want each column to respond at various screen sizes and test each breakpoint thoroughly.</p>
 
 <div class="{{ page.container_classes }}">
   <div class="col col-40 display-flex">
