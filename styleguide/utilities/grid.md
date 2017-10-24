@@ -1,8 +1,8 @@
 ---
 title: Shipyard Grid
 description: The Shipyard grid is a percentage-based, flexbox grid and is entirely responsive. Each class needs the foundational `.col` class in order to function properly, and also should be contained inside the `.col-container` as well.
-container_classes: col-container margin-top-xs margin-top-x1-sm margin-top-x2-md margin-bottom-md
-box_classes: box-secondary text-light text-sm strong align-center
+container_classes: col-container margin-top-xs margin-top-x1-sm margin-top-x2-md margin-bottom-xs margin-bottom-x1-sm margin-bottom-x2-md
+box_classes: utilities-grid-box box-secondary text-light text-sm strong align-center
 example_flex_columns: [10,20,25,33,50]
 example_sizes: [5,10,15,20,25,30,33,35,40,45,50,55,60,65,66,70,75,80,85,90,95,100]
 example_offsets: [5,10,15,20,25,30,35,40,45,50,55,60,65,70,75]
@@ -147,6 +147,41 @@ example_offsets: [5,10,15,20,25,30,35,40,45,50,55,60,65,70,75]
   </div>
   <div class="col">
     <!-- Variable Column -->
+  </div>
+</div>
+```
+
+---
+
+### Nested Columns
+<p class="text-light margin-bottom-md" markdown="1">Nested grids can be tricky to build and somewhat fragile by nature. For the best results, pay special attention to how you want each column to respond at various screen sizes and test each breakpoint thoroughly.</p>
+
+<div class="{{ page.container_classes }}">
+  <div class="col col-40 display-flex">
+    <div class="{{ page.box_classes }}">40</div>
+  </div>
+  <div class="col col-60">
+    <div class="{{ page.box_classes }} margin-bottom-xs margin-bottom-x1-sm margin-bottom-x2-md">60</div>
+    <div class="col-container">
+      <div class="col"><div class="{{ page.box_classes }}">20</div></div>
+      <div class="col"><div class="{{ page.box_classes }}">20</div></div>
+      <div class="col"><div class="{{ page.box_classes }}">20</div></div>
+    </div>
+  </div>
+</div>
+
+```html
+<div class="col-container">
+  <div class="col col-40">
+    <!-- 40% column -->
+  </div>
+  <div class="col col-60">
+    <!-- 60% column -->
+    <div class="col-container">
+      <div class="col"><!-- auto column --></div>
+      <div class="col"><!-- auto column --></div>
+      <div class="col"><!-- auto column --></div>
+    </div>
   </div>
 </div>
 ```
