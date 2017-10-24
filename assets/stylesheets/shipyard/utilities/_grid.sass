@@ -30,11 +30,12 @@ $widths: (auto, 5, 10, 15, 20, 25, 30, 33, 35, 40, 45, 50, 55, 60, 65, 66, 70, 7
   +responsive-padding(top bottom, $divisor: 1)
 
 +component('col')
-  display: block
+  display: flex
   position: relative
   flex-basis: 0
   flex-grow: 1
   flex-shrink: 1
+  flex-direction: column
   +responsive-padding(left right)
 
   &-container
@@ -54,9 +55,12 @@ $widths: (auto, 5, 10, 15, 20, 25, 30, 33, 35, 40, 45, 50, 55, 60, 65, 66, 70, 7
   +all-media-sizes
     +column-sizes
 
-+component('flex')
-  display: flex
+.flex
   +all-media-sizes
+    &-row
+      flex-direction: row
+    &-row-reverse
+      flex-direction: row-reverse
     &-col
       flex-direction: column
     &-col-reverse
