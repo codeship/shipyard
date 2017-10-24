@@ -185,3 +185,58 @@ example_offsets: [5,10,15,20,25,30,35,40,45,50,55,60,65,70,75]
   </div>
 </div>
 ```
+
+---
+
+### Reversible Columns `.flex-{ x1..x4 }-{ col | col-reverse | row | row-reverse }`
+<p class="text-light margin-bottom-md" markdown="1">Useful when the flow of the content should be different at a certain breakpoint.</p>
+
+<div class="{{ page.container_classes }}">
+  <div class="col flex-col flex-x2-col-reverse">
+    <div class="{{ page.box_classes }} bg-teal-lighter">
+      <span class="teal-darker display-inline display-x2-none">top (mobile)</span>
+      <span class="teal-darker display-none display-x2-inline">bottom (desktop)</span>
+    </div>
+    <div class="col-container margin-top-xs margin-top-x2-sm margin-bottom-xs margin-bottom-x2-sm flex-row flex-x2-row-reverse">
+      <div class="col">
+        <div class="{{ page.box_classes }} bg-blue-lighter">
+          <span class="blue-darker display-inline display-x2-none">left (mobile)</span>
+          <span class="blue-darker display-none display-x2-inline">right (desktop)</span>
+        </div>
+      </div>
+      <div class="col">
+        <div class="{{ page.box_classes }} bg-green-lighter">
+          <span class="green-darker">middle</span>
+        </div>
+      </div>
+      <div class="col">
+        <div class="{{ page.box_classes }} bg-yellow-lighter">
+          <span class="yellow-darker display-inline display-x2-none">right (mobile)</span>
+          <span class="yellow-darker display-none display-x2-inline">left (desktop)</span>
+        </div>
+      </div>
+    </div>
+    <div class="{{ page.box_classes }} bg-orange-lightest">
+      <span class="orange-darker display-inline display-x2-none">bottom (mobile)</span>
+      <span class="orange-darker display-none display-x2-inline">top (desktop)</span>
+    </div>
+  </div>
+</div>
+
+```html
+<div class="col-container">
+  <div class="col flex-col flex-x2-col-reverse">
+    <div>
+      <!-- top on mobile; bottom on desktop -->
+    </div>
+    <div class="col-container flex-row flex-x2-row-reverse">
+      <div class="col"><!-- left on mobile; right on desktop --></div>
+      <div class="col"><!-- middle on all breakpoints --></div>
+      <div class="col"><!-- right on mobile; left on desktop --></div>
+    </div>
+    <div>
+      <!-- bottom on mobile; top on desktop -->
+    </div>
+  </div>
+</div>
+```
