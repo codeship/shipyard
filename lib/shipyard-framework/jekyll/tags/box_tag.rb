@@ -9,7 +9,7 @@ module Shipyard
         super
         @types = []
         types.tr(' ','').split(',').each do |type|
-          @types << type.tr(':','').to_sym
+          @types << type.tr(':','').tr('_','-').to_sym
         end
       end
 

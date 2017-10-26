@@ -13,32 +13,22 @@
   &-secondary
     background: $gray-lighter
 
-  &-rounded
-    border-radius: 1000px
-
   &-link
     color: $blue
     cursor: pointer
-    &:hover, &:active, &-selected, &-active
+    &:hover, &:active, &-active
       color: $blue-dark
       outline: none
       box-shadow: 0 0 4px 1px rgba($blue,.5)
-    &-active-green,
-    &-active-green:hover,
-    &-active-green:active
+    &-selected,
+    &-selected:hover,
+    &-selected:active
       outline: none
       cursor: default
       box-shadow: 0 0 4px 1px rgba(darken($green, 5%),.75)
 
   &-padding
     +respond-to(padding, $margins)
-
-  // Box: Margins
-  &-margin
-    +all-media-sizes
-      @each $size, $margin in (sm: 10px 0, md: 15px 0, lg: 30px 0)
-        &-#{$size}
-          margin: $margin
 
   // Box Sizes
   +all-media-sizes
