@@ -64,3 +64,20 @@ hr
     min-height: 30px
     flex-direction: column
     justify-content: center
+
++component('utilities-typography')
+  &-hr
+    margin: 0 30px
+    &-box
+      &,
+      &-dark,
+      &-light,
+      &-default
+        padding: 30px 0
+        margin: 15px 0
+      &-dark
+        background: $gray-lighter
+      &-light
+        background: #fff
+      &-default
+        border: 2px solid $border-color-light

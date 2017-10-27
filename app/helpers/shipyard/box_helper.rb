@@ -6,7 +6,7 @@ module Shipyard
 
     def box(types, content)
       # Gather the appropriate box classes into an array.
-      class_list = ['box']
+      class_list = types.include?(:secondary) ? [] : ['box']
       types.each do |type|
         class_list << "box-#{type}"
       end
