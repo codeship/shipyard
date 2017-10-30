@@ -1,0 +1,95 @@
+<html lang="en" class="env-production components-modals-index">
+  <head>
+    <meta charset="utf-8" />
+    <title>Shipyard Modals</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <meta name="theme-color" content="#20a5a8" />
+    <link type="text/css" rel="stylesheet" href="/shipyard/assets/fonts-ca42f2a84b2649c9fcccd16cc51fb6d1f915ba2a0988d30b91c3b84d8722b369.css" media="screen" rel="preload" async>
+    <link type="text/css" rel="stylesheet" href="/shipyard/assets/application-767b37bf7138fad78f215177c5605f9347ef7364c45613428b78a8a4eaf66e3d.css" media="screen">
+  </head>
+  <body>
+    <header class="header">
+      <div class="container">
+        <h6 class="header-logo"><a href="/shipyard/">Shipyard</a></h6>
+        <button class="hamburger" shipyard="hamburger">
+          <span class="hamburger-button">Menu</span>
+        </button>
+        <ul class="header-list">
+          
+            <li class="header-item ">
+              <a href="/shipyard/" class="header-link">Home</a>
+            </li>
+          
+            <li class="header-item ">
+              <a href="/shipyard/components/" class="header-link">Components</a>
+            </li>
+          
+            <li class="header-item ">
+              <a href="/shipyard/utilities/" class="header-link">Utilities</a>
+            </li>
+          
+          <li class="header-item header-item-cta">
+            <a href="https://github.com/codeship/shipyard" target="_blank" class="header-link-cta" rel="noopener">Download</a>
+          </li>
+        </ul>
+      </div>
+    </header>
+    <div class="container"><h1>Shipyard Modals</h1>
+
+<p class="text-light text-lg margin-top-sm">Modals are triggered by applying the following attribute to any button or link (e.g. <code class="language-html highlighter-rouge">modal-trigger="login"</code>).</p>
+
+<hr />
+
+<div class="col-container-x1-nowrap">
+  <div class="col col-100">
+    <h3 class="col-100">Building Modals</h3>
+    <p class="text-light margin-bottom-sm">Useful when you need to draw attention to information that requires additional action.</p>
+  </div>
+  <div class="col">
+    <button class="btn btn-sm btn-x1-md btn-secondary white-space-nowrap" modal-trigger="example">Demo Modal</button>
+  </div>
+</div>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="code-block"><code><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"modal-container"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"modal"</span> <span class="na">role=</span><span class="s">"dialog"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"modal-content"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"modal-title"</span><span class="nt">&gt;</span>
+        <span class="c">&lt;!-- Modal Title --&gt;</span>
+      <span class="nt">&lt;/div&gt;</span>
+      <span class="c">&lt;!-- Modal Content --&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"modal-ctas"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"btn btn-primary"</span><span class="nt">&gt;</span>Save<span class="nt">&lt;/button&gt;</span>
+      <span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"btn btn-secondary"</span><span class="nt">&gt;</span>Cancel<span class="nt">&lt;/button&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+</code></pre></div></div>
+
+<div class="modal-container display-none" modal="example">
+  <div class="modal" role="dialog">
+    <div class="modal-content">
+      <div class="modal-title">
+        <h1>Modal Title</h1>
+      </div>
+      <p>Nullam id dolor id nibh ultricies vehicula ut id elit. Nulla vitae elit libero, a pharetra augue. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Maecenas sed diam eget risus varius blandit sit amet non magna.</p>
+      <p>Nullam id dolor id nibh ultricies vehicula ut id elit. Nulla vitae elit libero, a pharetra augue. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Maecenas sed diam eget risus varius blandit sit amet non magna.</p>
+      <p>Nullam id dolor id nibh ultricies vehicula ut id elit. Nulla vitae elit libero, a pharetra augue. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Maecenas sed diam eget risus varius blandit sit amet non magna.</p>
+      <p>Nullam id dolor id nibh ultricies vehicula ut id elit. Nulla vitae elit libero, a pharetra augue. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Maecenas sed diam eget risus varius blandit sit amet non magna.</p>
+      <p>Nullam id dolor id nibh ultricies vehicula ut id elit. Nulla vitae elit libero, a pharetra augue. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Maecenas sed diam eget risus varius blandit sit amet non magna.</p>
+      <p>Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Nullam id dolor id nibh ultricies vehicula ut id elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Nulla vitae elit libero, a pharetra augue.</p>
+    </div>
+    <div class="modal-ctas">
+      <button class="btn btn-primary btn-sm btn-x1-md" modal-close="">Save &amp; Close</button>
+      <button class="btn btn-secondary btn-sm btn-x1-md margin-left-xxs margin-left-x1-xs" modal-close="">Cancel</button>
+    </div>
+  </div>
+</div>
+
+</div>
+    <footer class="align-center text-lightest">
+      &copy; Shipyard Framework 2017
+    </footer>
+    <script type="text/javascript" src="/shipyard/assets/application-a29e09541cf2fb1aadbf1e10b34ee7725fed4a697fb2cf4e0116d6c55884da81.js"></script>
+  </body>
+</html>
