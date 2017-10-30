@@ -15,16 +15,16 @@ a, .link
     color: darken($blue, 10%)
     text-decoration: underline
 
-hr
++component('hr')
   height: 0
   border: 0 solid $border-color-light
   border-width: 2px 0 0
   +respond-to(margin, (x0: 20px 0, x1: 30px 0))
-  &.dark
+  &-dark
     border-color: $border-color
-  &.lightest
+  &-light
     border-color: $border-color-lightest
-  &.thin
+  &-thin
     border-width: 1px 0 0
 
 strong
@@ -47,6 +47,7 @@ img
   display: block
 
 button
+  font: inherit
   background: none
   border: none
   cursor: pointer

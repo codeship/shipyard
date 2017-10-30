@@ -1,13 +1,14 @@
-// Code Styles
-code
-  li &, p &, h1 &, h2 &, h3 &
-    margin: 0 3px
-    @extend .code-inline
-  div.highlighter-rouge &
-    @extend .code-block
-    margin: 15px 0
+// Code "Span"
+code.highlighter-rouge
+  @extend .code-inline
+  margin: 0 3px
+
+// Code "Block"
+.code-block
+  margin: 15px 0
 
 hr
+  @extend .hr
   +respond-to(margin, (x0: 30px 0, x1: 40px 0, x2: 50px 0))
 
 // Utilities: Colors
@@ -63,3 +64,20 @@ hr
     min-height: 30px
     flex-direction: column
     justify-content: center
+
++component('utilities-typography')
+  &-hr
+    margin: 0 30px
+    &-box
+      &,
+      &-dark,
+      &-light,
+      &-default
+        padding: 30px 0
+        margin: 15px 0
+      &-dark
+        background: $gray-lighter
+      &-light
+        background: #fff
+      &-default
+        border: 2px solid $border-color-light

@@ -4,7 +4,6 @@
   border-radius: 5px
   border: 0
   cursor: pointer
-  color: #fff
   transition: background-color 300ms ease, color 300ms ease, border-color 300ms ease, opacity 300ms ease
   outline: none
   border-width: 2px
@@ -151,11 +150,6 @@
   &-inverse
     +btn-color(#fff, inherit)
     +btn-hover($blue, #fff)
-    &.btn-current
-      +btn-hover(#fff, inherit)
     &-secondary
       +btn-color(transparent, #fff, rgba(#fff,.2))
       +btn-hover(transparent, #fff, rgba(#fff,.5))
-
-  &-current
-    cursor: default
