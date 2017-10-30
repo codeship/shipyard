@@ -13,7 +13,6 @@ navigation:
     <title>{{ page.title }}</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
     <meta name="theme-color" content="#20a5a8" />
-    {% css fonts media:screen rel:preload async %}
     {% css application media:screen %}
   </head>
   <body>
@@ -40,5 +39,6 @@ navigation:
       &copy; Shipyard Framework 2017
     </footer>
     {% js application %}
+    {% css fonts media:screen rel:preload async %}
   </body>
 </html>
