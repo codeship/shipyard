@@ -11,8 +11,10 @@ description: Notes should be used to grab a user's attention along side of other
 <p class="text-light margin-bottom-sm">Used to display notes, tips, and other non-critical information.</p>
 
 {% note %}
-  Ten other people are also viewing tickets for <a href="#">this flight</a>.
-  Use the code <code class="code-inline">Travel_Light_2017</code> before you book your flight.
+  <p markdown="1">
+    Ten other people are also viewing tickets for [this flight](#).
+    Use the code `Travel_Light_2017` before you book your flight.
+  </p>
   {% btn Call to Action, :sm, class: 'note-cta' %}
 {% endnote %}
 
@@ -22,8 +24,10 @@ description: Notes should be used to grab a user's attention along side of other
 <p class="text-light margin-bottom-sm">Useful when drawing attention to non-critical information or actions we want the user to take.</p>
 
 {% note :info %}
-  Ten other people are also viewing tickets for <a href="#">this flight</a>.
-  Use the code <code class="code-inline">Travel_Light_2017</code> before you book your flight.
+  <p markdown="1">
+    Ten other people are also viewing tickets for [this flight](#).
+    Use the code `Travel_Light_2017` before you book your flight.
+  </p>
   {% btn Call to Action, :sm, class: 'note-cta' %}
 {% endnote %}
 
