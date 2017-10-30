@@ -33,4 +33,11 @@ class Shipyard {
     })
     return this
   }
+
+  removeClass(className) {
+    this.el.forEach((el) => {
+      el.classList.remove(className)
+    })
+    return this
+  }
 }
