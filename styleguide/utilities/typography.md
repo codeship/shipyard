@@ -100,3 +100,27 @@ text_shades: [normal, light, lighter, lightest]
 ```
 
 ---
+
+## Thin Horizontal Rules `.hr-thin`
+
+<div class="utilities-typography-hr-box-default">
+  <hr class="utilities-typography-hr hr-thin" />
+</div>
+<div class="utilities-typography-hr-box-dark">
+  <hr class="utilities-typography-hr hr-dark hr-thin" />
+</div>
+<div class="utilities-typography-hr-box-light">
+  <hr class="utilities-typography-hr hr-light hr-thin" />
+</div>
+
+```html
+<hr class="hr-thin" />
+
+<!-- Useful on darker backgrounds. -->
+<hr class="hr-thin hr-dark" />
+
+<!-- Useful on lighter backgrounds. -->
+<hr class="hr-thin hr-light" />
+```
+
+---
