@@ -1,4 +1,4 @@
-class Alerts extends Shipyard {
+class Alert extends Shipyard {
   constructor (el) {
     super(el)
     this.el.forEach((el) => {

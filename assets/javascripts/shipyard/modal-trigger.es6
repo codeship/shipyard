@@ -1,4 +1,4 @@
-class ModalTriggers extends Shipyard {
+class ModalTrigger extends Shipyard {
   constructor (el) {
     super(el)
     this.on('click', () => { this.open() })
