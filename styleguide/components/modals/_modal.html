@@ -2,18 +2,80 @@
   <div class="modal" role="dialog">
     <div class="modal-content">
       <div class="modal-title">
-        <h1>Modal Title</h1>
+        <h1 class="text-lg text-x1-xl">Billing Info</h1>
       </div>
-      <p>Nullam id dolor id nibh ultricies vehicula ut id elit. Nulla vitae elit libero, a pharetra augue. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Maecenas sed diam eget risus varius blandit sit amet non magna.</p>
-      <p>Nullam id dolor id nibh ultricies vehicula ut id elit. Nulla vitae elit libero, a pharetra augue. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Maecenas sed diam eget risus varius blandit sit amet non magna.</p>
-      <p>Nullam id dolor id nibh ultricies vehicula ut id elit. Nulla vitae elit libero, a pharetra augue. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Maecenas sed diam eget risus varius blandit sit amet non magna.</p>
-      <p>Nullam id dolor id nibh ultricies vehicula ut id elit. Nulla vitae elit libero, a pharetra augue. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Maecenas sed diam eget risus varius blandit sit amet non magna.</p>
-      <p>Nullam id dolor id nibh ultricies vehicula ut id elit. Nulla vitae elit libero, a pharetra augue. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Maecenas sed diam eget risus varius blandit sit amet non magna.</p>
-      <p>Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Nullam id dolor id nibh ultricies vehicula ut id elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Nulla vitae elit libero, a pharetra augue.</p>
+      <form>
+        <div class="col-container margin-bottom-sm">
+          <div class="col">
+            <label class="label">First Name</label>
+            <input type="text" class="input input-text input-full" />
+          </div>
+          <div class="col">
+            <label class="label">Last Name</label>
+            <input type="text" class="input input-text input-full" />
+          </div>
+        </div>
+        <div class="col-container margin-bottom-sm">
+          <div class="col col-100 col-x1-50 margin-bottom-sm margin-bottom-x1-none">
+            <label class="label">Email Address</label>
+            <input type="text" class="input input-text input-full" />
+          </div>
+          <div class="col col-100 col-x1-50">
+            <label class="label">Phone Number</label>
+            <input type="text" class="input input-text input-full" />
+          </div>
+        </div>
+        <div class="col-container margin-bottom-sm">
+          <div class="col col-100 margin-bottom-sm">
+            <label class="label">Billing Address</label>
+            <input type="text" class="input input-text input-full" placeholder="Company Name" />
+          </div>
+          <div class="col col-100 margin-bottom-sm">
+            <input type="text" class="input input-text input-full" placeholder="Street Address" />
+          </div>
+          <div class="col col-100 col-x1-33 margin-bottom-sm">
+            <input type="text" class="input input-text input-full" placeholder="Postal Code" />
+          </div>
+          <div class="col col-50 col-x1-33">
+            <input type="text" class="input input-text input-full" placeholder="City" />
+          </div>
+          <div class="col col-50 col-x1-33">
+            <input type="text" class="input input-text input-full" placeholder="State" />
+          </div>
+          <div class="col col-50 col-x1-33">
+            <div class="input-select-container">
+              <select class="input input-select input-full">
+                <option class="input-option-placeholder">Country</option>
+                <option>United States of America</option>
+                <option>France</option>
+                <option>Germany</option>
+                <option>Austria</option>
+              </select>
+            </div>
+          </div>
+        </div>
+        <div class="col-container margin-bottom-sm">
+          <div class="col">
+            <label class="label">Tax Information</label>
+            <input type="text" class="input input-text input-full" placeholder="VAT Number" />
+          </div>
+        </div>
+        <div class="col-container margin-bottom-sm">
+          <div class="col">
+            <label class="label">Additional Invoice Information</label>
+            <p class="label-note">This information will appear on each invoice. Don't include any confidential financial information.</p>
+            <input type="text" class="input input-text input-full" placeholder="e.g. Invoice notes, accounts payable info, additional address info, etc..." />
+          </div>
+        </div>
+      </form>
     </div>
     <div class="modal-ctas">
       <button class="btn btn-primary btn-sm btn-x1-md" modal-close>Save & Close</button>
       <button class="btn btn-secondary btn-sm btn-x1-md margin-left-xxs margin-left-x1-xs" modal-close>Cancel</button>
+      <span class="btn-sm medium text-light">
+        {% icon :lock, class: 'green-dark icon-middle' %}
+        Secure Server
+      </span>
     </div>
   </div>
 </div>
