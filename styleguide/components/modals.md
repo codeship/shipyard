@@ -25,8 +25,28 @@ description: Modals are triggered by applying the following attribute to any but
       <p>Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Nullam id dolor id nibh ultricies vehicula ut id elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Nulla vitae elit libero, a pharetra augue.</p>
     </div>
     <div class="modal-ctas">
-      {% btn Submit, :primary %}
-      <button class="btn btn-secondary margin-left-xs" shipyard="modal-close">Close</button>
+      <button class="btn btn-primary btn-sm btn-x1-md" modal-close>Save & Close</button>
+      <button class="btn btn-secondary btn-sm btn-x1-md margin-left-xxs margin-left-x1-xs" modal-close>Cancel</button>
     </div>
   </div>
 </div>
+
+---
+
+### Building Modals
+```html
+<div class="modal-container">
+  <div class="modal">
+    <div class="modal-content">
+      <div class="modal-title">
+        <!-- Modal Title -->
+      </div>
+      <!-- Modal Content -->
+    </div>
+    <div class="modal-ctas">
+      {% btn Save, :primary %}
+      {% btn Cancel, :secondary %}
+    </div>
+  </div>
+</div>
+```
