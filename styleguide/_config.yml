@@ -27,6 +27,20 @@ sass:
 
 # Build settings
 markdown: kramdown
+kramdown:
+  syntax_highlighter: rouge
+  syntax_highlighter_opts:
+    default_lang: html
+    block:
+      css: class
+      wrap: true
+      disable: false
+      css_class: 'code-block'
+    span:
+      css: class
+      wrap: true
+      disable: false
+      css_class: 'code-inline'
 plugins:
   - jekyll-assets
   - shipyard-framework

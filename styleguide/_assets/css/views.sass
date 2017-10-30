@@ -1,11 +1,11 @@
-// Code Styles
-code
-  li &, p &, h1 &, h2 &, h3 &
-    margin: 0 3px
-    @extend .code-inline
-  div.highlighter-rouge &
-    @extend .code-block
-    margin: 15px 0
+// Code "Span"
+code.highlighter-rouge
+  @extend .code-inline
+  margin: 0 3px
+
+// Code "Block"
+.code-block
+  margin: 15px 0
 
 hr
   @extend .hr
