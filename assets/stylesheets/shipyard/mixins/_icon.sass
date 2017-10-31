@@ -1,3 +1,4 @@
-@mixin icon($name, $color)
-  background-color: $color
+@mixin icon($name, $background-color: null)
+  @if $background-color
+    background-color: $background-color
   +mask(asset-url("#{$name}.svg") no-repeat center)
