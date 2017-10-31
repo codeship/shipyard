@@ -47,9 +47,12 @@ plugins:
 
 assets:
   autowrite: true
+  assets:
+    - "*.svg"
   sources:
     - _assets/js
     - _assets/css
+    - _assets/img
 
 defaults:
   -
