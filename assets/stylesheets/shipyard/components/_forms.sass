@@ -48,6 +48,16 @@
         border-color: $green
         &::after
           opacity: 1
+    &-checked:checked
+      &, &:hover, .btn:hover &
+        background: #fff
+        border-color: #fff
+      &::after
+        border-radius: 0
+        +width-height(8px)
+        margin: -4px 0 0 -4px
+        +icon(checkmark, $green-dark)
+
 
   &-group
     +clearfix
