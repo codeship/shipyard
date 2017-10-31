@@ -2,6 +2,8 @@
   width: 100%
   max-width: 800px
   margin: auto
+  &-sm
+    max-width: 660px
 
   &-open
     overflow: hidden
@@ -12,6 +14,7 @@
     left: 0
     right: 0
     bottom: 0
+    padding: 10px
     display: flex
     overflow: auto
     position: fixed
@@ -20,7 +23,6 @@
     background: rgba($gray-darkest,.9)
     transition: 300ms padding ease
     -webkit-overflow-scrolling: touch
-    +respond-to(padding, (x0: 5px, x1: 10px))
 
   &-content
     background: #fff
@@ -28,7 +30,10 @@
     +respond-to(padding, (x0: 15px, x1: 20px, x2: 30px))
 
   &-title
-    margin: 0 0 10px
+    line-height: 1
+    margin: 0 0 20px
+    padding: 0 0 10px
+    border-bottom: 2px solid $border-color-lightest
 
   &-ctas
     background: $gray-lightest

@@ -13,9 +13,9 @@ $component-defaults: (
   ),
   input: (
     required-asterisk: (
-      top: 6px,
-      right: 6px,
-      line-height: 18px,
+      top: 4px,
+      right: 5px,
+      line-height: 16px,
       font-weight: $bold,
       color: darken($purple, 13%)
     ),
