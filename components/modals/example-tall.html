@@ -1,4 +1,4 @@
-<html lang="en" class="env-production components-modals-index">
+<html lang="en" class="env-production components-modals-example-tall">
   <head>
     <meta charset="utf-8" />
     <title>Shipyard Modals</title>
@@ -36,37 +36,8 @@
     </header>
     <div class="container"><h1>Shipyard Modals</h1>
 
-<p class="text-light text-lg margin-top-sm">Modals are triggered by applying the following attribute to any button or link (e.g. <code class="language-html highlighter-rouge">modal-trigger="login"</code>).</p>
 
-<hr />
-
-<div class="col-container-x1-nowrap">
-  <div class="col col-100">
-    <h3 class="col-100">Building Modals</h3>
-    <p class="text-light margin-bottom-sm">Useful when you need to draw attention to information that requires additional action.</p>
-  </div>
-  <div class="col">
-    <button class="btn btn-sm btn-x1-md btn-secondary white-space-nowrap" modal-trigger="example">Demo Modal</button>
-  </div>
-</div>
-
-<div class="language-html highlighter-rouge"><div class="highlight"><pre class="code-block"><code><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"modal-container"</span><span class="nt">&gt;</span>
-  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"modal"</span> <span class="na">role=</span><span class="s">"dialog"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"modal-content"</span><span class="nt">&gt;</span>
-      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"modal-title"</span><span class="nt">&gt;</span>
-        <span class="c">&lt;!-- Modal Title --&gt;</span>
-      <span class="nt">&lt;/div&gt;</span>
-      <span class="c">&lt;!-- Modal Content --&gt;</span>
-    <span class="nt">&lt;/div&gt;</span>
-    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"modal-ctas"</span><span class="nt">&gt;</span>
-      <span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"btn btn-primary"</span><span class="nt">&gt;</span>Save<span class="nt">&lt;/button&gt;</span>
-      <span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"btn btn-secondary"</span><span class="nt">&gt;</span>Cancel<span class="nt">&lt;/button&gt;</span>
-    <span class="nt">&lt;/div&gt;</span>
-  <span class="nt">&lt;/div&gt;</span>
-<span class="nt">&lt;/div&gt;</span>
-</code></pre></div></div>
-
-<div class="modal-container display-none" modal="example">
+<div class="modal-container " modal="example">
   <div class="modal" role="dialog">
     <div class="modal-content">
       <div class="modal-title">
@@ -150,11 +121,11 @@
     <div class="modal-ctas">
       <div class="col-container-nowrap">
         <div class="col col-100">
-          <button class="btn btn-primary btn-sm btn-x1-md" modal-close="">
+          <button class="btn btn-primary btn-sm btn-x1-md" modal-close>
             Save
             <span class="display-none display-x1-inline">&amp; Close</span>
           </button>
-          <button class="btn btn-secondary btn-sm btn-x1-md margin-left-xxs margin-left-x1-xs" modal-close="">Cancel</button>
+          <button class="btn btn-secondary btn-sm btn-x1-md margin-left-xxs margin-left-x1-xs" modal-close>Cancel</button>
         </div>
         <div class="col align-right">
           <span class="btn-sm btn-x1-md white-space-nowrap padding-none">

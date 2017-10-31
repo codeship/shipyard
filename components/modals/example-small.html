@@ -1,7 +1,7 @@
-<html lang="en" class="env-production utilities-index">
+<html lang="en" class="env-production components-modals-example-small">
   <head>
     <meta charset="utf-8" />
-    <title>Shipyard Utilities</title>
+    <title>Shipyard Modal Example</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
     <meta name="theme-color" content="#20a5a8" />
     <link type="text/css" rel="stylesheet" href="/shipyard/assets/fonts-ca42f2a84b2649c9fcccd16cc51fb6d1f915ba2a0988d30b91c3b84d8722b369.css" media="screen" rel="preload" async>
@@ -24,7 +24,7 @@
               <a href="/shipyard/components/" class="header-link">Components</a>
             </li>
           
-            <li class="header-item header-item-current">
+            <li class="header-item ">
               <a href="/shipyard/utilities/" class="header-link">Utilities</a>
             </li>
           
@@ -34,45 +34,23 @@
         </ul>
       </div>
     </header>
-    <div class="container"><h1>Shipyard Utilities</h1>
+    <div class="container"><h1>Shipyard Modal Example</h1>
 
-<p class="text-light text-lg margin-top-sm">The utility classes below can be applied to any component to override or extend the base styles of the component.</p>
 
-<hr />
 
-<ul class="col-container">
-  
-    <li class="margin-bottom-xs margin-bottom-x1-sm margin-bottom-x2-lg col col-100 col-x1-33 col-x2-25">
-      <a href="/shipyard/utilities/responsive" class="box-link box-padding align-center text-md text-x1-lg text-x2-xl">
-        Responsive
-      </a>
-    </li>
-  
-    <li class="margin-bottom-xs margin-bottom-x1-sm margin-bottom-x2-lg col col-100 col-x1-33 col-x2-25">
-      <a href="/shipyard/utilities/grid" class="box-link box-padding align-center text-md text-x1-lg text-x2-xl">
-        Grid
-      </a>
-    </li>
-  
-    <li class="margin-bottom-xs margin-bottom-x1-sm margin-bottom-x2-lg col col-100 col-x1-33 col-x2-25">
-      <a href="/shipyard/utilities/typography" class="box-link box-padding align-center text-md text-x1-lg text-x2-xl">
-        Typography
-      </a>
-    </li>
-  
-    <li class="margin-bottom-xs margin-bottom-x1-sm margin-bottom-x2-lg col col-100 col-x1-33 col-x2-25">
-      <a href="/shipyard/utilities/margin-padding" class="box-link box-padding align-center text-md text-x1-lg text-x2-xl">
-        Margin &amp; Padding
-      </a>
-    </li>
-  
-    <li class="margin-bottom-xs margin-bottom-x1-sm margin-bottom-x2-lg col col-100 col-x1-33 col-x2-25">
-      <a href="/shipyard/utilities/colors" class="box-link box-padding align-center text-md text-x1-lg text-x2-xl">
-        Colors
-      </a>
-    </li>
-  
-</ul>
+<div class="modal-container" modal="example-small">
+  <div class="modal modal-sm" role="dialog">
+    <div class="modal-content">
+      <div class="modal-title">
+        <h1 class="text-lg text-x1-xl">Trial Requested</h1>
+      </div>
+      <p class="text-light">Your request has been sent to our support team who will be in touch with you shortly to confirm the trial. In the meantime, you’ll stay on the configuration that your team was previously subscribed to.</p>
+    </div>
+    <div class="modal-ctas">
+      <button class="btn btn-primary btn-sm btn-x1-md" modal-close>Okay, thanks!</button>
+    </div>
+  </div>
+</div>
 </div>
     <footer class="align-center text-lightest">
       &copy; Shipyard Framework 2017
