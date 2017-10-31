@@ -12,6 +12,7 @@ title: Shipyard Buttons
   {% btn Primary, :primary %}
   {% btn Primary Dark, :primary_dark %}
   {% btn Secondary, :secondary %}
+  {% btn Secondary Link, :secondary_link %}
   {% btn Secondary Dark, :secondary_dark %}
   {% btn Disabled, :disabled %}
   {% btn CTA, :cta %}
