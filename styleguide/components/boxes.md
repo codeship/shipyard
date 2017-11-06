@@ -71,3 +71,14 @@ box_sizes: [xxs, xs, sm, md, lg, xl, xxl]
     <strong class="center text-lighter text-sm">.box-{{ size }}</strong>
   </div>
 {% endfor %}
+
+---
+
+### Rounded `.box-rounded`
+<p class="text-light margin-bottom-sm">Useful when you need a box with rounded corners.</p>
+
+{% for size in page.box_sizes %}
+  <div class="box box-rounded box-{{ size }} margin-top-md">
+    <strong class="center text-lighter text-sm">.box-{{ size }}</strong>
+  </div>
+{% endfor %}
