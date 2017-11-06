@@ -1,0 +1,7 @@
+@mixin icon($name, $color: null)
+  +icon-color($color)
+  +mask(asset-url("#{$name}.svg") no-repeat center)
+
+@mixin icon-color($color: null)
+  @if $color
+    background-color: $color
