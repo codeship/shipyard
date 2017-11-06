@@ -60,9 +60,11 @@
         transition: background-color 300ms ease
         +width-height(10px, 6px)
         +icon('arrows/down', $border-color)
+        +when('error')
+          +icon-color(darken($red, 15%))
       &:hover
         &::after
-          background-color: $border-color-dark
+          +icon-color($border-color-dark)
     &-chosen
       color: $text-color
       font-weight: $medium
