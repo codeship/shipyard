@@ -61,10 +61,12 @@
         +width-height(10px, 6px)
         +icon('arrows/down', $border-color)
         +when('error')
-          +icon-color(darken($red, 15%))
+          +icon-color($red)
       &:hover
         &::after
           +icon-color($border-color-dark)
+          +when('error')
+            +icon-color(darken($red, 15%))
     &-chosen
       color: $text-color
       font-weight: $medium
