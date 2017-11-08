@@ -4,8 +4,6 @@ require 'action_view'
 module Shipyard
   class << self
     def load!
-      register_helpers
-
       if rails?
         register_rails_engine
       elsif sprockets?
@@ -19,6 +17,7 @@ module Shipyard
         register_jekyll_tags
       end
 
+      register_helpers
       configure_sass
     end
 
