@@ -1,14 +1,19 @@
 module Jekyll
-  class IconItem < Liquid::Block
-    def initialize(tag_name, markdown, options)
+  class IconItem < Liquid::Tag
+    include Shipyard::IconHelper
+
+    def initialize(tag_name, args, options)
       super
+      args = args.strip.split(',')
+      @name = eval(args[0])
+      @options = args[1] ? eval("{#{args[1]}}") : {}
     end
 
     def render(context)
       %(
-        <li class="col col-50 col-x1-20 margin-bottom-xs margin-bottom-x1-md margin-bottom-x2-lg">
+        <li class="col col-50 col-x1-20 margin-bottom-xs margin-bottom-x1-md margin-bottom-x2-lg" tooltip=":#{@name}">
           <div class="box box-md box-x1-xxl">
-            #{super}
+            #{icon @name, @options}
           </div>
         </li>
       )
