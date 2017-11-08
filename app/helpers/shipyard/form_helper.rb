@@ -1,3 +1,5 @@
+require 'action_view'
+
 module Shipyard
   module FormHelper
     include ActionView::Context

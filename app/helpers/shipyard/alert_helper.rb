@@ -1,3 +1,4 @@
+require 'action_view'
 require_relative 'icon_helper'
 
 module Shipyard
