@@ -17,6 +17,7 @@ module Shipyard
         register_jekyll_tags
       end
 
+      register_helpers
       configure_sass
     end
 
@@ -98,6 +99,16 @@ module Shipyard
       Liquid::Template.register_tag('alert', Shipyard::Jekyll::Alert)
       Liquid::Template.register_tag('shipyard_version', Shipyard::Jekyll::ShipyardVersion)
       Liquid::Template.register_tag('shipyard_css_classes', Shipyard::Jekyll::ShipyardCssClasses)
+    end
+
+    def register_helpers
+      require 'shipyard-framework/helpers/alert_helper'
+      require 'shipyard-framework/helpers/box_helper'
+      require 'shipyard-framework/helpers/button_helper'
+      require 'shipyard-framework/helpers/form_helper'
+      require 'shipyard-framework/helpers/icon_helper'
+      require 'shipyard-framework/helpers/layout_helper'
+      require 'shipyard-framework/helpers/note_helper'
     end
 
     def load_icons
