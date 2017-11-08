@@ -1,0 +1,17 @@
+@each $property in (margin, padding)
+  .#{$property}
+    $sizes: (none: 0, xxs: 5px, xs: 10px, sm: 15px, md: 20px, lg: 30px, xl: 40px, xxl: 50px)
+
+    // Outputs: .padding-none, .padding-x1-none, .padding-sm, .padding-x1-sm, etc...
+    +all-media-sizes
+      @each $size, $value in $sizes
+        &-#{$size}
+          #{$property}: $value
+
+    // Outputs: .padding-top-sm, .padding-x1-none, .padding-sm, .padding-x1-sm, etc...
+    @each $direction in (top, right, bottom, left)
+      &-#{$direction}
+        +all-media-sizes
+          @each $size, $value in $sizes
+            &-#{$size}
+              #{$property}-#{$direction}: $value
