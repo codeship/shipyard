@@ -1,5 +1,3 @@
-require 'action_view'
-
 module Shipyard
   module IconHelper
     include ActionView::Context

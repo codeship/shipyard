@@ -1,5 +1,3 @@
-require 'action_view'
-
 module Shipyard
   module NoteHelper
     include ActionView::Context

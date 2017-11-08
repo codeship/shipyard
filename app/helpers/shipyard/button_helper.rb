@@ -1,5 +1,3 @@
-require 'action_view'
-
 module Shipyard
   module ButtonHelper
     include ActionView::Helpers::TagHelper

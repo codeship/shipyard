@@ -1,5 +1,3 @@
-require 'action_view'
-
 module Shipyard
   module BoxHelper
     include ActionView::Context
