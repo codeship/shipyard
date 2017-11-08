@@ -102,8 +102,8 @@ module Shipyard
     end
 
     def register_helpers
-      Dir['app/helpers/shipyard/*.rb'].each do |file|
-        require_relative "../#{file}"
+      Dir['lib/shipyard-framework/helpers/*.rb'].each do |file|
+        require "#{file}"
       end
     end
 

@@ -1,4 +1,4 @@
-require_relative '../../../../app/helpers/shipyard/button_helper'
+require 'shipyard-framework/helpers/button_helper'
 
 module Shipyard
   module Jekyll

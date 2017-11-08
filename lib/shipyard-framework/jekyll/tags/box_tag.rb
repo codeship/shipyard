@@ -1,4 +1,4 @@
-require_relative '../../../../app/helpers/shipyard/box_helper'
+require 'shipyard-framework/helpers/box_helper'
 
 module Shipyard
   module Jekyll

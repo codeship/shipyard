@@ -1,5 +1,3 @@
-require_relative '../../app/helpers/shipyard/icon_helper'
-
 module Jekyll
   class IconItem < Liquid::Tag
     include Shipyard::IconHelper
