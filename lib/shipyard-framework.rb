@@ -4,6 +4,8 @@ require 'action_view'
 module Shipyard
   class << self
     def load!
+      register_helpers
+
       if rails?
         register_rails_engine
       elsif sprockets?
@@ -17,7 +19,6 @@ module Shipyard
         register_jekyll_tags
       end
 
-      register_helpers
       configure_sass
     end
 
@@ -102,9 +103,13 @@ module Shipyard
     end
 
     def register_helpers
-      # Dir['lib/shipyard-framework/helpers/*.rb'].each do |file|
-      #   require "#{file}"
-      # end
+      require 'shipyard-framework/helpers/alert_helper'
+      require 'shipyard-framework/helpers/box_helper'
+      require 'shipyard-framework/helpers/button_helper'
+      require 'shipyard-framework/helpers/form_helper'
+      require 'shipyard-framework/helpers/icon_helper'
+      require 'shipyard-framework/helpers/layout_helper'
+      require 'shipyard-framework/helpers/note_helper'
     end
 
     def load_icons
