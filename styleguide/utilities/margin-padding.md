@@ -10,6 +10,21 @@ directions: [left,right]
 
 ---
 
+### Margin All Sides `.margin-{ x1..x4 }-{ xxs..xxl }`
+<p class="text-light margin-bottom-md">The examples below demonstrate how much margin will be added to the top and bottom of any element the classes is applied to.</p>
+
+<div class="col-container">
+  <div class="col">
+    <div class="align-center">
+      {% for option in page.options %}
+        <div class="{{ page.box_classes }} margin-{{ option }} margin-bottom-md">.margin-{{ option }}</div>
+      {% endfor %}
+    </div>
+  </div>
+</div>
+
+---
+
 ### Margin Top & Bottom `.margin-{ top, bottom }-{ x1..x4 }-{ xxs..xxl }`
 <p class="text-light margin-bottom-md">The examples below demonstrate how much margin will be added to the top and bottom of any element the classes is applied to.</p>
 
@@ -35,6 +50,19 @@ directions: [left,right]
           <div class="{{ page.box_classes }} margin-{{ direction }}-{{ option }} margin-bottom-md">.margin-{{ direction }}-{{ option }}</div>
         {% endfor %}
       </div>
+    </div>
+  {% endfor %}
+</div>
+
+---
+
+### Padding All Sides `.padding-{ x1..x4 }-{ xxs..xxl }`
+<p class="text-light margin-bottom-md">The examples below demonstrate how much padding will be added to the top and bottom of any element the classes is applied to.</p>
+
+<div class="col-container">
+  {% for option in page.options %}
+    <div class="col align-center">
+      <div class="box-secondary medium text-light text-sm padding-{{ option }} margin-bottom-xs">{{ option }}</div>
     </div>
   {% endfor %}
 </div>
