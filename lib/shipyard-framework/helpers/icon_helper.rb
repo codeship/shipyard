@@ -4,6 +4,16 @@ module Shipyard
     include ActionView::Helpers::TagHelper
 
     def icon(name, options={})
+      process_icon(name, options)
+    end
+
+    def get_icon(name, options={})
+      process_icon(name, options)
+    end
+
+    private
+
+    def process_icon(name, options={})
       if name.is_a? Symbol
         svg = find_icon(symbol: name)
         svg_use_tag svg, options
@@ -12,8 +22,6 @@ module Shipyard
         svg_tag svg, options
       end
     end
-
-    private
 
     def find_icon(hash)
       icon = $icons.icons.detect { |i| i[hash.keys.first] == hash.values.first }
