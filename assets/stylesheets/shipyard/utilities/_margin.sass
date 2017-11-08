@@ -1,7 +1,0 @@
-.margin
-  @each $direction in (top, right, bottom, left)
-    &-#{$direction}
-      +all-media-sizes
-        @each $size, $value in (none: 0, xxs: 5px, xs: 10px, sm: 15px, md: 20px, lg: 30px, xl: 40px, xxl: 50px)
-          &-#{$size}
-            margin-#{$direction}: $value
