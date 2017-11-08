@@ -11,33 +11,14 @@ description: Shipyard comes with several default icons that you're welcome to us
 <p class="text-light margin-bottom-md" markdown="1">The following icons are the most frequently used in just about any application.</p>
 
 <ul class="icon-list col-container">
-  {% iconitem %}
-    {% icon :plus, class: 'center' %}
-  {% endiconitem %}
-
-  {% iconitem %}
-    {% icon :restart, class: 'center' %}
-  {% endiconitem %}
-
-  {% iconitem %}
-    {% icon :gear, class: 'center' %}
-  {% endiconitem %}
-
-  {% iconitem %}
-    {% icon :lock, class: 'center' %}
-  {% endiconitem %}
-
-  {% iconitem %}
-    {% icon :tag, class: 'center' %}
-  {% endiconitem %}
-
-  {% iconitem %}
-    {% icon :x, class: 'center' %}
-  {% endiconitem %}
-
-  {% iconitem %}
-    {% icon :arrow_down, class: 'center' %}
-  {% endiconitem %}
+  {% iconitem :plus, class: 'center' %}
+  {% iconitem :restart, class: 'center' %}
+  {% iconitem :gear, class: 'center' %}
+  {% iconitem :lock, class: 'center' %}
+  {% iconitem :card, class: 'center' %}
+  {% iconitem :tag, class: 'center' %}
+  {% iconitem :x, class: 'center' %}
+  {% iconitem :arrow_down, class: 'center' %}
 </ul>
 
 ---
@@ -46,61 +27,20 @@ description: Shipyard comes with several default icons that you're welcome to us
 <p class="text-light margin-bottom-md" markdown="1">If you need to style several paths inside of the icon, it's important to make sure you use the *injected* version of the icon.</p>
 
 <ul class="icon-list col-container">
-  {% iconitem %}
-    {% icon :bitbucket, class: 'center' %}
-  {% endiconitem %}
-
-  {% iconitem %}
-    {% icon :campfire_color, class: 'center' %}
-  {% endiconitem %}
-
-  {% iconitem %}
-    {% icon :codeship, class: 'center' %}
-  {% endiconitem %}
-
-  {% iconitem %}
-    {% icon :email_color, class: 'center' %}
-  {% endiconitem %}
-
-  {% iconitem %}
-    {% icon :flowdock_color, class: 'center' %}
-  {% endiconitem %}
-
-  {% iconitem %}
-    {% icon :github, class: 'center' %}
-  {% endiconitem %}
-
-  {% iconitem %}
-    {% icon :gitlab, class: 'center' %}
-  {% endiconitem %}
-
-  {% iconitem %}
-    {% icon :grove_color, class: 'center' %}
-  {% endiconitem %}
-
-  {% iconitem %}
-    {% icon :hipchat, class: 'center' %}
-  {% endiconitem %}
-
-  {% iconitem %}
-    {% icon :hipchat_color, class: 'center' %}
-  {% endiconitem %}
-
-  {% iconitem %}
-    {% icon :slack, class: 'center' %}
-  {% endiconitem %}
-
-  {% iconitem %}
-    {% icon :slack_color, class: 'center' %}
-  {% endiconitem %}
-
-  {% iconitem %}
-    {% icon :webhook, class: 'center' %}
-  {% endiconitem %}
-
-  {% iconitem %}
-    {% icon :webhook_color, class: 'center' %}
-  {% endiconitem %}
+  {% iconitem :bitbucket, class: 'center' %}
+  {% iconitem :campfire_color, class: 'center' %}
+  {% iconitem :codeship, class: 'center' %}
+  {% iconitem :email_color, class: 'center' %}
+  {% iconitem :flowdock_color, class: 'center' %}
+  {% iconitem :github, class: 'center' %}
+  {% iconitem :gitlab, class: 'center' %}
+  {% iconitem :grove_color, class: 'center' %}
+  {% iconitem :hipchat, class: 'center' %}
+  {% iconitem :hipchat_color, class: 'center' %}
+  {% iconitem :slack, class: 'center' %}
+  {% iconitem :slack_color, class: 'center' %}
+  {% iconitem :webhook, class: 'center' %}
+  {% iconitem :webhook_color, class: 'center' %}
 </ul>
 
 ---
@@ -109,9 +49,7 @@ description: Shipyard comes with several default icons that you're welcome to us
 <p class="text-light margin-bottom-md" markdown="1">If you need to style several paths inside of the icon, it's important to make sure you use the *injected* version of the icon.</p>
 
 <ul class="icon-list col-container">
-  {% iconitem %}
-    {% icon 'email-color', class: 'icon-xl center' %}
-  {% endiconitem %}
+  {% iconitem 'email-color', class: 'icon-xl center' %}
 </ul>
 ```html
 <%= icon 'email-color' %>
@@ -123,29 +61,12 @@ description: Shipyard comes with several default icons that you're welcome to us
 <p class="text-light margin-bottom-md">The icon size utility classes can be applied to any icon, and are useful when you want to override the default icon size.</p>
 
 <ul class="icon-list col-container">
-  {% iconitem %}
-    {% icon :gear, class: 'center icon-xxs' %}
-  {% endiconitem %}
-
-  {% iconitem %}
-    {% icon :gear, class: 'center icon-xs' %}
-  {% endiconitem %}
-
-  {% iconitem %}
-    {% icon :gear, class: 'center icon-sm' %}
-  {% endiconitem %}
-
-  {% iconitem %}
-    {% icon :gear, class: 'center icon-md' %}
-  {% endiconitem %}
-
-  {% iconitem %}
-    {% icon :gear, class: 'center icon-lg' %}
-  {% endiconitem %}
-
-  {% iconitem %}
-    {% icon :gear, class: 'center icon-xl' %}
-  {% endiconitem %}
+  {% iconitem :gear, class: 'center icon-xxs' %}
+  {% iconitem :gear, class: 'center icon-xs' %}
+  {% iconitem :gear, class: 'center icon-sm' %}
+  {% iconitem :gear, class: 'center icon-md' %}
+  {% iconitem :gear, class: 'center icon-lg' %}
+  {% iconitem :gear, class: 'center icon-xl' %}
 </ul>
 
 ```html

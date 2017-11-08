@@ -1,4 +1,4 @@
-require_relative '../../../../app/helpers/shipyard/alert_helper'
+require 'shipyard-framework/helpers/alert_helper'
 
 module Shipyard
   module Jekyll
