@@ -102,9 +102,9 @@ module Shipyard
     end
 
     def register_helpers
-      Dir['lib/shipyard-framework/helpers/*.rb'].each do |file|
-        require "#{file}"
-      end
+      # Dir['lib/shipyard-framework/helpers/*.rb'].each do |file|
+      #   require "#{file}"
+      # end
     end
 
     def load_icons
