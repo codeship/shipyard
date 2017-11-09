@@ -14,16 +14,10 @@ hr
 // Utilities: Colors
 +component('shade')
   &-list
-    display: table
-    width: 100%
+    +respond-to(margin-left, (x0: -5px, x1: -10px))
+    +respond-to(margin-right, (x0: -5px, x1: -10px))
   &-item
     text-align: center
-    display: table-cell
-    width: 10%
-    &:not(:first-child)
-      border-left: 10px solid transparent
-    &:not(:last-child)
-      border-right: 10px solid transparent
   &-box
     height: 165px
     padding: 5px

@@ -10,9 +10,9 @@ shades: [Lightest, Lighter, Light, Base, Dark, Darker, Darkest]
 ---
 
 {% for color in page.colors %}
-  <ul class="shade-list margin-bottom-xxl" shade-list>
+  <ul class="col-container shade-list margin-bottom-lg" shade-list>
     {% for shade in page.shades %}
-      <li class="shade-item shade-{{ shade | downcase }}">
+      <li class="col col-50 col-x1-25 col-x2-0 padding-left-xxs padding-right-xxs padding-left-x1-xs padding-right-x1-xs margin-bottom-xs margin-bottom-x1-md shade-item shade-{{ shade | downcase }}">
         <div class="shade-box box bg-{{ color | append: '-' | append: shade | downcase | replace: '-base', '' }} shade-{{ shade | downcase | replace: 'er', '' | replace: 'est', '' }}">
           <div class="shade-color text-xxl bold bg-{{ color | append: '-' | append: shade | downcase | replace: '-base', '' }}" shade-color></div>
           <p class="shade-text text-sm medium {{ color | append: '-' | append: shade | downcase | replace: '-base', '' }}">
