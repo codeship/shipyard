@@ -26,6 +26,8 @@ hr
       cursor: default
     &:not(:hover)
       background: #fff !important
+    &.bg-white
+      background: $gray-darkest !important
   &-color
     height: 120px
     border-radius: 2px 2px 0 0
@@ -36,7 +38,7 @@ hr
     transition: 300ms color ease
     +when('box:hover')
       color: #fff
-    +when('light:hover')
+    +when('light:hover, white:hover')
       color: $gray-darker
   &-text
     line-height: 40px
