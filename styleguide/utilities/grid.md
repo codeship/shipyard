@@ -104,13 +104,13 @@ example_offsets: [5,10,15,20,25,30,35,40,45,50,55,60,65,70,75]
 <p class="text-light margin-bottom-md" markdown="1">Useful when you want to build a grid that works for any size of screen.</p>
 
 <div class="{{ page.container_classes }}">
-  {% for i in (1..5) %}
-    <div class="col col-100 col-x1-33 col-x2-25 col-x3-20">
+  {% for i in (1..7) %}
+    <div class="col col-100 col-x1-33 col-x2-25 col-x3-0">
       <div class="{{ page.box_classes }}">
         <span class="display-block display-x1-none">100</span>
         <span class="display-none display-x1-block display-x2-none">33</span>
         <span class="display-none display-x2-block display-x3-none">25</span>
-        <span class="display-none display-x3-block">20</span>
+        <span class="display-none display-x3-block">auto</span>
       </div>
     </div>
   {% endfor %}
@@ -118,11 +118,13 @@ example_offsets: [5,10,15,20,25,30,35,40,45,50,55,60,65,70,75]
 
 ```html
 <div class="col-container-wrap">
-  <div class="col col-100 col-x1-33 col-x2-25 col-x3-20"><!-- column 1 --></div>
-  <div class="col col-100 col-x1-33 col-x2-25 col-x3-20"><!-- column 2 --></div>
-  <div class="col col-100 col-x1-33 col-x2-25 col-x3-20"><!-- column 3 --></div>
-  <div class="col col-100 col-x1-33 col-x2-25 col-x3-20"><!-- column 4 --></div>
-  <div class="col col-100 col-x1-33 col-x2-25 col-x3-20"><!-- column 5 --></div>
+  <div class="col col-100 col-x1-33 col-x2-25 col-x3-0"><!-- column 1 --></div>
+  <div class="col col-100 col-x1-33 col-x2-25 col-x3-0"><!-- column 2 --></div>
+  <div class="col col-100 col-x1-33 col-x2-25 col-x3-0"><!-- column 3 --></div>
+  <div class="col col-100 col-x1-33 col-x2-25 col-x3-0"><!-- column 4 --></div>
+  <div class="col col-100 col-x1-33 col-x2-25 col-x3-0"><!-- column 5 --></div>
+  <div class="col col-100 col-x1-33 col-x2-25 col-x3-0"><!-- column 6 --></div>
+  <div class="col col-100 col-x1-33 col-x2-25 col-x3-0"><!-- column 7 --></div>
 </div>
 ```
 
