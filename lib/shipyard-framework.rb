@@ -34,6 +34,10 @@ module Shipyard
       File.join assets_path, 'javascripts'
     end
 
+    def images_path
+      File.join assets_path, 'images'
+    end
+
     def icons_path
       File.join assets_path, 'icons'
     end
@@ -77,6 +81,7 @@ module Shipyard
     def register_sprockets
       Sprockets.append_path(stylesheets_path)
       Sprockets.append_path(javascripts_path)
+      Sprockets.append_path(images_path)
     end
 
     def register_jekyll_hooks
