@@ -13,11 +13,11 @@ base_colors: [Black, White]
 {% for color in page.primary_colors %}
   <ul class="col-container shade-list margin-bottom-lg" shade-list>
     {% for shade in page.shades %}
-      <li class="col col-50 col-x1-25 col-x2-0 padding-left-xxs padding-right-xxs padding-left-x1-xs padding-right-x1-xs margin-bottom-xs margin-bottom-x1-md shade-item shade-{{ shade | downcase }} shade-{{ color | append: '-' | append: shade | downcase | replace: '-base', '' }}">
-        <div class="shade-box box bg-{{ color | append: '-' | append: shade | downcase | replace: '-base', '' }} shade-{{ shade | downcase | replace: 'er', '' | replace: 'est', '' }}">
-          <div class="shade-color text-xxl bold bg-{{ color | append: '-' | append: shade | downcase | replace: '-base', '' }}" shade-color></div>
-          <p class="shade-text text-sm medium {{ color | append: '-' | append: shade | downcase | replace: '-base', '' }}">
-            ${{ color | append: '-' | append: shade | downcase | replace: '-base', '' }}
+      <li class="col col-50 col-x1-25 col-x2-0 padding-left-xxs padding-right-xxs padding-left-x1-xs padding-right-x1-xs margin-bottom-xs margin-bottom-x1-md shade-item shade-{{ shade | downcase }} shade-{{ color | color_css_class: shade }}">
+        <div class="shade-box box bg-{{ color | color_css_class: shade }} shade-{{ shade | downcase | replace: 'er', '' | replace: 'est', '' }}">
+          <div class="shade-color text-xxl bold bg-{{ color | color_css_class: shade }}" shade-color></div>
+          <p class="shade-text text-sm medium {{ color | color_css_class: shade }}">
+            ${{ color | color_css_class: shade }}
           </p>
         </div>
       </li>
@@ -28,11 +28,11 @@ base_colors: [Black, White]
 <ul class="col-container shade-list margin-bottom-lg" shade-list>
   {% assign shade = 'Base' %}
   {% for color in page.base_colors %}
-    <li class="col padding-left-xxs padding-right-xxs padding-left-x1-xs padding-right-x1-xs margin-bottom-xs margin-bottom-x1-md shade-item shade-{{ shade | downcase }} shade-{{ color | append: '-' | append: shade | downcase | replace: '-base', '' }}">
-      <div class="shade-box box bg-{{ color | append: '-' | append: shade | downcase | replace: '-base', '' }} shade-{{ shade | downcase | replace: 'er', '' | replace: 'est', '' }}">
-        <div class="shade-color text-xxl bold bg-{{ color | append: '-' | append: shade | downcase | replace: '-base', '' }}" shade-color></div>
-        <p class="shade-text text-sm medium {{ color | append: '-' | append: shade | downcase | replace: '-base', '' }}">
-          ${{ color | append: '-' | append: shade | downcase | replace: '-base', '' }}
+    <li class="col padding-left-xxs padding-right-xxs padding-left-x1-xs padding-right-x1-xs margin-bottom-xs margin-bottom-x1-md shade-item shade-{{ shade | downcase }} shade-{{ color | color_css_class: shade }}">
+      <div class="shade-box box bg-{{ color | color_css_class: shade }} shade-{{ shade | downcase | replace: 'er', '' | replace: 'est', '' }}">
+        <div class="shade-color text-xxl bold bg-{{ color | color_css_class: shade }}" shade-color></div>
+        <p class="shade-text text-sm medium {{ color | color_css_class: shade }}">
+          ${{ color | color_css_class }}
         </p>
       </div>
     </li>
