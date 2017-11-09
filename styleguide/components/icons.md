@@ -51,7 +51,7 @@ description: Shipyard comes with several default icons that you're welcome to us
 <ul class="icon-list col-container">
   {% iconitem 'email-color', class: 'icon-xl center' %}
 </ul>
-```html
+```erb
 <%= icon 'email-color' %>
 ```
 
@@ -69,7 +69,7 @@ description: Shipyard comes with several default icons that you're welcome to us
   {% iconitem :gear, class: 'center icon-xl' %}
 </ul>
 
-```html
+```erb
 <%= icon :gear, class: 'icon-xxs' %>
 <%= icon :gear, class: 'icon-xs' %>
 <%= icon :gear, class: 'icon-sm' %>
@@ -87,7 +87,7 @@ description: Shipyard comes with several default icons that you're welcome to us
   <button class="btn btn-secondary">{% icon :plus, class: 'icon-center icon-sm margin-right-xxs' %} Create</button>
 </div>
 
-```html
+```erb
 <button class="btn btn-secondary">
   <%= icon :plus, class: 'icon-center icon-sm' %>
   Create
