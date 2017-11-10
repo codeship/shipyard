@@ -1,7 +1,7 @@
 ---
 title: Border Radius Utilities
 description: Shipyard's border-radius utilities are useful for connecting rounded items together as needed.
-directions: [0, r, b, l, r]
+directions: [0, t, b, l, r]
 col_classes: col col-50 col-x1-0 margin-bottom-xs
 box_classes: padding-top-xs padding-bottom-xs text-sm strong align-center bg-gray-light gray-dark
 ---
