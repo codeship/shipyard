@@ -1,7 +1,7 @@
 ---
 title: Border-Radius Utilities
 description: Shipyard's border-radius utilities are useful for connecting components together.
-col_classes: col col-50 col-x1-0 margin-bottom-xs
+col_classes: col col-50 col-x1-20 margin-bottom-xs
 box_classes: padding-top-xs padding-bottom-xs text-sm strong align-center bg-gray-light gray-dark
 directions:
   none: 0
@@ -9,6 +9,10 @@ directions:
   bottom: b
   left: l
   right: r
+  top_left: tl
+  top_right: tr
+  bottom_left: bl
+  bottom_right: br
 ---
 
 {% include page-heading.html page=page %}
@@ -24,7 +28,7 @@ directions:
   {% for direction in page.directions %}
     <div class="{{ page.col_classes }}">
       <div class="{{ page.box_classes }} box-secondary rds-{{ direction[1] }}" tooltip=".rds-{{ direction[1] }}">
-        {{ direction[0] }}
+        {{ direction[0] | replace: '_', ' ' }}
       </div>
     </div>
   {% endfor %}
@@ -37,4 +41,8 @@ directions:
 <div class="rds-b"><!-- border-radius: bottom --></div>
 <div class="rds-l"><!-- border-radius: left --></div>
 <div class="rds-r"><!-- border-radius: right --></div>
+<div class="rds-tl"><!-- border-radius: top left --></div>
+<div class="rds-tr"><!-- border-radius: top right --></div>
+<div class="rds-bl"><!-- border-radius: bottom left --></div>
+<div class="rds-br"><!-- border-radius: bottom right --></div>
 ```
