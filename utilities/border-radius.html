@@ -6,7 +6,7 @@
     <meta name="theme-color" content="#20a5a8" />
     <link type="text/css" rel="stylesheet" href="/shipyard/assets/fonts-ca42f2a84b2649c9fcccd16cc51fb6d1f915ba2a0988d30b91c3b84d8722b369.css" media="screen" rel="preload" async>
     <link type="text/css" rel="stylesheet" href="/shipyard/assets/syntax-40266bdc7fd995b8cddaeedab3817d78fcc5aed189b1d6a23a6827b437b71488.css" media="screen" rel="preload" async>
-    <link type="text/css" rel="stylesheet" href="/shipyard/assets/application-0134a15ebf048f292bae2afbd6d82e092fdbfd69abe5d18a9b5de4d474a82856.css" media="screen">
+    <link type="text/css" rel="stylesheet" href="/shipyard/assets/application-eb66f2f583b66e1a6d8402995296a511432a4534892dce10817401dc24721dbc.css" media="screen">
   </head>
   <body>
     <header class="header">
@@ -41,80 +41,346 @@
 
 <hr />
 
-<div class="col-container">
-  <div class="col col-50 col-x1-20 margin-bottom-xs">
-    <div class="padding-top-xs padding-bottom-xs text-sm strong align-center bg-gray-light gray-dark rds" tooltip=".rds">
-      all
-    </div>
-  </div>
-  
-    <div class="col col-50 col-x1-20 margin-bottom-xs">
-      <div class="padding-top-xs padding-bottom-xs text-sm strong align-center bg-gray-light gray-dark box-secondary rds-0" tooltip=".rds-0">
-        none
-      </div>
-    </div>
-  
-    <div class="col col-50 col-x1-20 margin-bottom-xs">
-      <div class="padding-top-xs padding-bottom-xs text-sm strong align-center bg-gray-light gray-dark box-secondary rds-t" tooltip=".rds-t">
-        top
-      </div>
-    </div>
-  
-    <div class="col col-50 col-x1-20 margin-bottom-xs">
-      <div class="padding-top-xs padding-bottom-xs text-sm strong align-center bg-gray-light gray-dark box-secondary rds-b" tooltip=".rds-b">
-        bottom
-      </div>
-    </div>
-  
-    <div class="col col-50 col-x1-20 margin-bottom-xs">
-      <div class="padding-top-xs padding-bottom-xs text-sm strong align-center bg-gray-light gray-dark box-secondary rds-l" tooltip=".rds-l">
-        left
-      </div>
-    </div>
-  
-    <div class="col col-50 col-x1-20 margin-bottom-xs">
-      <div class="padding-top-xs padding-bottom-xs text-sm strong align-center bg-gray-light gray-dark box-secondary rds-r" tooltip=".rds-r">
-        right
-      </div>
-    </div>
-  
-    <div class="col col-50 col-x1-20 margin-bottom-xs">
-      <div class="padding-top-xs padding-bottom-xs text-sm strong align-center bg-gray-light gray-dark box-secondary rds-tl" tooltip=".rds-tl">
-        top left
-      </div>
-    </div>
-  
-    <div class="col col-50 col-x1-20 margin-bottom-xs">
-      <div class="padding-top-xs padding-bottom-xs text-sm strong align-center bg-gray-light gray-dark box-secondary rds-tr" tooltip=".rds-tr">
-        top right
-      </div>
-    </div>
-  
-    <div class="col col-50 col-x1-20 margin-bottom-xs">
-      <div class="padding-top-xs padding-bottom-xs text-sm strong align-center bg-gray-light gray-dark box-secondary rds-bl" tooltip=".rds-bl">
-        bottom left
-      </div>
-    </div>
-  
-    <div class="col col-50 col-x1-20 margin-bottom-xs">
-      <div class="padding-top-xs padding-bottom-xs text-sm strong align-center bg-gray-light gray-dark box-secondary rds-br" tooltip=".rds-br">
-        bottom right
-      </div>
-    </div>
-  
-</div>
+<h2 id="responsive-options-rounded--breakpoint---direction-">Responsive Options <code class="language-html highlighter-rouge">.rounded-{ breakpoint }-{ direction }</code></h2>
+<p class="text-light margin-bottom-md">The examples below demonstrate the utility classes on each breakpoint.</p>
 
-<div class="language-html highlighter-rouge"><div class="highlight"><pre class="code-block"><code><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"rds"</span><span class="nt">&gt;</span><span class="c">&lt;!-- border-radius: all corners --&gt;</span><span class="nt">&lt;/div&gt;</span>
-<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"rds-0"</span><span class="nt">&gt;</span><span class="c">&lt;!-- border-radius: 0 --&gt;</span><span class="nt">&lt;/div&gt;</span>
-<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"rds-t"</span><span class="nt">&gt;</span><span class="c">&lt;!-- border-radius: top --&gt;</span><span class="nt">&lt;/div&gt;</span>
-<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"rds-b"</span><span class="nt">&gt;</span><span class="c">&lt;!-- border-radius: bottom --&gt;</span><span class="nt">&lt;/div&gt;</span>
-<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"rds-l"</span><span class="nt">&gt;</span><span class="c">&lt;!-- border-radius: left --&gt;</span><span class="nt">&lt;/div&gt;</span>
-<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"rds-r"</span><span class="nt">&gt;</span><span class="c">&lt;!-- border-radius: right --&gt;</span><span class="nt">&lt;/div&gt;</span>
-<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"rds-tl"</span><span class="nt">&gt;</span><span class="c">&lt;!-- border-radius: top left --&gt;</span><span class="nt">&lt;/div&gt;</span>
-<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"rds-tr"</span><span class="nt">&gt;</span><span class="c">&lt;!-- border-radius: top right --&gt;</span><span class="nt">&lt;/div&gt;</span>
-<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"rds-bl"</span><span class="nt">&gt;</span><span class="c">&lt;!-- border-radius: bottom left --&gt;</span><span class="nt">&lt;/div&gt;</span>
-<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"rds-br"</span><span class="nt">&gt;</span><span class="c">&lt;!-- border-radius: bottom right --&gt;</span><span class="nt">&lt;/div&gt;</span>
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="code-block"><code><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"rounded"</span><span class="nt">&gt;</span><span class="c">&lt;!-- all --&gt;</span><span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"rounded-0"</span><span class="nt">&gt;</span><span class="c">&lt;!-- none --&gt;</span><span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"rounded-top"</span><span class="nt">&gt;</span><span class="c">&lt;!-- top --&gt;</span><span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"rounded-bottom"</span><span class="nt">&gt;</span><span class="c">&lt;!-- bottom --&gt;</span><span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"rounded-left"</span><span class="nt">&gt;</span><span class="c">&lt;!-- left --&gt;</span><span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"rounded-right"</span><span class="nt">&gt;</span><span class="c">&lt;!-- right --&gt;</span><span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"rounded-top-left"</span><span class="nt">&gt;</span><span class="c">&lt;!-- top left --&gt;</span><span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"rounded-top-right"</span><span class="nt">&gt;</span><span class="c">&lt;!-- top right --&gt;</span><span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"rounded-bottom-left"</span><span class="nt">&gt;</span><span class="c">&lt;!-- bottom left --&gt;</span><span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"rounded-bottom-right"</span><span class="nt">&gt;</span><span class="c">&lt;!-- bottom right --&gt;</span><span class="nt">&lt;/div&gt;</span>
 </code></pre></div></div>
+
+<h3 class="text-md text-light margin-top-lg margin-bottom-xs">All Screens</h3>
+<div class="col-container">
+    
+      <div class="col col-50 col-x1-20 margin-bottom-xs">
+        <div class="padding-top-xs padding-bottom-xs text-sm strong align-center bg-gray-light gray-dark rounded" tooltip=".rounded">
+          all
+        </div>
+      </div>
+    
+      <div class="col col-50 col-x1-20 margin-bottom-xs">
+        <div class="padding-top-xs padding-bottom-xs text-sm strong align-center bg-gray-light gray-dark rounded-0" tooltip=".rounded-0">
+          none
+        </div>
+      </div>
+    
+      <div class="col col-50 col-x1-20 margin-bottom-xs">
+        <div class="padding-top-xs padding-bottom-xs text-sm strong align-center bg-gray-light gray-dark rounded-top" tooltip=".rounded-top">
+          top
+        </div>
+      </div>
+    
+      <div class="col col-50 col-x1-20 margin-bottom-xs">
+        <div class="padding-top-xs padding-bottom-xs text-sm strong align-center bg-gray-light gray-dark rounded-bottom" tooltip=".rounded-bottom">
+          bottom
+        </div>
+      </div>
+    
+      <div class="col col-50 col-x1-20 margin-bottom-xs">
+        <div class="padding-top-xs padding-bottom-xs text-sm strong align-center bg-gray-light gray-dark rounded-left" tooltip=".rounded-left">
+          left
+        </div>
+      </div>
+    
+      <div class="col col-50 col-x1-20 margin-bottom-xs">
+        <div class="padding-top-xs padding-bottom-xs text-sm strong align-center bg-gray-light gray-dark rounded-right" tooltip=".rounded-right">
+          right
+        </div>
+      </div>
+    
+      <div class="col col-50 col-x1-20 margin-bottom-xs">
+        <div class="padding-top-xs padding-bottom-xs text-sm strong align-center bg-gray-light gray-dark rounded-top-left" tooltip=".rounded-top-left">
+          top left
+        </div>
+      </div>
+    
+      <div class="col col-50 col-x1-20 margin-bottom-xs">
+        <div class="padding-top-xs padding-bottom-xs text-sm strong align-center bg-gray-light gray-dark rounded-top-right" tooltip=".rounded-top-right">
+          top right
+        </div>
+      </div>
+    
+      <div class="col col-50 col-x1-20 margin-bottom-xs">
+        <div class="padding-top-xs padding-bottom-xs text-sm strong align-center bg-gray-light gray-dark rounded-bottom-left" tooltip=".rounded-bottom-left">
+          bottom left
+        </div>
+      </div>
+    
+      <div class="col col-50 col-x1-20 margin-bottom-xs">
+        <div class="padding-top-xs padding-bottom-xs text-sm strong align-center bg-gray-light gray-dark rounded-bottom-right" tooltip=".rounded-bottom-right">
+          bottom right
+        </div>
+      </div>
+    
+  </div>
+
+<h3 class="text-md text-light margin-top-lg margin-bottom-xs">Tablets</h3>
+<div class="col-container">
+    
+      <div class="col col-50 col-x1-20 margin-bottom-xs">
+        <div class="padding-top-xs padding-bottom-xs text-sm strong align-center bg-gray-light gray-dark rounded-x1" tooltip=".rounded-x1">
+          all
+        </div>
+      </div>
+    
+      <div class="col col-50 col-x1-20 margin-bottom-xs">
+        <div class="padding-top-xs padding-bottom-xs text-sm strong align-center bg-gray-light gray-dark rounded-x1-0" tooltip=".rounded-x1-0">
+          none
+        </div>
+      </div>
+    
+      <div class="col col-50 col-x1-20 margin-bottom-xs">
+        <div class="padding-top-xs padding-bottom-xs text-sm strong align-center bg-gray-light gray-dark rounded-x1-top" tooltip=".rounded-x1-top">
+          top
+        </div>
+      </div>
+    
+      <div class="col col-50 col-x1-20 margin-bottom-xs">
+        <div class="padding-top-xs padding-bottom-xs text-sm strong align-center bg-gray-light gray-dark rounded-x1-bottom" tooltip=".rounded-x1-bottom">
+          bottom
+        </div>
+      </div>
+    
+      <div class="col col-50 col-x1-20 margin-bottom-xs">
+        <div class="padding-top-xs padding-bottom-xs text-sm strong align-center bg-gray-light gray-dark rounded-x1-left" tooltip=".rounded-x1-left">
+          left
+        </div>
+      </div>
+    
+      <div class="col col-50 col-x1-20 margin-bottom-xs">
+        <div class="padding-top-xs padding-bottom-xs text-sm strong align-center bg-gray-light gray-dark rounded-x1-right" tooltip=".rounded-x1-right">
+          right
+        </div>
+      </div>
+    
+      <div class="col col-50 col-x1-20 margin-bottom-xs">
+        <div class="padding-top-xs padding-bottom-xs text-sm strong align-center bg-gray-light gray-dark rounded-x1-top-left" tooltip=".rounded-x1-top-left">
+          top left
+        </div>
+      </div>
+    
+      <div class="col col-50 col-x1-20 margin-bottom-xs">
+        <div class="padding-top-xs padding-bottom-xs text-sm strong align-center bg-gray-light gray-dark rounded-x1-top-right" tooltip=".rounded-x1-top-right">
+          top right
+        </div>
+      </div>
+    
+      <div class="col col-50 col-x1-20 margin-bottom-xs">
+        <div class="padding-top-xs padding-bottom-xs text-sm strong align-center bg-gray-light gray-dark rounded-x1-bottom-left" tooltip=".rounded-x1-bottom-left">
+          bottom left
+        </div>
+      </div>
+    
+      <div class="col col-50 col-x1-20 margin-bottom-xs">
+        <div class="padding-top-xs padding-bottom-xs text-sm strong align-center bg-gray-light gray-dark rounded-x1-bottom-right" tooltip=".rounded-x1-bottom-right">
+          bottom right
+        </div>
+      </div>
+    
+  </div>
+
+<h3 class="text-md text-light margin-top-lg margin-bottom-xs">Laptops</h3>
+<div class="col-container">
+    
+      <div class="col col-50 col-x1-20 margin-bottom-xs">
+        <div class="padding-top-xs padding-bottom-xs text-sm strong align-center bg-gray-light gray-dark rounded-x2" tooltip=".rounded-x2">
+          all
+        </div>
+      </div>
+    
+      <div class="col col-50 col-x1-20 margin-bottom-xs">
+        <div class="padding-top-xs padding-bottom-xs text-sm strong align-center bg-gray-light gray-dark rounded-x2-0" tooltip=".rounded-x2-0">
+          none
+        </div>
+      </div>
+    
+      <div class="col col-50 col-x1-20 margin-bottom-xs">
+        <div class="padding-top-xs padding-bottom-xs text-sm strong align-center bg-gray-light gray-dark rounded-x2-top" tooltip=".rounded-x2-top">
+          top
+        </div>
+      </div>
+    
+      <div class="col col-50 col-x1-20 margin-bottom-xs">
+        <div class="padding-top-xs padding-bottom-xs text-sm strong align-center bg-gray-light gray-dark rounded-x2-bottom" tooltip=".rounded-x2-bottom">
+          bottom
+        </div>
+      </div>
+    
+      <div class="col col-50 col-x1-20 margin-bottom-xs">
+        <div class="padding-top-xs padding-bottom-xs text-sm strong align-center bg-gray-light gray-dark rounded-x2-left" tooltip=".rounded-x2-left">
+          left
+        </div>
+      </div>
+    
+      <div class="col col-50 col-x1-20 margin-bottom-xs">
+        <div class="padding-top-xs padding-bottom-xs text-sm strong align-center bg-gray-light gray-dark rounded-x2-right" tooltip=".rounded-x2-right">
+          right
+        </div>
+      </div>
+    
+      <div class="col col-50 col-x1-20 margin-bottom-xs">
+        <div class="padding-top-xs padding-bottom-xs text-sm strong align-center bg-gray-light gray-dark rounded-x2-top-left" tooltip=".rounded-x2-top-left">
+          top left
+        </div>
+      </div>
+    
+      <div class="col col-50 col-x1-20 margin-bottom-xs">
+        <div class="padding-top-xs padding-bottom-xs text-sm strong align-center bg-gray-light gray-dark rounded-x2-top-right" tooltip=".rounded-x2-top-right">
+          top right
+        </div>
+      </div>
+    
+      <div class="col col-50 col-x1-20 margin-bottom-xs">
+        <div class="padding-top-xs padding-bottom-xs text-sm strong align-center bg-gray-light gray-dark rounded-x2-bottom-left" tooltip=".rounded-x2-bottom-left">
+          bottom left
+        </div>
+      </div>
+    
+      <div class="col col-50 col-x1-20 margin-bottom-xs">
+        <div class="padding-top-xs padding-bottom-xs text-sm strong align-center bg-gray-light gray-dark rounded-x2-bottom-right" tooltip=".rounded-x2-bottom-right">
+          bottom right
+        </div>
+      </div>
+    
+  </div>
+
+<h3 class="text-md text-light margin-top-lg margin-bottom-xs">Large Screens</h3>
+<div class="col-container">
+    
+      <div class="col col-50 col-x1-20 margin-bottom-xs">
+        <div class="padding-top-xs padding-bottom-xs text-sm strong align-center bg-gray-light gray-dark rounded-x3" tooltip=".rounded-x3">
+          all
+        </div>
+      </div>
+    
+      <div class="col col-50 col-x1-20 margin-bottom-xs">
+        <div class="padding-top-xs padding-bottom-xs text-sm strong align-center bg-gray-light gray-dark rounded-x3-0" tooltip=".rounded-x3-0">
+          none
+        </div>
+      </div>
+    
+      <div class="col col-50 col-x1-20 margin-bottom-xs">
+        <div class="padding-top-xs padding-bottom-xs text-sm strong align-center bg-gray-light gray-dark rounded-x3-top" tooltip=".rounded-x3-top">
+          top
+        </div>
+      </div>
+    
+      <div class="col col-50 col-x1-20 margin-bottom-xs">
+        <div class="padding-top-xs padding-bottom-xs text-sm strong align-center bg-gray-light gray-dark rounded-x3-bottom" tooltip=".rounded-x3-bottom">
+          bottom
+        </div>
+      </div>
+    
+      <div class="col col-50 col-x1-20 margin-bottom-xs">
+        <div class="padding-top-xs padding-bottom-xs text-sm strong align-center bg-gray-light gray-dark rounded-x3-left" tooltip=".rounded-x3-left">
+          left
+        </div>
+      </div>
+    
+      <div class="col col-50 col-x1-20 margin-bottom-xs">
+        <div class="padding-top-xs padding-bottom-xs text-sm strong align-center bg-gray-light gray-dark rounded-x3-right" tooltip=".rounded-x3-right">
+          right
+        </div>
+      </div>
+    
+      <div class="col col-50 col-x1-20 margin-bottom-xs">
+        <div class="padding-top-xs padding-bottom-xs text-sm strong align-center bg-gray-light gray-dark rounded-x3-top-left" tooltip=".rounded-x3-top-left">
+          top left
+        </div>
+      </div>
+    
+      <div class="col col-50 col-x1-20 margin-bottom-xs">
+        <div class="padding-top-xs padding-bottom-xs text-sm strong align-center bg-gray-light gray-dark rounded-x3-top-right" tooltip=".rounded-x3-top-right">
+          top right
+        </div>
+      </div>
+    
+      <div class="col col-50 col-x1-20 margin-bottom-xs">
+        <div class="padding-top-xs padding-bottom-xs text-sm strong align-center bg-gray-light gray-dark rounded-x3-bottom-left" tooltip=".rounded-x3-bottom-left">
+          bottom left
+        </div>
+      </div>
+    
+      <div class="col col-50 col-x1-20 margin-bottom-xs">
+        <div class="padding-top-xs padding-bottom-xs text-sm strong align-center bg-gray-light gray-dark rounded-x3-bottom-right" tooltip=".rounded-x3-bottom-right">
+          bottom right
+        </div>
+      </div>
+    
+  </div>
+
+<h3 class="text-md text-light margin-top-lg margin-bottom-xs">Giant Monitors</h3>
+<div class="col-container">
+    
+      <div class="col col-50 col-x1-20 margin-bottom-xs">
+        <div class="padding-top-xs padding-bottom-xs text-sm strong align-center bg-gray-light gray-dark rounded-x4" tooltip=".rounded-x4">
+          all
+        </div>
+      </div>
+    
+      <div class="col col-50 col-x1-20 margin-bottom-xs">
+        <div class="padding-top-xs padding-bottom-xs text-sm strong align-center bg-gray-light gray-dark rounded-x4-0" tooltip=".rounded-x4-0">
+          none
+        </div>
+      </div>
+    
+      <div class="col col-50 col-x1-20 margin-bottom-xs">
+        <div class="padding-top-xs padding-bottom-xs text-sm strong align-center bg-gray-light gray-dark rounded-x4-top" tooltip=".rounded-x4-top">
+          top
+        </div>
+      </div>
+    
+      <div class="col col-50 col-x1-20 margin-bottom-xs">
+        <div class="padding-top-xs padding-bottom-xs text-sm strong align-center bg-gray-light gray-dark rounded-x4-bottom" tooltip=".rounded-x4-bottom">
+          bottom
+        </div>
+      </div>
+    
+      <div class="col col-50 col-x1-20 margin-bottom-xs">
+        <div class="padding-top-xs padding-bottom-xs text-sm strong align-center bg-gray-light gray-dark rounded-x4-left" tooltip=".rounded-x4-left">
+          left
+        </div>
+      </div>
+    
+      <div class="col col-50 col-x1-20 margin-bottom-xs">
+        <div class="padding-top-xs padding-bottom-xs text-sm strong align-center bg-gray-light gray-dark rounded-x4-right" tooltip=".rounded-x4-right">
+          right
+        </div>
+      </div>
+    
+      <div class="col col-50 col-x1-20 margin-bottom-xs">
+        <div class="padding-top-xs padding-bottom-xs text-sm strong align-center bg-gray-light gray-dark rounded-x4-top-left" tooltip=".rounded-x4-top-left">
+          top left
+        </div>
+      </div>
+    
+      <div class="col col-50 col-x1-20 margin-bottom-xs">
+        <div class="padding-top-xs padding-bottom-xs text-sm strong align-center bg-gray-light gray-dark rounded-x4-top-right" tooltip=".rounded-x4-top-right">
+          top right
+        </div>
+      </div>
+    
+      <div class="col col-50 col-x1-20 margin-bottom-xs">
+        <div class="padding-top-xs padding-bottom-xs text-sm strong align-center bg-gray-light gray-dark rounded-x4-bottom-left" tooltip=".rounded-x4-bottom-left">
+          bottom left
+        </div>
+      </div>
+    
+      <div class="col col-50 col-x1-20 margin-bottom-xs">
+        <div class="padding-top-xs padding-bottom-xs text-sm strong align-center bg-gray-light gray-dark rounded-x4-bottom-right" tooltip=".rounded-x4-bottom-right">
+          bottom right
+        </div>
+      </div>
+    
+  </div>
+
 </div>
     <footer class="align-center text-lightest">
       &copy; Shipyard Framework 2017
