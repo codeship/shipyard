@@ -46,3 +46,26 @@ directions:
 <div class="rds-bl"><!-- border-radius: bottom left --></div>
 <div class="rds-br"><!-- border-radius: bottom right --></div>
 ```
+
+---
+
+## Responsive Options `.rds-{ breakpoint }-{ direction }`
+<p class="text-light margin-bottom-md">The examples below demonstrate the utility classes on each breakpoint.</p>
+
+{% for breakpoint in site.data.breakpoints %}
+  <h3 class="text-md text-light margin-bottom-xs">{{ breakpoint.label }}</h3>
+  <div class="col-container margin-bottom-md">
+    <div class="{{ page.col_classes }}">
+      <div class="{{ page.box_classes }} {{ 'rds' | component_css_class: breakpoint.modifier }}" tooltip=".rds">
+        {{ '.rds' | component_css_class: breakpoint.modifier }}
+      </div>
+    </div>
+    {% for direction in page.directions %}
+      <div class="{{ page.col_classes }}">
+        <div class="{{ page.box_classes }} {{ 'rds' | component_css_class: breakpoint.modifier, direction[1] }}" tooltip=".rds-{{ direction[1] }}">
+          {{ '.rds' | component_css_class: breakpoint.modifier, direction[1] }}
+        </div>
+      </div>
+    {% endfor %}
+  </div>
+{% endfor %}
