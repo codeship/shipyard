@@ -1,0 +1,15 @@
+-
+  modifier: null
+  label: All Screens
+-
+  modifier: x1
+  label: Tablets
+-
+  modifier: x2
+  label: Laptops
+-
+  modifier: x3
+  label: Large Screens
+-
+  modifier: x4
+  label: Giant Monitors
