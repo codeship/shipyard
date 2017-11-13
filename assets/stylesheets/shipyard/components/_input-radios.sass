@@ -1,55 +1,137 @@
-+component('input-radio')
-  outline: none
-  position: relative
-  cursor: pointer
-  border-radius: 50%
-  vertical-align: middle
-  top: -1px
-  border: 2px solid $border-color
-  transition: background-color 300ms ease, border-color 300ms ease, opacity 300ms ease
-  +appearance(none)
-  +width-height(16px)
-  &:hover, .btn:hover &
-    border-color: darken($gray-lightest, 17%)
-  &:checked
-    &, .btn:hover &
-      background: $green
-      border-color: $green
-
-  // Radio: Dot
-  &::after
-    content: ''
-    opacity: 0
++component('input')
+  &-checkbox, &-radio
+    outline: none
+    position: relative
+    cursor: pointer
     border-radius: 50%
-    background: #fff
-    +width-height(6px)
-    position: absolute
-    top: 50%
-    left: 50%
-    margin: -3px 0 0 -3px
-    transition: opacity 300ms ease
-  &:checked::after
-    opacity: 1
-
-  // Radio: Inverse
-  &-inverse
-    opacity: .6
-    &, &:hover, &:checked
-      &, .btn:hover &
-        border-color: #fff
-    &:hover, &:checked, .btn:hover &
-      opacity: 1
+    vertical-align: middle
+    top: -1px
+    border: 2px solid $border-color
+    transition: background-color 300ms ease, border-color 300ms ease, opacity 300ms ease
+    +appearance(none)
+    +width-height(18px)
+    &:hover, .btn:hover &
+      border-color: darken($gray-lightest, 17%)
     &:checked
       &, .btn:hover &
-        background: #fff
-        border-color: #fff
-        &::after
-          background: $green-dark
+        background: $green
+        border-color: $green
 
-  // Radio: Checkmark Icon
-  &-checked:checked
+    // Radio: Dot
     &::after
-      border-radius: 0
-      +width-height(8px)
-      margin: -4px 0 0 -4px
-      +icon(checkmark)
+      content: ''
+      opacity: 0
+      border-radius: 50%
+      background: #fff
+      +width-height(6px)
+      position: absolute
+      top: 50%
+      left: 50%
+      margin: -3px 0 0 -3px
+      transition: opacity 300ms ease
+    &:checked::after
+      opacity: 1
+
+    // Radio: Inverse
+    &-inverse
+      opacity: .25
+      &, &:hover, &:checked
+        &, .btn:hover &
+          border-color: #fff
+      &:hover, &:checked, .btn:hover &
+        opacity: 1
+      &:checked
+        &, .btn:hover &
+          background: #fff
+          border-color: #fff
+          &::after
+            background: $green-dark
+
+    // Radio: Checkmark Icon
+    &-checked:checked
+      &::after
+        border-radius: 0
+        +width-height(8px)
+        margin: -4px 0 0 -4px
+        +icon(checkmark)
+
+    &-item
+      margin: 10px 0
+
+    &-label
+      cursor: pointer
+      margin-left: 10px
+      font-weight: $medium
+      transition: color 300ms ease, opacity 300ms ease
+      &:hover
+        color: $blue-dark
+      +when('checkbox:checked ~, radio:checked ~')
+        color: $green-dark
+
+      &-inverse
+        +extend('radio-label')
+        color: #fff
+        opacity: 0.8
+        &:hover
+          opacity: 1
+        +when('checkbox:checked ~, radio:checked ~')
+          color: lighten($green, 10%)
+
+
++component('legacy-input')
+  &-checkbox, &-radio
+    top: -1px
+    cursor: pointer
+    +width-height(20px)
+    display: inline-block
+    border-radius: 4px
+    position: relative
+    vertical-align: middle
+    background: transparent
+    border: 2px solid $border-color-dark
+    transition: background-color 300ms ease, border-color 300ms ease
+    outline: none
+    &:checked
+      +btn-color(darken($green, 5%))
+  &-radio
+    &, &::after
+      border-radius: 50%
+    &::after
+      content: ""
+      display: block
+      background: #fff
+      border-radius: 50%
+      transition: opacity 300ms ease
+      +center
+      +width-height(6px)
+    &:not(:checked)::after
+      opacity: 0
+  &-checkbox:checked
+    &:after
+      +icon(checkmark, #fff)
+      // background-image: asset-url('checkmarks/checkmark-white.svg')
+      // background-repeat: no-repeat
+      // background-position: center center
+      // background-size: 10px 8px
+
+  &-checkbox, &-radio
+    &-list
+      line-height: 2.25
+      +respond-to(padding, (x2: 7px 0))
+    &-item, &-label
+      display: inline-block
+      line-height: 20px
+      color: darken($text-color-light, 5%)
+      font-weight: $medium
+      transition: color 300ms ease
+    &-label
+      font-size: $font-size-sm
+      padding-left: 5px
+      cursor: pointer
+      user-select: none
+      &:hover
+        color: $blue-dark
+      +when('checkbox:checked ~, radio:checked ~')
+        color: darken($green, 20%)
+    &-item
+      margin-right: 30px
