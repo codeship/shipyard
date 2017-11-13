@@ -1,6 +1,6 @@
 ---
 title: Shipyard Components
-components: [Boxes, Buttons, Empty States, Alerts, Notes, Forms, Icons, Modals, Tooltips, Code, Tables]
+components: [Boxes, Buttons, Empty States, Alerts, Notes, Forms, Radio Buttons, Checkboxes, Icons, Modals, Tooltips, Code, Tables]
 ---
 
 {% include page-heading.html page=page %}
