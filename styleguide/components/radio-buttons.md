@@ -33,6 +33,29 @@ labels:
 
 ---
 
+## Radio-Checkbox Button Lists
+<p class="text-light margin-bottom-md">Yep, that's exactly what it sounds like. It behaves like a radio button but looks a bit like a checkbox. Fancy!</p>
+
+<ul class="input-list">
+  {% for label in page.labels %}
+    <li class="input-item">
+      <input id="radio-checkbox-{{ forloop.index }}" name="radio-list" type="radio" class="input input-radio-checkbox" {% if forloop.index == 1 %}checked{% endif %} />
+      <label for="radio-checkbox-{{ forloop.index }}" class="input-label">{{ label }}</label>
+    </li>
+  {% endfor %}
+</ul>
+
+```html
+<ul class="input-list">
+  <li class="input-item">
+    <input id="radio-id" name="radio-name" type="radio" class="input input-radio-checkbox" checked />
+    <label for="radio-id" class="input-label">Radio Button Label</label>
+  </li>
+</ul>
+```
+
+---
+
 <div class="box-secondary box-padding bg-gray-darker">
   <div class="col-container margin-top-xs">
     <div class="col col-25">

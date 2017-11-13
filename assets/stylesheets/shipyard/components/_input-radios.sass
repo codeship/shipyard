@@ -65,14 +65,6 @@
           &::after
             background: $green-dark
 
-    // Radio: Checkmark Icon
-    &-checked:checked
-      &::after
-        border-radius: 0
-        +width-height(8px)
-        margin: -4px 0 0 -4px
-        +icon(checkmark)
-
   &-radio
     border-radius: 50%
 
@@ -83,10 +75,16 @@
       +width-height(6px)
       margin: -3px 0 0 -3px
 
+    &-checkbox
+      +extend('radio')
+      &::after
+        @extend .input-checkbox-icon
+
   &-checkbox
     border-radius: 4px
 
     // Checkbox: Checkmark Icon
+    &-icon,
     &::after
       border-radius: 0
       +width-height(8px)
