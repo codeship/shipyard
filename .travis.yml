@@ -10,7 +10,7 @@ before_script:
 - chmod +x ci/jekyll
 jobs:
   include:
-  - script: "./ci/jekyll"
+  # - script: "./ci/jekyll"
   - script: bundle exec rspec
   - stage: Deploy
     script: skip
