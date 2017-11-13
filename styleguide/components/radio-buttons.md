@@ -12,32 +12,44 @@ labels:
 
 ---
 
-<div class="col-container margin-top-xs">
-  <div class="col col-100 col-x1-25">
-    <h2>Default States</h2>
-    <ul class="input-radio-list">
-      <li class="input-radio-item">
-        <input id="radio-unchecked" type="radio" class="input-radio" />
-        <label for="radio-unchecked" class="input-radio-label">Unchecked</label>
-      </li>
-      <li class="input-radio-item">
-        <input id="radio-checked" type="radio" class="input-radio" checked />
-        <label for="radio-checked" class="input-radio-label">Checked</label>
-      </li>
-    </ul>
-  </div>
-  <div class="col col-100 col-x1-75">
-    <h2>Radio Button List Example</h2>
-    <ul class="input-radio-list">
-      {% for label in page.labels %}
-        <li class="input-radio-item">
-          <input id="radio-default-{{ forloop.index }}" name="radio-list" type="radio" class="input-radio" {% if forloop.index == 1 %}checked{% endif %} />
-          <label for="radio-default-{{ forloop.index }}" class="input-radio-label">{{ label }}</label>
-        </li>
-      {% endfor %}
-    </ul>
-  </div>
-</div>
+## Radio Buttons
+<ul class="input-list">
+  {% for label in page.labels %}
+    <li class="input-item">
+      <input id="radio-default-{{ forloop.index }}" name="radio-list" type="radio" class="input-radio" {% if forloop.index == 1 %}checked{% endif %} />
+      <label for="radio-default-{{ forloop.index }}" class="input-label">{{ label }}</label>
+    </li>
+  {% endfor %}
+</ul>
+
+```html
+<ul class="input-list">
+  <li class="input-item">
+    <input id="radio-id" name="radio-name" type="radio" class="input-radio" checked />
+    <label for="radio-id" class="input-label">Radio Button Label</label>
+  </li>
+</ul>
+```
+
+---
+
+## Checkboxes
+<ul class="input-list">
+  {% for label in page.labels %}
+    <li class="input-item">
+      <input id="checkbox-default-{{ forloop.index }}" name="radio-list" type="checkbox" class="input-checkbox" {% if forloop.index == 1 %}checked{% endif %} />
+      <label for="checkbox-default-{{ forloop.index }}" class="input-label">{{ label }}</label>
+    </li>
+  {% endfor %}
+</ul>
+```html
+<ul class="input-list">
+  <li class="input-item">
+    <input id="checkbox-id" name="checkbox-name" type="checkbox" class="input-checkbox" checked />
+    <label for="checkbox-id" class="input-label">Checkbox Label</label>
+  </li>
+</ul>
+```
 
 ---
 

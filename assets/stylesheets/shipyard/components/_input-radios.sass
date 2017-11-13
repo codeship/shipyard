@@ -1,36 +1,61 @@
 +component('input')
+  &-item
+    position: relative
+    +respond-to(margin, (x0: 10px 0, x1: 10px 0))
+
+  &-label
+    display: block
+    cursor: pointer
+    font-weight: $medium
+    transition: color 300ms ease, opacity 300ms ease
+    padding-left: 26px
+    &:hover
+      color: $blue-dark
+    +when('radio:checked ~, checkbox:checked ~')
+      color: $green-dark
+
+    &-inverse
+      +extend('label')
+      color: #fff
+      opacity: 0.8
+      &:hover
+        opacity: 1
+      +when(':checked ~')
+        color: lighten($green, 10%)
+
   &-checkbox, &-radio
     outline: none
-    position: relative
     cursor: pointer
-    border-radius: 50%
-    vertical-align: middle
-    top: -1px
     border: 2px solid $border-color
     transition: background-color 300ms ease, border-color 300ms ease, opacity 300ms ease
+    +width-height(16px)
     +appearance(none)
-    +width-height(18px)
+    +when('item')
+      left: 0
+      top: 4px
+      position: absolute
     &:hover, .btn:hover &
       border-color: darken($gray-lightest, 17%)
+
+    &::after
+      content: ''
+      opacity: 0
+      position: absolute
+
+    // Input: Checked State
     &:checked
       &, .btn:hover &
         background: $green
         border-color: $green
 
-    // Radio: Dot
-    &::after
-      content: ''
-      opacity: 0
-      border-radius: 50%
-      background: #fff
-      +width-height(6px)
-      position: absolute
-      top: 50%
-      left: 50%
-      margin: -3px 0 0 -3px
-      transition: opacity 300ms ease
-    &:checked::after
-      opacity: 1
+      // Input: Checked State Icon
+      &::after
+        top: 50%
+        left: 50%
+        opacity: 1
+        position: absolute
+        background-color: #fff
+        transition: opacity 300ms ease, background-color 300ms ease
 
     // Radio: Inverse
     &-inverse
@@ -55,27 +80,34 @@
         margin: -4px 0 0 -4px
         +icon(checkmark)
 
-    &-item
-      margin: 10px 0
+  &-radio
+    border-radius: 50%
 
-    &-label
-      cursor: pointer
-      margin-left: 10px
-      font-weight: $medium
-      transition: color 300ms ease, opacity 300ms ease
-      &:hover
-        color: $blue-dark
-      +when('checkbox:checked ~, radio:checked ~')
-        color: $green-dark
+    // Radio: Dot
+    &::after
+      border-radius: 50%
+      background: #fff
+      +width-height(6px)
+      margin: -3px 0 0 -3px
 
-      &-inverse
-        +extend('radio-label')
-        color: #fff
-        opacity: 0.8
-        &:hover
-          opacity: 1
-        +when('checkbox:checked ~, radio:checked ~')
-          color: lighten($green, 10%)
+  &-checkbox
+    border-radius: 4px
+
+    // Checkbox: Checkmark Icon
+    &::after
+      border-radius: 0
+      +width-height(8px)
+      margin: -4px 0 0 -4px
+      +icon(checkmark)
+
+
+
+
+
+
+
+
+
 
 
 +component('legacy-input')
