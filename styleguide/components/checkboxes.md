@@ -1,0 +1,31 @@
+---
+title: Checkboxes
+labels:
+  - Nulla vitae elit libero, a pharetra augue.
+  - Cras mattis consectetur purus sit amet fermentum.
+  - Cum sociis natoque penatibus et magnis dis parturient montes.
+  - Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia.
+  - Donec id elit non mi porta gravida at eget metus.
+---
+
+{% include page-heading.html page=page %}
+
+---
+
+## Default Checkbox Lists
+<ul class="input-list">
+  {% for label in page.labels %}
+    <li class="input-item">
+      <input id="checkbox-default-{{ forloop.index }}" name="radio-list" type="checkbox" class="input-checkbox" {% if forloop.index == 1 %}checked{% endif %} />
+      <label for="checkbox-default-{{ forloop.index }}" class="input-label">{{ label }}</label>
+    </li>
+  {% endfor %}
+</ul>
+```html
+<ul class="input-list">
+  <li class="input-item">
+    <input id="checkbox-id" name="checkbox-name" type="checkbox" class="input-checkbox" checked />
+    <label for="checkbox-id" class="input-label">Checkbox Label</label>
+  </li>
+</ul>
+```

@@ -12,7 +12,7 @@ labels:
 
 ---
 
-## Radio Buttons
+## Default Radio-Button Lists
 <ul class="input-list">
   {% for label in page.labels %}
     <li class="input-item">
@@ -27,26 +27,6 @@ labels:
   <li class="input-item">
     <input id="radio-id" name="radio-name" type="radio" class="input-radio" checked />
     <label for="radio-id" class="input-label">Radio Button Label</label>
-  </li>
-</ul>
-```
-
----
-
-## Checkboxes
-<ul class="input-list">
-  {% for label in page.labels %}
-    <li class="input-item">
-      <input id="checkbox-default-{{ forloop.index }}" name="radio-list" type="checkbox" class="input-checkbox" {% if forloop.index == 1 %}checked{% endif %} />
-      <label for="checkbox-default-{{ forloop.index }}" class="input-label">{{ label }}</label>
-    </li>
-  {% endfor %}
-</ul>
-```html
-<ul class="input-list">
-  <li class="input-item">
-    <input id="checkbox-id" name="checkbox-name" type="checkbox" class="input-checkbox" checked />
-    <label for="checkbox-id" class="input-label">Checkbox Label</label>
   </li>
 </ul>
 ```
