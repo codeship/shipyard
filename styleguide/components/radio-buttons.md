@@ -13,6 +13,7 @@ labels:
 ---
 
 ## Default Radio-Button Lists
+<p class="text-light margin-bottom-md">Input lists are stacked by default.</p>
 <ul class="input-list">
   {% for label in page.labels %}
     <li class="input-item">
@@ -25,6 +26,27 @@ labels:
 ```html
 <ul class="input-list">
   <li class="input-item">
+    <input id="radio-id" name="radio-name" type="radio" class="input input-radio" checked />
+    <label for="radio-id" class="input-label">Radio Button Label</label>
+  </li>
+</ul>
+```
+
+---
+
+## Inline Radio-Button Lists
+<ul class="input-list">
+  {% for label in page.labels %}
+    <li class="input-item-inline">
+      <input id="radio-inline-{{ forloop.index }}" name="radio-list" type="radio" class="input input-radio" {% if forloop.index == 1 %}checked{% endif %} />
+      <label for="radio-inline-{{ forloop.index }}" class="input-label">Inline Label</label>
+    </li>
+  {% endfor %}
+</ul>
+
+```html
+<ul class="input-list">
+  <li class="input-item-inline">
     <input id="radio-id" name="radio-name" type="radio" class="input input-radio" checked />
     <label for="radio-id" class="input-label">Radio Button Label</label>
   </li>
