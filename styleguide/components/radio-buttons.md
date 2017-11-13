@@ -16,7 +16,7 @@ labels:
 <ul class="input-list">
   {% for label in page.labels %}
     <li class="input-item">
-      <input id="radio-default-{{ forloop.index }}" name="radio-list" type="radio" class="input-radio" {% if forloop.index == 1 %}checked{% endif %} />
+      <input id="radio-default-{{ forloop.index }}" name="radio-list" type="radio" class="input input-radio" {% if forloop.index == 1 %}checked{% endif %} />
       <label for="radio-default-{{ forloop.index }}" class="input-label">{{ label }}</label>
     </li>
   {% endfor %}
@@ -25,7 +25,7 @@ labels:
 ```html
 <ul class="input-list">
   <li class="input-item">
-    <input id="radio-id" name="radio-name" type="radio" class="input-radio" checked />
+    <input id="radio-id" name="radio-name" type="radio" class="input input-radio" checked />
     <label for="radio-id" class="input-label">Radio Button Label</label>
   </li>
 </ul>

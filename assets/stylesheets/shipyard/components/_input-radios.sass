@@ -24,18 +24,12 @@
         color: lighten($green, 10%)
 
   &-checkbox, &-radio
-    outline: none
     cursor: pointer
-    border: 2px solid $border-color
-    transition: background-color 300ms ease, border-color 300ms ease, opacity 300ms ease
     +width-height(16px)
-    +appearance(none)
     +when('item')
       left: 0
       top: 4px
       position: absolute
-    &:hover, .btn:hover &
-      border-color: darken($gray-lightest, 17%)
 
     &::after
       content: ''
@@ -45,8 +39,7 @@
     // Input: Checked State
     &:checked
       &, .btn:hover &
-        background: $green
-        border-color: $green
+        +btn-color($green)
 
       // Input: Checked State Icon
       &::after
