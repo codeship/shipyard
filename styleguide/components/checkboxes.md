@@ -13,6 +13,8 @@ labels:
 ---
 
 ## Default Checkbox Lists
+<p class="text-light margin-bottom-md">Useful when you want to group a series of checkboxes together in a list (stacked by default).</p>
+
 <ul class="input-list">
   {% for label in page.labels %}
     <li class="input-item">
@@ -33,6 +35,8 @@ labels:
 ---
 
 ## Inline Checkbox Lists
+<p class="text-light margin-bottom-md">Useful when you want to group a series of checkboxes together on a single line.</p>
+
 <ul class="input-list">
   {% for label in page.labels %}
     <li class="input-item-inline">
@@ -49,4 +53,65 @@ labels:
     <label for="checkbox-id" class="input-label">Checkbox Label</label>
   </li>
 </ul>
+```
+
+---
+
+## Inverse Checkbox Lists
+<p class="text-light margin-bottom-md">Useful when the checkboxes are displayed on a dark background.</p>
+
+<div class="box-secondary box-padding bg-gray-darker">
+  <ul class="input-list">
+    {% for label in page.labels %}
+      <li class="input-item">
+        <input id="checkbox-inverse-{{ forloop.index }}" name="checkbox-inverse-list" type="checkbox" class="input input-checkbox input-checkbox-inverse" {% if forloop.index == 1 %}checked{% endif %} />
+        <label for="checkbox-inverse-{{ forloop.index }}" class="input-label-inverse">{{ label }}</label>
+      </li>
+    {% endfor %}
+  </ul>
+</div>
+
+```html
+<ul class="input-list">
+  <li class="input-item">
+    <input id="checkbox-id" name="checkbox-name" type="checkbox" class="input input-checkbox input-checkbox-inverse" checked />
+    <label for="checkbox-id" class="input-label-inverse">Checkbox Inverse Label</label>
+  </li>
+</ul>
+```
+
+---
+
+## Checkboxes Nested in Buttons
+{: .margin-bottom-md }
+
+<button class="btn btn-secondary margin-right-xs margin-bottom-xs">
+  <input type="checkbox" class="input input-checkbox margin-right-xxs" />
+  Unchecked
+</button>
+<button class="btn btn-secondary margin-right-xs margin-bottom-xs">
+  <input type="checkbox" class="input input-checkbox margin-right-xxs" checked />
+  Checked
+</button>
+<button class="btn btn-cta margin-right-xs margin-bottom-xs">
+  <input type="checkbox" class="input input-checkbox input-checkbox-inverse margin-right-xxs" />
+  Inverse Unchecked
+</button>
+<button class="btn btn-cta margin-right-xs margin-bottom-xs">
+  <input type="checkbox" class="input input-checkbox input-checkbox-inverse margin-right-xxs" checked />
+  Inverse Checked
+</button>
+
+```html
+<!-- Secondary button with a checkbox in the unchecked state. -->
+<button class="btn btn-secondary">
+  <input type="checkbox" class="input input-checkbox margin-right-xxs" />
+  Button Text
+</button>
+
+<!-- CTA button with a checkbox in the checked state. -->
+<button class="btn btn-cta">
+  <input type="checkbox" class="input input-checkbox input-checkbox-inverse margin-right-xxs" checked />
+  Button Text
+</button>
 ```

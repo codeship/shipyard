@@ -13,7 +13,8 @@ labels:
 ---
 
 ## Default Radio-Button Lists
-<p class="text-light margin-bottom-md">Input lists are stacked by default.</p>
+<p class="text-light margin-bottom-md">Useful when you want to group a series of radio buttons together in a list (stacked by default).</p>
+
 <ul class="input-list">
   {% for label in page.labels %}
     <li class="input-item">
@@ -35,6 +36,8 @@ labels:
 ---
 
 ## Inline Radio-Button Lists
+<p class="text-light margin-bottom-md">Useful when you want to group a series of radio buttons together on a single line.</p>
+
 <ul class="input-list">
   {% for label in page.labels %}
     <li class="input-item-inline">
@@ -56,7 +59,7 @@ labels:
 ---
 
 ## Inverse Radio-Button Lists
-<p class="text-light margin-bottom-md">Input lists are stacked by default.</p>
+<p class="text-light margin-bottom-md">Useful when the radio buttons are displayed on a dark background.</p>
 <div class="box-secondary box-padding bg-gray-darker">
   <ul class="input-list">
     {% for label in page.labels %}
