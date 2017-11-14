@@ -1,7 +1,7 @@
 PATH
   remote: ..
   specs:
-    shipyard-framework (0.5.68)
+    shipyard-framework (0.5.69)
       actionview (~> 5.0)
       sprockets-es6 (~> 0.9.2)
 
@@ -28,7 +28,7 @@ GEM
     builder (3.2.3)
     colorator (1.1.0)
     concurrent-ruby (1.0.5)
-    crass (1.0.2)
+    crass (1.0.3)
     erubi (1.7.0)
     execjs (2.7.0)
     extras (0.3.0)
