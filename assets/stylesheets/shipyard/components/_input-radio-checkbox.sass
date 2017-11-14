@@ -22,8 +22,9 @@
 
     &-inverse
       +extend('label')
-      color: #fff
       opacity: 0.65
+      &, &:hover
+        color: #fff
       &:hover
         opacity: 1
       +when('radio:checked ~, checkbox:checked ~')
