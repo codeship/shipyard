@@ -23,23 +23,23 @@
     &-inverse
       +extend('label')
       color: #fff
-      opacity: 0.8
+      opacity: 0.65
       &:hover
         opacity: 1
-      +when(':checked ~')
+      +when('radio:checked ~, checkbox:checked ~')
+        opacity: 1
         color: lighten($green, 10%)
 
   &-checkbox, &-radio
+    top: -1px
+    position: relative
+    vertical-align: middle
     cursor: pointer
     +width-height(16px)
     +when('item')
       left: 0
       top: 4px
       position: absolute
-    +when('item-inline')
-      top: -1px
-      position: relative
-      vertical-align: middle
 
     &::after
       content: ''
@@ -75,6 +75,7 @@
           &::after
             background: $green-dark
 
+  // Radio Button
   &-radio
     border-radius: 50%
 
@@ -85,11 +86,13 @@
       +width-height(6px)
       margin: -3px 0 0 -3px
 
+    // Radio Checkbox
     &-checkbox
       +extend('radio')
       &::after
         @extend .input-checkbox-icon
 
+  // Checkbox
   &-checkbox
     border-radius: 4px
 
@@ -100,71 +103,3 @@
       +width-height(8px)
       margin: -4px 0 0 -4px
       +icon(checkmark)
-
-
-
-
-
-
-
-
-
-
-
-+component('legacy-input')
-  &-checkbox, &-radio
-    top: -1px
-    cursor: pointer
-    +width-height(20px)
-    display: inline-block
-    border-radius: 4px
-    position: relative
-    vertical-align: middle
-    background: transparent
-    border: 2px solid $border-color-dark
-    transition: background-color 300ms ease, border-color 300ms ease
-    outline: none
-    &:checked
-      +btn-color(darken($green, 5%))
-  &-radio
-    &, &::after
-      border-radius: 50%
-    &::after
-      content: ""
-      display: block
-      background: #fff
-      border-radius: 50%
-      transition: opacity 300ms ease
-      +center
-      +width-height(6px)
-    &:not(:checked)::after
-      opacity: 0
-  &-checkbox:checked
-    &:after
-      +icon(checkmark, #fff)
-      // background-image: asset-url('checkmarks/checkmark-white.svg')
-      // background-repeat: no-repeat
-      // background-position: center center
-      // background-size: 10px 8px
-
-  &-checkbox, &-radio
-    &-list
-      line-height: 2.25
-      +respond-to(padding, (x2: 7px 0))
-    &-item, &-label
-      display: inline-block
-      line-height: 20px
-      color: darken($text-color-light, 5%)
-      font-weight: $medium
-      transition: color 300ms ease
-    &-label
-      font-size: $font-size-sm
-      padding-left: 5px
-      cursor: pointer
-      user-select: none
-      &:hover
-        color: $blue-dark
-      +when('checkbox:checked ~, radio:checked ~')
-        color: darken($green, 20%)
-    &-item
-      margin-right: 30px
