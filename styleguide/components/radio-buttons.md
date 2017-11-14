@@ -114,7 +114,7 @@ labels:
   Checked
 </button>
 <button class="btn btn-secondary margin-right-xs margin-bottom-xs">
-  <input type="radio" class="input input-radio input-radio-checkbox margin-right-xxs" checked />
+  <input type="radio" class="input input-radio-checkbox margin-right-xxs" checked />
   Checked w/ Icon
 </button>
 <button class="btn btn-cta margin-right-xs margin-bottom-xs">
@@ -126,6 +126,20 @@ labels:
   Inverse Checked
 </button>
 <button class="btn btn-cta margin-right-xs margin-bottom-xs">
-  <input type="radio" class="input input-radio input-radio-inverse input-radio-checkbox margin-right-xxs" checked />
+  <input type="radio" class="input input-radio-checkbox input-radio-inverse margin-right-xs" checked />
   Inverse Checked w/ Icon
 </button>
+
+```html
+<!-- Secondary button with a radio button in the unchecked state. -->
+<button class="btn btn-secondary">
+  <input type="radio" class="input input-radio margin-right-xxs" />
+  Button Text
+</button>
+
+<!-- CTA button with a radio-checkbox in the checked state. -->
+<button class="btn btn-cta">
+  <input type="radio" class="input input-radio-checkbox input-radio-inverse margin-right-xxs" checked />
+  Button Text
+</button>
+```
