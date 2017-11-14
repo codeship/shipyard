@@ -31,9 +31,11 @@
 
   &-title
     line-height: 1
-    margin: 0 0 20px
-    padding: 0 0 10px
-    border-bottom: 2px solid $border-color-lightest
+    margin: 0 0 15px
+    &-border
+      +extend(title)
+      padding: 0 0 10px
+      border-bottom: 2px solid $border-color-lightest
 
   &-ctas
     background: $gray-lightest
