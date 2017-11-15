@@ -12,33 +12,10 @@ labels:
 
 ---
 
-## Default Radio-Button Lists
-<p class="text-light margin-bottom-md">Useful when you want to group a series of radio buttons together in a list (stacked by default).</p>
-
-<ul class="input-list">
-  {% for label in page.labels %}
-    <li class="input-item">
-      <input id="radio-default-{{ forloop.index }}" name="radio-list" type="radio" class="input input-radio" {% if forloop.index == 1 %}checked{% endif %} />
-      <label for="radio-default-{{ forloop.index }}" class="input-label">{{ label }}</label>
-    </li>
-  {% endfor %}
-</ul>
-
-```html
-<ul class="input-list">
-  <li class="input-item">
-    <input id="radio-id" name="radio-name" type="radio" class="input input-radio" checked />
-    <label for="radio-id" class="input-label">Radio Button Label</label>
-  </li>
-</ul>
-```
-
----
-
 ## Inline Radio-Button Lists
 <p class="text-light margin-bottom-md">Useful when you want to group a series of radio buttons together on a single line.</p>
 
-<ul class="input-list">
+<ul class="input-list margin-bottom-lg">
   {% for label in page.labels %}
     <li class="input-item-inline">
       <input id="radio-inline-{{ forloop.index }}" name="radio-list" type="radio" class="input input-radio" {% if forloop.index == 1 %}checked{% endif %} />
@@ -50,6 +27,47 @@ labels:
 ```html
 <ul class="input-list">
   <li class="input-item-inline">
+    <input id="radio-id" name="radio-name" type="radio" class="input input-radio" checked />
+    <label for="radio-id" class="input-label">Radio Button Label</label>
+  </li>
+</ul>
+```
+
+---
+
+## Stacked Radio-Button Lists
+<p class="text-light margin-bottom-md">Useful when you want to group a series of radio buttons together in a list (stacked by default).</p>
+
+<div class="col-container margin-bottom-sm margin-bottom-x1-lg">
+  <div class="col col-100 col-x1-50 margin-bottom-sm margin-bottom-x1-none">
+    <div class="rounded bg-white box-padding">
+      <ul class="input-list">
+        {% for label in page.labels %}
+          <li class="input-item">
+            <input id="radio-light-{{ forloop.index }}" name="radio-light-list" type="radio" class="input input-radio" {% if forloop.index == 1 %}checked{% endif %} />
+            <label for="radio-light-{{ forloop.index }}" class="input-label">{{ label }}</label>
+          </li>
+        {% endfor %}
+      </ul>
+    </div>
+  </div>
+  <div class="col col-100 col-x1-50">
+    <div class="box-secondary box-padding">
+      <ul class="input-list">
+        {% for label in page.labels %}
+          <li class="input-item">
+            <input id="radio-dark-{{ forloop.index }}" name="radio-dark-list" type="radio" class="input input-radio" {% if forloop.index == 1 %}checked{% endif %} />
+            <label for="radio-dark-{{ forloop.index }}" class="input-label">{{ label }}</label>
+          </li>
+        {% endfor %}
+      </ul>
+    </div>
+  </div>
+</div>
+
+```html
+<ul class="input-list">
+  <li class="input-item">
     <input id="radio-id" name="radio-name" type="radio" class="input input-radio" checked />
     <label for="radio-id" class="input-label">Radio Button Label</label>
   </li>

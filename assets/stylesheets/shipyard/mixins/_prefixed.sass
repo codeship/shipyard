@@ -1,15 +1,20 @@
 @mixin appearance($value)
-  appearance: $value
-  -moz-appearance: $value
   -webkit-appearance: $value
+  -moz-appearance: $value
+  appearance: $value
 
 @mixin backdrop-filter($value)
-  backdrop-filter: $value
   -webkit-backdrop-filter: $value
+  backdrop-filter: $value
+
+@mixin background-clip($value)
+  -webkit-background-clip: $value
+  -moz-background-clip: $value
+  background-clip: $value
 
 @mixin mask($value)
-  mask: $value
   -webkit-mask: $value
+  mask: $value
 
 @mixin placeholder
   &::placeholder

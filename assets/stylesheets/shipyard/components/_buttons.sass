@@ -17,7 +17,7 @@
   +btn-hover(darken($bg, 10%), #fff)
 
 @mixin btn-color($color, $text-color: null, $border-color: null)
-  background: $color
+  background-color: $color
   @if $border-color
     border-color: $border-color
   @else
@@ -118,14 +118,14 @@
       +btn-hover(darken($blue, 12%))
 
   &-secondary
-    +btn-color(none, $text-color-light, darken($gray-lightest, 7%))
-    +btn-hover(none, darken($text-color-light, 15%), darken($gray-lightest, 17%))
+    +btn-color(transparent, $text-color-light, darken($gray-lightest, 7%))
+    +btn-hover(transparent, darken($text-color-light, 15%), darken($gray-lightest, 17%))
     &-link
-      +btn-color(none, $blue, darken($gray-lightest, 7%))
-      +btn-hover(none, $blue-dark, darken($gray-lightest, 17%))
+      +btn-color(transparent, $blue, darken($gray-lightest, 7%))
+      +btn-hover(transparent, $blue-dark, darken($gray-lightest, 17%))
     &-dark
-      +btn-color(none, darken($text-color-light, 5%), lighten($gray-light, 5%))
-      +btn-hover(none, darken($text-color-light, 20%), darken($gray-light, 5%))
+      +btn-color(transparent, darken($text-color-light, 5%), lighten($gray-light, 5%))
+      +btn-hover(transparent, darken($text-color-light, 20%), darken($gray-light, 5%))
 
   &-caution
     +btn-color($red-dark)
