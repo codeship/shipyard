@@ -91,10 +91,14 @@
       +when('error')
         border-color: darken($red, 15%)
     &-connect
-      &-top:focus,
-      &-middle:focus,
-      &-bottom:focus
-        z-index: 1
+      &-top,
+      &-middle,
+      &-bottom
+        border-color: rgba($bg-to-border, .37)
+        +background-clip(initial)
+        &:hover, &:focus
+          z-index: 1
+          border-color: rgba($bg-to-border, .50)
       &-top
         border-radius: 5px 5px 0 0
       &-middle
