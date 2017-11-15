@@ -133,3 +133,68 @@ labels:
   Button Text
 </button>
 ```
+
+---
+
+## Checkbox Switches
+<p class="text-light margin-bottom-md">Switches are useful when the user has a choice to toggle on and off. Note: For the best UX, please make sure that the switch saves immediately each time it changes state.</p>
+
+<div class="box box-xs margin-bottom-sm padding-top-md padding-bottom-md padding-left-sm padding-right-sm padding-left-x1-lg padding-right-x1-lg">
+  <div class="col-container-nowrap">
+    <div class="components-checkboxes-switch-col col col-100 text-light text-overflow-ellipsis">Praesent commodo cursus magna, vel scelerisque aenean eu leo quam pellentesque ornare sem lacinia quam.</div>
+    <div class="col margin-left-sm">
+      <input type="checkbox" class="input input-switch" checked />
+    </div>
+  </div>
+</div>
+<div class="box-secondary box-xs padding-top-md padding-bottom-md padding-left-sm padding-right-sm padding-left-x1-lg padding-right-x1-lg">
+  <div class="col-container-nowrap">
+    <div class="components-checkboxes-switch-col col col-100 text-light text-overflow-ellipsis">Praesent commodo cursus magna, vel scelerisque aenean eu leo quam pellentesque ornare sem lacinia quam.</div>
+    <div class="col margin-left-sm">
+      <input type="checkbox" class="input input-switch" />
+    </div>
+  </div>
+</div>
+```html
+<input type="checkbox" class="input input-switch" />
+```
+
+---
+
+## Secondary Checkbox Switches
+<p class="text-light margin-bottom-md">Useful when you don't need to draw attention to the bright-red, off state.</p>
+
+<div class="box box-xs margin-bottom-sm padding-top-md padding-bottom-md padding-left-sm padding-right-sm padding-left-x1-lg padding-right-x1-lg">
+  <div class="col-container-nowrap">
+    <div class="components-checkboxes-switch-col col col-100 text-light text-overflow-ellipsis">Praesent commodo cursus magna, vel scelerisque aenean eu leo quam pellentesque ornare sem lacinia quam.</div>
+    <div class="col margin-left-sm">
+      <input type="checkbox" class="input input-switch-secondary" checked />
+    </div>
+  </div>
+</div>
+<div class="box-secondary box-xs padding-top-md padding-bottom-md padding-left-sm padding-right-sm padding-left-x1-lg padding-right-x1-lg">
+  <div class="col-container-nowrap">
+    <div class="components-checkboxes-switch-col col col-100 text-light text-overflow-ellipsis">Praesent commodo cursus magna, vel scelerisque aenean eu leo quam pellentesque ornare sem lacinia quam.</div>
+    <div class="col margin-left-sm">
+      <input type="checkbox" class="input input-switch-secondary" />
+    </div>
+  </div>
+</div>
+```html
+<input type="checkbox" class="input input-switch" />
+```
+
+---
+
+## Small Checkbox Switches
+<p class="text-light margin-bottom-md">Useful when you want to show checkboxes inline next to a text label.</p>
+<div>
+  <input id="small-switch-off" type="checkbox" class="input input-switch input-switch-sm align-middle" />
+  <label for="small-switch-off" class="text-sm text-light margin-left-xxs medium margin-right-md">Checkbox Switch Off</label>
+
+  <input id="small-switch-on" type="checkbox" class="input input-switch input-switch-sm align-middle" checked />
+  <label for="small-switch-on" class="text-sm text-light margin-left-xxs medium">Checkbox Switch On</label>
+</div>
+```html
+<input type="checkbox" class="input input-switch input-switch-sm" />
+```
