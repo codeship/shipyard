@@ -1,0 +1,107 @@
+<html lang="en" class="env-production components-horizontal-rules">
+  <head>
+    <meta charset="utf-8" />
+    <title>Horizontal Rules</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <meta name="theme-color" content="#20a5a8" />
+    <link type="text/css" rel="stylesheet" href="/shipyard/assets/fonts-ca42f2a84b2649c9fcccd16cc51fb6d1f915ba2a0988d30b91c3b84d8722b369.css" media="screen" rel="preload" async>
+    <link type="text/css" rel="stylesheet" href="/shipyard/assets/syntax-40266bdc7fd995b8cddaeedab3817d78fcc5aed189b1d6a23a6827b437b71488.css" media="screen" rel="preload" async>
+    <link type="text/css" rel="stylesheet" href="/shipyard/assets/application-b2ebe183313844c6e3c490a8ed32b604e075e1b226f9fcfe8a7a7e656cd6f4b0.css" media="screen">
+  </head>
+  <body>
+    <header class="header">
+      <div class="container">
+        <h6 class="header-logo"><a href="/shipyard/">Shipyard</a></h6>
+        <button class="hamburger" shipyard="hamburger">
+          <span class="hamburger-button">Menu</span>
+        </button>
+        <ul class="header-list">
+          
+            <li class="header-item ">
+              <a href="/shipyard/" class="header-link">Home</a>
+            </li>
+          
+            <li class="header-item ">
+              <a href="/shipyard/components/" class="header-link">Components</a>
+            </li>
+          
+            <li class="header-item ">
+              <a href="/shipyard/utilities/" class="header-link">Utilities</a>
+            </li>
+          
+          <li class="header-item header-item-cta">
+            <a href="https://github.com/codeship/shipyard" target="_blank" class="header-link-cta" rel="noopener">Download</a>
+          </li>
+        </ul>
+      </div>
+    </header>
+    <div class="container"><h1>Horizontal Rules</h1>
+
+<p class="text-light text-lg margin-top-sm">Shipyard doesn’t make any assumptions on how you want to common tags like an <code class="language-html highlighter-rouge">hr</code> to styled. As a result, we would recommend extending the <code class="language-html highlighter-rouge">.hr</code> class in your own SASS files to achieve the results below on all <code class="language-html highlighter-rouge">hr</code> tags (e.g. <code class="language-html highlighter-rouge">@extend .hr</code>).</p>
+
+<div class="note note-warning "><p>
+    Please note that the code examples below are <strong>not possible</strong> without <code class="language-html highlighter-rouge">hr { @extend .hr }</code> somewhere in your application’s sass files. If you haven’t done this, then you’ll need to include the <code class="language-html highlighter-rouge">.hr</code> class on every horizontal rule.
+  </p></div>
+
+<hr />
+
+<h2 id="default-horizontal-rules">Default Horizontal Rules</h2>
+<div class="utilities-typography-hr-box-default">
+  <hr class="utilities-typography-hr" />
+</div>
+<div class="utilities-typography-hr-box-dark">
+  <hr class="utilities-typography-hr" />
+</div>
+<div class="utilities-typography-hr-box-light">
+  <hr class="utilities-typography-hr" />
+</div>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="code-block"><code><span class="nt">&lt;hr</span> <span class="nt">/&gt;</span>
+</code></pre></div></div>
+
+<hr />
+
+<h2 class="margin-bottom-md" id="thin-horizontal-rules-hr-thin">Thin Horizontal Rules <code class="language-html highlighter-rouge">.hr-thin</code></h2>
+
+<div class="utilities-typography-hr-box-default">
+  <hr class="utilities-typography-hr hr-thin" />
+</div>
+<div class="utilities-typography-hr-box-dark">
+  <hr class="utilities-typography-hr hr-thin" />
+</div>
+<div class="utilities-typography-hr-box-light">
+  <hr class="utilities-typography-hr hr-thin" />
+</div>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="code-block"><code><span class="nt">&lt;hr</span> <span class="na">class=</span><span class="s">"hr-thin"</span> <span class="nt">/&gt;</span>
+</code></pre></div></div>
+
+<hr />
+
+<h2 id="dark-horizontal-rules">Dark Horizontal Rules</h2>
+<p class="text-light margin-bottom-md">Useful when you have a horizontal rule on a darker background.</p>
+
+<div class="utilities-typography-hr-box-dark">
+  <hr class="utilities-typography-hr hr-dark" />
+</div>
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="code-block"><code><span class="nt">&lt;hr</span> <span class="na">class=</span><span class="s">"hr-dark"</span> <span class="nt">/&gt;</span>
+</code></pre></div></div>
+
+<hr />
+
+<h2 id="light-horizontal-rules">Light Horizontal Rules</h2>
+<p class="text-light margin-bottom-md">Useful when you have a horizontal rule on a lighter background.</p>
+
+<div class="utilities-typography-hr-box-light">
+  <hr class="utilities-typography-hr hr-light" />
+</div>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="code-block"><code><span class="nt">&lt;hr</span> <span class="na">class=</span><span class="s">"hr-light"</span> <span class="nt">/&gt;</span>
+</code></pre></div></div>
+</div>
+    <footer class="align-center text-lightest">
+      &copy; Shipyard Framework 2017
+    </footer>
+    <script type="text/javascript" src="/shipyard/assets/application-a29e09541cf2fb1aadbf1e10b34ee7725fed4a697fb2cf4e0116d6c55884da81.js"></script>
+  </body>
+</html>

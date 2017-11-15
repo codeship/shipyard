@@ -6,7 +6,7 @@
     <meta name="theme-color" content="#20a5a8" />
     <link type="text/css" rel="stylesheet" href="/shipyard/assets/fonts-ca42f2a84b2649c9fcccd16cc51fb6d1f915ba2a0988d30b91c3b84d8722b369.css" media="screen" rel="preload" async>
     <link type="text/css" rel="stylesheet" href="/shipyard/assets/syntax-40266bdc7fd995b8cddaeedab3817d78fcc5aed189b1d6a23a6827b437b71488.css" media="screen" rel="preload" async>
-    <link type="text/css" rel="stylesheet" href="/shipyard/assets/application-d97a3b7c8201b48a4a6639ff7a0fda4708a60054a99723ea2aa2159d92144a29.css" media="screen">
+    <link type="text/css" rel="stylesheet" href="/shipyard/assets/application-b2ebe183313844c6e3c490a8ed32b604e075e1b226f9fcfe8a7a7e656cd6f4b0.css" media="screen">
   </head>
   <body>
     <header class="header">
@@ -130,57 +130,6 @@
     </div>
   </div>
 </div>
-
-<hr />
-
-<h2 id="horizontal-rules">Horizontal Rules</h2>
-<p class="text-light margin-bottom-md">Shipyard doesn’t make any assumptions on how you want to common tags like an <code class="language-html highlighter-rouge">hr</code> to styled. As a result, we would recommend extending the <code class="language-html highlighter-rouge">.hr</code> class in your own SASS files to achieve the results below on all <code class="language-html highlighter-rouge">hr</code> tags (e.g. <code class="language-html highlighter-rouge">@extend .hr</code>).</p>
-
-<div class="utilities-typography-hr-box-default">
-  <hr class="utilities-typography-hr" />
-</div>
-<div class="utilities-typography-hr-box-dark">
-  <hr class="utilities-typography-hr hr-dark" />
-</div>
-<div class="utilities-typography-hr-box-light">
-  <hr class="utilities-typography-hr hr-light" />
-</div>
-
-<div class="note note-warning "><p>
-    Please note that the code examples below are <strong>not possible</strong> without <code class="language-html highlighter-rouge">hr { @extend .hr }</code> somewhere in your application’s sass files. If you haven’t done this, then you’ll need to include the <code class="language-html highlighter-rouge">.hr</code> class on every horizontal rule.
-  </p></div>
-
-<div class="language-html highlighter-rouge"><div class="highlight"><pre class="code-block"><code><span class="nt">&lt;hr</span> <span class="nt">/&gt;</span>
-
-<span class="c">&lt;!-- Useful on darker backgrounds. --&gt;</span>
-<span class="nt">&lt;hr</span> <span class="na">class=</span><span class="s">"hr-dark"</span> <span class="nt">/&gt;</span>
-
-<span class="c">&lt;!-- Useful on lighter backgrounds. --&gt;</span>
-<span class="nt">&lt;hr</span> <span class="na">class=</span><span class="s">"hr-light"</span> <span class="nt">/&gt;</span>
-</code></pre></div></div>
-
-<hr />
-
-<h2 class="margin-bottom-md" id="thin-horizontal-rules-hr-thin">Thin Horizontal Rules <code class="language-html highlighter-rouge">.hr-thin</code></h2>
-
-<div class="utilities-typography-hr-box-default">
-  <hr class="utilities-typography-hr hr-thin" />
-</div>
-<div class="utilities-typography-hr-box-dark">
-  <hr class="utilities-typography-hr hr-dark hr-thin" />
-</div>
-<div class="utilities-typography-hr-box-light">
-  <hr class="utilities-typography-hr hr-light hr-thin" />
-</div>
-
-<div class="language-html highlighter-rouge"><div class="highlight"><pre class="code-block"><code><span class="nt">&lt;hr</span> <span class="na">class=</span><span class="s">"hr-thin"</span> <span class="nt">/&gt;</span>
-
-<span class="c">&lt;!-- Useful on darker backgrounds. --&gt;</span>
-<span class="nt">&lt;hr</span> <span class="na">class=</span><span class="s">"hr-thin hr-dark"</span> <span class="nt">/&gt;</span>
-
-<span class="c">&lt;!-- Useful on lighter backgrounds. --&gt;</span>
-<span class="nt">&lt;hr</span> <span class="na">class=</span><span class="s">"hr-thin hr-light"</span> <span class="nt">/&gt;</span>
-</code></pre></div></div>
 </div>
     <footer class="align-center text-lightest">
       &copy; Shipyard Framework 2017
