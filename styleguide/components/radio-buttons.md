@@ -58,6 +58,30 @@ labels:
 
 ---
 
+## Dark Radio-Button Lists
+<p class="text-light margin-bottom-md">Useful when the radio buttons are displayed on a dark background.</p>
+<div class="box-secondary box-padding">
+  <ul class="input-list">
+    {% for label in page.labels %}
+      <li class="input-item">
+        <input id="radio-dark-{{ forloop.index }}" name="radio-dark-list" type="radio" class="input input-dark input-radio" {% if forloop.index == 1 %}checked{% endif %} />
+        <label for="radio-dark-{{ forloop.index }}" class="input-label">{{ label }}</label>
+      </li>
+    {% endfor %}
+  </ul>
+</div>
+
+```html
+<ul class="input-list">
+  <li class="input-item">
+    <input id="radio-id" name="radio-name" type="radio" class="input input-radio input-radio-inverse" checked />
+    <label for="radio-id" class="input-label-inverse">Radio Button Inverse Label</label>
+  </li>
+</ul>
+```
+
+---
+
 ## Inverse Radio-Button Lists
 <p class="text-light margin-bottom-md">Useful when the radio buttons are displayed on a dark background.</p>
 <div class="box-secondary box-padding bg-gray-darker">

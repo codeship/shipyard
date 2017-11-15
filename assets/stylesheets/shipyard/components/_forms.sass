@@ -13,8 +13,13 @@
   border: 2px solid $border-color
   transition: background-color 300ms ease, border-color 300ms ease, opacity 300ms ease
   +appearance(none)
-  &:hover, .btn:hover &
-    border-color: darken($border-color, 10%)
+  +background-clip(padding-box)
+  &:hover, &:focus, .btn:hover &
+    border-color: $border-color-dark
+  &-dark
+    border-color: $border-color-dark
+    &:hover, &:focus, .btn:hover &
+      border-color: $border-color-darkest
 
   &-group
     +clearfix
@@ -27,7 +32,7 @@
   &-select
     display: block
     width: 100%
-    background: #fff
+    background-color: #fff
     height: 50px
     font: $font
     font-weight: $medium
@@ -40,7 +45,6 @@
     +when('error')
       border-color: $red
     &:hover, &:focus
-      border-color: $border-color-dark
       +when('error')
         border-color: darken($red, 15%)
     &-container
@@ -75,7 +79,7 @@
   &-text
     font: $font
     color: $text-color
-    background: #fff
+    background-color: #fff
     position: relative
     height: 50px
     font-size: 16px
@@ -88,7 +92,6 @@
     +when('error')
       border-color: $red
     &:hover, &:focus
-      border-color: $border-color-dark
       +when('error')
         border-color: darken($red, 15%)
     &-connect
