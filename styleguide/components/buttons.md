@@ -6,24 +6,95 @@ title: Shipyard Buttons
 
 ---
 
-## Button Types
-<div class="box-padding align-center">
-  {% btn Default %}
-  {% btn Primary, :primary %}
-  {% btn Primary Dark, :primary_dark %}
-  {% btn Secondary, :secondary %}
-  {% btn Secondary Link, :secondary_link %}
-  {% btn Secondary Dark, :secondary_dark %}
-  {% btn Disabled, :disabled %}
-  {% btn CTA, :cta %}
-  {% btn Caution, :caution %}
+## Common Buttons
+<p class="text-light margin-bottom-md">Shipyard gives you more buttons than you can shake a stick at.</p>
+
+<div class="margin-bottom-md">
+  {% btn Default, :default, class: 'margin-right-xs' %}
+  {% btn Primary, :primary, class: 'margin-right-xs' %}
+  {% btn Primary Dark, :primary_dark, class: 'margin-right-xs' %}
+  {% btn CTA, :cta, class: 'margin-right-xs' %}
+  {% btn Caution, :caution, class: 'margin-right-xs' %}
+  {% btn Disabled, :disabled, class: 'margin-right-xs' %}
   {% btn Link, :link %}
-  {% btn Rounded, :rounded %}
 </div>
-<div class="box-secondary box-padding align-center bg-gray-dark">
-  {% btn Inverse, :inverse %}
-  {% btn Inverse, :inverse_secondary, class: 'margin-left-xs' %}
+
+```html
+{% btn Default %}
+{% btn Primary, :primary %}
+{% btn Primary Dark, :primary_dark %}
+{% btn CTA, :cta %}
+{% btn Caution, :caution %}
+{% btn Disabled, :disabled %}
+{% btn Link, :link %}
+```
+
+---
+
+## Secondary Buttons
+<p class="text-light margin-bottom-md">Useful when you have a button on a darker background.</p>
+
+<div class="margin-bottom-md">
+  {% btn Secondary, :secondary, class: 'margin-right-xs' %}
+  {% btn Secondary Dark, :secondary_dark, class: 'margin-right-xs' %}
+  {% btn Secondary Link, :secondary_link %}
 </div>
+
+```html
+{% btn Secondary, :secondary %}
+{% btn Secondary Dark, :secondary_dark %}
+{% btn Secondary Link, :secondary_link %}
+```
+
+---
+
+## Inverse Buttons
+<p class="text-light margin-bottom-md">Useful when you have a button on a darker background.</p>
+
+<div class="box-secondary box-padding bg-gray-dark margin-bottom-md">
+  {% btn Inverse, :inverse, class: 'margin-right-xs' %}
+  {% btn Inverse Secondary, :inverse_secondary %}
+</div>
+
+```html
+{% btn Inverse, :inverse %}
+{% btn Inverse Secondary, :inverse_secondary %}
+```
+
+---
+
+## Rounded Buttons
+<p class="text-light margin-bottom-md">Useful when you want a button with completely rounded corners.</p>
+
+<div class="margin-bottom-md">
+  {% btn Default, :rounded, class: 'margin-right-xs' %}
+  {% btn Primary, :primary :rounded, class: 'margin-right-xs' %}
+  {% btn CTA, :cta :rounded, class: 'margin-right-xs' %}
+  {% btn Caution, :caution :rounded, class: 'margin-right-xs' %}
+  {% btn Secondary, :secondary :rounded %}
+</div>
+
+```html
+{% btn Rounded, :rounded %}
+```
+
+---
+
+## Loading Buttons
+<p class="text-light margin-bottom-md">Useful when you have a button that triggers an asynchronous action.</p>
+
+<div class="margin-bottom-md">
+  {% btn Default, :loading, class: 'margin-right-xs' %}
+  {% btn Primary, :primary :loading, class: 'margin-right-xs' %}
+  {% btn CTA, :cta :loading, class: 'margin-right-xs' %}
+  {% btn Caution, :caution :loading, class: 'margin-right-xs' %}
+  {% btn Secondary, :secondary :loading, class: 'margin-right-xs' %}
+  {% btn Secondary Link, :secondary_link :loading, class: 'margin-right-xs' %}
+</div>
+
+```html
+{% btn Default, :loading %}
+```
 
 ---
 

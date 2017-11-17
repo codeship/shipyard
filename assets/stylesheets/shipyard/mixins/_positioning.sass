@@ -10,3 +10,11 @@
     top: 50%
     left: 50%
     transform: translate(-50%, -50%)
+
+@mixin absolute-center($width, $height: null)
+  $height: if($height, $height, $width)
+  +width-height($width, $height)
+  top: 50%
+  left: 50%
+  position: absolute
+  margin: ($height / -2) 0 0 ($width / -2)

@@ -181,7 +181,7 @@ labels:
   </div>
 </div>
 ```html
-<input type="checkbox" class="input input-switch" />
+<input type="checkbox" class="input input-switch-secondary" />
 ```
 
 ---
