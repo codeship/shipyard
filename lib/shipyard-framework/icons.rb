@@ -48,7 +48,8 @@ module Shipyard
           symbol: File.basename(file).gsub(/.svg/, '').underscore.to_sym,
           view_box: html[/viewBox="(.*?)"/, 1],
           outer_html: html.gsub(/\n|\s+\s+/, ''),
-          inner_html: sanitize_svg(html).gsub(/\n|\s+\s+/, ''),
+          inner_html: html.gsub(/\n|\s+\s+/, ''),
+          inner_html_sanitized: sanitize_svg(html).gsub(/\n|\s+\s+/, ''),
           is_outlined: html.include?('non-scaling-stroke')
         }
       end
@@ -56,12 +57,12 @@ module Shipyard
 
     def sanitize_svg(html)
       sanitize(html,
-               tags: %w(g circle rect path line polyline polygon ellipse),
-               attributes: %w(x x1 x2 y y1 y2 d cx cy r rx ry vector-effect points class fill stroke opacity))
+               tags: %w(g circle rect path line polyline polygon ellipse defs linearGradient),
+               attributes: %w(x x1 x2 y y1 y2 d cx cy r rx ry vector-effect points id class fill stroke opacity offset stop-color gradientTransform gradientUnits))
     end
 
     def svg_symbol(icon)
-      %(<g id="#{icon[:id]}" viewBox="#{icon[:view_box]}">#{icon[:inner_html]}</g>)
+      %(<g id="#{icon[:id]}" viewBox="#{icon[:view_box]}">#{icon[:inner_html_sanitized]}</g>)
     end
 
     def svg_template(html)
