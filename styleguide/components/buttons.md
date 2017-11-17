@@ -7,7 +7,8 @@ title: Shipyard Buttons
 ---
 
 ## Common Buttons
-<p class="text-light margin-bottom-md">Shipyard gives you more buttons than you can shake a stick at.</p>
+Shipyard gives you more buttons than you can shake a stick at.
+{: .section-description }
 
 <div class="margin-bottom-md">
   {% btn Default, :default, class: 'margin-right-xs' %}
@@ -32,7 +33,8 @@ title: Shipyard Buttons
 ---
 
 ## Secondary Buttons
-<p class="text-light margin-bottom-md">Useful when you have a button on a darker background.</p>
+Useful when you have a button on a darker background.
+{: .section-description }
 
 <div class="margin-bottom-md">
   {% btn Secondary, :secondary, class: 'margin-right-xs' %}
@@ -49,7 +51,8 @@ title: Shipyard Buttons
 ---
 
 ## Inverse Buttons
-<p class="text-light margin-bottom-md">Useful when you have a button on a darker background.</p>
+Useful when you have a button on a darker background.
+{: .section-description }
 
 <div class="box-secondary box-padding bg-gray-dark margin-bottom-md">
   {% btn Inverse, :inverse, class: 'margin-right-xs' %}
@@ -64,7 +67,8 @@ title: Shipyard Buttons
 ---
 
 ## Rounded Buttons
-<p class="text-light margin-bottom-md">Useful when you want a button with completely rounded corners.</p>
+Useful when you want a button with completely rounded corners.
+{: .section-description }
 
 <div class="margin-bottom-md">
   {% btn Default, :rounded, class: 'margin-right-xs' %}
@@ -81,7 +85,8 @@ title: Shipyard Buttons
 ---
 
 ## Loading Buttons
-<p class="text-light margin-bottom-md">Useful when you have a button that triggers an asynchronous action.</p>
+Useful when you have a button that triggers an asynchronous action.
+{: .section-description }
 
 <div class="margin-bottom-md">
   {% btn Default, :loading, class: 'margin-right-xs' %}
@@ -99,8 +104,10 @@ title: Shipyard Buttons
 ---
 
 ### Full-Screen Buttons
+Often really useful on mobile screens or in combination with other grids.
+{: .section-description }
 
-<div class="box-padding align-center">
+<div class="margin-bottom-md">
   {% btn Save Changes, :full %}
 </div>
 
@@ -111,7 +118,8 @@ title: Shipyard Buttons
 ---
 
 ### Common Buttons Tags
-<p class="text-light margin-bottom-md" markdown="1">The button classes can be applied to any type of html tag to achieve the desired result. The most common examples being the `button`, `a`, and `input` tags as seen in the example below.</p>
+The button classes can be applied to any type of html tag to achieve the desired result. The most common examples being the `button`, `a`, and `input` tags as seen in the example below.
+{: .section-description }
 
 <div class="margin-bottom-lg">
   {% btn Button %}
@@ -128,6 +136,7 @@ title: Shipyard Buttons
 ---
 
 ## Button Sizes (default: md)
+
 <div class="box-padding align-center">
   {% btn XX-Small, :xxs %}
   {% btn X-Small, :xs %}
