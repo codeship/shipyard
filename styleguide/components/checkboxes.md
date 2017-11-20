@@ -136,7 +136,7 @@ labels:
 
 ---
 
-## Checkbox Switches
+## Checkbox-Switches
 <p class="text-light margin-bottom-md">Switches are useful when the user has a choice to toggle on and off. Note: For the best UX, please make sure that the switch saves immediately each time it changes state.</p>
 
 <div class="box box-xs margin-bottom-sm padding-top-md padding-bottom-md padding-left-sm padding-right-sm padding-left-x1-lg padding-right-x1-lg">
@@ -161,7 +161,7 @@ labels:
 
 ---
 
-## Secondary Checkbox Switches
+## Secondary Checkbox-Switches
 <p class="text-light margin-bottom-md">Useful when you don't need to draw attention to the bright-red, off state.</p>
 
 <div class="box box-xs margin-bottom-sm padding-top-md padding-bottom-md padding-left-sm padding-right-sm padding-left-x1-lg padding-right-x1-lg">
@@ -186,15 +186,37 @@ labels:
 
 ---
 
-## Small Checkbox Switches
+## Checkbox-Switch Sizes
 <p class="text-light margin-bottom-md">Useful when you want to show checkboxes inline next to a text label.</p>
-<div>
-  <input id="small-switch-off" type="checkbox" class="input input-switch input-switch-sm align-middle" />
-  <label for="small-switch-off" class="text-sm text-light margin-left-xxs medium margin-right-md">Checkbox Switch Off</label>
+<ul class="input-list">
+  <li class="input-item">
+    <input id="small-switch-on" type="checkbox" class="input input-switch input-switch-sm align-middle" checked />
+    <label for="small-switch-on" class="text-sm text-light margin-left-xxs medium">Small</label>
+  </li>
+  <li class="input-item">
+    <input id="small-switch-on" type="checkbox" class="input input-switch align-middle" checked />
+    <label for="small-switch-on" class="text-sm text-light margin-left-xxs medium">Medium (Default)</label>
+  </li>
+  <li class="input-item">
+    <input id="small-switch-on" type="checkbox" class="input input-switch input-switch-lg align-middle" checked />
+    <label for="small-switch-on" class="text-sm text-light margin-left-xxs medium">Large</label>
+  </li>
+  <li class="input-item">
+    <input id="small-switch-on" type="checkbox" class="input input-switch input-switch-xl align-middle" checked />
+    <label for="small-switch-on" class="text-sm text-light margin-left-xxs medium">X-Large</label>
+  </li>
+</ul>
 
-  <input id="small-switch-on" type="checkbox" class="input input-switch input-switch-sm align-middle" checked />
-  <label for="small-switch-on" class="text-sm text-light margin-left-xxs medium">Checkbox Switch On</label>
-</div>
 ```html
+<!-- Input-Switch: Small -->
 <input type="checkbox" class="input input-switch input-switch-sm" />
+
+<!-- Input-Switch: Medium (Default) -->
+<input type="checkbox" class="input input-switch" />
+
+<!-- Input-Switch: Large -->
+<input type="checkbox" class="input input-switch input-switch-lg" />
+
+<!-- Input-Switch: X-Large -->
+<input type="checkbox" class="input input-switch input-switch-xl" />
 ```
