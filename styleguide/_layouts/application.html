@@ -13,13 +13,8 @@ navigation:
     <title>{{ page.title }}</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
     <meta name="theme-color" content="#20a5a8" />
-    {% if site.env == 'production' %}
-      {% css fonts media:screen rel:preload async %}
-      {% css syntax media:screen rel:preload async %}
-    {% else %}
-      {% css fonts media:screen %}
-      {% css syntax media:screen %}
-    {% endif %}
+    {% css fonts media:screen rel:preload async %}
+    {% css syntax media:screen rel:preload async %}
     {% css application media:screen %}
   </head>
   <body>
