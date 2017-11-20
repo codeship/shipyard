@@ -14,8 +14,12 @@
   transition: background-color 300ms ease, border-color 300ms ease, opacity 300ms ease
   background-clip: padding-box
   +appearance(none)
+  &:disabled
+    opacity: .5
+    color: $text-color-light
   &:hover, &:focus, .btn:hover &
-    border-color: $border-color-dark
+    &:not(:disabled)
+      border-color: $border-color-dark
 
   &-group
     +clearfix
