@@ -26,11 +26,9 @@
     color: $text-color
 
 @mixin btn-hover($color, $text-color: null, $border-color: null, $text-decoration: none)
-  &:hover, &:focus, &:active
+  &:hover, &:focus, &:active, &.btn-loading
     text-decoration: $text-decoration
     +btn-color($color, $text-color, $border-color)
-  &.btn-loading
-    +btn-color($color, transparent, $border-color)
 
 @mixin btn-size($size, $min-width: null)
   @if $size == xxs
@@ -177,7 +175,7 @@
   &-loading
     &, &:active, &:hover
       cursor: default
-      color: transparent
+      color: transparent !important
       &::after
         content: ''
         border-radius: 20px
