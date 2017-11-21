@@ -48,7 +48,7 @@ module Shipyard
           symbol: File.basename(file).gsub(/.svg/, '').underscore.to_sym,
           view_box: html[/viewBox="(.*?)"/, 1],
           outer_html: html.gsub(/\n|\s+\s+/, ''),
-          inner_html: html.gsub(/\n|\s+\s+/, ''),
+          inner_html: html[/<svg.*?>([\s\S]*?)<\/svg>/, 1],
           inner_html_sanitized: sanitize_svg(html).gsub(/\n|\s+\s+/, ''),
           is_outlined: html.include?('non-scaling-stroke')
         }
