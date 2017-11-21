@@ -12,10 +12,14 @@
   outline: none
   border: 2px solid $border-color
   transition: background-color 300ms ease, border-color 300ms ease, opacity 300ms ease
+  background-clip: padding-box
   +appearance(none)
-  +background-clip(padding-box)
+  &:disabled
+    opacity: .5
+    color: $text-color-light
   &:hover, &:focus, .btn:hover &
-    border-color: $border-color-dark
+    &:not(:disabled)
+      border-color: $border-color-dark
 
   &-group
     +clearfix
@@ -94,8 +98,8 @@
       &-top,
       &-middle,
       &-bottom
+        background-clip: initial
         border-color: rgba($bg-to-border, .37)
-        +background-clip(initial)
         &:hover, &:focus
           z-index: 1
           border-color: rgba($bg-to-border, .50)

@@ -26,7 +26,7 @@
     color: $text-color
 
 @mixin btn-hover($color, $text-color: null, $border-color: null, $text-decoration: none)
-  &:hover, &:focus, &:active
+  &:hover, &:focus, &:active, &.btn-loading
     text-decoration: $text-decoration
     +btn-color($color, $text-color, $border-color)
 
@@ -120,12 +120,27 @@
   &-secondary
     +btn-color(transparent, $text-color-light, darken($gray-lightest, 7%))
     +btn-hover(transparent, darken($text-color-light, 15%), darken($gray-lightest, 17%))
+    &.btn-loading
+      &, &:hover, &:active
+        &::after
+          border-color: $border-color
+          border-left-color: $teal-dark
     &-link
       +btn-color(transparent, $blue, darken($gray-lightest, 7%))
       +btn-hover(transparent, $blue-dark, darken($gray-lightest, 17%))
+      &.btn-loading
+        &, &:hover, &:active
+          &::after
+            border-color: $border-color
+            border-left-color: $teal-dark
     &-dark
       +btn-color(transparent, darken($text-color-light, 5%), lighten($gray-light, 5%))
       +btn-hover(transparent, darken($text-color-light, 20%), darken($gray-light, 5%))
+      &.btn-loading
+        &, &:hover, &:active
+          &::after
+            border-color: $border-color-lighter
+            border-left-color: $blue
 
   &-caution
     +btn-color($red-dark)
@@ -156,3 +171,15 @@
     &-secondary
       +btn-color(transparent, #fff, rgba(#fff,.2))
       +btn-hover(transparent, #fff, rgba(#fff,.5))
+
+  &-loading
+    &, &:active, &:hover
+      cursor: default
+      color: transparent !important
+      &::after
+        content: ''
+        border-radius: 20px
+        border: 2px solid rgba(#fff,.2)
+        border-left-color: #fff
+        animation: rotate 1s linear infinite
+        +absolute-center(20px)

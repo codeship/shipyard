@@ -27,20 +27,23 @@ description: Shipyard comes with several default icons that you're welcome to us
 <p class="text-light margin-bottom-md" markdown="1">If you need to style several paths inside of the icon, it's important to make sure you use the *injected* version of the icon.</p>
 
 <ul class="icon-list col-container">
-  {% iconitem :bitbucket, class: 'center' %}
-  {% iconitem :campfire_color, class: 'center' %}
-  {% iconitem :codeship, class: 'center' %}
-  {% iconitem :email_color, class: 'center' %}
-  {% iconitem :flowdock_color, class: 'center' %}
-  {% iconitem :github, class: 'center' %}
-  {% iconitem :gitlab, class: 'center' %}
-  {% iconitem :grove_color, class: 'center' %}
-  {% iconitem :hipchat, class: 'center' %}
-  {% iconitem :hipchat_color, class: 'center' %}
-  {% iconitem :slack, class: 'center' %}
-  {% iconitem :slack_color, class: 'center' %}
-  {% iconitem :webhook, class: 'center' %}
-  {% iconitem :webhook_color, class: 'center' %}
+  {% iconitem 'bitbucket', class: 'center gray icon-xl' %}
+  {% iconitem 'bitbucket-color', class: 'center icon-xl' %}
+  {% iconitem :campfire_color, class: 'center icon-xl' %}
+  {% iconitem :codeship, class: 'center icon-xl' %}
+  {% iconitem :email_color, class: 'center icon-xl' %}
+  {% iconitem :flowdock_color, class: 'center icon-xl' %}
+  {% iconitem :github, class: 'center icon-xl' %}
+  {% iconitem :gitlab, class: 'center icon-xl' %}
+  {% iconitem :gitlab_color, class: 'center icon-xl' %}
+  {% iconitem :google_app_engine, class: 'center icon-xl' %}
+  {% iconitem :grove_color, class: 'center icon-xl' %}
+  {% iconitem :hipchat, class: 'center icon-xl' %}
+  {% iconitem :hipchat_color, class: 'center icon-xl' %}
+  {% iconitem :slack, class: 'center icon-xl' %}
+  {% iconitem :slack_color, class: 'center icon-xl' %}
+  {% iconitem :webhook, class: 'center icon-xl' %}
+  {% iconitem :webhook_color, class: 'center icon-xl' %}
 </ul>
 
 ---

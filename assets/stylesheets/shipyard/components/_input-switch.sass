@@ -1,4 +1,4 @@
-$sizes: (sm: 18px)
+$sizes: (sm: 18px, lg: 22px, xl: 24px)
 
 +component('input-switch')
   outline: none
@@ -6,18 +6,21 @@ $sizes: (sm: 18px)
   position: relative
   display: inline-block
   border-radius: 50px
+  background-clip: initial
   +width-height(36px, 20px)
-  +background-clip(initial)
   &, &:hover, &:focus
     +btn-color($red, $border-color: transparent)
   &:checked
     &, &:hover, &:focus
-      +btn-color($green, $border-color: transparent)
+      &:not(:disabled)
+        +btn-color($green, $border-color: transparent)
 
   &-secondary
     +extend
-    &, &:hover, &:focus
-      +btn-color($border-color, $border-color: transparent)
+    +btn-color($border-color, $border-color: transparent)
+    &:hover, &:focus
+      &:not(:disabled)
+        +btn-color($border-color-dark, $border-color: transparent)
 
   // Checkbox Switch: White Dot
   &::after

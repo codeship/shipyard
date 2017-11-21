@@ -11,6 +11,10 @@ title: Shipyard Forms
   <input type="text" class="input input-text" placeholder=".input-text" />
 </div>
 <div class="input-group">
+  <label class="label">Textbox Disabled</label>
+  <input type="text" class="input input-text" placeholder=".input-text" disabled />
+</div>
+<div class="input-group">
   <label class="label">Textbox</label>
   <input type="text" class="input input-text input-full" placeholder=".input .input-text .input-full" />
 </div>
@@ -20,15 +24,28 @@ title: Shipyard Forms
   <input type="text" class="input input-text input-full input-text-connect-middle" placeholder=".input-text-connect-middle" />
   <input type="text" class="input input-text input-full input-text-connect-bottom" placeholder=".input-text-connect-bottom" />
 </div>
-<div class="input-group">
-  <label class="label">Select Boxes</label>
-  <div class="input-select-container">
-    <select class="input input-select">
-      <option class="input-option-placeholder">.input-select</option>
-      {% for i in (1..10) %}
-        <option>{{ i }}</option>
-      {% endfor %}
-    </select>
+<div class="col-container input-group">
+  <div class="col">
+    <label class="label">Select Boxes</label>
+    <div class="input-select-container">
+      <select class="input input-select">
+        <option class="input-option-placeholder">.input-select</option>
+        {% for i in (1..10) %}
+          <option>{{ i }}</option>
+        {% endfor %}
+      </select>
+    </div>
+  </div>
+  <div class="col">
+    <label class="label">Select Box Disabled</label>
+    <div class="input-select-container">
+      <select class="input input-select" disabled>
+        <option class="input-option-placeholder">.input-select</option>
+        {% for i in (1..10) %}
+          <option>{{ i }}</option>
+        {% endfor %}
+      </select>
+    </div>
   </div>
 </div>
 
