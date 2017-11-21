@@ -49,16 +49,9 @@ module Shipyard
           view_box: html[/viewBox="(.*?)"/, 1],
           outer_html: html.gsub(/\n|\s+\s+/, ''),
           inner_html: html[/<svg.*?>([\s\S]*?)<\/svg>/, 1],
-          inner_html_sanitized: sanitize_svg(html).gsub(/\n|\s+\s+/, ''),
           is_outlined: html.include?('non-scaling-stroke')
         }
       end
-    end
-
-    def sanitize_svg(html)
-      sanitize(html,
-               tags: %w(g circle rect path line polyline polygon ellipse),
-               attributes: %w(x x1 x2 y y1 y2 d cx cy r rx ry vector-effect points class fill stroke opacity))
     end
 
     def svg_symbol(icon)
