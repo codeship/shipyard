@@ -6,7 +6,7 @@
     <meta name="theme-color" content="#20a5a8" />
     <link type="text/css" rel="stylesheet" href="/shipyard/assets/fonts-ca42f2a84b2649c9fcccd16cc51fb6d1f915ba2a0988d30b91c3b84d8722b369.css" media="screen" rel="preload" async>
     <link type="text/css" rel="stylesheet" href="/shipyard/assets/syntax-40266bdc7fd995b8cddaeedab3817d78fcc5aed189b1d6a23a6827b437b71488.css" media="screen" rel="preload" async>
-    <link type="text/css" rel="stylesheet" href="/shipyard/assets/application-b2ebe183313844c6e3c490a8ed32b604e075e1b226f9fcfe8a7a7e656cd6f4b0.css" media="screen">
+    <link type="text/css" rel="stylesheet" href="/shipyard/assets/application-520ee355d1646adab08659a67c78152f070ffd1a9eaa2156cf6822fd2dc191ae.css" media="screen">
   </head>
   <body>
     <header class="header">
@@ -46,6 +46,10 @@
   <input type="text" class="input input-text" placeholder=".input-text" />
 </div>
 <div class="input-group">
+  <label class="label">Textbox Disabled</label>
+  <input type="text" class="input input-text" placeholder=".input-text" disabled />
+</div>
+<div class="input-group">
   <label class="label">Textbox</label>
   <input type="text" class="input input-text input-full" placeholder=".input .input-text .input-full" />
 </div>
@@ -55,33 +59,64 @@
   <input type="text" class="input input-text input-full input-text-connect-middle" placeholder=".input-text-connect-middle" />
   <input type="text" class="input input-text input-full input-text-connect-bottom" placeholder=".input-text-connect-bottom" />
 </div>
-<div class="input-group">
-  <label class="label">Select Boxes</label>
-  <div class="input-select-container">
-    <select class="input input-select">
-      <option class="input-option-placeholder">.input-select</option>
-      
-        <option>1</option>
-      
-        <option>2</option>
-      
-        <option>3</option>
-      
-        <option>4</option>
-      
-        <option>5</option>
-      
-        <option>6</option>
-      
-        <option>7</option>
-      
-        <option>8</option>
-      
-        <option>9</option>
-      
-        <option>10</option>
-      
-    </select>
+<div class="col-container input-group">
+  <div class="col">
+    <label class="label">Select Boxes</label>
+    <div class="input-select-container">
+      <select class="input input-select">
+        <option class="input-option-placeholder">.input-select</option>
+        
+          <option>1</option>
+        
+          <option>2</option>
+        
+          <option>3</option>
+        
+          <option>4</option>
+        
+          <option>5</option>
+        
+          <option>6</option>
+        
+          <option>7</option>
+        
+          <option>8</option>
+        
+          <option>9</option>
+        
+          <option>10</option>
+        
+      </select>
+    </div>
+  </div>
+  <div class="col">
+    <label class="label">Select Box Disabled</label>
+    <div class="input-select-container">
+      <select class="input input-select" disabled>
+        <option class="input-option-placeholder">.input-select</option>
+        
+          <option>1</option>
+        
+          <option>2</option>
+        
+          <option>3</option>
+        
+          <option>4</option>
+        
+          <option>5</option>
+        
+          <option>6</option>
+        
+          <option>7</option>
+        
+          <option>8</option>
+        
+          <option>9</option>
+        
+          <option>10</option>
+        
+      </select>
+    </div>
   </div>
 </div>
 

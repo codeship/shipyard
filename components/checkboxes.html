@@ -6,7 +6,7 @@
     <meta name="theme-color" content="#20a5a8" />
     <link type="text/css" rel="stylesheet" href="/shipyard/assets/fonts-ca42f2a84b2649c9fcccd16cc51fb6d1f915ba2a0988d30b91c3b84d8722b369.css" media="screen" rel="preload" async>
     <link type="text/css" rel="stylesheet" href="/shipyard/assets/syntax-40266bdc7fd995b8cddaeedab3817d78fcc5aed189b1d6a23a6827b437b71488.css" media="screen" rel="preload" async>
-    <link type="text/css" rel="stylesheet" href="/shipyard/assets/application-b2ebe183313844c6e3c490a8ed32b604e075e1b226f9fcfe8a7a7e656cd6f4b0.css" media="screen">
+    <link type="text/css" rel="stylesheet" href="/shipyard/assets/application-520ee355d1646adab08659a67c78152f070ffd1a9eaa2156cf6822fd2dc191ae.css" media="screen">
   </head>
   <body>
     <header class="header">
@@ -238,7 +238,7 @@
 
 <hr />
 
-<h2 id="checkbox-switches">Checkbox Switches</h2>
+<h2 id="checkbox-switches">Checkbox-Switches</h2>
 <p class="text-light margin-bottom-md">Switches are useful when the user has a choice to toggle on and off. Note: For the best UX, please make sure that the switch saves immediately each time it changes state.</p>
 
 <div class="box box-xs margin-bottom-sm padding-top-md padding-bottom-md padding-left-sm padding-right-sm padding-left-x1-lg padding-right-x1-lg">
@@ -262,7 +262,7 @@
 
 <hr />
 
-<h2 id="secondary-checkbox-switches">Secondary Checkbox Switches</h2>
+<h2 id="secondary-checkbox-switches">Secondary Checkbox-Switches</h2>
 <p class="text-light margin-bottom-md">Useful when you don't need to draw attention to the bright-red, off state.</p>
 
 <div class="box box-xs margin-bottom-sm padding-top-md padding-bottom-md padding-left-sm padding-right-sm padding-left-x1-lg padding-right-x1-lg">
@@ -281,21 +281,43 @@
     </div>
   </div>
 </div>
-<div class="language-html highlighter-rouge"><div class="highlight"><pre class="code-block"><code><span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"checkbox"</span> <span class="na">class=</span><span class="s">"input input-switch"</span> <span class="nt">/&gt;</span>
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="code-block"><code><span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"checkbox"</span> <span class="na">class=</span><span class="s">"input input-switch-secondary"</span> <span class="nt">/&gt;</span>
 </code></pre></div></div>
 
 <hr />
 
-<h2 id="small-checkbox-switches">Small Checkbox Switches</h2>
+<h2 id="checkbox-switch-sizes">Checkbox-Switch Sizes</h2>
 <p class="text-light margin-bottom-md">Useful when you want to show checkboxes inline next to a text label.</p>
-<div>
-  <input id="small-switch-off" type="checkbox" class="input input-switch input-switch-sm align-middle" />
-  <label for="small-switch-off" class="text-sm text-light margin-left-xxs medium margin-right-md">Checkbox Switch Off</label>
+<ul class="input-list">
+  <li class="input-item">
+    <input id="small-switch-on" type="checkbox" class="input input-switch input-switch-sm align-middle" checked="" />
+    <label for="small-switch-on" class="text-sm text-light margin-left-xxs medium">Small</label>
+  </li>
+  <li class="input-item">
+    <input id="small-switch-on" type="checkbox" class="input input-switch align-middle" checked="" />
+    <label for="small-switch-on" class="text-sm text-light margin-left-xxs medium">Medium (Default)</label>
+  </li>
+  <li class="input-item">
+    <input id="small-switch-on" type="checkbox" class="input input-switch input-switch-lg align-middle" checked="" />
+    <label for="small-switch-on" class="text-sm text-light margin-left-xxs medium">Large</label>
+  </li>
+  <li class="input-item">
+    <input id="small-switch-on" type="checkbox" class="input input-switch input-switch-xl align-middle" checked="" />
+    <label for="small-switch-on" class="text-sm text-light margin-left-xxs medium">X-Large</label>
+  </li>
+</ul>
 
-  <input id="small-switch-on" type="checkbox" class="input input-switch input-switch-sm align-middle" checked="" />
-  <label for="small-switch-on" class="text-sm text-light margin-left-xxs medium">Checkbox Switch On</label>
-</div>
-<div class="language-html highlighter-rouge"><div class="highlight"><pre class="code-block"><code><span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"checkbox"</span> <span class="na">class=</span><span class="s">"input input-switch input-switch-sm"</span> <span class="nt">/&gt;</span>
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="code-block"><code><span class="c">&lt;!-- Input-Switch: Small --&gt;</span>
+<span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"checkbox"</span> <span class="na">class=</span><span class="s">"input input-switch input-switch-sm"</span> <span class="nt">/&gt;</span>
+
+<span class="c">&lt;!-- Input-Switch: Medium (Default) --&gt;</span>
+<span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"checkbox"</span> <span class="na">class=</span><span class="s">"input input-switch"</span> <span class="nt">/&gt;</span>
+
+<span class="c">&lt;!-- Input-Switch: Large --&gt;</span>
+<span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"checkbox"</span> <span class="na">class=</span><span class="s">"input input-switch input-switch-lg"</span> <span class="nt">/&gt;</span>
+
+<span class="c">&lt;!-- Input-Switch: X-Large --&gt;</span>
+<span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"checkbox"</span> <span class="na">class=</span><span class="s">"input input-switch input-switch-xl"</span> <span class="nt">/&gt;</span>
 </code></pre></div></div>
 </div>
     <footer class="align-center text-lightest">
