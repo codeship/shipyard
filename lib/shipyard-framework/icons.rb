@@ -57,8 +57,8 @@ module Shipyard
 
     def sanitize_svg(html)
       sanitize(html,
-               tags: %w(g circle rect path line polyline polygon ellipse defs linearGradient),
-               attributes: %w(x x1 x2 y y1 y2 d cx cy r rx ry vector-effect points id class fill stroke opacity offset stop-color gradientTransform gradientUnits))
+               tags: %w(g circle rect path line polyline polygon ellipse),
+               attributes: %w(x x1 x2 y y1 y2 d cx cy r rx ry vector-effect points class fill stroke opacity))
     end
 
     def svg_symbol(icon)
