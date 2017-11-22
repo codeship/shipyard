@@ -36,9 +36,6 @@ hr
   &-color
     height: 120px
     border-radius: 2px 2px 0 0
-    display: flex
-    align-items: center
-    justify-content: center
     color: transparent
     transition: 300ms color ease
     +when('box:hover')
@@ -60,11 +57,8 @@ hr
 +component('utilities-grid')
   &-box
     width: 100%
-    display: flex
     flex-grow: 1
     min-height: 30px
-    flex-direction: column
-    justify-content: center
 
 +component('utilities-typography')
   &-hr

@@ -9,17 +9,15 @@
     overflow: hidden
 
   &-container
+    @extend .col-center
     +z-index
     top: 0
     left: 0
     right: 0
     bottom: 0
     padding: 10px
-    display: flex
     overflow: auto
     position: fixed
-    align-items: center
-    justify-content: center
     background: rgba($gray-darkest,.9)
     transition: 300ms padding ease
     -webkit-overflow-scrolling: touch
