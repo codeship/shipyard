@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
+  <defs>
+    <linearGradient id="bitbucket-white-gradient" x1="16.36" y1="6.99" x2="3.79" y2="16.81" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#fff" stop-opacity="0.3" />
+      <stop offset="0.6" stop-color="#fff" />
+    </linearGradient>
+  </defs>
+  <path class="icon-bitbucket-white" fill="#fff" d="M6.35,10.35l-.9-4.71h9.86L16,1.4a.51.51,0,0,0-.41-.58H.52a.51.51,0,0,0-.52.5H0V1.4L2.18,14.61a.7.7,0,0,0,.23.41Z" />
+  <path class="icon-bitbucket-white-gradient" fill="url(#bitbucket-white-gradient)" d="M9.68,10.35H6.35L2.18,14.61a.7.7,0,0,0,.23.41h0a.8.8,0,0,0,.27.15l.18,0H13.3a.51.51,0,0,0,.52-.43l1.49-9.12H10.45Z" />
+</svg>

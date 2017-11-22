@@ -5,6 +5,6 @@
       <stop offset="1" stop-color="#2684ff" />
     </linearGradient>
   </defs>
-  <path class="icon-bitbucket" fill="#2684ff" d="M.52.81a.51.51,0,0,0-.52.5A.28.28,0,0,0,0,1.4L2.18,14.61a.69.69,0,0,0,.68.58H13.3a.51.51,0,0,0,.52-.43L16,1.4a.5.5,0,0,0-.42-.58H.52Zm9.16,9.54H6.35l-.9-4.71h5Z" />
-  <path class="icon-bitbucket-gradient" fill="url(#bitbucket-color-gradient)" d="M15.3,5.64H10.49l-.81,4.71H6.35L2.42,15a.66.66,0,0,0,.44.17H13.31a.51.51,0,0,0,.51-.43Z"/>
+  <path class="icon-bitbucket-color" fill="#2684ff" d="M.52.81a.51.51,0,0,0-.52.5A.28.28,0,0,0,0,1.4L2.18,14.61a.69.69,0,0,0,.68.58H13.3a.51.51,0,0,0,.52-.43L16,1.4a.5.5,0,0,0-.42-.58H.52Zm9.16,9.54H6.35l-.9-4.71h5Z" />
+  <path class="icon-bitbucket-color-gradient" fill="url(#bitbucket-color-gradient)" d="M15.3,5.64H10.49l-.81,4.71H6.35L2.42,15a.66.66,0,0,0,.44.17H13.31a.51.51,0,0,0,.51-.43Z"/>
 </svg>
