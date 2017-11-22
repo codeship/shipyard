@@ -17,8 +17,9 @@ directions: [left,right]
   <div class="col">
     <div class="align-center">
       {% for option in page.options %}
-        <div class="{{ page.box_classes }} margin-{{ option }} margin-bottom-md">.margin-{{ option }}</div>
+        <div class="{{ page.box_classes }} margin-{{ option }}">.margin-{{ option }}</div>
       {% endfor %}
+      <div class="{{ page.box_classes }} col-55 col-x1-75 col-x2-85 margin-auto">.margin-auto</div>
     </div>
   </div>
 </div>

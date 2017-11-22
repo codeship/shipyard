@@ -1,3 +1,8 @@
+.margin
+  +all-media-sizes
+    &-auto
+      margin: auto
+
 @each $property in (margin, padding)
   .#{$property}
     $sizes: (none: 0, xxs: 5px, xs: 10px, sm: 15px, md: 20px, lg: 30px, xl: 40px, xxl: 50px)

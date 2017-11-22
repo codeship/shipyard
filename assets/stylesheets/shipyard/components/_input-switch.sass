@@ -1,4 +1,4 @@
-$sizes: (sm: 18px, lg: 22px, xl: 24px)
+$sizes: (sm: 18px, md: 20px, lg: 22px, xl: 24px)
 
 +component('input-switch')
   outline: none
@@ -37,8 +37,9 @@ $sizes: (sm: 18px, lg: 22px, xl: 24px)
     transform: translatex(100%)
 
   // Checkbox Switch: Sizes
-  @each $name, $size in $sizes
-    &-#{$name}
-      +width-height($size * 2 - 4px, $size)
-      &::after
-        +width-height($size - 4px)
+  +all-media-sizes
+    @each $name, $size in $sizes
+      &-#{$name}
+        +width-height($size * 2 - 4px, $size)
+        &::after
+          +width-height($size - 4px)

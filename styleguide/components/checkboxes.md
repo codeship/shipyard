@@ -186,8 +186,8 @@ labels:
 
 ---
 
-## Checkbox-Switch Sizes
-<p class="text-light margin-bottom-md">Useful when you want to show checkboxes inline next to a text label.</p>
+## Checkbox-Switch Sizes `input-switch-{ x1..x4 }-{ sm..xl }`
+<p class="text-light margin-bottom-md">Each size can be used or altered at any breakpoint.</p>
 <ul class="input-list">
   <li class="input-item">
     <input id="small-switch-on" type="checkbox" class="input input-switch input-switch-sm align-middle" checked />
