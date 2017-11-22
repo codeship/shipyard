@@ -27,6 +27,7 @@ description: Shipyard comes with several default icons that you're welcome to us
 <p class="text-light margin-bottom-md" markdown="1">If you need to style several paths inside of the icon, it's important to make sure you use the *injected* version of the icon.</p>
 
 <ul class="icon-list col-container">
+  {% iconitem 'bitbucket-white', class: 'center icon-xl' %}
   {% iconitem 'bitbucket', class: 'center gray icon-xl' %}
   {% iconitem 'bitbucket-color', class: 'center icon-xl' %}
   {% iconitem :campfire_color, class: 'center icon-xl' %}
