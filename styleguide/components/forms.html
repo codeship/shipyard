@@ -6,17 +6,19 @@ title: Shipyard Forms
 
 <hr />
 
-<div class="input-group">
-  <label class="label">Textbox</label>
-  <input type="text" class="input input-text" placeholder=".input-text" />
-</div>
-<div class="input-group">
-  <label class="label">Textbox Disabled</label>
-  <input type="text" class="input input-text" placeholder=".input-text" disabled />
-</div>
-<div class="input-group">
-  <label class="label">Textbox</label>
-  <input type="text" class="input input-text input-full" placeholder=".input .input-text .input-full" />
+<div class="col-container input-group">
+  <div class="col">
+    <label class="label">Textbox</label>
+    <input type="text" class="input input-text input-full" placeholder=".input-text" />
+  </div>
+  <div class="col">
+    <label class="label">Textbox Read-Only</label>
+    <input type="text" class="input input-text input-full input-readonly" placeholder=".input-readonly" value="copy-paste-me" readonly />
+  </div>
+  <div class="col">
+    <label class="label">Textbox Disabled</label>
+    <input type="text" class="input input-text input-full" placeholder=".input-text" disabled />
+  </div>
 </div>
 <div class="input-group">
   <label class="label">Connected Textboxes</label>
