@@ -6,7 +6,7 @@
     <meta name="theme-color" content="#20a5a8" />
     <link type="text/css" rel="stylesheet" href="/shipyard/assets/fonts-ca42f2a84b2649c9fcccd16cc51fb6d1f915ba2a0988d30b91c3b84d8722b369.css" media="screen" rel="preload" async>
     <link type="text/css" rel="stylesheet" href="/shipyard/assets/syntax-40266bdc7fd995b8cddaeedab3817d78fcc5aed189b1d6a23a6827b437b71488.css" media="screen" rel="preload" async>
-    <link type="text/css" rel="stylesheet" href="/shipyard/assets/application-fd21d06bdd4b8f953fc378a8dbc24dd98396bac888f2f7376f415a2ed6a7ee41.css" media="screen">
+    <link type="text/css" rel="stylesheet" href="/shipyard/assets/application-df80c7037be9d98a68f479d187a22a982d7feccabd4c7aab818f31875e38dfa0.css" media="screen">
   </head>
   <body>
     <header class="header">
@@ -37,28 +37,49 @@
     </header>
     <div class="container"><h1>Shipyard Forms</h1>
 
+<hr />
 
+<div class="col-container input-group">
+  <div class="col col-100 col-x1-33 margin-bottom-sm margin-bottom-x1-none">
+    <label class="label">Textbox</label>
+    <input type="text" class="input input-text input-full" placeholder=".input-text" />
+  </div>
+  <div class="col col-100 col-x1-33 margin-bottom-sm margin-bottom-x1-none">
+    <label class="label">Textbox Read-Only</label>
+    <input type="text" class="input input-text input-full input-readonly" placeholder=".input-readonly" value="copy-paste-me" readonly="" />
+  </div>
+  <div class="col col-100 col-x1-33 margin-bottom-sm margin-bottom-x1-none">
+    <label class="label">Textbox Disabled</label>
+    <input type="text" class="input input-text input-full" placeholder=".input-text" disabled="" />
+  </div>
+</div>
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="code-block"><code><span class="c">&lt;!-- Default Textbox --&gt;</span>
+<span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"text"</span> <span class="na">class=</span><span class="s">"input input-text"</span> <span class="nt">/&gt;</span>
+
+<span class="c">&lt;!-- Read-Only Textbox --&gt;</span>
+<span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"text"</span> <span class="na">class=</span><span class="s">"input input-text input-readonly"</span> <span class="na">readonly</span> <span class="nt">/&gt;</span>
+
+<span class="c">&lt;!-- Disabled Textbox --&gt;</span>
+<span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"text"</span> <span class="na">class=</span><span class="s">"input input-text"</span> <span class="na">disabled</span> <span class="nt">/&gt;</span>
+</code></pre></div></div>
 
 <hr />
 
+<h2 id="connected-textboxes">Connected Textboxes</h2>
+
 <div class="input-group">
-  <label class="label">Textbox</label>
-  <input type="text" class="input input-text" placeholder=".input-text" />
-</div>
-<div class="input-group">
-  <label class="label">Textbox Disabled</label>
-  <input type="text" class="input input-text" placeholder=".input-text" disabled />
-</div>
-<div class="input-group">
-  <label class="label">Textbox</label>
-  <input type="text" class="input input-text input-full" placeholder=".input .input-text .input-full" />
-</div>
-<div class="input-group">
-  <label class="label">Connected Textboxes</label>
   <input type="text" class="input input-text input-full input-text-connect-top" placeholder=".input-text-connect-top" />
   <input type="text" class="input input-text input-full input-text-connect-middle" placeholder=".input-text-connect-middle" />
   <input type="text" class="input input-text input-full input-text-connect-bottom" placeholder=".input-text-connect-bottom" />
 </div>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="code-block"><code><span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"text"</span> <span class="na">class=</span><span class="s">"input input-text input-text-connect-top"</span> <span class="nt">/&gt;</span>
+<span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"text"</span> <span class="na">class=</span><span class="s">"input input-text input-text-connect-middle"</span> <span class="nt">/&gt;</span>
+<span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"text"</span> <span class="na">class=</span><span class="s">"input input-text input-text-connect-bottom"</span> <span class="nt">/&gt;</span>
+</code></pre></div></div>
+
+<hr />
+
 <div class="col-container input-group">
   <div class="col">
     <label class="label">Select Boxes</label>
@@ -92,7 +113,7 @@
   <div class="col">
     <label class="label">Select Box Disabled</label>
     <div class="input-select-container">
-      <select class="input input-select" disabled>
+      <select class="input input-select" disabled="">
         <option class="input-option-placeholder">.input-select</option>
         
           <option>1</option>
@@ -231,8 +252,6 @@
     </div>
   </div>
 </div>
-
-<hr />
 </div>
     <footer class="align-center text-lightest">
       &copy; Shipyard Framework 2017
