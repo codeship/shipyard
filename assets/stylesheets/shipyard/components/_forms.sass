@@ -18,7 +18,7 @@
     opacity: .5
     color: $text-color-light
   &:hover, &:focus, .btn:hover &
-    &:not(:disabled)
+    &:not(:disabled):not(:read-only)
       border-color: $border-color-dark
 
   &-group
@@ -132,6 +132,10 @@
       +sub-component-styles(required-corner)
       +when('error')
         +sub-component-styles(required-corner-error)
+
+  // Input: Read-Only State
+  &-readonly
+    background-color: $gray-lighter
 
   &-full
     width: 100%

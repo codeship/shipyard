@@ -4,26 +4,51 @@ title: Shipyard Forms
 
 {% include page-heading.html page=page %}
 
-<hr />
+---
+
+<div class="col-container input-group">
+  <div class="col col-100 col-x1-33 margin-bottom-sm margin-bottom-x1-none">
+    <label class="label">Textbox</label>
+    <input type="text" class="input input-text input-full" placeholder=".input-text" />
+  </div>
+  <div class="col col-100 col-x1-33 margin-bottom-sm margin-bottom-x1-none">
+    <label class="label">Textbox Read-Only</label>
+    <input type="text" class="input input-text input-full input-readonly" placeholder=".input-readonly" value="copy-paste-me" readonly />
+  </div>
+  <div class="col col-100 col-x1-33 margin-bottom-sm margin-bottom-x1-none">
+    <label class="label">Textbox Disabled</label>
+    <input type="text" class="input input-text input-full" placeholder=".input-text" disabled />
+  </div>
+</div>
+```html
+<!-- Default Textbox -->
+<input type="text" class="input input-text" />
+
+<!-- Read-Only Textbox -->
+<input type="text" class="input input-text input-readonly" readonly />
+
+<!-- Disabled Textbox -->
+<input type="text" class="input input-text" disabled />
+```
+
+---
+
+## Connected Textboxes
 
 <div class="input-group">
-  <label class="label">Textbox</label>
-  <input type="text" class="input input-text" placeholder=".input-text" />
-</div>
-<div class="input-group">
-  <label class="label">Textbox Disabled</label>
-  <input type="text" class="input input-text" placeholder=".input-text" disabled />
-</div>
-<div class="input-group">
-  <label class="label">Textbox</label>
-  <input type="text" class="input input-text input-full" placeholder=".input .input-text .input-full" />
-</div>
-<div class="input-group">
-  <label class="label">Connected Textboxes</label>
   <input type="text" class="input input-text input-full input-text-connect-top" placeholder=".input-text-connect-top" />
   <input type="text" class="input input-text input-full input-text-connect-middle" placeholder=".input-text-connect-middle" />
   <input type="text" class="input input-text input-full input-text-connect-bottom" placeholder=".input-text-connect-bottom" />
 </div>
+
+```html
+<input type="text" class="input input-text input-text-connect-top" />
+<input type="text" class="input input-text input-text-connect-middle" />
+<input type="text" class="input input-text input-text-connect-bottom" />
+```
+
+---
+
 <div class="col-container input-group">
   <div class="col">
     <label class="label">Select Boxes</label>
@@ -49,7 +74,7 @@ title: Shipyard Forms
   </div>
 </div>
 
-<hr />
+---
 
 <div class="input-group">
   <label class="label">Textbox</label>
@@ -57,14 +82,14 @@ title: Shipyard Forms
   <input type="text" class="input input-text input-full" placeholder=".input .input-text .input-full" />
 </div>
 
-<hr />
+---
 
 <h2 class="margin-bottom-xs">Input Boxes</h2>
 <div class="input-box">
   <input type="text" class="input input-text input-full" placeholder=".input .input-text .input-full" />
 </div>
 
-<hr />
+---
 
 <h2 class="margin-bottom-xs">Required Fields</h2>
 <div class="col-container">
@@ -87,7 +112,7 @@ title: Shipyard Forms
   </div>
 </div>
 
-<hr />
+---
 
 <h2 class="margin-bottom-xs">Form Errors</h2>
 <div class="form-error-container">
@@ -124,5 +149,3 @@ title: Shipyard Forms
     </div>
   </div>
 </div>
-
-<hr />
