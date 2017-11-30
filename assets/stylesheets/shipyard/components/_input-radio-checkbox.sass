@@ -19,6 +19,8 @@
       color: $blue-dark
     +when('radio:checked ~, checkbox:checked ~')
       color: $green-dark
+    +when('radio-caution:checked ~, checkbox-caution:checked ~')
+      color: $red-dark
 
     &-inverse
       +extend('label')
@@ -60,6 +62,10 @@
         position: absolute
         background-color: #fff
         transition: opacity 300ms ease, background-color 300ms ease
+
+    &-caution
+      &:checked
+        +btn-color($red)
 
     // Radio: Inverse
     &-inverse

@@ -13,7 +13,8 @@ labels:
 ---
 
 ## Inline Checkbox Lists
-<p class="text-light margin-bottom-md">Useful when you want to group a series of checkboxes together on a single line.</p>
+Useful when you want to group a series of checkboxes together on a single line.
+{: .section-description }
 
 <ul class="input-list margin-bottom-lg">
   {% for label in page.labels %}
@@ -36,7 +37,8 @@ labels:
 ---
 
 ## Stacked Checkbox Lists
-<p class="text-light margin-bottom-md">Useful when you want to group a series of checkboxes together in a list (stacked by default).</p>
+Useful when you want to group a series of checkboxes together in a list (stacked by default).
+{: .section-description }
 
 <div class="col-container margin-bottom-sm margin-bottom-x1-lg">
   <div class="col col-100 col-x1-50 margin-bottom-sm margin-bottom-x1-none">
@@ -64,6 +66,7 @@ labels:
     </div>
   </div>
 </div>
+
 ```html
 <ul class="input-list">
   <li class="input-item">
@@ -76,7 +79,8 @@ labels:
 ---
 
 ## Inverse Checkbox Lists
-<p class="text-light margin-bottom-md">Useful when the checkboxes are displayed on a dark background.</p>
+Useful when the checkboxes are displayed on a dark background.
+{: .section-description }
 
 <div class="box-secondary box-padding bg-gray-darker">
   <ul class="input-list">
@@ -94,6 +98,30 @@ labels:
   <li class="input-item">
     <input id="checkbox-id" name="checkbox-name" type="checkbox" class="input input-checkbox input-checkbox-inverse" checked />
     <label for="checkbox-id" class="input-label-inverse">Checkbox Inverse Label</label>
+  </li>
+</ul>
+```
+
+---
+
+## Caution Checkbox Lists
+Useful when you want to the user to proceed with caution about the choices they're making.
+{: .section-description }
+
+<ul class="input-list">
+  {% for label in page.labels %}
+    <li class="input-item">
+      <input id="checkbox-caution-{{ forloop.index }}" name="checkbox-list" type="checkbox" class="input input-checkbox input-checkbox-caution" {% if forloop.index == 1 %}checked{% endif %} />
+      <label for="checkbox-caution-{{ forloop.index }}" class="input-label">{{ label }}</label>
+    </li>
+  {% endfor %}
+</ul>
+
+```html
+<ul class="input-list">
+  <li class="input-item">
+    <input id="checkbox-id" name="checkbox-name" type="checkbox" class="input input-checkbox input-checkbox-caution" checked />
+    <label for="checkbox-id" class="input-label">Checkbox Label</label>
   </li>
 </ul>
 ```
@@ -137,7 +165,8 @@ labels:
 ---
 
 ## Checkbox-Switches
-<p class="text-light margin-bottom-md">Switches are useful when the user has a choice to toggle on and off. Note: For the best UX, please make sure that the switch saves immediately each time it changes state.</p>
+Switches are useful when the user has a choice to toggle on and off. Note: For the best UX, please make sure that the switch saves immediately each time it changes state.
+{: .section-description }
 
 <div class="box box-xs margin-bottom-sm padding-top-md padding-bottom-md padding-left-sm padding-right-sm padding-left-x1-lg padding-right-x1-lg">
   <div class="col-container-nowrap">
@@ -155,6 +184,7 @@ labels:
     </div>
   </div>
 </div>
+
 ```html
 <input type="checkbox" class="input input-switch" />
 ```
@@ -162,7 +192,8 @@ labels:
 ---
 
 ## Secondary Checkbox-Switches
-<p class="text-light margin-bottom-md">Useful when you don't need to draw attention to the bright-red, off state.</p>
+Useful when you don't need to draw attention to the bright-red, off state.
+{: .section-description }
 
 <div class="box box-xs margin-bottom-sm padding-top-md padding-bottom-md padding-left-sm padding-right-sm padding-left-x1-lg padding-right-x1-lg">
   <div class="col-container-nowrap">
@@ -187,7 +218,9 @@ labels:
 ---
 
 ## Checkbox-Switch Sizes `input-switch-{ x1..x4 }-{ sm..xl }`
-<p class="text-light margin-bottom-md">Each size can be used or altered at any breakpoint.</p>
+Each size can be used or altered at any breakpoint.
+{: .section-description }
+
 <ul class="input-list">
   <li class="input-item">
     <input id="small-switch-on" type="checkbox" class="input input-switch input-switch-sm align-middle" checked />

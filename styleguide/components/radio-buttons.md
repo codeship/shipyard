@@ -100,6 +100,30 @@ labels:
 
 ---
 
+## Caution Radio-Button Lists
+Useful when you want to the user to proceed with caution about the choices they're making.
+{: .section-description }
+
+<ul class="input-list">
+  {% for label in page.labels %}
+    <li class="input-item">
+      <input id="radio-caution-{{ forloop.index }}" name="radio-caution-list" type="radio" class="input input-radio input-radio-caution" {% if forloop.index == 1 %}checked{% endif %} />
+      <label for="radio-caution-{{ forloop.index }}" class="input-label">{{ label }}</label>
+    </li>
+  {% endfor %}
+</ul>
+
+```html
+<ul class="input-list">
+  <li class="input-item">
+    <input id="radio-id" name="radio-name" type="radio" class="input input-radio input-radio-caution" checked />
+    <label for="radio-id" class="input-label">Radio Button Caution Label</label>
+  </li>
+</ul>
+```
+
+---
+
 ## Radio-Checkbox Button Lists
 <p class="text-light margin-bottom-md">Yep, that's exactly what it sounds like. It behaves like a radio button but looks a bit like a checkbox. Fancy!</p>
 
