@@ -125,12 +125,16 @@ The button classes can be applied to any type of html tag to achieve the desired
   {% btn Button %}
   <a href="#" class="btn">Link</a>
   <input type="button" class="btn" value="Input" />
+  <input type="submit" class="btn" value="Submit" />
+  <input type="reset" class="btn" value="Reset" />
 </div>
 
 ```html
 {% btn Button %}
 <a href="#" class="btn">Link</a>
 <input type="button" class="btn" value="Input" />
+<input type="submit" class="btn" value="Input" />
+<input type="reset" class="btn" value="Input" />
 ```
 
 ---
