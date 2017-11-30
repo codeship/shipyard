@@ -6,7 +6,7 @@ text_shades: [normal, light, lighter, lightest]
 
 {% include page-heading.html page=page %}
 
-<hr />
+---
 
 <div class="col-container">
   <div class="col">

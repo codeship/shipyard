@@ -13,7 +13,8 @@ example_offsets: [5,10,15,20,25,30,35,40,45,50,55,60,65,70,75]
 ---
 
 ### Flexible Columns `.col`
-<p class="text-light margin-bottom-md">By default, the flexbox-based grid will automatically size each column inside the container.</p>
+By default, the flexbox-based grid will automatically size each column inside the container.
+{: .section-description }
 
 {% for example in page.example_flex_columns %}
   <div class="{{ page.container_classes }}">
@@ -45,7 +46,8 @@ example_offsets: [5,10,15,20,25,30,35,40,45,50,55,60,65,70,75]
 ---
 
 ### Column Sizes `.col-{ n }`
-<p class="text-light margin-bottom-md" markdown="1">The column sizes are percentage-based and available in any size from `5-100` in increments of 5.</p>
+The column sizes are percentage-based and available in any size from `5-100` in increments of 5.
+{: .section-description }
 
 {% for example in page.example_sizes %}
   <div class="{{ page.container_classes }}">
@@ -76,7 +78,8 @@ example_offsets: [5,10,15,20,25,30,35,40,45,50,55,60,65,70,75]
 ---
 
 ### Offset Columns `.col-offset-{ n }`
-<p class="text-light margin-bottom-md">Useful when you need to push columns to the right to fill some empty space.</p>
+Useful when you need to push columns to the right to fill some empty space.
+{: .section-description }
 
 {% assign example_offsets = page.example_offsets | reverse %}
 {% for i in example_offsets %}
@@ -101,7 +104,8 @@ example_offsets: [5,10,15,20,25,30,35,40,45,50,55,60,65,70,75]
 ---
 
 ### Responsive Columns `.col-{ x1..x4 }-{ n }`
-<p class="text-light margin-bottom-md" markdown="1">Useful when you want to build a grid that works for any size of screen.</p>
+Useful when you want to build a grid that works for any size of screen.
+{: .section-description }
 
 <div class="{{ page.container_classes }}">
   {% for i in (1..7) %}
@@ -131,7 +135,8 @@ example_offsets: [5,10,15,20,25,30,35,40,45,50,55,60,65,70,75]
 ---
 
 ### Take-Up-The-Rest Columns `.col-container-nowrap`
-<p class="text-light margin-bottom-md" markdown="1">This type of layout is useful in all kinds of scenarios, especially when you have the auto-sized column contains some kind of call-to-action.</p>
+This type of layout is useful in all kinds of scenarios, especially when you have the auto-sized column contains some kind of call-to-action.
+{: .section-description }
 
 <div class="{{ page.container_classes | replace: 'col-container', 'col-container-nowrap' }}">
   <div class="col col-100">
@@ -156,7 +161,8 @@ example_offsets: [5,10,15,20,25,30,35,40,45,50,55,60,65,70,75]
 ---
 
 ### Nested Columns
-<p class="text-light margin-bottom-md" markdown="1">Nested grids can be tricky to build and somewhat fragile by nature. For the best results, pay special attention to how you want each column to respond at various screen sizes and test each breakpoint thoroughly.</p>
+Nested grids can be tricky to build and somewhat fragile by nature. For the best results, pay special attention to how you want each column to respond at various screen sizes and test each breakpoint thoroughly.
+{: .section-description }
 
 <div class="{{ page.container_classes }}">
   <div class="col col-40 display-flex">
@@ -191,7 +197,8 @@ example_offsets: [5,10,15,20,25,30,35,40,45,50,55,60,65,70,75]
 ---
 
 ### Reversible Columns `.flex-{ x1..x4 }-{ col | col-reverse | row | row-reverse }`
-<p class="text-light margin-bottom-md" markdown="1">Useful when the flow of the content should be different at a certain breakpoint.</p>
+Useful when the flow of the content should be different at a certain breakpoint.
+{: .section-description }
 
 <div class="{{ page.container_classes }}">
   <div class="col flex-col flex-x2-col-reverse">

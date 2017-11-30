@@ -41,7 +41,8 @@ directions:
 ---
 
 ## Responsive Options `.rounded-{ breakpoint }-{ direction }`
-<p class="text-light margin-bottom-md">The examples below demonstrate the utility classes on each breakpoint.</p>
+The examples below demonstrate the utility classes on each breakpoint.
+{: .section-description }
 
 ```html
 {% for direction in page.directions -%}
