@@ -1,7 +1,7 @@
 ---
 title: Shipyard Utilities
 description: The utility classes below can be applied to any component to override or extend the base styles of the component.
-utilities: [Responsive, Grid, Typography, Margin & Padding, Colors, Border Radius]
+utilities: [Responsive, Grid, Typography, Margin & Padding, Colors, Border Radius, Position]
 ---
 
 {% include page-heading.html page=page %}
