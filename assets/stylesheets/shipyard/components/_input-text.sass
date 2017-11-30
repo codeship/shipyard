@@ -1,0 +1,38 @@
++component('input')
+  &-text
+    font: $font
+    color: $text-color
+    background-color: #fff
+    position: relative
+    font-size: 16px
+    outline: none
+    width: 100%
+    +width-height(100%, 50px)
+    +border-radius
+    +respond-to(padding, (x0: 10px 15px, x1: 10px 20px))
+    +placeholder
+      color: $text-color-lightest
+      font-weight: $normal
+    +when('error')
+      border-color: $red
+    &:hover, &:focus
+      +when('error')
+        border-color: darken($red, 15%)
+
+    &-connect
+      &-top,
+      &-middle,
+      &-bottom
+        background-clip: initial
+        border-color: rgba($bg-to-border, .37)
+        &:hover, &:focus
+          z-index: 1
+          border-color: rgba($bg-to-border, .50)
+      &-top
+        border-radius: 5px 5px 0 0
+      &-middle
+        margin: -2px 0 0
+        border-radius: 0
+      &-bottom
+        margin: -2px 0 0
+        border-radius: 0 0 5px 5px

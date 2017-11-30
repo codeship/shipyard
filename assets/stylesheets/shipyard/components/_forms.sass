@@ -9,18 +9,6 @@
     font-weight: $medium
 
 +component('input')
-  outline: none
-  border: 2px solid $border-color
-  transition: background-color 300ms ease, border-color 300ms ease, opacity 300ms ease
-  background-clip: padding-box
-  +appearance(none)
-  &:disabled
-    opacity: .5
-    color: $text-color-light
-  &:hover, &:focus, .btn:hover &
-    &:not(:disabled):not(:read-only)
-      border-color: $border-color-dark
-
   &-group
     +clearfix
     padding: 15px 0
@@ -29,115 +17,6 @@
       padding-bottom: 30px
       margin-bottom: 15px
       border-bottom: 2px solid $border-color-light
-
-  &-select
-    display: block
-    width: 100%
-    background-color: #fff
-    height: 50px
-    font: $font
-    font-weight: $medium
-    font-size: 16px
-    color: $text-color-lighter
-    outline: none
-    +border-radius
-    +appearance(none)
-    +respond-to(padding, (x0: 0 15px, x1: 0 20px))
-    +when('error')
-      border-color: $red
-    &:hover, &:focus
-      +when('error')
-        border-color: darken($red, 15%)
-    &-container
-      position: relative
-      &::after
-        display: block
-        position: absolute
-        top: 50%
-        right: 18px
-        content: " "
-        text-align: center
-        font-weight: $bold
-        margin-top: -3px
-        pointer-events: none
-        transition: background-color 300ms ease
-        +width-height(10px, 6px)
-        +icon('arrows/down', $border-color)
-        +when('error')
-          +icon-color($red)
-      &:hover
-        &::after
-          +icon-color($border-color-dark)
-          +when('error')
-            +icon-color(darken($red, 15%))
-    &-chosen
-      color: $text-color
-      font-weight: $medium
-  &-option
-    &-placeholder
-      color: $text-color-lighter
-
-  &-text
-    font: $font
-    color: $text-color
-    background-color: #fff
-    position: relative
-    font-size: 16px
-    outline: none
-    width: 100%
-    +width-height(100%, 50px)
-    +border-radius
-    +respond-to(padding, (x0: 10px 15px, x1: 10px 20px))
-    +placeholder
-      color: $text-color-lightest
-      font-weight: $normal
-    +when('error')
-      border-color: $red
-    &:hover, &:focus
-      +when('error')
-        border-color: darken($red, 15%)
-    &-connect
-      &-top,
-      &-middle,
-      &-bottom
-        background-clip: initial
-        border-color: rgba($bg-to-border, .37)
-        &:hover, &:focus
-          z-index: 1
-          border-color: rgba($bg-to-border, .50)
-      &-top
-        border-radius: 5px 5px 0 0
-      &-middle
-        margin: -2px 0 0
-        border-radius: 0
-      &-bottom
-        margin: -2px 0 0
-        border-radius: 0 0 5px 5px
-
-  &-required
-    position: relative
-    &::before,
-    &::after
-      position: absolute
-    &::before
-      z-index: 1
-      content: "*"
-      +sub-component-styles(required-asterisk)
-      +when('error')
-        +sub-component-styles(required-asterisk-error)
-    &::after
-      content: ""
-      display: block
-      border-style: solid
-      border-radius: 0 3px 0 0
-      border-color: transparent
-      +sub-component-styles(required-corner)
-      +when('error')
-        +sub-component-styles(required-corner-error)
-
-  // Input: Read-Only State
-  &-readonly
-    background-color: $gray-lighter
 
   // Input Sizes
   @each $size, $value in (sm: 40px, md: 50px, lg: 100px, xl: 200px)
