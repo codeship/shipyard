@@ -52,7 +52,8 @@ text_shades: [normal, light, lighter, lightest]
 ---
 
 ## Dark Horizontal Rules
-<p class="text-light margin-bottom-md" markdown="1">Useful when you have a horizontal rule on a darker background.</p>
+Useful when you have a horizontal rule on a darker background.
+{: .section-description }
 
 <div class="utilities-typography-hr-box-dark">
   <hr class="utilities-typography-hr hr-dark" />
@@ -64,7 +65,8 @@ text_shades: [normal, light, lighter, lightest]
 ---
 
 ## Light Horizontal Rules
-<p class="text-light margin-bottom-md" markdown="1">Useful when you have a horizontal rule on a lighter background.</p>
+Useful when you have a horizontal rule on a lighter background.
+{: .section-description }
 
 <div class="utilities-typography-hr-box-light">
   <hr class="utilities-typography-hr hr-light" />
