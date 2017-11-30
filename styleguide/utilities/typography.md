@@ -1,7 +1,7 @@
 ---
 title: Shipyard Typography
 text_sizes: [xxs, xs, sm, md, lg, xl, xxl, xxxl]
-text_shades: [normal, light, lighter, lightest]
+text_shades: [darkest, darker, dark, normal, light, lighter, lightest]
 ---
 
 {% include page-heading.html page=page %}
@@ -47,7 +47,7 @@ text_shades: [normal, light, lighter, lightest]
   <div class="col">
     <h3>Text Shades</h3>
     <div class="box box-padding margin-top-xs">
-      <ul class="list strong">
+      <ul class="list medium">
         {% for shade in page.text_shades %}
           <li class="text-{{ shade }}">.text-{{ shade }}</li>
         {% endfor %}
@@ -57,7 +57,7 @@ text_shades: [normal, light, lighter, lightest]
   <div class="col">
     <h3>Inverse Text Shades</h3>
     <div class="box-secondary box-padding bg-gray-dark margin-top-xs">
-      <ul class="list strong">
+      <ul class="list medium">
         {% for shade in page.text_shades %}
           <li class="text-inverse{{ '-' | append: shade | replace: '-normal', '' }}">
             .text-inverse{{ '-' | append: shade | replace: '-normal', '' }}

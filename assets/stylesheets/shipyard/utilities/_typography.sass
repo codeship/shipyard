@@ -55,23 +55,38 @@
         text-overflow: clip
         overflow: visible
 
-  // Font Colors
+  // Text Colors
   &-normal
-    color: $text-color
+    color: $text-color-normal
   &-light
     color: $text-color-light
   &-lighter
     color: $text-color-lighter
   &-lightest
     color: $text-color-lightest
+  &-dark
+    color: $text-color-dark
+  &-darker
+    color: $text-color-darker
+  &-darkest
+    color: $text-color-darkest
+
+  // Inverse Text Colors
   &-inverse
-    color: #fff
+    &-lightest
+      color: rgba(#fff,1)
+    &-lighter
+      color: rgba(#fff,.9)
     &-light
       color: rgba(#fff,.8)
-    &-lighter
+    &-normal
       color: rgba(#fff,.7)
-    &-lightest
+    &-dark
       color: rgba(#fff,.6)
+    &-darker
+      color: rgba(#fff,.5)
+    &-darkest
+      color: rgba(#fff,.4)
 
   // Font Sizes
   +all-media-sizes

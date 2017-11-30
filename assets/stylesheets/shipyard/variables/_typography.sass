@@ -20,11 +20,13 @@ $font-size-sm: map-get($font-sizes, sm) !default
 $font-size-xs: map-get($font-sizes, xs) !default
 $font-size-xxs: map-get($font-sizes, xxs) !default
 $font: $normal 16px / 1.6 $font-family !default
-$text-color: $gray-darker !default
-$text-color-disabled: lighten($gray, 15%) !default
-$text-color-lightest: lighten($gray, 10%) !default
-$text-color-lighter: lighten($gray, 5%) !default
-$text-color-light: $gray !default
-$text-color-darkest: $gray-darker !default
-$text-color-darker: lighten($gray-darker, 4%) !default
-$text-color-dark: lighten($gray-darker, 7%) !default
+
+// Text Colors
+$text-color: saturate(darken($gray, 35%), 40%)
+$text-color-darkest: rgba($text-color, 1) !default
+$text-color-darker: rgba($text-color, .9) !default
+$text-color-dark: rgba($text-color, .8) !default
+$text-color-normal: rgba($text-color, .7) !default
+$text-color-light: rgba($text-color, .6) !default
+$text-color-lighter: rgba($text-color, .5) !default
+$text-color-lightest: rgba($text-color, .4) !default
