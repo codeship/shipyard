@@ -7,9 +7,9 @@
       margin-right: 25px
 
   &-label
-    display: inline-block
     cursor: pointer
     font-weight: $medium
+    display: inline-block
     transition: color 300ms ease, opacity 300ms ease
     +when('item')
       padding-left: 28px
@@ -24,10 +24,10 @@
 
     &-inverse
       +extend('label')
-      opacity: 0.65
-      &, &:hover
+      color: #fff
+      opacity: .65
+      &:hover, .input:hover ~ &
         color: #fff
-      &:hover
         opacity: 1
       +when('radio:checked ~, checkbox:checked ~')
         opacity: 1
@@ -35,9 +35,10 @@
 
   &-checkbox, &-radio
     top: -1px
+    cursor: pointer
     position: relative
     vertical-align: middle
-    cursor: pointer
+    background-clip: initial
     +width-height(16px)
     +when('item')
       left: 0
@@ -67,20 +68,16 @@
       &:checked
         +btn-color($red)
 
-    // Radio: Inverse
+    // Input: Inverse Type
     &-inverse
-      opacity: .25
-      &, &:hover, &:checked
-        &, .btn:hover &
-          border-color: #fff
-      &:hover, &:checked, .btn:hover &
-        opacity: 1
+      &, .btn:hover &
+        +extend('inverse')
       &:checked
         &, .btn:hover &
-          background: #fff
-          border-color: #fff
+          opacity: 1
+          +btn-color(#fff)
           &::after
-            background: $green-dark
+            +icon-color($green-dark)
 
   // Radio Button
   &-radio

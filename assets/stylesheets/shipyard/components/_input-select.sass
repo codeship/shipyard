@@ -41,6 +41,10 @@
           +icon-color($border-color-dark)
           +when('error')
             +icon-color(darken($red, 15%))
+      &-disabled
+        &, &:hover
+          &::after
+            +icon-color($border-color)
 
     &-chosen
       color: $text-color

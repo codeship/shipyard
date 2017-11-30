@@ -63,7 +63,7 @@ title: Shipyard Forms
   </div>
   <div class="col">
     <label class="label">Select Box Disabled</label>
-    <div class="input-select-container">
+    <div class="input-select-container input-select-container-disabled">
       <select class="input input-select" disabled>
         <option class="input-option-placeholder">.input-select</option>
         {% for i in (1..10) %}
