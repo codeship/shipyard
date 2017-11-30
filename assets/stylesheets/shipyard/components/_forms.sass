@@ -82,9 +82,10 @@
     color: $text-color
     background-color: #fff
     position: relative
-    height: 50px
     font-size: 16px
     outline: none
+    width: 100%
+    +width-height(100%, 50px)
     +border-radius
     +respond-to(padding, (x0: 10px 15px, x1: 10px 20px))
     +placeholder
@@ -137,9 +138,6 @@
   // Input: Read-Only State
   &-readonly
     background-color: $gray-lighter
-
-  &-full
-    width: 100%
 
   // Input Sizes
   @each $size, $value in (sm: 40px, md: 50px, lg: 100px, xl: 200px)

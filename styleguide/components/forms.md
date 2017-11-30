@@ -9,15 +9,15 @@ title: Shipyard Forms
 <div class="col-container input-group">
   <div class="col col-100 col-x1-33 margin-bottom-sm margin-bottom-x1-none">
     <label class="label">Textbox</label>
-    <input type="text" class="input input-text input-full" placeholder=".input-text" />
+    <input type="text" class="input input-text" placeholder=".input-text" />
   </div>
   <div class="col col-100 col-x1-33 margin-bottom-sm margin-bottom-x1-none">
     <label class="label">Textbox Read-Only</label>
-    <input type="text" class="input input-text input-full input-readonly" placeholder=".input-readonly" value="copy-paste-me" readonly />
+    <input type="text" class="input input-text input-readonly" placeholder=".input-readonly" value="copy-paste-me" readonly />
   </div>
   <div class="col col-100 col-x1-33 margin-bottom-sm margin-bottom-x1-none">
     <label class="label">Textbox Disabled</label>
-    <input type="text" class="input input-text input-full" placeholder=".input-text" disabled />
+    <input type="text" class="input input-text" placeholder=".input-text" disabled />
   </div>
 </div>
 ```html
@@ -36,9 +36,9 @@ title: Shipyard Forms
 ## Connected Textboxes
 
 <div class="input-group">
-  <input type="text" class="input input-text input-full input-text-connect-top" placeholder=".input-text-connect-top" />
-  <input type="text" class="input input-text input-full input-text-connect-middle" placeholder=".input-text-connect-middle" />
-  <input type="text" class="input input-text input-full input-text-connect-bottom" placeholder=".input-text-connect-bottom" />
+  <input type="text" class="input input-text input-text-connect-top" placeholder=".input-text-connect-top" />
+  <input type="text" class="input input-text input-text-connect-middle" placeholder=".input-text-connect-middle" />
+  <input type="text" class="input input-text input-text-connect-bottom" placeholder=".input-text-connect-bottom" />
 </div>
 
 ```html
@@ -79,14 +79,14 @@ title: Shipyard Forms
 <div class="input-group">
   <label class="label">Textbox</label>
   <p class="label-note">Some critically important notes about this field.</p>
-  <input type="text" class="input input-text input-full" placeholder=".input .input-text .input-full" />
+  <input type="text" class="input input-text" placeholder=".input .input-text" />
 </div>
 
 ---
 
 <h2 class="margin-bottom-xs">Input Boxes</h2>
 <div class="input-box">
-  <input type="text" class="input input-text input-full" placeholder=".input .input-text .input-full" />
+  <input type="text" class="input input-text" placeholder=".input .input-text" />
 </div>
 
 ---
@@ -95,7 +95,7 @@ title: Shipyard Forms
 <div class="col-container">
   <div class="col col-50">
     <div class="input-required">
-      <input type="text" class="input input-text input-full" placeholder=".input .input-text .input-full" />
+      <input type="text" class="input input-text" placeholder=".input .input-text" />
     </div>
   </div>
   <div class="col col-50">
@@ -145,7 +145,7 @@ title: Shipyard Forms
   <div class="col col-50 input-error">
     <label class="label">Required Textbox</label>
     <div class="input-required">
-      <input type="text" class="input input-text input-full" placeholder=".input .input-text .input-full" />
+      <input type="text" class="input input-text" placeholder=".input .input-text" />
     </div>
   </div>
 </div>
