@@ -19,6 +19,7 @@ description: Shipyard comes with several default icons that you're welcome to us
   {% iconitem :tag, class: 'center' %}
   {% iconitem :x, class: 'center' %}
   {% iconitem :arrow_down, class: 'center' %}
+  {% iconitem :check, class: 'center' %}
 </ul>
 
 ---
