@@ -8,4 +8,5 @@
 /spec/reports/
 /tmp/
 shipyard-*.gem
+.sass-cache
 .asset-cache
