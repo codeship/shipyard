@@ -8,11 +8,11 @@ install:
 - "./ci/setup"
 before_script:
 - chmod +x ci/jekyll
-- chmod +x ci/filesize
+- chmod +x ci/sass_lint
 jobs:
   include:
   # - script: "./ci/jekyll"
-  - script: "./ci/filesize"
+  - script: "./ci/sass_lint"
   - script: bundle exec rspec
   - stage: Deploy
     script: skip
