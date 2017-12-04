@@ -1,0 +1,18 @@
+#!/bin/bash
+
+echo -e "************** Copy Master Branch **************"
+git clone git@github.com:codeship/shipyard.git --branch master --single-branch ci/master-tmp
+
+echo -e "\n\n************** Compile Sass **************"
+bundle exec sass assets/stylesheets/_shipyard.sass ci/master-tmp/branch.css
+bundle exec sass ci/master-tmp/assets/stylesheets/_shipyard.sass ci/master-tmp/master.css
+
+echo -e "\n\n************** Compare Results **************"
+color_start="\033[32m"
+color_end="\033[m"
+
+branch_size=$(ls -lah ci/master-tmp/branch.css | awk '{ printf $5 }')
+master_size=$(ls -lah ci/master-tmp/master.css | awk '{ printf $5 }')
+
+printf "Branch:$color_start $branch_size $color_end\n"
+printf "Master:$color_start $master_size $color_end\n"
