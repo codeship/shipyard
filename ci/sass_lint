@@ -12,28 +12,36 @@ echo -e "************** Copy Master Branch **************"
 git clone $repository --branch master --single-branch ci/master-tmp
 
 echo -e "\n\n************** Compile Sass **************"
-bundle exec sass --no-cache --style compact assets/stylesheets/_shipyard.sass ci/master-tmp/branch-compact.css
-bundle exec sass --no-cache --style compressed assets/stylesheets/_shipyard.sass ci/master-tmp/branch-compressed.css
-bundle exec sass --no-cache --style compact ci/master-tmp/assets/stylesheets/_shipyard.sass ci/master-tmp/master-compact.css
-bundle exec sass --no-cache --style compressed ci/master-tmp/assets/stylesheets/_shipyard.sass ci/master-tmp/master-compressed.css
+bundle exec sass --no-cache --sourcemap=none --style compact assets/stylesheets/_shipyard.sass ci/master-tmp/branch-compact.css
+bundle exec sass --no-cache --sourcemap=none --style compressed assets/stylesheets/_shipyard.sass ci/master-tmp/branch-compressed.css
+bundle exec sass --no-cache --sourcemap=none --style compact ci/master-tmp/assets/stylesheets/_shipyard.sass ci/master-tmp/master-compact.css
+bundle exec sass --no-cache --sourcemap=none --style compressed ci/master-tmp/assets/stylesheets/_shipyard.sass ci/master-tmp/master-compressed.css
+gzip -kvf ci/master-tmp/branch-compressed.css
+gzip -kvf ci/master-tmp/master-compressed.css
 
 echo -e "\n\n************** CSS Output Filesize **************"
-branch_compact=$(ls -lah ci/master-tmp/branch-compact.css | awk '{ printf $5 }')
-branch_compressed=$(ls -lah ci/master-tmp/branch-compressed.css | awk '{ printf $5 }')
+branch_compact=$(ls -lh ci/master-tmp/branch-compact.css | awk '{ printf $5 }')
+master_compact=$(ls -lh ci/master-tmp/master-compact.css | awk '{ printf $5 }')
+branch_compressed=$(ls -lh ci/master-tmp/branch-compressed.css | awk '{ printf $5 }')
+master_compressed=$(ls -lh ci/master-tmp/master-compressed.css | awk '{ printf $5 }')
+branch_gzipped=$(ls -l ci/master-tmp/branch-compressed.css.gz | awk '{ printf $5 }')
+master_gzipped=$(ls -l ci/master-tmp/master-compressed.css.gz | awk '{ printf $5 }')
+branch_gzipped=$(bc -l <<< "scale=1; $branch_gzipped/1000")
+master_gzipped=$(bc -l <<< "scale=1; $master_gzipped/1000")
 branch_compressed_int=${branch_compressed//[a-zA-Z]/}
-master_compact=$(ls -lah ci/master-tmp/master-compact.css | awk '{ printf $5 }')
-master_compressed=$(ls -lah ci/master-tmp/master-compressed.css | awk '{ printf $5 }')
 master_compressed_int=${master_compressed//[a-zA-Z]/}
 
 printf "Branch Compact:$color_start $branch_compact $color_end\n"
 printf "Master Compact:$color_start $master_compact $color_end\n"
 printf "Branch Compressed:$color_start $branch_compressed $color_end\n"
 printf "Master Compressed:$color_start $master_compressed $color_end\n"
-printf "Difference:$color_start $(($branch_compressed_int - $master_compressed_int)) $color_end\n"
+printf "Branch Gzipped:$color_start ${branch_gzipped}kb $color_end\n"
+printf "Master Gzipped:$color_start ${master_gzipped}kb $color_end\n"
+printf "Difference:$color_start $(bc -l <<< "scale=1; $branch_gzipped - $master_gzipped")kb $color_end\n"
 
 echo -e "\n\n************** CSS Output Line Count **************"
 branch_lines=$(wc -l ci/master-tmp/branch-compact.css | awk '{ printf $1 }')
 master_lines=$(wc -l ci/master-tmp/master-compact.css | awk '{ printf $1 }')
-printf "Branch:$color_start $branch_lines $color_end\n"
-printf "Master:$color_start $master_lines $color_end\n"
-printf "Difference:$color_start $(($branch_lines - $master_lines)) $color_end\n"
+printf "Branch:$color_start $branch_lines lines $color_end\n"
+printf "Master:$color_start $master_lines lines $color_end\n"
+printf "Difference:$color_start $(($branch_lines - $master_lines)) lines $color_end\n"
