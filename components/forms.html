@@ -6,7 +6,7 @@
     <meta name="theme-color" content="#20a5a8" />
     <link type="text/css" rel="stylesheet" href="/shipyard/assets/fonts-ca42f2a84b2649c9fcccd16cc51fb6d1f915ba2a0988d30b91c3b84d8722b369.css" media="screen" rel="preload" async>
     <link type="text/css" rel="stylesheet" href="/shipyard/assets/syntax-40266bdc7fd995b8cddaeedab3817d78fcc5aed189b1d6a23a6827b437b71488.css" media="screen" rel="preload" async>
-    <link type="text/css" rel="stylesheet" href="/shipyard/assets/application-614157ac30db142667c9e767032f2ea3952a1f4db60540d18c2cd1a575b33f26.css" media="screen">
+    <link type="text/css" rel="stylesheet" href="/shipyard/assets/application-7f27112a9e42d7810681d39a71b9ff29300d5230e52138652942d90f4c35deb1.css" media="screen">
   </head>
   <body>
     <header class="header">
@@ -42,15 +42,15 @@
 <div class="col-container input-group">
   <div class="col col-100 col-x1-33 margin-bottom-sm margin-bottom-x1-none">
     <label class="label">Textbox</label>
-    <input type="text" class="input input-text input-full" placeholder=".input-text" />
+    <input type="text" class="input input-text" placeholder=".input-text" />
   </div>
   <div class="col col-100 col-x1-33 margin-bottom-sm margin-bottom-x1-none">
     <label class="label">Textbox Read-Only</label>
-    <input type="text" class="input input-text input-full input-readonly" placeholder=".input-readonly" value="copy-paste-me" readonly="" />
+    <input type="text" class="input input-text input-readonly" placeholder=".input-readonly" value="copy-paste-me" readonly="" />
   </div>
   <div class="col col-100 col-x1-33 margin-bottom-sm margin-bottom-x1-none">
     <label class="label">Textbox Disabled</label>
-    <input type="text" class="input input-text input-full" placeholder=".input-text" disabled="" />
+    <input type="text" class="input input-text" placeholder=".input-text" disabled="" />
   </div>
 </div>
 <div class="language-html highlighter-rouge"><div class="highlight"><pre class="code-block"><code><span class="c">&lt;!-- Default Textbox --&gt;</span>
@@ -68,9 +68,9 @@
 <h2 id="connected-textboxes">Connected Textboxes</h2>
 
 <div class="input-group">
-  <input type="text" class="input input-text input-full input-text-connect-top" placeholder=".input-text-connect-top" />
-  <input type="text" class="input input-text input-full input-text-connect-middle" placeholder=".input-text-connect-middle" />
-  <input type="text" class="input input-text input-full input-text-connect-bottom" placeholder=".input-text-connect-bottom" />
+  <input type="text" class="input input-text input-text-connect-top" placeholder=".input-text-connect-top" />
+  <input type="text" class="input input-text input-text-connect-middle" placeholder=".input-text-connect-middle" />
+  <input type="text" class="input input-text input-text-connect-bottom" placeholder=".input-text-connect-bottom" />
 </div>
 
 <div class="language-html highlighter-rouge"><div class="highlight"><pre class="code-block"><code><span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"text"</span> <span class="na">class=</span><span class="s">"input input-text input-text-connect-top"</span> <span class="nt">/&gt;</span>
@@ -112,7 +112,7 @@
   </div>
   <div class="col">
     <label class="label">Select Box Disabled</label>
-    <div class="input-select-container">
+    <div class="input-select-container input-select-container-disabled">
       <select class="input input-select" disabled="">
         <option class="input-option-placeholder">.input-select</option>
         
@@ -146,14 +146,14 @@
 <div class="input-group">
   <label class="label">Textbox</label>
   <p class="label-note">Some critically important notes about this field.</p>
-  <input type="text" class="input input-text input-full" placeholder=".input .input-text .input-full" />
+  <input type="text" class="input input-text" placeholder=".input .input-text" />
 </div>
 
 <hr />
 
 <h2 class="margin-bottom-xs">Input Boxes</h2>
 <div class="input-box">
-  <input type="text" class="input input-text input-full" placeholder=".input .input-text .input-full" />
+  <input type="text" class="input input-text" placeholder=".input .input-text" />
 </div>
 
 <hr />
@@ -162,7 +162,7 @@
 <div class="col-container">
   <div class="col col-50">
     <div class="input-required">
-      <input type="text" class="input input-text input-full" placeholder=".input .input-text .input-full" />
+      <input type="text" class="input input-text" placeholder=".input .input-text" />
     </div>
   </div>
   <div class="col col-50">
@@ -248,7 +248,7 @@
   <div class="col col-50 input-error">
     <label class="label">Required Textbox</label>
     <div class="input-required">
-      <input type="text" class="input input-text input-full" placeholder=".input .input-text .input-full" />
+      <input type="text" class="input input-text" placeholder=".input .input-text" />
     </div>
   </div>
 </div>

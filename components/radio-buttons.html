@@ -6,7 +6,7 @@
     <meta name="theme-color" content="#20a5a8" />
     <link type="text/css" rel="stylesheet" href="/shipyard/assets/fonts-ca42f2a84b2649c9fcccd16cc51fb6d1f915ba2a0988d30b91c3b84d8722b369.css" media="screen" rel="preload" async>
     <link type="text/css" rel="stylesheet" href="/shipyard/assets/syntax-40266bdc7fd995b8cddaeedab3817d78fcc5aed189b1d6a23a6827b437b71488.css" media="screen" rel="preload" async>
-    <link type="text/css" rel="stylesheet" href="/shipyard/assets/application-614157ac30db142667c9e767032f2ea3952a1f4db60540d18c2cd1a575b33f26.css" media="screen">
+    <link type="text/css" rel="stylesheet" href="/shipyard/assets/application-7f27112a9e42d7810681d39a71b9ff29300d5230e52138652942d90f4c35deb1.css" media="screen">
   </head>
   <body>
     <header class="header">
@@ -40,7 +40,7 @@
 <hr />
 
 <h2 id="inline-radio-button-lists">Inline Radio-Button Lists</h2>
-<p class="text-light margin-bottom-md">Useful when you want to group a series of radio buttons together on a single line.</p>
+<p class="section-description">Useful when you want to group a series of radio buttons together on a single line.</p>
 
 <ul class="input-list margin-bottom-lg">
   
@@ -82,7 +82,7 @@
 <hr />
 
 <h2 id="stacked-radio-button-lists">Stacked Radio-Button Lists</h2>
-<p class="text-light margin-bottom-md">Useful when you want to group a series of radio buttons together in a list (stacked by default).</p>
+<p class="section-description">Useful when you want to group a series of radio buttons together in a list (stacked by default).</p>
 
 <div class="col-container margin-bottom-sm margin-bottom-x1-lg">
   <div class="col col-100 col-x1-50 margin-bottom-sm margin-bottom-x1-none">
@@ -162,7 +162,8 @@
 <hr />
 
 <h2 id="inverse-radio-button-lists">Inverse Radio-Button Lists</h2>
-<p class="text-light margin-bottom-md">Useful when the radio buttons are displayed on a dark background.</p>
+<p class="section-description">Useful when the radio buttons are displayed on a dark background.</p>
+
 <div class="box-secondary box-padding bg-gray-darker">
   <ul class="input-list">
     
@@ -204,8 +205,50 @@
 
 <hr />
 
+<h2 id="caution-radio-button-lists">Caution Radio-Button Lists</h2>
+<p class="section-description">Useful when you want to the user to proceed with caution about the choices they’re making.</p>
+
+<ul class="input-list">
+  
+    <li class="input-item">
+      <input id="radio-caution-1" name="radio-caution-list" type="radio" class="input input-radio input-radio-caution" checked="" />
+      <label for="radio-caution-1" class="input-label">Nulla vitae elit libero, a pharetra augue.</label>
+    </li>
+  
+    <li class="input-item">
+      <input id="radio-caution-2" name="radio-caution-list" type="radio" class="input input-radio input-radio-caution" />
+      <label for="radio-caution-2" class="input-label">Cras mattis consectetur purus sit amet fermentum.</label>
+    </li>
+  
+    <li class="input-item">
+      <input id="radio-caution-3" name="radio-caution-list" type="radio" class="input input-radio input-radio-caution" />
+      <label for="radio-caution-3" class="input-label">Cum sociis natoque penatibus et magnis dis parturient montes.</label>
+    </li>
+  
+    <li class="input-item">
+      <input id="radio-caution-4" name="radio-caution-list" type="radio" class="input input-radio input-radio-caution" />
+      <label for="radio-caution-4" class="input-label">Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia.</label>
+    </li>
+  
+    <li class="input-item">
+      <input id="radio-caution-5" name="radio-caution-list" type="radio" class="input input-radio input-radio-caution" />
+      <label for="radio-caution-5" class="input-label">Donec id elit non mi porta gravida at eget metus.</label>
+    </li>
+  
+</ul>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="code-block"><code><span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">"input-list"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"input-item"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;input</span> <span class="na">id=</span><span class="s">"radio-id"</span> <span class="na">name=</span><span class="s">"radio-name"</span> <span class="na">type=</span><span class="s">"radio"</span> <span class="na">class=</span><span class="s">"input input-radio input-radio-caution"</span> <span class="na">checked</span> <span class="nt">/&gt;</span>
+    <span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">"radio-id"</span> <span class="na">class=</span><span class="s">"input-label"</span><span class="nt">&gt;</span>Radio Button Caution Label<span class="nt">&lt;/label&gt;</span>
+  <span class="nt">&lt;/li&gt;</span>
+<span class="nt">&lt;/ul&gt;</span>
+</code></pre></div></div>
+
+<hr />
+
 <h2 id="radio-checkbox-button-lists">Radio-Checkbox Button Lists</h2>
-<p class="text-light margin-bottom-md">Yep, that's exactly what it sounds like. It behaves like a radio button but looks a bit like a checkbox. Fancy!</p>
+<p class="section-description">Yep, that’s exactly what it sounds like. It behaves like a radio button but looks a bit like a checkbox. Fancy!</p>
 
 <ul class="input-list">
   
