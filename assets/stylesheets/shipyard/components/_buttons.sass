@@ -119,7 +119,7 @@
 
   &-secondary
     +btn-color(transparent, $text-color-light, darken($gray-lightest, 7%))
-    +btn-hover(transparent, darken($text-color-light, 15%), darken($gray-lightest, 17%))
+    +btn-hover(transparent, $text-color-dark, darken($gray-lightest, 17%))
     &.btn-loading
       &, &:hover, &:active
         &::after
@@ -159,7 +159,7 @@
       +btn-color($green-dark, #fff)
 
   &-disabled
-    cursor: not-allowed
+    user-select: none
     pointer-events: none
     &, &:hover, &:focus
       +btn-color(lighten($gray-lighter, 1%), $text-color-lightest)
@@ -175,7 +175,8 @@
 
   &-loading
     &, &:active, &:hover
-      cursor: default
+      user-select: none
+      pointer-events: none
       color: transparent !important
       &::after
         content: ''

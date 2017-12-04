@@ -1,0 +1,39 @@
+#!/bin/bash
+color_start="\033[32m"
+color_end="\033[m"
+if [[ $CI_NAME = "codeship" ]]
+then
+  repository="git@github.com:codeship/shipyard.git"
+else
+  repository="https://github.com/codeship/shipyard.git"
+fi
+
+echo -e "************** Copy Master Branch **************"
+git clone $repository --branch master --single-branch ci/master-tmp
+
+echo -e "\n\n************** Compile Sass **************"
+bundle exec sass --no-cache --style compact assets/stylesheets/_shipyard.sass ci/master-tmp/branch-compact.css
+bundle exec sass --no-cache --style compressed assets/stylesheets/_shipyard.sass ci/master-tmp/branch-compressed.css
+bundle exec sass --no-cache --style compact ci/master-tmp/assets/stylesheets/_shipyard.sass ci/master-tmp/master-compact.css
+bundle exec sass --no-cache --style compressed ci/master-tmp/assets/stylesheets/_shipyard.sass ci/master-tmp/master-compressed.css
+
+echo -e "\n\n************** CSS Output Filesize **************"
+branch_compact=$(ls -lah ci/master-tmp/branch-compact.css | awk '{ printf $5 }')
+branch_compressed=$(ls -lah ci/master-tmp/branch-compressed.css | awk '{ printf $5 }')
+branch_compressed_int=${branch_compressed//[a-zA-Z]/}
+master_compact=$(ls -lah ci/master-tmp/master-compact.css | awk '{ printf $5 }')
+master_compressed=$(ls -lah ci/master-tmp/master-compressed.css | awk '{ printf $5 }')
+master_compressed_int=${master_compressed//[a-zA-Z]/}
+
+printf "Branch Compact:$color_start $branch_compact $color_end\n"
+printf "Master Compact:$color_start $master_compact $color_end\n"
+printf "Branch Compressed:$color_start $branch_compressed $color_end\n"
+printf "Master Compressed:$color_start $master_compressed $color_end\n"
+printf "Difference:$color_start $(($branch_compressed_int - $master_compressed_int)) $color_end\n"
+
+echo -e "\n\n************** CSS Output Line Count **************"
+branch_lines=$(wc -l ci/master-tmp/branch-compact.css | awk '{ printf $1 }')
+master_lines=$(wc -l ci/master-tmp/master-compact.css | awk '{ printf $1 }')
+printf "Branch:$color_start $branch_lines $color_end\n"
+printf "Master:$color_start $master_lines $color_end\n"
+printf "Difference:$color_start $(($branch_lines - $master_lines)) $color_end\n"

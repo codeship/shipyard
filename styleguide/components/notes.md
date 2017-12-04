@@ -8,7 +8,8 @@ description: Notes should be used to grab a user's attention along side of other
 ---
 
 ### Default `.note`
-<p class="text-light margin-bottom-sm">Used to display notes, tips, and other non-critical information.</p>
+Used to display notes, tips, and other non-critical information.
+{: .section-description }
 
 {% note %}
   <p markdown="1">
@@ -21,7 +22,8 @@ description: Notes should be used to grab a user's attention along side of other
 ---
 
 ### Info `.note-info`
-<p class="text-light margin-bottom-sm">Useful when drawing attention to non-critical information or actions we want the user to take.</p>
+Useful when drawing attention to non-critical information or actions we want the user to take.
+{: .section-description }
 
 {% note :info %}
   <p markdown="1">
@@ -34,7 +36,8 @@ description: Notes should be used to grab a user's attention along side of other
 ---
 
 ### Success `.note-success`
-<p class="text-light margin-bottom-sm">Useful when drawing attention to interactions that have produced successful results.</p>
+Useful when drawing attention to interactions that have produced successful results.
+{: .section-description }
 
 {% note :success %}
   <p markdown="1">
@@ -47,7 +50,8 @@ description: Notes should be used to grab a user's attention along side of other
 ---
 
 ### Warning `.note-warning`
-<p class="text-light margin-bottom-sm">Useful when drawing attention to critical information.</p>
+Useful when drawing attention to critical information.
+{: .section-description }
 
 {% note :warning %}
   <p markdown="1">

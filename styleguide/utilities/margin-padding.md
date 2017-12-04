@@ -11,7 +11,8 @@ directions: [left,right]
 ---
 
 ### Margin All Sides `.margin-{ x1..x4 }-{ xxs..xxl }`
-<p class="text-light margin-bottom-md">The examples below demonstrate how much margin will be added to the top and bottom of any element the classes is applied to.</p>
+The examples below demonstrate how much margin will be added to the top and bottom of any element the classes is applied to.
+{: .section-description }
 
 <div class="col-container">
   <div class="col">
@@ -27,7 +28,8 @@ directions: [left,right]
 ---
 
 ### Margin Top & Bottom `.margin-{ top, bottom }-{ x1..x4 }-{ xxs..xxl }`
-<p class="text-light margin-bottom-md">The examples below demonstrate how much margin will be added to the top and bottom of any element the classes is applied to.</p>
+The examples below demonstrate how much margin will be added to the top and bottom of any element the classes is applied to.
+{: .section-description }
 
 <div class="col-container">
   {% for option in page.options %}
@@ -41,7 +43,8 @@ directions: [left,right]
 ---
 
 ### Margin Left & Right `.margin-{ left, right }-{ x1..x4 }-{ xxs..xxl }`
-<p class="text-light margin-bottom-md">The examples below demonstrate how much margin will be added to the left and right sides of any element the classes is applied to.</p>
+The examples below demonstrate how much margin will be added to the left and right sides of any element the classes is applied to.
+{: .section-description }
 
 <div class="col-container">
   {% for direction in page.directions %}
@@ -58,7 +61,8 @@ directions: [left,right]
 ---
 
 ### Padding All Sides `.padding-{ x1..x4 }-{ xxs..xxl }`
-<p class="text-light margin-bottom-md">The examples below demonstrate how much padding will be added to the top and bottom of any element the classes is applied to.</p>
+The examples below demonstrate how much padding will be added to the top and bottom of any element the classes is applied to.
+{: .section-description }
 
 <div class="col-container">
   {% for option in page.options %}
@@ -71,7 +75,8 @@ directions: [left,right]
 ---
 
 ### Padding Top & Bottom `.padding-{ top, bottom }-{ x1..x4 }-{ xxs..xxl }`
-<p class="text-light margin-bottom-md">The examples below demonstrate how much padding will be added to the top and bottom of any element the classes is applied to.</p>
+The examples below demonstrate how much padding will be added to the top and bottom of any element the classes is applied to.
+{: .section-description }
 
 <div class="col-container">
   {% for option in page.options %}
@@ -85,7 +90,8 @@ directions: [left,right]
 ---
 
 ### Padding Left & Right `.padding-{ left, right }-{ x1..x4 }-{ xxs..xxl }`
-<p class="text-light margin-bottom-md">The examples below demonstrate how much padding will be added to the left and right sides of any element the classes is applied to</p>
+The examples below demonstrate how much padding will be added to the left and right sides of any element the classes is applied to
+{: .section-description }
 
 <div class="col-container">
   {% for direction in page.directions %}

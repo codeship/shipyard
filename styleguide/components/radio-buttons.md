@@ -13,7 +13,8 @@ labels:
 ---
 
 ## Inline Radio-Button Lists
-<p class="text-light margin-bottom-md">Useful when you want to group a series of radio buttons together on a single line.</p>
+Useful when you want to group a series of radio buttons together on a single line.
+{: .section-description }
 
 <ul class="input-list margin-bottom-lg">
   {% for label in page.labels %}
@@ -36,7 +37,8 @@ labels:
 ---
 
 ## Stacked Radio-Button Lists
-<p class="text-light margin-bottom-md">Useful when you want to group a series of radio buttons together in a list (stacked by default).</p>
+Useful when you want to group a series of radio buttons together in a list (stacked by default).
+{: .section-description }
 
 <div class="col-container margin-bottom-sm margin-bottom-x1-lg">
   <div class="col col-100 col-x1-50 margin-bottom-sm margin-bottom-x1-none">
@@ -77,7 +79,9 @@ labels:
 ---
 
 ## Inverse Radio-Button Lists
-<p class="text-light margin-bottom-md">Useful when the radio buttons are displayed on a dark background.</p>
+Useful when the radio buttons are displayed on a dark background.
+{: .section-description }
+
 <div class="box-secondary box-padding bg-gray-darker">
   <ul class="input-list">
     {% for label in page.labels %}
@@ -100,8 +104,33 @@ labels:
 
 ---
 
+## Caution Radio-Button Lists
+Useful when you want to the user to proceed with caution about the choices they're making.
+{: .section-description }
+
+<ul class="input-list">
+  {% for label in page.labels %}
+    <li class="input-item">
+      <input id="radio-caution-{{ forloop.index }}" name="radio-caution-list" type="radio" class="input input-radio input-radio-caution" {% if forloop.index == 1 %}checked{% endif %} />
+      <label for="radio-caution-{{ forloop.index }}" class="input-label">{{ label }}</label>
+    </li>
+  {% endfor %}
+</ul>
+
+```html
+<ul class="input-list">
+  <li class="input-item">
+    <input id="radio-id" name="radio-name" type="radio" class="input input-radio input-radio-caution" checked />
+    <label for="radio-id" class="input-label">Radio Button Caution Label</label>
+  </li>
+</ul>
+```
+
+---
+
 ## Radio-Checkbox Button Lists
-<p class="text-light margin-bottom-md">Yep, that's exactly what it sounds like. It behaves like a radio button but looks a bit like a checkbox. Fancy!</p>
+Yep, that's exactly what it sounds like. It behaves like a radio button but looks a bit like a checkbox. Fancy!
+{: .section-description }
 
 <ul class="input-list">
   {% for label in page.labels %}
