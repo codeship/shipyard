@@ -1,14 +1,16 @@
 +component('accordion')
+  transition: opacity 350ms ease, padding 350ms ease, max-height 350ms ease
+
   &-closed
+    +extend
     opacity: 0
     max-height: 0
     overflow: hidden
     padding-top: 0
     padding-bottom: 0
-    transition: opacity 175ms ease, padding 350ms ease, max-height 350ms ease
 
   &-open
-    transition: opacity 350ms ease, padding 350ms ease, max-height 350ms ease
+    +extend
 
     @each $size, $value in (xs: 500px, sm: 750px, md: 1000px, lg: 1500px, xl: 3000px)
       &-#{$size}
