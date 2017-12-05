@@ -1,3 +1,3 @@
 module Shipyard
-  VERSION = '0.5.77'
+  VERSION = '0.5.78'
 end
