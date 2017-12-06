@@ -8,7 +8,9 @@ class Shipyard {
   on (events, callback) {
     this.el.forEach((el) => {
       events.split(' ').forEach((eventName) => {
-        el.addEventListener(eventName, callback)
+        el.addEventListener(eventName, (e) => {
+          callback(e, el)
+        })
       })
     })
     return this

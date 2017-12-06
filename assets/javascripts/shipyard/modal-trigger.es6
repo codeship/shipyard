@@ -3,8 +3,7 @@ class ModalTrigger extends Shipyard {
     super(el)
     this.on('click', () => { this.open() })
     this.el.forEach((el) => {
-      let modalName = el.getAttribute('modal-trigger')
-      this.modal = new Modal(`[modal=${modalName}]`)
+      this.modal = new Modal(`[modal=${el.getAttribute('modal-trigger')}]`)
     })
   }
 
