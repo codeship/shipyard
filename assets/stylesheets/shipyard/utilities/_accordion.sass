@@ -1,5 +1,5 @@
 +component('accordion')
-  transition: opacity 400ms ease, padding 400ms ease, max-height 400ms ease
+  transition: opacity 400ms ease, margin 400ms ease, padding 400ms ease, max-height 400ms ease
 
   &-closed
     opacity: 0
@@ -7,6 +7,8 @@
     overflow: hidden
     padding-top: 0
     padding-bottom: 0
+    margin-top: 0
+    margin-bottom: 0
 
   &-open
     @each $size, $value in (xs: 500px, sm: 750px, md: 1000px, lg: 1500px, xl: 3000px)
