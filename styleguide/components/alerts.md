@@ -21,14 +21,14 @@ Used to display notes, tips, and other non-critical information.
 ### Timed Alerts
 <p class="text-light margin-bottom-sm">Useful when you want to display an alert for a pretedermined amount of time.</p>
 
-{% alert :success, :dismissible, class: 'display-none' %}
-  <div class="alert-timer alert-timer-on"></div>
+{% alert :success, :dismissible, id: 'timed-alert-5s', class: 'alert-closed', data: { duration: 10 } %}
   Ten other people are also viewing tickets for <a href="#">this flight</a>.
   Use the code <code class="code-inline">Travel_Light_2017</code> before you book your flight.
+  <div class="alert-timer alert-timer-on"></div>
 {% endalert %}
 
 <div class="box-secondary box-padding align-center">
-  {% btn Insert Timed Alert Example, :cta %}
+  <button class="btn btn-cta" alert-trigger="#timed-alert-5s">5s</button>
 </div>
 
 ---

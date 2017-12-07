@@ -9,7 +9,7 @@ class Shipyard {
     this.el.forEach((el) => {
       events.split(' ').forEach((eventName) => {
         el.addEventListener(eventName, (e) => {
-          callback(e, el)
+          callback(e, new Shipyard(el))
         })
       })
     })
@@ -27,6 +27,10 @@ class Shipyard {
 
   css (el, value) {
     return window.getComputedStyle(el).getPropertyValue(value)
+  }
+
+  attr (name) {
+    return this.el[0].getAttribute(name)
   }
 
   addClass(className) {

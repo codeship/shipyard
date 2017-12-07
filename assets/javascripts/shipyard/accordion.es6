@@ -5,6 +5,6 @@ class Accordion extends Shipyard {
   }
 
   toggle (event, el) {
-    document.querySelector(el.getAttribute('accordion')).classList.toggle('accordion-closed')
+    document.querySelector(el.attr('accordion')).classList.toggle('accordion-closed')
   }
 }
