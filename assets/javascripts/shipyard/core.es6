@@ -9,7 +9,7 @@ class Shipyard {
     this.el.forEach((el) => {
       events.split(' ').forEach((eventName) => {
         el.addEventListener(eventName, (e) => {
-          callback(e, new Shipyard(el))
+          callback(e, new Shipyard(el), this)
         })
       })
     })

@@ -4,9 +4,10 @@ class TimedAlerts extends Shipyard {
     this.on('click', this.show)
   }
 
-  show (event, btn) {
+  show (event, btn, doc) {
     event.preventDefault()
-    document.querySelector(btn.attr('alert-trigger')).classList.toggle('alert-closed')
+    btn.addClass('btn-disabled')
+    new Shipyard(btn.attr('alert-trigger')).trigger('show')
   }
 }
 
