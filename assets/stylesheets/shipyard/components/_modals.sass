@@ -2,25 +2,25 @@
   width: 100%
   max-width: 800px
   margin: auto
+  &-sm
+    max-width: 660px
 
   &-open
     overflow: hidden
 
   &-container
+    @extend .col-center
     +z-index
     top: 0
     left: 0
     right: 0
     bottom: 0
-    display: flex
+    padding: 10px
     overflow: auto
     position: fixed
-    align-items: center
-    justify-content: center
     background: rgba($gray-darkest,.9)
     transition: 300ms padding ease
     -webkit-overflow-scrolling: touch
-    +respond-to(padding, (x0: 5px, x1: 10px))
 
   &-content
     background: #fff
@@ -28,11 +28,14 @@
     +respond-to(padding, (x0: 15px, x1: 20px, x2: 30px))
 
   &-title
-    margin: 0 0 10px
+    line-height: 1
+    margin: 0 0 15px
+    &-border
+      +extend(title)
+      padding: 0 0 10px
+      border-bottom: 2px solid $border-color-lightest
 
   &-ctas
     background: $gray-lightest
     border-radius: 0 0 5px 5px
     +respond-to(padding, (x0: 10px 15px, x1: 15px 20px, x2: 15px 30px))
-    .btn
-      float: left

@@ -1,0 +1,23 @@
++component('input')
+  outline: none
+  border: 2px solid $border-color
+  transition: background-color 300ms ease, border-color 300ms ease, opacity 300ms ease, color 300ms ease
+  background-clip: padding-box
+  +appearance(none)
+  &:hover, &:focus, .btn:hover &
+    border-color: $border-color-dark
+  &:disabled
+    &, &:hover
+      opacity: .5
+      user-select: none
+      pointer-events: none
+      color: $text-color-light
+      border-color: $border-color
+
+  &-inverse
+    &, &:focus
+      opacity: .25
+    &, &:focus, &:hover
+      border-color: #fff
+    &:hover
+      opacity: .5

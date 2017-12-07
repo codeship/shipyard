@@ -1,0 +1,109 @@
++component('input')
+  &-item
+    position: relative
+    +respond-to(margin, (x0: 10px 0, x1: 15px 0))
+    &-inline
+      display: inline-block
+      margin-right: 25px
+
+  &-label
+    cursor: pointer
+    font-weight: $medium
+    display: inline-block
+    transition: color 300ms ease, opacity 300ms ease
+    +when('item')
+      padding-left: 28px
+    +when('item-inline')
+      padding-left: 5px
+    &:hover, .input:hover ~ &
+      color: $blue-dark
+    +when('radio:checked ~, checkbox:checked ~')
+      color: $green-dark
+    +when('radio-caution:checked ~, checkbox-caution:checked ~')
+      color: $red-dark
+
+    &-inverse
+      +extend('label')
+      color: #fff
+      opacity: .65
+      &:hover, .input:hover ~ &
+        color: #fff
+        opacity: 1
+      +when('radio:checked ~, checkbox:checked ~')
+        opacity: 1
+        color: lighten($green, 10%)
+
+  &-checkbox, &-radio
+    top: -1px
+    cursor: pointer
+    position: relative
+    vertical-align: middle
+    background-clip: initial
+    +width-height(16px)
+    +when('item')
+      left: 0
+      top: 4px
+      position: absolute
+
+    &::after
+      content: ''
+      opacity: 0
+      position: absolute
+
+    // Input: Checked State
+    &:checked
+      &, .btn:hover &
+        +btn-color($green)
+
+      // Input: Checked State Icon
+      &::after
+        top: 50%
+        left: 50%
+        opacity: 1
+        position: absolute
+        background-color: #fff
+        transition: opacity 300ms ease, background-color 300ms ease
+
+    &-caution
+      &:checked
+        +btn-color($red)
+
+    // Input: Inverse Type
+    &-inverse
+      &, .btn:hover &
+        +extend('inverse')
+      &:checked
+        &, .btn:hover &
+          opacity: 1
+          +btn-color(#fff)
+          &::after
+            +icon-color($green-dark)
+
+  // Radio Button
+  &-radio
+    border-radius: 50%
+
+    // Radio: Dot
+    &::after
+      border-radius: 50%
+      background: #fff
+      +width-height(6px)
+      margin: -3px 0 0 -3px
+
+    // Radio Checkbox
+    &-checkbox
+      +extend('radio')
+      &::after
+        @extend .input-checkbox-icon
+
+  // Checkbox
+  &-checkbox
+    border-radius: 4px
+
+    // Checkbox: Checkmark Icon
+    &-icon,
+    &::after
+      border-radius: 0
+      +width-height(8px)
+      margin: -4px 0 0 -4px
+      +icon(checkmark)

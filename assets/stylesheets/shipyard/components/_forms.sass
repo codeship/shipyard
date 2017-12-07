@@ -9,119 +9,14 @@
     font-weight: $medium
 
 +component('input')
-  font: $font
-  color: $text-color
-  font-weight: $medium
-  background: #fff
-  +appearance(none)
-  +placeholder
-    color: $text-color-lightest
-    font-weight: $normal
-
   &-group
     +clearfix
     padding: 15px 0
+    position: relative
     &-border
       padding-bottom: 30px
       margin-bottom: 15px
       border-bottom: 2px solid $border-color-light
-
-  &-select
-    display: block
-    width: 100%
-    border: 2px solid $border-color
-    background: #fff
-    height: 50px
-    font-size: 16px
-    color: $text-color-lighter
-    outline: none
-    +border-radius
-    +appearance(none)
-    +respond-to(padding, (x0: 0 15px, x1: 0 20px))
-    +when('error')
-      border-color: $red
-    &:focus
-      border-color: $border-color-dark
-      +when('error')
-        border-color: darken($red, 15%)
-    &-container
-      position: relative
-      &::after
-        +width-height(30px)
-        display: block
-        position: absolute
-        top: 50%
-        right: 10px
-        content: " "
-        background: asset-url('arrows/down.svg') no-repeat center center
-        background-size: 10px 6px
-        text-align: center
-        font-weight: $bold
-        margin-top: -15px
-    &-chosen
-      color: $text-color
-      font-weight: $medium
-  &-option
-    &-placeholder
-      color: $text-color-lighter
-
-  &-text
-    position: relative
-    height: 50px
-    border: 2px solid $border-color
-    font-size: 16px
-    transition: border-color 300ms ease
-    outline: none
-    +border-radius
-    +respond-to(padding, (x0: 10px 15px, x1: 10px 20px))
-    +when('error')
-      border-color: $red
-    &:focus
-      border-color: $border-color-dark
-      +when('error')
-        border-color: darken($red, 15%)
-    &-connect
-      &-top:focus,
-      &-middle:focus,
-      &-bottom:focus
-        z-index: 1
-      &-top
-        border-radius: 5px 5px 0 0
-      &-middle
-        margin: -2px 0 0
-        border-radius: 0
-      &-bottom
-        margin: -2px 0 0
-        border-radius: 0 0 5px 5px
-
-  &-required
-    position: relative
-    &::before,
-    &::after
-      position: absolute
-    &::before
-      z-index: 1
-      content: "*"
-      +sub-component-styles(required-asterisk)
-      +when('error')
-        +sub-component-styles(required-asterisk-error)
-    &::after
-      content: ""
-      display: block
-      border-style: solid
-      border-radius: 0 3px 0 0
-      border-color: transparent
-      +sub-component-styles(required-corner)
-      +when('error')
-        +sub-component-styles(required-corner-error)
-
-  &-full
-    width: 100%
-
-  // Input Sizes
-  @each $size, $value in (sm: 40px, md: 50px, lg: 100px, xl: 200px)
-    &-#{$size}
-      height: $value
 
   &-description
     font-size: 14px

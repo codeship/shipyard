@@ -8,7 +8,9 @@ class Shipyard {
   on (events, callback) {
     this.el.forEach((el) => {
       events.split(' ').forEach((eventName) => {
-        el.addEventListener(eventName, callback)
+        el.addEventListener(eventName, (e) => {
+          callback(e, el)
+        })
       })
     })
     return this
@@ -30,6 +32,13 @@ class Shipyard {
   addClass(className) {
     this.el.forEach((el) => {
       el.classList.add(className)
+    })
+    return this
+  }
+
+  removeClass(className) {
+    this.el.forEach((el) => {
+      el.classList.remove(className)
     })
     return this
   }

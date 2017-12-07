@@ -1,0 +1,54 @@
++component('input')
+  &-select
+    display: block
+    width: 100%
+    background-color: #fff
+    height: 50px
+    font: $font
+    font-weight: $medium
+    font-size: 16px
+    color: $text-color-lighter
+    outline: none
+    cursor: pointer
+    +border-radius
+    +appearance(none)
+    +respond-to(padding, (x0: 0 15px, x1: 0 20px))
+    +when('error')
+      border-color: $red
+    &:hover, &:focus
+      +when('error')
+        border-color: darken($red, 15%)
+
+    &-container
+      position: relative
+      &::after
+        display: block
+        position: absolute
+        top: 50%
+        right: 18px
+        content: " "
+        text-align: center
+        font-weight: $bold
+        margin-top: -3px
+        pointer-events: none
+        transition: background-color 300ms ease
+        +width-height(10px, 6px)
+        +icon('arrows/down', $border-color)
+        +when('error')
+          +icon-color($red)
+      &:hover
+        &::after
+          +icon-color($border-color-dark)
+          +when('error')
+            +icon-color(darken($red, 15%))
+      &-disabled
+        &, &:hover
+          &::after
+            +icon-color($border-color)
+
+    &-chosen
+      color: $text-color-normal
+      font-weight: $medium
+
+  &-option-placeholder
+    color: $text-color-lighter

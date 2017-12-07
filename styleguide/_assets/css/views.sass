@@ -1,28 +1,28 @@
-// Code Styles
-code
-  li &, p &, h1 &, h2 &, h3 &
-    margin: 0 3px
-    @extend .code-inline
-  div.highlighter-rouge &
-    @extend .code-block
-    margin: 0 0 30px
+// Code "Span"
+code.highlighter-rouge
+  @extend .code-inline
+  margin: 0 3px
+
+// Code "Block"
+.code-block
+  margin: 15px 0
 
 hr
+  @extend .hr
   +respond-to(margin, (x0: 30px 0, x1: 40px 0, x2: 50px 0))
+
+// Shared
+.section-description
+  @extend .text-light
+  @extend .margin-bottom-md
 
 // Utilities: Colors
 +component('shade')
   &-list
-    display: table
-    width: 100%
+    +respond-to(margin-left, (x0: -5px, x1: -10px))
+    +respond-to(margin-right, (x0: -5px, x1: -10px))
   &-item
     text-align: center
-    display: table-cell
-    width: 10%
-    &:not(:first-child)
-      border-left: 10px solid transparent
-    &:not(:last-child)
-      border-right: 10px solid transparent
   &-box
     height: 165px
     padding: 5px
@@ -31,17 +31,16 @@ hr
       cursor: default
     &:not(:hover)
       background: #fff !important
+    &.bg-white
+      background: $gray-darkest !important
   &-color
     height: 120px
     border-radius: 2px 2px 0 0
-    display: flex
-    align-items: center
-    justify-content: center
     color: transparent
     transition: 300ms color ease
     +when('box:hover')
       color: #fff
-    +when('light:hover')
+    +when('light:hover, white:hover')
       color: $gray-darker
   &-text
     line-height: 40px
@@ -50,3 +49,51 @@ hr
       color: rgba(#fff,.7)
     +when('light:hover')
       color: rgba($gray-darker,.6)
+
++component('utilities-margin-padding')
+  &-box
+    line-height: 40px
+
++component('utilities-grid')
+  &-box
+    width: 100%
+    flex-grow: 1
+    min-height: 30px
+
++component('utilities-typography')
+  &-hr
+    margin: 0 30px
+    &-box
+      &,
+      &-dark,
+      &-light,
+      &-default
+        padding: 30px 0
+        margin: 15px 0
+      &-dark
+        background: $gray-lighter
+      &-light
+        background: #fff
+      &-default
+        border: 2px solid $border-color-light
+
++component('modal-billing')
+  &-yearly-promo
+    text-transform: uppercase
+
++component('modal-downgrade')
+  &-coupon
+    padding: 0
+    margin: 0 4px !important
+    white-space: normal
+    &-txt
+      padding: 0 8px
+      font-family: $font-family
+  &-tag
+    padding: 5px
+    display: inline-block
+    border-radius: 3px 0 0 3px
+
++component('components-checkboxes')
+  &-switch-col
+    line-height: 1.2

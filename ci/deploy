@@ -2,7 +2,12 @@
 set -e # halt script on error
 
 echo -e "\n\n************** Git Clone GH-Pages Branch **************"
-git clone git@github.com:codeship/shipyard.git --branch gh-pages --single-branch styleguide/_site
+if [[ $CI_NAME = "codeship" ]]
+then
+  git clone git@github.com:codeship/shipyard.git --branch gh-pages --single-branch styleguide/_site
+else
+  git clone https://github.com/codeship/shipyard.git --branch gh-pages --single-branch styleguide/_site
+fi
 
 echo -e "\n\n************** Jekyll Build **************"
 cd styleguide
@@ -15,5 +20,12 @@ git config user.name "${GITHUB_DEPLOY_USER_NAME}"
 git status
 git add --all
 git status
-git commit --allow-empty -m "Deploy to GitHub Pages: ${CI_COMMIT_ID} --skip-ci"
-git push origin gh-pages
+
+if [[ $CI_NAME = "codeship" ]]
+then
+  git commit --allow-empty -m "Deploy to GitHub Pages: ${CI_COMMIT_ID} --skip-ci"
+  git push origin gh-pages
+else
+  git commit --allow-empty -m "Dry Run Deploy: --skip-ci"
+  git push --dry-run origin gh-pages
+fi

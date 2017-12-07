@@ -8,7 +8,8 @@ description: Alerts should be used to grab a user's attention before proceeding 
 ---
 
 ### Dismissible
-<p class="text-light margin-bottom-sm">Used to display notes, tips, and other non-critical information.</p>
+Used to display notes, tips, and other non-critical information.
+{: .section-description }
 
 {% alert :dismissible %}
   Ten other people are also viewing tickets for <a href="#">this flight</a>.
@@ -33,7 +34,8 @@ description: Alerts should be used to grab a user's attention before proceeding 
 ---
 
 ### Default `.alert`
-<p class="text-light margin-bottom-sm">Used to display notes, tips, and other non-critical information.</p>
+Used to display notes, tips, and other non-critical information.
+{: .section-description }
 
 {% alert %}
   Ten other people are also viewing tickets for <a href="#">this flight</a>.
@@ -44,7 +46,8 @@ description: Alerts should be used to grab a user's attention before proceeding 
 ---
 
 ### Info `.alert-info`
-<p class="text-light margin-bottom-sm">Useful when drawing attention to non-critical information or actions we want the user to take.</p>
+Useful when drawing attention to non-critical information or actions we want the user to take.
+{: .section-description }
 
 {% alert :info %}
   Ten other people are also viewing tickets for <a href="#">this flight</a>.
@@ -55,7 +58,8 @@ description: Alerts should be used to grab a user's attention before proceeding 
 ---
 
 ### Success `.alert-success`
-<p class="text-light margin-bottom-sm">Useful when drawing attention to interactions that have produced successful results.</p>
+Useful when drawing attention to interactions that have produced successful results.
+{: .section-description }
 
 {% alert :success %}
   Pack your bags! You'll be on the next flight to Hawaii.
@@ -66,7 +70,8 @@ description: Alerts should be used to grab a user's attention before proceeding 
 ---
 
 ### Warning `.alert-warning`
-<p class="text-light margin-bottom-sm">Useful when drawing attention to critical, time-sensitive information &mdash; even if nothing has gone wrong.</p>
+Useful when drawing attention to critical, time-sensitive information &mdash; even if nothing has gone wrong.
+{: .section-description }
 
 {% alert :warning %}
   There are only 2 seats left on this flight! We recommend to <a href="#">book your tickets</a> as soon as possible.
@@ -77,7 +82,8 @@ description: Alerts should be used to grab a user's attention before proceeding 
 ---
 
 ### Error `.alert-error`
-<p class="text-light margin-bottom-sm">Useful when drawing attention to something that has gone critically wrong.</p>
+Useful when drawing attention to something that has gone critically wrong.
+{: .section-description }
 
 {% alert :error %}
   This flight is now sold out. Let's get you on the <a href="#">next flight to Kauai</a>.

@@ -8,151 +8,98 @@ description: Shipyard comes with several default icons that you're welcome to us
 ---
 
 ### Common Icons
-<p class="text-light margin-bottom-md" markdown="1">The following icons are the most frequently used in just about any application.</p>
+The following icons are the most frequently used in just about any application.
+{: .section-description }
 
 <ul class="icon-list col-container">
-  {% iconitem %}
-    {% icon :plus, class: 'center' %}
-  {% endiconitem %}
-
-  {% iconitem %}
-    {% icon :restart, class: 'center' %}
-  {% endiconitem %}
-
-  {% iconitem %}
-    {% icon :gear, class: 'center' %}
-  {% endiconitem %}
-
-  {% iconitem %}
-    {% icon :lock, class: 'center' %}
-  {% endiconitem %}
-
-  {% iconitem %}
-    {% icon :tag, class: 'center' %}
-  {% endiconitem %}
-
-  {% iconitem %}
-    {% icon :x, class: 'center' %}
-  {% endiconitem %}
-
-  {% iconitem %}
-    {% icon :arrow_down, class: 'center' %}
-  {% endiconitem %}
+  {% iconitem :plus, class: 'center' %}
+  {% iconitem :restart, class: 'center' %}
+  {% iconitem :gear, class: 'center' %}
+  {% iconitem :lock, class: 'center' %}
+  {% iconitem :card, class: 'center' %}
+  {% iconitem :tag, class: 'center' %}
+  {% iconitem :x, class: 'center' %}
+  {% iconitem :arrow_down, class: 'center' %}
+  {% iconitem :check, class: 'center' %}
 </ul>
 
 ---
 
 ### Brand Icons
-<p class="text-light margin-bottom-md" markdown="1">If you need to style several paths inside of the icon, it's important to make sure you use the *injected* version of the icon.</p>
+If you need to style several paths inside of the icon, it's important to make sure you use the *injected* version of the icon.
+{: .section-description }
 
 <ul class="icon-list col-container">
-  {% iconitem %}
-    {% icon :bitbucket, class: 'center' %}
-  {% endiconitem %}
-
-  {% iconitem %}
-    {% icon :campfire_color, class: 'center' %}
-  {% endiconitem %}
-
-  {% iconitem %}
-    {% icon :codeship, class: 'center' %}
-  {% endiconitem %}
-
-  {% iconitem %}
-    {% icon :email_color, class: 'center' %}
-  {% endiconitem %}
-
-  {% iconitem %}
-    {% icon :flowdock_color, class: 'center' %}
-  {% endiconitem %}
-
-  {% iconitem %}
-    {% icon :github, class: 'center' %}
-  {% endiconitem %}
-
-  {% iconitem %}
-    {% icon :gitlab, class: 'center' %}
-  {% endiconitem %}
-
-  {% iconitem %}
-    {% icon :grove_color, class: 'center' %}
-  {% endiconitem %}
-
-  {% iconitem %}
-    {% icon :hipchat, class: 'center' %}
-  {% endiconitem %}
-
-  {% iconitem %}
-    {% icon :hipchat_color, class: 'center' %}
-  {% endiconitem %}
-
-  {% iconitem %}
-    {% icon :slack, class: 'center' %}
-  {% endiconitem %}
-
-  {% iconitem %}
-    {% icon :slack_color, class: 'center' %}
-  {% endiconitem %}
-
-  {% iconitem %}
-    {% icon :webhook, class: 'center' %}
-  {% endiconitem %}
-
-  {% iconitem %}
-    {% icon :webhook_color, class: 'center' %}
-  {% endiconitem %}
+  {% iconitem 'bitbucket-white', class: 'center icon-xl' %}
+  {% iconitem 'bitbucket', class: 'center gray icon-xl' %}
+  {% iconitem 'bitbucket-color', class: 'center icon-xl' %}
+  {% iconitem :campfire_color, class: 'center icon-xl' %}
+  {% iconitem :codeship, class: 'center icon-xl' %}
+  {% iconitem :email_color, class: 'center icon-xl' %}
+  {% iconitem :flowdock_color, class: 'center icon-xl' %}
+  {% iconitem :github, class: 'center icon-xl' %}
+  {% iconitem :gitlab, class: 'center icon-xl' %}
+  {% iconitem :gitlab_color, class: 'center icon-xl' %}
+  {% iconitem :google_app_engine, class: 'center icon-xl' %}
+  {% iconitem :grove_color, class: 'center icon-xl' %}
+  {% iconitem :hipchat, class: 'center icon-xl' %}
+  {% iconitem :hipchat_color, class: 'center icon-xl' %}
+  {% iconitem :slack, class: 'center icon-xl' %}
+  {% iconitem :slack_color, class: 'center icon-xl' %}
+  {% iconitem :webhook, class: 'center icon-xl' %}
+  {% iconitem :webhook_color, class: 'center icon-xl' %}
 </ul>
 
 ---
 
 ### Multi-color Icons
-<p class="text-light margin-bottom-md" markdown="1">If you need to style several paths inside of the icon, it's important to make sure you use the *injected* version of the icon.</p>
+If you need to style several paths inside of the icon, it's important to make sure you use the *injected* version of the icon.
+{: .section-description }
 
 <ul class="icon-list col-container">
-  {% iconitem %}
-    {% icon 'email-color', class: 'icon-xl center' %}
-  {% endiconitem %}
+  {% iconitem 'email-color', class: 'icon-xl center' %}
 </ul>
-```html
+```erb
 <%= icon 'email-color' %>
 ```
 
 ---
 
 ### Icon Sizes
-<p class="text-light margin-bottom-md">The icon size utility classes can be applied to any icon, and are useful when you want to override the default icon size.</p>
+The icon size utility classes can be applied to any icon, and are useful when you want to override the default icon size.
+{: .section-description }
 
 <ul class="icon-list col-container">
-  {% iconitem %}
-    {% icon :gear, class: 'center icon-xxs' %}
-  {% endiconitem %}
-
-  {% iconitem %}
-    {% icon :gear, class: 'center icon-xs' %}
-  {% endiconitem %}
-
-  {% iconitem %}
-    {% icon :gear, class: 'center icon-sm' %}
-  {% endiconitem %}
-
-  {% iconitem %}
-    {% icon :gear, class: 'center icon-md' %}
-  {% endiconitem %}
-
-  {% iconitem %}
-    {% icon :gear, class: 'center icon-lg' %}
-  {% endiconitem %}
-
-  {% iconitem %}
-    {% icon :gear, class: 'center icon-xl' %}
-  {% endiconitem %}
+  {% iconitem :gear, class: 'center icon-xxs' %}
+  {% iconitem :gear, class: 'center icon-xs' %}
+  {% iconitem :gear, class: 'center icon-sm' %}
+  {% iconitem :gear, class: 'center icon-md' %}
+  {% iconitem :gear, class: 'center icon-lg' %}
+  {% iconitem :gear, class: 'center icon-xl' %}
 </ul>
 
-```html
+```erb
 <%= icon :gear, class: 'icon-xxs' %>
 <%= icon :gear, class: 'icon-xs' %>
 <%= icon :gear, class: 'icon-sm' %>
 <%= icon :gear, class: 'icon-md' %>
 <%= icon :gear, class: 'icon-lg' %>
 <%= icon :gear, class: 'icon-xl' %>
+```
+
+---
+
+### Centered Icons
+One of the most common problems when using an icon is that doesn't line up with the text content next to it. Don't worry though, we've got you covered — simply apply the `.align-middle` class to any icon to fix this issue.
+{: .section-description }
+
+<div class="margin-bottom-lg">
+  <button class="btn btn-secondary">{% icon :plus, class: 'align-middle icon-sm margin-right-xxs' %} Create</button>
+</div>
+
+```erb
+<button class="btn btn-secondary">
+  <%= icon :plus, class: 'align-middle icon-sm' %>
+  Create
+</button>
 ```

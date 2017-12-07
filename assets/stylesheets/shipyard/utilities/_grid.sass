@@ -1,0 +1,74 @@
+$widths: (0, 5, 10, 15, 20, 25, 30, 33, 35, 40, 45, 50, 55, 60, 65, 66, 70, 75, 80, 85, 90, 95, 100)
+
+@mixin column-style($property, $width)
+  @if $width == 0 and $property == max-width
+    max-width: none
+  @else if $width == 66
+    #{$property}: 66.6666666666%
+  @else if $width == 33
+    #{$property}: 33.3333333333%
+  @else
+    #{$property}: percentage($width / 100)
+
+@mixin column-sizes
+  @each $width in $widths
+    &-#{$width}
+      +column-style(max-width, $width)
+      +column-style(flex-basis, $width)
+    &-offset-#{$width}
+      +column-style(margin-left, $width)
+
+.container
+  +clearfix
+  margin: 0 auto
+  max-width: 1440px
+  position: relative
+  +responsive-padding(left right, $divisor: 1)
+
+.content
+  @extend .container
+  +responsive-padding(top bottom, $divisor: 1)
+
++component('col')
+  display: block
+  position: relative
+  flex-basis: 0
+  flex-grow: 1
+  flex-shrink: 1
+  flex-direction: column
+  +responsive-padding(left right)
+
+  &-container
+    display: flex
+    flex-wrap: wrap
+    +responsive-margin(left right, $divisor: -2)
+    +all-media-sizes
+      &-nowrap
+        display: flex
+        flex-wrap: nowrap
+        +responsive-margin(left right, $divisor: -2)
+
+  +all-media-sizes
+    &-center,
+    &-v-center
+      display: flex
+      justify-content: center
+    &-center
+      align-items: center
+
+    +column-sizes
+
+.flex
+  +all-media-sizes
+    &-row
+      display: flex
+      flex-direction: row
+    &-row-reverse
+      display: flex
+      flex-direction: row-reverse
+    &-col
+      display: flex
+      flex-direction: column
+    &-col-reverse
+      display: flex
+      flex-direction: column-reverse

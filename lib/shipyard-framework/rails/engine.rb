@@ -2,7 +2,7 @@ module Shipyard
   module Rails
     class Engine < ::Rails::Engine
       initializer 'shipyard-framework.assets.precompile' do |app|
-        %w(stylesheets javascripts icons).each do |sub|
+        %w(stylesheets javascripts images icons).each do |sub|
           app.config.assets.paths << root.join('assets', sub).to_s
         end
       end

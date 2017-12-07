@@ -1,4 +1,4 @@
-require_relative '../../../../app/helpers/shipyard/box_helper'
+require 'shipyard-framework/helpers/box_helper'
 
 module Shipyard
   module Jekyll
@@ -9,12 +9,12 @@ module Shipyard
         super
         @types = []
         types.tr(' ','').split(',').each do |type|
-          @types << type.tr(':','').to_sym
+          @types << type.tr(':','').tr('_','-').to_sym
         end
       end
 
       def render(context)
-        box @types, raw(super.strip)
+        box(@types) { raw(super.strip) }
       end
     end
   end

@@ -1,0 +1,21 @@
++component('input')
+  &-required
+    position: relative
+    &::before,
+    &::after
+      position: absolute
+    &::before
+      z-index: 1
+      content: "*"
+      +sub-component-styles(required-asterisk)
+      +when('error')
+        +sub-component-styles(required-asterisk-error)
+    &::after
+      content: ""
+      display: block
+      border-style: solid
+      border-radius: 0 3px 0 0
+      border-color: transparent
+      +sub-component-styles(required-corner)
+      +when('error')
+        +sub-component-styles(required-corner-error)

@@ -11,4 +11,11 @@
     +center($horizontal: true)
 
 .align-middle
+  top: -1px
+  position: relative
   vertical-align: middle
+
+@each $value in (static, relative, absolute, fixed)
+  .#{$value}
+    +all-media-sizes
+      position: $value

@@ -10,6 +10,7 @@ module Shipyard
         register_sprockets
       end
       register_icons
+      load_icons if rspec?
 
       if jekyll?
         register_jekyll_hooks
@@ -33,6 +34,10 @@ module Shipyard
       File.join assets_path, 'javascripts'
     end
 
+    def images_path
+      File.join assets_path, 'images'
+    end
+
     def icons_path
       File.join assets_path, 'icons'
     end
@@ -45,6 +50,10 @@ module Shipyard
 
     def sprockets?
       defined?(::Sprockets)
+    end
+
+    def rspec?
+      defined?(::RSpec)
     end
 
     def rails?
@@ -72,6 +81,7 @@ module Shipyard
     def register_sprockets
       Sprockets.append_path(stylesheets_path)
       Sprockets.append_path(javascripts_path)
+      Sprockets.append_path(images_path)
     end
 
     def register_jekyll_hooks
@@ -97,9 +107,17 @@ module Shipyard
     end
 
     def register_helpers
-      Dir['app/helpers/shipyard/*.rb'].each do |file|
-        require_relative "../#{file}"
-      end
+      require 'shipyard-framework/helpers/alert_helper'
+      require 'shipyard-framework/helpers/box_helper'
+      require 'shipyard-framework/helpers/button_helper'
+      require 'shipyard-framework/helpers/form_helper'
+      require 'shipyard-framework/helpers/icon_helper'
+      require 'shipyard-framework/helpers/layout_helper'
+      require 'shipyard-framework/helpers/note_helper'
+    end
+
+    def load_icons
+      $icons = Shipyard::Icons.new 'assets/icons/', 'tmp/assets/'
     end
   end
 end

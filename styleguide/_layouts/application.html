@@ -12,7 +12,10 @@ navigation:
     <meta charset="utf-8" />
     <title>{{ page.title }}</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-    {% css application %}
+    <meta name="theme-color" content="#20a5a8" />
+    {% css fonts media:screen rel:preload async %}
+    {% css syntax media:screen rel:preload async %}
+    {% css application media:screen %}
   </head>
   <body>
     <header class="header">
@@ -28,7 +31,7 @@ navigation:
             </li>
           {% endfor %}
           <li class="header-item header-item-cta">
-            <a href="https://github.com/codeship/shipyard" target="_blank" class="header-link-cta">Download</a>
+            <a href="https://github.com/codeship/shipyard" target="_blank" class="header-link-cta" rel="noopener">Download</a>
           </li>
         </ul>
       </div>
