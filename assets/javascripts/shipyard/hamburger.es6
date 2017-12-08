@@ -1,10 +1,11 @@
 class Hamburger extends Shipyard {
   constructor (el) {
     super(el)
-    this.on('click', () => { this.onClick() })
+    this.on('click', this.toggle)
   }
 
-  onClick () {
-    this.html.classList.toggle('hamburger-button-clicked')
+  toggle (e) {
+    e.preventDefault()
+    shipyard.toggleClass('hamburger-button-clicked')
   }
 }

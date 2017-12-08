@@ -1,12 +1,12 @@
 class Scroll extends Shipyard {
   constructor (el) {
     super(el)
-    this.on('scroll resize', () => { this.scroll() }).trigger('scroll')
+    this.on('scroll resize', this.scroll).trigger('scroll')
   }
 
   scroll () {
-    this.html.classList.toggle('scrolling', window.pageYOffset > 0)
-    this.html.classList.toggle('scroll-top', window.pageYOffset <= 0)
-    this.html.classList.toggle('scroll-bottom', window.pageYOffset + window.innerHeight >= document.body.scrollHeight)
+    shipyard.toggleClass('scrolling', window.pageYOffset > 0)
+    shipyard.toggleClass('scroll-top', window.pageYOffset <= 0)
+    shipyard.toggleClass('scroll-bottom', window.pageYOffset + window.innerHeight >= document.body.scrollHeight)
   }
 }

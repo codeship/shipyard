@@ -1,13 +1,28 @@
 class Alert extends Shipyard {
   constructor (el) {
     super(el)
-    this.el.forEach((el) => {
-      el.querySelector('[shipyard=alert-close]')
-        .addEventListener('click', () => { this.close(el) })
-    })
+    this.on('show', (e) => { this.show(e) })
+    this.on('close', (e) => { this.close(e) })
+    this.on('click', '[shipyard=alert-close]', (e) => { this.close(e) })
+
+    // Initiate the Alert Timer if it exists.
+    this.timer = this.child('.alert-timer')
+    if (this.timer) this.timer = new AlertTimer(this.timer, this)
   }
 
-  close (el) {
-    el.classList.add('alert-closed')
+  options(options) {
+    this.on('afterClose', options.afterClose)
+  }
+
+  show (e) {
+    this.options(e.detail)
+    this.removeClass('alert-closed')
+    if (this.timer) this.timer.trigger('start')
+  }
+
+  close (e) {
+    e.preventDefault()
+    this.addClass('alert-closed')
+    this.trigger('afterClose')
   }
 }

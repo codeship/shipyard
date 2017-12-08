@@ -1,12 +1,7 @@
-class ShadeList extends Shipyard {
+class ShadeColor extends Shipyard {
   constructor (el) {
     super(el)
-
-    this.el.forEach((list) => {
-      list.querySelectorAll('[shade-color]').forEach((shade) => {
-        shade.innerHTML = this.rgbToHex(this.css(shade, 'background-color'))
-      })
-    })
+    this.html(this.rgbToHex(this.css('background-color')))
   }
 
   rgbToHex (rgb) {
@@ -17,5 +12,3 @@ class ShadeList extends Shipyard {
     return `#${hex}`;
   }
 }
-
-new ShadeList('[shade-list]')
