@@ -19,7 +19,8 @@ Used to display notes, tips, and other non-critical information.
 ---
 
 ### Timed Alerts
-<p class="text-light margin-bottom-sm">Useful when you want to display an alert for a pretedermined amount of time.</p>
+Useful when you want to display an alert for a predetermined amount of time.
+{: .section-description }
 
 {% alert :success, :dismissible, id: 'timed-alert-5s', class: 'alert-closed' %}
   Ten other people are also viewing tickets for <a href="#">this flight</a>.
@@ -39,11 +40,9 @@ Used to display notes, tips, and other non-critical information.
   <div class="alert-timer alert-timer-on" data-duration="15"></div>
 {% endalert %}
 
-<div class="box-secondary box-padding align-center">
-  <button class="btn btn-cta margin-right-xs" alert-trigger="#timed-alert-5s">5s</button>
-  <button class="btn btn-cta margin-right-xs" alert-trigger="#timed-alert-10s">10s</button>
-  <button class="btn btn-cta" alert-trigger="#timed-alert-15s">15s</button>
-</div>
+<button class="btn btn-primary margin-right-xs" alert-trigger="#timed-alert-5s">5 Seconds</button>
+<button class="btn btn-primary margin-right-xs" alert-trigger="#timed-alert-10s">10 Seconds</button>
+<button class="btn btn-primary" alert-trigger="#timed-alert-15s">15 Seconds</button>
 
 ---
 

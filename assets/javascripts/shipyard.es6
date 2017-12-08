@@ -2,6 +2,7 @@
 //= require ./shipyard/scroll
 //= require ./shipyard/hamburger
 //= require ./shipyard/alert
+//= require ./shipyard/alert-timer
 //= require ./shipyard/accordion
 //= require ./shipyard/accordion-trigger
 //= require ./shipyard/modal

@@ -19,17 +19,18 @@ class Shipyard {
 
     objects.forEach((obj) => {
       events.split(' ').forEach((eventName) => {
-        obj.el.addEventListener(eventName, (e) => {
-          callback(e, obj, this)
-        })
+        obj.el.addEventListener(eventName, callback)
       })
     })
     return this
   }
 
-  trigger (events) {
+  trigger () {
+    let events = arguments[0]
     events.split(' ').forEach((eventName) => {
-      this.el.dispatchEvent(new Event(eventName))
+      this.el.dispatchEvent(
+        new CustomEvent(eventName, { detail: arguments[1] })
+      )
     })
     return this
   }
@@ -40,6 +41,19 @@ class Shipyard {
       els.push(new Shipyard(el))
     })
     return els
+  }
+
+  filter (selector) {
+    let els = this.els.filter(obj => obj.el == document.querySelector(selector))
+    return els[0]
+  }
+
+  child (selector) {
+    return this.el.querySelector(selector)
+  }
+
+  data (name) {
+    return this.el.dataset[name]
   }
 
   css (property, value) {
