@@ -6,7 +6,7 @@
     <meta name="theme-color" content="#20a5a8" />
     <link type="text/css" rel="stylesheet" href="/shipyard/assets/fonts-ca42f2a84b2649c9fcccd16cc51fb6d1f915ba2a0988d30b91c3b84d8722b369.css" media="screen" rel="preload" async>
     <link type="text/css" rel="stylesheet" href="/shipyard/assets/syntax-40266bdc7fd995b8cddaeedab3817d78fcc5aed189b1d6a23a6827b437b71488.css" media="screen" rel="preload" async>
-    <link type="text/css" rel="stylesheet" href="/shipyard/assets/application-de6567f80dd0be0d09b693055d8178e9dba36f301084ca3f8c64a0cfce159ba5.css" media="screen">
+    <link type="text/css" rel="stylesheet" href="/shipyard/assets/application-d1fe40d0f0e43042b7a1c47435265eb6eda12c525e42a864dcc5096be3a06503.css" media="screen">
   </head>
   <body>
     <header class="header">
@@ -38,6 +38,30 @@
     <div class="container"><h1>Shipyard Alerts</h1>
 
 <p class="text-light text-lg margin-top-sm">Alerts should be used to grab a user’s attention before proceeding to the next action. They are commonly found at the very top of the page directly above the content.</p>
+
+<hr />
+
+<h3 id="timed-alerts">Timed Alerts</h3>
+<p class="section-description">Useful when you want to display an alert for a predetermined amount of time.</p>
+
+<div role="alert" shipyard="alert" id="timed-alert-5s" class="alert alert-success alert-closed"><p class="alert-txt">
+  Pack your bags! You'll be on the next flight to Hawaii.
+  <div class="alert-timer alert-timer-on" data-duration="5"></div>
+</p><button class="alert-close v-center" shipyard="alert-close"><svg class="icon icon-x icon-outline alert-close-icon icon-outline-inverse center" viewBox="0 0 6 6" preserveAspectRatio="xMinYMin meet"><use xlink:href="/shipyard/assets/icons.svg#x"></use></svg></button></div>
+
+<div role="alert" shipyard="alert" id="timed-alert-10s" class="alert alert-success alert-closed"><p class="alert-txt">
+  Pack your bags! You'll be on the next flight to Tahiti.
+  <div class="alert-timer alert-timer-on" data-duration="10"></div>
+</p><button class="alert-close v-center" shipyard="alert-close"><svg class="icon icon-x icon-outline alert-close-icon icon-outline-inverse center" viewBox="0 0 6 6" preserveAspectRatio="xMinYMin meet"><use xlink:href="/shipyard/assets/icons.svg#x"></use></svg></button></div>
+
+<div role="alert" shipyard="alert" id="timed-alert-15s" class="alert alert-success alert-closed"><p class="alert-txt">
+  Pack your bags! You'll be on the next flight to Corsica.
+  <div class="alert-timer alert-timer-on" data-duration="15"></div>
+</p><button class="alert-close v-center" shipyard="alert-close"><svg class="icon icon-x icon-outline alert-close-icon icon-outline-inverse center" viewBox="0 0 6 6" preserveAspectRatio="xMinYMin meet"><use xlink:href="/shipyard/assets/icons.svg#x"></use></svg></button></div>
+
+<p><button class="btn btn-primary margin-right-xs" alert-trigger="#timed-alert-5s">5 Seconds</button>
+<button class="btn btn-primary margin-right-xs" alert-trigger="#timed-alert-10s">10 Seconds</button>
+<button class="btn btn-primary" alert-trigger="#timed-alert-15s">15 Seconds</button></p>
 
 <hr />
 
@@ -107,6 +131,6 @@
     <footer class="align-center text-lightest">
       &copy; Shipyard Framework 2017
     </footer>
-    <script type="text/javascript" src="/shipyard/assets/application-22e5835cd95476e8e1159cbaf8021593e118c7b37cbfbb754de37911beaf1e42.js"></script>
+    <script type="text/javascript" src="/shipyard/assets/application-5ab9446545f2cb68cfd0d19be4702200d8390ba876c5de7a929c93f05a68b866.js"></script>
   </body>
 </html>
