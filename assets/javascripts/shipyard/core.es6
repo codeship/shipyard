@@ -56,6 +56,11 @@ class Shipyard {
     return this.el.dataset[name]
   }
 
+  html (value) {
+    this.el.innerHTML = value
+    return this
+  }
+
   css (property, value) {
     if (value) {
       this.el.style[property] = value
