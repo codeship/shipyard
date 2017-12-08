@@ -1,20 +1,17 @@
 class Modal extends Shipyard {
   constructor (el) {
     super(el)
+    this.on('open', () => { this.open() })
+    this.on('click', '[modal-close]', () => { this.close() })
   }
 
   open () {
     this.removeClass('display-none')
-    this.html.classList.add('modal-open')
-    this.el.forEach((el) => {
-      el.querySelectorAll('[modal-close]').forEach((btn) => {
-        btn.addEventListener('click', () => { this.close() })
-      })
-    })
+    shipyard.addClass('modal-open')
   }
 
   close () {
     this.addClass('display-none')
-    this.html.classList.remove('modal-open')
+    shipyard.removeClass('modal-open')
   }
 }

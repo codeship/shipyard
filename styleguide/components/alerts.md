@@ -21,22 +21,22 @@ Used to display notes, tips, and other non-critical information.
 ### Timed Alerts
 <p class="text-light margin-bottom-sm">Useful when you want to display an alert for a pretedermined amount of time.</p>
 
-{% alert :success, :dismissible, id: 'timed-alert-5s', class: 'alert-closed', data: { duration: 5 } %}
+{% alert :success, :dismissible, id: 'timed-alert-5s', class: 'alert-closed' %}
   Ten other people are also viewing tickets for <a href="#">this flight</a>.
   Use the code <code class="code-inline">Travel_Light_2017</code> before you book your flight.
-  <div class="alert-timer alert-timer-on"></div>
+  <div class="alert-timer alert-timer-on" data-duration="5"></div>
 {% endalert %}
 
-{% alert :success, :dismissible, id: 'timed-alert-10s', class: 'alert-closed', data: { duration: 10 } %}
+{% alert :success, :dismissible, id: 'timed-alert-10s', class: 'alert-closed' %}
   Ten other people are also viewing tickets for <a href="#">this flight</a>.
   Use the code <code class="code-inline">Travel_Light_2017</code> before you book your flight.
-  <div class="alert-timer alert-timer-on"></div>
+  <div class="alert-timer alert-timer-on" data-duration="10"></div>
 {% endalert %}
 
-{% alert :success, :dismissible, id: 'timed-alert-15s', class: 'alert-closed', data: { duration: 15 } %}
+{% alert :success, :dismissible, id: 'timed-alert-15s', class: 'alert-closed' %}
   Ten other people are also viewing tickets for <a href="#">this flight</a>.
   Use the code <code class="code-inline">Travel_Light_2017</code> before you book your flight.
-  <div class="alert-timer alert-timer-on"></div>
+  <div class="alert-timer alert-timer-on" data-duration="15"></div>
 {% endalert %}
 
 <div class="box-secondary box-padding align-center">

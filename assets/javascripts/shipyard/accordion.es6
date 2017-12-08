@@ -1,10 +1,10 @@
 class Accordion extends Shipyard {
   constructor (el) {
     super(el)
-    this.on('click', this.toggle)
+    this.on('toggle', () => { this.toggle() })
   }
 
-  toggle (event, el) {
-    document.querySelector(el.attr('accordion')).classList.toggle('accordion-closed')
+  toggle () {
+    this.toggleClass('accordion-closed')
   }
 }
