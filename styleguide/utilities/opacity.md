@@ -8,13 +8,18 @@ options: [0,05,10,15,20,25,30,35,40,45,50,55,60,65,70,75,80,85,90,95]
 
 ---
 
-## Sizes `.rounded-{ x1..x4 }-{ size }`
-The examples below demonstrate the utility classes at each size.
-{: .section-description }
-
+<ul class="col-container strong align-center">
+  {% for option in page.options reversed -%}
+    <li class="col col-20 margin-bottom-sm">
+      <div class="bg-gray-dark white rounded-sm padding-xs o-{{ option | opacity_css_class }}">
+        .{{ option | opacity_css_class }}
+      </div>
+    </li>
+  {% endfor -%}
+</ul>
 
 ```css
-{% for option in page.options -%}
+{% for option in page.options reversed -%}
 .o-{{ option | opacity_css_class }} { opacity: {{ option | opacity_css_class: '.' }} }
 {% endfor -%}
 ```
