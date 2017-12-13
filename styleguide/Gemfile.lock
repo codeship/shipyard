@@ -84,6 +84,7 @@ GEM
       nokogiri (>= 1.6)
     rails-html-sanitizer (1.0.3)
       loofah (~> 2.0)
+    rake (12.3.0)
     rb-fsevent (0.10.2)
     rb-inotify (0.9.10)
       ffi (>= 0.5.0, < 2)
@@ -116,6 +117,7 @@ PLATFORMS
 DEPENDENCIES
   jekyll (~> 3.6.0)
   jekyll-assets (~> 2.3.2)
+  rake
   sassc (~> 1.11.4)
   shipyard-framework!
 
