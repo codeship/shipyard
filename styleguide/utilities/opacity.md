@@ -2,6 +2,7 @@
 title: Opacity Utilities
 description: Shipyard's opacity utilities are useful when you need to overwrite the default opacity of a component.
 options: [0,05,10,15,20,25,30,35,40,45,50,55,60,65,70,75,80,85,90,95]
+sass_file: shipyard/utilities/_opacity
 ---
 
 {% include page-heading.html page=page %}
@@ -19,11 +20,9 @@ options: [0,05,10,15,20,25,30,35,40,45,50,55,60,65,70,75,80,85,90,95]
 </ul>
 
 ```css
-{% sass_output shipyard/utilities/_opacity -%}
+{% sass_output -%}
 ```
+
 ---
 
-- Size: {% css_size shipyard/utilities/_opacity %}
-- Declarations: {% css_declarations shipyard/utilities/_opacity %}
-- Selectors: {% css_selectors shipyard/utilities/_opacity %}
-{: .list .text-normal }
+{% include css-stats.html %}

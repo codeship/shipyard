@@ -1,13 +1,12 @@
 module Jekyll
   class CssDeclarations < Liquid::Tag
-    def initialize(tag_name, sass_path, options)
+    def initialize(tag_name, args, options)
       super
-      @sass_path = sass_path.strip
     end
 
     def render(context)
       sass = context['site']['sass_output'].detect { |s|
-        s[:file].include? @sass_path
+        s[:file].include? context['page']['sass_file']
       }
       sass[:declarations]
     end

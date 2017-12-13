@@ -12,14 +12,15 @@ module Jekyll
       Dir['../assets/stylesheets/shipyard/utilities/**/*.sass'].sort.map do |file|
         sass = %(@import "shipyard/core"\n)
         sass += File.read(file)
-        css = Sass::Engine.new(sass, syntax: :sass, style: :compressed).render
+        compact_css = Sass::Engine.new(sass, syntax: :sass, style: :compact).render
+        compressed_css = Sass::Engine.new(sass, syntax: :sass, style: :compressed).render
         {
           file: file,
           sass: sass,
-          css: css,
-          gzip_size: css.bytesize,
-          declarations: css.scan(/{/).size,
-          selectors: css.scan(/[.][a-zA-Z\-][a-zA-Z0-9\-]*/).size
+          css: compact_css,
+          gzip_size: compressed_css.bytesize,
+          declarations: compressed_css.scan(/[.][a-zA-Z\-][a-zA-Z0-9\-]*{/).size,
+          selectors: compressed_css.scan(/[.][a-zA-Z\-][a-zA-Z0-9\-]*/).size
         }
       end
     end
