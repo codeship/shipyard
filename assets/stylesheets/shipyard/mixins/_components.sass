@@ -13,9 +13,9 @@
 
 @mixin extend($modifier: null)
   @if $modifier
-    @extend .#{$component}-#{$modifier}
+    @extend .#{$component}-#{$modifier} !optional
   @else
-    @extend .#{$component}
+    @extend .#{$component} !optional
 
 @mixin z-index($value: null)
   @if $value

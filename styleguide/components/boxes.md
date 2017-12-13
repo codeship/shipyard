@@ -1,6 +1,7 @@
 ---
 title: Shipyard Boxes
 description: Boxes should be used to grab a draw attention to specific groups of content, and are most useful to linked content. By default, all boxes need to have the base class of `.box` in order to function properly.
+sass_file: shipyard/components/_boxes
 box_sizes: [xxs, xs, sm, md, lg, xl, xxl]
 ---
 
@@ -90,3 +91,7 @@ Useful when you need a box with rounded corners.
     <strong class="center text-lighter text-sm">.box-{{ size }}</strong>
   </div>
 {% endfor %}
+
+---
+
+{% include css-stats.html %}

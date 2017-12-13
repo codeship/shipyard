@@ -1,6 +1,7 @@
 ---
 title: Horizontal Rules
 description: Shipyard doesn't make any assumptions on how you want to common tags like an `hr` to styled. As a result, we would recommend extending the `.hr` class in your own SASS files to achieve the results below on all `hr` tags (e.g. `@extend .hr`).
+sass_file: shipyard/components/_horizontal-rules
 text_sizes: [xxs, xs, sm, md, lg, xl, xxl, xxxl]
 text_shades: [normal, light, lighter, lightest]
 ---
@@ -75,3 +76,7 @@ Useful when you have a horizontal rule on a lighter background.
 ```html
 <hr class="hr-light" />
 ```
+
+---
+
+{% include css-stats.html %}

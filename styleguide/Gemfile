@@ -4,4 +4,6 @@ group :jekyll_plugins do
   gem 'jekyll', '~> 3.6.0'
   gem 'jekyll-assets', '~> 2.3.2'
   gem 'shipyard-framework', path: '../'
+  gem 'rake' # Needed for Codeship to install the sassc gem
+  gem 'sassc', '~> 1.11.4'
 end

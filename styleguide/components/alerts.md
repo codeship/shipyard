@@ -1,6 +1,7 @@
 ---
 title: Shipyard Alerts
 description: Alerts should be used to grab a user's attention before proceeding to the next action. They are commonly found at the very top of the page directly above the content.
+sass_file: shipyard/components/_alerts
 ---
 
 {% include page-heading.html page=page %}
@@ -100,3 +101,7 @@ Useful when drawing attention to something that has gone critically wrong.
   We hope the code <code class="code-inline">Travel_Light_2017</code> will be useful for your next flight.
   {% btn Call to Action, :sm, class: 'alert-cta' %}
 {% endalert %}
+
+---
+
+{% include css-stats.html %}

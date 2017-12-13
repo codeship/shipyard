@@ -1,6 +1,7 @@
 ---
 title: Shipyard Colors
 description: Shipyard includes **9 standard colors** by default, and each color can be accessed with the corresponding CSS utility class `.color-shade` or by using the SASS variable `$color-shade` in your SASS files.
+sass_file: shipyard/utilities/_colors
 primary_colors: [Gray, Blue, Teal, Green, Yellow, Orange, Red, Coral, Purple]
 shades: [Lightest, Lighter, Light, Base, Dark, Darker, Darkest]
 base_colors: [Black, White]
@@ -38,3 +39,7 @@ base_colors: [Black, White]
     </li>
   {% endfor %}
 </ul>
+
+---
+
+{% include css-stats.html %}

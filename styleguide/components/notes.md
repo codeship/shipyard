@@ -1,6 +1,7 @@
 ---
 title: Shipyard Notes
 description: Notes should be used to grab a user's attention along side of other content.
+sass_file: shipyard/components/_notes
 ---
 
 {% include page-heading.html page=page %}
@@ -60,3 +61,7 @@ Useful when drawing attention to critical information.
   </p>
   {% btn Call to Action, :sm, class: 'note-cta' %}
 {% endnote %}
+
+---
+
+{% include css-stats.html %}
