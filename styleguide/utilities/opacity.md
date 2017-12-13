@@ -19,7 +19,12 @@ options: [0,05,10,15,20,25,30,35,40,45,50,55,60,65,70,75,80,85,90,95]
 </ul>
 
 ```css
-{% for option in page.options reversed -%}
-.o-{{ option | opacity_css_class }} { opacity: {{ option | opacity_css_class: '.' }} }
-{% endfor -%}
+{% sass_output shipyard/utilities/_opacity -%}
 ```
+---
+
+{% css_lines shipyard/utilities/_opacity -%}
+
+---
+
+{{ site.sass_output }}
