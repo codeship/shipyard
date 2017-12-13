@@ -1,4 +1,4 @@
-require 'sass'
+require 'sassc'
 require 'zlib'
 
 module Jekyll
@@ -13,8 +13,8 @@ module Jekyll
       Dir['../assets/stylesheets/shipyard/**/*.sass'].sort.map do |file|
         sass = %(@import "shipyard/core"\n)
         sass += File.read(file)
-        compact_css = Sass::Engine.new(sass, syntax: :sass, style: :compact).render
-        compressed_css = Sass::Engine.new(sass, syntax: :sass, style: :compressed).render
+        compact_css = render(sass, :compact)
+        compressed_css = render(sass, :compressed)
         {
           file: file,
           sass: sass,
@@ -25,6 +25,15 @@ module Jekyll
           selectors: compressed_css.scan(/[.][a-zA-Z\-][a-zA-Z0-9\-]*/).size
         }
       end
+    end
+
+    def render(sass, style)
+      SassC::Engine.new(
+        sass,
+        syntax: :sass,
+        style: style,
+        load_paths: [Shipyard::stylesheets_path]
+      ).render
     end
   end
 end

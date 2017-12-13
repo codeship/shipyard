@@ -4,4 +4,5 @@ group :jekyll_plugins do
   gem 'jekyll', '~> 3.6.0'
   gem 'jekyll-assets', '~> 2.3.2'
   gem 'shipyard-framework', path: '../'
+  gem 'sassc', '~> 1.11.4'
 end
