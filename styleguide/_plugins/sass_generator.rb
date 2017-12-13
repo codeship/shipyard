@@ -17,7 +17,8 @@ module Jekyll
         {
           file: file,
           sass: sass,
-          css: compact_css,
+          compact_css: compact_css,
+          compressed_css: compressed_css,
           gzip_size: compressed_css.bytesize,
           declarations: compressed_css.scan(/[.][a-zA-Z\-][a-zA-Z0-9\-]*{/).size,
           selectors: compressed_css.scan(/[.][a-zA-Z\-][a-zA-Z0-9\-]*/).size

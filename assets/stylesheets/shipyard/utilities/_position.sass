@@ -1,0 +1,4 @@
+@each $value in (static, relative, absolute, fixed)
+  .#{$value}
+    +all-media-sizes
+      position: $value

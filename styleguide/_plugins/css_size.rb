@@ -8,7 +8,11 @@ module Jekyll
       sass = context['site']['sass_output'].detect { |s|
         s[:file].include? context['page']['sass_file']
       }
-      "#{sass[:gzip_size]}B"
+      size = sass[:gzip_size]
+      case
+      when size >= 1000 then "#{size / 1000.0} kb"
+      else "#{size} b"
+      end
     end
   end
 end

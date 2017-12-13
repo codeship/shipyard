@@ -8,7 +8,7 @@ module Jekyll
       sass = context['site']['sass_output'].detect { |s|
         s[:file].include? context['page']['sass_file']
       }
-      output = sass[:css]
+      output = sass[:compact_css]
       # output.gsub! /}/, " }\n"
       # output.gsub! /{/, ' { '
       # output.gsub! /([a-z]*):/, '\1: '
