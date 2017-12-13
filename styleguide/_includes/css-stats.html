@@ -1,8 +1,14 @@
-<ul>
-  <li>Gzip Size: {% css_size %}</li>
-  <li>Declarations: {% css_declarations %}</li>
-  <li>Selectors: {% css_selectors %}</li>
+<ul class="col-container">
+  <li class="css-stat-item col col-10">
+    <span class="text-sm medium text-lighter display-block">Gzipped Size</span>
+    <span class="text-xxxl strong text-darker">{% css_size %}</span>
+  </li>
+  <li class="css-stat-item col col-10">
+    <span class="text-sm medium text-lighter display-block">Declarations</span>
+    <span class="text-xxxl strong text-darker">{% css_declarations %}</span>
+  </li>
+  <li class="css-stat-item col col-10">
+    <span class="text-sm medium text-lighter display-block">Selectors</span>
+    <span class="text-xxxl strong text-darker">{% css_selectors %}</span>
+  </li>
 </ul>
-```css
-{% sass_output -%}
-```

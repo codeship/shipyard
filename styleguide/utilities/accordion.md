@@ -1,6 +1,7 @@
 ---
 title: Accordions
 description: Useful when you want to open and close large blocks of content in a more elegant way.
+sass_file: shipyard/utilities/_accordion
 sizes:
   -
     name: xs
@@ -48,3 +49,7 @@ sizes:
 /* Accordion: Closed State */
 .accordion-closed { opacity: 0; max-height: 0; overflow: hidden; padding-top: 0; padding-bottom: 0; margin-top: 0; margin-bottom: 0; }
 ```
+
+---
+
+{% include css-stats.html %}

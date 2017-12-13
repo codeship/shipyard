@@ -1,5 +1,6 @@
 ---
 title: Shipyard Typography
+sass_file: shipyard/utilities/_typography
 text_sizes: [xxs, xs, sm, md, lg, xl, xxl, xxxl]
 text_shades: [darkest, darker, dark, normal, light, lighter, lightest]
 ---
@@ -67,3 +68,7 @@ text_shades: [darkest, darker, dark, normal, light, lighter, lightest]
     </div>
   </div>
 </div>
+
+---
+
+{% include css-stats.html %}
