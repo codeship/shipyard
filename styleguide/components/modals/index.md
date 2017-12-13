@@ -1,6 +1,7 @@
 ---
 title: Shipyard Modals
 description: Modals are triggered by applying the following attribute to any button or link (e.g. `modal-trigger="login"`).
+sass_file: shipyard/components/_modals
 ---
 
 {% include page-heading.html page=page %}
@@ -34,4 +35,7 @@ description: Modals are triggered by applying the following attribute to any but
 </div>
 ```
 
+---
+
+{% include css-stats.html %}
 {% include_relative _modal.html css_class="display-none" %}

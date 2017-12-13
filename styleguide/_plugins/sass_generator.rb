@@ -10,7 +10,7 @@ module Jekyll
     private
 
     def load_sass_files
-      Dir['../assets/stylesheets/shipyard/utilities/**/*.sass'].sort.map do |file|
+      Dir['../assets/stylesheets/shipyard/**/*.sass'].sort.map do |file|
         sass = %(@import "shipyard/core"\n)
         sass += File.read(file)
         compact_css = Sass::Engine.new(sass, syntax: :sass, style: :compact).render

@@ -1,5 +1,6 @@
 ---
 title: Shipyard Buttons
+sass_file: shipyard/components/_buttons
 ---
 
 {% include page-heading.html page=page %}
@@ -185,3 +186,7 @@ The button classes can be applied to any type of html tag to achieve the desired
   {% btn Wide Screens, :sm :x3_md %}
   {% btn Giant Screens, :sm :x4_md %}
 </div>
+
+---
+
+{% include css-stats.html %}

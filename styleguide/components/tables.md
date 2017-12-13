@@ -1,6 +1,7 @@
 ---
 title: Shipyard Tables
 description: Tables are useful for tabular data and can be used simple by applying the `.table` class to any table you're working on.
+sass_file: shipyard/components/_tables
 ---
 
 {% include page-heading.html page=page %}
@@ -27,3 +28,7 @@ description: Tables are useful for tabular data and can be used simple by applyi
     {% endfor %}
   </tbody>
 </table>
+
+---
+
+{% include css-stats.html %}

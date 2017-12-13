@@ -1,0 +1,61 @@
+@mixin btn($size: md, $position: relative, $bg: $gray)
+  position: $position
+  display: inline-block
+  border-radius: 5px
+  border: 0
+  cursor: pointer
+  transition: background-color 300ms ease, color 300ms ease, border-color 300ms ease, opacity 300ms ease
+  outline: none
+  border-width: 2px
+  border-style: solid
+  font-weight: $bold
+  font-family: $font-family
+  text-align: center
+  text-decoration: none
+  +btn-size($size)
+  +btn-color($bg, #fff)
+  +btn-hover(darken($bg, 10%), #fff)
+
+@mixin btn-color($color, $text-color: null, $border-color: null)
+  background-color: $color
+  @if $border-color
+    border-color: $border-color
+  @else
+    border-color: $color
+  @if $text-color
+    color: $text-color
+
+@mixin btn-hover($color, $text-color: null, $border-color: null, $text-decoration: none)
+  &:hover, &:focus, &:active, &.btn-loading
+    text-decoration: $text-decoration
+    +btn-color($color, $text-color, $border-color)
+
+@mixin btn-size($size, $min-width: null)
+  @if $size == xxs
+    font-size: 12px
+    padding: 0 8px
+    +btn-size(20px)
+  @else if $size == xs
+    font-size: 12px
+    padding: 0 10px
+    +btn-size(30px)
+  @else if $size == sm
+    font-size: 14px
+    padding: 0 15px
+    +btn-size(40px)
+  @else if $size == md
+    font-size: 16px
+    padding: 0 20px
+    +btn-size(50px)
+  @else if $size == lg
+    font-size: 18px
+    padding: 0 30px
+    +btn-size(60px)
+  @else if $size == xl
+    font-size: 20px
+    padding: 0 35px
+    +btn-size(70px)
+  @else if type-of($size) == 'number'
+    height: $size
+    line-height: $size - 4px
+    min-width: if($min-width, $min-width, $size)
