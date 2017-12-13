@@ -10,7 +10,7 @@ module Jekyll
       }
       size = sass[:gzip_size]
       case
-      when size >= 1000 then "#{size / 1000.0} kb"
+      when size >= 1000 then "#{(size / 1000.0).round(1)} kb"
       else "#{size} b"
       end
     end
