@@ -22,9 +22,9 @@ module Jekyll
           'sass' => sass,
           'compact_css' => compact_css,
           'compressed_css' => compressed_css,
-          'gzip_size' => Zlib::Deflate.deflate(compressed_css).bytesize,
+          'selectors' => compressed_css.scan(/[.][a-zA-Z\-][a-zA-Z0-9\-]*/).size,
           'declarations' => compressed_css.scan(/[.][a-zA-Z\-][a-zA-Z0-9\-]*{/).size,
-          'selectors' => compressed_css.scan(/[.][a-zA-Z\-][a-zA-Z0-9\-]*/).size
+          'gzip_size' => Zlib::Deflate.deflate(compressed_css).bytesize
         }
       end
     end
