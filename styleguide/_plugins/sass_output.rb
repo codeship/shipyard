@@ -2,8 +2,6 @@ module Jekyll
   class SassOutput < Liquid::Tag
     def initialize(tag_name, args, options)
       super
-      # puts options.inspect
-      # puts self.inspect
     end
 
     def render(context)
