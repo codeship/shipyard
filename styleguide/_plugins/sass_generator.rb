@@ -20,13 +20,21 @@ module Jekyll
         compact_css = render(sass, :compact)
         compressed_css = render(sass, :compressed)
         gzip_size = Zlib::Deflate.deflate(compressed_css).bytesize
+
+        # Gather all the selectors
+        selectors = compressed_css
+          .gsub(/({[^{}]*})/, ",\n") # Remove declarations
+          .gsub(/@media[^{]*{([^}]*)}/, "\\1") # Remove media queries
+          .gsub(/@keyframes[^{]*{[^}]*}/, '') # Remove keyframes
+          .gsub(/,([^\n])/, ",\n\\1") # Add new lines
+
         @shipyard_size = gzip_size if file.include?('_shipyard.sass')
         {
           'file' => file.gsub(@stylesheets_path, ''),
           'sass' => sass,
           'compact_css' => compact_css,
           'compressed_css' => compressed_css,
-          'selectors' => compressed_css.scan(/[.][a-zA-Z\-][a-zA-Z0-9\-]*/).size,
+          'selectors' => selectors.scan(/,/).size,
           'declarations' => compressed_css.scan(/({[^{}]*})/).size,
           'media_queries' => compressed_css.scan(/@media/).size,
           'gzip_size' => gzip_size,
