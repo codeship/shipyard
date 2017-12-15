@@ -37,7 +37,7 @@ title: Shipyard Stats
         {% endif -%}
 
         {% if hash[0] == 'gzip_size' -%}
-          <td>{{ hash[1] }} bytes</td>
+          <td>{{ hash[1] | number_to_human_size }}</td>
         {% endif %}
 
         {% if hash[0] == 'percentage' -%}
