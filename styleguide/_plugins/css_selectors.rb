@@ -6,9 +6,9 @@ module Jekyll
 
     def render(context)
       sass = context['site']['sass_output'].detect { |s|
-        s[:file].include? context['page']['sass_file']
+        s['file'].include? context['page']['sass_file']
       }
-      sass[:selectors]
+      sass['selectors']
     end
   end
 end
