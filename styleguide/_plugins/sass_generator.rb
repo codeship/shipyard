@@ -4,7 +4,9 @@ require 'zlib'
 module Jekyll
   class SassOutputGenerator < Generator
     def generate(site)
-      site.config['sass_output'] = load_sass_files
+      sass = load_sass_files
+      site.config['sass_output'] = sass
+      site.data.merge!(sass_output: sass)
     end
 
     private
@@ -16,13 +18,13 @@ module Jekyll
         compact_css = render(sass, :compact)
         compressed_css = render(sass, :compressed)
         {
-          file: file,
-          sass: sass,
-          compact_css: compact_css,
-          compressed_css: compressed_css,
-          gzip_size: Zlib::Deflate.deflate(compressed_css).bytesize,
-          declarations: compressed_css.scan(/[.][a-zA-Z\-][a-zA-Z0-9\-]*{/).size,
-          selectors: compressed_css.scan(/[.][a-zA-Z\-][a-zA-Z0-9\-]*/).size
+          'file' => file,
+          'sass' => sass,
+          'compact_css' => compact_css,
+          'compressed_css' => compressed_css,
+          'gzip_size' => Zlib::Deflate.deflate(compressed_css).bytesize,
+          'declarations' => compressed_css.scan(/[.][a-zA-Z\-][a-zA-Z0-9\-]*{/).size,
+          'selectors' => compressed_css.scan(/[.][a-zA-Z\-][a-zA-Z0-9\-]*/).size
         }
       end
     end

@@ -2,13 +2,15 @@ module Jekyll
   class SassOutput < Liquid::Tag
     def initialize(tag_name, args, options)
       super
+      # puts options.inspect
+      # puts self.inspect
     end
 
     def render(context)
       sass = context['site']['sass_output'].detect { |s|
-        s[:file].include? context['page']['sass_file']
+        s['file'].include? context['page']['sass_file']
       }
-      output = sass[:compressed_css]
+      output = sass['compressed_css']
       output.gsub! /}/, " }\n"
       output.gsub! /{/, ' { '
       output.gsub! /([a-z]*):/, '\1: '
