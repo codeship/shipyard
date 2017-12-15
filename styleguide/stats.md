@@ -8,6 +8,7 @@ title: Shipyard Stats
       <th>CSS File</th>
       <th>Selectors</th>
       <th>Declarations</th>
+      <th>Media Queries</th>
       <th>Size</th>
       <th>%</th>
     </tr>
@@ -28,6 +29,10 @@ title: Shipyard Stats
         {% endif -%}
 
         {% if hash[0] == 'declarations' -%}
+          <td>{{ hash[1] }}</td>
+        {% endif -%}
+
+        {% if hash[0] == 'media_queries' -%}
           <td>{{ hash[1] }}</td>
         {% endif -%}
 

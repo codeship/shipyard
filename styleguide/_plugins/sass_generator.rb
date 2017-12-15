@@ -27,7 +27,8 @@ module Jekyll
           'compact_css' => compact_css,
           'compressed_css' => compressed_css,
           'selectors' => compressed_css.scan(/[.][a-zA-Z\-][a-zA-Z0-9\-]*/).size,
-          'declarations' => compressed_css.scan(/[.][a-zA-Z\-][a-zA-Z0-9\-]*{/).size,
+          'declarations' => compressed_css.scan(/({[^{}]*})/).size,
+          'media_queries' => compressed_css.scan(/@media/).size,
           'gzip_size' => gzip_size,
           'percentage' => (gzip_size.to_f / @shipyard_size.to_f * 100.0).round(1)
         }
