@@ -1,5 +1,29 @@
+.hero
+  background: $teal
+  padding-top: 80px
+  &-cut::after
+    content: ""
+    position: relative
+    display: block
+    background: #fff
+    clip-path: polygon(100% 0, 0% 100%, 100% 100%)
+    +respond-to(height, (x0: 60px, x1: 120px, x2: 160px))
+
 .feature-color
   left: 0
   top: 0
   bottom: 0
   width: 4px
+
+.benefit
+  &-container
+    box-shadow: 0 2px 0 $border-color-lightest
+
+  &-item
+    border-left: 1px solid $border-color-lightest
+    padding: 0 30px
+    &:first-child
+      border-left: none
+      padding-left: 15px
+    &:last-child
+      padding-right: 15px
