@@ -1,0 +1,49 @@
+---
+navigation:
+- name: Features
+  url: /examples/marketing/features
+- name: Pricing
+  url: /examples/marketing/pricing
+- name: Documentation
+  url: /examples/documentation
+- name: More
+  url: /examples/documentation
+- name: Sign In
+  url: /examples/app/sign-in
+---
+<html lang="en" class="{% shipyard_css_classes %}">
+  <head>
+    <meta charset="utf-8" />
+    <title>{{ page.title }}</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <meta name="theme-color" content="#20a5a8" />
+    {% css fonts media:screen rel:preload async %}
+    {% css syntax media:screen rel:preload async %}
+    {% css marketing media:screen %}
+  </head>
+  <body>
+    <header class="header">
+      <div class="container">
+        <h6 class="header-logo"><a href="{{ site.baseurl }}/">Codeship</a></h6>
+        <button class="hamburger" shipyard="hamburger">
+          <span class="hamburger-button">Menu</span>
+        </button>
+        <ul class="header-list">
+          {% for link in layout.navigation %}
+            <li class="header-item {% if page.url == link.url %}header-item-current{% endif %}">
+              <a href="{{ site.baseurl | append: link.url }}" class="header-link">{{ link.name }}</a>
+            </li>
+          {% endfor %}
+          <li class="header-item header-item-cta">
+            <a href="{{ site.baseurl | append: '/examples/app/sign-up' }}" target="_blank" class="header-link-cta">Sign Up</a>
+          </li>
+        </ul>
+      </div>
+    </header>
+    <div class="container">{{ content }}</div>
+    <footer class="align-center text-lightest">
+      &copy; Codeship &bull; 2017
+    </footer>
+    {% js application %}
+  </body>
+</html>

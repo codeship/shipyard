@@ -1,0 +1,56 @@
+---
+title: Codeship Homepage
+sass_file: shipyard/components/_alerts
+layout: marketing
+hero_title: Ship your apps with confidence.
+hero_description: Codeship is a continuous integration platform in the cloud.
+benefits:
+- heading: Workflow Innovation
+  description: 100% of our time goes into improving your experience with the newest CI/CD practices & technologies.
+  url: #
+  color: blue
+- heading: Fastest Builds
+  description: We’re performance fanatics! Parallel pipelines, concurrent builds, and caching help your team build more and wait less.
+  url: #
+  color: teal
+- heading: Predictable Scaling
+  description: Codeship scales easily with predictables costs to handle any size team or project.
+  url: #
+  color: purple
+- heading: Loving Support
+  description: Customer happiness is our top priority. We work tirelessly to provide a delightful experience from start to finish.
+  url: #
+  color: coral
+- heading: Nullam Malesuada
+  description: Donec sed odio dui. Donec id elit non mi porta gravida at eget metus.
+  url: #
+  color: green
+- heading: Nullam Malesuada
+  description: Donec sed odio dui. Donec id elit non mi porta gravida at eget metus.
+  url: #
+  color: orange
+---
+
+<div class="hero">
+  <h1>{{ hero_title }}</h1>
+  <h2>{{ hero_description }}</h2>
+  <a href="{{ site.baseurl | append: '/examples/app/sign-up' }}" class="btn btn-cta">Sign up for free</a>
+</div>
+
+<ul class="col-container">
+  {% for benefit in page.benefits %}
+    <li class="col col-100 col-x1-50 margin-bottom-sm margin-bottom-x1-md margin-bottom-x2-lg">
+      <a href="{{ benefit.url }}" class="box-link box-padding">
+        <div class="bg-{{ benefit.color }} rounded rounded-left absolute benefit-color"></div>
+        <h3 class="{{ benefit.color }} text-lg">{{ benefit.heading }}</h3>
+        <p class="text-light">{{ benefit.description }}</p>
+      </a>
+    </li>
+  {% endfor %}
+</ul>
+
+<p class="align-center margin-top-lg">
+  <a href="#" class="btn btn-secondary margin-auto">Get the full experience</a>
+</p>
+
+<hr />
