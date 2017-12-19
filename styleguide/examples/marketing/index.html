@@ -46,13 +46,13 @@ features:
   <a href="{{ site.baseurl | append: '/examples/app/sign-up' }}" class="btn btn-cta btn-lg">Sign up for free</a>
 </div>
 
-<div class="bg-white margin-bottom-xl padding-top-lg padding-bottom-lg">
+<div class="bg-white margin-bottom-xl">
   <div class="container">
     <ul class="col-container padding-left-x1-md padding-right-x1-md padding-left-x2-lg padding-right-x2-lg">
       {% for benefit in page.benefits %}
         <li class="col col-100 col-x1-33">
-          <h3 class="text-xl blue margin-bottom-xs">{{ benefit.heading }}</h3>
-          <p class="text-lighter">{{ benefit.description }}</p>
+          <h3 class="text-xl blue margin-bottom-xs padding-top-xl">{{ benefit.heading }}</h3>
+          <p class="text-lighter padding-bottom-xl">{{ benefit.description }}</p>
         </li>
       {% endfor %}
     </ul>
