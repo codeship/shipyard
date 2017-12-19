@@ -5,6 +5,15 @@ layout: marketing
 hero_title: Ship your apps with confidence.
 hero_description: Codeship is a continuous integration platform in the cloud.
 benefits:
+- heading: Ship Smarter
+  description: Don’t waste time and resources maintaining and scaling your local CI/CD infrastructure. Leave it to us!
+- heading: Ship Faster
+  description: Customizable CI/CD automation speeds code changes into production. Build more, wait less!
+- heading: Ship Better
+  description: Test automation catches bugs before they reach your users. Maecenas faucibus mollis interdum.
+feature_heading: The Codeship Experience
+feature_description: You build awesome software; we support you with an awesome CI/CD experience.
+features:
 - heading: Workflow Innovation
   description: 100% of our time goes into improving your experience with the newest CI/CD practices & technologies.
   url: #
@@ -31,26 +40,43 @@ benefits:
   color: orange
 ---
 
-<div class="hero">
-  <h1>{{ hero_title }}</h1>
-  <h2>{{ hero_description }}</h2>
-  <a href="{{ site.baseurl | append: '/examples/app/sign-up' }}" class="btn btn-cta">Sign up for free</a>
+<div class="hero bg-gray-darker white align-center">
+  <h1>{{ page.hero_title }}</h1>
+  <h2>{{ page.hero_description }}</h2>
+  <a href="{{ site.baseurl | append: '/examples/app/sign-up' }}" class="btn btn-cta btn-lg">Sign up for free</a>
 </div>
 
-<ul class="col-container">
-  {% for benefit in page.benefits %}
-    <li class="col col-100 col-x1-50 margin-bottom-sm margin-bottom-x1-md margin-bottom-x2-lg">
-      <a href="{{ benefit.url }}" class="box-link box-padding">
-        <div class="bg-{{ benefit.color }} rounded rounded-left absolute benefit-color"></div>
-        <h3 class="{{ benefit.color }} text-lg">{{ benefit.heading }}</h3>
-        <p class="text-light">{{ benefit.description }}</p>
-      </a>
-    </li>
-  {% endfor %}
-</ul>
+<div class="bg-white margin-bottom-xl padding-top-lg padding-bottom-lg">
+  <div class="container">
+    <ul class="col-container padding-left-x1-md padding-right-x1-md padding-left-x2-lg padding-right-x2-lg">
+      {% for benefit in page.benefits %}
+        <li class="col col-100 col-x1-33">
+          <h3 class="text-xl blue margin-bottom-xs">{{ benefit.heading }}</h3>
+          <p class="text-lighter">{{ benefit.description }}</p>
+        </li>
+      {% endfor %}
+    </ul>
+  </div>
+</div>
 
-<p class="align-center margin-top-lg">
-  <a href="#" class="btn btn-secondary margin-auto">Get the full experience</a>
-</p>
+<div class="container">
+  <h2 class="text-xxxl text-dark align-center">{{ page.feature_heading }}</h2>
+  <p class="text-lg text-lighter align-center margin-bottom-xxl">{{ page.feature_description }}</p>
+  <ul class="col-container">
+    {% for feature in page.features %}
+      <li class="col col-100 col-x1-50 margin-bottom-sm margin-bottom-x1-md margin-bottom-x2-lg">
+        <a href="{{ feature.url }}" class="box-link box-padding">
+          <div class="bg-{{ feature.color }} rounded rounded-left absolute feature-color"></div>
+          <h3 class="{{ feature.color }} text-lg">{{ feature.heading }}</h3>
+          <p class="text-light">{{ feature.description }}</p>
+        </a>
+      </li>
+    {% endfor %}
+  </ul>
 
-<hr />
+  <p class="align-center margin-top-md margin-bottom-xxl">
+    <a href="#" class="btn btn-sm btn-secondary btn-rounded">Get the full experience</a>
+  </p>
+
+  <hr />
+</div>
