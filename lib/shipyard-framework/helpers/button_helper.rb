@@ -1,5 +1,3 @@
-require 'crafty'
-
 module Shipyard
   module ButtonHelper
     include Crafty::HTML::Basic

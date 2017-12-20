@@ -1,5 +1,3 @@
-require 'crafty'
-
 module Shipyard
   module NoteHelper
     include Crafty::HTML::Basic

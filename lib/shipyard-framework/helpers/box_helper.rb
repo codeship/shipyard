@@ -1,5 +1,3 @@
-require 'crafty'
-
 module Shipyard
   module BoxHelper
     include Crafty::HTML::Basic

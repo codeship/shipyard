@@ -2,10 +2,9 @@ require_relative 'icon_helper'
 
 module Shipyard
   module AlertHelper
+    include Crafty::HTML::Forms
+    include Crafty::HTML::Basic
     include Shipyard::IconHelper
-    include ActionView::Context
-    include ActionView::Helpers::TagHelper
-    include ActionView::Helpers::TextHelper
 
     def flash_alert(*args, &block)
       alert_txt = capture(&block) if block_given?
@@ -29,14 +28,12 @@ module Shipyard
 
       options[:class] = "#{class_list.join(' ')} #{options[:class]}".strip
 
-      content_tag :div, options do
-        concat content_tag(:p, raw(alert_txt), class: 'alert-txt')
+      div(options) do
+        p({ class: 'alert-txt' }) { alert_txt }
         if dismissible
-          concat content_tag(:button,
-                   icon(:x, class: 'alert-close-icon icon-outline-inverse center'),
-                   class: 'alert-close v-center',
-                   shipyard: 'alert-close'
-                 )
+          button({ class: 'alert-close v-center', shipyard: 'alert-close'}) {
+            icon(:x, class: 'alert-close-icon icon-outline-inverse center')
+          }
         end
       end
     end
