@@ -70,6 +70,7 @@ features:
           <div class="bg-{{ feature.color }} rounded rounded-left absolute feature-color"></div>
           <h3 class="{{ feature.color }} text-lg">{{ feature.heading }}</h3>
           <p class="text-light">{{ feature.description }}</p>
+          {% icon :arrow_right %}
         </a>
       </li>
     {% endfor %}
