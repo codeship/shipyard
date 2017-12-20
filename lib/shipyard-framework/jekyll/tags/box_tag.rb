@@ -14,7 +14,7 @@ module Shipyard
       end
 
       def render(context)
-        box(@types) { raw(super.strip) }
+        box(@types, super.strip)
       end
     end
   end

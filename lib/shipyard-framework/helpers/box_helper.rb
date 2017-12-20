@@ -1,11 +1,12 @@
+require 'crafty'
+
 module Shipyard
   module BoxHelper
-    include ActionView::Context
-    include ActionView::Helpers::TagHelper
-    include ActionView::Helpers::TextHelper
+    include Crafty::HTML::Basic
 
-    def box(types=[], &block)
+    def box(types=[], content=nil, options={}, &block)
       types = [*types]
+      content = capture(&block) if block_given?
 
       # Gather the appropriate box classes into an array.
       class_list = types.include?(:secondary) ? [] : ['box']
@@ -14,11 +15,9 @@ module Shipyard
       end
 
       # Join the CSS Classes together.
-      options ||= {}
       options[:class] = class_list.join(' ')
 
-      # Return the HTML structure for the box.
-      content_tag :div, capture(&block), options
+      div(options) { content }
     end
   end
 end
