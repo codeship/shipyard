@@ -18,7 +18,7 @@ RSpec.describe Shipyard::ButtonHelper, type: :helper do
   end
 
   it 'should return a button with a custom data attribute' do
-    expect(btn('Save', data: { btn_type: 'save' })).to match(%r{<button data-btn-type="save" class="btn">Save</button>})
+    expect(btn('Save', 'data-btn-type' => 'save')).to match(%r{<button data-btn-type="save" class="btn">Save</button>})
   end
 
   it 'should return a button with a custom CSS class' do
