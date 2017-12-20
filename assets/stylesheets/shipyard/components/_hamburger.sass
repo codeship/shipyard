@@ -7,17 +7,19 @@
   outline: none
   +respond-to(display, (x1: none))
   .hamburger-button-clicked &
-    background: transparent
+    background: transparent !important
 
   &, &:after, &:before
     border-radius: 4px
-    background: $gray-light
-    +width-height(30px, 2px)
-    position: absolute
     margin-top: -1px
+    position: absolute
+    +width-height(30px, 2px)
+    background-color: $gray-light
     transition: background-color 300ms ease, transform 300ms ease, top 300ms 200ms ease, bottom 300ms 200ms ease
     .hamburger-button-clicked &
       transition: background-color 300ms ease, transform 300ms 200ms ease, top 300ms ease, bottom 300ms ease
+    .with-hero.scroll-top &
+      background-color: #fff
   &:before, &:after
     left: 0
     content: " "

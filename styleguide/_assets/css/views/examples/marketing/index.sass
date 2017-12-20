@@ -1,13 +1,34 @@
 .hero
-  background: $teal
-  padding-top: 80px
+  background: linear-gradient(to right bottom, $teal, saturate($blue-dark, 60%))
+  position: relative
+  +respond-to(padding-top, (x0: 130px, x1: 140px, x2: 150px))
+  &::before
+    content: ""
+    position: absolute
+    display: block
+    top: 0
+    left: 0
+    right: 0
+    bottom: 0
+    background: asset-url("layouts/marketing/hero-pattern.png") no-repeat center
+    background-size: cover
+    opacity: .25
   &-cut::after
+    margin-top: 50px
     content: ""
     position: relative
     display: block
     background: #fff
     clip-path: polygon(100% 0, 0% 100%, 100% 100%)
     +respond-to(height, (x0: 50px, x1: 100px, x2: 150px))
+  &-title
+    font-size: 34px
+    line-height: 1.4
+  &-description
+    max-width: 500px
+  &-btn
+    +btn-color($green)
+    box-shadow: 0 1px 0 rgba($blue-dark,.15)
 
 .feature-color
   left: 0
