@@ -14,7 +14,7 @@ module Shipyard
       end
 
       def render(context)
-        box(@types, super.strip)
+        box @types, super.strip.html_safe
       end
     end
   end

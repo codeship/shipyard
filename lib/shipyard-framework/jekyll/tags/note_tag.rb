@@ -11,7 +11,7 @@ module Shipyard
       end
 
       def render(context)
-        note @type, raw(super.strip)
+        note @type, super.strip.html_safe
       end
     end
   end
