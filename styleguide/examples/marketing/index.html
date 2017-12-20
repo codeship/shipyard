@@ -42,7 +42,7 @@ features:
 ---
 
 <div class="hero hero-cut bg-gray-darker white align-center">
-  <h1 class="hero-title">{{ page.hero_title }}</h1>
+  <h1 class="hero-title margin-bottom-xs">{{ page.hero_title }}</h1>
   <h2 class="normal margin-auto margin-bottom-lg text-inverse-normal hero-description">{{ page.hero_description }}</h2>
   <a href="{{ site.baseurl | append: '/examples/app/sign-up' }}" class="btn btn-cta btn-lg hero-btn">Sign up for free</a>
 </div>
@@ -65,12 +65,12 @@ features:
   <p class="text-lg text-lighter align-center margin-bottom-xxl">{{ page.feature_description }}</p>
   <ul class="col-container">
     {% for feature in page.features %}
-      <li class="col col-100 col-x1-50 margin-bottom-sm margin-bottom-x1-md margin-bottom-x2-lg">
+      <li class="col col-100 col-x1-50 margin-bottom-xs margin-bottom-x1-md margin-bottom-x2-lg">
         <a href="{{ feature.url }}" class="box-link box-padding">
           <div class="bg-{{ feature.color }} rounded rounded-left absolute feature-color"></div>
           <h3 class="{{ feature.color }} text-lg">{{ feature.heading }}</h3>
           <p class="text-light">{{ feature.description }}</p>
-          {% icon :arrow_right %}
+          {% icon :arrow_right, class: 'feature-arrow text-lightest o-35' %}
         </a>
       </li>
     {% endfor %}

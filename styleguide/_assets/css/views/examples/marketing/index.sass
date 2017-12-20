@@ -30,11 +30,18 @@
     +btn-color($green)
     box-shadow: 0 1px 0 rgba($blue-dark,.15)
 
-.feature-color
-  left: 0
-  top: 0
-  bottom: 0
-  width: 4px
+.feature
+  &-color
+    left: 0
+    top: 0
+    bottom: 0
+    width: 4px
+  &-arrow
+    position: absolute
+    right: 20px
+    top: 50%
+    margin-top: -15px
+    +width-height(24px, 24px)
 
 .benefit
   &-container
