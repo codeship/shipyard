@@ -42,9 +42,11 @@ features:
 ---
 
 <div class="hero hero-cut bg-gray-darker white align-center">
-  <h1 class="hero-title margin-bottom-xs">{{ page.hero_title }}</h1>
-  <h2 class="normal margin-auto margin-bottom-lg text-inverse-normal hero-description">{{ page.hero_description }}</h2>
-  <a href="{{ site.baseurl | append: '/examples/app/sign-up' }}" class="btn btn-cta btn-lg hero-btn">Sign up for free</a>
+  <div class="hero-content">
+    <h1 class="hero-title margin-bottom-xs">{{ page.hero_title }}</h1>
+    <h2 class="normal margin-auto margin-bottom-lg text-inverse-normal hero-description">{{ page.hero_description }}</h2>
+    <a href="{{ site.baseurl | append: '/examples/app/sign-up' }}" class="btn btn-cta btn-lg hero-btn">Sign up for free</a>
+  </div>
 </div>
 
 <div class="bg-white margin-bottom-xl benefit-container">
