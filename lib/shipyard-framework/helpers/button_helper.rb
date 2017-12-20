@@ -1,8 +1,5 @@
 module Shipyard
   module ButtonHelper
-    include ActionView::Helpers::TagHelper
-    include ActionView::Helpers::UrlHelper
-
     def btn(text, *args, &block)
       if block_given?
         args << text
@@ -18,9 +15,9 @@ module Shipyard
       # Output the appropriate button.
       if options.key?(:href)
         options[:role] = :button
-        link_to text, options[:href], btn_options(args, options)
+        a(btn_options(args, options)) { text }
       else
-        content_tag :button, text, btn_options(args, options)
+        button(btn_options(args, options)) { text }
       end
     end
 

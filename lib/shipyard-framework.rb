@@ -1,5 +1,5 @@
 require 'shipyard-framework/version'
-require 'action_view'
+require 'nokogiri'
 
 module Shipyard
   class << self

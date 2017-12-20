@@ -1,8 +1,5 @@
 module Shipyard
   module IconHelper
-    include ActionView::Context
-    include ActionView::Helpers::TagHelper
-
     def icon(name, options={})
       if name.is_a? Symbol
         svg = find_icon(symbol: name)
@@ -43,8 +40,8 @@ module Shipyard
     end
 
     def svg_use_tag(svg, options)
-      content_tag :svg, svg_options(svg, options) do
-        content_tag :use, nil, 'xlink:href' => $icons.asset_path(svg[:id])
+      svg(svg_options(svg, options)) do
+        use({ 'xlink:href' => $icons.asset_path(svg[:id]) })
       end
     end
 

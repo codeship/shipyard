@@ -12,8 +12,9 @@ Gem::Specification.new do |spec|
   spec.license       = 'MIT'
 
   # Rails Dependencies
-  spec.add_runtime_dependency 'actionview', '~> 5.0'
+  # spec.add_runtime_dependency 'actionview', '~> 5.0'
   spec.add_runtime_dependency 'sprockets-es6', '~> 0.9.2'
+  spec.add_runtime_dependency 'nokogiri'
 
   spec.add_development_dependency 'bundler', '~> 1.15'
   spec.add_development_dependency 'sass', '~> 3.5', '>= 3.5.2'

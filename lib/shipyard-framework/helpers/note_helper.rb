@@ -1,9 +1,5 @@
 module Shipyard
   module NoteHelper
-    include ActionView::Context
-    include ActionView::Helpers::TagHelper
-    include ActionView::Helpers::TextHelper
-
     def note(type, content, options={})
       # Gather the appropriate box classes into an array.
       class_list = ['note']
@@ -13,7 +9,16 @@ module Shipyard
       options[:class] = class_list.join(' ')
 
       # Return the HTML structure for the box.
-      content_tag :div, content, options
+      div(options) { content }
+      builder = Nokogiri::HTML::Builder.new do |doc|
+        doc.div(options) {
+          "test"
+          # doc.span.bold {
+          #   doc.text "Hello world"
+          # }
+        }
+      end
+      builder.to_html
     end
   end
 end

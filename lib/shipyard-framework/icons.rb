@@ -1,11 +1,9 @@
-require 'action_view'
-
 module Shipyard
   class Icons
-    include ActionView::Helpers::SanitizeHelper
+    # include ActionView::Helpers::SanitizeHelper
     attr_reader :icons
-    delegate :each, :find, to: :icons
-    delegate :execute_if_updated, :execute, :updated?, to: :updater
+    # delegate :each, :find, to: :icons
+    # delegate :execute_if_updated, :execute, :updated?, to: :updater
 
     def initialize(icon_directory, output_directory, base_path = '')
       @path = icon_directory
@@ -45,7 +43,7 @@ module Shipyard
           file: file,
           path: file.gsub(@path, ''),
           id: File.basename(file).gsub(/.svg/, ''),
-          symbol: File.basename(file).gsub(/.svg/, '').underscore.to_sym,
+          symbol: File.basename(file).gsub(/.svg/, '').downcase.to_sym,
           view_box: html[/viewBox="(.*?)"/, 1],
           outer_html: html.gsub(/\n|\s+\s+/, ''),
           inner_html: html[/<svg.*?>([\s\S]*?)<\/svg>/, 1].gsub(/\n|\s+\s+/, ''),
