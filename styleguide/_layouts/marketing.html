@@ -24,7 +24,11 @@ navigation:
   <body>
     <header class="header">
       <div class="container">
-        <h6 class="header-logo"><a href="{{ site.baseurl }}/">Codeship</a></h6>
+        <h6 class="header-logo">
+          <a href="{{ site.baseurl }}/examples/marketing/" class="header-logo-link">
+            {% icon 'codeship', prefix: 'header' %}
+          </a>
+        </h6>
         <button class="hamburger" shipyard="hamburger">
           <span class="hamburger-button">Menu</span>
         </button>
@@ -35,7 +39,7 @@ navigation:
             </li>
           {% endfor %}
           <li class="header-item header-item-cta">
-            <a href="{{ site.baseurl | append: '/examples/app/sign-up' }}" target="_blank" class="header-link-cta">Sign Up</a>
+            <a href="{{ site.baseurl }}/examples/app/sign-up" target="_blank" class="header-link-cta">Sign Up</a>
           </li>
         </ul>
       </div>

@@ -18,7 +18,7 @@
     transition: background-color 300ms ease, transform 300ms ease, top 300ms 200ms ease, bottom 300ms 200ms ease
     .hamburger-button-clicked &
       transition: background-color 300ms ease, transform 300ms 200ms ease, top 300ms ease, bottom 300ms ease
-    .with-hero.scroll-top &
+    .with-hero.scroll-top:not(.hamburger-button-clicked) &
       background-color: #fff
   &:before, &:after
     left: 0

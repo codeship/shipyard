@@ -1,3 +1,17 @@
+.header
+  &-logo-link
+    display: block
+    padding: 15px 0
+    color: darken($blue-darker, 6%)
+  &-icon-codeship
+    +width-height(auto, 40px)
+    .with-hero.scroll-top:not(.hamburger-button-clicked) &
+      filter: drop-shadow(0 1px 0 rgba($blue-dark,.5))
+    &-waves
+      html:not(.scroll-top) &
+        fill: $blue
+        opacity: 1
+
 .hero
   position: relative
   text-shadow: 0 1px 0 rgba($blue-dark,.5)
@@ -16,7 +30,6 @@
     opacity: .25
     z-index: 0
   &-cut::after
-    // margin-top: 50px
     content: ""
     position: relative
     display: block
