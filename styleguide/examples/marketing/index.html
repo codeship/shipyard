@@ -67,8 +67,8 @@ features:
   <p class="text-lg text-lighter align-center margin-bottom-xxl">{{ page.feature_description }}</p>
   <ul class="col-container">
     {% for feature in page.features %}
-      <li class="col col-100 col-x1-50 margin-bottom-xs margin-bottom-x1-md margin-bottom-x2-lg">
-        <a href="{{ feature.url }}" class="box-link box-padding">
+      <li class="col col-100 col-x1-50 display-flex margin-bottom-xs margin-bottom-x1-md margin-bottom-x2-lg">
+        <a href="{{ feature.url }}" class="box-link box-padding feature-link">
           <div class="bg-{{ feature.color }} rounded rounded-left absolute feature-color"></div>
           <h3 class="{{ feature.color }} text-lg">{{ feature.heading }}</h3>
           <p class="text-light">{{ feature.description }}</p>
