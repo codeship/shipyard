@@ -2,8 +2,6 @@ require_relative 'icon_helper'
 
 module Shipyard
   module AlertHelper
-    include Crafty::HTML::Forms
-    include Crafty::HTML::Basic
     include Shipyard::IconHelper
 
     def flash_alert(*args, &block)

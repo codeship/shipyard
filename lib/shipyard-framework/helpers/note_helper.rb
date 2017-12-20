@@ -1,7 +1,5 @@
 module Shipyard
   module NoteHelper
-    include Crafty::HTML::Basic
-
     def note(type, content, options={})
       # Gather the appropriate box classes into an array.
       class_list = ['note']
@@ -12,6 +10,15 @@ module Shipyard
 
       # Return the HTML structure for the box.
       div(options) { content }
+      builder = Nokogiri::HTML::Builder.new do |doc|
+        doc.div(options) {
+          "test"
+          # doc.span.bold {
+          #   doc.text "Hello world"
+          # }
+        }
+      end
+      builder.to_html
     end
   end
 end

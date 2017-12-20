@@ -1,8 +1,5 @@
 module Shipyard
   module IconHelper
-    include Crafty::HTML::All
-    # include ActionView::Helpers::TagHelper
-
     def icon(name, options={})
       if name.is_a? Symbol
         svg = find_icon(symbol: name)

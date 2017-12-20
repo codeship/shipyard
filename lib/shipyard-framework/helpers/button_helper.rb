@@ -1,8 +1,5 @@
 module Shipyard
   module ButtonHelper
-    include Crafty::HTML::Basic
-    include Crafty::HTML::Forms
-
     def btn(text, *args, &block)
       if block_given?
         args << text

@@ -1,5 +1,5 @@
 require 'shipyard-framework/version'
-require 'crafty'
+require 'nokogiri'
 
 module Shipyard
   class << self

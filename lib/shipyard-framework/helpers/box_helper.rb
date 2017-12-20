@@ -1,7 +1,5 @@
 module Shipyard
   module BoxHelper
-    include Crafty::HTML::Basic
-
     def box(types=[], content=nil, options={}, &block)
       types = [*types]
       content = capture(&block) if block_given?

@@ -1,9 +1,5 @@
 module Shipyard
   module FormHelper
-    # include ActionView::Context
-    # include ActionView::Helpers::FormTagHelper
-    # include ActionView::Helpers::FormOptionsHelper
-
     def input_text(name, value=nil, options={})
       options[:class] = "input input-text #{options[:class]}".strip
       text_field_tag name, value, options
