@@ -10,6 +10,52 @@ navigation:
   url: /examples/documentation
 - name: Sign In
   url: /examples/app/sign-in
+footer:
+- name: Product
+  links:
+  - name: Features
+  - name: Codeship Basic
+  - name: Codeship Pro
+  - name: Request a Demo
+- name: Company
+  links:
+  - name: About Us
+  - name: Team
+  - name: Blog
+  - name: Request a Demo
+  - name: Customers
+  - name: Resources
+- name: Pricing
+  links:
+  - name: Codeship Pricing
+  - name: Codeship Basic
+  - name: Codeship Pro
+  - name: Start a Conversation
+  - name: Request a Demo
+- name: Compare
+  links:
+  - name: Codeship Pro vs. CircleCI 2.0
+  - name: Codeship Pro vs. Travis CI
+  - name: Codeship Pro vs. Gitlab CI
+  - name: Codeship Basic vs. CircleCI 1.0
+- name: Help
+  links:
+  - name: Documentation
+  - name: Community
+  - name: Start with Codeship Pro
+  - name: Contact Support
+- name: Resources
+  links:
+  - name: eBooks
+  - name: Webinars
+  - name: Guides
+  - name: Email Courses
+- name: LEGAL
+  links:
+  - name: Terms of Service
+  - name: Privacy
+  - name: Security
+  - name: Imprint
 ---
 <html lang="en" class="{% shipyard_css_classes %}">
   <head>
@@ -45,8 +91,25 @@ navigation:
       </div>
     </header>
     {{ content }}
-    <footer class="align-center text-lightest">
-      &copy; Codeship &bull; 2017
+    <footer class="bg-blue-dark blue-light">
+      <div class="container">
+        <h6 class="margin-bottom-lg">
+          <a href="{ site.baseurl }}/examples/marketing/" class="white">
+            {% icon 'codeship', prefix: 'footer' %}
+          </a>
+        </h6>
+        <div class="col-container">
+          {% for section in layout.footer %}
+            <dl class="col">
+              <dt class="strong">{{ section.name }}</dt>
+              {% for link in section.links %}
+                <dd><a href="#" class="white medium">{{ link.name }}</a></dd>
+              {% endfor %}
+            </dl>
+          {% endfor %}
+        </div>
+        <p>&copy; Codeship &bull; 2017</p>
+      </div>
     </footer>
     {% js marketing %}
   </body>
