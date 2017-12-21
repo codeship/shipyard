@@ -1,48 +1,4 @@
 ---
-navigation:
-- name: Features
-  url: /examples/marketing/features
-- name: Pricing
-  url: /examples/marketing/pricing
-- name: Documentation
-  url: /examples/documentation
-- name: More
-  url: /examples/documentation
-- name: Sign In
-  url: /examples/app/sign-in
-footer:
-- name: Product
-  links:
-  - name: Features
-  - name: Pricing
-  - name: Codeship Basic
-  - name: Codeship Pro
-  - name: Request a Demo
-- name: Company
-  links:
-  - name: About Us
-  - name: Team
-  - name: Blog
-  - name: Customers
-  - name: Resources
-- name: Help
-  links:
-  - name: Documentation
-  - name: Community
-  - name: Start with Codeship Pro
-  - name: Contact Support
-- name: Resources
-  links:
-  - name: eBooks
-  - name: Webinars
-  - name: Guides
-  - name: Email Courses
-- name: Legal
-  links:
-  - name: Terms of Service
-  - name: Privacy
-  - name: Security
-  - name: Imprint
 ---
 <html lang="en" class="{% shipyard_css_classes %}">
   <head>
@@ -66,7 +22,7 @@ footer:
           <span class="hamburger-button">Menu</span>
         </button>
         <ul class="header-list">
-          {% for link in layout.navigation %}
+          {% for link in site.data.marketing.navigation %}
             <li class="header-item {% if page.url == link.url %}header-item-current{% endif %}">
               <a href="{{ site.baseurl | append: link.url }}" class="header-link">{{ link.name }}</a>
             </li>
@@ -86,7 +42,7 @@ footer:
           </a>
         </h6>
         <div class="col-container">
-          {% for section in layout.footer %}
+          {% for section in site.data.marketing.footer %}
             <dl class="col">
               <dt class="strong">{{ section.name }}</dt>
               {% for link in section.links %}

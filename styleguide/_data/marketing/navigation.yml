@@ -1,0 +1,10 @@
+- name: Features
+  url: /examples/marketing/features
+- name: Pricing
+  url: /examples/marketing/pricing
+- name: Documentation
+  url: /examples/documentation
+- name: More
+  url: /examples/documentation
+- name: Sign In
+  url: /examples/app/sign-in
