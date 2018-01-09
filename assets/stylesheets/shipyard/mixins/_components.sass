@@ -20,7 +20,7 @@
 @mixin z-index($value: null)
   @if $value
     z-index: $value
-  @else if $component && map-get($z-index, $component)
+  @else if $component and map-get($z-index, $component)
     z-index: map-get($z-index, $component)
 
 @mixin component-styles($modifier)

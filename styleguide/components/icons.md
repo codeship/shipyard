@@ -20,7 +20,10 @@ The following icons are the most frequently used in just about any application.
   {% iconitem :card, class: 'center' %}
   {% iconitem :tag, class: 'center' %}
   {% iconitem :x, class: 'center' %}
+  {% iconitem :arrow_up, class: 'center' %}
   {% iconitem :arrow_down, class: 'center' %}
+  {% iconitem :arrow_left, class: 'center' %}
+  {% iconitem :arrow_right, class: 'center' %}
   {% iconitem :check, class: 'center' %}
 </ul>
 
