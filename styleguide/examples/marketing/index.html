@@ -1,50 +1,13 @@
 ---
 title: Codeship Homepage
-sass_file: shipyard/components/_alerts
 layout: marketing
 layout_classes: with-hero
-hero_title: Ship your apps with confidence
-hero_description: Codeship is a continuous integration platform in the cloud. Build more. Wait less. Ship faster.
-benefits:
-- heading: Ship Smarter
-  description: Don’t waste time and resources maintaining and scaling your local CI/CD infrastructure. Leave it to us!
-- heading: Ship Faster
-  description: Customizable CI/CD automation speeds code changes into production. Build more, wait less!
-- heading: Ship Better
-  description: Test automation catches bugs before they reach your users. Maecenas faucibus mollis interdum.
-feature_heading: The Codeship Experience
-feature_description: You build awesome software; we support you with an awesome CI/CD experience.
-features:
-- heading: Workflow Innovation
-  description: 100% of our time goes into improving your experience with the newest CI/CD practices & technologies.
-  url: #
-  color: blue
-- heading: Fastest Builds
-  description: We’re performance fanatics! Parallel pipelines, concurrent builds, and caching help your team build more and wait less.
-  url: #
-  color: teal
-- heading: Predictable Scaling
-  description: Codeship scales easily with predictables costs to handle any size team or project.
-  url: #
-  color: purple
-- heading: Loving Support
-  description: Customer happiness is our top priority. We work tirelessly to provide a delightful experience from start to finish.
-  url: #
-  color: coral
-- heading: Nullam Malesuada
-  description: Donec sed odio dui. Donec id elit non mi porta gravida at eget metus.
-  url: #
-  color: green
-- heading: Nullam Malesuada
-  description: Donec sed odio dui. Donec id elit non mi porta gravida at eget metus.
-  url: #
-  color: orange
 ---
 
 <div class="hero hero-cut bg-gray-darker white align-center">
   <div class="hero-content">
-    <h1 class="hero-title margin-bottom-xs">{{ page.hero_title }}</h1>
-    <h2 class="normal margin-auto margin-bottom-lg text-inverse-normal hero-description">{{ page.hero_description }}</h2>
+    <h1 class="hero-title margin-bottom-xs">{{ site.data.marketing.index.hero.title }}</h1>
+    <h2 class="normal margin-auto margin-bottom-lg text-inverse-normal hero-description">{{ site.data.marketing.index.hero.description }}</h2>
     <a href="{{ site.baseurl | append: '/examples/app/sign-up' }}" class="btn btn-cta btn-lg hero-btn">Sign up for free</a>
   </div>
 </div>
@@ -52,7 +15,7 @@ features:
 <div class="bg-white margin-bottom-xl benefit-container">
   <div class="container">
     <ul class="col-container padding-left-x1-md padding-right-x1-md padding-left-x2-lg padding-right-x2-lg">
-      {% for benefit in page.benefits %}
+      {% for benefit in site.data.marketing.index.benefits %}
         <li class="col col-100 col-x1-33 benefit-item">
           <h3 class="text-xl blue margin-bottom-xs padding-top-xl">{{ benefit.heading }}</h3>
           <p class="text-lighter padding-bottom-xl">{{ benefit.description }}</p>
@@ -63,10 +26,10 @@ features:
 </div>
 
 <div class="container">
-  <h2 class="text-xxxl text-dark align-center">{{ page.feature_heading }}</h2>
-  <p class="text-lg text-lighter align-center margin-bottom-xxl">{{ page.feature_description }}</p>
+  <h2 class="text-xxxl text-dark align-center">The Codeship Experience</h2>
+  <p class="text-lg text-lighter align-center margin-bottom-xxl">You build awesome software; we support you with an awesome CI/CD experience.</p>
   <ul class="col-container">
-    {% for feature in page.features %}
+    {% for feature in site.data.marketing.index.features %}
       <li class="col col-100 col-x1-50 display-flex margin-bottom-xs margin-bottom-x1-md margin-bottom-x2-lg">
         <a href="{{ feature.url }}" class="box-link box-padding feature-link">
           <div class="bg-{{ feature.color }} rounded rounded-left absolute feature-color"></div>
