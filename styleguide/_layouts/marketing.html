@@ -34,7 +34,7 @@
       </div>
     </header>
     {{ content }}
-    <footer class="bg-blue-dark blue-light">
+    <footer class="bg-blue-dark blue-light padding-top-xl padding-bottom-xl">
       <div class="container">
         <h6 class="margin-bottom-lg">
           <a href="{ site.baseurl }}/examples/marketing/" class="white">
@@ -46,7 +46,7 @@
             <dl class="col col-50 col-x1-20 margin-bottom-lg align-left">
               <dt class="strong">{{ section.name }}</dt>
               {% for link in section.links %}
-                <dd><a href="#" class="white medium">{{ link.name }}</a></dd>
+                <dd><a href="#" class="text-inverse-lighter medium">{{ link.name }}</a></dd>
               {% endfor %}
             </dl>
           {% endfor %}
