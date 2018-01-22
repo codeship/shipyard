@@ -51,12 +51,38 @@
             </dl>
           {% endfor %}
         </div>
-        <p class="margin-top-lg">&copy; 2017 Codeship</p>
-        <ul>
-          <li>+1 855.790.8079</li>
-          <li>{% icon :github %}</li>
-          <li>{% icon :slack %}</li>
-        </ul>
+        <hr class="hr-thin hr-inverse" />
+        <div class="col-container-nowrap margin-top-lg">
+          <ul class="col col-100">
+            <li class="display-inline">
+              <a href="#" class="display-inline-block padding-xxs white">
+                {% icon :github %}
+              </a>
+            </li>
+            <li class="display-inline">
+              <a href="#" class="display-inline-block padding-xxs white">
+                {% icon :slack %}
+              </a>
+            </li>
+            <li class="display-inline">
+              <a href="#" class="display-inline-block padding-xxs white">
+                {% icon :gitlab %}
+              </a>
+            </li>
+            <li class="display-inline">
+              <a href="#" class="display-inline-block padding-xxs white">
+                {% icon :hipchat %}
+              </a>
+            </li>
+            <li class="display-inline">
+              <a href="#" class="display-inline-block padding-xxs white">
+                {% icon :invision %}
+              </a>
+            </li>
+            <li class="display-inline margin-left-md medium">+1 855.790.8079</li>
+          </ul>
+          <p class="col white-space-nowrap">&copy; 2017 Codeship</p>
+        </div>
       </div>
     </footer>
     {% js marketing %}
