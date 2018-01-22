@@ -14,19 +14,18 @@
     - name: Customers
     - name: Resources
 
-- name: Help
-  links:
-    - name: Documentation
-    - name: Community
-    - name: Start with Codeship Pro
-    - name: Contact Support
-
 - name: Resources
   links:
     - name: eBooks
     - name: Webinars
     - name: Guides
     - name: Email Courses
+
+- name: Help
+  links:
+    - name: Documentation
+    - name: Community
+    - name: Contact Support
 
 - name: Legal
   links:
