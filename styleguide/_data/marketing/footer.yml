@@ -1,0 +1,35 @@
+- name: Product
+  links:
+    - name: Features
+    - name: Pricing
+    - name: Codeship Basic
+    - name: Codeship Pro
+    - name: Request a Demo
+
+- name: Company
+  links:
+    - name: About Us
+    - name: Team
+    - name: Blog
+    - name: Customers
+    - name: Resources
+
+- name: Resources
+  links:
+    - name: eBooks
+    - name: Webinars
+    - name: Guides
+    - name: Email Courses
+
+- name: Help
+  links:
+    - name: Documentation
+    - name: Community
+    - name: Contact Support
+
+- name: Legal
+  links:
+    - name: Terms of Service
+    - name: Privacy
+    - name: Security
+    - name: Imprint

@@ -1,0 +1,12 @@
+body
+  @extend .body
+  line-height: 1.8
+  +respond-to(padding-top, (x0: 50px, x1: 60px, x2: 70px))
+  .with-hero &
+    padding-top: 0
+
+hr
+  @extend .hr
+
+a
+  @extend .link

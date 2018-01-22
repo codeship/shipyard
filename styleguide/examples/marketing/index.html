@@ -1,0 +1,46 @@
+---
+title: Codeship Homepage
+layout: marketing
+layout_classes: with-hero
+---
+
+<div class="hero hero-cut bg-gray-darker white align-center">
+  <div class="hero-content">
+    <h1 class="hero-title margin-bottom-xs">{{ site.data.marketing.index.hero.title }}</h1>
+    <h2 class="normal margin-auto margin-bottom-lg text-inverse-normal hero-description">{{ site.data.marketing.index.hero.description }}</h2>
+    <a href="{{ site.baseurl }}/examples/app/sign-up" class="btn btn-cta btn-lg hero-btn">{{ site.data.marketing.index.hero.cta }}</a>
+  </div>
+</div>
+
+<div class="bg-white margin-bottom-xl benefit-container">
+  <div class="container">
+    <ul class="col-container padding-left-x1-md padding-right-x1-md padding-left-x2-lg padding-right-x2-lg">
+      {% for benefit in site.data.marketing.index.benefits %}
+        <li class="col col-100 col-x1-33 benefit-item">
+          <h3 class="text-xl text-light margin-bottom-xs padding-top-xl">{{ benefit.heading }}</h3>
+          <p class="text-lighter padding-bottom-xl">{{ benefit.description }}</p>
+        </li>
+      {% endfor %}
+    </ul>
+  </div>
+</div>
+
+<div class="container">
+  <h2 class="text-xxxl text-dark align-center">{{ site.data.marketing.index.features.heading }}</h2>
+  <p class="text-lg text-lighter align-center margin-bottom-xxl">{{ site.data.marketing.index.features.description }}</p>
+  <ul class="col-container">
+    {% for feature in site.data.marketing.index.features.list %}
+      <li class="col col-100 col-x1-50 display-flex margin-bottom-sm margin-bottom-x1-md margin-bottom-x2-lg">
+        <a href="{{ feature.url }}" class="box-link box-padding feature-link border-{{ feature.color }} padding-sm padding-x1-md padding-left-md padding-left-x1-lg padding-right-xxl">
+          <h3 class="{{ feature.color }} text-lg margin-right-sm margin-right-x1-lg">{{ feature.heading }}</h3>
+          <p class="text-light margin-right-sm margin-right-x1-lg">{{ feature.description }}</p>
+          {% icon :arrow_right, class: 'feature-arrow text-lightest o-35' %}
+        </a>
+      </li>
+    {% endfor %}
+  </ul>
+
+  <p class="align-center margin-top-md margin-bottom-xxl">
+    <a href="{{ site.baseurl }}/features" class="btn btn-sm btn-secondary btn-rounded">{{ site.data.marketing.index.features.cta }}</a>
+  </p>
+</div>

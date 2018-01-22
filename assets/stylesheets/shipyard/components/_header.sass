@@ -4,21 +4,28 @@
   left: 0
   right: 0
   position: fixed
-  transition: height 250ms ease, background-color 250ms ease
+  transition: height 250ms ease, box-shadow 250ms ease, background-color 250ms ease
   +respond-to(overflow, (x0: hidden, x1: visible))
   +respond-to(height, (x0: 50px, x1: 60px, x2: 70px))
   +respond-to(text-align, (x0: center, x1: left))
   +respond-to(line-height, (x0: 50px, x1: 60px, x2: 70px))
   .hamburger-button-clicked &
     height: 100%
+  .with-hero.scroll-top:not(.hamburger-button-clicked) &
+    color: rgba(#fff,.75)
+    box-shadow: none
+    background: transparent
+    text-shadow: 0 1px 0 rgba($blue-dark,.5)
 
   +sub-component('logo')
     display: inline-block
     +respond-to(margin, (x0: 0 auto, x1: 0))
     +respond-to(font-size, (x0: 20px, x1: 24px))
     +respond-to(float, (x1: left))
-    a
+    &-link
       color: $blue-darkest
+      .with-hero.scroll-top:not(.hamburger-button-clicked) &
+        color: #fff
 
   +sub-component('list')
     +respond-to(float, (x1: right))
@@ -51,6 +58,9 @@
       text-decoration: none
     &:hover
       color: $blue
+      .with-hero.scroll-top:not(.hamburger-button-clicked) &
+        color: #fff
+
     &-cta
       color: darken($green, 5%)
       font-weight: $bold
@@ -58,3 +68,5 @@
         color: $green-dark
       &, &:hover
         text-decoration: none
+      .with-hero.scroll-top:not(.hamburger-button-clicked) &
+        color: #fff

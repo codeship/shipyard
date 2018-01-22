@@ -1,0 +1,76 @@
+.header
+  &-logo-link
+    display: block
+    padding: 15px 0
+    color: darken($blue-darker, 6%)
+  &-icon-codeship
+    +width-height(auto, 40px)
+    .with-hero.scroll-top:not(.hamburger-button-clicked) &
+      filter: drop-shadow(0 1px 0 rgba($blue-dark,.5))
+    &-waves
+      html:not(.scroll-top) &
+        fill: $blue
+        opacity: 1
+
+.hero
+  position: relative
+  text-shadow: 0 1px 0 rgba($blue-dark,.5)
+  background: linear-gradient(to right bottom, $teal, saturate($blue-dark, 60%))
+  +respond-to(padding-top, (x0: 50px, x1: 60px, x2: 70px))
+  &::before
+    content: ""
+    position: absolute
+    display: block
+    top: 0
+    left: 0
+    right: 0
+    bottom: 0
+    background: asset-url("layouts/marketing/hero-pattern.png") no-repeat center
+    background-size: cover
+    opacity: .25
+    z-index: 0
+  &-cut::after
+    content: ""
+    position: relative
+    display: block
+    background: #fff
+    clip-path: polygon(100% 0, 0% 100%, 100% 100%)
+    +respond-to(height, (x0: 50px, x1: 100px, x2: 150px))
+  &-content
+    z-index: 1
+    padding: 70px 0
+    position: relative
+  &-title
+    font-size: 34px
+    line-height: 1.4
+  &-description
+    max-width: 500px
+  &-btn
+    +btn-color($green)
+    box-shadow: 0 1px 0 rgba($blue-dark,.15)
+
+.feature
+  &-link
+    flex-grow: 1
+    min-height: 130px
+    border-width: 0 0 0 4px
+    border-style: solid
+  &-arrow
+    top: 50%
+    position: absolute
+    margin-top: -15px
+    +width-height(14px, 24px)
+    +respond-to(right, (x0: 20px, x1: 30px))
+
+.benefit
+  &-container
+    box-shadow: 0 2px 0 $border-color-lightest
+
+  &-item
+    border-left: 1px solid $border-color-lightest
+    padding: 0 30px
+    &:first-child
+      border-left: none
+      padding-left: 15px
+    &:last-child
+      padding-right: 15px

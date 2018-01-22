@@ -1,0 +1,90 @@
+---
+---
+<html lang="en" class="{% shipyard_css_classes %}">
+  <head>
+    <meta charset="utf-8" />
+    <title>{{ page.title }}</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <meta name="theme-color" content="#20a5a8" />
+    {% css fonts media:screen rel:preload async %}
+    {% css syntax media:screen rel:preload async %}
+    {% css marketing media:screen %}
+  </head>
+  <body>
+    <header class="header">
+      <div class="container">
+        <h6 class="header-logo">
+          <a href="{{ site.baseurl }}/examples/marketing/" class="header-logo-link">
+            {% icon 'codeship', prefix: 'header' %}
+          </a>
+        </h6>
+        <button class="hamburger" shipyard="hamburger">
+          <span class="hamburger-button">Menu</span>
+        </button>
+        <ul class="header-list">
+          {% for link in site.data.marketing.navigation %}
+            <li class="header-item {% if page.url == link.url %}header-item-current{% endif %}">
+              <a href="{{ site.baseurl | append: link.url }}" class="header-link">{{ link.name }}</a>
+            </li>
+          {% endfor %}
+          <li class="header-item header-item-cta">
+            <a href="{{ site.baseurl }}/examples/app/sign-up" target="_blank" class="header-link-cta">Sign Up</a>
+          </li>
+        </ul>
+      </div>
+    </header>
+    {{ content }}
+    <footer class="bg-blue-dark blue-light padding-top-xl padding-bottom-xl">
+      <div class="container">
+        <h6 class="margin-bottom-lg">
+          <a href="{ site.baseurl }}/examples/marketing/" class="white">
+            {% icon 'codeship', prefix: 'footer' %}
+          </a>
+        </h6>
+        <div class="col-container">
+          {% for section in site.data.marketing.footer %}
+            <dl class="col col-50 col-x1-20 margin-bottom-lg align-left">
+              <dt class="strong">{{ section.name }}</dt>
+              {% for link in section.links %}
+                <dd><a href="#" class="text-inverse-lighter medium">{{ link.name }}</a></dd>
+              {% endfor %}
+            </dl>
+          {% endfor %}
+        </div>
+        <hr class="hr-thin hr-inverse" />
+        <div class="col-container-nowrap margin-top-lg">
+          <ul class="col col-100">
+            <li class="display-inline">
+              <a href="#" class="display-inline-block padding-xxs white">
+                {% icon :github %}
+              </a>
+            </li>
+            <li class="display-inline">
+              <a href="#" class="display-inline-block padding-xxs white">
+                {% icon :slack %}
+              </a>
+            </li>
+            <li class="display-inline">
+              <a href="#" class="display-inline-block padding-xxs white">
+                {% icon :gitlab %}
+              </a>
+            </li>
+            <li class="display-inline">
+              <a href="#" class="display-inline-block padding-xxs white">
+                {% icon :hipchat %}
+              </a>
+            </li>
+            <li class="display-inline">
+              <a href="#" class="display-inline-block padding-xxs white">
+                {% icon :invision %}
+              </a>
+            </li>
+            <li class="display-inline margin-left-md medium">+1 855.790.8079</li>
+          </ul>
+          <p class="col white-space-nowrap">&copy; 2017 Codeship</p>
+        </div>
+      </div>
+    </footer>
+    {% js marketing %}
+  </body>
+</html>
