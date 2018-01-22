@@ -30,11 +30,11 @@ layout_classes: with-hero
   <p class="text-lg text-lighter align-center margin-bottom-xxl">{{ site.data.marketing.index.features.description }}</p>
   <ul class="col-container">
     {% for feature in site.data.marketing.index.features.list %}
-      <li class="col col-100 col-x1-50 display-flex margin-bottom-xs margin-bottom-x1-md margin-bottom-x2-lg">
-        <a href="{{ feature.url }}" class="box-link box-padding feature-link">
+      <li class="col col-100 col-x1-50 display-flex margin-bottom-sm margin-bottom-x1-md margin-bottom-x2-lg">
+        <a href="{{ feature.url }}" class="box-link box-padding feature-link padding-sm padding-x1-md padding-left-md padding-left-x1-lg padding-right-xxl">
           <div class="bg-{{ feature.color }} rounded rounded-left absolute feature-color"></div>
-          <h3 class="{{ feature.color }} text-lg">{{ feature.heading }}</h3>
-          <p class="text-light">{{ feature.description }}</p>
+          <h3 class="{{ feature.color }} text-lg margin-right-sm margin-right-x1-lg">{{ feature.heading }}</h3>
+          <p class="text-light margin-right-sm margin-right-x1-lg">{{ feature.description }}</p>
           {% icon :arrow_right, class: 'feature-arrow text-lightest o-35' %}
         </a>
       </li>

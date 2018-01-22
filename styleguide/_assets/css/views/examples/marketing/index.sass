@@ -53,18 +53,17 @@
   &-link
     flex-grow: 1
     min-height: 130px
-    padding: 20px 30px
   &-color
     left: 0
     top: 0
     bottom: 0
     width: 4px
   &-arrow
-    position: absolute
-    right: 20px
     top: 50%
+    position: absolute
     margin-top: -15px
-    +width-height(24px, 24px)
+    +width-height(14px, 24px)
+    +respond-to(right, (x0: 20px, x1: 30px))
 
 .benefit
   &-container
