@@ -5,7 +5,19 @@
   vertical-align: middle
   position: relative
   top: -1px
-  +width-height(6px)
+  &-xs
+    +width-height(6px)
+  &-sm
+    +width-height(8px)
+  &-md
+    +width-height(12px)
+  &-lg
+    +width-height(22px)
+  &-xl
+    +width-height(32px)
+
+  &-icon
+    display: none
 
   &-waiting
     color: $blue
@@ -41,15 +53,15 @@
     border-color: $yellow-dark
     background-color: $yellow-dark
 
-  &-succeeded
+  &-success
     border-color: $green
     background-color: $green
 
-  &-failed
+  &-fail
     border-color: $red
     background-color: $red
 
-  &-errored
+  &-error
     border-color: $orange-dark
     background-color: $orange-dark
 
@@ -62,9 +74,9 @@
     color: $teal
   &-idle
     color: $yellow-dark
-  &-succeeded
+  &-success
     color: $green
-  &-failed
+  &-fail
     color: $red
-  &-errored
+  &-error
     color: $orange-dark

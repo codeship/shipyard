@@ -1,6 +1,0 @@
-<svg xmlns="http://www.w3.org/2000/svg" class="icon-deployed" viewBox="0 0 44 44">
-  <path vector-effect="non-scaling-stroke" class="icon-deployed-circle" d="M10,13a15,15,0,1,0,24,0" />
-  <path vector-effect="non-scaling-stroke" class="icon-deployed-parachute" d="M28,9a6.92,6.92,0,0,1,3,.83A9,9,0,0,0,13,10a5.63,5.63,0,0,1,3-1,5.63,5.63,0,0,1,3,1,5.63,5.63,0,0,1,3-1,5.63,5.63,0,0,1,3,1A5.63,5.63,0,0,1,28,9Z" />
-  <path vector-effect="non-scaling-stroke" class="icon-deployed-cords" d="M19,13l1,7m10.5-7L27,22M13.5,13,17,22m8-9-1,7" />
-  <path vector-effect="non-scaling-stroke" class="icon-deployed-box" d="M25,24H19l1-1h4Zm0,0H19v5h6Z" />
-</svg>
