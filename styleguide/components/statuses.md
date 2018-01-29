@@ -158,4 +158,11 @@ Useful when next to standard text where where it's important to show the status 
 
 ---
 
+### Component CSS
+```css
+{% sass_output -%}
+```
+
+---
+
 {% include css-stats.html %}

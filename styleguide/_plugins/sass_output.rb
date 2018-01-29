@@ -12,6 +12,7 @@ module Jekyll
       output.gsub! /}/, " }\n"
       output.gsub! /{/, ' { '
       output.gsub! /([a-z]*):/, '\1: '
+      output.gsub! /;/, '; '
       output.gsub! /\n\z/, ''
       output
     end

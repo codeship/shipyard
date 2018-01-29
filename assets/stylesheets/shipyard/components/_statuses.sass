@@ -51,19 +51,31 @@
   &-idle
     color: $yellow-dark
     border-color: $yellow-dark
-    background-color: $yellow-dark
+    &.status-xs,
+    &.status-sm,
+    &.status-md
+      background-color: $yellow-dark
 
   &-success
     border-color: $green
-    background-color: $green
+    &.status-xs,
+    &.status-sm,
+    &.status-md
+      background-color: $green
 
   &-fail
     border-color: $red
-    background-color: $red
+    &.status-xs,
+    &.status-sm,
+    &.status-md
+      background-color: $red
 
   &-error
     border-color: $orange-dark
-    background-color: $orange-dark
+    &.status-xs,
+    &.status-sm,
+    &.status-md
+      background-color: $orange-dark
 
 +component('text')
   &-skipped
