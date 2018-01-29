@@ -6,11 +6,29 @@
   border: 2px solid $border-color-light
   border-radius: 50%
   vertical-align: middle
+  background-clip: border-box
 
   &-icon
     top: 50%
     left: 50%
     position: absolute
+    +when('lg')
+      margin: -3px 0 0 -3px
+      +width-height(6px)
+      &-skipped
+        width: 3px
+        margin-left: -1px
+      &-waiting
+        +width-height(10px, 2px)
+        margin: -1px 0 0 -5px
+      &-running
+        +width-height(20px)
+        margin: -10px 0 0 -10px
+      &-success
+        margin-top: -2px
+      &-error
+        +width-height(2px, 8px)
+        margin: -4px 0 0 -1px
     +when('xl')
       margin: -4px 0 0 -4px
       +width-height(8px)
@@ -24,7 +42,7 @@
         +width-height(30px)
         margin: -15px 0 0 -15px
       &-success
-        top: 15px
+        margin-top: -3px
       &-error
         +width-height(2px, 10px)
         margin: -5px 0 0 -1px
@@ -63,6 +81,17 @@
     color: $yellow-dark
     border-color: $yellow-dark
     background-color: $yellow-dark
+    &::after
+      top: -2px
+      left: -2px
+      right: -2px
+      bottom: -2px
+      content: ''
+      display: block
+      position: absolute
+      border-radius: 50%
+      background-color: $yellow
+      animation: fade 1s linear 0s infinite alternate
 
   &-success
     color: $green
