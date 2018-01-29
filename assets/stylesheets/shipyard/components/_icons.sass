@@ -32,8 +32,23 @@ svg, path, circle, polyline
       stroke: #fff
 
   // Status Icons
-  &-fail
-    +width-height(8px, 8px)
+  &-fail,
+  &-success
+    +width-height(8px)
+  &-error
+    +width-height(2px, 8px)
+  &-waiting
+    +width-height(12px, 2px)
+  &-running
+    +width-height(8px)
+    animation: rotate 1.5s linear 0s infinite
+  &-waiting
+    &-dot-1
+      animation: bounce 5s ease-in-out 0s infinite
+    &-dot-2
+      animation: bounce 5s ease-in-out 100ms infinite
+    &-dot-3
+      animation: bounce 5s ease-in-out 200ms infinite
 
   &-slack,
   &-github,
