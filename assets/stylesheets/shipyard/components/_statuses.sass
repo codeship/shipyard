@@ -12,6 +12,13 @@
     top: 50%
     left: 50%
     position: absolute
+    +when('md')
+      color: #fff
+      margin: -2px 0 0 -2px
+      +width-height(4px)
+      &-error
+        +width-height(2px, 6px)
+        margin: -3px 0 0 -1px
     +when('lg')
       margin: -3px 0 0 -3px
       +width-height(6px)
@@ -27,7 +34,7 @@
       &-success
         margin-top: -2px
       &-error
-        +width-height(2px, 8px)
+        +width-height(4px, 8px)
         margin: -4px 0 0 -1px
     +when('xl')
       margin: -4px 0 0 -4px
@@ -113,7 +120,8 @@
   &-sm
     +width-height(8px)
   &-md
-    +width-height(12px)
+    +width-height(14px)
+    color: #fff
   &-lg
     +width-height(22px)
     background-color: transparent
