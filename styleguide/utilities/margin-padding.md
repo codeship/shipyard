@@ -108,4 +108,11 @@ The examples below demonstrate how much padding will be added to the left and ri
 
 ---
 
+### Component CSS
+```css
+{% sass_output -%}
+```
+
+---
+
 {% include css-stats.html %}
