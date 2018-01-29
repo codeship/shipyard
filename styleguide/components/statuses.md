@@ -55,31 +55,31 @@ Useful when next to standard text where where it's important to show the status 
 {: .section-description }
 
 <button tooltip="skipped">
-  <span class="status status-skipped status-md">{% icon :skipped, class: 'status-icon' %}</span>
+  <span class="status status-skipped status-md">{% icon :skipped, prefix: 'status' %}</span>
 </button>
 <button tooltip="waiting">
-  <span class="status status-waiting status-md">{% icon :waiting, class: 'status-icon' %}</span>
+  <span class="status status-waiting status-md">{% icon :waiting, prefix: 'status' %}</span>
 </button>
 <button tooltip="running">
-  <span class="status status-running status-md">{% icon :running, class: 'status-icon' %}</span>
+  <span class="status status-running status-md">{% icon :running, prefix: 'status' %}</span>
 </button>
 <button tooltip="success">
-  <span class="status status-success status-md">{% icon :success, class: 'status-icon' %}</span>
+  <span class="status status-success status-md">{% icon :success, prefix: 'status' %}</span>
 </button>
 <button tooltip="idle">
-  <span class="status status-idle status-md">{% icon :idle, class: 'status-icon' %}</span>
+  <span class="status status-idle status-md">{% icon :idle, prefix: 'status' %}</span>
 </button>
 <button tooltip="error">
-  <span class="status status-error status-md">{% icon :error, class: 'status-icon' %}</span>
+  <span class="status status-error status-md">{% icon :error, prefix: 'status' %}</span>
 </button>
 <button tooltip="fail">
-  <span class="status status-fail status-md">{% icon :fail, class: 'status-icon' %}</span>
+  <span class="status status-fail status-md">{% icon :fail, prefix: 'status' %}</span>
 </button>
 
 ```erb
 {%- for status in page.statuses %}
 <span class="status status-md status-{{ status }}">
-  <%= icon :{{ status }}, class: 'status-icon' %>
+  <%= icon :{{ status }}, prefix: 'status' %>
 </span>
 {% endfor -%}
 ```
@@ -90,32 +90,32 @@ Useful when next to standard text where where it's important to show the status 
 Useful when next to standard text where where it's important to show the status of a particular object.
 {: .section-description }
 
-<button tooltip="skipped">
-  <span class="status status-skipped status-lg">{% icon :skipped, class: 'status-icon' %}</span>
+<button tooltip="skipped" class="mr-5">
+  <span class="status status-skipped status-lg">{% icon :skipped, prefix: 'status' %}</span>
 </button>
-<button tooltip="waiting">
-  <span class="status status-waiting status-lg">{% icon :waiting, class: 'status-icon' %}</span>
+<button tooltip="waiting" class="mr-5">
+  <span class="status status-waiting status-lg">{% icon :waiting, prefix: 'status' %}</span>
 </button>
-<button tooltip="running">
-  <span class="status status-running status-lg">{% icon :running, class: 'status-icon' %}</span>
+<button tooltip="running" class="mr-5">
+  <span class="status status-running status-lg">{% icon :running, prefix: 'status' %}</span>
 </button>
-<button tooltip="success">
-  <span class="status status-success status-lg">{% icon :success, class: 'status-icon' %}</span>
+<button tooltip="success" class="mr-5">
+  <span class="status status-success status-lg">{% icon :success, prefix: 'status' %}</span>
 </button>
-<button tooltip="idle">
-  <span class="status status-idle status-lg">{% icon :idle, class: 'status-icon' %}</span>
+<button tooltip="idle" class="mr-5">
+  <span class="status status-idle status-lg">{% icon :idle, prefix: 'status' %}</span>
 </button>
-<button tooltip="error">
-  <span class="status status-error status-lg">{% icon :error, class: 'status-icon' %}</span>
+<button tooltip="error" class="mr-5">
+  <span class="status status-error status-lg">{% icon :error, prefix: 'status' %}</span>
 </button>
-<button tooltip="fail">
-  <span class="status status-fail status-lg">{% icon :fail, class: 'status-icon' %}</span>
+<button tooltip="fail" class="mr-5">
+  <span class="status status-fail status-lg">{% icon :fail, prefix: 'status' %}</span>
 </button>
 
 ```erb
 {%- for status in page.statuses %}
 <span class="status status-lg status-{{ status }}">
-  <%= icon :{{ status }}, class: 'status-icon' %>
+  <%= icon :{{ status }}, prefix: 'status' %>
 </span>
 {% endfor -%}
 ```
@@ -126,32 +126,32 @@ Useful when next to standard text where where it's important to show the status 
 Useful when next to standard text where where it's important to show the status of a particular object.
 {: .section-description }
 
-<button tooltip="skipped">
-  <span class="status status-skipped status-xl">{% icon :skipped, class: 'status-icon' %}</span>
+<button tooltip="skipped" class="mr-5">
+  <span class="status status-skipped status-xl">{% icon :skipped, prefix: 'status' %}</span>
 </button>
-<button tooltip="waiting">
-  <span class="status status-waiting status-xl">{% icon :waiting, class: 'status-icon' %}</span>
+<button tooltip="waiting" class="mr-5">
+  <span class="status status-waiting status-xl">{% icon :waiting, prefix: 'status' %}</span>
 </button>
-<button tooltip="running">
-  <span class="status status-running status-xl">{% icon :running, class: 'status-icon' %}</span>
+<button tooltip="running" class="mr-5">
+  <span class="status status-running status-xl">{% icon :running, prefix: 'status' %}</span>
 </button>
-<button tooltip="success">
-  <span class="status status-success status-xl">{% icon :success, class: 'status-icon' %}</span>
+<button tooltip="success" class="mr-5">
+  <span class="status status-success status-xl">{% icon :success, prefix: 'status' %}</span>
 </button>
-<button tooltip="idle">
-  <span class="status status-idle status-xl">{% icon :idle, class: 'status-icon' %}</span>
+<button tooltip="idle" class="mr-5">
+  <span class="status status-idle status-xl">{% icon :idle, prefix: 'status' %}</span>
 </button>
-<button tooltip="error">
-  <span class="status status-error status-xl">{% icon :error, class: 'status-icon' %}</span>
+<button tooltip="error" class="mr-5">
+  <span class="status status-error status-xl">{% icon :error, prefix: 'status' %}</span>
 </button>
 <button tooltip="fail">
-  <span class="status status-fail status-xl">{% icon :fail, class: 'status-icon' %}</span>
+  <span class="status status-fail status-xl">{% icon :fail, prefix: 'status' %}</span>
 </button>
 
 ```erb
 {%- for status in page.statuses %}
 <span class="status status-xl status-{{ status }}">
-  <%= icon :{{ status }}, class: 'status-icon' %>
+  <%= icon :{{ status }}, prefix: 'status' %>
 </span>
 {% endfor -%}
 ```

@@ -1,23 +1,26 @@
 +component('status')
+  top: -1px
+  position: relative
   display: inline-block
+  color: $text-color-lightest
   border: 2px solid $border-color-light
   border-radius: 50%
   vertical-align: middle
-  position: relative
-  top: -1px
-  &-xs
-    +width-height(6px)
-  &-sm
-    +width-height(8px)
-  &-md
-    +width-height(12px)
-  &-lg
-    +width-height(22px)
-  &-xl
-    +width-height(32px)
 
   &-icon
-    display: none
+    top: 50%
+    left: 50%
+    position: absolute
+    transform: translate(-50%, -50%)
+    +when('xl')
+      +width-height(8px)
+      &-skipped
+        width: 4px
+        left: 15px
+      &-success
+        top: 15px
+      &-error
+        width: 2px
 
   &-waiting
     color: $blue
@@ -51,31 +54,40 @@
   &-idle
     color: $yellow-dark
     border-color: $yellow-dark
-    &.status-xs,
-    &.status-sm,
-    &.status-md
-      background-color: $yellow-dark
+    background-color: $yellow-dark
 
   &-success
+    color: $green
     border-color: $green
-    &.status-xs,
-    &.status-sm,
-    &.status-md
-      background-color: $green
+    background-color: $green
 
   &-fail
+    color: $red
     border-color: $red
-    &.status-xs,
-    &.status-sm,
-    &.status-md
-      background-color: $red
+    background-color: $red
 
   &-error
+    color: $orange-dark
     border-color: $orange-dark
-    &.status-xs,
-    &.status-sm,
-    &.status-md
-      background-color: $orange-dark
+    background-color: $orange-dark
+
+  &-xs
+    +width-height(6px)
+  &-sm
+    +width-height(8px)
+  &-md
+    +width-height(12px)
+  &-lg
+    +width-height(22px)
+    background-color: transparent
+  &-xl
+    +width-height(32px)
+    background-color: transparent
+  &-md,
+  &-lg,
+  &-xl
+    &::after
+      display: none
 
 +component('text')
   &-skipped
