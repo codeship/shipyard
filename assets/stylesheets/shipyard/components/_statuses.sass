@@ -1,0 +1,70 @@
++component('status')
+  display: inline-block
+  border: 2px solid $border-color-light
+  border-radius: 50%
+  vertical-align: middle
+  position: relative
+  top: -1px
+  +width-height(6px)
+
+  &-waiting
+    color: $blue
+    &::after
+      top: -2px
+      left: -2px
+      right: -2px
+      bottom: -2px
+      content: ''
+      display: block
+      position: absolute
+      border-radius: 50%
+      border: 2px solid $blue
+      animation: fade 1s linear 0s infinite alternate
+
+  &-running
+    color: $teal
+    border-color: $teal
+    &::after
+      top: -2px
+      left: -2px
+      right: -2px
+      bottom: -2px
+      content: ''
+      display: block
+      position: absolute
+      border-radius: 50%
+      background-color: $teal
+      animation: fade 1s linear 0s infinite alternate
+
+  &-idle
+    color: $yellow-dark
+    border-color: $yellow-dark
+    background-color: $yellow-dark
+
+  &-succeeded
+    border-color: $green
+    background-color: $green
+
+  &-failed
+    border-color: $red
+    background-color: $red
+
+  &-errored
+    border-color: $orange-dark
+    background-color: $orange-dark
+
++component('text')
+  &-skipped
+    color: $text-color-lightest
+  &-waiting
+    color: $blue
+  &-running
+    color: $teal
+  &-idle
+    color: $yellow-dark
+  &-succeeded
+    color: $green
+  &-failed
+    color: $red
+  &-errored
+    color: $orange-dark

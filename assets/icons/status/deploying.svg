@@ -1,0 +1,10 @@
+<svg class="icon-deploying" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 44 44">
+  <path vector-effect="non-scaling-stroke" class="icon-deploying-circle" d="M13,10a15,15,0,1,0,18,0"/>
+  <path vector-effect="non-scaling-stroke" class="icon-deploying-rocket" d="M15,24V20.24a3,3,0,0,1,.88-2.12L17,17V8.24a5.55,5.55,0,0,1,1.22-3.54l2.6-3.12a1.48,1.48,0,0,1,2.36,0l2.6,3.12A5.55,5.55,0,0,1,27,8.24V17l1.12,1.12A3,3,0,0,1,29,20.24V24Z"/>
+  <g class="icon-deploying-flame-group">
+    <line vector-effect="non-scaling-stroke" class="icon-deploying-flame-1" x1="22" y1="28" x2="22" y2="33" />
+    <line vector-effect="non-scaling-stroke" class="icon-deploying-flame-2" x1="25.5" y1="28" x2="25.5" y2="31" />
+    <line vector-effect="non-scaling-stroke" class="icon-deploying-flame-3" x1="18.5" y1="28" x2="18.5" y2="31" />
+  </g>
+  <path vector-effect="non-scaling-stroke" class="icon-deploying-accents" d="M18.5,21v2m7-2v2M22,6.5A1.5,1.5,0,1,0,23.5,8,1.5,1.5,0,0,0,22,6.5Z"/>
+</svg>

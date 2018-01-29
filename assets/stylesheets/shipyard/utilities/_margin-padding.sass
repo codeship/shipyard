@@ -20,3 +20,9 @@
           @each $size, $value in $sizes
             &-#{$size}
               #{$property}-#{$direction}: $value
+
+.m
+  @each $direction-name, $direction-label in (top: t, bottom: b, left: l, right: r)
+    @each $value in (0,1,2,3,4,5,6,7,8,9,10,11,12,14,15,20,25,30,35,40,45,50,55,60)
+      &#{$direction-label}-#{$value}
+        margin-#{$direction-name}: #{$value}px
