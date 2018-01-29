@@ -1,4 +1,4 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2 6" class="icon-status-error icon-outline">
-  <line vector-effect="non-scaling-stroke" x1="1" x2="1" y2="3" />
+  <line vector-effect="non-scaling-stroke" x1="1" x2="1" y2="3.1" />
   <line vector-effect="non-scaling-stroke" x1="1" x2="1" y1="6" y2="6" />
 </svg>
