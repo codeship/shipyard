@@ -94,4 +94,11 @@ The examples below demonstrate the utility classes on each breakpoint.
 
 ---
 
+### Utility CSS
+```css
+{% sass_output -%}
+```
+
+---
+
 {% include css-stats.html %}

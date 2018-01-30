@@ -158,7 +158,7 @@ Useful when next to standard text where where it's important to show the status 
 
 ---
 
-### Component CSS
+### Utility CSS
 ```css
 {% sass_output -%}
 ```
