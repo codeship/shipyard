@@ -21,8 +21,20 @@
             &-#{$size}
               #{$property}-#{$direction}: $value
 
+@function get-margin-value($value)
+  @if $value == auto
+    @return $value
+  @else
+    @return #{$value}px
+
 .m
-  @each $direction-name, $direction-label in (top: t, bottom: b, left: l, right: r)
-    @each $value in (0,1,2,3,4,5,10,15,20,25,30,40,50,60,70)
-      &#{$direction-label}-#{$value}
-        margin-#{$direction-name}: #{$value}px
+  @each $direction-name, $direction-label in (all: null, top: t, bottom: b, left: l, right: r)
+    @each $value in (0,1,2,3,4,5,10,15,20,25,30,40,50,60,70,auto)
+
+      @if $direction-name == all
+        &-#{$value}
+          margin: get-margin-value($value)
+
+      @else
+        &-#{$direction-label}-#{$value}
+          margin-#{$direction-name}: get-margin-value($value)
