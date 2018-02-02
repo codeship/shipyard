@@ -153,7 +153,7 @@ Yep, that's exactly what it sounds like. It behaves like a radio button but look
 ---
 
 ## Radio Buttons Nested in Buttons
-{: .margin-bottom-md }
+{: .m-b-20 }
 
 <button class="btn btn-secondary margin-right-xs margin-bottom-xs">
   <input type="radio" class="input input-radio margin-right-xxs" />

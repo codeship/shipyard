@@ -129,7 +129,7 @@ Useful when you want to the user to proceed with caution about the choices they'
 ---
 
 ## Checkboxes Nested in Buttons
-{: .margin-bottom-md }
+{: .m-b-20 }
 
 <button class="btn btn-secondary margin-right-xs margin-bottom-xs">
   <input type="checkbox" class="input input-checkbox margin-right-xxs" />
