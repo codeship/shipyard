@@ -74,6 +74,7 @@
 
   &-running
     color: $teal
+    border-color: $teal-light
     &::after
       top: -2px
       left: -2px
@@ -89,7 +90,6 @@
   &-idle
     color: $yellow-dark
     border-color: $yellow-dark
-    background-color: $yellow-dark
     &::after
       top: -2px
       left: -2px
@@ -99,7 +99,7 @@
       display: block
       position: absolute
       border-radius: 50%
-      background-color: $yellow
+      border: 2px solid $yellow
       animation: fade 1s linear 0s infinite alternate
 
   &-success
