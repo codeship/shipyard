@@ -217,6 +217,32 @@ Useful when you don't need to draw attention to the bright-red, off state.
 
 ---
 
+## Warning Checkbox-Switches
+Useful to communicate that your object is only partially connected, and it needs additional attention.
+{: .section-description }
+
+<div class="box box-xs margin-bottom-sm padding-top-md padding-bottom-md padding-left-sm padding-right-sm padding-left-x1-lg padding-right-x1-lg">
+  <div class="col-container-nowrap">
+    <div class="components-checkboxes-switch-col col col-100 text-light text-overflow-ellipsis">Praesent commodo cursus magna, vel scelerisque aenean eu leo quam pellentesque ornare sem lacinia quam.</div>
+    <div class="col margin-left-sm">
+      <input type="checkbox" class="input input-switch-secondary input-switch-warning" checked />
+    </div>
+  </div>
+</div>
+<div class="box-secondary box-xs padding-top-md padding-bottom-md padding-left-sm padding-right-sm padding-left-x1-lg padding-right-x1-lg">
+  <div class="col-container-nowrap">
+    <div class="components-checkboxes-switch-col col col-100 text-light text-overflow-ellipsis">Praesent commodo cursus magna, vel scelerisque aenean eu leo quam pellentesque ornare sem lacinia quam.</div>
+    <div class="col margin-left-sm">
+      <input type="checkbox" class="input input-switch-secondary input-switch-warning" />
+    </div>
+  </div>
+</div>
+```html
+<input type="checkbox" class="input input-switch-secondary input-switch-warning" />
+```
+
+---
+
 ## Checkbox-Switch Sizes `input-switch-{ x1..x4 }-{ sm..xl }`
 Each size can be used or altered at any breakpoint.
 {: .section-description }
