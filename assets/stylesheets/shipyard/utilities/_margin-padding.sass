@@ -6,9 +6,11 @@
 
 @each $property-label, $property-name in (m: margin, p: padding)
   .#{$property-label}
-    $values: (0,1,2,3,4,5,10,15,20,25,30,40,50,60,70,auto)
+    $values: (0,3,5,10,15,20,30,40)
+    @if $property-name == margin
+      $values: append($values, auto)
 
-    // Outputs: .p-0, .p-x1-0, .p-10, .p-x1-10, etc...
+    // Outputs: .p-10, .p-x1-10, etc...
     +all-media-sizes
       @each $value in $values
         &-#{$value}
