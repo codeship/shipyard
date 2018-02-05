@@ -4,9 +4,16 @@
   @else
     @return #{$value}px
 
+// Margin utilities for text
+.m-l-xs
+  margin-left: .2em
+.m-r-xs
+  margin-right: .2em
+
+// Margin & padding utilities for building grids
 @each $property-label, $property-name in (m: margin, p: padding)
   .#{$property-label}
-    $values: (0,3,5,10,15,20,30,40)
+    $values: (0,5,10,15,20,30,40)
     @if $property-name == margin
       $values: append($values, auto)
 
