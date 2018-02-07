@@ -30,12 +30,11 @@ plugins:
   - shipyard-framework
 ```
 
-## Running Builds
-1. Install Homebrew
-2. Run `brew tap caskroom/versions`
-3. Run `brew cask install java8`
-4. [Download the latest jenkins](http://mirrors.jenkins.io/war-stable/latest/jenkins.war) and add it to a ~/Sites/jenkins folder.
-5. Run `JENKINS_HOME=~/Sites/jenkins/ java -jar jenkins.war --httpPort=5000`
+## Running Builds on Jenkins
+1. Install [Homebrew](https://brew.sh/)
+2. Run `brew bundle`
+3. Run `jenkins`
+4. Open [Jenkins](http://localhost:8080/)
 
 ## Status
 [![Gem Version](https://badge.fury.io/rb/shipyard-framework.svg)](https://badge.fury.io/rb/shipyard-framework)
