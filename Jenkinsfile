@@ -1,14 +1,6 @@
 pipeline {
   agent any
   stages {
-    node('Setup') {
-      sh '''
-        chmod +x ci/setup
-        chmod +x ci/jekyll
-        chmod +x ci/sass_lint
-        ./ci/setup
-      '''
-    }
     parallel {
       stage('Jekyll') {
         steps {
