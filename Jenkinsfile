@@ -1,6 +1,11 @@
 pipeline {
   agent any
   stages {
+    stage('Setup') {
+      steps {
+        sh './ci/setup'
+      }
+    }
     stage('Test') {
       parallel {
         stage('Jekyll') {
