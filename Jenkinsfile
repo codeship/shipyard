@@ -1,20 +1,22 @@
 pipeline {
   agent any
   stages {
-    parallel {
-      stage('Jekyll') {
-        steps {
-          sh './ci/jekyll'
+    stage('Test') {
+      parallel {
+        stage('Jekyll') {
+          steps {
+            sh './ci/jekyll'
+          }
         }
-      }
-      stage('RSpec') {
-        steps {
-          sh 'bundle exec rspec'
+        stage('RSpec') {
+          steps {
+            sh 'bundle exec rspec'
+          }
         }
-      }
-      stage('SASS') {
-        steps {
-          sh './ci/sass_lint'
+        stage('SASS') {
+          steps {
+            sh './ci/sass_lint'
+          }
         }
       }
     }
