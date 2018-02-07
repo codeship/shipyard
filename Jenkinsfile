@@ -25,5 +25,11 @@ pipeline {
         }
       }
     }
+    stage('Deploy') {
+      steps {
+        echo 'Deploying to RubyGems'
+        echo 'Deploying to GitHub Pages'
+      }
+    }
   }
 }
