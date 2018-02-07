@@ -5,22 +5,17 @@ pipeline {
       parallel {
         stage('Jekyll') {
           steps {
-            sh 'echo "hello"'
-          }
-        }
-        stage('Percy') {
-          steps {
-            sh 'echo "percy"'
+            sh './ci/jekyll'
           }
         }
         stage('RSpec') {
           steps {
-            sh 'RSpec'
+            sh 'bundle exec rspec'
           }
         }
         stage('SASS') {
           steps {
-            sh 'echo "SASS"'
+            sh './ci/sass_lint'
           }
         }
       }
