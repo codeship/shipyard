@@ -25,7 +25,7 @@ pipeline {
         }
         stage('Percy') {
           steps {
-            echo 'This step only runs in [Codeship builds](https://app.codeship.com/projects/246808) where the data is sent directly to [Percy](https://percy.io/codeship-inc/shipyard).'
+            echo 'This step only runs in Codeship builds (https://app.codeship.com/projects/246808) where the data is sent directly to Percy (https://percy.io/codeship-inc/shipyard).'
           }
         }
       }
