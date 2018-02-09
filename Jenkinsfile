@@ -1,5 +1,5 @@
 pipeline {
-  agent: ruby
+  agent { docker 'ruby' }
   stages {
     stage('Setup') {
       steps {
