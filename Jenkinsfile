@@ -1,5 +1,5 @@
 pipeline {
-  agent any
+  agent: ruby
   stages {
     stage('Setup') {
       steps {
