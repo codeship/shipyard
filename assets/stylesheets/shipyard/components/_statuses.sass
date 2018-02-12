@@ -1,3 +1,8 @@
+@mixin status-icon-center($width, $height: null)
+  $height: if($height, $height, $width)
+  +width-height($width, $height)
+  margin: ($height / -2) 0 0 ($width / -2)
+
 +component('status')
   top: -1px
   position: relative
@@ -110,7 +115,6 @@
       margin: -8px 0 0 -8px
     &-success
       margin-top: -2px
-      // transform: translatey(-.5px)
     &-error
       +width-height(2px, 6px)
       margin: -3px 0 0 -1px
@@ -136,17 +140,14 @@
 
   // Status: Icons (X-Large)
   &-xl-icon
-    margin: -4px 0 0 -4px
-    +width-height(8px)
+    +status-icon-center(8px)
     &-skipped
       width: 4px
       margin-left: -1px
     &-waiting
-      +width-height(12px, 2px)
-      margin: -1px 0 0 -6px
+      +status-icon-center(12px, 2px)
     &-running
-      +width-height(30px)
-      margin: -15px 0 0 -15px
+      +status-icon-center(30px)
     &-success
       margin-top: -3px
     &-error
