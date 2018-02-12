@@ -8,6 +8,85 @@
   vertical-align: middle
   background-clip: border-box
 
+  &-idle,
+  &-waiting,
+  &-running
+    &.status-xs,
+    &.status-sm
+      &::after
+        top: -2px
+        left: -2px
+        right: -2px
+        bottom: -2px
+        content: ''
+        display: block
+        position: absolute
+        border-radius: 50%
+        border: 2px solid transparent
+        animation: fade 1s linear 0s infinite alternate
+
+  &-waiting
+    color: $blue
+    border-color: $blue
+    &.status-md
+      color: #fff
+      background-color: $blue
+    &.status-xs::after,
+    &.status-sm::after
+      border-color: $blue-light
+
+  &-running
+    color: $teal
+    &.status-xs,
+    &.status-sm
+      border-color: $teal-light
+      &::after
+        background-color: $teal
+
+  &-idle
+    color: $yellow-dark
+    border-color: $yellow-dark
+    &.status-md
+      color: #fff
+      background-color: $yellow-dark
+    &.status-xs::after,
+    &.status-sm::after
+      border-color: $yellow
+
+  &-success
+    color: $green
+    border-color: $green
+    background-color: $green
+
+  &-fail
+    color: $red
+    border-color: $red
+    background-color: $red
+
+  &-error
+    color: $orange-dark
+    border-color: $orange-dark
+    background-color: $orange-dark
+
+  &-success,
+  &-fail,
+  &-error
+    &.status-md
+      color: #fff
+
+  &-xs
+    +width-height(6px)
+  &-sm
+    +width-height(8px)
+  &-md
+    +width-height(18px)
+  &-lg
+    +width-height(22px)
+    background-color: transparent
+  &-xl
+    +width-height(32px)
+    background-color: transparent
+
   // Status: Icons
   &-icon
     top: 50%
@@ -73,99 +152,6 @@
     &-error
       +width-height(4px, 10px)
       margin: -5px 0 0 -1px
-
-  &-waiting
-    color: $blue
-    border-color: $blue
-    &.status-md
-      color: #fff
-      background-color: $blue
-    &::after
-      top: -2px
-      left: -2px
-      right: -2px
-      bottom: -2px
-      content: ''
-      display: block
-      position: absolute
-      border-radius: 50%
-      border: 2px solid $blue-light
-      animation: fade 1s linear 0s infinite alternate
-
-  &-running
-    color: $teal
-    &.status-xs,
-    &.status-sm
-      border-color: $teal-light
-    &::after
-      top: -2px
-      left: -2px
-      right: -2px
-      bottom: -2px
-      content: ''
-      display: block
-      position: absolute
-      border-radius: 50%
-      background-color: $teal
-      animation: fade 1s linear 0s infinite alternate
-
-  &-idle
-    color: $yellow-dark
-    border-color: $yellow-dark
-    &.status-md
-      color: #fff
-      background-color: $yellow-dark
-    &::after
-      top: -2px
-      left: -2px
-      right: -2px
-      bottom: -2px
-      content: ''
-      display: block
-      position: absolute
-      border-radius: 50%
-      border: 2px solid $yellow
-      animation: fade 1s linear 0s infinite alternate
-
-  &-success
-    color: $green
-    border-color: $green
-    background-color: $green
-    &.status-md
-      color: #fff
-
-  &-fail
-    color: $red
-    border-color: $red
-    background-color: $red
-    &.status-md
-      color: #fff
-
-  &-error
-    color: $orange-dark
-    border-color: $orange-dark
-    background-color: $orange-dark
-    &.status-md
-      color: #fff
-
-  &-xs
-    +width-height(6px)
-  &-sm
-    +width-height(8px)
-  &-md
-    +width-height(18px)
-    // color: #fff
-  &-lg
-    +width-height(22px)
-    background-color: transparent
-  &-xl
-    +width-height(32px)
-    background-color: transparent
-  &-md,
-  &-lg,
-  &-xl
-    &::after
-      display: none
 
 +component('text')
   &-skipped
