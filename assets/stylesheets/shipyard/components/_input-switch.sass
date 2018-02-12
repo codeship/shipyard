@@ -22,6 +22,13 @@ $sizes: (sm: 18px, md: 20px, lg: 22px, xl: 24px)
       &:not(:disabled)
         +btn-color($border-color-dark, $border-color: transparent)
 
+  &-warning
+    &:checked
+      &, &:not(:disabled)
+        +btn-color($yellow-dark, $border-color: transparent)
+        &:hover, &:focus
+          +btn-color(darken($yellow-dark, 5%), $border-color: transparent)
+
   // Checkbox Switch: White Dot
   &::after
     top: 0
