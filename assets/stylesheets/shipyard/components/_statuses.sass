@@ -13,12 +13,18 @@
     left: 50%
     position: absolute
     +when('md')
-      color: #fff
-      margin: -2px 0 0 -2px
-      +width-height(4px)
+      margin: -3px 0 0 -3px
+      +width-height(6px)
+      &-skipped
+        margin-left: -1px
+      &-waiting
+        +width-height(8px, 2px)
+        margin: -1px 0 0 -4px
       &-running
-        +width-height(12px)
-        margin: -6px 0 0 -6px
+        +width-height(16px)
+        margin: -8px 0 0 -8px
+      &-success
+        margin-top: -2px
       &-error
         +width-height(2px, 6px)
         margin: -3px 0 0 -1px
@@ -60,6 +66,9 @@
   &-waiting
     color: $blue
     border-color: $blue
+    &.status-md
+      color: #fff
+      background-color: $blue
     &::after
       top: -2px
       left: -2px
@@ -74,7 +83,9 @@
 
   &-running
     color: $teal
-    border-color: $teal-light
+    &.status-xs,
+    &.status-sm
+      border-color: $teal-light
     &::after
       top: -2px
       left: -2px
@@ -90,6 +101,9 @@
   &-idle
     color: $yellow-dark
     border-color: $yellow-dark
+    &.status-md
+      color: #fff
+      background-color: $yellow-dark
     &::after
       top: -2px
       left: -2px
@@ -106,24 +120,30 @@
     color: $green
     border-color: $green
     background-color: $green
+    &.status-md
+      color: #fff
 
   &-fail
     color: $red
     border-color: $red
     background-color: $red
+    &.status-md
+      color: #fff
 
   &-error
     color: $orange-dark
     border-color: $orange-dark
     background-color: $orange-dark
+    &.status-md
+      color: #fff
 
   &-xs
     +width-height(6px)
   &-sm
     +width-height(8px)
   &-md
-    +width-height(14px)
-    color: #fff
+    +width-height(18px)
+    // color: #fff
   &-lg
     +width-height(22px)
     background-color: transparent

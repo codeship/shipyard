@@ -86,7 +86,7 @@ Useful when next to standard text where where it's important to show the status 
 
 ---
 
-### Status Large Icons `.status-lg`
+### Large Status Icons `.status-lg`
 Useful when next to standard text where where it's important to show the status of a particular object.
 {: .section-description }
 
@@ -122,7 +122,7 @@ Useful when next to standard text where where it's important to show the status 
 
 ---
 
-### Status X-Large Icons `.status-xl`
+### X-Large Status Icons `.status-xl`
 Useful when next to standard text where where it's important to show the status of a particular object.
 {: .section-description }
 
