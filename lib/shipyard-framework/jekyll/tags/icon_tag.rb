@@ -7,9 +7,14 @@ module Shipyard
 
       def initialize(tag_name, params, options)
         super
-        @args = params.strip.split(',')
-        @name = eval(@args[0])
-        @options = @args[1] ? eval("{#{@args[1]}}") : {}
+        @options = {}
+        params.strip.split(',').each_with_index do |arg, index|
+          if index == 0
+            @name = eval(arg)
+          else
+            @options.merge!(eval("{#{arg}}"))
+          end
+        end
       end
 
       def render(context)

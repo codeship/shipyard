@@ -8,63 +8,71 @@
   vertical-align: middle
   background-clip: border-box
 
+  // Status: Icons
   &-icon
     top: 50%
     left: 50%
     position: absolute
-    +when('md')
-      margin: -3px 0 0 -3px
-      +width-height(6px)
-      &-skipped
-        margin-left: 0
-        transform: translatex(-.8px)
-      &-waiting
-        stroke-width: 1.7
-        +width-height(8px, 2px)
-        margin: 0 0 0 -4px
-        transform: translatey(-.7px)
-      &-running
-        +width-height(16px)
-        margin: -8px 0 0 -8px
-      &-success
-        margin-top: -2px
-      &-error
-        +width-height(2px, 6px)
-        margin: -3px 0 0 -1px
-    +when('lg')
-      margin: -3px 0 0 -3px
-      +width-height(6px)
-      &-skipped
-        width: 3px
-        margin-left: -1px
-      &-waiting
-        +width-height(10px, 2px)
-        margin: -1px 0 0 -5px
-      &-running
-        +width-height(20px)
-        margin: -10px 0 0 -10px
-      &-success
-        margin-top: -2px
-      &-error
-        +width-height(4px, 8px)
-        margin: -4px 0 0 -1px
-    +when('xl')
-      margin: -4px 0 0 -4px
-      +width-height(8px)
-      &-skipped
-        width: 4px
-        margin-left: -1px
-      &-waiting
-        +width-height(12px, 2px)
-        margin: -1px 0 0 -6px
-      &-running
-        +width-height(30px)
-        margin: -15px 0 0 -15px
-      &-success
-        margin-top: -3px
-      &-error
-        +width-height(4px, 10px)
-        margin: -5px 0 0 -1px
+
+  // Status: Icons (Medium)
+  &-md-icon
+    margin: -3px 0 0 -3px
+    +width-height(6px)
+    &-skipped
+      margin-left: 0
+      transform: translatex(-.8px)
+    &-waiting
+      stroke-width: 1.7
+      +width-height(8px, 2px)
+      margin: 0 0 0 -4px
+      transform: translatey(-.7px)
+    &-running
+      +width-height(16px)
+      margin: -8px 0 0 -8px
+    &-success
+      margin-top: -2px
+      // transform: translatey(-.5px)
+    &-error
+      +width-height(2px, 6px)
+      margin: -3px 0 0 -1px
+
+  // Status: Icons (Large)
+  &-lg-icon
+    margin: -3px 0 0 -3px
+    +width-height(6px)
+    &-skipped
+      width: 3px
+      margin-left: -1px
+    &-waiting
+      +width-height(10px, 2px)
+      margin: -1px 0 0 -5px
+    &-running
+      +width-height(20px)
+      margin: -10px 0 0 -10px
+    &-success
+      margin-top: -2px
+    &-error
+      +width-height(4px, 8px)
+      margin: -4px 0 0 -1px
+
+  // Status: Icons (X-Large)
+  &-xl-icon
+    margin: -4px 0 0 -4px
+    +width-height(8px)
+    &-skipped
+      width: 4px
+      margin-left: -1px
+    &-waiting
+      +width-height(12px, 2px)
+      margin: -1px 0 0 -6px
+    &-running
+      +width-height(30px)
+      margin: -15px 0 0 -15px
+    &-success
+      margin-top: -3px
+    &-error
+      +width-height(4px, 10px)
+      margin: -5px 0 0 -1px
 
   &-waiting
     color: $blue
