@@ -58,7 +58,7 @@ Useful when next to standard text where where it's important to show the status 
   <span class="status status-skipped status-md">{% icon :skipped, prefix: 'status' %}</span>
 </button>
 <button tooltip="waiting">
-  <span class="status status-waiting status-md">{% icon :waiting, prefix: 'status' %}</span>
+  <span class="status status-waiting status-md">{% icon 'waiting', prefix: 'status' %}</span>
 </button>
 <button tooltip="running">
   <span class="status status-running status-md">{% icon :running, prefix: 'status' %}</span>
