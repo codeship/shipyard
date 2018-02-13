@@ -1,5 +1,5 @@
 pipeline {
-  agent { label 'shipyard-agent' }
+  agent { label 'shipyard-docker-agent' }
   stages {
     stage('Test') {
       parallel {
