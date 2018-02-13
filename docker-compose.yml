@@ -1,3 +1,2 @@
 test:
-  build: .
-  dockerfile: Dockerfile
+  image: codeship/shipyard:latest
