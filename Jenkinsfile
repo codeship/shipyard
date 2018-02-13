@@ -3,24 +3,24 @@ pipeline {
   stages {
     stage('Setup') {
       steps {
-        sh './ci/setup'
+        sh 'docker-compose run test ./ci/setup'
       }
     }
     stage('Test') {
       parallel {
         stage('Jekyll') {
           steps {
-            sh './ci/jekyll'
+            sh 'docker-compose run test ./ci/jekyll'
           }
         }
         stage('RSpec') {
           steps {
-            sh 'bundle exec rspec'
+            sh 'docker-compose run test bundle exec rspec'
           }
         }
         stage('SASS') {
           steps {
-            sh './ci/sass_lint'
+            sh 'docker-compose run test ./ci/sass_lint'
           }
         }
         stage('Percy') {
