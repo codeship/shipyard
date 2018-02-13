@@ -1,5 +1,5 @@
 pipeline {
-  agent { dockerfile true }
+  agent { label 'shipyard-agent' }
   stages {
     stage('Setup') {
       steps {
