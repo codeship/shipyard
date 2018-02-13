@@ -1,3 +1,8 @@
 tap "caskroom/versions"
 cask "java8" unless system "/usr/libexec/java_home --failfast"
 brew "jenkins"
+brew "docker"
+brew "docker-compose"
+brew "docker-machine"
+brew "xhyve"
+brew "docker-machine-driver-xhyve"
