@@ -15,7 +15,7 @@ pipeline {
         }
         stage('RSpec') {
           steps {
-            sh 'bundle exec rspec'
+            sh 'rspec'
           }
         }
         stage('SASS') {
