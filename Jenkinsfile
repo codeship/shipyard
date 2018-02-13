@@ -1,5 +1,7 @@
 pipeline {
-  agent any
+  agent {
+    docker { image 'shipyard_test' }
+  }
   stages {
     stage('Setup') {
       steps {
