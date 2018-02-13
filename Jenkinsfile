@@ -1,7 +1,5 @@
 pipeline {
-  agent {
-    docker { image 'codeship/ruby-with-jdk' }
-  }
+  agent { label 'shipyard-agent' }
   stages {
     stage('Setup') {
       steps {
