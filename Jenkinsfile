@@ -1,5 +1,7 @@
 pipeline {
-  agent { label 'shipyard-agent' }
+  agent {
+    docker { image 'codeship/shipyard:latest' }
+  }
   stages {
     stage('Test') {
       parallel {
