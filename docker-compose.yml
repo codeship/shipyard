@@ -1,3 +1,7 @@
 test:
   build: .
   dockerfile: Dockerfile.ci
+
+dev:
+  build: .
+  dockerfile: Dockerfile.dev

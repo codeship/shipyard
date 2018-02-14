@@ -1,0 +1,22 @@
+FROM ruby:2.5
+
+MAINTAINER dev@codeship.com
+
+RUN apt-get update -y && apt-get install -y \
+  build-essential \
+
+# Copy Everything Else Needed for CI
+COPY ./app ./app
+COPY ./assets ./assets
+COPY ./lib ./lib
+COPY ./styleguide ./styleguide
+
+# Shipyard Documentation
+WORKDIR /styleguide/
+RUN gem install bundler --pre --no-ri --no-rdoc && bundle install --jobs 20 --retry 5
+RUN jekyll serve --baseurl=''
+EXPOSE 4000
+
+WORKDIR /styleguide/_site/
+
+CMD [ "bundle", "exec", "jekyll", "serve", "--force_polling", "-H", "0.0.0.0", "-P", "4000" ]
