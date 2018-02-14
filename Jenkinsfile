@@ -10,7 +10,7 @@ pipeline {
         }
         stage('RSpec') {
           steps {
-            sh 'rspec'
+            sh 'rspec -fd'
           }
         }
         stage('SASS') {
