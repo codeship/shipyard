@@ -23,8 +23,6 @@ WORKDIR /tmp
 RUN gem install bundler --pre --no-ri --no-rdoc && bundle install --jobs 20 --retry 5
 
 # Shipyard Documentation
-WORKDIR /
-COPY styleguide/Gemfile* /tmp/styleguide/
-WORKDIR /tmp/styleguide
+WORKDIR /styleguide/
 RUN gem install bundler --pre --no-ri --no-rdoc && bundle install --jobs 20 --retry 5
 WORKDIR /
