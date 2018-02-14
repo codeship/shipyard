@@ -23,6 +23,7 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency 'jekyll', '~> 3.6'
   spec.add_development_dependency 'jekyll-assets', '~> 2.3'
 
-  spec.executables = `git ls-files -- bin/*`.split("\n").map{ |f| File.basename(f) }
-  spec.files = `git ls-files`.split("\n")
+  spec.files = Dir['app/**/*']
+  spec.files += Dir['lib/**/*']
+  spec.files += Dir['assets/**/*']
 end
