@@ -36,15 +36,10 @@ plugins:
 3. Run `jenkins`
 4. Open [Jenkins](http://localhost:8080/)
 
-## Running Jekyll in Docker
+## Running Jekyll Locally via Docker
 1. Install [Homebrew](https://brew.sh/)
-2. Run `brew bundle`
-3. Run `sudo chown root:wheel $(brew --prefix)/opt/docker-machine-driver-xhyve/bin/docker-machine-driver-xhyve`
-4. Run `sudo chmod u+s $(brew --prefix)/opt/docker-machine-driver-xhyve/bin/docker-machine-driver-xhyve`
-5. Run `docker-machine create default --driver xhyve --xhyve-experimental-nfs-share`
-6. Run `eval $(docker-machine env default)` or add the same command to your `~/.bash_profile` file.
-7. Run `docker-machine start default`
-8. Run `docker-compose run dev`
+2. Run `rake shipyard:install`
+3. Run `rake shipyard:run`
 
 ## Status
 [![Gem Version](https://badge.fury.io/rb/shipyard-framework.svg)](https://badge.fury.io/rb/shipyard-framework)
