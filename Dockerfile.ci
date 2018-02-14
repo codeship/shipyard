@@ -2,8 +2,10 @@ FROM ruby:2.5
 
 MAINTAINER dev@codeship.com
 
-# Jenkins Utils
-RUN apt-get update -y && apt-get install openjdk-8-jdk -y
+RUN apt-get update -y && apt-get install -y \
+  build-essential \
+  openjdk-8-jdk \
+  bc
 
 # Shipyard Gems
 COPY Gemfile* /tmp/
