@@ -1,5 +1,3 @@
-require 'shipyard-framework/helpers/icon_helper'
-
 module Jekyll
   class IconItem < Liquid::Tag
     include Shipyard::IconHelper
