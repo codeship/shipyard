@@ -131,33 +131,33 @@ Useful when you want to the user to proceed with caution about the choices they'
 ## Checkboxes Nested in Buttons
 {: .m-b-20 }
 
-<button class="btn btn-secondary margin-right-xs mb-10">
-  <input type="checkbox" class="input input-checkbox margin-right-xxs" />
+<button class="btn btn-secondary mr-10 mb-10">
+  <input type="checkbox" class="input input-checkbox mr-5" />
   Unchecked
 </button>
-<button class="btn btn-secondary margin-right-xs mb-10">
-  <input type="checkbox" class="input input-checkbox margin-right-xxs" checked />
+<button class="btn btn-secondary mr-10 mb-10">
+  <input type="checkbox" class="input input-checkbox mr-5" checked />
   Checked
 </button>
-<button class="btn btn-cta margin-right-xs mb-10">
-  <input type="checkbox" class="input input-checkbox input-checkbox-inverse margin-right-xxs" />
+<button class="btn btn-cta mr-10 mb-10">
+  <input type="checkbox" class="input input-checkbox input-checkbox-inverse mr-5" />
   Inverse Unchecked
 </button>
-<button class="btn btn-cta margin-right-xs mb-10">
-  <input type="checkbox" class="input input-checkbox input-checkbox-inverse margin-right-xxs" checked />
+<button class="btn btn-cta mr-10 mb-10">
+  <input type="checkbox" class="input input-checkbox input-checkbox-inverse mr-5" checked />
   Inverse Checked
 </button>
 
 ```html
 <!-- Secondary button with a checkbox in the unchecked state. -->
 <button class="btn btn-secondary">
-  <input type="checkbox" class="input input-checkbox margin-right-xxs" />
+  <input type="checkbox" class="input input-checkbox mr-5" />
   Button Text
 </button>
 
 <!-- CTA button with a checkbox in the checked state. -->
 <button class="btn btn-cta">
-  <input type="checkbox" class="input input-checkbox input-checkbox-inverse margin-right-xxs" checked />
+  <input type="checkbox" class="input input-checkbox input-checkbox-inverse mr-5" checked />
   Button Text
 </button>
 ```

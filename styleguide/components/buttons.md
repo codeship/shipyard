@@ -12,12 +12,12 @@ Shipyard gives you more buttons than you can shake a stick at.
 {: .section-description }
 
 <div class="mb-20">
-  {% btn Default, :default, class: 'margin-right-xs' %}
-  {% btn Primary, :primary, class: 'margin-right-xs' %}
-  {% btn Primary Dark, :primary_dark, class: 'margin-right-xs' %}
-  {% btn CTA, :cta, class: 'margin-right-xs' %}
-  {% btn Caution, :caution, class: 'margin-right-xs' %}
-  {% btn Disabled, :disabled, class: 'margin-right-xs' %}
+  {% btn Default, :default, class: 'mr-10' %}
+  {% btn Primary, :primary, class: 'mr-10' %}
+  {% btn Primary Dark, :primary_dark, class: 'mr-10' %}
+  {% btn CTA, :cta, class: 'mr-10' %}
+  {% btn Caution, :caution, class: 'mr-10' %}
+  {% btn Disabled, :disabled, class: 'mr-10' %}
   {% btn Link, :link %}
 </div>
 
@@ -38,8 +38,8 @@ Useful when you have a button on a darker background.
 {: .section-description }
 
 <div class="mb-20">
-  {% btn Secondary, :secondary, class: 'margin-right-xs' %}
-  {% btn Secondary Dark, :secondary_dark, class: 'margin-right-xs' %}
+  {% btn Secondary, :secondary, class: 'mr-10' %}
+  {% btn Secondary Dark, :secondary_dark, class: 'mr-10' %}
   {% btn Secondary Link, :secondary_link %}
 </div>
 
@@ -56,7 +56,7 @@ Useful when you have a button on a darker background.
 {: .section-description }
 
 <div class="box-secondary box-padding bg-gray-dark mb-20">
-  {% btn Inverse, :inverse, class: 'margin-right-xs' %}
+  {% btn Inverse, :inverse, class: 'mr-10' %}
   {% btn Inverse Secondary, :inverse_secondary %}
 </div>
 
@@ -72,10 +72,10 @@ Useful when you want a button with completely rounded corners.
 {: .section-description }
 
 <div class="mb-20">
-  {% btn Default, :rounded, class: 'margin-right-xs' %}
-  {% btn Primary, :primary :rounded, class: 'margin-right-xs' %}
-  {% btn CTA, :cta :rounded, class: 'margin-right-xs' %}
-  {% btn Caution, :caution :rounded, class: 'margin-right-xs' %}
+  {% btn Default, :rounded, class: 'mr-10' %}
+  {% btn Primary, :primary :rounded, class: 'mr-10' %}
+  {% btn CTA, :cta :rounded, class: 'mr-10' %}
+  {% btn Caution, :caution :rounded, class: 'mr-10' %}
   {% btn Secondary, :secondary :rounded %}
 </div>
 
@@ -90,12 +90,12 @@ Useful when you have a button that triggers an asynchronous action.
 {: .section-description }
 
 <div class="mb-20">
-  {% btn Default, :loading, class: 'margin-right-xs' %}
-  {% btn Primary, :primary :loading, class: 'margin-right-xs' %}
-  {% btn CTA, :cta :loading, class: 'margin-right-xs' %}
-  {% btn Caution, :caution :loading, class: 'margin-right-xs' %}
-  {% btn Secondary, :secondary :loading, class: 'margin-right-xs' %}
-  {% btn Secondary Link, :secondary_link :loading, class: 'margin-right-xs' %}
+  {% btn Default, :loading, class: 'mr-10' %}
+  {% btn Primary, :primary :loading, class: 'mr-10' %}
+  {% btn CTA, :cta :loading, class: 'mr-10' %}
+  {% btn Caution, :caution :loading, class: 'mr-10' %}
+  {% btn Secondary, :secondary :loading, class: 'mr-10' %}
+  {% btn Secondary Link, :secondary_link :loading, class: 'mr-10' %}
 </div>
 
 ```html

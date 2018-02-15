@@ -155,41 +155,41 @@ Yep, that's exactly what it sounds like. It behaves like a radio button but look
 ## Radio Buttons Nested in Buttons
 {: .m-b-20 }
 
-<button class="btn btn-secondary margin-right-xs mb-10">
-  <input type="radio" class="input input-radio margin-right-xxs" />
+<button class="btn btn-secondary mr-10 mb-10">
+  <input type="radio" class="input input-radio mr-5" />
   Unchecked
 </button>
-<button class="btn btn-secondary margin-right-xs mb-10">
-  <input type="radio" class="input input-radio margin-right-xxs" checked />
+<button class="btn btn-secondary mr-10 mb-10">
+  <input type="radio" class="input input-radio mr-5" checked />
   Checked
 </button>
-<button class="btn btn-secondary margin-right-xs mb-10">
-  <input type="radio" class="input input-radio-checkbox margin-right-xxs" checked />
+<button class="btn btn-secondary mr-10 mb-10">
+  <input type="radio" class="input input-radio-checkbox mr-5" checked />
   Checked w/ Icon
 </button>
-<button class="btn btn-cta margin-right-xs mb-10">
-  <input type="radio" class="input input-radio input-radio-inverse margin-right-xxs" />
+<button class="btn btn-cta mr-10 mb-10">
+  <input type="radio" class="input input-radio input-radio-inverse mr-5" />
   Inverse Unchecked
 </button>
-<button class="btn btn-cta margin-right-xs mb-10">
-  <input type="radio" class="input input-radio input-radio-inverse margin-right-xxs" checked />
+<button class="btn btn-cta mr-10 mb-10">
+  <input type="radio" class="input input-radio input-radio-inverse mr-5" checked />
   Inverse Checked
 </button>
-<button class="btn btn-cta margin-right-xs mb-10">
-  <input type="radio" class="input input-radio-checkbox input-radio-inverse margin-right-xs" checked />
+<button class="btn btn-cta mr-10 mb-10">
+  <input type="radio" class="input input-radio-checkbox input-radio-inverse mr-10" checked />
   Inverse Checked w/ Icon
 </button>
 
 ```html
 <!-- Secondary button with a radio button in the unchecked state. -->
 <button class="btn btn-secondary">
-  <input type="radio" class="input input-radio margin-right-xxs" />
+  <input type="radio" class="input input-radio mr-5" />
   Button Text
 </button>
 
 <!-- CTA button with a radio-checkbox in the checked state. -->
 <button class="btn btn-cta">
-  <input type="radio" class="input input-radio-checkbox input-radio-inverse margin-right-xxs" checked />
+  <input type="radio" class="input input-radio-checkbox input-radio-inverse mr-5" checked />
   Button Text
 </button>
 ```

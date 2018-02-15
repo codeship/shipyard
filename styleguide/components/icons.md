@@ -98,7 +98,7 @@ One of the most common problems when using an icon is that doesn't line up with 
 {: .section-description }
 
 <div class="mb-30">
-  <button class="btn btn-secondary">{% icon :plus, class: 'align-middle icon-sm margin-right-xxs' %} Create</button>
+  <button class="btn btn-secondary">{% icon :plus, class: 'align-middle icon-sm mr-5' %} Create</button>
 </div>
 
 ```erb
