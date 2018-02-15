@@ -13,6 +13,10 @@
   vertical-align: middle
   background-clip: border-box
 
+  &-skipped
+    &-bg
+      background-color: $gray
+
   &-idle,
   &-waiting,
   &-running
@@ -33,7 +37,9 @@
   &-waiting
     color: $blue
     border-color: $blue
-    &.status-md
+    &-bg
+      background-color: $blue
+    &.status-md:not(.status-inverse)
       color: #fff
       background-color: $blue
     &.status-xs::after,
@@ -42,16 +48,24 @@
 
   &-running
     color: $teal
+    &-bg
+      background-color: $teal
     &.status-xs,
     &.status-sm
       border-color: $teal-light
       &::after
         background-color: $teal
+    &.status-inverse
+      color: #fff
+      border-color: rgba(#fff,.3)
+      background-color: transparent
 
   &-idle
     color: $yellow-dark
     border-color: $yellow-dark
-    &.status-md
+    &-bg
+      background-color: $yellow-dark
+    &.status-md:not(.status-inverse)
       color: #fff
       background-color: $yellow-dark
     &.status-xs::after,
@@ -61,23 +75,31 @@
   &-success
     color: $green
     border-color: $green
-    background-color: $green
+    &, &-bg
+      background-color: $green
 
   &-fail
     color: $red
     border-color: $red
-    background-color: $red
+    &, &-bg
+      background-color: $red
 
   &-error
     color: $orange-dark
     border-color: $orange-dark
-    background-color: $orange-dark
+    &, &-bg
+      background-color: $orange-dark
 
   &-success,
   &-fail,
   &-error
-    &.status-md
+    &.status-md:not(.status-inverse)
       color: #fff
+
+  &-inverse
+    color: #fff
+    border-color: #fff
+    background-color: #fff
 
   &-xs
     +width-height(6px)
