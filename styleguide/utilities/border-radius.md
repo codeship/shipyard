@@ -80,7 +80,7 @@ The examples below demonstrate the utility classes on each breakpoint.
 ```
 
 {% for breakpoint in site.data.breakpoints %}
-  <h3 class="text-md text-light margin-top-lg mb-10">{{ breakpoint.label }}</h3>
+  <h3 class="text-md text-light mt-30 mb-10">{{ breakpoint.label }}</h3>
   <div class="col-container">
     {% for direction in page.directions %}
       <div class="{{ page.col_classes }}">
