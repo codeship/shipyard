@@ -5,9 +5,9 @@
     @return #{$value}px
 
 // Margin utilities for text
-.m-l-xs
+.ml-xs
   margin-left: .2em
-.m-r-xs
+.mr-xs
   margin-right: .2em
 
 // Margin & padding utilities for building grids
@@ -25,7 +25,7 @@
 
     // Outputs: .p-t-0, .p-t-x1-0, .p-t-10, .p-t-x1-10, etc...
     @each $direction-name, $direction-label in (top: t, bottom: b, left: l, right: r)
-      &-#{$direction-label}
+      &#{$direction-label}
         +all-media-sizes
           @each $value in $values
             &-#{$value}
