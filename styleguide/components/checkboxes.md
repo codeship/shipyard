@@ -129,7 +129,7 @@ Useful when you want to the user to proceed with caution about the choices they'
 ---
 
 ## Checkboxes Nested in Buttons
-{: .m-b-20 }
+{: .mb-20 }
 
 <button class="btn btn-secondary mr-10 mb-10">
   <input type="checkbox" class="input input-checkbox mr-5" />

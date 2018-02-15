@@ -153,7 +153,7 @@ Yep, that's exactly what it sounds like. It behaves like a radio button but look
 ---
 
 ## Radio Buttons Nested in Buttons
-{: .m-b-20 }
+{: .mb-20 }
 
 <button class="btn btn-secondary mr-10 mb-10">
   <input type="radio" class="input input-radio mr-5" />
