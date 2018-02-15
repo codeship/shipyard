@@ -25,5 +25,3 @@ RUN gem install bundler --pre --no-ri --no-rdoc && bundle install --jobs 20 --re
 # Shipyard Documentation
 WORKDIR /styleguide/
 RUN gem install bundler --pre --no-ri --no-rdoc && bundle install --jobs 20 --retry 5
-
-EXPOSE 4000
