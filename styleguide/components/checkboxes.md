@@ -168,7 +168,7 @@ Useful when you want to the user to proceed with caution about the choices they'
 Switches are useful when the user has a choice to toggle on and off. Note: For the best UX, please make sure that the switch saves immediately each time it changes state.
 {: .section-description }
 
-<div class="box box-xs mb-15 pt-20 padding-bottom-md pl-15 pr-15 pl-x1-30 pr-x1-30">
+<div class="box box-xs mb-15 pt-20 pb-20 pl-15 pr-15 pl-x1-30 pr-x1-30">
   <div class="col-container-nowrap">
     <div class="components-checkboxes-switch-col col col-100 text-light text-overflow-ellipsis">Praesent commodo cursus magna, vel scelerisque aenean eu leo quam pellentesque ornare sem lacinia quam.</div>
     <div class="col ml-15">
@@ -176,7 +176,7 @@ Switches are useful when the user has a choice to toggle on and off. Note: For t
     </div>
   </div>
 </div>
-<div class="box-secondary box-xs pt-20 padding-bottom-md pl-15 pr-15 pl-x1-30 pr-x1-30">
+<div class="box-secondary box-xs pt-20 pb-20 pl-15 pr-15 pl-x1-30 pr-x1-30">
   <div class="col-container-nowrap">
     <div class="components-checkboxes-switch-col col col-100 text-light text-overflow-ellipsis">Praesent commodo cursus magna, vel scelerisque aenean eu leo quam pellentesque ornare sem lacinia quam.</div>
     <div class="col ml-15">
@@ -195,7 +195,7 @@ Switches are useful when the user has a choice to toggle on and off. Note: For t
 Useful when you don't need to draw attention to the bright-red, off state.
 {: .section-description }
 
-<div class="box box-xs mb-15 pt-20 padding-bottom-md pl-15 pr-15 pl-x1-30 pr-x1-30">
+<div class="box box-xs mb-15 pt-20 pb-20 pl-15 pr-15 pl-x1-30 pr-x1-30">
   <div class="col-container-nowrap">
     <div class="components-checkboxes-switch-col col col-100 text-light text-overflow-ellipsis">Praesent commodo cursus magna, vel scelerisque aenean eu leo quam pellentesque ornare sem lacinia quam.</div>
     <div class="col ml-15">
@@ -203,7 +203,7 @@ Useful when you don't need to draw attention to the bright-red, off state.
     </div>
   </div>
 </div>
-<div class="box-secondary box-xs pt-20 padding-bottom-md pl-15 pr-15 pl-x1-30 pr-x1-30">
+<div class="box-secondary box-xs pt-20 pb-20 pl-15 pr-15 pl-x1-30 pr-x1-30">
   <div class="col-container-nowrap">
     <div class="components-checkboxes-switch-col col col-100 text-light text-overflow-ellipsis">Praesent commodo cursus magna, vel scelerisque aenean eu leo quam pellentesque ornare sem lacinia quam.</div>
     <div class="col ml-15">
@@ -221,7 +221,7 @@ Useful when you don't need to draw attention to the bright-red, off state.
 Useful to communicate that your object is only partially connected, and it needs additional attention.
 {: .section-description }
 
-<div class="box box-xs mb-15 pt-20 padding-bottom-md pl-15 pr-15 pl-x1-30 pr-x1-30">
+<div class="box box-xs mb-15 pt-20 pb-20 pl-15 pr-15 pl-x1-30 pr-x1-30">
   <div class="col-container-nowrap">
     <div class="components-checkboxes-switch-col col col-100 text-light text-overflow-ellipsis">Praesent commodo cursus magna, vel scelerisque aenean eu leo quam pellentesque ornare sem lacinia quam.</div>
     <div class="col ml-15">
@@ -229,7 +229,7 @@ Useful to communicate that your object is only partially connected, and it needs
     </div>
   </div>
 </div>
-<div class="box-secondary box-xs pt-20 padding-bottom-md pl-15 pr-15 pl-x1-30 pr-x1-30">
+<div class="box-secondary box-xs pt-20 pb-20 pl-15 pr-15 pl-x1-30 pr-x1-30">
   <div class="col-container-nowrap">
     <div class="components-checkboxes-switch-col col col-100 text-light text-overflow-ellipsis">Praesent commodo cursus magna, vel scelerisque aenean eu leo quam pellentesque ornare sem lacinia quam.</div>
     <div class="col ml-15">
