@@ -29,6 +29,22 @@ The following icons are the most frequently used in just about any application.
 
 ---
 
+### Status Icons
+The following icons are used primarily in the <a href="{{ site.baseurl }}/components/status">status</a> components.
+{: .section-description }
+
+<ul class="icon-list col-container">
+  {% iconitem :error, class: 'center' %}
+  {% iconitem :fail, class: 'center' %}
+  {% iconitem :idle, class: 'center' %}
+  {% iconitem :running, class: 'center' %}
+  {% iconitem :skipped, class: 'center' %}
+  {% iconitem :success, class: 'center' %}
+  {% iconitem 'waiting', class: 'center' %}
+</ul>
+
+---
+
 ### Brand Icons
 If you need to style several paths inside of the icon, it's important to make sure you use the *injected* version of the icon.
 {: .section-description }
