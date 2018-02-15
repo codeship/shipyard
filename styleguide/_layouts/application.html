@@ -13,9 +13,9 @@ navigation:
     <title>{{ page.title }}</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
     <meta name="theme-color" content="#20a5a8" />
-    {% css fonts media:screen rel:preload async %}
-    {% css syntax media:screen rel:preload async %}
-    {% css application media:screen %}
+    {% asset fonts.css media=screen %}
+    {% asset syntax.css media=screen %}
+    {% asset application.css media=screen %}
   </head>
   <body>
     <header class="header">
@@ -40,6 +40,6 @@ navigation:
     <footer class="align-center text-lightest">
       &copy; Shipyard Framework 2017
     </footer>
-    {% js application %}
+    {% asset application.es6 %}
   </body>
 </html>
