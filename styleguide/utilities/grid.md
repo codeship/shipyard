@@ -2,7 +2,7 @@
 title: Shipyard Grid
 description: The Shipyard grid is a percentage-based, flexbox grid and is entirely responsive. Each class needs the foundational `.col` class in order to function properly, and also should be contained inside the `.col-container` as well.
 sass_file: shipyard/utilities/_grid
-container_classes: col-container margin-top-xs margin-top-x1-sm margin-top-x2-md margin-bottom-xs margin-bottom-x1-sm margin-bottom-x2-md
+container_classes: col-container margin-top-xs margin-top-x1-sm margin-top-x2-md mb-10 mb-x1-15 mb-x2-20
 box_classes: utilities-grid-box col-center box-secondary text-lighter text-sm strong align-center
 example_flex_columns: [10,20,25,33,50]
 example_sizes: [5,10,15,20,25,30,33,35,40,45,50,55,60,65,66,70,75,80,85,90,95,100]
@@ -170,7 +170,7 @@ Nested grids can be tricky to build and somewhat fragile by nature. For the best
     <div class="{{ page.box_classes }}">40</div>
   </div>
   <div class="col col-60">
-    <div class="{{ page.box_classes }} margin-bottom-xs margin-bottom-x1-sm margin-bottom-x2-md">60</div>
+    <div class="{{ page.box_classes }} mb-10 mb-x1-15 mb-x2-20">60</div>
     <div class="col-container">
       <div class="col"><div class="{{ page.box_classes }}">20</div></div>
       <div class="col"><div class="{{ page.box_classes }}">20</div></div>
@@ -207,7 +207,7 @@ Useful when the flow of the content should be different at a certain breakpoint.
       <span class="teal-darker display-inline display-x2-none">top (mobile)</span>
       <span class="teal-darker display-none display-x2-inline">bottom (desktop)</span>
     </div>
-    <div class="col-container margin-top-xs margin-top-x2-sm margin-bottom-xs margin-bottom-x2-sm flex-row flex-x2-row-reverse">
+    <div class="col-container margin-top-xs margin-top-x2-sm mb-10 mb-x2-15 flex-row flex-x2-row-reverse">
       <div class="col">
         <div class="{{ page.box_classes }} bg-blue-lighter">
           <span class="blue-darker display-inline display-x2-none">left (mobile)</span>

@@ -97,7 +97,7 @@ The icon size utility classes can be applied to any icon, and are useful when yo
 One of the most common problems when using an icon is that doesn't line up with the text content next to it. Don't worry though, we've got you covered — simply apply the `.align-middle` class to any icon to fix this issue.
 {: .section-description }
 
-<div class="margin-bottom-lg">
+<div class="mb-30">
   <button class="btn btn-secondary">{% icon :plus, class: 'align-middle icon-sm margin-right-xxs' %} Create</button>
 </div>
 

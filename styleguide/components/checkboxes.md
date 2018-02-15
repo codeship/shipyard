@@ -16,7 +16,7 @@ labels:
 Useful when you want to group a series of checkboxes together on a single line.
 {: .section-description }
 
-<ul class="input-list margin-bottom-lg">
+<ul class="input-list mb-30">
   {% for label in page.labels %}
     <li class="input-item-inline">
       <input id="checkbox-inline-{{ forloop.index }}" name="checkbox-list" type="checkbox" class="input input-checkbox" {% if forloop.index == 1 %}checked{% endif %} />
@@ -40,8 +40,8 @@ Useful when you want to group a series of checkboxes together on a single line.
 Useful when you want to group a series of checkboxes together in a list (stacked by default).
 {: .section-description }
 
-<div class="col-container margin-bottom-sm margin-bottom-x1-lg">
-  <div class="col col-100 col-x1-50 margin-bottom-sm margin-bottom-x1-none">
+<div class="col-container mb-15 mb-x1-30">
+  <div class="col col-100 col-x1-50 mb-15 mb-x1-0">
     <div class="rounded bg-white box-padding">
       <ul class="input-list">
         {% for label in page.labels %}
@@ -131,19 +131,19 @@ Useful when you want to the user to proceed with caution about the choices they'
 ## Checkboxes Nested in Buttons
 {: .m-b-20 }
 
-<button class="btn btn-secondary margin-right-xs margin-bottom-xs">
+<button class="btn btn-secondary margin-right-xs mb-10">
   <input type="checkbox" class="input input-checkbox margin-right-xxs" />
   Unchecked
 </button>
-<button class="btn btn-secondary margin-right-xs margin-bottom-xs">
+<button class="btn btn-secondary margin-right-xs mb-10">
   <input type="checkbox" class="input input-checkbox margin-right-xxs" checked />
   Checked
 </button>
-<button class="btn btn-cta margin-right-xs margin-bottom-xs">
+<button class="btn btn-cta margin-right-xs mb-10">
   <input type="checkbox" class="input input-checkbox input-checkbox-inverse margin-right-xxs" />
   Inverse Unchecked
 </button>
-<button class="btn btn-cta margin-right-xs margin-bottom-xs">
+<button class="btn btn-cta margin-right-xs mb-10">
   <input type="checkbox" class="input input-checkbox input-checkbox-inverse margin-right-xxs" checked />
   Inverse Checked
 </button>
@@ -168,7 +168,7 @@ Useful when you want to the user to proceed with caution about the choices they'
 Switches are useful when the user has a choice to toggle on and off. Note: For the best UX, please make sure that the switch saves immediately each time it changes state.
 {: .section-description }
 
-<div class="box box-xs margin-bottom-sm padding-top-md padding-bottom-md padding-left-sm padding-right-sm padding-left-x1-lg padding-right-x1-lg">
+<div class="box box-xs mb-15 padding-top-md padding-bottom-md padding-left-sm padding-right-sm padding-left-x1-lg padding-right-x1-lg">
   <div class="col-container-nowrap">
     <div class="components-checkboxes-switch-col col col-100 text-light text-overflow-ellipsis">Praesent commodo cursus magna, vel scelerisque aenean eu leo quam pellentesque ornare sem lacinia quam.</div>
     <div class="col margin-left-sm">
@@ -195,7 +195,7 @@ Switches are useful when the user has a choice to toggle on and off. Note: For t
 Useful when you don't need to draw attention to the bright-red, off state.
 {: .section-description }
 
-<div class="box box-xs margin-bottom-sm padding-top-md padding-bottom-md padding-left-sm padding-right-sm padding-left-x1-lg padding-right-x1-lg">
+<div class="box box-xs mb-15 padding-top-md padding-bottom-md padding-left-sm padding-right-sm padding-left-x1-lg padding-right-x1-lg">
   <div class="col-container-nowrap">
     <div class="components-checkboxes-switch-col col col-100 text-light text-overflow-ellipsis">Praesent commodo cursus magna, vel scelerisque aenean eu leo quam pellentesque ornare sem lacinia quam.</div>
     <div class="col margin-left-sm">
@@ -221,7 +221,7 @@ Useful when you don't need to draw attention to the bright-red, off state.
 Useful to communicate that your object is only partially connected, and it needs additional attention.
 {: .section-description }
 
-<div class="box box-xs margin-bottom-sm padding-top-md padding-bottom-md padding-left-sm padding-right-sm padding-left-x1-lg padding-right-x1-lg">
+<div class="box box-xs mb-15 padding-top-md padding-bottom-md padding-left-sm padding-right-sm padding-left-x1-lg padding-right-x1-lg">
   <div class="col-container-nowrap">
     <div class="components-checkboxes-switch-col col col-100 text-light text-overflow-ellipsis">Praesent commodo cursus magna, vel scelerisque aenean eu leo quam pellentesque ornare sem lacinia quam.</div>
     <div class="col margin-left-sm">

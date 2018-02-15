@@ -16,7 +16,7 @@ labels:
 Useful when you want to group a series of radio buttons together on a single line.
 {: .section-description }
 
-<ul class="input-list margin-bottom-lg">
+<ul class="input-list mb-30">
   {% for label in page.labels %}
     <li class="input-item-inline">
       <input id="radio-inline-{{ forloop.index }}" name="radio-list" type="radio" class="input input-radio" {% if forloop.index == 1 %}checked{% endif %} />
@@ -40,8 +40,8 @@ Useful when you want to group a series of radio buttons together on a single lin
 Useful when you want to group a series of radio buttons together in a list (stacked by default).
 {: .section-description }
 
-<div class="col-container margin-bottom-sm margin-bottom-x1-lg">
-  <div class="col col-100 col-x1-50 margin-bottom-sm margin-bottom-x1-none">
+<div class="col-container mb-15 mb-x1-30">
+  <div class="col col-100 col-x1-50 mb-15 mb-x1-0">
     <div class="rounded bg-white box-padding">
       <ul class="input-list">
         {% for label in page.labels %}
@@ -155,27 +155,27 @@ Yep, that's exactly what it sounds like. It behaves like a radio button but look
 ## Radio Buttons Nested in Buttons
 {: .m-b-20 }
 
-<button class="btn btn-secondary margin-right-xs margin-bottom-xs">
+<button class="btn btn-secondary margin-right-xs mb-10">
   <input type="radio" class="input input-radio margin-right-xxs" />
   Unchecked
 </button>
-<button class="btn btn-secondary margin-right-xs margin-bottom-xs">
+<button class="btn btn-secondary margin-right-xs mb-10">
   <input type="radio" class="input input-radio margin-right-xxs" checked />
   Checked
 </button>
-<button class="btn btn-secondary margin-right-xs margin-bottom-xs">
+<button class="btn btn-secondary margin-right-xs mb-10">
   <input type="radio" class="input input-radio-checkbox margin-right-xxs" checked />
   Checked w/ Icon
 </button>
-<button class="btn btn-cta margin-right-xs margin-bottom-xs">
+<button class="btn btn-cta margin-right-xs mb-10">
   <input type="radio" class="input input-radio input-radio-inverse margin-right-xxs" />
   Inverse Unchecked
 </button>
-<button class="btn btn-cta margin-right-xs margin-bottom-xs">
+<button class="btn btn-cta margin-right-xs mb-10">
   <input type="radio" class="input input-radio input-radio-inverse margin-right-xxs" checked />
   Inverse Checked
 </button>
-<button class="btn btn-cta margin-right-xs margin-bottom-xs">
+<button class="btn btn-cta margin-right-xs mb-10">
   <input type="radio" class="input input-radio-checkbox input-radio-inverse margin-right-xs" checked />
   Inverse Checked w/ Icon
 </button>
