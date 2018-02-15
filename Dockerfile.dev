@@ -6,10 +6,7 @@ RUN apt-get update -y && apt-get install -y \
   build-essential
 
 # Copy Everything Else Needed for CI
-COPY ./app ./app
-COPY ./assets ./assets
-COPY ./lib ./lib
-COPY ./styleguide ./styleguide
+COPY . ./
 
 # Shipyard Documentation
 WORKDIR /styleguide/
