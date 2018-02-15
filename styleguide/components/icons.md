@@ -30,7 +30,7 @@ The following icons are the most frequently used in just about any application.
 ---
 
 ### Status Icons
-The following icons are used primarily in the <a href="{{ site.baseurl }}/components/status">status</a> components.
+The following icons are used primarily in the <a href="{{ site.baseurl }}/components/statuses">status component</a>.
 {: .section-description }
 
 <ul class="icon-list col-container">
