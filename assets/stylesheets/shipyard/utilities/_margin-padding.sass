@@ -23,7 +23,7 @@
         &-#{$value}
           #{$property-name}: get-value($value)
 
-    // Outputs: .p-t-0, .p-t-x1-0, .p-t-10, .p-t-x1-10, etc...
+    // Outputs: .pt-0, .pt-x1-0, .pt-10, .pt-x1-10, etc...
     @each $direction-name, $direction-label in (top: t, bottom: b, left: l, right: r)
       &#{$direction-label}
         +all-media-sizes
