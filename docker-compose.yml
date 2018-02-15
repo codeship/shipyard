@@ -5,8 +5,8 @@ test:
 dev:
   build: .
   dockerfile: Dockerfile.dev
-  command: jekyll serve --watch --incremental --baseurl=''
+  command: bundle exec jekyll serve --watch --incremental --baseurl=''
   ports:
     - 4000:4000
   volumes:
-    - .:/styleguide/
+    - .:/styleguide/_site/

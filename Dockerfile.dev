@@ -2,17 +2,28 @@ FROM ruby:2.5
 
 MAINTAINER dev@codeship.com
 
+# Install Dependencies
 RUN apt-get update -y && apt-get install -y \
-  build-essential
+  build-essential \
+  locales \
+  nodejs \
+  bc
 
-# Copy Everything Else Needed for CI
+# Set the locale
+RUN sed -i -e 's/# en_US.UTF-8 UTF-8/en_US.UTF-8 UTF-8/' /etc/locale.gen && \
+    locale-gen
+ENV LANG en_US.UTF-8
+ENV LANGUAGE en_US:en
+ENV LC_ALL en_US.UTF-8
+
+# Copy Everything Needed for CI
 COPY . ./
+
+# Shipyard Gems
+RUN gem install bundler --pre --no-ri --no-rdoc && bundle install --jobs 20 --retry 5
 
 # Shipyard Documentation
 WORKDIR /styleguide/
 RUN gem install bundler --pre --no-ri --no-rdoc && bundle install --jobs 20 --retry 5
+
 EXPOSE 4000
-
-WORKDIR /styleguide/_site/
-
-CMD [ "bundle", "exec", "jekyll", "serve", "--force_polling", "-H", "0.0.0.0", "-P", "4000" ]
