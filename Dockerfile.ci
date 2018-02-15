@@ -5,6 +5,7 @@ MAINTAINER dev@codeship.com
 RUN apt-get update -y && apt-get install -y \
   build-essential \
   openjdk-8-jdk \
+  nodejs \
   bc
 
 # Copy Everything Else Needed for CI
