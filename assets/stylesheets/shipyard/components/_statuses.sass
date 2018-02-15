@@ -97,9 +97,12 @@
       color: #fff
 
   &-inverse
-    color: #fff
     border-color: #fff
-    background-color: #fff
+    &.status-md:not(.status-running)
+      background-color: #fff
+    &.status-lg,
+    &.status-xl
+      color: #fff
 
   &-xs
     +width-height(6px)
