@@ -25,7 +25,7 @@ sizes:
 ---
 
 <div class="box-secondary mb-30">
-  <div class="box box-padding box-link padding-top-md padding-bottom-md" accordion="#accordion-example">
+  <div class="box box-padding box-link pt-20 padding-bottom-md" accordion="#accordion-example">
     Click this box to see an example of the accordion transitions.
   </div>
   <div id="accordion-example" class="accordion accordion-xs accordion-closed box-padding rounded-bottom">

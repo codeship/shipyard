@@ -12,7 +12,7 @@ sass_file: shipyard/utilities/_opacity
 <ul class="col-container strong align-center">
   {% for option in page.options reversed -%}
     <li class="col col-20 mb-15">
-      <div class="bg-gray-dark white rounded-sm padding-xs o-{{ option | opacity_css_class }}">
+      <div class="bg-gray-dark white rounded-sm p-10 o-{{ option | opacity_css_class }}">
         .{{ option | opacity_css_class }}
       </div>
     </li>
