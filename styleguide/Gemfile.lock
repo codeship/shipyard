@@ -125,6 +125,8 @@ GEM
     thread_safe (0.3.6)
     tzinfo (1.2.5)
       thread_safe (~> 0.1)
+    uglifier (3.2.0)
+      execjs (>= 0.3.0, < 3)
 
 PLATFORMS
   ruby
@@ -135,6 +137,7 @@ DEPENDENCIES
   rake
   sassc (~> 1.11.4)
   shipyard-framework!
+  uglifier
 
 BUNDLED WITH
    1.16.1
