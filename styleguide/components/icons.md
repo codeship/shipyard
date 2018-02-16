@@ -29,6 +29,22 @@ The following icons are the most frequently used in just about any application.
 
 ---
 
+### Status Icons
+The following icons are used primarily in the <a href="{{ site.baseurl }}/components/statuses">status component</a>.
+{: .section-description }
+
+<ul class="icon-list col-container">
+  {% iconitem :error, class: 'center' %}
+  {% iconitem :fail, class: 'center' %}
+  {% iconitem :idle, class: 'center' %}
+  {% iconitem :running, class: 'center' %}
+  {% iconitem :skipped, class: 'center' %}
+  {% iconitem :success, class: 'center' %}
+  {% iconitem 'waiting', class: 'center' %}
+</ul>
+
+---
+
 ### Brand Icons
 If you need to style several paths inside of the icon, it's important to make sure you use the *injected* version of the icon.
 {: .section-description }
@@ -97,8 +113,8 @@ The icon size utility classes can be applied to any icon, and are useful when yo
 One of the most common problems when using an icon is that doesn't line up with the text content next to it. Don't worry though, we've got you covered — simply apply the `.align-middle` class to any icon to fix this issue.
 {: .section-description }
 
-<div class="margin-bottom-lg">
-  <button class="btn btn-secondary">{% icon :plus, class: 'align-middle icon-sm margin-right-xxs' %} Create</button>
+<div class="mb-30">
+  <button class="btn btn-secondary">{% icon :plus, class: 'align-middle icon-sm mr-5' %} Create</button>
 </div>
 
 ```erb

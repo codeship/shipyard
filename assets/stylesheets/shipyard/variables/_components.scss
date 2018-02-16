@@ -64,6 +64,13 @@ $component-defaults: (
       color: $yellow-darkest,
       background: $yellow-lighter
     )
+  ),
+  code: (
+    color: $purple-dark,
+    font-size: $font-size-sm,
+    font-family: $font-monospace,
+    background: darken($gray-lightest, 3%),
+    border: 1px solid darken($gray-lighter, 5%)
   )
 ) !default;
 

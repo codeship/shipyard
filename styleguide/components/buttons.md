@@ -11,13 +11,13 @@ sass_file: shipyard/components/_buttons
 Shipyard gives you more buttons than you can shake a stick at.
 {: .section-description }
 
-<div class="margin-bottom-md">
-  {% btn Default, :default, class: 'margin-right-xs' %}
-  {% btn Primary, :primary, class: 'margin-right-xs' %}
-  {% btn Primary Dark, :primary_dark, class: 'margin-right-xs' %}
-  {% btn CTA, :cta, class: 'margin-right-xs' %}
-  {% btn Caution, :caution, class: 'margin-right-xs' %}
-  {% btn Disabled, :disabled, class: 'margin-right-xs' %}
+<div class="mb-20">
+  {% btn Default, :default, class: 'mr-10' %}
+  {% btn Primary, :primary, class: 'mr-10' %}
+  {% btn Primary Dark, :primary_dark, class: 'mr-10' %}
+  {% btn CTA, :cta, class: 'mr-10' %}
+  {% btn Caution, :caution, class: 'mr-10' %}
+  {% btn Disabled, :disabled, class: 'mr-10' %}
   {% btn Link, :link %}
 </div>
 
@@ -37,9 +37,9 @@ Shipyard gives you more buttons than you can shake a stick at.
 Useful when you have a button on a darker background.
 {: .section-description }
 
-<div class="margin-bottom-md">
-  {% btn Secondary, :secondary, class: 'margin-right-xs' %}
-  {% btn Secondary Dark, :secondary_dark, class: 'margin-right-xs' %}
+<div class="mb-20">
+  {% btn Secondary, :secondary, class: 'mr-10' %}
+  {% btn Secondary Dark, :secondary_dark, class: 'mr-10' %}
   {% btn Secondary Link, :secondary_link %}
 </div>
 
@@ -55,8 +55,8 @@ Useful when you have a button on a darker background.
 Useful when you have a button on a darker background.
 {: .section-description }
 
-<div class="box-secondary box-padding bg-gray-dark margin-bottom-md">
-  {% btn Inverse, :inverse, class: 'margin-right-xs' %}
+<div class="box-secondary box-padding bg-gray-dark mb-20">
+  {% btn Inverse, :inverse, class: 'mr-10' %}
   {% btn Inverse Secondary, :inverse_secondary %}
 </div>
 
@@ -71,11 +71,11 @@ Useful when you have a button on a darker background.
 Useful when you want a button with completely rounded corners.
 {: .section-description }
 
-<div class="margin-bottom-md">
-  {% btn Default, :rounded, class: 'margin-right-xs' %}
-  {% btn Primary, :primary :rounded, class: 'margin-right-xs' %}
-  {% btn CTA, :cta :rounded, class: 'margin-right-xs' %}
-  {% btn Caution, :caution :rounded, class: 'margin-right-xs' %}
+<div class="mb-20">
+  {% btn Default, :rounded, class: 'mr-10' %}
+  {% btn Primary, :primary :rounded, class: 'mr-10' %}
+  {% btn CTA, :cta :rounded, class: 'mr-10' %}
+  {% btn Caution, :caution :rounded, class: 'mr-10' %}
   {% btn Secondary, :secondary :rounded %}
 </div>
 
@@ -89,13 +89,13 @@ Useful when you want a button with completely rounded corners.
 Useful when you have a button that triggers an asynchronous action.
 {: .section-description }
 
-<div class="margin-bottom-md">
-  {% btn Default, :loading, class: 'margin-right-xs' %}
-  {% btn Primary, :primary :loading, class: 'margin-right-xs' %}
-  {% btn CTA, :cta :loading, class: 'margin-right-xs' %}
-  {% btn Caution, :caution :loading, class: 'margin-right-xs' %}
-  {% btn Secondary, :secondary :loading, class: 'margin-right-xs' %}
-  {% btn Secondary Link, :secondary_link :loading, class: 'margin-right-xs' %}
+<div class="mb-20">
+  {% btn Default, :loading, class: 'mr-10' %}
+  {% btn Primary, :primary :loading, class: 'mr-10' %}
+  {% btn CTA, :cta :loading, class: 'mr-10' %}
+  {% btn Caution, :caution :loading, class: 'mr-10' %}
+  {% btn Secondary, :secondary :loading, class: 'mr-10' %}
+  {% btn Secondary Link, :secondary_link :loading, class: 'mr-10' %}
 </div>
 
 ```html
@@ -108,7 +108,7 @@ Useful when you have a button that triggers an asynchronous action.
 Often really useful on mobile screens or in combination with other grids.
 {: .section-description }
 
-<div class="margin-bottom-md">
+<div class="mb-20">
   {% btn Save Changes, :full %}
 </div>
 
@@ -122,7 +122,7 @@ Often really useful on mobile screens or in combination with other grids.
 The button classes can be applied to any type of html tag to achieve the desired result. The most common examples being the `button`, `a`, and `input` tags as seen in the example below.
 {: .section-description }
 
-<div class="margin-bottom-lg">
+<div class="mb-30">
   {% btn Button %}
   <a href="#" class="btn">Link</a>
   <input type="button" class="btn" value="Input" />

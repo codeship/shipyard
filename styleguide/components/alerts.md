@@ -27,8 +27,8 @@ Useful when you want to display an alert for a predetermined amount of time.
   <span class="alert-timer alert-timer-on" data-duration="15"></span>
 {% endalert %}
 
-<button class="btn btn-primary margin-right-xs" alert-trigger="#timed-alert-5s">5 Seconds</button>
-<button class="btn btn-primary margin-right-xs" alert-trigger="#timed-alert-10s">10 Seconds</button>
+<button class="btn btn-primary mr-10" alert-trigger="#timed-alert-5s">5 Seconds</button>
+<button class="btn btn-primary mr-10" alert-trigger="#timed-alert-10s">10 Seconds</button>
 <button class="btn btn-primary" alert-trigger="#timed-alert-15s">15 Seconds</button>
 
 ---
