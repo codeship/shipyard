@@ -37,7 +37,7 @@ plugins:
 4. Open [Jenkins](http://localhost:8080/)
 
 ## Running Jekyll Locally via Docker
-1. Install [Homebrew](https://brew.sh/)
+1. Install [Docker for Mac](https://download.docker.com/mac/stable/Docker.dmg)
 2. Run `rake shipyard:install`
 3. Run `rake shipyard:run`
 
