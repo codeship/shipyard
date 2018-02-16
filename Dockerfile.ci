@@ -2,6 +2,9 @@ FROM ruby:2.5
 
 MAINTAINER dev@codeship.com
 
+# Create a Shipyard directory & browse to it
+WORKDIR /shipyard/
+
 # Install Dependencies
 RUN apt-get update -y && \
     apt-get install -y \
@@ -11,22 +14,22 @@ RUN apt-get update -y && \
       nodejs \
       bc
 
-# Set the locale
+# Set the locale.
 RUN sed -i -e 's/# en_US.UTF-8 UTF-8/en_US.UTF-8 UTF-8/' /etc/locale.gen && \
     locale-gen
 ENV LANG en_US.UTF-8
 ENV LANGUAGE en_US:en
 ENV LC_ALL en_US.UTF-8
 
-# Copy Everything
+# Copy everything in the Shipyard directory.
 COPY . ./
 
-# Shipyard Gems
+# Install Shipyard Gems.
 RUN gem install bundler --pre --no-ri --no-rdoc && \
     bundle install --jobs 20 --retry 5
 
-# Shipyard Documentation
-WORKDIR /styleguide/
+# Install Styleguide Gems.
+WORKDIR /shipyard/styleguide/
 RUN gem install bundler --pre --no-ri --no-rdoc && \
     bundle install --jobs 20 --retry 5
-WORKDIR /
+WORKDIR /shipyard/
