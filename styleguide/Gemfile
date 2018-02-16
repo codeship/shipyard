@@ -7,4 +7,5 @@ group :jekyll_plugins do
   gem 'rake' # Needed for Codeship to install the sassc gem
   gem 'sassc', '~> 1.11.4'
   gem 'uglifier'
+  gem 'html-proofer'
 end

@@ -14,17 +14,17 @@ Useful when you want to display an alert for a predetermined amount of time.
 
 {% alert :success, :dismissible, id: 'timed-alert-5s', class: 'alert-closed' %}
   Pack your bags! You'll be on the next flight to Hawaii.
-  <div class="alert-timer alert-timer-on" data-duration="5"></div>
+  <span class="alert-timer alert-timer-on" data-duration="5"></span>
 {% endalert %}
 
 {% alert :success, :dismissible, id: 'timed-alert-10s', class: 'alert-closed' %}
   Pack your bags! You'll be on the next flight to Tahiti.
-  <div class="alert-timer alert-timer-on" data-duration="10"></div>
+  <span class="alert-timer alert-timer-on" data-duration="10"></span>
 {% endalert %}
 
 {% alert :success, :dismissible, id: 'timed-alert-15s', class: 'alert-closed' %}
   Pack your bags! You'll be on the next flight to Corsica.
-  <div class="alert-timer alert-timer-on" data-duration="15"></div>
+  <span class="alert-timer alert-timer-on" data-duration="15"></span>
 {% endalert %}
 
 <button class="btn btn-primary margin-right-xs" alert-trigger="#timed-alert-5s">5 Seconds</button>

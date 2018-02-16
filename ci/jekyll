@@ -13,4 +13,4 @@ cd ../
 pwd
 
 echo -e "\n\n************** HTML Proofer **************"
-htmlproofer ./styleguide/_site --disable-external --allow-hash-href --assume-extension --log-level :debug
+htmlproofer ./styleguide/_site --disable-external --allow-hash-href --assume-extension --log-level :debug --check-html true
