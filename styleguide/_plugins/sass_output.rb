@@ -10,9 +10,10 @@ module Jekyll
       }
       output = sass['compressed_css']
       output.gsub! /}/, " }\n"
-      output.gsub! /([a-z]),/, "\\1,\n"
+      output.gsub! /([a-z]),/, "\\1,\n\\2"
+      output.gsub! /\),./, "),\n." # Matches :not(...),.class
       output.gsub! /{/, ' { '
-      output.gsub! /([a-z]):([^:])/, '\1: \2'
+      output.gsub! /([a-z]):([^:|not])/, '\1: \2'
       output.gsub! /;/, '; '
       output.gsub! /\n\z/, ''
       output
