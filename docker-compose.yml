@@ -1,13 +1,3 @@
-test:
-  build: .
-  dockerfile: Dockerfile.ci
-
 dev:
   build: .
-  dockerfile: Dockerfile.dev
-  command: bundle exec jekyll serve -s /site --watch --incremental --baseurl=''
-  working_dir: /site/
-  ports:
-    - 4000:4000
-  volumes:
-    - .:/site
+  dockerfile: Dockerfile
