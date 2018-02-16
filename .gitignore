@@ -10,3 +10,4 @@
 shipyard-*.gem
 .sass-cache
 .asset-cache
+.jekyll-cache
