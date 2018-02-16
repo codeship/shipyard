@@ -16,7 +16,7 @@ labels:
 Useful when you want to group a series of checkboxes together on a single line.
 {: .section-description }
 
-<ul class="input-list margin-bottom-lg">
+<ul class="input-list mb-30">
   {% for label in page.labels %}
     <li class="input-item-inline">
       <input id="checkbox-inline-{{ forloop.index }}" name="checkbox-list" type="checkbox" class="input input-checkbox" {% if forloop.index == 1 %}checked{% endif %} />
@@ -40,8 +40,8 @@ Useful when you want to group a series of checkboxes together on a single line.
 Useful when you want to group a series of checkboxes together in a list (stacked by default).
 {: .section-description }
 
-<div class="col-container margin-bottom-sm margin-bottom-x1-lg">
-  <div class="col col-100 col-x1-50 margin-bottom-sm margin-bottom-x1-none">
+<div class="col-container mb-15 mb-x1-30">
+  <div class="col col-100 col-x1-50 mb-15 mb-x1-0">
     <div class="rounded bg-white box-padding">
       <ul class="input-list">
         {% for label in page.labels %}
@@ -129,35 +129,35 @@ Useful when you want to the user to proceed with caution about the choices they'
 ---
 
 ## Checkboxes Nested in Buttons
-{: .margin-bottom-md }
+{: .mb-20 }
 
-<button class="btn btn-secondary margin-right-xs margin-bottom-xs">
-  <input type="checkbox" class="input input-checkbox margin-right-xxs" />
+<button class="btn btn-secondary mr-10 mb-10">
+  <input type="checkbox" class="input input-checkbox mr-5" />
   Unchecked
 </button>
-<button class="btn btn-secondary margin-right-xs margin-bottom-xs">
-  <input type="checkbox" class="input input-checkbox margin-right-xxs" checked />
+<button class="btn btn-secondary mr-10 mb-10">
+  <input type="checkbox" class="input input-checkbox mr-5" checked />
   Checked
 </button>
-<button class="btn btn-cta margin-right-xs margin-bottom-xs">
-  <input type="checkbox" class="input input-checkbox input-checkbox-inverse margin-right-xxs" />
+<button class="btn btn-cta mr-10 mb-10">
+  <input type="checkbox" class="input input-checkbox input-checkbox-inverse mr-5" />
   Inverse Unchecked
 </button>
-<button class="btn btn-cta margin-right-xs margin-bottom-xs">
-  <input type="checkbox" class="input input-checkbox input-checkbox-inverse margin-right-xxs" checked />
+<button class="btn btn-cta mr-10 mb-10">
+  <input type="checkbox" class="input input-checkbox input-checkbox-inverse mr-5" checked />
   Inverse Checked
 </button>
 
 ```html
 <!-- Secondary button with a checkbox in the unchecked state. -->
 <button class="btn btn-secondary">
-  <input type="checkbox" class="input input-checkbox margin-right-xxs" />
+  <input type="checkbox" class="input input-checkbox mr-5" />
   Button Text
 </button>
 
 <!-- CTA button with a checkbox in the checked state. -->
 <button class="btn btn-cta">
-  <input type="checkbox" class="input input-checkbox input-checkbox-inverse margin-right-xxs" checked />
+  <input type="checkbox" class="input input-checkbox input-checkbox-inverse mr-5" checked />
   Button Text
 </button>
 ```
@@ -168,18 +168,18 @@ Useful when you want to the user to proceed with caution about the choices they'
 Switches are useful when the user has a choice to toggle on and off. Note: For the best UX, please make sure that the switch saves immediately each time it changes state.
 {: .section-description }
 
-<div class="box box-xs margin-bottom-sm padding-top-md padding-bottom-md padding-left-sm padding-right-sm padding-left-x1-lg padding-right-x1-lg">
+<div class="box box-xs mb-15 pt-20 pb-20 pl-15 pr-15 pl-x1-30 pr-x1-30">
   <div class="col-container-nowrap">
     <div class="components-checkboxes-switch-col col col-100 text-light text-overflow-ellipsis">Praesent commodo cursus magna, vel scelerisque aenean eu leo quam pellentesque ornare sem lacinia quam.</div>
-    <div class="col margin-left-sm">
+    <div class="col ml-15">
       <input type="checkbox" class="input input-switch" checked />
     </div>
   </div>
 </div>
-<div class="box-secondary box-xs padding-top-md padding-bottom-md padding-left-sm padding-right-sm padding-left-x1-lg padding-right-x1-lg">
+<div class="box-secondary box-xs pt-20 pb-20 pl-15 pr-15 pl-x1-30 pr-x1-30">
   <div class="col-container-nowrap">
     <div class="components-checkboxes-switch-col col col-100 text-light text-overflow-ellipsis">Praesent commodo cursus magna, vel scelerisque aenean eu leo quam pellentesque ornare sem lacinia quam.</div>
-    <div class="col margin-left-sm">
+    <div class="col ml-15">
       <input type="checkbox" class="input input-switch" />
     </div>
   </div>
@@ -195,18 +195,18 @@ Switches are useful when the user has a choice to toggle on and off. Note: For t
 Useful when you don't need to draw attention to the bright-red, off state.
 {: .section-description }
 
-<div class="box box-xs margin-bottom-sm padding-top-md padding-bottom-md padding-left-sm padding-right-sm padding-left-x1-lg padding-right-x1-lg">
+<div class="box box-xs mb-15 pt-20 pb-20 pl-15 pr-15 pl-x1-30 pr-x1-30">
   <div class="col-container-nowrap">
     <div class="components-checkboxes-switch-col col col-100 text-light text-overflow-ellipsis">Praesent commodo cursus magna, vel scelerisque aenean eu leo quam pellentesque ornare sem lacinia quam.</div>
-    <div class="col margin-left-sm">
+    <div class="col ml-15">
       <input type="checkbox" class="input input-switch-secondary" checked />
     </div>
   </div>
 </div>
-<div class="box-secondary box-xs padding-top-md padding-bottom-md padding-left-sm padding-right-sm padding-left-x1-lg padding-right-x1-lg">
+<div class="box-secondary box-xs pt-20 pb-20 pl-15 pr-15 pl-x1-30 pr-x1-30">
   <div class="col-container-nowrap">
     <div class="components-checkboxes-switch-col col col-100 text-light text-overflow-ellipsis">Praesent commodo cursus magna, vel scelerisque aenean eu leo quam pellentesque ornare sem lacinia quam.</div>
-    <div class="col margin-left-sm">
+    <div class="col ml-15">
       <input type="checkbox" class="input input-switch-secondary" />
     </div>
   </div>
@@ -221,18 +221,18 @@ Useful when you don't need to draw attention to the bright-red, off state.
 Useful to communicate that your object is only partially connected, and it needs additional attention.
 {: .section-description }
 
-<div class="box box-xs margin-bottom-sm padding-top-md padding-bottom-md padding-left-sm padding-right-sm padding-left-x1-lg padding-right-x1-lg">
+<div class="box box-xs mb-15 pt-20 pb-20 pl-15 pr-15 pl-x1-30 pr-x1-30">
   <div class="col-container-nowrap">
     <div class="components-checkboxes-switch-col col col-100 text-light text-overflow-ellipsis">Praesent commodo cursus magna, vel scelerisque aenean eu leo quam pellentesque ornare sem lacinia quam.</div>
-    <div class="col margin-left-sm">
+    <div class="col ml-15">
       <input type="checkbox" class="input input-switch-secondary input-switch-warning" checked />
     </div>
   </div>
 </div>
-<div class="box-secondary box-xs padding-top-md padding-bottom-md padding-left-sm padding-right-sm padding-left-x1-lg padding-right-x1-lg">
+<div class="box-secondary box-xs pt-20 pb-20 pl-15 pr-15 pl-x1-30 pr-x1-30">
   <div class="col-container-nowrap">
     <div class="components-checkboxes-switch-col col col-100 text-light text-overflow-ellipsis">Praesent commodo cursus magna, vel scelerisque aenean eu leo quam pellentesque ornare sem lacinia quam.</div>
-    <div class="col margin-left-sm">
+    <div class="col ml-15">
       <input type="checkbox" class="input input-switch-secondary input-switch-warning" />
     </div>
   </div>
@@ -250,19 +250,19 @@ Each size can be used or altered at any breakpoint.
 <ul class="input-list">
   <li class="input-item">
     <input id="small-switch-on" type="checkbox" class="input input-switch input-switch-sm align-middle" checked />
-    <label for="small-switch-on" class="text-sm text-light margin-left-xxs medium">Small</label>
+    <label for="small-switch-on" class="text-sm text-light ml-5 medium">Small</label>
   </li>
   <li class="input-item">
     <input id="small-switch-on" type="checkbox" class="input input-switch align-middle" checked />
-    <label for="small-switch-on" class="text-sm text-light margin-left-xxs medium">Medium (Default)</label>
+    <label for="small-switch-on" class="text-sm text-light ml-5 medium">Medium (Default)</label>
   </li>
   <li class="input-item">
     <input id="small-switch-on" type="checkbox" class="input input-switch input-switch-lg align-middle" checked />
-    <label for="small-switch-on" class="text-sm text-light margin-left-xxs medium">Large</label>
+    <label for="small-switch-on" class="text-sm text-light ml-5 medium">Large</label>
   </li>
   <li class="input-item">
     <input id="small-switch-on" type="checkbox" class="input input-switch input-switch-xl align-middle" checked />
-    <label for="small-switch-on" class="text-sm text-light margin-left-xxs medium">X-Large</label>
+    <label for="small-switch-on" class="text-sm text-light ml-5 medium">X-Large</label>
   </li>
 </ul>
 

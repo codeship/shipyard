@@ -75,7 +75,7 @@ Useful when you need to create boxes with fixed heights. Note: The <a href="{{ s
 {: .section-description }
 
 {% for size in page.box_sizes %}
-  <div class="box box-{{ size }} margin-top-md">
+  <div class="box box-{{ size }} mt-20">
     <strong class="center text-lighter text-sm">.box-{{ size }}</strong>
   </div>
 {% endfor %}
@@ -87,7 +87,7 @@ Useful when you need a box with rounded corners.
 {: .section-description }
 
 {% for size in page.box_sizes %}
-  <div class="box box-rounded box-{{ size }} margin-top-md">
+  <div class="box box-rounded box-{{ size }} mt-20">
     <strong class="center text-lighter text-sm">.box-{{ size }}</strong>
   </div>
 {% endfor %}

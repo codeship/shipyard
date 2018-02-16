@@ -11,7 +11,7 @@ sass_file: shipyard/components/_modals
 <div class="col-container-x1-nowrap">
   <div class="col col-100">
     <h3 class="col-100">Building Modals</h3>
-    <p class="text-light margin-bottom-sm">Useful when you need to draw attention to information that requires additional action.</p>
+    <p class="text-light mb-15">Useful when you need to draw attention to information that requires additional action.</p>
   </div>
   <div class="col">
     <button class="btn btn-sm btn-x1-md btn-secondary white-space-nowrap" modal-trigger="example">Demo Modal</button>

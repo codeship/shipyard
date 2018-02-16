@@ -10,16 +10,6 @@ svg, path, circle, polyline
   transform-origin: center center
   +width-height(1em)
 
-  // Icons w/ Margins
-  &-margin-left
-    margin-left: 5px
-  &-margin-left-lg
-    margin-left: 8px
-  &-margin-right
-    margin-right: 5px
-  &-margin-right-lg
-    margin-right: 8px
-
   // Icons w/ Strokes
   &-outline
     stroke: currentColor
@@ -30,6 +20,25 @@ svg, path, circle, polyline
       stroke-linejoin: round
     &-inverse
       stroke: #fff
+
+  // Status Icons
+  &-fail,
+  &-success
+    +width-height(8px)
+  &-error
+    +width-height(2px, 8px)
+  &-waiting
+    +width-height(12px, 2px)
+  &-running
+    +width-height(8px)
+    animation: rotate 1.5s linear 0s infinite
+  &-waiting
+    &-dot-1
+      animation: bounce 5s ease-in-out 0s infinite
+    &-dot-2
+      animation: bounce 5s ease-in-out 100ms infinite
+    &-dot-3
+      animation: bounce 5s ease-in-out 200ms infinite
 
   &-slack,
   &-github,

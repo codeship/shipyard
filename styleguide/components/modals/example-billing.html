@@ -7,7 +7,7 @@ title: Shipyard Modal Example
 <div class="modal-container" modal="example-small">
   <div class="modal modal-sm modal-billing" role="dialog">
     <div class="modal-content">
-      <div class="modal-title-border margin-bottom-md margin-bottom-x1-lg">
+      <div class="modal-title-border mb-20 mb-x1-30">
         <div class="col-container">
           <h1 class="text-lg text-x1-xl col">Payment Period</h1>
           <p class="col text-light medium align-right display-none display-x1-block">
@@ -17,27 +17,27 @@ title: Shipyard Modal Example
           </p>
         </div>
       </div>
-      <button class="btn btn-cta btn-sm btn-x1-md margin-right-xs margin-right-x1-sm margin-bottom-xs margin-bottom-x1-none">
-        <input type="radio" class="input input-radio-checkbox input-radio-inverse margin-right-xs" checked />
+      <button class="btn btn-cta btn-sm btn-x1-md mr-10 mr-x1-15 mb-10 mb-x1-0">
+        <input type="radio" class="input input-radio-checkbox input-radio-inverse mr-10" checked />
         Monthly &mdash; $39
       </button>
       <button class="btn btn-secondary-link btn-sm btn-x1-md">
-        <input type="radio" class="input input-radio-checkbox margin-right-xs" />
+        <input type="radio" class="input input-radio-checkbox mr-10" />
         Yearly &mdash; $390
-        <span class="btn btn-cta btn-rounded btn-xxs margin-left-xs modal-billing-yearly-promo">2 Months Free</span>
+        <span class="btn btn-cta btn-rounded btn-xxs ml-10 modal-billing-yearly-promo">2 Months Free</span>
         {% icon :tag, class: 'icon-inverse' %}
       </button>
-      <p class="text-light margin-top-xs margin-top-x1-sm" markdown="1">
+      <p class="text-light mt-10 mt-x1-15" markdown="1">
         Your new subscription will be prorated on your next invoice. If you have any questions, don't hesitate to <a href="#" class="medium">contact our support team</a>.
       </p>
-      <div class="modal-title-border margin-top-lg margin-bottom-md margin-bottom-x1-lg">
+      <div class="modal-title-border mt-30 mb-20 mb-x1-30">
         <h1 class="text-lg text-x1-xl">Payment Info</h1>
       </div>
       <form>
         <div class="input-required">
           <input type="text" class="input input-text" placeholder="Card Number" />
         </div>
-        <div class="col-container margin-top-md">
+        <div class="col-container mt-20">
           <div class="col col-50 col-x1-33">
             <label class="label">Expiry Date</label>
             <div class="input-required">
@@ -50,7 +50,7 @@ title: Shipyard Modal Example
               <input type="text" class="input input-text" placeholder="3 or 4 digits" />
             </div>
           </div>
-          <div class="col col-100 col-x1-33 margin-top-md margin-top-x1-none margin-bottom-sm margin-bottom-x1-none">
+          <div class="col col-100 col-x1-33 mt-20 mt-x1-0 mb-15 mb-x1-0">
             <label class="label">Zip Code</label>
             <div class="input-required">
               <input type="text" class="input input-text" />
@@ -66,11 +66,11 @@ title: Shipyard Modal Example
             Save
             <span class="display-none display-x1-inline">&amp; Continue</span>
           </button>
-          <button class="btn btn-secondary btn-sm btn-x1-md margin-left-xxs margin-left-x1-xs" modal-close>Cancel</button>
+          <button class="btn btn-secondary btn-sm btn-x1-md ml-5 ml-x1-10" modal-close>Cancel</button>
         </div>
         <div class="col align-right">
-          <span class="btn-sm btn-x1-md white-space-nowrap padding-none">
-            {% icon :lock, class: 'green-dark align-middle margin-right-xxs' %}
+          <span class="btn-sm btn-x1-md white-space-nowrap p-0">
+            {% icon :lock, class: 'green-dark align-middle mr-5' %}
             <span class="text-sm text-lighter medium">Secure Server</span>
           </span>
         </div>
