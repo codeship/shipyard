@@ -3,12 +3,13 @@ FROM ruby:2.5
 MAINTAINER dev@codeship.com
 
 # Install Dependencies
-RUN apt-get update -y && apt-get install -y \
-  build-essential \
-  openjdk-8-jdk \
-  locales \
-  nodejs \
-  bc
+RUN apt-get update -y && \
+    apt-get install -y \
+      build-essential \
+      openjdk-8-jdk \
+      locales \
+      nodejs \
+      bc
 
 # Set the locale
 RUN sed -i -e 's/# en_US.UTF-8 UTF-8/en_US.UTF-8 UTF-8/' /etc/locale.gen && \
@@ -17,13 +18,15 @@ ENV LANG en_US.UTF-8
 ENV LANGUAGE en_US:en
 ENV LC_ALL en_US.UTF-8
 
-# Copy Everything Needed for CI
+# Copy Everything
 COPY . ./
 
-# Shipyard Gems
-RUN gem install bundler --pre --no-ri --no-rdoc && bundle install --jobs 20 --retry 5
+# Install Shipyard Gems
+RUN gem install bundler --pre --no-ri --no-rdoc && \
+  bundle install --jobs 20 --retry 5 --without development
 
-# Shipyard Documentation
+# Install Styleguide Gems
 WORKDIR /styleguide/
-RUN gem install bundler --pre --no-ri --no-rdoc && bundle install --jobs 20 --retry 5
+RUN gem install bundler --pre --no-ri --no-rdoc && \
+  bundle install --jobs 20 --retry 5 --without development
 WORKDIR /
