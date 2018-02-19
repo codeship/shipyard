@@ -1,3 +1,0 @@
-dev:
-  build: .
-  dockerfile: Dockerfile
