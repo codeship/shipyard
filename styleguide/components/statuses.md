@@ -218,7 +218,7 @@ Useful when next to standard text where where it's important to show the status 
 
 ```erb
 {%- for status in page.statuses %}
-<span class="status status-lg status-{{ status }}">
+<span class="status status-inverse status-lg status-{{ status }}">
   <%= icon :{{ status }}, prefix: 'status-lg', class: 'status-icon' %>
 </span>
 {% endfor -%}
