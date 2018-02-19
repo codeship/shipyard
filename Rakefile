@@ -17,6 +17,11 @@ namespace :shipyard do
     sh 'docker build -t codeship/shipyard:latest .'
   end
 
+  desc 'Pushes the latest the image to Docker hub.'
+  task :push do
+    sh 'docker push codeship/shipyard:latest'
+  end
+
   desc 'Runs the Jekyll project locally in a Docker container'
   task :run do
     sh 'docker run -it -p 4000:4000 codeship/shipyard:latest sh -c "jekyll serve"'

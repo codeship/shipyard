@@ -1,5 +1,7 @@
 pipeline {
-  agent { label 'shipyard-docker-agent' }
+  agent {
+    dockerfile { filename './Dockerfile' }
+  }
   stages {
     stage('Test') {
       parallel {
