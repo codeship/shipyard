@@ -25,8 +25,7 @@ namespace :shipyard do
 
   desc 'Runs the Jekyll project locally in a Docker container'
   task :console do
-    sh 'docker run -it codeship/shipyard:latest --rm /bin/bash'
-    # sh 'docker run -it --workdir /shipyard/styleguide --rm -p 4000:4000 -v $(pwd):/shipyard/ shipyard_dev'
+    sh 'docker run -it codeship/shipyard:latest /bin/bash'
   end
 
   desc 'Compiles Shipyard and custom icons into an external svg definitions file.'
