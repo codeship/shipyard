@@ -1,9 +1,6 @@
 pipeline {
   agent {
-    dockerfile {
-      label "docker"
-      filename './Dockerfile'
-    }
+    docker { image 'codeship/shipyard:latest' }
   }
   stages {
     stage('Test') {
