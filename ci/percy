@@ -6,11 +6,11 @@ cd ./styleguide
 pwd
 
 echo -e "\n\n************** Jekyll Build **************"
-JEKYLL_ENV=test jekyll build --baseurl=''
+JEKYLL_ENV=test bundle exec jekyll build --baseurl=''
 
 echo -e "\n\n************** Changed to Root Directory **************"
 cd ../
 pwd
 
 echo -e "\n\n************** Percy Snapshot **************"
-percy snapshot --widths "375,768,1280" styleguide/_site/
+bundle exec percy snapshot --widths "375,768,1280" styleguide/_site/

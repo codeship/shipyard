@@ -12,10 +12,10 @@ echo -e "************** Copy Master Branch **************"
 git clone $repository --branch master --single-branch ci/master-tmp
 
 echo -e "\n\n************** Compile Sass **************"
-sass --no-cache --load-path assets/stylesheets --sourcemap=none --style compact assets/stylesheets/_shipyard.sass ci/master-tmp/branch-compact.css
-sass --no-cache --load-path assets/stylesheets --sourcemap=none --style compressed assets/stylesheets/_shipyard.sass ci/master-tmp/branch-compressed.css
-sass --no-cache --load-path assets/stylesheets --sourcemap=none --style compact ci/master-tmp/assets/stylesheets/_shipyard.sass ci/master-tmp/master-compact.css
-sass --no-cache --load-path assets/stylesheets --sourcemap=none --style compressed ci/master-tmp/assets/stylesheets/_shipyard.sass ci/master-tmp/master-compressed.css
+bundle exec sass --no-cache --load-path assets/stylesheets --sourcemap=none --style compact assets/stylesheets/_shipyard.sass ci/master-tmp/branch-compact.css
+bundle exec sass --no-cache --load-path assets/stylesheets --sourcemap=none --style compressed assets/stylesheets/_shipyard.sass ci/master-tmp/branch-compressed.css
+bundle exec sass --no-cache --load-path assets/stylesheets --sourcemap=none --style compact ci/master-tmp/assets/stylesheets/_shipyard.sass ci/master-tmp/master-compact.css
+bundle exec sass --no-cache --load-path assets/stylesheets --sourcemap=none --style compressed ci/master-tmp/assets/stylesheets/_shipyard.sass ci/master-tmp/master-compressed.css
 gzip -kvf ci/master-tmp/branch-compressed.css
 gzip -kvf ci/master-tmp/master-compressed.css
 

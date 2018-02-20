@@ -43,6 +43,11 @@ namespace :shipyard do
     task :jekyll do
       sh 'docker run -it --workdir /shipyard codeship/shipyard:latest sh -c "./ci/jekyll"'
     end
+
+    desc 'Run Sass tests'
+    task :sass do
+      sh 'docker run -it --workdir /shipyard codeship/shipyard:latest sh -c "./ci/sass_lint"'
+    end
   end
 
   desc 'Compiles Shipyard and custom icons into an external svg definitions file.'
