@@ -16,7 +16,7 @@
 title: Shipyard
 description: A sweet front-end framework for Ruby on Rails and Jekyll.
 baseurl: /
-url: http://localhost:4000/
+url: http://localhost:4000
 # source: ./app
 # destination: ./tmp
 # plugins_dir: ./app/_plugins
