@@ -33,6 +33,18 @@ namespace :shipyard do
     sh 'docker run -it -p 4000:4000 codeship/shipyard:latest /bin/bash'
   end
 
+  namespace :test do
+    desc 'Run RSpec tests'
+    task :rspec do
+      sh 'docker run -it --workdir /shipyard codeship/shipyard:latest sh -c "rspec"'
+    end
+
+    desc 'Run Jekyll tests'
+    task :jekyll do
+      sh 'docker run -it --workdir /shipyard codeship/shipyard:latest sh -c "./ci/jekyll"'
+    end
+  end
+
   desc 'Compiles Shipyard and custom icons into an external svg definitions file.'
   task :icons, [:icon_directory, :output_directory] do |t, args|
     args.with_defaults(:icon_directory => '/app/assets/icons/', :output_directory => '/public/assets/')
