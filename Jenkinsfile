@@ -1,8 +1,8 @@
 pipeline {
   agent {
     dockerfile {
-      label "docker"
-      filename './Dockerfile'
+      image 'codeship/shipyard:latest'
+      label 'docker'
     }
   }
   stages {
@@ -50,7 +50,10 @@ pipeline {
       }
     }
     stage('Review') {
-      input 'Ready to review the styleguide?'
+      input {
+        message 'Ready to review the styleguide?'
+        ok 'Resume'
+      }
       parallel {
         stage('Percy') {
           steps {
@@ -61,7 +64,10 @@ pipeline {
     }
     stage('Deploy') {
       when { branch 'master' }
-      input 'Deploy to Production?'
+      input {
+        message 'Deploy to Production?'
+        ok 'Resume'
+      }
       parallel {
         stage('RubyGems') {
           steps {
