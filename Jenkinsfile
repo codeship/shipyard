@@ -31,7 +31,7 @@ pipeline {
       }
       steps {
         input 'Ready to review the styleguide?'
-        echo 'This step only runs in Codeship builds (https://app.codeship.com/projects/246808) where the data is sent directly to Percy (https://percy.io/codeship-inc/shipyard).'
+        sh './ci/percy'
       }
     }
     stage('Deploy') {
