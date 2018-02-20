@@ -35,4 +35,3 @@ RUN gem install bundler --pre --no-ri --no-rdoc && \
 
 # Serve the site
 EXPOSE 4000
-# CMD ["bundle", "exec", "jekyll", "serve", "-H", "0.0.0.0", "--watch", "--incremental"]
