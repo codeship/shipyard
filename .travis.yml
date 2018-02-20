@@ -13,7 +13,7 @@ jobs:
   include:
   # - script: "./ci/jekyll"
   - script: "./ci/sass_lint"
-  - script: bundle exec rspec
+  - script: bundle exec rspec -fd
   - stage: Deploy
     script: skip
     deploy:

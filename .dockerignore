@@ -1,0 +1,17 @@
+# SCM
+.git*
+
+# OS
+.DS_Store
+
+# Not needed during the build
+_site
+.editorconfig
+.sass-cache
+CODE_OF_CONDUCT.md
+deployment.env*
+dockercfg*
+Dockerfile*
+LICENSE.txt
+README.md
+tmp

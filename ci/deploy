@@ -11,7 +11,7 @@ fi
 
 echo -e "\n\n************** Jekyll Build **************"
 cd styleguide
-JEKYLL_ENV=production bundle exec jekyll build --verbose
+JEKYLL_ENV=production bundle exec jekyll build --verbose --baseurl='/shipyard'
 
 echo -e "\n\n************** Commit & Push to GitHub Pages **************"
 cd _site

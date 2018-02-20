@@ -1,9 +1,11 @@
 source 'https://rubygems.org'
 
 group :jekyll_plugins do
-  gem 'jekyll', '~> 3.6.0'
-  gem 'jekyll-assets', '~> 2.3.2'
+  gem 'jekyll', '~> 3.7.2'
+  gem 'jekyll-assets', '~> 3.0.7'
   gem 'shipyard-framework', path: '../'
   gem 'rake' # Needed for Codeship to install the sassc gem
   gem 'sassc', '~> 1.11.4'
+  gem 'uglifier'
+  gem 'html-proofer'
 end

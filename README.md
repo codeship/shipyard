@@ -30,6 +30,16 @@ plugins:
   - shipyard-framework
 ```
 
+## Running Builds on Jenkins
+1. Install [Homebrew](https://brew.sh/)
+2. Run `brew bundle`
+3. Run `jenkins`
+4. Open [Jenkins](http://localhost:8080/)
+
+## Running Jekyll Locally via Docker
+1. Install [Docker for Mac](https://download.docker.com/mac/stable/Docker.dmg)
+2. Run `rake shipyard:run`
+
 ## Status
 [![Gem Version](https://badge.fury.io/rb/shipyard-framework.svg)](https://badge.fury.io/rb/shipyard-framework)
 [![Codeship Status for codeship/shipyard](https://app.codeship.com/projects/30419df0-80ff-0135-f7fb-06994b6b032d/status?branch=master)](https://app.codeship.com/projects/246808)
