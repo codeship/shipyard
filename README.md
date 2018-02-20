@@ -38,8 +38,7 @@ plugins:
 
 ## Running Jekyll Locally via Docker
 1. Install [Docker for Mac](https://download.docker.com/mac/stable/Docker.dmg)
-2. Run `rake shipyard:install`
-3. Run `rake shipyard:run`
+2. Run `rake shipyard:run`
 
 ## Status
 [![Gem Version](https://badge.fury.io/rb/shipyard-framework.svg)](https://badge.fury.io/rb/shipyard-framework)
