@@ -64,18 +64,22 @@ pipeline {
     }
     stage('Deploy') {
       when { branch 'master' }
-      input {
-        message 'Deploy to Production?'
-        ok 'Resume'
-      }
       parallel {
         stage('RubyGems') {
           steps {
+            input {
+              message 'Deploy to RubyGems?'
+              ok 'Resume'
+            }
             echo 'This step only runs in Travis CI builds at the moment: https://travis-ci.org/codeship/shipyard'
           }
         }
         stage('GitHub Pages') {
           steps {
+            input {
+              message 'Deploy to GitHub Pages?'
+              ok 'Resume'
+            }
             echo 'This step only runs in Codeship builds at the moment: https://app.codeship.com/projects/246808'
           }
         }
