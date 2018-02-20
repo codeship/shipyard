@@ -1,7 +1,7 @@
 pipeline {
   agent {
     dockerfile {
-      label "docker"
+      label 'docker'
       filename './Dockerfile'
     }
   }
@@ -23,11 +23,15 @@ pipeline {
             sh './ci/sass_lint'
           }
         }
-        stage('Percy') {
-          steps {
-            echo 'This step only runs in Codeship builds (https://app.codeship.com/projects/246808) where the data is sent directly to Percy (https://percy.io/codeship-inc/shipyard).'
-          }
-        }
+      }
+    }
+    stage('Review') {
+      when {
+        not { branch 'master' }
+      }
+      steps {
+        input 'Ready to review the styleguide?'
+        sh './ci/percy'
       }
     }
     stage('Deploy') {
@@ -35,11 +39,13 @@ pipeline {
       parallel {
         stage('RubyGems') {
           steps {
+            input 'Deploy to RubyGems?'
             echo 'This step only runs in Travis CI builds at the moment: https://travis-ci.org/codeship/shipyard'
           }
         }
         stage('GitHub Pages') {
           steps {
+            input 'Deploy to GitHub Pages?'
             echo 'This step only runs in Codeship builds at the moment: https://app.codeship.com/projects/246808'
           }
         }
