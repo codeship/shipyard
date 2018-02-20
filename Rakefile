@@ -29,23 +29,28 @@ namespace :shipyard do
 
   desc 'Runs the Jekyll project locally in a Docker container'
   task :console do
-    sh 'docker run -it -p 4000:4000 codeship/shipyard:latest /bin/bash'
+    sh 'docker run -it -p 4000:4000 -v $(pwd):/shipyard/ codeship/shipyard:latest /bin/bash'
   end
 
   namespace :test do
     desc 'Run RSpec tests'
     task :rspec do
-      sh 'docker run -it --workdir /shipyard codeship/shipyard:latest sh -c "rspec"'
+      sh 'docker run -it --workdir /shipyard -v $(pwd):/shipyard/ codeship/shipyard:latest sh -c "rspec"'
     end
 
     desc 'Run Jekyll tests'
     task :jekyll do
-      sh 'docker run -it --workdir /shipyard codeship/shipyard:latest sh -c "./ci/jekyll"'
+      sh 'docker run -it --workdir /shipyard -v $(pwd):/shipyard/ codeship/shipyard:latest sh -c "./ci/jekyll"'
+    end
+
+    desc 'Run Percy tests'
+    task :percy do
+      sh 'docker run -it --workdir /shipyard -v $(pwd):/shipyard/ codeship/shipyard:latest sh -c "./ci/percy"'
     end
 
     desc 'Run Sass tests'
     task :sass do
-      sh 'docker run -it --workdir /shipyard codeship/shipyard:latest sh -c "./ci/sass_lint"'
+      sh 'docker run -it --workdir /shipyard -v $(pwd):/shipyard/ codeship/shipyard:latest sh -c "./ci/sass_lint"'
     end
   end
 
