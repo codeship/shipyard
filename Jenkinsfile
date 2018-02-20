@@ -53,10 +53,7 @@ pipeline {
       parallel {
         stage('Percy') {
           steps {
-            input {
-              message 'Ready to review the styleguide?'
-              ok 'Resume'
-            }
+            input 'Ready to review the styleguide?'
             echo 'This step only runs in Codeship builds (https://app.codeship.com/projects/246808) where the data is sent directly to Percy (https://percy.io/codeship-inc/shipyard).'
           }
         }
@@ -67,19 +64,13 @@ pipeline {
       parallel {
         stage('RubyGems') {
           steps {
-            input {
-              message 'Deploy to RubyGems?'
-              ok 'Resume'
-            }
+            input 'Deploy to RubyGems?'
             echo 'This step only runs in Travis CI builds at the moment: https://travis-ci.org/codeship/shipyard'
           }
         }
         stage('GitHub Pages') {
           steps {
-            input {
-              message 'Deploy to GitHub Pages?'
-              ok 'Resume'
-            }
+            input 'Deploy to GitHub Pages?'
             echo 'This step only runs in Codeship builds at the moment: https://app.codeship.com/projects/246808'
           }
         }
