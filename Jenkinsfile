@@ -52,11 +52,11 @@ pipeline {
     stage('Review') {
       parallel {
         stage('Percy') {
-          input {
-            message 'Ready to review the styleguide?'
-            ok 'Resume'
-          }
           steps {
+            input {
+              message 'Ready to review the styleguide?'
+              ok 'Resume'
+            }
             echo 'This step only runs in Codeship builds (https://app.codeship.com/projects/246808) where the data is sent directly to Percy (https://percy.io/codeship-inc/shipyard).'
           }
         }
