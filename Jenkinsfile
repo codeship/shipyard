@@ -39,13 +39,11 @@ pipeline {
       parallel {
         stage('RubyGems') {
           steps {
-            input 'Deploy to RubyGems?'
             echo 'This step only runs in Travis CI builds at the moment: https://travis-ci.org/codeship/shipyard'
           }
         }
         stage('GitHub Pages') {
           steps {
-            input 'Deploy to GitHub Pages?'
             echo 'This step only runs in Codeship builds at the moment: https://app.codeship.com/projects/246808'
           }
         }
