@@ -24,7 +24,7 @@ namespace :shipyard do
 
   desc 'Runs the Jekyll project locally in a Docker container'
   task :run do
-    sh 'docker run -it -p 4000:4000 -v $(pwd):/shipyard/ codeship/shipyard:latest sh -c "jekyll serve -H 0.0.0.0 --watch --incremental"'
+    sh %(docker run -it -p 4000:4000 -v $(pwd):/shipyard/ codeship/shipyard:latest sh -c "jekyll serve -H 0.0.0.0 --watch --incremental --baseurl=''")
   end
 
   desc 'Runs the Jekyll project locally in a Docker container'
