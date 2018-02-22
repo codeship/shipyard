@@ -1,6 +1,7 @@
 +component('tooltip')
   color: #fff
   width: auto
+  z-index: 50
   padding: 10px 15px
   border-radius: 5px
   line-height: 1.5
@@ -49,19 +50,21 @@
     transform-origin: center center
     border: 4px solid transparent
   &-top::before
-    left: 50%
     top: 100%
+    left: 50%
+    margin: -4px 0 0 -4px
     border-radius: 0 0 3px 0
-    border-right-color: $red
-    border-bottom-color: $red
-    transform: rotate(45deg) translate(-1px, -50%)
+    border-right-color: $gray-darker
+    border-bottom-color: $gray-darker
+    transform: rotate(45deg)
   &-bottom::before
     left: 50%
     bottom: 100%
+    margin: 0 0 -4px -4px
     border-radius: 3px 0 0 0
-    border-top-color: $red
-    border-left-color: $red
-    transform: rotate(45deg) translate(0px, 50%)
+    border-top-color: $gray-darker
+    border-left-color: $gray-darker
+    transform: rotate(45deg)
 
 
   // &::before
