@@ -107,8 +107,8 @@
       .tooltip-parent:hover &
         +extend('#{$direction}-active')
 
-  // Tooltip: CTA
-  &-cta
+  // Data Tooltip
+  &-data
     &::before
       opacity: 0
       visibility: hidden
@@ -123,13 +123,13 @@
       text-align: center
       font-weight: $bold
       white-space: nowrap
-      content: attr(tooltip)
+      content: attr(data-tooltip)
       font-size: $font-size-xxs
     &:hover::after,
     &:hover::before
       +extend('active')
 
-    // Tooltip: CTA Directions
+    // Data Tooltip: Directions
     @each $direction in (top, bottom, left, right)
       &-#{$direction}
         &::before

@@ -9,19 +9,19 @@ directions: [top, bottom, right, left]
 
 ---
 
-## Small, Inline Tooltips
+## Data Tooltips
 Useful when you need tooltips with content that's a bit more complex than your average tooltip.
 {: .section-description }
 
 <div class="align-center mb-30">
   {% for direction in page.directions %}
-    <button class="btn btn-secondary btn-margin tooltip-cta tooltip-cta-{{ direction }}" tooltip="What a lovely tooltip">{{ direction | capitalize }}</button>
+    <button class="btn btn-secondary btn-margin tooltip-data tooltip-data-{{ direction }}" data-tooltip="What a lovely tooltip">{{ direction | capitalize }}</button>
   {% endfor %}
 </div>
 
 ```html
 {% for direction in page.directions -%}
-<button class="tooltip-cta tooltip-cta-{{ direction }}" tooltip="What a lovely tooltip">{{ direction | capitalize }}</button>
+<button class="tooltip-data tooltip-data-{{ direction }}" data-tooltip="What a lovely tooltip">{{ direction | capitalize }}</button>
 {% endfor -%}
 ```
 
