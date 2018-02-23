@@ -2,7 +2,7 @@
 title: Shipyard Tooltips
 description: Tooltips are used primarily by setting the tooltip attribute on any element (e.g. `tooltip="..."`).
 sass_file: shipyard/components/_tooltips
-directions: [top, bottom, left, right]
+directions: [top, bottom, right, left]
 ---
 
 {% include page-heading.html page=page %}
@@ -23,7 +23,7 @@ directions: [top, bottom, left, right]
 Useful when you need tooltips with content that's a bit more complex than your average tooltip.
 {: .section-description }
 
-<div class="align-center">
+<div class="align-center mb-30">
   {% for direction in page.directions %}
     <button class="btn btn-secondary btn-margin tooltip-parent">
       {{ direction | capitalize }}
@@ -34,6 +34,18 @@ Useful when you need tooltips with content that's a bit more complex than your a
     </button>
   {% endfor %}
 </div>
+
+```html
+{%- for direction in page.directions %}
+<!-- Tooltip ({{ direction | capitalize }}) -->
+<button class="tooltip-parent">
+  Call to Action
+  <div class="tooltip tooltip-{{ direction }}">
+    <!-- Tooltip Content -->
+  </div>
+</button>
+{% endfor -%}
+```
 
 ---
 
