@@ -14,7 +14,7 @@
   background: $gray-darker
   opacity: 0
   visibility: hidden
-  transition: opacity 300ms ease 300ms, transform 300ms ease 300ms, visibility 0ms ease 500ms
+  transition: opacity 300ms ease 300ms, transform 300ms ease 300ms, visibility 0ms ease 300ms
   .tooltip-parent:hover &
     opacity: 1
     visibility: visible
@@ -28,19 +28,27 @@
   &-top
     left: 50%
     bottom: 100%
-    transform: translate(-50%, -8px)
+    transform: translate(-50%, 0)
+    .tooltip-parent:hover &
+      transform: translate(-50%, -12px)
   &-bottom
     left: 50%
     top: 100%
-    transform: translate(-50%, 8px)
+    transform: translate(-50%, 0)
+    .tooltip-parent:hover &
+      transform: translate(-50%, 12px)
   &-left
     top: 50%
     right: 100%
-    transform: translate(-8px, -50%)
+    transform: translate(0, -50%)
+    .tooltip-parent:hover &
+      transform: translate(-12px, -50%)
   &-right
     top: 50%
     left: 100%
-    transform: translate(8px, -50%)
+    transform: translate(0, -50%)
+    .tooltip-parent:hover &
+      transform: translate(12px, -50%)
 
   // Tooltip: Arrow
   &::before
