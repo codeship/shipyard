@@ -12,8 +12,8 @@
   font-size: $font-size
   font-weight: $normal
   background: $gray-darker
-  opacity: 0
-  visibility: hidden
+  // opacity: 0
+  // visibility: hidden
   transition: opacity 300ms ease 300ms, transform 300ms ease 300ms, visibility 0ms ease 300ms
   &-active
     opacity: 1
@@ -62,25 +62,25 @@
     border: 4px solid transparent
     &-top
       left: 50%
-      margin: -4px 0 0 -4px
+      margin-left: -4px
       border-radius: 0 0 3px 0
       border-right-color: $red
       border-bottom-color: $red
     &-bottom
       left: 50%
-      margin: 0 0 -4px -4px
+      margin-left: -4px
       border-radius: 3px 0 0 0
       border-top-color: $red
       border-left-color: $red
     &-left
       top: 50%
-      margin: -4px 0 0 -4px
+      margin-top: -4px
       border-radius: 0 3px 0 0
       border-top-color: $red
       border-right-color: $red
     &-right
       top: 50%
-      margin: -4px -4px 0 0
+      margin-top: -4px
       border-radius: 0 0 0 3px
       border-left-color: $red
       border-bottom-color: $red
@@ -94,6 +94,7 @@
         +extend('arrow')
         +extend('arrow-#{$direction}')
         #{$direction}: 100%
+        margin-#{$direction}: -4px
 
       // Custom Tooltip Hover States
       .tooltip-parent:hover &
@@ -103,6 +104,10 @@
   &-cta
     &::after
       +extend
+      font-size: $font-size-xs
+      min-width: 120px
+      text-align: center
+      font-weight: $bold
       content: attr(tooltip)
     &:hover::after,
     &:hover::before
@@ -113,8 +118,9 @@
       &-#{$direction}
         &::before
           +extend('arrow')
-          +extend("#{$direction}-arrow")
+          +extend('arrow-#{$direction}')
           #{opposite-direction($direction)}: 100%
+          margin-#{opposite-direction($direction)}: -4px
         &::after
           +extend($direction)
         &:hover::after
