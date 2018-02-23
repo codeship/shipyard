@@ -25,12 +25,12 @@ pipeline {
         }
       }
     }
+    input 'Ready to review the styleguide?'
     stage('Review') {
       when {
         not { branch 'master' }
       }
       steps {
-        input 'Ready to review the styleguide?'
         sh './ci/percy'
       }
     }
