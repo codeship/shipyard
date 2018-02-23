@@ -30,7 +30,9 @@ pipeline {
         not { branch 'master' }
       }
       steps {
-        input 'Ready to review the styleguide?'
+        timeout(time: 10, unit: 'MINUTES') {
+          input 'Ready to review the styleguide?'
+        }        
         sh './ci/percy'
       }
     }
