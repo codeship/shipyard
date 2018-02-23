@@ -87,18 +87,19 @@
 
   // Custom Tooltips
   @each $direction in (top, bottom, left, right)
+    &-#{$direction}
 
-    // Custom Tooltip Arrows
-    &-#{$direction}::before
-      +extend('arrow')
-      +extend('arrow-#{$direction}')
-      #{$direction}: 100%
+      // Custom Tooltip Arrows
+      &::before
+        +extend('arrow')
+        +extend('arrow-#{$direction}')
+        #{$direction}: 100%
 
-    // Custom Tooltip Hover States
-    .tooltip-parent:hover &
-      +extend('#{$direction}-active')
+      // Custom Tooltip Hover States
+      .tooltip-parent:hover &
+        +extend('#{$direction}-active')
 
-  // CTA Tooltips
+  // Tooltip: CTA
   &-cta
     &::after
       +extend
@@ -118,26 +119,3 @@
           +extend($direction)
         &:hover::after
           +extend("#{$direction}-active")
-
-
-
-
-
-
-
-
-  // &::before
-  //   left: 50%
-  //   // opacity: 0
-  //   // visibility: hidden
-  //   transition: opacity 300ms ease 300ms, transform 300ms ease 300ms, visibility 0ms ease 500ms
-
-  // &:hover::after,
-  // &:hover::before
-  //   opacity: 1
-  //   transition-delay: 500ms
-  //   +respond-to(visibility, (x1: visible))
-  // &:hover::after
-  //   transform: translate(-50%, 0)
-  // &:hover::before
-  //   transform: rotate(45deg) translate(-5px, 0)
