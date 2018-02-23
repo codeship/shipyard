@@ -2,18 +2,18 @@
   color: #fff
   width: auto
   z-index: 50
-  padding: 10px 15px
-  border-radius: 5px
+  opacity: 0
   line-height: 1.5
   min-width: 220px
   max-width: 400px
   text-align: left
+  visibility: hidden
   position: absolute
+  padding: 10px 15px
+  border-radius: 5px
   font-size: $font-size
   font-weight: $normal
   background: $gray-darker
-  opacity: 0
-  visibility: hidden
   transition: opacity 300ms ease 300ms, transform 300ms ease 300ms, visibility 0ms ease 300ms
   &-active
     opacity: 1
@@ -115,14 +115,16 @@
       transition: opacity 300ms ease 300ms, transform 300ms ease 300ms, visibility 0ms ease 300ms
     &::after
       +extend
-      font-size: $font-size-xxs
-      min-width: 120px
+      width: auto
+      min-width: auto
+      max-width: auto
       padding: 5px 10px
+      border-radius: 3px
       text-align: center
       font-weight: $bold
       white-space: nowrap
       content: attr(tooltip)
-      border-radius: 3px
+      font-size: $font-size-xxs
     &:hover::after,
     &:hover::before
       +extend('active')
