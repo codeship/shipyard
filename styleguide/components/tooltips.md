@@ -20,6 +20,8 @@ directions: [top, bottom, left, right]
 ---
 
 ## Custom Tooltips
+Useful when you need tooltips with content that's a bit more complex than your average tooltip.
+{: .section-description }
 
 <div class="align-center">
   {% for direction in page.directions %}
