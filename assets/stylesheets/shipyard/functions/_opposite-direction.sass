@@ -1,0 +1,9 @@
+@function opposite-direction($direction)
+  @if $direction == top
+    @return bottom
+  @else if $direction == bottom
+    @return top
+  @else if $direction == left
+    @return right
+  @else if $direction == right
+    @return left

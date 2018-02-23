@@ -9,13 +9,21 @@ directions: [top, bottom, right, left]
 
 ---
 
-<div class="align-center">
-  {% btn Default Tooltip, :secondary :margin, tooltip: 'What a lovely tooltip' %}
-  {% btn Top, :secondary :margin, tooltip: 'What a lovely tooltip' %}
-  {% btn Bottom, :secondary :margin, tooltip: 'What a lovely tooltip' %}
-  {% btn Left, :secondary :margin, tooltip: 'What a lovely tooltip' %}
-  {% btn Right, :secondary :margin, tooltip: 'What a lovely tooltip' %}
+## Basic Tooltips
+Useful when you need tooltips with content that's a bit more complex than your average tooltip.
+{: .section-description }
+
+<div class="align-center mb-30">
+  {% for direction in page.directions %}
+    <button class="btn btn-secondary btn-margin tooltip-cta tooltip-cta-{{ direction }}" tooltip="What a lovely tooltip">{{ direction | capitalize }}</button>
+  {% endfor %}
 </div>
+
+```html
+{% for direction in page.directions -%}
+<button class="tooltip-cta tooltip-cta-{{ direction }}" tooltip="What a lovely tooltip">{{ direction | capitalize }}</button>
+{% endfor -%}
+```
 
 ---
 
@@ -40,9 +48,7 @@ Useful when you need tooltips with content that's a bit more complex than your a
 <!-- Tooltip ({{ direction | capitalize }}) -->
 <button class="tooltip-parent">
   Call to Action
-  <div class="tooltip tooltip-{{ direction }}">
-    <!-- Tooltip Content -->
-  </div>
+  <div class="tooltip tooltip-{{ direction }}"><!-- Tooltip Content --></div>
 </button>
 {% endfor -%}
 ```
