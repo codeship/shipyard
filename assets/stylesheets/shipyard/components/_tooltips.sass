@@ -12,8 +12,8 @@
   font-size: $font-size
   font-weight: $normal
   background: $gray-darker
-  // opacity: 0
-  // visibility: hidden
+  opacity: 0
+  visibility: hidden
   transition: opacity 300ms ease 300ms, transform 300ms ease 300ms, visibility 0ms ease 300ms
   &-active
     opacity: 1
@@ -64,26 +64,34 @@
       left: 50%
       margin-left: -4px
       border-radius: 0 0 3px 0
-      border-right-color: $red
-      border-bottom-color: $red
+      border-right-color: $gray-darker
+      border-bottom-color: $gray-darker
+      &-active
+        transform: rotate(45deg) translate(-8.7px, -8.7px)
     &-bottom
       left: 50%
       margin-left: -4px
       border-radius: 3px 0 0 0
-      border-top-color: $red
-      border-left-color: $red
+      border-top-color: $gray-darker
+      border-left-color: $gray-darker
+      &-active
+        transform: rotate(45deg) translate(8.7px, 8.7px)
     &-left
       top: 50%
       margin-top: -4px
       border-radius: 0 3px 0 0
-      border-top-color: $red
-      border-right-color: $red
+      border-top-color: $gray-darker
+      border-right-color: $gray-darker
+      &-active
+        transform: rotate(45deg) translate(-8.7px, 8.7px)
     &-right
       top: 50%
       margin-top: -4px
       border-radius: 0 0 0 3px
-      border-left-color: $red
-      border-bottom-color: $red
+      border-left-color: $gray-darker
+      border-bottom-color: $gray-darker
+      &-active
+        transform: rotate(45deg) translate(8.7px, -8.7px)
 
   // Custom Tooltips
   @each $direction in (top, bottom, left, right)
@@ -93,8 +101,7 @@
       &::before
         +extend('arrow')
         +extend('arrow-#{$direction}')
-        #{$direction}: 100%
-        margin-#{$direction}: -4px
+        #{opposite-direction($direction)}: -4px
 
       // Custom Tooltip Hover States
       .tooltip-parent:hover &
@@ -102,13 +109,20 @@
 
   // Tooltip: CTA
   &-cta
+    &::before
+      opacity: 0
+      visibility: hidden
+      transition: opacity 300ms ease 300ms, transform 300ms ease 300ms, visibility 0ms ease 300ms
     &::after
       +extend
-      font-size: $font-size-xs
+      font-size: $font-size-xxs
       min-width: 120px
+      padding: 5px 10px
       text-align: center
       font-weight: $bold
+      white-space: nowrap
       content: attr(tooltip)
+      border-radius: 3px
     &:hover::after,
     &:hover::before
       +extend('active')
@@ -119,9 +133,10 @@
         &::before
           +extend('arrow')
           +extend('arrow-#{$direction}')
-          #{opposite-direction($direction)}: 100%
-          margin-#{opposite-direction($direction)}: -4px
+          #{$direction}: -4px
         &::after
           +extend($direction)
         &:hover::after
           +extend("#{$direction}-active")
+        &:hover::before
+          +extend("arrow-#{$direction}-active")
