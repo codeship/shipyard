@@ -26,21 +26,23 @@ pipeline {
       }
     }
     stage('Review') {
-      stage('Compare with Master') {
-        when {
-          not { branch 'master' }
-        }
-        steps {
-          timeout(time: 10, unit: 'MINUTES') {
-            input 'Ready to review the styleguide?'
+      parallel {
+        stage('Compare with Master') {
+          when {
+            not { branch 'master' }
           }
-          sh './ci/percy'
+          steps {
+            timeout(time: 10, unit: 'MINUTES') {
+              input 'Ready to review the styleguide?'
+            }
+            sh './ci/percy'
+          }
         }
-      }
-      stage('Update Master') {
-        when { branch 'master' }
-        steps {
-          sh './ci/percy'
+        stage('Update Master') {
+          when { branch 'master' }
+          steps {
+            sh './ci/percy'
+          }
         }
       }
     }
