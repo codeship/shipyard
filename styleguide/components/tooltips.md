@@ -27,7 +27,7 @@ Useful when you need tooltips with content that's a bit more complex than your a
 
 ---
 
-## Large, Custom Tooltips
+## Custom Tooltips
 Useful when you need tooltips with content that's a bit more complex than your average tooltip.
 {: .section-description }
 
