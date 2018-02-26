@@ -79,4 +79,14 @@ Useful when you have a horizontal rule on a lighter background.
 
 ---
 
+## CSS Output
+Here's the raw CSS output if you'd like a peak under the hood.
+{: .section-description }
+
+```css
+{% sass_output -%}
+```
+
+---
+
 {% include css-stats.html %}
