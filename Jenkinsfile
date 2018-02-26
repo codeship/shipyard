@@ -32,13 +32,18 @@ pipeline {
       steps {
         timeout(time: 10, unit: 'MINUTES') {
           input 'Ready to review the styleguide?'
-        }        
+        }
         sh './ci/percy'
       }
     }
     stage('Deploy') {
       when { branch 'master' }
       parallel {
+        stage('Update Percy') {
+          steps {
+            sh './ci/percy'
+          }
+        }
         stage('RubyGems') {
           steps {
             echo 'This step only runs in Travis CI builds at the moment: https://travis-ci.org/codeship/shipyard'

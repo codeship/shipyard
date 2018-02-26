@@ -9,11 +9,13 @@ module Jekyll
         s['file'].include? context['page']['sass_file']
       }
       output = sass['compressed_css']
-      output.gsub! /}/, " }\n"
-      output.gsub! /([a-z]),/, "\\1,\n\\2"
-      output.gsub! /\),./, "),\n." # Matches :not(...),.class
       output.gsub! /{/, ' { '
-      output.gsub! /([a-z]):([^:|not])/, '\1: \2'
+      output.gsub! /}([^}])/, " }\n\\1" # Match closing brackets
+      output.gsub! /@media(.*)\) { /, "@media\\1) {\n" # Match @media opening brackets
+      output.gsub! /} }/, " }\n}" # Match @media closing brackets
+      output.gsub! /([a-z0-9]*),\./, "\\1,\n." # Match each declaration
+      output.gsub! /\),./, "),\n." # Match :not(...),.class
+      output.gsub! /([a-z]):(?!:|not|hover)/, '\1: \2' # Match CSS properties
       output.gsub! /;/, '; '
       output.gsub! /\n\z/, ''
       output
