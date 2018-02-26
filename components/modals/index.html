@@ -4,9 +4,9 @@
     <title>Shipyard Modals</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
     <meta name="theme-color" content="#20a5a8" />
-    <link media="screen" rel="stylesheet" type="text/css" href="/shipyard/assets/fonts-ca42f2a84b2649c9fcccd16cc51fb6d1f915ba2a0988d30b91c3b84d8722b369.css" integrity="sha256-ykLyqEsmScn8zNFsxR+20fkVuioJiNMLkcO4TYcis2k=" crossorigin="anonymous">
-    <link media="screen" rel="stylesheet" type="text/css" href="/shipyard/assets/syntax-40266bdc7fd995b8cddaeedab3817d78fcc5aed189b1d6a23a6827b437b71488.css" integrity="sha256-QCZr3H/ZlbjN2u7as4F9ePzFrtGJsdaiOmgntDe3FIg=" crossorigin="anonymous">
-    <link media="screen" rel="stylesheet" type="text/css" href="/shipyard/assets/application-c0f3dbd6d0a17cba9cd8152952b5a85649fe3286db0ea473b87ac0ce8c17afb4.css" integrity="sha256-wPPb1tChfLqc2BUpUrWoVkn+MobbDqRzuHrAzowXr7Q=" crossorigin="anonymous">
+    <link media="screen" rel="stylesheet" type="text/css" integrity="sha256-ykLyqEsmScn8zNFsxR+20fkVuioJiNMLkcO4TYcis2k=" crossorigin="anonymous" href="/shipyard/assets/fonts-ca42f2a84b2649c9fcccd16cc51fb6d1f915ba2a0988d30b91c3b84d8722b369.css">
+    <link media="screen" rel="stylesheet" type="text/css" integrity="sha256-QCZr3H/ZlbjN2u7as4F9ePzFrtGJsdaiOmgntDe3FIg=" crossorigin="anonymous" href="/shipyard/assets/syntax-40266bdc7fd995b8cddaeedab3817d78fcc5aed189b1d6a23a6827b437b71488.css">
+    <link media="screen" rel="stylesheet" type="text/css" integrity="sha256-xp5AzxPWqsOWyVhkReAgYsJY2bkzD40BaDSaPWxqUXE=" crossorigin="anonymous" href="/shipyard/assets/application-c69e40cf13d6aac396c9586445e02062c258d9b9330f8d0168349a3d6c6a5171.css">
   </head>
   <body>
     <header class="header">
@@ -65,6 +65,34 @@
     <span class="nt">&lt;/div&gt;</span>
   <span class="nt">&lt;/div&gt;</span>
 <span class="nt">&lt;/div&gt;</span>
+</code></pre></div></div>
+
+<hr />
+
+<h2 id="css-output">CSS Output</h2>
+<p class="section-description">Here’s the raw CSS output if you’d like a peak under the hood.</p>
+
+<div class="language-css highlighter-rouge"><div class="highlight"><pre class="code-block"><code><span class="nc">.modal</span> <span class="p">{</span> <span class="nl">width</span><span class="p">:</span> <span class="m">100%</span><span class="p">;</span> <span class="nl">max-width</span><span class="p">:</span> <span class="m">800px</span><span class="p">;</span> <span class="nl">margin</span><span class="p">:</span> <span class="nb">auto</span> <span class="p">}</span>
+<span class="nc">.modal-sm</span> <span class="p">{</span> <span class="nl">max-width</span><span class="p">:</span> <span class="m">660px</span> <span class="p">}</span>
+<span class="nc">.modal-open</span> <span class="p">{</span> <span class="nl">overflow</span><span class="p">:</span> <span class="nb">hidden</span> <span class="p">}</span>
+<span class="nc">.modal-container</span> <span class="p">{</span> <span class="nl">z-index</span><span class="p">:</span> <span class="m">200</span><span class="p">;</span> <span class="nl">top</span><span class="p">:</span> <span class="m">0</span><span class="p">;</span> <span class="nl">left</span><span class="p">:</span> <span class="m">0</span><span class="p">;</span> <span class="nl">right</span><span class="p">:</span> <span class="m">0</span><span class="p">;</span> <span class="nl">bottom</span><span class="p">:</span> <span class="m">0</span><span class="p">;</span> <span class="nl">padding</span><span class="p">:</span> <span class="m">10px</span><span class="p">;</span> <span class="nl">overflow</span><span class="p">:</span> <span class="nb">auto</span><span class="p">;</span> <span class="nl">position</span><span class="p">:</span> <span class="nb">fixed</span><span class="p">;</span> <span class="nl">background</span><span class="p">:</span> <span class="n">rgba</span><span class="p">(</span><span class="m">30</span><span class="p">,</span><span class="m">37</span><span class="p">,</span><span class="m">44</span><span class="p">,</span><span class="m">0.9</span><span class="p">);</span> <span class="nl">transition</span><span class="p">:</span> <span class="m">300ms</span> <span class="n">padding</span> <span class="n">ease</span><span class="p">;</span> <span class="nl">-webkit-overflow-scrolling</span><span class="p">:</span> <span class="n">touch</span> <span class="p">}</span>
+<span class="nc">.modal-content</span> <span class="p">{</span> <span class="nl">background</span><span class="p">:</span> <span class="m">#fff</span><span class="p">;</span> <span class="nl">border-radius</span><span class="p">:</span> <span class="m">5px</span> <span class="m">5px</span> <span class="m">0</span> <span class="m">0</span><span class="p">;</span> <span class="nl">padding</span><span class="p">:</span> <span class="m">15px</span> <span class="p">}</span>
+<span class="k">@media</span> <span class="n">screen</span> <span class="n">and</span> <span class="p">(</span><span class="n">min-width</span><span class="p">:</span>  <span class="m">770px</span><span class="p">)</span> <span class="p">{</span>
+<span class="nc">.modal-content</span> <span class="p">{</span> <span class="nl">padding</span><span class="p">:</span> <span class="m">20px</span> <span class="p">}</span>
+<span class="p">}</span>
+<span class="k">@media</span> <span class="n">screen</span> <span class="n">and</span> <span class="p">(</span><span class="n">min-width</span><span class="p">:</span>  <span class="m">920px</span><span class="p">)</span> <span class="p">{</span>
+<span class="nc">.modal-content</span> <span class="p">{</span> <span class="nl">padding</span><span class="p">:</span> <span class="m">30px</span> <span class="p">}</span>
+<span class="p">}</span>
+<span class="nc">.modal-title</span><span class="o">,</span>
+<span class="nc">.modal-title-border</span> <span class="p">{</span> <span class="nl">line-height</span><span class="p">:</span> <span class="m">1</span><span class="p">;</span> <span class="nl">margin</span><span class="p">:</span> <span class="m">0</span> <span class="m">0</span> <span class="m">15px</span> <span class="p">}</span>
+<span class="nc">.modal-title-border</span> <span class="p">{</span> <span class="nl">padding</span><span class="p">:</span> <span class="m">0</span> <span class="m">0</span> <span class="m">10px</span><span class="p">;</span> <span class="nl">border-bottom</span><span class="p">:</span> <span class="m">2px</span> <span class="nb">solid</span> <span class="n">rgba</span><span class="p">(</span><span class="m">89</span><span class="p">,</span><span class="m">123</span><span class="p">,</span><span class="m">145</span><span class="p">,</span><span class="m">0.08</span><span class="p">)</span> <span class="p">}</span>
+<span class="nc">.modal-ctas</span> <span class="p">{</span> <span class="nl">background</span><span class="p">:</span> <span class="m">#f2f5f7</span><span class="p">;</span> <span class="nl">border-radius</span><span class="p">:</span> <span class="m">0</span> <span class="m">0</span> <span class="m">5px</span> <span class="m">5px</span><span class="p">;</span> <span class="nl">padding</span><span class="p">:</span> <span class="m">10px</span> <span class="m">15px</span> <span class="p">}</span>
+<span class="k">@media</span> <span class="n">screen</span> <span class="n">and</span> <span class="p">(</span><span class="n">min-width</span><span class="p">:</span>  <span class="m">770px</span><span class="p">)</span> <span class="p">{</span>
+<span class="nc">.modal-ctas</span> <span class="p">{</span> <span class="nl">padding</span><span class="p">:</span> <span class="m">15px</span> <span class="m">20px</span> <span class="p">}</span>
+<span class="p">}</span>
+<span class="k">@media</span> <span class="n">screen</span> <span class="n">and</span> <span class="p">(</span><span class="n">min-width</span><span class="p">:</span>  <span class="m">920px</span><span class="p">)</span> <span class="p">{</span>
+<span class="nc">.modal-ctas</span> <span class="p">{</span> <span class="nl">padding</span><span class="p">:</span> <span class="m">15px</span> <span class="m">30px</span> <span class="p">}</span>
+<span class="p">}</span>
 </code></pre></div></div>
 
 <hr />
