@@ -32,25 +32,25 @@
     bottom: 100%
     transform: translate(-50%, 0)
     &-active
-      transform: translate(-50%, -12px)
+      transform: translate(-50%, -6px)
   &-bottom
     left: 50%
     top: 100%
     transform: translate(-50%, 0)
     &-active
-      transform: translate(-50%, 12px)
+      transform: translate(-50%, 6px)
   &-left
     top: 50%
     right: 100%
     transform: translate(0, -50%)
     &-active
-      transform: translate(-12px, -50%)
+      transform: translate(-6px, -50%)
   &-right
     top: 50%
     left: 100%
     transform: translate(0, -50%)
     &-active
-      transform: translate(12px, -50%)
+      transform: translate(6px, -50%)
 
   // Tooltip: Arrows
   &-arrow
@@ -67,7 +67,7 @@
       border-right-color: $gray-darker
       border-bottom-color: $gray-darker
       &-active
-        transform: rotate(45deg) translate(-8.7px, -8.7px)
+        transform: rotate(45deg) translate(-4.5px, -4.5px)
     &-bottom
       left: 50%
       margin-left: -4px
@@ -75,7 +75,7 @@
       border-top-color: $gray-darker
       border-left-color: $gray-darker
       &-active
-        transform: rotate(45deg) translate(8.7px, 8.7px)
+        transform: rotate(45deg) translate(4.5px, 4.5px)
     &-left
       top: 50%
       margin-top: -4px
@@ -83,7 +83,7 @@
       border-top-color: $gray-darker
       border-right-color: $gray-darker
       &-active
-        transform: rotate(45deg) translate(-8.7px, 8.7px)
+        transform: rotate(45deg) translate(-4.5px, 4.5px)
     &-right
       top: 50%
       margin-top: -4px
@@ -91,7 +91,7 @@
       border-left-color: $gray-darker
       border-bottom-color: $gray-darker
       &-active
-        transform: rotate(45deg) translate(8.7px, -8.7px)
+        transform: rotate(45deg) translate(4.5px, -4.5px)
 
   // Custom Tooltips
   @each $direction in (top, bottom, left, right)
@@ -109,6 +109,7 @@
 
   // Data Tooltip
   &-data
+    +extend('parent')
     &::before
       opacity: 0
       visibility: hidden
