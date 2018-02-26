@@ -37,5 +37,15 @@ sass_file: shipyard/components/_modals
 
 ---
 
+## CSS Output
+Here's the raw CSS output if you'd like a peak under the hood.
+{: .section-description }
+
+```css
+{% sass_output -%}
+```
+
+---
+
 {% include css-stats.html %}
 {% include_relative _modal.html css_class="display-none" %}

@@ -56,6 +56,9 @@ Useful when you need tooltips with content that's a bit more complex than your a
 ---
 
 ## CSS Output
+Here's the raw CSS output if you'd like a peak under the hood.
+{: .section-description }
+
 ```css
 {% sass_output -%}
 ```
