@@ -23,12 +23,6 @@ pipeline {
             sh './ci/sass_lint'
           }
         }
-        stage('Percy') {
-          when { branch 'master' }
-          steps {
-            sh './ci/percy'
-          }
-        }
       }
     }
     stage('Review') {
@@ -45,6 +39,11 @@ pipeline {
     stage('Deploy') {
       when { branch 'master' }
       parallel {
+        stage('Update Percy') {
+          steps {
+            sh './ci/percy'
+          }
+        }
         stage('RubyGems') {
           steps {
             echo 'This step only runs in Travis CI builds at the moment: https://travis-ci.org/codeship/shipyard'
