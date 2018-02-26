@@ -23,25 +23,23 @@ pipeline {
             sh './ci/sass_lint'
           }
         }
+        stage('Percy') {
+          when { branch 'master' }
+          steps {
+            sh './ci/percy'
+          }
+        }
       }
     }
     stage('Review') {
-      stage('Compare with Master') {
-        when {
-          not { branch 'master' }
-        }
-        steps {
-          timeout(time: 10, unit: 'MINUTES') {
-            input 'Ready to review the styleguide?'
-          }
-          sh './ci/percy'
-        }
+      when {
+        not { branch 'master' }
       }
-      stage('Update Master') {
-        when { branch 'master' }
-        steps {
-          sh './ci/percy'
+      steps {
+        timeout(time: 10, unit: 'MINUTES') {
+          input 'Ready to review the styleguide?'
         }
+        sh './ci/percy'
       }
     }
     stage('Deploy') {
