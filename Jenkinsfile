@@ -23,6 +23,12 @@ pipeline {
             sh './ci/sass_lint'
           }
         }
+        stage('Percy') {
+          when { branch 'master' }
+          steps {
+            sh './ci/percy'
+          }
+        }
       }
     }
     stage('Review') {
@@ -32,7 +38,7 @@ pipeline {
       steps {
         timeout(time: 10, unit: 'MINUTES') {
           input 'Ready to review the styleguide?'
-        }        
+        }
         sh './ci/percy'
       }
     }
