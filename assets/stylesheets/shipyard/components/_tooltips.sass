@@ -1,7 +1,7 @@
 +component('tooltip')
-  color: #fff
+  +z-index
+  +border-radius
   width: auto
-  z-index: 50
   opacity: 0
   line-height: 1.5
   min-width: 220px
@@ -9,11 +9,6 @@
   text-align: left
   visibility: hidden
   position: absolute
-  padding: 10px 15px
-  border-radius: 5px
-  font-size: $font-size
-  font-weight: $normal
-  background: $gray-darker
   transition: opacity 300ms ease 300ms, transform 300ms ease 300ms, visibility 0ms ease 300ms
   &-active
     opacity: 1
@@ -32,25 +27,25 @@
     bottom: 100%
     transform: translate(-50%, 0)
     &-active
-      transform: translate(-50%, -12px)
+      transform: translate(-50%, -6px)
   &-bottom
     left: 50%
     top: 100%
     transform: translate(-50%, 0)
     &-active
-      transform: translate(-50%, 12px)
+      transform: translate(-50%, 6px)
   &-left
     top: 50%
     right: 100%
     transform: translate(0, -50%)
     &-active
-      transform: translate(-12px, -50%)
+      transform: translate(-6px, -50%)
   &-right
     top: 50%
     left: 100%
     transform: translate(0, -50%)
     &-active
-      transform: translate(12px, -50%)
+      transform: translate(6px, -50%)
 
   // Tooltip: Arrows
   &-arrow
@@ -60,6 +55,7 @@
     transform: rotate(45deg)
     transform-origin: center center
     border: 4px solid transparent
+    z-index: map-get($z-index, 'tooltip-arrow')
     &-top
       left: 50%
       margin-left: -4px
@@ -67,7 +63,11 @@
       border-right-color: $gray-darker
       border-bottom-color: $gray-darker
       &-active
-        transform: rotate(45deg) translate(-8.7px, -8.7px)
+        transform: rotate(45deg) translate(-4.5px, -4.5px)
+      +prepend-to-root('.tooltip-light')
+        border-right-color: #fff
+        border-bottom-color: #fff
+        box-shadow: 1px 1px 1px rgba($gray-darkest,.05)
     &-bottom
       left: 50%
       margin-left: -4px
@@ -75,7 +75,11 @@
       border-top-color: $gray-darker
       border-left-color: $gray-darker
       &-active
-        transform: rotate(45deg) translate(8.7px, 8.7px)
+        transform: rotate(45deg) translate(4.5px, 4.5px)
+      +prepend-to-root('.tooltip-light')
+        border-top-color: #fff
+        border-left-color: #fff
+        box-shadow: -1px -1px 0 rgba($gray-darkest,.03)
     &-left
       top: 50%
       margin-top: -4px
@@ -83,7 +87,11 @@
       border-top-color: $gray-darker
       border-right-color: $gray-darker
       &-active
-        transform: rotate(45deg) translate(-8.7px, 8.7px)
+        transform: rotate(45deg) translate(-4.5px, 4.5px)
+      +prepend-to-root('.tooltip-light')
+        border-top-color: #fff
+        border-right-color: #fff
+        box-shadow: 1px -1px 1px rgba($gray-darkest,.05)
     &-right
       top: 50%
       margin-top: -4px
@@ -91,7 +99,11 @@
       border-left-color: $gray-darker
       border-bottom-color: $gray-darker
       &-active
-        transform: rotate(45deg) translate(8.7px, -8.7px)
+        transform: rotate(45deg) translate(4.5px, -4.5px)
+      +prepend-to-root('.tooltip-light')
+        border-left-color: #fff
+        border-bottom-color: #fff
+        box-shadow: -1px 1px 1px rgba($gray-darkest,.05)
 
   // Custom Tooltips
   @each $direction in (top, bottom, left, right)
@@ -107,8 +119,16 @@
       .tooltip-parent:hover &
         +extend('#{$direction}-active')
 
+  // Light Tooltips
+  &-light
+    color: $text-color-dark
+    border-color: #fff
+    background-color: #fff
+    +box-shadow
+
   // Data Tooltip
   &-data
+    +extend('parent')
     &::before
       opacity: 0
       visibility: hidden
@@ -116,8 +136,8 @@
     &::after
       +extend
       width: auto
-      min-width: auto
-      max-width: auto
+      min-width: 0
+      max-width: none
       padding: 5px 10px
       border-radius: 3px
       text-align: center
@@ -128,6 +148,10 @@
     &:hover::after,
     &:hover::before
       +extend('active')
+    &-light
+      &::after,
+      &::before
+        +extend('light')
 
     // Data Tooltip: Directions
     @each $direction in (top, bottom, left, right)

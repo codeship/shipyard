@@ -71,6 +71,13 @@ $component-defaults: (
     font-family: $font-monospace,
     background: darken($gray-lightest, 3%),
     border: 1px solid darken($gray-lighter, 5%)
+  ),
+  tooltip: (
+    color: #fff,
+    padding: 10px 15px,
+    font-weight: $normal,
+    font-size: $font-size,
+    background: $gray-darker
   )
 ) !default;
 
