@@ -9,7 +9,7 @@ directions: [top, bottom, right, left]
 
 ---
 
-## Data Tooltips
+## Data Tooltips `.tooltip-data`
 Useful when you need tooltips with content that's a bit more complex than your average tooltip.
 {: .section-description }
 
@@ -27,7 +27,26 @@ Useful when you need tooltips with content that's a bit more complex than your a
 
 ---
 
-## Custom Tooltips
+## Light, Data Tooltips `.tooltip-data.tooltip-data-light`
+Useful when the tooltip you're display will appear on a darker background.
+{: .section-description }
+
+<div class="align-center mb-30">
+  {% for direction in page.directions %}
+    <button class="btn btn-secondary btn-margin tooltip-data tooltip-data-light tooltip-data-{{ direction }}" data-tooltip="What a lovely tooltip">{{ direction | capitalize }}</button>
+  {% endfor %}
+</div>
+
+```html
+<button class="tooltip-parent">
+  Call to Action
+  <div class="tooltip tooltip-light tooltip-{ direction }"><!-- Tooltip Content --></div>
+</button>
+```
+
+---
+
+## Custom Tooltips `.tooltip`
 Useful when you need tooltips with content that's a bit more complex than your average tooltip.
 {: .section-description }
 
@@ -51,6 +70,31 @@ Useful when you need tooltips with content that's a bit more complex than your a
   <div class="tooltip tooltip-{{ direction }}"><!-- Tooltip Content --></div>
 </button>
 {% endfor -%}
+```
+
+---
+
+## Light, Custom Tooltips `.tooltip.tooltip-light`
+Useful when the tooltip you're display will appear on a darker background.
+{: .section-description }
+
+<div class="align-center mb-30">
+  {% for direction in page.directions %}
+    <button class="btn btn-secondary btn-margin tooltip-parent">
+      {{ direction | capitalize }}
+      <div class="tooltip tooltip-light tooltip-{{ direction }}">
+        <h3 class="text-dark text-md mb-5">Tooltip {{ direction | capitalize }}</h3>
+        <p class="text-light text-sm">Donec id elit non mi porta gravida at eget metus. Duis mollis, est non commodo luctus.</p>
+      </div>
+    </button>
+  {% endfor %}
+</div>
+
+```html
+<button class="tooltip-parent">
+  Call to Action
+  <div class="tooltip tooltip-light tooltip-{ direction }"><!-- Tooltip Content --></div>
+</button>
 ```
 
 ---

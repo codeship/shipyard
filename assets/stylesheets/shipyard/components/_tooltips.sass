@@ -63,6 +63,10 @@
       border-bottom-color: $gray-darker
       &-active
         transform: rotate(45deg) translate(-4.5px, -4.5px)
+      +prepend-to-root('.tooltip-light')
+        border-right-color: #fff
+        border-bottom-color: #fff
+        box-shadow: 1px 1px 1px rgba($gray-darkest,.05)
     &-bottom
       left: 50%
       margin-left: -4px
@@ -71,6 +75,10 @@
       border-left-color: $gray-darker
       &-active
         transform: rotate(45deg) translate(4.5px, 4.5px)
+      +prepend-to-root('.tooltip-light')
+        border-top-color: #fff
+        border-left-color: #fff
+        box-shadow: -1px -1px 0 rgba($gray-darkest,.03)
     &-left
       top: 50%
       margin-top: -4px
@@ -79,6 +87,10 @@
       border-right-color: $gray-darker
       &-active
         transform: rotate(45deg) translate(-4.5px, 4.5px)
+      +prepend-to-root('.tooltip-light')
+        border-top-color: #fff
+        border-right-color: #fff
+        box-shadow: 1px -1px 1px rgba($gray-darkest,.05)
     &-right
       top: 50%
       margin-top: -4px
@@ -87,6 +99,10 @@
       border-bottom-color: $gray-darker
       &-active
         transform: rotate(45deg) translate(4.5px, -4.5px)
+      +prepend-to-root('.tooltip-light')
+        border-left-color: #fff
+        border-bottom-color: #fff
+        box-shadow: -1px 1px 1px rgba($gray-darkest,.05)
 
   // Custom Tooltips
   @each $direction in (top, bottom, left, right)
@@ -101,6 +117,13 @@
       // Custom Tooltip Hover States
       .tooltip-parent:hover &
         +extend('#{$direction}-active')
+
+  // Light Tooltips
+  &-light
+    color: $text-color-dark
+    border-color: #fff
+    background-color: #fff
+    +box-shadow
 
   // Data Tooltip
   &-data
@@ -124,6 +147,10 @@
     &:hover::after,
     &:hover::before
       +extend('active')
+    &-light
+      &::after,
+      &::before
+        +extend('light')
 
     // Data Tooltip: Directions
     @each $direction in (top, bottom, left, right)
