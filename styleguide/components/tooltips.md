@@ -38,10 +38,7 @@ Useful when the tooltip you're display will appear on a darker background.
 </div>
 
 ```html
-<button class="tooltip-parent">
-  Call to Action
-  <div class="tooltip tooltip-light tooltip-{ direction }"><!-- Tooltip Content --></div>
-</button>
+<button class="tooltip-data tooltip-data-light tooltip-data-{ direction }" data-tooltip="What a lovely tooltip">CTA</button>
 ```
 
 ---
