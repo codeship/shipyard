@@ -1,6 +1,6 @@
 ---
 title: Shipyard Tooltips
-description: Tooltips are used primarily by setting the tooltip attribute on any element (e.g. `tooltip="..."`).
+description: Add more context to any element your design with a simple tooltip.
 sass_file: shipyard/components/_tooltips
 directions: [top, bottom, right, left]
 ---
