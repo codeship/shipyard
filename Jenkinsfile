@@ -26,12 +26,12 @@ pipeline {
       }
     }
     stage('Review') {
-      steps {
-        if (env.BRANCH_NAME != 'master') {
-          timeout(time: 10, unit: 'MINUTES') {
-            input 'Ready to review the styleguide?'
-          }
+      if (env.BRANCH_NAME != 'master') {
+        timeout(time: 10, unit: 'MINUTES') {
+          input 'Ready to review the styleguide?'
         }
+      }
+      steps {
         sh './ci/percy'
       }
     }
