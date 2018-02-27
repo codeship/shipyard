@@ -1,7 +1,7 @@
 +component('tooltip')
-  color: #fff
+  +z-index
+  +border-radius
   width: auto
-  z-index: 50
   opacity: 0
   line-height: 1.5
   min-width: 220px
@@ -9,11 +9,6 @@
   text-align: left
   visibility: hidden
   position: absolute
-  padding: 10px 15px
-  border-radius: 5px
-  font-size: $font-size
-  font-weight: $normal
-  background: $gray-darker
   transition: opacity 300ms ease 300ms, transform 300ms ease 300ms, visibility 0ms ease 300ms
   &-active
     opacity: 1
@@ -117,8 +112,8 @@
     &::after
       +extend
       width: auto
-      min-width: auto
-      max-width: auto
+      min-width: 0
+      max-width: none
       padding: 5px 10px
       border-radius: 3px
       text-align: center
