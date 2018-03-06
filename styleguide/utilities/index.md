@@ -1,7 +1,7 @@
 ---
 title: Shipyard Utilities
 description: The utility classes below can be applied to any component to override or extend the base styles of the component.
-utilities: [Accordion, Responsive, Grid, Typography, Margin & Padding, Colors, Border Radius, Position, Opacity, Overflow]
+utilities: [Accordion, Cursor, Responsive, Grid, Typography, Margin & Padding, Colors, Border Radius, Position, Opacity, Overflow]
 ---
 
 {% include page-heading.html page=page %}

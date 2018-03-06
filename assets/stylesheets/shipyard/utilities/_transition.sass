@@ -1,0 +1,4 @@
+.ease-all
+  @each $speed in (150ms, 300ms, 600ms)
+    &-#{$speed}
+      transition: all $speed ease
