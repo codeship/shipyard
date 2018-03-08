@@ -19,7 +19,7 @@ sass_file: shipyard/components/_modals
 </div>
 
 ```html
-<div class="modal-container">
+<div class="modal-container z-200">
   <div class="modal" role="dialog">
     <div class="modal-content">
       <div class="modal-title">
