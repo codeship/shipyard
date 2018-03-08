@@ -60,6 +60,16 @@ hr
     flex-grow: 1
     min-height: 30px
 
++component('utilities-z-index')
+  &-list
+    height: 130px
+  &-item
+    +width-height(80px)
+    @for $i from 2 through 6
+      &:nth-child(#{$i})
+        top: ($i - 1) * 10px
+        left: ($i - 1) * 10px
+
 +component('utilities-typography')
   &-hr
     margin: 0 30px
