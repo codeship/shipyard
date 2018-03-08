@@ -1,6 +1,6 @@
 ---
-title: Z-Index Utilities
-description: Shipyard's z-index utilities are useful when you want to adjust the layering priorities of any element. It is common to use this utility in combination with any of the [position utilities](position).
+title: Z-Index
+description: Utilities for controlling the stack order of an element.
 sass_file: shipyard/utilities/_z-index
 options: [0,10,20,30,40,50]
 ---
