@@ -35,6 +35,12 @@ sass_file: shipyard/components/_modals
 </div>
 ```
 
+{% note :warning %}
+  <p markdown="1">
+    By default, modals don't have a `z-index` property applied so it is recommended to use the [z-index utility classes]({{ site.baseurl }}/utilities/z-index) on the `modal-container` element. We've chosen the highest possible value (i.e. `.z-200`) for the purposes of our documentation.
+  </p>
+{% endnote %}
+
 ---
 
 ## CSS Output
