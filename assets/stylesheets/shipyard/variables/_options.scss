@@ -98,7 +98,7 @@ $shipyard-options: (
     x4: 1600px
   ),
 
-  // Shipyard: Margins
+  // Shipyard: Margins (TODO: Deprecate this map)
   margins: (
     x0: 10px,
     x1: 20px,
@@ -106,6 +106,9 @@ $shipyard-options: (
     x3: 30px,
     x4: 40px
   ),
+
+  // Shipyard: Margin & Padding Utilities
+  margin-padding: (0, 5, 10, 15, 20, 30, 40),
 
   // Shipyard: Opacity Utility
   opacity: (
@@ -131,10 +134,17 @@ $shipyard-options: (
     '0': 0
   ),
 
+  // Shipyard: Position Utility
+  position: (static, relative, absolute, fixed),
+
+  // Shipyard: Transition Utility Speeds
+  transition: (150ms, 300ms, 600ms),
+
   // Shipyard: Z-Index Utility
   z-index: (0, 10, 20, 30, 40, 50, 60, 70, 80, 90, 100, 200, auto)
 ) !default;
 
+// TODO: Remove these variables someday in favor of the maps.
 $colors: map-get($shipyard-options, colors);
 $margins: map-get($shipyard-options, margins);
 $breakpoints: map-get($shipyard-options, breakpoints);
