@@ -17,12 +17,6 @@
   @else
     @extend .#{$component} !optional
 
-@mixin z-index($value: null)
-  @if $value
-    z-index: $value
-  @else if $component and map-get($z-index, $component)
-    @extend .z-#{map-get($z-index, $component)} !optional
-
 @mixin component-styles($modifier)
   $component-styles: map-get($components, $component)
   @if $component-styles

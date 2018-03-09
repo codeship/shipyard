@@ -28,7 +28,7 @@
       box-shadow: 0 0 4px 1px rgba(darken($green, 5%),.75)
 
   &-padding
-    +respond-to(padding, $margins)
+    +respond-to(padding, map-get($shipyard-options, margins))
 
   &-rounded
     border-radius: 1000px

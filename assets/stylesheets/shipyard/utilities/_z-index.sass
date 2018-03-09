@@ -1,4 +1,4 @@
 .z
-  @each $value in $z-indexes
+  @each $value in map-get($shipyard-options, z-index)
     &-#{$value}
       z-index: $value

@@ -2,7 +2,6 @@
 title: Z-Index
 description: Utilities for controlling the stack order of an element.
 sass_file: shipyard/utilities/_z-index
-options: [0,10,20,30,40,50]
 ---
 
 {% include page-heading.html page=page %}
