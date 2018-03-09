@@ -1,4 +1,4 @@
 .cursor
-  @each $value in (auto, pointer, default)
+  @each $value in map-get($shipyard-options, cursor)
     &-#{$value}
       cursor: $value
