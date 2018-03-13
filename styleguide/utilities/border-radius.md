@@ -73,7 +73,7 @@ The examples below demonstrate the utility classes at each size.
 
 ---
 
-## Responsive Options `.rounded-{ x1..x4 }-{ direction }`
+## Responsive Options `.{screen}:rounded-{ direction }`
 The examples below demonstrate the utility classes on each breakpoint.
 {: .section-description }
 
@@ -84,7 +84,7 @@ The examples below demonstrate the utility classes on each breakpoint.
 ```
 
 {% for breakpoint in site.data.breakpoints %}
-  <h3 class="text-md text-light mt-30 mb-10">{{ breakpoint.label }}</h3>
+  <h3 class="text-md text-light mt-30 mb-10" markdown="1">{{ breakpoint.label }} `.{{ 'rounded' | component_css_class: breakpoint.modifier }}`</h3>
   <div class="col-container">
     {% for direction in page.directions %}
       <div class="{{ page.col_classes }}">

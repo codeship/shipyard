@@ -3,13 +3,13 @@
   label: All Screens
 -
   modifier: sm
-  label: Small
+  label: Phones
 -
   modifier: md
-  label: Medium
+  label: Tablets
 -
   modifier: lg
-  label: Large
+  label: Laptops
 -
   modifier: xl
-  label: X-Large
+  label: Giant Monitors
