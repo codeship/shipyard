@@ -1,15 +1,11 @@
 module Jekyll
   module ComponentCssClassFilter
     def component_css_class(element, breakpoint, modifier=nil)
-      # puts "-----------"
-      # puts element
-      # puts breakpoint
-      # puts modifier
-      # puts "-----------"
       css = []
-      css << "#{breakpoint}:" if breakpoint
+      css << "#{breakpoint}:" if breakpoint && !modifier.nil?
       css << element
       css << "-#{modifier}" if modifier
+      css << "-#{breakpoint}" if modifier.nil?
       css.join
     end
   end
