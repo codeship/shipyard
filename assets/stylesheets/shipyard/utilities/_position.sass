@@ -1,4 +1,10 @@
+// TODO: Clean this up!
 @each $value in map-get($shipyard-options, position)
   .#{$value}
-    +all-media-sizes
-      position: $value
+    position: $value
+
+@each $breakpoint, $min-width in $breakpoints
+  @media screen and (min-width:#{$min-width})
+    @each $value in map-get($shipyard-options, position)
+      .#{$breakpoint + '\\:' + $value}
+        position: $value
