@@ -92,19 +92,19 @@ $shipyard-options: (
 
   // Shipyard: Breakpoints
   breakpoints: (
-    x1: 770px,
-    x2: 920px,
-    x3: 1200px,
-    x4: 1600px
+    sm: 576px,
+    md: 768px,
+    lg: 992px,
+    xl: 1200px
   ),
 
   // Shipyard: Margins (TODO: Deprecate this map)
   margins: (
-    x0: 10px,
-    x1: 20px,
-    x2: 30px,
-    x3: 30px,
-    x4: 40px
+    all: 10px,
+    sm: 20px,
+    md: 30px,
+    lg: 30px,
+    xl: 40px
   ),
 
   // Shipyard: Margin & Padding Utilities

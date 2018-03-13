@@ -25,13 +25,13 @@
     @if $property-name == margin
       $values: append($values, auto)
 
-    // Outputs: .p-10, .p-x1-10, etc...
+    // Outputs: .p-10, .p-sm-10, etc...
     +all-media-sizes
       @each $value in $values
         &-#{$value}
           #{$property-name}: get-value($value)
 
-    // Outputs: .pt-0, .pt-x1-0, .pt-10, .pt-x1-10, etc...
+    // Outputs: .pt-0, .pt-sm-0, .pt-10, .pt-sm-10, etc...
     @each $direction-name, $direction-label in (top: t, bottom: b, left: l, right: r)
       &#{$direction-label}
         +all-media-sizes

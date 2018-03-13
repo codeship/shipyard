@@ -1,6 +1,5 @@
-+component('rounded')
-  +all-media-sizes
-    +border-radius
+@each $breakpoint, $min-width in $breakpoints
+  .#{$breakpoint + ':rounded'}
     &-0
       border-radius: 0
     &-xs
