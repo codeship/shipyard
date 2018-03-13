@@ -47,6 +47,9 @@ The examples below demonstrate the utility classes at each size.
 
 <div class="col-container">
   <div class="{{ page.col_classes }}">
+    <div class="{{ page.box_classes }} rounded-pill">pill</div>
+  </div>
+  <div class="{{ page.col_classes }}">
     <div class="{{ page.box_classes }} rounded">default</div>
   </div>
   <div class="{{ page.col_classes }}">
@@ -62,6 +65,7 @@ The examples below demonstrate the utility classes at each size.
 
 ```css
 .rounded { border-radius: 5px }
+.rounded-pill { border-radius: 999px }
 .rounded-sm { border-radius: 3px }
 .rounded-xs { border-radius: 2px }
 .rounded-0 { border-radius: 0 }

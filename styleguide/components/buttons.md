@@ -68,19 +68,19 @@ Useful when you have a button on a darker background.
 ---
 
 ## Rounded Buttons
-Useful when you want a button with completely rounded corners.
+Rounded buttons utilize the [border-radius utility](/utilities/border-radius), and are useful when you want a button with completely rounded corners.
 {: .section-description }
 
 <div class="mb-20">
-  {% btn Default, :rounded, class: 'mr-10' %}
-  {% btn Primary, :primary :rounded, class: 'mr-10' %}
-  {% btn CTA, :cta :rounded, class: 'mr-10' %}
-  {% btn Caution, :caution :rounded, class: 'mr-10' %}
-  {% btn Secondary, :secondary :rounded %}
+  {% btn Default, :default, class: 'rounded-pill mr-10' %}
+  {% btn Primary, :primary, class: 'rounded-pill mr-10' %}
+  {% btn CTA, :cta, class: 'rounded-pill mr-10' %}
+  {% btn Caution, :caution, class: 'rounded-pill mr-10' %}
+  {% btn Secondary, :secondary, class: 'rounded-pill' %}
 </div>
 
 ```html
-{% btn Rounded, :rounded %}
+<button class="btn rounded-pill">Rounded</button>
 ```
 
 ---
