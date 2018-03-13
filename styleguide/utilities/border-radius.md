@@ -41,7 +41,7 @@ directions:
 
 ---
 
-## Sizes `.rounded-{ x1..x4 }-{ size }`
+## Sizes `.{ screen }:rounded-{ size }`
 The examples below demonstrate the utility classes at each size.
 {: .section-description }
 
@@ -88,7 +88,7 @@ The examples below demonstrate the utility classes on each breakpoint.
   <div class="col-container">
     {% for direction in page.directions %}
       <div class="{{ page.col_classes }}">
-        <div class="{{ page.box_classes }} {{ 'rounded' | component_css_class: breakpoint.modifier }} {{ 'rounded' | component_css_class: breakpoint.modifier, direction.modifier }}" tooltip="{{ '.rounded' | component_css_class: breakpoint.modifier, direction.modifier }}">
+        <div class="{{ page.box_classes }} tooltip-data tooltip-data-top {{ 'rounded' | component_css_class: breakpoint.modifier }} {{ 'rounded' | component_css_class: breakpoint.modifier, direction.modifier }}" data-tooltip=".{{ 'rounded' | component_css_class: breakpoint.modifier, direction.modifier }}">
           {{ direction.label }}
         </div>
       </div>
