@@ -2,14 +2,14 @@
   modifier: null
   label: All Screens
 -
-  modifier: x1
-  label: Tablets
+  modifier: sm
+  label: Small
 -
-  modifier: x2
-  label: Laptops
+  modifier: md
+  label: Medium
 -
-  modifier: x3
-  label: Large Screens
+  modifier: lg
+  label: Large
 -
-  modifier: x4
-  label: Giant Monitors
+  modifier: xl
+  label: X-Large

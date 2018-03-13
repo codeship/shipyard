@@ -88,7 +88,7 @@ The examples below demonstrate the utility classes on each breakpoint.
   <div class="col-container">
     {% for direction in page.directions %}
       <div class="{{ page.col_classes }}">
-        <div class="{{ page.box_classes }} rounded {{ 'rounded' | component_css_class: breakpoint.modifier, direction.modifier }}" tooltip="{{ '.rounded' | component_css_class: breakpoint.modifier, direction.modifier }}">
+        <div class="{{ page.box_classes }} {{ 'rounded' | component_css_class: breakpoint.modifier }} {{ 'rounded' | component_css_class: breakpoint.modifier, direction.modifier }}" tooltip="{{ '.rounded' | component_css_class: breakpoint.modifier, direction.modifier }}">
           {{ direction.label }}
         </div>
       </div>

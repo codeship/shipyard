@@ -1,0 +1,12 @@
+// Used to define the base component class (e.g. "alert") and save it for use later.
+@mixin utility($name)
+
+  // Print out styles for all screens
+  .#{$name}
+    @content
+
+  // Print out styles for all breakpoints
+  @each $breakpoint, $min-width in $breakpoints
+    @media screen and (min-width:#{$min-width})
+      .#{$breakpoint + '\\:' + $name}
+        @content

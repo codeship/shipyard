@@ -16,6 +16,7 @@ module Jekyll
       output.gsub! /([a-z0-9]*),\./, "\\1,\n." # Match each declaration
       output.gsub! /\),./, "),\n." # Match :not(...),.class
       output.gsub! /([a-z]):(?!:|not|hover)/, '\1: \2' # Match CSS properties
+      output.gsub! /\\:/, ':' # Clean up the responsive classes
       output.gsub! /;/, '; '
       output.gsub! /\n\z/, ''
       output
