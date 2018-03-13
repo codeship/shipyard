@@ -113,6 +113,16 @@ $shipyard-options: (
   // Shipyard: Margin & Padding Utilities
   margin-padding: (0, 5, 10, 15, 20, 30, 40),
 
+  // Shipyard: Border-Radius Utility
+  border-radius: (
+    '': 5px,
+    '0': 0,
+    'xs': 2px,
+    'sm': 3px,
+    'md': 5px,
+    'pill': 999px
+  ),
+
   // Shipyard: Opacity Utility
   opacity: (
     '95': .95,
