@@ -120,6 +120,13 @@ $shipyard-options: (
   //   values: (normal, medium, bold)
   // ),
 
+  // Shipyard: Text-Direction Utilities
+  text-decoration: (
+    prefix: null,
+    responsive: false,
+    values: (line-through)
+  ),
+
   // Shipyard: White-Space Utilities
   white-space: (
     prefix: 'white-space',
