@@ -1,7 +1,7 @@
 ---
 title: Accordions
 description: Useful when you want to open and close large blocks of content in a more elegant way.
-sass_file: shipyard/utilities/_accordion
+sass_file: shipyard/components/_accordion
 sizes:
   -
     name: xs
@@ -38,16 +38,7 @@ sizes:
 </div>
 
 ```css
-/* Accordion base class needed for the transitions to work during the open and closed states. */  
-.accordion { transition: opacity 400ms ease, margin 400ms ease, padding 400ms ease, max-height 400ms ease }
-
-/* Accordion: Open State Sizes */
-{%- for size in page.sizes %}
-.accordion-{{ size.name }} { max-height: {{ size.value }}; }
-{%- endfor %}
-
-/* Accordion: Closed State */
-.accordion-closed { opacity: 0; max-height: 0; overflow: hidden; padding-top: 0; padding-bottom: 0; margin-top: 0; margin-bottom: 0; }
+{% sass_output -%}
 ```
 
 ---
