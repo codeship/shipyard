@@ -109,7 +109,7 @@ $shipyard-options: (
 
   // Shipyard: Margin & Padding Utilities
   cursor: (
-    prefix: 'cursor-',
+    prefix: 'cursor',
     responsive: false,
     values: (auto, pointer, default)
   ),
@@ -119,17 +119,21 @@ $shipyard-options: (
 
   // Shipyard: Border-Radius Utility
   border-radius: (
-    '': 5px,
-    '0': 0,
-    'xs': 2px,
-    'sm': 3px,
-    'md': 5px,
-    'pill': 999px
+    prefix: 'rounded',
+    responsive: true,
+    values: (
+      '': 5px,
+      '0': 0,
+      'xs': 2px,
+      'sm': 3px,
+      'md': 5px,
+      'pill': 999px
+    )
   ),
 
   // Shipyard: Opacity Utility
   opacity: (
-    prefix: 'o-',
+    prefix: 'o',
     responsive: true,
     values: (
       '90': .9,
@@ -147,14 +151,14 @@ $shipyard-options: (
 
   // Shipyard: Position Utility
   position: (
-    prefix: '',
+    prefix: null,
     responsive: false,
     values: (static, relative, absolute, fixed)
   ),
 
   // Shipyard: Transition Utility Speeds
   transition: (
-    prefix: 't-',
+    prefix: 't',
     responsive: false,
     values: (
       '150ms': all 150ms ease,
@@ -165,7 +169,7 @@ $shipyard-options: (
 
   // Shipyard: Z-Index Utility
   z-index: (
-    prefix: 'z-',
+    prefix: 'z',
     responsive: false,
     values: (0, 10, 20, 30, 40, 50, 60, 70, 80, 90, 100, 200, auto)
   )

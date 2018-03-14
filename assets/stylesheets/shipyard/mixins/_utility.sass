@@ -1,3 +1,8 @@
+@function utility-class($prefix, $class)
+  @if $prefix
+    $class: if($class == '', $prefix, "#{$prefix}-#{$class}")
+  @return $class
+
 // Used to define the base component class (e.g. "alert") and save it for use later.
 @mixin utility($name)
 
@@ -20,8 +25,14 @@
   // Print out styles for all screens
   @each $class, $value in $utility-values
     $value: if($value, $value, $class)
-    .#{$prefix + $class}
+    $class: utility-class($prefix, $class)
+    .#{$class}
       #{$name}: $value
+
+  // Print out other utility content
+  @if $prefix
+    .#{$prefix}
+      @content
 
   // Print out styles for all breakpoints
   @if $utility-is-responsive
@@ -29,5 +40,11 @@
       @media screen and (min-width:#{$min-width})
         @each $class, $value in $utility-values
           $value: if($value, $value, $class)
-          .#{$breakpoint + '\\:' + $prefix + $class}
+          $class: utility-class($prefix, $class)
+          .#{$breakpoint + '\\:' + $class}
             #{$name}: $value
+
+        // Print out other utility content
+        @if $prefix
+          .#{$breakpoint + '\\:' + $prefix}
+            @content

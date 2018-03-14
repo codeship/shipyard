@@ -1,13 +1,4 @@
-+utility('rounded')
-
-  // Modifier Classes
-  @each $modifier, $value in map-get($shipyard-options, border-radius)
-    @if $modifier == ''
-      border-radius: $value
-    @else
-      &-#{$modifier}
-        border-radius: $value
-
++utilities(border-radius)
   &-top
     border-bottom-left-radius: 0
     border-bottom-right-radius: 0
