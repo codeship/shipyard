@@ -107,7 +107,14 @@ $shipyard-options: (
     xl: 40px
   ),
 
-  // Shipyard: Margin & Padding Utilities
+  // Shipyard: Grid Utility
+  grid: (
+    prefix: 'col',
+    responsive: true,
+    values: (0, 5, 10, 15, 20, 25, 30, 33, 35, 40, 45, 50, 55, 60, 65, 66, 70, 75, 80, 85, 90, 95, 100)
+  ),
+
+  // Shipyard: Cursor Utility
   cursor: (
     prefix: 'cursor',
     responsive: false,
@@ -117,11 +124,44 @@ $shipyard-options: (
   // Shipyard: Margin & Padding Utilities
   margin-padding: (0, 5, 10, 15, 20, 30, 40),
 
+  // Shipyard: Display Utilities
+  display: (
+    prefix: null,
+    responsive: true,
+    values: (
+      'flex': flex,
+      'block': block,
+      'table': table,
+      'inline': inline,
+      'inline-block': inline-block,
+      'hidden': none
+    )
+  ),
+
+  // Shipyard: Float Utilities
+  float: (
+    prefix: 'float',
+    responsive: true,
+    values: (none, left, right)
+  ),
+
   // Shipyard: Overflow Utility
   overflow: (
     prefix: 'overflow',
     responsive: false,
     values: (auto, hidden, visible)
+  ),
+
+  // Shipyard: Flex Direction Utility
+  flex-direction: (
+    prefix: 'flex',
+    responsive: true,
+    values: (
+      'row': row,
+      'row-reverse': row-reverse,
+      'col': column,
+      'col-reverse': column-reverse
+    )
   ),
 
   // Shipyard: Border-Radius Utility

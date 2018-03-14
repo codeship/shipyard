@@ -1,0 +1,17 @@
+@mixin column-style($property, $width)
+  @if $width == 0 and $property == max-width
+    max-width: none
+  @else if $width == 66
+    #{$property}: 66.6666666666%
+  @else if $width == 33
+    #{$property}: 33.3333333333%
+  @else
+    #{$property}: percentage($width / 100)
+
+@mixin column-sizes
+  @each $width in $widths
+    &-#{$width}
+      +column-style(max-width, $width)
+      +column-style(flex-basis, $width)
+    &-offset-#{$width}
+      +column-style(margin-left, $width)

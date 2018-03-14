@@ -253,4 +253,10 @@ Useful when the flow of the content should be different at a certain breakpoint.
 
 ---
 
+```css
+{% sass_output -%}
+```
+
+---
+
 {% include css-stats.html %}
