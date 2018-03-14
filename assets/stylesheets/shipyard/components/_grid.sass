@@ -28,10 +28,12 @@ $utility: map-get($shipyard-options, $name)
         margin-right: -15px
 
     // Print out styles for all screens
-    @each $class, $value in $utility-values
-      $value: if($value, $value, $class)
-      &-#{$class}
-        #{$name}: $value
+    @each $width in $utility-values
+      &-#{$width}
+        +column-style(max-width, $width)
+        +column-style(flex-basis, $width)
+      &-offset-#{$width}
+        +column-style(margin-left, $width)
 
 //
 // +component('col')
