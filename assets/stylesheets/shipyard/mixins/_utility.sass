@@ -9,14 +9,20 @@
   @if $utility != false
     $prefix: map-get($utility, prefix)
     $utility-values: map-get($utility, values)
+    $utility-variants: map-get($utility, variants)
     $utility-is-responsive: map-get($utility, responsive)
 
     // Print out styles for all screens
     @each $class, $value in $utility-values
       $value: if($value, $value, $class)
-      $class: utility-class($prefix, $class)
-      .#{$class}
+      .#{utility-class($prefix, $class)}
         #{$name}: $value
+
+      // Print out variants like: left, right, top, bottom
+      @if $utility-variants
+        @each $v-class, $v-prop in $utility-variants
+          .#{utility-class($prefix + $v-class, $class)}
+            #{$name}-#{$v-prop}: $value
 
     // Print out other utility content
     @if $prefix
@@ -29,9 +35,14 @@
         @media screen and (min-width:#{$min-width})
           @each $class, $value in $utility-values
             $value: if($value, $value, $class)
-            $class: utility-class($prefix, $class)
-            .#{$breakpoint + '\\:' + $class}
+            .#{$breakpoint + '\\:' + utility-class($prefix, $class)}
               #{$name}: $value
+
+            // Print out variants like: left, right, top, bottom
+            @if $utility-variants
+              @each $v-class, $v-prop in $utility-variants
+                .#{$breakpoint + '\\:' + utility-class($prefix + $v-class, $class)}
+                  #{$name}-#{$v-prop}: $value
 
           // Print out other utility content
           @if $prefix

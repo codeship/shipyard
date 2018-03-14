@@ -45,8 +45,38 @@ $shipyard-options: (
     values: (auto, pointer, default)
   ),
 
-  // Shipyard: Margin & Padding Utilities
-  margin-padding: (0, 5, 10, 15, 20, 30, 40),
+  // Shipyard: Margin Utilities
+  margin: (
+    prefix: 'm',
+    responsive: true,
+    variants: (t: top, b: bottom, l: left, r: right),
+    values: (
+      0: 0,
+      5: 5px,
+      10: 10px,
+      15: 15px,
+      20: 20px,
+      30: 30px,
+      40: 40px,
+      auto: auto
+    )
+  ),
+
+  // Shipyard: Padding Utilities
+  padding: (
+    prefix: 'p',
+    responsive: true,
+    variants: (t: top, b: bottom, l: left, r: right),
+    values: (
+      0: 0,
+      5: 5px,
+      10: 10px,
+      15: 15px,
+      20: 20px,
+      30: 30px,
+      40: 40px
+    )
+  ),
 
   // Shipyard: Display Utilities
   display: (
