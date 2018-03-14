@@ -112,10 +112,10 @@ Useful when you want to build a grid that works for any size of screen.
   {% for i in (1..7) %}
     <div class="col col-100 sm:col-33 md:col-25 lg:col-0">
       <div class="{{ page.box_classes }}">
-        <span class="display-block sm:display-none">100</span>
-        <span class="display-none sm:display-block md:display-none">33</span>
-        <span class="display-none md:display-block lg:display-none">25</span>
-        <span class="display-none lg:display-block">auto</span>
+        <span class="block sm:hidden">100</span>
+        <span class="hidden sm:block md:hidden">33</span>
+        <span class="hidden md:block lg:hidden">25</span>
+        <span class="hidden lg:block">auto</span>
       </div>
     </div>
   {% endfor %}
@@ -166,7 +166,7 @@ Nested grids can be tricky to build and somewhat fragile by nature. For the best
 {: .section-description }
 
 <div class="{{ page.container_classes }}">
-  <div class="col col-40 display-flex">
+  <div class="col col-40 flex">
     <div class="{{ page.box_classes }}">40</div>
   </div>
   <div class="col col-60">
@@ -204,14 +204,14 @@ Useful when the flow of the content should be different at a certain breakpoint.
 <div class="{{ page.container_classes }}">
   <div class="col flex-col md:flex-col-reverse">
     <div class="{{ page.box_classes }} bg-teal-lighter">
-      <span class="teal-darker display-inline md:display-none">top (mobile)</span>
-      <span class="teal-darker display-none md:display-inline">bottom (desktop)</span>
+      <span class="teal-darker inline md:hidden">top (mobile)</span>
+      <span class="teal-darker hidden md:inline">bottom (desktop)</span>
     </div>
     <div class="col-container mt-10 md:mt-15 mb-10 md:mb-15 flex-row md:flex-row-reverse">
       <div class="col">
         <div class="{{ page.box_classes }} bg-blue-lighter">
-          <span class="blue-darker display-inline md:display-none">left (mobile)</span>
-          <span class="blue-darker display-none md:display-inline">right (desktop)</span>
+          <span class="blue-darker inline md:hidden">left (mobile)</span>
+          <span class="blue-darker hidden md:inline">right (desktop)</span>
         </div>
       </div>
       <div class="col">
@@ -221,14 +221,14 @@ Useful when the flow of the content should be different at a certain breakpoint.
       </div>
       <div class="col">
         <div class="{{ page.box_classes }} bg-yellow-lighter">
-          <span class="yellow-darker display-inline md:display-none">right (mobile)</span>
-          <span class="yellow-darker display-none md:display-inline">left (desktop)</span>
+          <span class="yellow-darker inline md:hidden">right (mobile)</span>
+          <span class="yellow-darker hidden md:inline">left (desktop)</span>
         </div>
       </div>
     </div>
     <div class="{{ page.box_classes }} bg-orange-lightest">
-      <span class="orange-darker display-inline md:display-none">bottom (mobile)</span>
-      <span class="orange-darker display-none md:display-inline">top (desktop)</span>
+      <span class="orange-darker inline md:hidden">bottom (mobile)</span>
+      <span class="orange-darker hidden md:inline">top (desktop)</span>
     </div>
   </div>
 </div>
