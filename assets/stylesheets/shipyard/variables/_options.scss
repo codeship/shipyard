@@ -148,13 +148,29 @@ $shipyard-options: (
   ),
 
   // Shipyard: Position Utility
-  position: (static, relative, absolute, fixed),
+  position: (
+    prefix: '',
+    responsive: false,
+    values: (static, relative, absolute, fixed)
+  ),
 
   // Shipyard: Transition Utility Speeds
-  transition: (150ms, 300ms, 600ms),
+  transition: (
+    prefix: 't-',
+    responsive: false,
+    values: (
+      '150ms': all 150ms ease,
+      '300ms': all 300ms ease,
+      '600ms': all 600ms ease
+    )
+  ),
 
   // Shipyard: Z-Index Utility
-  z-index: (0, 10, 20, 30, 40, 50, 60, 70, 80, 90, 100, 200, auto)
+  z-index: (
+    prefix: 'z-',
+    responsive: false,
+    values: (0, 10, 20, 30, 40, 50, 60, 70, 80, 90, 100, 200, auto)
+  )
 ) !default;
 
 // TODO: Remove these variables someday in favor of the maps.

@@ -12,15 +12,22 @@
         @content
 
 @mixin utilities($name)
+  $utility: map-get($shipyard-options, $name)
+  $prefix: map-get($utility, prefix)
+  $utility-values: map-get($utility, values)
+  $utility-is-responsive: map-get($utility, responsive)
 
   // Print out styles for all screens
-  @each $value in map-get($shipyard-options, $name)
-    .#{$value}
+  @each $class, $value in $utility-values
+    $value: if($value, $value, $class)
+    .#{$prefix + $class}
       #{$name}: $value
 
   // Print out styles for all breakpoints
-  @each $breakpoint, $min-width in $breakpoints
-    @media screen and (min-width:#{$min-width})
-      @each $value in map-get($shipyard-options, $name)
-        .#{$breakpoint + '\\:' + $value}
-          #{$name}: $value
+  @if $utility-is-responsive
+    @each $breakpoint, $min-width in $breakpoints
+      @media screen and (min-width:#{$min-width})
+        @each $class, $value in $utility-values
+          $value: if($value, $value, $class)
+          .#{$breakpoint + '\\:' + $prefix + $class}
+            #{$name}: $value
