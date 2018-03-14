@@ -10,3 +10,17 @@
     @media screen and (min-width:#{$min-width})
       .#{$breakpoint + '\\:' + $name}
         @content
+
+@mixin utilities($name)
+
+  // Print out styles for all screens
+  @each $value in map-get($shipyard-options, $name)
+    .#{$value}
+      #{$name}: $value
+
+  // Print out styles for all breakpoints
+  @each $breakpoint, $min-width in $breakpoints
+    @media screen and (min-width:#{$min-width})
+      @each $value in map-get($shipyard-options, $name)
+        .#{$breakpoint + '\\:' + $value}
+          #{$name}: $value
