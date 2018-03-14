@@ -28,8 +28,8 @@ sass_file: shipyard/components/_modals
       <!-- Modal Content -->
     </div>
     <div class="modal-ctas">
-      {% btn Save, :primary %}
-      {% btn Cancel, :secondary %}
+      <button class="btn btn-primary">Save</button>
+      <button class="btn btn-secondary">Cancel</button>
     </div>
   </div>
 </div>

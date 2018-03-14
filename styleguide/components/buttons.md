@@ -12,23 +12,23 @@ Shipyard gives you more buttons than you can shake a stick at.
 {: .section-description }
 
 <div class="mb-20">
-  {% btn Default, :default, class: 'mr-10' %}
-  {% btn Primary, :primary, class: 'mr-10' %}
-  {% btn Primary Dark, :primary_dark, class: 'mr-10' %}
-  {% btn CTA, :cta, class: 'mr-10' %}
-  {% btn Caution, :caution, class: 'mr-10' %}
-  {% btn Disabled, :disabled, class: 'mr-10' %}
-  {% btn Link, :link %}
+  <button class="btn mr-10">Default</button>
+  <button class="btn btn-primary mr-10">Primary</button>
+  <button class="btn btn-primary-dark mr-10">Primary Dark</button>
+  <button class="btn btn-cta mr-10">CTA</button>
+  <button class="btn btn-caution mr-10">Caution</button>
+  <button class="btn btn-disabled mr-10">Disabled</button>
+  <button class="btn btn-link">Link</button>
 </div>
 
 ```html
-{% btn Default %}
-{% btn Primary, :primary %}
-{% btn Primary Dark, :primary_dark %}
-{% btn CTA, :cta %}
-{% btn Caution, :caution %}
-{% btn Disabled, :disabled %}
-{% btn Link, :link %}
+<button class="btn">Default</button>
+<button class="btn btn-primary">Primary</button>
+<button class="btn btn-primary-dark">Primary Dark</button>
+<button class="btn btn-cta">CTA</button>
+<button class="btn btn-caution">Caution</button>
+<button class="btn btn-disabled">Disabled</button>
+<button class="btn btn-link">Link</button>
 ```
 
 ---
@@ -38,15 +38,15 @@ Useful when you have a button on a darker background.
 {: .section-description }
 
 <div class="mb-20">
-  {% btn Secondary, :secondary, class: 'mr-10' %}
-  {% btn Secondary Dark, :secondary_dark, class: 'mr-10' %}
-  {% btn Secondary Link, :secondary_link %}
+  <button class="btn btn-secondary mr-10">Secondary</button>
+  <button class="btn btn-secondary-dark mr-10">Secondary Dark</button>
+  <button class="btn btn-secondary-link">Secondary Link</button>
 </div>
 
 ```html
-{% btn Secondary, :secondary %}
-{% btn Secondary Dark, :secondary_dark %}
-{% btn Secondary Link, :secondary_link %}
+<button class="btn btn-secondary">Secondary</button>
+<button class="btn btn-secondary-dark">Secondary Dark</button>
+<button class="btn btn-secondary-link">Secondary Link</button>
 ```
 
 ---
@@ -56,13 +56,13 @@ Useful when you have a button on a darker background.
 {: .section-description }
 
 <div class="box-secondary box-padding bg-gray-dark mb-20">
-  {% btn Inverse, :inverse, class: 'mr-10' %}
-  {% btn Inverse Secondary, :inverse_secondary %}
+  <button class="btn btn-inverse mr-10">Inverse</button>
+  <button class="btn btn-inverse-secondary">Inverse Secondary</button>
 </div>
 
 ```html
-{% btn Inverse, :inverse %}
-{% btn Inverse Secondary, :inverse_secondary %}
+<button class="btn btn-inverse">Inverse</button>
+<button class="btn btn-inverse-secondary">Inverse Secondary</button>
 ```
 
 ---
@@ -72,11 +72,11 @@ Rounded buttons utilize the [border-radius utility](/utilities/border-radius), a
 {: .section-description }
 
 <div class="mb-20">
-  {% btn Default, :default, class: 'rounded-pill mr-10' %}
-  {% btn Primary, :primary, class: 'rounded-pill mr-10' %}
-  {% btn CTA, :cta, class: 'rounded-pill mr-10' %}
-  {% btn Caution, :caution, class: 'rounded-pill mr-10' %}
-  {% btn Secondary, :secondary, class: 'rounded-pill' %}
+  <button class="btn rounded-pill mr-10">Default</button>
+  <button class="btn btn-primary rounded-pill mr-10">Primary</button>
+  <button class="btn btn-cta rounded-pill mr-10">CTA</button>
+  <button class="btn btn-caution rounded-pill mr-10">Caution</button>
+  <button class="btn btn-secondary rounded-pill">Secondary</button>
 </div>
 
 ```html
@@ -90,16 +90,16 @@ Useful when you have a button that triggers an asynchronous action.
 {: .section-description }
 
 <div class="mb-20">
-  {% btn Default, :loading, class: 'mr-10' %}
-  {% btn Primary, :primary :loading, class: 'mr-10' %}
-  {% btn CTA, :cta :loading, class: 'mr-10' %}
-  {% btn Caution, :caution :loading, class: 'mr-10' %}
-  {% btn Secondary, :secondary :loading, class: 'mr-10' %}
-  {% btn Secondary Link, :secondary_link :loading, class: 'mr-10' %}
+  <button class="btn btn-loading mr-10">Default</button>
+  <button class="btn btn-primary btn-loading mr-10">Primary</button>
+  <button class="btn btn-cta btn-loading mr-10">CTA</button>
+  <button class="btn btn-caution btn-loading mr-10">Caution</button>
+  <button class="btn btn-secondary btn-loading mr-10">Secondary</button>
+  <button class="btn btn-secondary-link btn-loading">Secondary Link</button>
 </div>
 
 ```html
-{% btn Default, :loading %}
+<button class="btn btn-loading">Loading</button>
 ```
 
 ---
@@ -109,11 +109,11 @@ Often really useful on mobile screens or in combination with other grids.
 {: .section-description }
 
 <div class="mb-20">
-  {% btn Save Changes, :full %}
+  <button class="btn btn-full">Save Changes</button>
 </div>
 
 ```html
-{% btn Save Changes, :full %}
+<button class="btn btn-full">Save Changes</button>
 ```
 
 ---
@@ -123,7 +123,7 @@ The button classes can be applied to any type of html tag to achieve the desired
 {: .section-description }
 
 <div class="mb-30">
-  {% btn Button %}
+  <button class="btn">Button</button>
   <a href="#" class="btn">Link</a>
   <input type="button" class="btn" value="Input" />
   <input type="submit" class="btn" value="Submit" />
@@ -131,7 +131,7 @@ The button classes can be applied to any type of html tag to achieve the desired
 </div>
 
 ```html
-{% btn Button %}
+<button class="btn">Button</button>
 <a href="#" class="btn">Link</a>
 <input type="button" class="btn" value="Input" />
 <input type="submit" class="btn" value="Input" />
@@ -141,50 +141,49 @@ The button classes can be applied to any type of html tag to achieve the desired
 ---
 
 ## Button Sizes (default: md)
-
 <div class="box-padding align-center">
-  {% btn XX-Small, :xxs %}
-  {% btn X-Small, :xs %}
-  {% btn Small, :sm %}
-  {% btn Medium, :md %}
-  {% btn Large, :lg %}
-  {% btn X-Large, :xl %}
+  <button class="btn btn-xxs">XX-Small</button>
+  <button class="btn btn-xs">X-Small</button>
+  <button class="btn btn-sm">Small</button>
+  <button class="btn btn-md">Medium</button>
+  <button class="btn btn-lg">Large</button>
+  <button class="btn btn-xl">X-Large</button>
 </div>
 
 ## XX-Small, Responsive Buttons
 <div class="box-padding align-center">
-  {% btn All Screens, :xxs %}
-  {% btn Tablets, :x1_xxs %}
-  {% btn Laptops, :x2_xxs %}
-  {% btn Wide Screens, :x3_xxs %}
-  {% btn Giant Screens, :x4_xxs %}
+  <button class="btn btn-xxs">All Screens</button>
+  <button class="btn sm:btn-xxs">Tablets</button>
+  <button class="btn md:btn-xxs">Laptops</button>
+  <button class="btn lg:btn-xxs">Wide Screens</button>
+  <button class="btn xl:btn-xxs">Giant Screens</button>
 </div>
 
 ## X-Small, Responsive Buttons
 <div class="box-padding align-center">
-  {% btn All Screens, :xs %}
-  {% btn Tablets, :x1_xs %}
-  {% btn Laptops, :x2_xs %}
-  {% btn Wide Screens, :x3_xs %}
-  {% btn Giant Screens, :x4_xs %}
+  <button class="btn btn-xs">All Screens</button>
+  <button class="btn sm:btn-xs">Tablets</button>
+  <button class="btn md:btn-xs">Laptops</button>
+  <button class="btn lg:btn-xs">Wide Screens</button>
+  <button class="btn xl:btn-xs">Giant Screens</button>
 </div>
 
 ## Small, Responsive Buttons
 <div class="box-padding align-center">
-  {% btn All Screens, :sm %}
-  {% btn Tablets, :x1_sm %}
-  {% btn Laptops, :x2_sm %}
-  {% btn Wide Screens, :x3_sm %}
-  {% btn Giant Screens, :x4_sm %}
+  <button class="btn btn-sm">All Screens</button>
+  <button class="btn sm:btn-sm">Tablets</button>
+  <button class="btn md:btn-sm">Laptops</button>
+  <button class="btn lg:btn-sm">Wide Screens</button>
+  <button class="btn xl:btn-sm">Giant Screens</button>
 </div>
 
 ## Medium, Responsive Buttons (Default Size)
 <div class="box-padding align-center">
-  {% btn All Screens %}
-  {% btn Tablets, :sm :x1_md %}
-  {% btn Laptops, :sm :x2_md %}
-  {% btn Wide Screens, :sm :x3_md %}
-  {% btn Giant Screens, :sm :x4_md %}
+  <button class="btn btn-md">All Screens</button>
+  <button class="btn btn-sm sm:btn-md">Tablets</button>
+  <button class="btn btn-sm md:btn-md">Laptops</button>
+  <button class="btn btn-sm lg:btn-md">Wide Screens</button>
+  <button class="btn btn-sm xl:btn-md">Giant Screens</button>
 </div>
 
 ---
