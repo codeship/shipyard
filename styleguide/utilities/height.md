@@ -10,7 +10,7 @@ heights: [50, 60, 70, 80, 90, 100]
 ---
 
 {% for size in page.heights %}
-  <div class="box h-{{ size }} mb-20">
+  <div class="box h-{{ size }} mb-20 relative">
     <strong class="center text-lighter text-sm">.h-{{ size }}</strong>
   </div>
 {% endfor %}
