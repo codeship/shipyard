@@ -1,10 +1,7 @@
 @function color($name, $shade: null)
-  $colors: $colors !global
-  $color: map-get($colors, $name)
+  $shipyard-colors: $shipyard-colors !global
+  $color: map-get($shipyard-colors, $name)
   @if $color
-    @if $shade
-      @return map-get($color, $shade)
-    @else
-      @return map-get($color, base)
+    @return $color
   @else
-    @error "Sorry, but the color `#{$name}` hasn't been defined in the $colors variable."
+    @error "Sorry, but the color `#{$name}` hasn't been defined in the $shipyard-colors variable."

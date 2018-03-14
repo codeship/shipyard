@@ -42,4 +42,10 @@ base_colors: [Black, White]
 
 ---
 
+```css
+{% sass_output -%}
+```
+
+---
+
 {% include css-stats.html %}
