@@ -151,7 +151,7 @@ $shipyard-options: (
   // Shipyard: Opacity Utility
   opacity: (
     prefix: 'o',
-    responsive: true,
+    responsive: false,
     values: (
       '90': .9,
       '80': .8,
