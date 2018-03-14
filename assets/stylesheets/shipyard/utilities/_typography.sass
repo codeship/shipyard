@@ -33,15 +33,6 @@
 .line-through
   text-decoration: line-through
 
-.italic
-  font-style: italic
-
-.align
-  +all-media-sizes
-    @each $value in (center, left, right)
-      &-#{$value}
-        text-align: $value
-
 .text
   &-shadow
     text-shadow: 0 1px 0 rgba(#000,.08)
