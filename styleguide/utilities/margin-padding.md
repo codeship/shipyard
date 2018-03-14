@@ -17,7 +17,7 @@ directions:
 
 ---
 
-### Margin All Sides `.m-{ x1..x4 }-{ 0..40 }`
+### Margin All Sides `.{ screen }-m-{ 0..40 }`
 The examples below demonstrate how much margin will be added to the top and bottom of any element the classes is applied to.
 {: .section-description }
 
@@ -34,7 +34,7 @@ The examples below demonstrate how much margin will be added to the top and bott
 
 ---
 
-### Margin Top & Bottom `.m{ t, b }-{ x1..x4 }-{ 0..40 }`
+### Margin Top & Bottom `.{ screen }-m{ t, b }-{ 0..40 }`
 The examples below demonstrate how much margin will be added to the top and bottom of any element the classes is applied to.
 {: .section-description }
 
@@ -49,7 +49,7 @@ The examples below demonstrate how much margin will be added to the top and bott
 
 ---
 
-### Margin Left & Right `.m{ l, r }-{ x1..x4 }-{ 0..40 }`
+### Margin Left & Right `.{ screen }-m{ l, r }-{ 0..40 }`
 The examples below demonstrate how much margin will be added to the left and right sides of any element the classes is applied to.
 {: .section-description }
 
@@ -67,7 +67,7 @@ The examples below demonstrate how much margin will be added to the left and rig
 
 ---
 
-### Padding All Sides `.p-{ x1..x4 }-{ 0..40 }`
+### Padding All Sides `.{ screen }-p-{ 0..40 }`
 The examples below demonstrate how much padding will be added to the top and bottom of any element the classes is applied to.
 {: .section-description }
 
@@ -81,7 +81,7 @@ The examples below demonstrate how much padding will be added to the top and bot
 
 ---
 
-### Padding Top & Bottom `.p{ t, b }-{ x1..x4 }-{ 0..40 }`
+### Padding Top & Bottom `.{ screen }-p{ t, b }-{ 0..40 }`
 The examples below demonstrate how much padding will be added to the top and bottom of any element the classes is applied to.
 {: .section-description }
 
@@ -96,7 +96,7 @@ The examples below demonstrate how much padding will be added to the top and bot
 
 ---
 
-### Padding Left & Right `.p{ l, r }-{ x1..x4 }-{ 0..40 }`
+### Padding Left & Right `.{ screen }-p{ l, r }-{ 0..40 }`
 The examples below demonstrate how much padding will be added to the left and right sides of any element the classes is applied to
 {: .section-description }
 

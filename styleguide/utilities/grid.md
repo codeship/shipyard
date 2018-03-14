@@ -104,7 +104,7 @@ Useful when you need to push columns to the right to fill some empty space.
 
 ---
 
-### Responsive Columns `.col-{ x1..x4 }-{ n }`
+### Responsive Columns `.{ screen }-col-{ n }`
 Useful when you want to build a grid that works for any size of screen.
 {: .section-description }
 
@@ -197,7 +197,7 @@ Nested grids can be tricky to build and somewhat fragile by nature. For the best
 
 ---
 
-### Reversible Columns `.flex-{ x1..x4 }-{ col | col-reverse | row | row-reverse }`
+### Reversible Columns `.{ screen }-flex-{ col | col-reverse | row | row-reverse }`
 Useful when the flow of the content should be different at a certain breakpoint.
 {: .section-description }
 

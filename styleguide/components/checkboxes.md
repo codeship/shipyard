@@ -243,7 +243,7 @@ Useful to communicate that your object is only partially connected, and it needs
 
 ---
 
-## Checkbox-Switch Sizes `input-switch-{ x1..x4 }-{ sm..xl }`
+## Checkbox-Switch Sizes `.{ screen }-input-switch-{ sm..xl }`
 Each size can be used or altered at any breakpoint.
 {: .section-description }
 
