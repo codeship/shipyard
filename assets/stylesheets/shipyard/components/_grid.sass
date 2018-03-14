@@ -35,6 +35,18 @@ $utility: map-get($shipyard-options, $name)
       &-offset-#{$width}
         +column-style(margin-left, $width)
 
+  // Print out styles for all breakpoints
+  @if $utility-is-responsive
+    @each $breakpoint, $min-width in $breakpoints
+      @media screen and (min-width:#{$min-width})
+        @each $width in $utility-values
+          .#{$breakpoint + '\\:' + $prefix}
+            &-#{$width}
+              +column-style(max-width, $width)
+              +column-style(flex-basis, $width)
+            &-offset-#{$width}
+              +column-style(margin-left, $width)
+
 //
 // +component('col')
 //

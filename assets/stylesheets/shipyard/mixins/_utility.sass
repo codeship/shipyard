@@ -5,7 +5,7 @@
 
 @mixin utility($name)
   $utility: map-get($shipyard-options, $name)
-  
+
   @if $utility != false
     $prefix: map-get($utility, prefix)
     $utility-values: map-get($utility, values)

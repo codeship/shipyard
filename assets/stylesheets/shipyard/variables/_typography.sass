@@ -10,7 +10,7 @@ $medium-italic: 600 !default
 $bold: 700 !default
 $bold-italic: 800 !default
 
-$font-sizes: map-get($shipyard-options, font-size)
+$font-sizes: map-get(map-get($shipyard-options, font-size), values)
 $font-size: map-get($font-sizes, md) !default
 $font-size-xxxl: map-get($font-sizes, xxxl) !default
 $font-size-xxl: map-get($font-sizes, xxl) !default
