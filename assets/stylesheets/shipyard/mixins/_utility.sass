@@ -3,48 +3,37 @@
     $class: if($class == '', $prefix, "#{$prefix}-#{$class}")
   @return $class
 
-// Used to define the base component class (e.g. "alert") and save it for use later.
 @mixin utility($name)
+  $utility: map-get($shipyard-options, $name)
+  
+  @if $utility != false
+    $prefix: map-get($utility, prefix)
+    $utility-values: map-get($utility, values)
+    $utility-is-responsive: map-get($utility, responsive)
 
-  // Print out styles for all screens
-  .#{$name}
-    @content
+    // Print out styles for all screens
+    @each $class, $value in $utility-values
+      $value: if($value, $value, $class)
+      $class: utility-class($prefix, $class)
+      .#{$class}
+        #{$name}: $value
 
-  // Print out styles for all breakpoints
-  @each $breakpoint, $min-width in $breakpoints
-    @media screen and (min-width:#{$min-width})
-      .#{$breakpoint + '\\:' + $name}
+    // Print out other utility content
+    @if $prefix
+      .#{$prefix}
         @content
 
-@mixin utilities($name)
-  $utility: map-get($shipyard-options, $name)
-  $prefix: map-get($utility, prefix)
-  $utility-values: map-get($utility, values)
-  $utility-is-responsive: map-get($utility, responsive)
+    // Print out styles for all breakpoints
+    @if $utility-is-responsive
+      @each $breakpoint, $min-width in $breakpoints
+        @media screen and (min-width:#{$min-width})
+          @each $class, $value in $utility-values
+            $value: if($value, $value, $class)
+            $class: utility-class($prefix, $class)
+            .#{$breakpoint + '\\:' + $class}
+              #{$name}: $value
 
-  // Print out styles for all screens
-  @each $class, $value in $utility-values
-    $value: if($value, $value, $class)
-    $class: utility-class($prefix, $class)
-    .#{$class}
-      #{$name}: $value
-
-  // Print out other utility content
-  @if $prefix
-    .#{$prefix}
-      @content
-
-  // Print out styles for all breakpoints
-  @if $utility-is-responsive
-    @each $breakpoint, $min-width in $breakpoints
-      @media screen and (min-width:#{$min-width})
-        @each $class, $value in $utility-values
-          $value: if($value, $value, $class)
-          $class: utility-class($prefix, $class)
-          .#{$breakpoint + '\\:' + $class}
-            #{$name}: $value
-
-        // Print out other utility content
-        @if $prefix
-          .#{$breakpoint + '\\:' + $prefix}
-            @content
+          // Print out other utility content
+          @if $prefix
+            .#{$breakpoint + '\\:' + $prefix}
+              @content

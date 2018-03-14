@@ -117,6 +117,13 @@ $shipyard-options: (
   // Shipyard: Margin & Padding Utilities
   margin-padding: (0, 5, 10, 15, 20, 30, 40),
 
+  // Shipyard: Overflow Utility
+  overflow: (
+    prefix: 'overflow',
+    responsive: false,
+    values: (auto, hidden, visible)
+  ),
+
   // Shipyard: Border-Radius Utility
   border-radius: (
     prefix: 'rounded',
