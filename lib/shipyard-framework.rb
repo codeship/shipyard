@@ -90,14 +90,12 @@ module Shipyard
 
     def register_jekyll_tags
       require 'shipyard-framework/jekyll/shipyard_variables'
-      require 'shipyard-framework/jekyll/tags/button_tag'
       require 'shipyard-framework/jekyll/tags/icon_tag'
       require 'shipyard-framework/jekyll/tags/box_tag'
       require 'shipyard-framework/jekyll/tags/note_tag'
       require 'shipyard-framework/jekyll/tags/alert_tag'
       require 'shipyard-framework/jekyll/tags/shipyard_version_tag'
       require 'shipyard-framework/jekyll/shipyard_css_classes'
-      Liquid::Template.register_tag('btn', Shipyard::Jekyll::Button)
       Liquid::Template.register_tag('icon', Shipyard::Jekyll::Icon)
       Liquid::Template.register_tag('box', Shipyard::Jekyll::Box)
       Liquid::Template.register_tag('note', Shipyard::Jekyll::Note)
@@ -109,7 +107,6 @@ module Shipyard
     def register_helpers
       require 'shipyard-framework/helpers/alert_helper'
       require 'shipyard-framework/helpers/box_helper'
-      require 'shipyard-framework/helpers/button_helper'
       require 'shipyard-framework/helpers/form_helper'
       require 'shipyard-framework/helpers/icon_helper'
       require 'shipyard-framework/helpers/layout_helper'
