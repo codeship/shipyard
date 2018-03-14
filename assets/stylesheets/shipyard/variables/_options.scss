@@ -108,7 +108,11 @@ $shipyard-options: (
   ),
 
   // Shipyard: Margin & Padding Utilities
-  cursor: (auto, pointer, default),
+  cursor: (
+    prefix: 'cursor-',
+    responsive: false,
+    values: (auto, pointer, default)
+  ),
 
   // Shipyard: Margin & Padding Utilities
   margin-padding: (0, 5, 10, 15, 20, 30, 40),
