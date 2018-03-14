@@ -2,7 +2,6 @@
 title: Shipyard Boxes
 description: Boxes should be used to grab a draw attention to specific groups of content, and are most useful to linked content. By default, all boxes need to have the base class of `.box` in order to function properly.
 sass_file: shipyard/components/_boxes
-box_sizes: [xxs, xs, sm, md, lg, xl, xxl]
 ---
 
 {% include page-heading.html page=page %}
@@ -14,16 +13,6 @@ Useful when needing to draw extra attention to a particular group of content.
 {: .section-description }
 
 {% box %}
-  <p>Donec id elit non mi porta gravida at eget metus. Aenean lacinia bibendum nulla sed consectetur. Etiam porta sem malesuada magna mollis euismod. Cras mattis consectetur purus sit amet fermentum. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Integer posuere erat a ante venenatis dapibus posuere velit aliquet.</p>
-{% endbox %}
-
----
-
-### Padded `.box-padding`
-Useful when needing to draw extra attention to a particular group of content.
-{: .section-description }
-
-{% box :padding %}
   <p>Donec id elit non mi porta gravida at eget metus. Aenean lacinia bibendum nulla sed consectetur. Etiam porta sem malesuada magna mollis euismod. Cras mattis consectetur purus sit amet fermentum. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Integer posuere erat a ante venenatis dapibus posuere velit aliquet.</p>
 {% endbox %}
 
@@ -66,31 +55,6 @@ Useful when connecting secondary information to the default box styles.
 {% box :secondary %}
   <p>Donec id elit non mi porta gravida at eget metus. Aenean lacinia bibendum nulla sed consectetur. Etiam porta sem malesuada magna mollis euismod. Cras mattis consectetur purus sit amet fermentum. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Integer posuere erat a ante venenatis dapibus posuere velit aliquet.</p>
 {% endbox %}
-
-
----
-
-### Box Sizes `.box-[{{ page.box_sizes | join: ', ' }}]`
-Useful when you need to create boxes with fixed heights. Note: The <a href="{{ site.baseurl }}/utilities/responsive">responsive utility classes</a> can also be applied to each box size.
-{: .section-description }
-
-{% for size in page.box_sizes %}
-  <div class="box box-{{ size }} mt-20">
-    <strong class="center text-lighter text-sm">.box-{{ size }}</strong>
-  </div>
-{% endfor %}
-
----
-
-### Rounded `.box-rounded`
-Useful when you need a box with rounded corners.
-{: .section-description }
-
-{% for size in page.box_sizes %}
-  <div class="box box-rounded box-{{ size }} mt-20">
-    <strong class="center text-lighter text-sm">.box-{{ size }}</strong>
-  </div>
-{% endfor %}
 
 ---
 

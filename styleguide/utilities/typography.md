@@ -47,7 +47,7 @@ text_shades: [darkest, darker, dark, normal, light, lighter, lightest]
 <div class="col-container">
   <div class="col">
     <h3>Text Shades</h3>
-    <div class="box box-padding mt-10">
+    <div class="box p-10 sm:p-15 md:p-20 lg:p-30 mt-10">
       <ul class="list medium">
         {% for shade in page.text_shades %}
           <li class="text-{{ shade }}">.text-{{ shade }}</li>
@@ -57,7 +57,7 @@ text_shades: [darkest, darker, dark, normal, light, lighter, lightest]
   </div>
   <div class="col">
     <h3>Inverse Text Shades</h3>
-    <div class="box-secondary box-padding bg-gray-dark mt-10">
+    <div class="box-secondary p-10 sm:p-15 md:p-20 lg:p-30 bg-gray-dark mt-10">
       <ul class="list medium">
         {% for shade in page.text_shades %}
           <li class="text-inverse{{ '-' | append: shade | replace: '-normal', '' }}">

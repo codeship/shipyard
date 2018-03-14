@@ -31,11 +31,25 @@ $shipyard-options: (
     xl: 40px
   ),
 
-  // Shipyard: Grid Utility
+  // Shipyard: Grid Component
   grid: (
     prefix: 'col',
     responsive: true,
     values: (0, 5, 10, 15, 20, 25, 30, 33, 35, 40, 45, 50, 55, 60, 65, 66, 70, 75, 80, 85, 90, 95, 100)
+  ),
+
+  // Shipyard: Height Component
+  height: (
+    prefix: 'h',
+    responsive: true,
+    values: (
+      '50': 50px,
+      '60': 60px,
+      '70': 70px,
+      '80': 80px,
+      '90': 90px,
+      '100': 100px
+    )
   ),
 
   // Shipyard: Cursor Utility

@@ -55,7 +55,7 @@ Useful when you have a button on a darker background.
 Useful when you have a button on a darker background.
 {: .section-description }
 
-<div class="box-secondary box-padding bg-gray-dark mb-20">
+<div class="box-secondary p-10 sm:p-15 md:p-20 lg:p-30 bg-gray-dark mb-20">
   <button class="btn btn-inverse mr-10">Inverse</button>
   <button class="btn btn-inverse-secondary">Inverse Secondary</button>
 </div>
@@ -141,7 +141,7 @@ The button classes can be applied to any type of html tag to achieve the desired
 ---
 
 ## Button Sizes (default: md)
-<div class="box-padding align-center">
+<div class="p-10 sm:p-15 md:p-20 lg:p-30 align-center">
   <button class="btn btn-xxs">XX-Small</button>
   <button class="btn btn-xs">X-Small</button>
   <button class="btn btn-sm">Small</button>
@@ -151,7 +151,7 @@ The button classes can be applied to any type of html tag to achieve the desired
 </div>
 
 ## XX-Small, Responsive Buttons
-<div class="box-padding align-center">
+<div class="p-10 sm:p-15 md:p-20 lg:p-30 align-center">
   <button class="btn btn-xxs">All Screens</button>
   <button class="btn sm:btn-xxs">Tablets</button>
   <button class="btn md:btn-xxs">Laptops</button>
@@ -160,7 +160,7 @@ The button classes can be applied to any type of html tag to achieve the desired
 </div>
 
 ## X-Small, Responsive Buttons
-<div class="box-padding align-center">
+<div class="p-10 sm:p-15 md:p-20 lg:p-30 align-center">
   <button class="btn btn-xs">All Screens</button>
   <button class="btn sm:btn-xs">Tablets</button>
   <button class="btn md:btn-xs">Laptops</button>
@@ -169,7 +169,7 @@ The button classes can be applied to any type of html tag to achieve the desired
 </div>
 
 ## Small, Responsive Buttons
-<div class="box-padding align-center">
+<div class="p-10 sm:p-15 md:p-20 lg:p-30 align-center">
   <button class="btn btn-sm">All Screens</button>
   <button class="btn sm:btn-sm">Tablets</button>
   <button class="btn md:btn-sm">Laptops</button>
@@ -178,7 +178,7 @@ The button classes can be applied to any type of html tag to achieve the desired
 </div>
 
 ## Medium, Responsive Buttons (Default Size)
-<div class="box-padding align-center">
+<div class="p-10 sm:p-15 md:p-20 lg:p-30 align-center">
   <button class="btn btn-md">All Screens</button>
   <button class="btn btn-sm sm:btn-md">Tablets</button>
   <button class="btn btn-sm md:btn-md">Laptops</button>

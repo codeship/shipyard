@@ -9,7 +9,7 @@ description: Shipyard is a CSS Framework is built from mobile-first approach to 
 
 ## Responsive Demo
 
-<div class="box-secondary box-padding align-center">
+<div class="box-secondary p-10 sm:p-15 md:p-20 lg:p-30 align-center">
   <button class="btn btn-xs sm:btn-sm md:btn-md lg:btn-lg xl:btn-xl">
     <span class="inline sm:hidden">All Screens (.btn-xs)</span>
     <span class="hidden sm:inline md:hidden">Tablets &amp; Up (.sm:btn-sm)</span>

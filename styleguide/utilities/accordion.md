@@ -25,10 +25,10 @@ sizes:
 ---
 
 <div class="box-secondary mb-30">
-  <div class="box box-padding box-link pt-20 pb-20" accordion="#accordion-example">
+  <div class="box p-10 sm:p-15 md:p-20 lg:p-30 box-link pt-20 pb-20" accordion="#accordion-example">
     Click this box to see an example of the accordion transitions.
   </div>
-  <div id="accordion-example" class="accordion accordion-xs accordion-closed box-padding rounded-bottom">
+  <div id="accordion-example" class="accordion accordion-xs accordion-closed p-10 sm:p-15 md:p-20 lg:p-30 rounded-bottom">
     <p>Donec ullamcorper nulla non metus auctor fringilla. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur blandit tempus porttitor. Nullam id dolor id nibh ultricies vehicula ut id elit. Praesent commodo cursus magna, vel scelerisque nisl consectetur et.</p>
     <p>Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Nulla vitae elit libero, a pharetra augue. Etiam porta sem malesuada magna mollis euismod. Curabitur blandit tempus porttitor. Cras mattis consectetur purus sit amet fermentum.</p>
     <p>Nullam quis risus eget urna mollis ornare vel eu leo. Nullam id dolor id nibh ultricies vehicula ut id elit. Vestibulum id ligula porta felis euismod semper. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sed diam eget risus varius blandit sit amet non magna. Donec ullamcorper nulla non metus auctor fringilla. Etiam porta sem malesuada magna mollis euismod.</p>

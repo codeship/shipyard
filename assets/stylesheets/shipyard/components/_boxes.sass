@@ -26,15 +26,3 @@
       outline: none
       cursor: default
       box-shadow: 0 0 4px 1px rgba(darken($green, 5%),.75)
-
-  &-padding
-    +respond-to(padding, map-get($shipyard-options, margins))
-
-  &-rounded
-    border-radius: 1000px
-
-  // Box Sizes
-  +all-media-sizes
-    @each $size, $height in (xxs: 50px, xs: 60px, sm: 70px, md: 80px, lg: 90px, xl: 100px, xxl: 110px)
-      &-#{$size}
-        height: $height
