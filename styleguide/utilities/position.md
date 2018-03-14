@@ -2,7 +2,6 @@
 title: Position Utilities
 description: Shipyard's position utilities are helpful to override the default styles of component.
 sass_file: shipyard/utilities/_position
-position_utilities: [static, relative, absolute, fixed]
 ---
 
 {% include page-heading.html page=page %}
