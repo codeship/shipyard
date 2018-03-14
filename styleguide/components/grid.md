@@ -1,7 +1,7 @@
 ---
 title: Shipyard Grid
 description: The Shipyard grid is a percentage-based, flexbox grid and is entirely responsive. Each class needs the foundational `.col` class in order to function properly, and also should be contained inside the `.col-container` as well.
-sass_file: shipyard/utilities/_grid
+sass_file: shipyard/components/_grid
 container_classes: col-container mt-10 sm:mt-15 md:mt-20 mb-10 sm:mb-15 md:mb-20
 box_classes: utilities-grid-box col-center box-secondary text-lighter text-sm strong align-center
 example_flex_columns: [10,20,25,33,50]

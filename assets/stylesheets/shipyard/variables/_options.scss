@@ -178,6 +178,22 @@ $shipyard-options: (
     )
   ),
 
+  // Shipyard: Font-Size Utility
+  font-size: (
+    prefix: 'text',
+    responsive: true,
+    values: (
+      xxs: 12px,
+      xs: 13px,
+      sm: 14px,
+      md: 16px,
+      lg: 18px,
+      xl: 20px,
+      xxl: 22px,
+      xxxl: 24px
+    )
+  ),
+
   // Shipyard: Opacity Utility
   opacity: (
     prefix: 'o',
