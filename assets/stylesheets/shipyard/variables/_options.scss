@@ -117,10 +117,17 @@ $shipyard-options: (
   // font-weight: (
   //   prefix: null,
   //   responsive: true,
-  //   values: (normal, medium)
+  //   values: (normal, medium, bold)
   // ),
 
-  // Shipyard: Text Align Utilities
+  // Shipyard: White-Space Utilities
+  white-space: (
+    prefix: 'white-space',
+    responsive: false,
+    values: (nowrap)
+  ),
+
+  // Shipyard: Text-Align Utilities
   text-align: (
     prefix: 'align',
     responsive: true,
