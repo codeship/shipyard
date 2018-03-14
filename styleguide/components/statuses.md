@@ -267,37 +267,37 @@ Useful when next to standard text where where it's important to show the status 
 {: .section-description }
 
 <div class="col-container m-0 align-center mb-30">
-  <div class="status-skipped-bg p-10 p-x1-20 pl-0 pr-0 col rounded rounded-left" tooltip="skipped">
+  <div class="status-skipped-bg p-10 sm:p-20 pl-0 pr-0 col rounded rounded-left" tooltip="skipped">
     <span class="status status-inverse status-skipped status-xl">
       {% icon :skipped, prefix: 'status-xl', class: 'status-icon' %}
     </span>
   </div>
-  <div class="status-waiting-bg p-10 p-x1-20 pl-0 pr-0 col" tooltip="waiting">
+  <div class="status-waiting-bg p-10 sm:p-20 pl-0 pr-0 col" tooltip="waiting">
     <span class="status status-inverse status-waiting status-xl">
       {% icon 'waiting', prefix: 'status-xl', class: 'status-icon' %}
     </span>
   </div>
-  <div class="status-running-bg p-10 p-x1-20 pl-0 pr-0 col" tooltip="running">
+  <div class="status-running-bg p-10 sm:p-20 pl-0 pr-0 col" tooltip="running">
     <span class="status status-inverse status-running status-xl">
       {% icon :running, prefix: 'status-xl', class: 'status-icon' %}
     </span>
   </div>
-  <div class="status-success-bg p-10 p-x1-20 pl-0 pr-0 col" tooltip="success">
+  <div class="status-success-bg p-10 sm:p-20 pl-0 pr-0 col" tooltip="success">
     <span class="status status-inverse status-success status-xl">
       {% icon :success, prefix: 'status-xl', class: 'status-icon' %}
     </span>
   </div>
-  <div class="status-idle-bg p-10 p-x1-20 pl-0 pr-0 col" tooltip="idle">
+  <div class="status-idle-bg p-10 sm:p-20 pl-0 pr-0 col" tooltip="idle">
     <span class="status status-inverse status-idle status-xl">
       {% icon :idle, prefix: 'status-xl', class: 'status-icon' %}
     </span>
   </div>
-  <div class="status-error-bg p-10 p-x1-20 pl-0 pr-0 col" tooltip="error">
+  <div class="status-error-bg p-10 sm:p-20 pl-0 pr-0 col" tooltip="error">
     <span class="status status-inverse status-error status-xl">
       {% icon :error, prefix: 'status-xl', class: 'status-icon' %}
     </span>
   </div>
-  <div class="status-fail-bg p-10 p-x1-20 pl-0 pr-0 col rounded rounded-right" tooltip="fail">
+  <div class="status-fail-bg p-10 sm:p-20 pl-0 pr-0 col rounded rounded-right" tooltip="fail">
     <span class="status status-inverse status-fail status-xl">
       {% icon :fail, prefix: 'status-xl', class: 'status-icon' %}
     </span>

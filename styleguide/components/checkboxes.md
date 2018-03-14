@@ -40,8 +40,8 @@ Useful when you want to group a series of checkboxes together on a single line.
 Useful when you want to group a series of checkboxes together in a list (stacked by default).
 {: .section-description }
 
-<div class="col-container mb-15 mb-x1-30">
-  <div class="col col-100 col-x1-50 mb-15 mb-x1-0">
+<div class="col-container mb-15 sm:mb-30">
+  <div class="col col-100 sm:col-50 mb-15 sm:mb-0">
     <div class="rounded bg-white box-padding">
       <ul class="input-list">
         {% for label in page.labels %}
@@ -53,7 +53,7 @@ Useful when you want to group a series of checkboxes together in a list (stacked
       </ul>
     </div>
   </div>
-  <div class="col col-100 col-x1-50">
+  <div class="col col-100 sm:col-50">
     <div class="box-secondary box-padding">
       <ul class="input-list">
         {% for label in page.labels %}
@@ -168,7 +168,7 @@ Useful when you want to the user to proceed with caution about the choices they'
 Switches are useful when the user has a choice to toggle on and off. Note: For the best UX, please make sure that the switch saves immediately each time it changes state.
 {: .section-description }
 
-<div class="box box-xs mb-15 pt-20 pb-20 pl-15 pr-15 pl-x1-30 pr-x1-30">
+<div class="box box-xs mb-15 pt-20 pb-20 pl-15 pr-15 sm:pl-30 sm:pr-30">
   <div class="col-container-nowrap">
     <div class="components-checkboxes-switch-col col col-100 text-light text-overflow-ellipsis">Praesent commodo cursus magna, vel scelerisque aenean eu leo quam pellentesque ornare sem lacinia quam.</div>
     <div class="col ml-15">
@@ -176,7 +176,7 @@ Switches are useful when the user has a choice to toggle on and off. Note: For t
     </div>
   </div>
 </div>
-<div class="box-secondary box-xs pt-20 pb-20 pl-15 pr-15 pl-x1-30 pr-x1-30">
+<div class="box-secondary box-xs pt-20 pb-20 pl-15 pr-15 sm:pl-30 sm:pr-30">
   <div class="col-container-nowrap">
     <div class="components-checkboxes-switch-col col col-100 text-light text-overflow-ellipsis">Praesent commodo cursus magna, vel scelerisque aenean eu leo quam pellentesque ornare sem lacinia quam.</div>
     <div class="col ml-15">
@@ -195,7 +195,7 @@ Switches are useful when the user has a choice to toggle on and off. Note: For t
 Useful when you don't need to draw attention to the bright-red, off state.
 {: .section-description }
 
-<div class="box box-xs mb-15 pt-20 pb-20 pl-15 pr-15 pl-x1-30 pr-x1-30">
+<div class="box box-xs mb-15 pt-20 pb-20 pl-15 pr-15 sm:pl-30 sm:pr-30">
   <div class="col-container-nowrap">
     <div class="components-checkboxes-switch-col col col-100 text-light text-overflow-ellipsis">Praesent commodo cursus magna, vel scelerisque aenean eu leo quam pellentesque ornare sem lacinia quam.</div>
     <div class="col ml-15">
@@ -203,7 +203,7 @@ Useful when you don't need to draw attention to the bright-red, off state.
     </div>
   </div>
 </div>
-<div class="box-secondary box-xs pt-20 pb-20 pl-15 pr-15 pl-x1-30 pr-x1-30">
+<div class="box-secondary box-xs pt-20 pb-20 pl-15 pr-15 sm:pl-30 sm:pr-30">
   <div class="col-container-nowrap">
     <div class="components-checkboxes-switch-col col col-100 text-light text-overflow-ellipsis">Praesent commodo cursus magna, vel scelerisque aenean eu leo quam pellentesque ornare sem lacinia quam.</div>
     <div class="col ml-15">
@@ -221,7 +221,7 @@ Useful when you don't need to draw attention to the bright-red, off state.
 Useful to communicate that your object is only partially connected, and it needs additional attention.
 {: .section-description }
 
-<div class="box box-xs mb-15 pt-20 pb-20 pl-15 pr-15 pl-x1-30 pr-x1-30">
+<div class="box box-xs mb-15 pt-20 pb-20 pl-15 pr-15 sm:pl-30 sm:pr-30">
   <div class="col-container-nowrap">
     <div class="components-checkboxes-switch-col col col-100 text-light text-overflow-ellipsis">Praesent commodo cursus magna, vel scelerisque aenean eu leo quam pellentesque ornare sem lacinia quam.</div>
     <div class="col ml-15">
@@ -229,7 +229,7 @@ Useful to communicate that your object is only partially connected, and it needs
     </div>
   </div>
 </div>
-<div class="box-secondary box-xs pt-20 pb-20 pl-15 pr-15 pl-x1-30 pr-x1-30">
+<div class="box-secondary box-xs pt-20 pb-20 pl-15 pr-15 sm:pl-30 sm:pr-30">
   <div class="col-container-nowrap">
     <div class="components-checkboxes-switch-col col col-100 text-light text-overflow-ellipsis">Praesent commodo cursus magna, vel scelerisque aenean eu leo quam pellentesque ornare sem lacinia quam.</div>
     <div class="col ml-15">

@@ -2,7 +2,7 @@
 title: Border-Radius Utilities
 description: Shipyard's border-radius utilities are useful for connecting components together.
 sass_file: shipyard/utilities/_border-radius
-col_classes: col col-50 col-x1-20 mb-10
+col_classes: col col-50 sm:col-20 mb-10
 box_classes: pt-10 pb-10 text-sm strong align-center bg-gray-light gray-dark
 directions:
   -

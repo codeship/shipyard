@@ -7,15 +7,15 @@ title: Shipyard Forms
 ---
 
 <div class="col-container input-group">
-  <div class="col col-100 col-x1-33 mb-15 mb-x1-0">
+  <div class="col col-100 sm:col-33 mb-15 sm:mb-0">
     <label class="label">Textbox</label>
     <input type="text" class="input input-text" placeholder=".input-text" />
   </div>
-  <div class="col col-100 col-x1-33 mb-15 mb-x1-0">
+  <div class="col col-100 sm:col-33 mb-15 sm:mb-0">
     <label class="label">Textbox Read-Only</label>
     <input type="text" class="input input-text input-readonly" placeholder=".input-readonly" value="copy-paste-me" readonly />
   </div>
-  <div class="col col-100 col-x1-33 mb-15 mb-x1-0">
+  <div class="col col-100 sm:col-33 mb-15 sm:mb-0">
     <label class="label">Textbox Disabled</label>
     <input type="text" class="input input-text" placeholder=".input-text" disabled />
   </div>

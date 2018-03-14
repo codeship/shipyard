@@ -8,8 +8,8 @@ title: Shipyard Components
 
 <ul class="col-container">
   {% for component in site.data.components %}
-    <li class="mb-10 mb-x1-15 mb-x2-30 col col-100 col-x1-33 col-x2-25">
-      <a href="{{ site.baseurl }}/components/{{ component | replace: ' ', '-' | downcase }}" class="box-link box-padding align-center text-md text-x1-lg text-x2-xl">
+    <li class="mb-10 sm:mb-15 md:mb-30 col col-100 sm:col-33 md:col-25">
+      <a href="{{ site.baseurl }}/components/{{ component | replace: ' ', '-' | downcase }}" class="box-link box-padding align-center text-md sm:text-lg md:text-xl">
         {{ component }}
       </a>
     </li>

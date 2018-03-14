@@ -40,8 +40,8 @@ Useful when you want to group a series of radio buttons together on a single lin
 Useful when you want to group a series of radio buttons together in a list (stacked by default).
 {: .section-description }
 
-<div class="col-container mb-15 mb-x1-30">
-  <div class="col col-100 col-x1-50 mb-15 mb-x1-0">
+<div class="col-container mb-15 sm:mb-30">
+  <div class="col col-100 sm:col-50 mb-15 sm:mb-0">
     <div class="rounded bg-white box-padding">
       <ul class="input-list">
         {% for label in page.labels %}
@@ -53,7 +53,7 @@ Useful when you want to group a series of radio buttons together in a list (stac
       </ul>
     </div>
   </div>
-  <div class="col col-100 col-x1-50">
+  <div class="col col-100 sm:col-50">
     <div class="box-secondary box-padding">
       <ul class="input-list">
         {% for label in page.labels %}

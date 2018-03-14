@@ -15,8 +15,8 @@ module Jekyll
 
     def render(context)
       %(
-        <li class="col col-50 col-x1-20 mb-10 mb-x1-20 mb-x2-30" tooltip="#{@tooltip}">
-          <div class="box box-md box-x1-xxl #{@css}">
+        <li class="col col-50 sm:col-20 mb-10 sm:mb-20 md:mb-30" tooltip="#{@tooltip}">
+          <div class="box box-md sm:box-xxl #{@css}">
             #{icon @name, @options}
           </div>
         </li>

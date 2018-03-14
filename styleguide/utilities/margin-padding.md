@@ -27,7 +27,7 @@ The examples below demonstrate how much margin will be added to the top and bott
       {% for option in page.options %}
         <div class="{{ page.box_classes }} m-{{ option }}">.m-{{ option }}</div>
       {% endfor %}
-      <div class="{{ page.box_classes }} col-55 col-x1-75 col-x2-85 m-auto">.m-auto</div>
+      <div class="{{ page.box_classes }} col-55 sm:col-75 md:col-85 m-auto">.m-auto</div>
     </div>
   </div>
 </div>

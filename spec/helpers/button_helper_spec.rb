@@ -32,6 +32,6 @@ RSpec.describe Shipyard::ButtonHelper, type: :helper do
   end
 
   it 'should return a responsive button' do
-    expect(btn('Save', :xs, :x1_md)).to match(%r{<button class="btn btn-xs btn-x1-md">Save</button>})
+    expect(btn('Save', :xs, :x1_md)).to match(%r{<button class="btn btn-xs sm:btn-md">Save</button>})
   end
 end
