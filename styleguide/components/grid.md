@@ -110,7 +110,7 @@ Useful when you want to build a grid that works for any size of screen.
 
 <div class="{{ page.container_classes }}">
   {% for i in (1..7) %}
-    <div class="col col-100 sm:col-33 md:col-25 lg:col-0">
+    <div class="col col-100 sm:col-33 md:col-25 lg:col-0 mb-10 sm:mb-15 lg:mb-0">
       <div class="{{ page.box_classes }}">
         <span class="block sm:hidden">100</span>
         <span class="hidden sm:block md:hidden">33</span>
