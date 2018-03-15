@@ -106,7 +106,24 @@ $shipyard-options: (
     )
   ),
 
-  // Shipyard: Font-Style Utilities
+  // Shipyard: Font-Family Utility
+  font-family: (
+    prefix: null,
+    responsive: false,
+    values: (
+      'sans-serif': $font-family,
+      'monospace': $font-monospace
+    )
+  ),
+
+  // Shipyard: Font-Size Utility
+  font-size: (
+    prefix: 'text',
+    responsive: true,
+    values: $font-sizes
+  ),
+
+  // Shipyard: Font-Style Utility
   font-style: (
     prefix: null,
     responsive: false,
@@ -178,22 +195,6 @@ $shipyard-options: (
       'sm': 3px,
       'md': 5px,
       'pill': 999px
-    )
-  ),
-
-  // Shipyard: Font-Size Utility
-  font-size: (
-    prefix: 'text',
-    responsive: true,
-    values: (
-      xxs: 12px,
-      xs: 13px,
-      sm: 14px,
-      md: 16px,
-      lg: 18px,
-      xl: 20px,
-      xxl: 22px,
-      xxxl: 24px
     )
   ),
 
