@@ -144,7 +144,7 @@ $shipyard-options: (
   // Shipyard: White-Space Utilities
   white-space: (
     prefix: 'white-space',
-    responsive: false,
+    responsive: true,
     values: (normal, pre, nowrap)
   ),
 
@@ -193,19 +193,19 @@ $shipyard-options: (
   // Shipyard: Overflow Utility
   overflow: (
     prefix: 'overflow',
-    responsive: false,
+    responsive: true,
     values: (auto, hidden, visible)
   ),
 
   overflow-x: (
     prefix: 'overflow-x',
-    responsive: false,
+    responsive: true,
     values: (scroll: auto)
   ),
 
   overflow-y: (
     prefix: 'overflow-y',
-    responsive: false,
+    responsive: true,
     values: (scroll: auto)
   ),
 
@@ -256,7 +256,7 @@ $shipyard-options: (
   // Shipyard: Position Utility
   position: (
     prefix: null,
-    responsive: false,
+    responsive: true,
     values: (static, relative, absolute, fixed)
   ),
 
