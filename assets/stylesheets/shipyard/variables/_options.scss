@@ -137,13 +137,6 @@ $shipyard-options: (
   //   values: (normal, medium, bold)
   // ),
 
-  // Shipyard: Text-Direction Utilities
-  text-decoration: (
-    prefix: null,
-    responsive: false,
-    values: (line-through)
-  ),
-
   // Shipyard: White-Space Utilities
   white-space: (
     prefix: 'white-space',
@@ -156,6 +149,27 @@ $shipyard-options: (
     prefix: 'align',
     responsive: true,
     values: (center, left, right)
+  ),
+
+  // Shipyard: Text-Direction Utilities
+  text-decoration: (
+    prefix: null,
+    responsive: false,
+    values: (
+      'line-through': line-through,
+      'underline': underline,
+      'no-underline': none
+    )
+  ),
+
+  // Shipyard: Text-Align Utilities
+  text-shadow: (
+    prefix: 'text-shadow',
+    responsive: false,
+    values: (
+      xs: 0 1px 0 rgba(#000,.1),
+      sm: 0 1px 1px rgba(#000, .1)
+    )
   ),
 
   // Shipyard: Float Utilities
