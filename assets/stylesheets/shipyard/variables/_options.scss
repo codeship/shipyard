@@ -275,7 +275,7 @@ $shipyard-defaults: (
 
   // Shipyard: Transition Utility Speeds
   transition: (
-    prefix: 't',
+    prefix: 'ease',
     responsive: false,
     values: (
       '150ms': all 150ms ease,
