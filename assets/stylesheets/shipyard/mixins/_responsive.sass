@@ -29,12 +29,8 @@
 
 @mixin all-media-sizes
   @content
-  +media-sizes
-    @content
-
-@mixin media-sizes
   @each $breakpoint, $min-width in $breakpoints
-    &-#{$breakpoint}
+    @at-root #{".#{$breakpoint}\\:" + str-slice("#{&}", 2)}
       +media(min-width $min-width)
         @content
 
