@@ -11,10 +11,10 @@ description: Shipyard is a CSS Framework is built from mobile-first approach to 
 
 <div class="box-secondary p-10 sm:p-15 md:p-20 lg:p-30 align-center">
   <button class="btn btn-xs sm:btn-sm md:btn-md lg:btn-lg xl:btn-xl">
-    <span class="inline sm:hidden">All Screens (.btn-xs)</span>
-    <span class="hidden sm:inline md:hidden">Tablets &amp; Up (.sm:btn-sm)</span>
-    <span class="hidden md:inline lg:hidden">Small Laptops &amp; Up (.md:btn-md)</span>
-    <span class="hidden lg:inline xl:hidden">Wide Laptos &amp; Up (.lg:btn-lg)</span>
-    <span class="hidden xl:inline">Large Monitors &amp; Up (.xl:btn-xl)</span>
+    <span class="inline sm:hidden">.btn-xs</span>
+    <span class="hidden sm:inline md:hidden">.sm:btn-sm</span>
+    <span class="hidden md:inline lg:hidden">.md:btn-md</span>
+    <span class="hidden lg:inline xl:hidden">.lg:btn-lg</span>
+    <span class="hidden xl:inline">.xl:btn-xl</span>
   </button>
 </div>
