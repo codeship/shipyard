@@ -17,6 +17,7 @@ title: Shipyard
 description: A sweet front-end framework for Ruby on Rails and Jekyll.
 baseurl: /shipyard
 url: https://codeship.github.io
+permalink: /:title
 # source: ./app
 # destination: ./tmp
 # plugins_dir: ./app/_plugins
