@@ -172,6 +172,13 @@ $shipyard-options: (
     )
   ),
 
+  // Shipyard: Text-Transform Utility
+  text-transform: (
+    prefix: null,
+    responsive: false,
+    values: (uppercase, lowercase, capitalize)
+  ),
+
   // Shipyard: Float Utilities
   float: (
     prefix: 'float',
