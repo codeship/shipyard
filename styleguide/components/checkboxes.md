@@ -170,7 +170,7 @@ Switches are useful when the user has a choice to toggle on and off. Note: For t
 
 <div class="box h-60 mb-15 pt-20 pb-20 pl-15 pr-15 sm:pl-30 sm:pr-30">
   <div class="col-container-nowrap">
-    <div class="components-checkboxes-switch-col col col-100 text-light text-overflow-ellipsis">Praesent commodo cursus magna, vel scelerisque aenean eu leo quam pellentesque ornare sem lacinia quam.</div>
+    <div class="components-checkboxes-switch-col col col-100 text-light ellipsis overflow-hidden white-space-nowrap">Praesent commodo cursus magna, vel scelerisque aenean eu leo quam pellentesque ornare sem lacinia quam.</div>
     <div class="col ml-15">
       <input type="checkbox" class="input input-switch" checked />
     </div>
@@ -178,7 +178,7 @@ Switches are useful when the user has a choice to toggle on and off. Note: For t
 </div>
 <div class="box-secondary h-60 pt-20 pb-20 pl-15 pr-15 sm:pl-30 sm:pr-30">
   <div class="col-container-nowrap">
-    <div class="components-checkboxes-switch-col col col-100 text-light text-overflow-ellipsis">Praesent commodo cursus magna, vel scelerisque aenean eu leo quam pellentesque ornare sem lacinia quam.</div>
+    <div class="components-checkboxes-switch-col col col-100 text-light ellipsis overflow-hidden white-space-nowrap">Praesent commodo cursus magna, vel scelerisque aenean eu leo quam pellentesque ornare sem lacinia quam.</div>
     <div class="col ml-15">
       <input type="checkbox" class="input input-switch" />
     </div>
@@ -197,7 +197,7 @@ Useful when you don't need to draw attention to the bright-red, off state.
 
 <div class="box h-60 mb-15 pt-20 pb-20 pl-15 pr-15 sm:pl-30 sm:pr-30">
   <div class="col-container-nowrap">
-    <div class="components-checkboxes-switch-col col col-100 text-light text-overflow-ellipsis">Praesent commodo cursus magna, vel scelerisque aenean eu leo quam pellentesque ornare sem lacinia quam.</div>
+    <div class="components-checkboxes-switch-col col col-100 text-light ellipsis overflow-hidden white-space-nowrap">Praesent commodo cursus magna, vel scelerisque aenean eu leo quam pellentesque ornare sem lacinia quam.</div>
     <div class="col ml-15">
       <input type="checkbox" class="input input-switch-secondary" checked />
     </div>
@@ -205,7 +205,7 @@ Useful when you don't need to draw attention to the bright-red, off state.
 </div>
 <div class="box-secondary h-60 pt-20 pb-20 pl-15 pr-15 sm:pl-30 sm:pr-30">
   <div class="col-container-nowrap">
-    <div class="components-checkboxes-switch-col col col-100 text-light text-overflow-ellipsis">Praesent commodo cursus magna, vel scelerisque aenean eu leo quam pellentesque ornare sem lacinia quam.</div>
+    <div class="components-checkboxes-switch-col col col-100 text-light ellipsis overflow-hidden white-space-nowrap">Praesent commodo cursus magna, vel scelerisque aenean eu leo quam pellentesque ornare sem lacinia quam.</div>
     <div class="col ml-15">
       <input type="checkbox" class="input input-switch-secondary" />
     </div>
@@ -223,7 +223,7 @@ Useful to communicate that your object is only partially connected, and it needs
 
 <div class="box h-60 mb-15 pt-20 pb-20 pl-15 pr-15 sm:pl-30 sm:pr-30">
   <div class="col-container-nowrap">
-    <div class="components-checkboxes-switch-col col col-100 text-light text-overflow-ellipsis">Praesent commodo cursus magna, vel scelerisque aenean eu leo quam pellentesque ornare sem lacinia quam.</div>
+    <div class="components-checkboxes-switch-col col col-100 text-light ellipsis overflow-hidden white-space-nowrap">Praesent commodo cursus magna, vel scelerisque aenean eu leo quam pellentesque ornare sem lacinia quam.</div>
     <div class="col ml-15">
       <input type="checkbox" class="input input-switch-secondary input-switch-warning" checked />
     </div>
@@ -231,7 +231,7 @@ Useful to communicate that your object is only partially connected, and it needs
 </div>
 <div class="box-secondary h-60 pt-20 pb-20 pl-15 pr-15 sm:pl-30 sm:pr-30">
   <div class="col-container-nowrap">
-    <div class="components-checkboxes-switch-col col col-100 text-light text-overflow-ellipsis">Praesent commodo cursus magna, vel scelerisque aenean eu leo quam pellentesque ornare sem lacinia quam.</div>
+    <div class="components-checkboxes-switch-col col col-100 text-light ellipsis overflow-hidden white-space-nowrap">Praesent commodo cursus magna, vel scelerisque aenean eu leo quam pellentesque ornare sem lacinia quam.</div>
     <div class="col ml-15">
       <input type="checkbox" class="input input-switch-secondary input-switch-warning" />
     </div>

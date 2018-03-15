@@ -262,7 +262,7 @@ $shipyard-options: (
 
   // Shipyard: Text-Overflow Utility
   text-overflow: (
-    prefix: 'text-overflow',
+    prefix: null,
     responsive: true,
     values: (ellipsis, clip)
   ),
