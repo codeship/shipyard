@@ -192,6 +192,18 @@ $shipyard-options: (
     responsive: false,
     values: (auto, hidden, visible)
   ),
+  
+  overflow-x: (
+    prefix: 'overflow-x',
+    responsive: false,
+    values: (scroll: auto)
+  ),
+
+  overflow-y: (
+    prefix: 'overflow-y',
+    responsive: false,
+    values: (scroll: auto)
+  ),
 
   // Shipyard: Flex Direction Utility
   flex-direction: (
