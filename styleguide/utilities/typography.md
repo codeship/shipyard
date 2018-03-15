@@ -1,6 +1,7 @@
 ---
 title: Shipyard Typography
 sass_file: shipyard/utilities/_typography
+white_shades: [100,90,80,70,60,50,40]
 text_sizes: [xxs, xs, sm, md, lg, xl, xxl, xxxl]
 text_shades: [darkest, darker, dark, normal, light, lighter, lightest]
 ---
@@ -59,9 +60,9 @@ text_shades: [darkest, darker, dark, normal, light, lighter, lightest]
     <h3>Inverse Text Shades</h3>
     <div class="box-secondary p-10 sm:p-15 md:p-20 lg:p-30 bg-gray-dark mt-10">
       <ul class="list medium">
-        {% for shade in page.text_shades %}
-          <li class="text-inverse{{ '-' | append: shade | replace: '-normal', '' }}">
-            .text-inverse{{ '-' | append: shade | replace: '-normal', '' }}
+        {% for shade in page.white_shades %}
+          <li class="white{{ '-' | append: shade | replace: '-100', '' }}">
+            .white{{ '-' | append: shade | replace: '-100', '' }}
           </li>
         {% endfor %}
       </ul>

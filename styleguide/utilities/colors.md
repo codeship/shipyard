@@ -18,7 +18,7 @@ base_colors: [Black, White]
         <div class="shade-box box bg-{{ color | color_css_class: shade }} shade-{{ shade | downcase | replace: 'er', '' | replace: 'est', '' }}">
           <div class="shade-color col-center text-xxl bold bg-{{ color | color_css_class: shade }}" shade-color></div>
           <p class="shade-text text-sm medium {{ color | color_css_class: shade }}">
-            ${{ color | color_css_class: shade }}
+            .{{ color | color_css_class: shade }}
           </p>
         </div>
       </li>
@@ -33,7 +33,7 @@ base_colors: [Black, White]
       <div class="shade-box box bg-{{ color | color_css_class: shade }} shade-{{ shade | downcase | replace: 'er', '' | replace: 'est', '' }}">
         <div class="shade-color text-xxl bold bg-{{ color | color_css_class: shade }}" shade-color></div>
         <p class="shade-text text-sm medium {{ color | color_css_class: shade }}">
-          ${{ color | color_css_class }}
+          .{{ color | color_css_class }}
         </p>
       </div>
     </li>

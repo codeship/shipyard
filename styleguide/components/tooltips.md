@@ -52,8 +52,8 @@ Useful when you need tooltips with content that's a bit more complex than your a
     <button class="btn btn-secondary btn-margin tooltip-parent">
       {{ direction | capitalize }}
       <div class="tooltip tooltip-{{ direction }} z-50">
-        <h3 class="text-inverse text-md mb-5">Tooltip {{ direction | capitalize }}</h3>
-        <p class="text-inverse-normal text-sm">Donec id elit non mi porta gravida at eget metus. Duis mollis, est non commodo luctus.</p>
+        <h3 class="white text-md mb-5">Tooltip {{ direction | capitalize }}</h3>
+        <p class="white-70 text-sm">Donec id elit non mi porta gravida at eget metus. Duis mollis, est non commodo luctus.</p>
       </div>
     </button>
   {% endfor %}

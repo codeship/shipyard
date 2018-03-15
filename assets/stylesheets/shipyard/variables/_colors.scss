@@ -1,6 +1,14 @@
 $shipyard-colors: (
   'black': #000,
+
+  // Shipyard: White
   'white': #fff,
+  'white-90': rgba(#fff, .9),
+  'white-80': rgba(#fff, .8),
+  'white-70': rgba(#fff, .7),
+  'white-60': rgba(#fff, .6),
+  'white-50': rgba(#fff, .5),
+  'white-40': rgba(#fff, .4),
 
   // Shipyard: Gray
   'gray': #788594,
@@ -81,5 +89,14 @@ $shipyard-colors: (
   'coral-lightest': lighten(#f9657a, 25%),
   'coral-dark': desaturate(darken(#f9657a, 20%), 35%),
   'coral-darker': desaturate(darken(#f9657a, 30%), 25%),
-  'coral-darkest': desaturate(darken(#f9657a, 40%), 15%)
+  'coral-darkest': desaturate(darken(#f9657a, 40%), 15%),
+
+  // Shipyard: Text Colors
+  'text-darkest': #162b44,
+  'text-darker': rgba(#162b44, .9),
+  'text-dark': rgba(#162b44, .8),
+  'text-normal': rgba(#162b44, .7),
+  'text-light': rgba(#162b44, .6),
+  'text-lighter': rgba(#162b44, .5),
+  'text-lightest': rgba(#162b44, .4)
 ) !default;
