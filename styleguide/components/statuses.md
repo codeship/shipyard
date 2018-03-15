@@ -16,7 +16,7 @@ Useful in tight spaces where it's still important to show status, but not import
   {% for status in page.statuses -%}
     <button class="btn btn-secondary btn-xs btn-rounded mr-5">
       <span class="status status-xs status-{{ status }}"></span>
-      <span class="text-sm medium ml-xs text-{{ status }}">{{ status | capitalize }}</span>
+      <span class="text-sm medium ml-5 text-{{ status }}">{{ status | capitalize }}</span>
     </button>
   {% endfor %}
 </div>
@@ -37,7 +37,7 @@ Useful when next to standard text where where it's important to show the status 
 {% for status in page.statuses -%}
   <button class="btn btn-secondary btn-sm btn-rounded mr-5">
     <span class="status status-{{ status }} status-sm"></span>
-    <span class="text-md medium ml-xs text-{{ status }}">{{ status | capitalize }}</span>
+    <span class="text-md medium ml-5 text-{{ status }}">{{ status | capitalize }}</span>
   </button>
 {% endfor %}
 
