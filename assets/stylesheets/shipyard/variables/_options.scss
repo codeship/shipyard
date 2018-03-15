@@ -145,7 +145,7 @@ $shipyard-options: (
   white-space: (
     prefix: 'white-space',
     responsive: false,
-    values: (nowrap)
+    values: (normal, pre, nowrap)
   ),
 
   // Shipyard: Text-Align Utilities
@@ -258,6 +258,13 @@ $shipyard-options: (
     prefix: null,
     responsive: false,
     values: (static, relative, absolute, fixed)
+  ),
+
+  // Shipyard: Text-Overflow Utility
+  text-overflow: (
+    prefix: 'text-overflow',
+    responsive: true,
+    values: (ellipsis, clip)
   ),
 
   // Shipyard: Transition Utility Speeds
