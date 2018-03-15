@@ -131,11 +131,15 @@ $shipyard-options: (
   ),
 
   // Shipyard: Font-Weight Utility
-  // font-weight: (
-  //   prefix: null,
-  //   responsive: true,
-  //   values: (normal, medium, bold)
-  // ),
+  font-weight: (
+    prefix: null,
+    responsive: true,
+    values: (
+      normal: $normal,
+      medium: $medium,
+      bold: $bold
+    )
+  ),
 
   // Shipyard: White-Space Utilities
   white-space: (
@@ -192,7 +196,7 @@ $shipyard-options: (
     responsive: false,
     values: (auto, hidden, visible)
   ),
-  
+
   overflow-x: (
     prefix: 'overflow-x',
     responsive: false,

@@ -18,7 +18,7 @@ title: Shipyard Stats
       {% for hash in sass -%}
         {% if hash[0] == 'file' -%}
           <td>
-            <a href="https://github.com/codeship/shipyard/blob/master/assets/stylesheets/{{ hash[1] }}" target="_blank" class="strong blue-dark">
+            <a href="https://github.com/codeship/shipyard/blob/master/assets/stylesheets/{{ hash[1] }}" target="_blank" class="bold blue-dark">
               {{ hash[1] }}
             </a>
           </td>

@@ -30,7 +30,7 @@ text_shades: [darkest, darker, dark, normal, light, lighter, lightest]
     <ul>
       <li class="normal">.normal</li>
       <li class="medium">.medium</li>
-      <li class="strong">.strong</li>
+      <li class="bold">.bold</li>
     </ul>
   </div>
   <div class="col">
