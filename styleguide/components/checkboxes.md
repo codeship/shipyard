@@ -249,19 +249,19 @@ Each size can be used or altered at any breakpoint.
 
 <ul class="input-list">
   <li class="input-item">
-    <input id="small-switch-on-sm" type="checkbox" class="input input-switch input-switch-sm align-middle" checked />
+    <input id="small-switch-on-sm" type="checkbox" class="input input-switch input-switch-sm center-obj" checked />
     <label for="small-switch-on-sm" class="text-sm text-light ml-5 medium">Small</label>
   </li>
   <li class="input-item">
-    <input id="small-switch-on-md" type="checkbox" class="input input-switch align-middle" checked />
+    <input id="small-switch-on-md" type="checkbox" class="input input-switch center-obj" checked />
     <label for="small-switch-on-md" class="text-sm text-light ml-5 medium">Medium (Default)</label>
   </li>
   <li class="input-item">
-    <input id="small-switch-on-lg" type="checkbox" class="input input-switch input-switch-lg align-middle" checked />
+    <input id="small-switch-on-lg" type="checkbox" class="input input-switch input-switch-lg center-obj" checked />
     <label for="small-switch-on-lg" class="text-sm text-light ml-5 medium">Large</label>
   </li>
   <li class="input-item">
-    <input id="small-switch-on-xl" type="checkbox" class="input input-switch input-switch-xl align-middle" checked />
+    <input id="small-switch-on-xl" type="checkbox" class="input input-switch input-switch-xl center-obj" checked />
     <label for="small-switch-on-xl" class="text-sm text-light ml-5 medium">X-Large</label>
   </li>
 </ul>

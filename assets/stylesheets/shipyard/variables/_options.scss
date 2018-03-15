@@ -59,6 +59,13 @@ $shipyard-defaults: (
     values: (auto, pointer, default)
   ),
 
+  // Shipyard: Center
+  center: (
+    prefix: 'center',
+    responsive: true,
+    values: ()
+  ),
+
   // Shipyard: Margin Utilities
   margin: (
     prefix: 'm',
