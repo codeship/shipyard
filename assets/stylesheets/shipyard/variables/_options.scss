@@ -1,4 +1,4 @@
-$shipyard-options: (
+$shipyard-defaults: (
 
   // Shipyard: Color Utilities
   color: (
@@ -135,9 +135,8 @@ $shipyard-options: (
     prefix: null,
     responsive: true,
     values: (
-      normal: $normal,
-      medium: $medium,
-      bold: $bold
+      normal: normal,
+      bold: bold
     )
   ),
 
@@ -294,7 +293,11 @@ $shipyard-options: (
     responsive: false,
     values: (0, 10, 20, 30, 40, 50, 60, 70, 80, 90, 100, 200, auto)
   )
-) !default;
+);
+
+// Merge the default options and the custom options together.
+$shipyard-options: () !default;
+$shipyard-options: map-merge-options($shipyard-defaults, $shipyard-options);
 
 // TODO: Remove these variables someday in favor of the maps.
 $margins: map-get($shipyard-options, margins);
