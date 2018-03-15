@@ -34,7 +34,7 @@ module Shipyard
         if dismissible
           concat content_tag(:button,
                    icon(:x, class: 'alert-close-icon icon-outline-inverse center'),
-                   class: 'alert-close v-center',
+                   class: 'alert-close center-v',
                    shipyard: 'alert-close'
                  )
         end
