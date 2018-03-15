@@ -248,6 +248,16 @@ $shipyard-options: (
     )
   ),
 
+  // Shipyard: Transform Utility
+  transform: (
+    prefix: null,
+    responsive: false,
+    values: (
+      rotate-45: rotate(45deg),
+      rotate-90: rotate(90deg)
+    )
+  ),
+
   // Shipyard: Z-Index Utility
   z-index: (
     prefix: 'z',
