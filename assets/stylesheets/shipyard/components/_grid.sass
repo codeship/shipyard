@@ -1,0 +1,62 @@
+$name: grid
+$utility: map-get($shipyard-options, $name)
+
+@if $utility != false
+  $prefix: map-get($utility, prefix)
+  $utility-values: map-get($utility, values)
+  $utility-is-responsive: map-get($utility, responsive)
+
+  .#{$prefix}
+    display: block
+    position: relative
+    flex-basis: 0
+    flex-grow: 1
+    flex-shrink: 1
+    flex-direction: column
+    padding-left: 15px
+    padding-right: 15px
+
+    &-container
+      display: flex
+      flex-wrap: wrap
+      margin-left: -15px
+      margin-right: -15px
+      &-nowrap
+        display: flex
+        flex-wrap: nowrap
+        margin-left: -15px
+        margin-right: -15px
+
+    &-center,
+    &-v-center
+      display: flex
+      justify-content: center
+    &-center
+      align-items: center
+
+    // Print out styles for all screens
+    @each $width in $utility-values
+      &-#{$width}
+        +column-style(max-width, $width)
+        +column-style(flex-basis, $width)
+      &-offset-#{$width}
+        +column-style(margin-left, $width)
+
+  // Print out styles for all breakpoints
+  @if $utility-is-responsive
+    @each $breakpoint, $min-width in $breakpoints
+      @media screen and (min-width:#{$min-width})
+        .#{$breakpoint + '\\:' + $prefix}
+          &-center,
+          &-v-center
+            display: flex
+            justify-content: center
+          &-center
+            align-items: center
+
+          @each $width in $utility-values
+            &-#{$width}
+              +column-style(max-width, $width)
+              +column-style(flex-basis, $width)
+            &-offset-#{$width}
+              +column-style(margin-left, $width)

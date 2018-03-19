@@ -1,89 +1,102 @@
-$colors: (
-  "black": (
-    base: #000
-  ),
-  "white": (
-    base: #fff
-  ),
-  "gray": (
-    base: #788594,
-    light: #bac5d2,
-    lighter: #dfe6eb,
-    lightest: #f2f5f7,
-    dark: darken(#788594, 18%),
-    darker: #313a44,
-    darkest: #1e252c
-  ),
-  "green": (
-    base: darken(#3acc7c, 3%),
-    light: lighten(#3acc7c, 22%),
-    lighter: lighten(#3acc7c, 34%),
-    lightest: lighten(#3acc7c, 41%),
-    dark: darken(#3acc7c, 18%),
-    darker: darken(#3acc7c, 26%),
-    darkest: darken(#3acc7c, 32%)
-  ),
-  "blue": (
-    base: #1ca1e3,
-    light: lighten(#5eb9e6, 15%),
-    lighter: lighten(#9ed8f5, 9%),
-    lightest: lighten(#9ed8f5, 15%),
-    dark: #0075b0,
-    darker: darken(#0075b0, 7%),
-    darkest: darken(#004d73, 5%)
-  ),
-  "teal": (
-    base: #20a5a8,
-    light: #6ab7b9,
-    lighter: #b2dbdc,
-    lightest: lighten(#b2dbdc, 13%),
-    dark: darken(#20a5a8, 8%),
-    darker: darken(#20a5a8, 16%),
-    darkest: darken(#20a5a8, 24%)
-  ),
-  "red": (
-    base: #e06158,
-    light: lighten(#e06158, 8%),
-    lighter: lighten(#e06158, 16%),
-    lightest: lighten(#e06158, 32%),
-    dark: #b13b39,
-    darker: #892120,
-    darkest: desaturate(darken(#892120, 8%), 0%)
-  ),
-  "yellow": (
-    base: #ffca49,
-    light: lighten(#ffca49, 8%),
-    lighter: #ffe7b1,
-    lightest: lighten(#ffe7b1, 7%),
-    dark: darken(#ffca49, 20%),
-    darker: darken(#ffca49, 30%),
-    darkest: darken(#ffca49, 47%)
-  ),
-  "orange": (
-    base: #ff9f49,
-    light: lighten(#ff9f49, 7%),
-    lighter: lighten(#ff9f49, 14%),
-    lightest: lighten(#ff9f49, 21%),
-    dark: desaturate(darken(#ff9f49, 10%), 35%),
-    darker: desaturate(darken(#ff9f49, 20%), 25%),
-    darkest: desaturate(darken(#ff9f49, 30%), 15%)
-  ),
-  "purple": (
-    base: #bf8df6,
-    light: lighten(#bf8df6, 10%),
-    lighter: lighten(#bf8df6, 15%),
-    lightest: lighten(#bf8df6, 20%),
-    dark: desaturate(darken(#bf8df6, 20%), 35%),
-    darker: desaturate(darken(#bf8df6, 35%), 35%),
-    darkest: desaturate(darken(#bf8df6, 50%), 35%)
-  ),
-  "coral": (
-    base: #f9657a,
-    light: lighten(#f9657a, 8%),
-    lighter: lighten(#f9657a, 16%),
-    lightest: lighten(#f9657a, 25%),
-    dark: desaturate(darken(#f9657a, 20%), 35%),
-    darker: desaturate(darken(#f9657a, 30%), 25%),
-    darkest: desaturate(darken(#f9657a, 40%), 15%)
-  )
+$shipyard-colors: (
+  'black': #000,
+
+  // Shipyard: White
+  'white': #fff,
+  'white-90': rgba(#fff, .9),
+  'white-80': rgba(#fff, .8),
+  'white-70': rgba(#fff, .7),
+  'white-60': rgba(#fff, .6),
+  'white-50': rgba(#fff, .5),
+  'white-40': rgba(#fff, .4),
+
+  // Shipyard: Gray
+  'gray': #788594,
+  'gray-light': #bac5d2,
+  'gray-lighter': #dfe6eb,
+  'gray-lightest': #f2f5f7,
+  'gray-dark': darken(#788594, 18%),
+  'gray-darker': #313a44,
+  'gray-darkest': #1e252c,
+
+  // Shipyard: Green
+  'green': darken(#3acc7c, 3%),
+  'green-light': lighten(#3acc7c, 22%),
+  'green-lighter': lighten(#3acc7c, 34%),
+  'green-lightest': lighten(#3acc7c, 41%),
+  'green-dark': darken(#3acc7c, 18%),
+  'green-darker': darken(#3acc7c, 26%),
+  'green-darkest': darken(#3acc7c, 32%),
+
+  // Shipyard: Blue
+  'blue': #1ca1e3,
+  'blue-light': lighten(#5eb9e6, 15%),
+  'blue-lighter': lighten(#9ed8f5, 9%),
+  'blue-lightest': lighten(#9ed8f5, 15%),
+  'blue-dark': #0075b0,
+  'blue-darker': darken(#0075b0, 7%),
+  'blue-darkest': darken(#004d73, 5%),
+
+  // Shipyard: Teal
+  'teal': #20a5a8,
+  'teal-light': #6ab7b9,
+  'teal-lighter': #b2dbdc,
+  'teal-lightest': lighten(#b2dbdc, 13%),
+  'teal-dark': darken(#20a5a8, 8%),
+  'teal-darker': darken(#20a5a8, 16%),
+  'teal-darkest': darken(#20a5a8, 24%),
+
+  // Shipyard: Red
+  'red': #e06158,
+  'red-light': lighten(#e06158, 8%),
+  'red-lighter': lighten(#e06158, 16%),
+  'red-lightest': lighten(#e06158, 32%),
+  'red-dark': #b13b39,
+  'red-darker': #892120,
+  'red-darkest': desaturate(darken(#892120, 8%), 0%),
+
+  // Shipyard: Yellow
+  'yellow': #ffca49,
+  'yellow-light': lighten(#ffca49, 8%),
+  'yellow-lighter': #ffe7b1,
+  'yellow-lightest': lighten(#ffe7b1, 7%),
+  'yellow-dark': darken(#ffca49, 20%),
+  'yellow-darker': darken(#ffca49, 30%),
+  'yellow-darkest': darken(#ffca49, 47%),
+
+  // Shipyard: Orange
+  'orange': #ff9f49,
+  'orange-light': lighten(#ff9f49, 7%),
+  'orange-lighter': lighten(#ff9f49, 14%),
+  'orange-lightest': lighten(#ff9f49, 21%),
+  'orange-dark': desaturate(darken(#ff9f49, 10%), 35%),
+  'orange-darker': desaturate(darken(#ff9f49, 20%), 25%),
+  'orange-darkest': desaturate(darken(#ff9f49, 30%), 15%),
+
+  // Shipyard: Purple
+  'purple': #bf8df6,
+  'purple-light': lighten(#bf8df6, 10%),
+  'purple-lighter': lighten(#bf8df6, 15%),
+  'purple-lightest': lighten(#bf8df6, 20%),
+  'purple-dark': desaturate(darken(#bf8df6, 20%), 35%),
+  'purple-darker': desaturate(darken(#bf8df6, 35%), 35%),
+  'purple-darkest': desaturate(darken(#bf8df6, 50%), 35%),
+
+  // Shipyard: Coral
+  'coral': #f9657a,
+  'coral-light': lighten(#f9657a, 8%),
+  'coral-lighter': lighten(#f9657a, 16%),
+  'coral-lightest': lighten(#f9657a, 25%),
+  'coral-dark': desaturate(darken(#f9657a, 20%), 35%),
+  'coral-darker': desaturate(darken(#f9657a, 30%), 25%),
+  'coral-darkest': desaturate(darken(#f9657a, 40%), 15%),
+
+  // Shipyard: Text Colors
+  'text-darkest': #162b44,
+  'text-darker': rgba(#162b44, .9),
+  'text-dark': rgba(#162b44, .8),
+  'text-normal': rgba(#162b44, .7),
+  'text-light': rgba(#162b44, .6),
+  'text-lighter': rgba(#162b44, .5),
+  'text-lightest': rgba(#162b44, .4)
 ) !default;

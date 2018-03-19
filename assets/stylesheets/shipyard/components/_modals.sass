@@ -10,7 +10,6 @@
 
   &-container
     @extend .col-center !optional
-    +z-index
     top: 0
     left: 0
     right: 0
@@ -25,7 +24,7 @@
   &-content
     background: #fff
     border-radius: 5px 5px 0 0
-    +respond-to(padding, (x0: 15px, x1: 20px, x2: 30px))
+    +respond-to(padding, (all: 15px, sm: 20px, md: 30px))
 
   &-title
     line-height: 1
@@ -38,4 +37,4 @@
   &-ctas
     background: $gray-lightest
     border-radius: 0 0 5px 5px
-    +respond-to(padding, (x0: 10px 15px, x1: 15px 20px, x2: 15px 30px))
+    +respond-to(padding, (all: 10px 15px, sm: 15px 20px, md: 15px 30px))

@@ -17,7 +17,7 @@ Used to display notes, tips, and other non-critical information.
     Ten other people are also viewing tickets for [this flight](#).
     Use the code `Travel_Light_2017` before you book your flight.
   </p>
-  {% btn Call to Action, :sm, class: 'note-cta' %}
+  <button class="btn btn-sm note-cta">Call to Action</button>
 {% endnote %}
 
 ---
@@ -31,7 +31,7 @@ Useful when drawing attention to non-critical information or actions we want the
     Ten other people are also viewing tickets for [this flight](#).
     Use the code `Travel_Light_2017` before you book your flight.
   </p>
-  {% btn Call to Action, :sm, class: 'note-cta' %}
+  <button class="btn btn-sm note-cta">Call to Action</button>
 {% endnote %}
 
 ---
@@ -45,7 +45,7 @@ Useful when drawing attention to interactions that have produced successful resu
     Pack your bags! You'll be on the next flight to Hawaii.
     Use the code `Travel_Light_2017` on your next flight. In the meantime you can [invite a friend](#) to this flight.
   </p>
-  {% btn Call to Action, :sm, class: 'note-cta' %}
+  <button class="btn btn-sm note-cta">Call to Action</button>
 {% endnote %}
 
 ---
@@ -59,7 +59,7 @@ Useful when drawing attention to critical information.
     There are only 2 seats left on this flight! We recommend to [book your tickets](#) as soon as possible.
     Use the code `Travel_Light_2017` before you book your flight.
   </p>
-  {% btn Call to Action, :sm, class: 'note-cta' %}
+  <button class="btn btn-sm note-cta">Call to Action</button>
 {% endnote %}
 
 ---

@@ -29,84 +29,80 @@
 
 @mixin all-media-sizes
   @content
-  +media-sizes
-    @content
-
-@mixin media-sizes
   @each $breakpoint, $min-width in $breakpoints
-    &-#{$breakpoint}
+    @at-root #{".#{$breakpoint}\\:" + str-slice("#{&}", 2)}
       +media(min-width $min-width)
         @content
 
-@mixin breakpoint-x0
-  +media(max-width map-get($breakpoints, x1) - 1)
+@mixin breakpoint-all
+  +media(max-width map-get($breakpoints, sm) - 1)
     @content
 
-@mixin breakpoint-x1
-  +media(min-width map-get($breakpoints, x1))
+@mixin breakpoint-sm
+  +media(min-width map-get($breakpoints, sm))
     @content
 
-@mixin breakpoint-x2
-  +media(min-width map-get($breakpoints, x2))
+@mixin breakpoint-md
+  +media(min-width map-get($breakpoints, md))
     @content
 
-@mixin breakpoint-x3
-  +media(min-width map-get($breakpoints, x3))
+@mixin breakpoint-lg
+  +media(min-width map-get($breakpoints, lg))
     @content
 
-@mixin breakpoint-x4
-  +media(min-width map-get($breakpoints, x4))
+@mixin breakpoint-xl
+  +media(min-width map-get($breakpoints, xl))
     @content
 
 @mixin responsive-padding($properties: null, $divisor: 2)
   transition: padding 500ms ease
   @if $properties
     @each $property in $properties
-      padding-#{$property}: map-get($margins, x0) / $divisor
-    +breakpoint-x1
+      padding-#{$property}: map-get($margins, all) / $divisor
+    +breakpoint-sm
       @each $property in $properties
-        padding-#{$property}: map-get($margins, x1) / $divisor
-    +breakpoint-x2
+        padding-#{$property}: map-get($margins, sm) / $divisor
+    +breakpoint-md
       @each $property in $properties
-        padding-#{$property}: map-get($margins, x2) / $divisor
+        padding-#{$property}: map-get($margins, md) / $divisor
   @else
-    +respond-to(padding, (x0: map-get($margins, x0), x1: map-get($margins, x1), x2: map-get($margins, x2)))
+    +respond-to(padding, (all: map-get($margins, all), sm: map-get($margins, sm), md: map-get($margins, md)))
 
 @mixin responsive-margin($properties, $divisor: 2)
   transition: margin 500ms ease
   @each $property in $properties
-    margin-#{$property}: map-get($margins, x0) / $divisor
-  +breakpoint-x1
+    margin-#{$property}: map-get($margins, all) / $divisor
+  +breakpoint-sm
     @each $property in $properties
-      margin-#{$property}: map-get($margins, x1) / $divisor
-  +breakpoint-x2
+      margin-#{$property}: map-get($margins, sm) / $divisor
+  +breakpoint-md
     @each $property in $properties
-      margin-#{$property}: map-get($margins, x2) / $divisor
+      margin-#{$property}: map-get($margins, md) / $divisor
 
 @mixin respond-to($property, $breakpoints)
-  @if map-has-key($breakpoints, x0)
-    #{$property}: map-get($breakpoints, x0)
-  @if map-has-key($breakpoints, x1)
-    +breakpoint-x1
-      #{$property}: map-get($breakpoints, x1)
-  @if map-has-key($breakpoints, x2)
-    +breakpoint-x2
-      #{$property}: map-get($breakpoints, x2)
-  @if map-has-key($breakpoints, x3)
-    +breakpoint-x3
-      #{$property}: map-get($breakpoints, x3)
+  @if map-has-key($breakpoints, all)
+    #{$property}: map-get($breakpoints, all)
+  @if map-has-key($breakpoints, sm)
+    +breakpoint-sm
+      #{$property}: map-get($breakpoints, sm)
+  @if map-has-key($breakpoints, md)
+    +breakpoint-md
+      #{$property}: map-get($breakpoints, md)
+  @if map-has-key($breakpoints, lg)
+    +breakpoint-lg
+      #{$property}: map-get($breakpoints, lg)
 
 @mixin responsive-left
-  +respond-to(left, (x0: map-get($margins, x0), x1: map-get($margins, x1), x2: map-get($margins, x2)))
+  +respond-to(left, (all: map-get($margins, all), sm: map-get($margins, sm), md: map-get($margins, md)))
 
 @mixin responsive-right
-  +respond-to(right, (x0: map-get($margins, x0), x1: map-get($margins, x1), x2: map-get($margins, x2)))
+  +respond-to(right, (all: map-get($margins, all), sm: map-get($margins, sm), md: map-get($margins, md)))
 
 @mixin responsive-padding-left
-  +respond-to(padding-left, (x0: map-get($margins, x0), x1: map-get($margins, x1), x2: map-get($margins, x2)))
+  +respond-to(padding-left, (all: map-get($margins, all), sm: map-get($margins, sm), md: map-get($margins, md)))
 
 @mixin responsive-padding-right
-  +respond-to(padding-right, (x0: map-get($margins, x0), x1: map-get($margins, x1), x2: map-get($margins, x2)))
+  +respond-to(padding-right, (all: map-get($margins, all), sm: map-get($margins, sm), md: map-get($margins, md)))
 
 @function merge-and-add($map1, $map2)
-  @return (x0: map-get($map1, x0) + map-get($map2, x0), x1: map-get($map1, x1) + map-get($map2, x1), x2: map-get($map1, x2) + map-get($map2, x2))
+  @return (all: map-get($map1, all) + map-get($map2, all), sm: map-get($map1, sm) + map-get($map2, sm), md: map-get($map1, md) + map-get($map2, md))

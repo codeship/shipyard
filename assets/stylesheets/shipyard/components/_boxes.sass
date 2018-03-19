@@ -5,10 +5,8 @@
 
   &, &-link, &-secondary
     display: block
-    position: relative
-    border-radius: 4px
+    border-radius: 5px
     transition: color 300ms ease, background-color 300ms ease, border-color 300ms ease, box-shadow 300ms ease
-    +clearfix
 
   &-secondary
     background: $gray-lighter
@@ -26,15 +24,3 @@
       outline: none
       cursor: default
       box-shadow: 0 0 4px 1px rgba(darken($green, 5%),.75)
-
-  &-padding
-    +respond-to(padding, $margins)
-
-  &-rounded
-    border-radius: 1000px
-
-  // Box Sizes
-  +all-media-sizes
-    @each $size, $height in (xxs: 50px, xs: 60px, sm: 70px, md: 80px, lg: 90px, xl: 100px, xxl: 110px)
-      &-#{$size}
-        height: $height

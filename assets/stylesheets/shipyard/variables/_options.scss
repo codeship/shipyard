@@ -1,0 +1,322 @@
+$shipyard-defaults: (
+
+  // Shipyard: Color Utilities
+  color: (
+    prefix: null,
+    responsive: false,
+    values: $shipyard-colors
+  ),
+
+  // Shipyard: Color Utilities
+  background-color: (
+    prefix: 'bg',
+    responsive: false,
+    values: $shipyard-colors
+  ),
+
+  // Shipyard: Box-Shadow Utility
+  box-shadow: (
+    prefix: 'box-shadow',
+    responsive: false,
+    values: (
+      '': 0 1px 2px rgba($gray-darkest, .08),
+      hover: 0 0 4px 1px rgba($blue, .5),
+      active: 0 0 4px 1px rgba($green, .75)
+    )
+  ),
+
+  // Shipyard: Breakpoints
+  breakpoints: (
+    sm: 576px,
+    md: 768px,
+    lg: 992px,
+    xl: 1200px
+  ),
+
+  // Shipyard: Margins (TODO: Deprecate this map)
+  margins: (
+    all: 10px,
+    sm: 20px,
+    md: 30px,
+    lg: 30px,
+    xl: 40px
+  ),
+
+  // Shipyard: Grid Component
+  grid: (
+    prefix: 'col',
+    responsive: true,
+    values: (0, 5, 10, 15, 20, 25, 30, 33, 35, 40, 45, 50, 55, 60, 65, 66, 70, 75, 80, 85, 90, 95, 100)
+  ),
+
+  // Shipyard: Height Component
+  height: (
+    prefix: 'h',
+    responsive: true,
+    values: (
+      '50': 50px,
+      '60': 60px,
+      '70': 70px,
+      '80': 80px,
+      '90': 90px,
+      '100': 100px
+    )
+  ),
+
+  // Shipyard: Cursor Utility
+  cursor: (
+    prefix: 'cursor',
+    responsive: false,
+    values: (auto, pointer, default)
+  ),
+
+  // Shipyard: Center
+  center: (
+    prefix: 'center',
+    responsive: true,
+    values: ()
+  ),
+
+  // Shipyard: Margin Utilities
+  margin: (
+    prefix: 'm',
+    responsive: true,
+    variants: (t: top, b: bottom, l: left, r: right),
+    values: (
+      0: 0,
+      5: 5px,
+      10: 10px,
+      15: 15px,
+      20: 20px,
+      30: 30px,
+      40: 40px,
+      auto: auto
+    )
+  ),
+
+  // Shipyard: Padding Utilities
+  padding: (
+    prefix: 'p',
+    responsive: true,
+    variants: (t: top, b: bottom, l: left, r: right),
+    values: (
+      0: 0,
+      5: 5px,
+      10: 10px,
+      15: 15px,
+      20: 20px,
+      30: 30px,
+      40: 40px
+    )
+  ),
+
+  // Shipyard: Display Utilities
+  display: (
+    prefix: null,
+    responsive: true,
+    values: (
+      'flex': flex,
+      'block': block,
+      'table': table,
+      'inline': inline,
+      'inline-block': inline-block,
+      'hidden': none
+    )
+  ),
+
+  // Shipyard: Font-Family Utility
+  font-family: (
+    prefix: null,
+    responsive: false,
+    values: (
+      'sans-serif': $font-family,
+      'monospace': $font-monospace
+    )
+  ),
+
+  // Shipyard: Font-Size Utility
+  font-size: (
+    prefix: 'text',
+    responsive: true,
+    values: $font-sizes
+  ),
+
+  // Shipyard: Font-Style Utility
+  font-style: (
+    prefix: null,
+    responsive: false,
+    values: (italic)
+  ),
+
+  // Shipyard: Font-Weight Utility
+  font-weight: (
+    prefix: null,
+    responsive: true,
+    values: (
+      normal: normal,
+      bold: bold
+    )
+  ),
+
+  // Shipyard: White-Space Utilities
+  white-space: (
+    prefix: 'white-space',
+    responsive: true,
+    values: (normal, pre, nowrap)
+  ),
+
+  // Shipyard: Text-Align Utilities
+  text-align: (
+    prefix: 'align',
+    responsive: true,
+    values: (center, left, right)
+  ),
+
+  // Shipyard: Text-Direction Utilities
+  text-decoration: (
+    prefix: null,
+    responsive: false,
+    values: (
+      'line-through': line-through,
+      'underline': underline,
+      'no-underline': none
+    )
+  ),
+
+  // Shipyard: Text-Align Utilities
+  text-shadow: (
+    prefix: 'text-shadow',
+    responsive: false,
+    values: (
+      xs: 0 1px 0 rgba(#000,.1),
+      sm: 0 1px 1px rgba(#000, .1)
+    )
+  ),
+
+  // Shipyard: Text-Transform Utility
+  text-transform: (
+    prefix: null,
+    responsive: false,
+    values: (uppercase, lowercase, capitalize)
+  ),
+
+  // Shipyard: Float Utilities
+  float: (
+    prefix: 'float',
+    responsive: true,
+    values: (none, left, right)
+  ),
+
+  // Shipyard: Overflow Utility
+  overflow: (
+    prefix: 'overflow',
+    responsive: true,
+    values: (auto, hidden, visible)
+  ),
+
+  overflow-x: (
+    prefix: 'overflow-x',
+    responsive: true,
+    values: (scroll: auto)
+  ),
+
+  overflow-y: (
+    prefix: 'overflow-y',
+    responsive: true,
+    values: (scroll: auto)
+  ),
+
+  // Shipyard: Flex Direction Utility
+  flex-direction: (
+    prefix: 'flex',
+    responsive: true,
+    values: (
+      'row': row,
+      'row-reverse': row-reverse,
+      'col': column,
+      'col-reverse': column-reverse
+    )
+  ),
+
+  // Shipyard: Border-Radius Utility
+  border-radius: (
+    prefix: 'rounded',
+    responsive: true,
+    values: (
+      '': 5px,
+      '0': 0,
+      'xs': 2px,
+      'sm': 3px,
+      'md': 5px,
+      'pill': 999px
+    )
+  ),
+
+  // Shipyard: Opacity Utility
+  opacity: (
+    prefix: 'o',
+    responsive: false,
+    values: (
+      '90': .9,
+      '80': .8,
+      '70': .7,
+      '60': .6,
+      '50': .5,
+      '40': .4,
+      '30': .3,
+      '20': .2,
+      '10': .1,
+      '0': 0
+    )
+  ),
+
+  // Shipyard: Position Utility
+  position: (
+    prefix: null,
+    responsive: true,
+    values: (static, relative, absolute, fixed)
+  ),
+
+  // Shipyard: Text-Overflow Utility
+  text-overflow: (
+    prefix: null,
+    responsive: true,
+    values: (ellipsis, clip)
+  ),
+
+  // Shipyard: Transition Utility Speeds
+  transition: (
+    prefix: 'ease',
+    responsive: false,
+    values: (
+      '150ms': all 150ms ease,
+      '300ms': all 300ms ease,
+      '600ms': all 600ms ease
+    )
+  ),
+
+  // Shipyard: Transform Utility
+  transform: (
+    prefix: null,
+    responsive: false,
+    values: (
+      rotate-45: rotate(45deg),
+      rotate-90: rotate(90deg)
+    )
+  ),
+
+  // Shipyard: Z-Index Utility
+  z-index: (
+    prefix: 'z',
+    responsive: false,
+    values: (0, 10, 20, 30, 40, 50, 60, 70, 80, 90, 100, 200, auto)
+  )
+);
+
+// Merge the default options and the custom options together.
+$shipyard-options: () !default;
+$shipyard-options: map-merge-options($shipyard-defaults, $shipyard-options);
+
+// TODO: Remove these variables someday in favor of the maps.
+$margins: map-get($shipyard-options, margins);
+$breakpoints: map-get($shipyard-options, breakpoints);

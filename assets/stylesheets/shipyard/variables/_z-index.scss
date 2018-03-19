@@ -1,9 +1,0 @@
-$z-index-defaults: (
-  modal: 200,
-  header: 100,
-  tooltip-arrow: 51,
-  tooltip: 50
-) !default;
-
-$z-index-options: () !default;
-$z-index: map-merge-options($z-index-defaults, $z-index-options);

@@ -1,16 +1,10 @@
-.center
-  +all-media-sizes
-    +center
-
-.v-center
-  +all-media-sizes
++utility(center)
+  +center
+  &-v
     +center($vertical: true)
-
-.h-center
-  +all-media-sizes
+  &-h
     +center($horizontal: true)
-
-.align-middle
-  top: -1px
-  position: relative
-  vertical-align: middle
+  &-obj
+    top: -1px
+    position: relative
+    vertical-align: middle

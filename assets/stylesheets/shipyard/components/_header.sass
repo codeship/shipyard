@@ -5,32 +5,32 @@
   right: 0
   position: fixed
   transition: height 250ms ease, background-color 250ms ease
-  +respond-to(overflow, (x0: hidden, x1: visible))
-  +respond-to(height, (x0: 50px, x1: 60px, x2: 70px))
-  +respond-to(text-align, (x0: center, x1: left))
-  +respond-to(line-height, (x0: 50px, x1: 60px, x2: 70px))
+  +respond-to(overflow, (all: hidden, sm: visible))
+  +respond-to(height, (all: 50px, sm: 60px, md: 70px))
+  +respond-to(text-align, (all: center, sm: left))
+  +respond-to(line-height, (all: 50px, sm: 60px, md: 70px))
   .hamburger-button-clicked &
     height: 100%
 
   +sub-component('logo')
     display: inline-block
-    +respond-to(margin, (x0: 0 auto, x1: 0))
-    +respond-to(font-size, (x0: 20px, x1: 24px))
-    +respond-to(float, (x1: left))
+    +respond-to(margin, (all: 0 auto, sm: 0))
+    +respond-to(font-size, (all: 20px, sm: 24px))
+    +respond-to(float, (sm: left))
     a
       color: $blue-darkest
 
   +sub-component('list')
-    +respond-to(float, (x1: right))
-    +respond-to(margin-right, (x1: -15px))
+    +respond-to(float, (sm: right))
+    +respond-to(margin-right, (sm: -15px))
 
   &-item
-    +respond-to(margin, (x1: 0 15px))
-    +respond-to(display, (x0: block, x1: inline))
+    +respond-to(margin, (sm: 0 15px))
+    +respond-to(display, (all: block, sm: inline))
     &-cta
-      +respond-to(top, (x0: 0, x1: auto))
-      +respond-to(right, (x0: 10px, x1: auto))
-      +respond-to(position, (x0: fixed, x1: static))
+      +respond-to(top, (all: 0, sm: auto))
+      +respond-to(right, (all: 10px, sm: auto))
+      +respond-to(position, (all: fixed, sm: static))
 
   &-link
     color: inherit

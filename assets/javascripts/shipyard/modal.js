@@ -6,12 +6,12 @@ class Modal extends Shipyard {
   }
 
   open () {
-    this.removeClass('display-none')
+    this.removeClass('hidden')
     shipyard.addClass('modal-open')
   }
 
   close () {
-    this.addClass('display-none')
+    this.addClass('hidden')
     shipyard.removeClass('modal-open')
   }
 }

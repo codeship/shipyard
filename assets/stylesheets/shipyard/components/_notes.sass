@@ -1,10 +1,10 @@
 +component('note')
   display: block
   position: relative
-  +respond-to(min-height, (x0: 50px, x1: 60px))
-  +respond-to(margin, (x0: 10px 0, x1: 15px 0))
-  +respond-to(padding, (x0: 12px 10px, x1: 17px 20px, x2: 17px 30px))
-  a, strong, .strong
+  +respond-to(min-height, (all: 50px, sm: 60px))
+  +respond-to(margin, (all: 10px 0, sm: 15px 0))
+  +respond-to(padding, (all: 12px 10px, sm: 17px 20px, md: 17px 30px))
+  a, strong, .bold
     &:not(.btn)
       font-weight: $bold
 
@@ -19,11 +19,11 @@
 
   // Note: CTAs
   &-cta
-    +breakpoint-x0
+    +breakpoint-all
       display: block
       text-align: center
       margin-top: 10px
-    +breakpoint-x1
+    +breakpoint-sm
       top: 50%
       right: 10px
       position: absolute
