@@ -1,7 +1,7 @@
 ---
 title: Box-Shadow Utilities
 sass_file: shipyard/utilities/_box-shadow
-options: [default, hover, active]
+options: [box-shadow, box-shadow-hover, box-shadow-active]
 ---
 
 {% include page-heading.html page=page %}
@@ -9,8 +9,8 @@ options: [default, hover, active]
 ---
 
 {% for option in page.options -%}
-  <div class="bg-white box-shadow-{{ option }} rounded p-20 text-normal mb-20">
-    .box-shadow-{{ option }}
+  <div class="{{ option }} bg-white rounded p-20 text-normal mb-20">
+    {{ option }}
   </div>
 {% endfor %}
 
