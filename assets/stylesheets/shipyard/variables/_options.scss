@@ -14,6 +14,17 @@ $shipyard-defaults: (
     values: $shipyard-colors
   ),
 
+  // Shipyard: Box-Shadow Utility
+  box-shadow: (
+    prefix: 'box-shadow',
+    responsive: false,
+    values: (
+      default: 0 1px 2px rgba($gray-darkest, .08),
+      hover: 0 0 4px 1px rgba($blue, .5),
+      active: 0 0 4px 1px rgba($green, .75)
+    )
+  ),
+
   // Shipyard: Breakpoints
   breakpoints: (
     sm: 576px,
