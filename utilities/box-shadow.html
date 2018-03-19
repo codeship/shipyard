@@ -1,7 +1,7 @@
-<html lang="en" class="env-production components-notes">
+<html lang="en" class="env-production utilities-box-shadow">
   <head>
     <meta charset="utf-8" />
-    <title>Shipyard Notes</title>
+    <title>Box-Shadow Utilities</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
     <meta name="theme-color" content="#20a5a8" />
     <link media="screen" rel="stylesheet" type="text/css" integrity="sha256-ykLyqEsmScn8zNFsxR+20fkVuioJiNMLkcO4TYcis2k=" crossorigin="anonymous" href="/shipyard/assets/fonts-ca42f2a84b2649c9fcccd16cc51fb6d1f915ba2a0988d30b91c3b84d8722b369.css">
@@ -39,68 +39,39 @@
         </ul>
       </div>
     </header>
-    <div class="container"><h1>Shipyard Notes</h1>
-
-<p class="text-light text-lg mt-15">Notes should be used to grab a user’s attention along side of other content.</p>
+    <div class="container"><h1>Box-Shadow Utilities</h1>
 
 <hr />
 
-<h3 id="default-note">Default <code class="language-html highlighter-rouge">.note</code></h3>
-<p class="section-description">Used to display notes, tips, and other non-critical information.</p>
+<div class="box-shadow bg-white rounded p-20 text-normal mb-20">
+    box-shadow
+  </div>
+<div class="box-shadow-hover bg-white rounded p-20 text-normal mb-20">
+    box-shadow-hover
+  </div>
+<div class="box-shadow-active bg-white rounded p-20 text-normal mb-20">
+    box-shadow-active
+  </div>
 
-<div class="note"><p>
-    Ten other people are also viewing tickets for <a href="#">this flight</a>.
-    Use the code <code class="language-html highlighter-rouge">Travel_Light_2017</code> before you book your flight.
-  </p>
-  <button class="btn btn-sm note-cta">Call to Action</button></div>
-
-<hr />
-
-<h3 id="info-note-info">Info <code class="language-html highlighter-rouge">.note-info</code></h3>
-<p class="section-description">Useful when drawing attention to non-critical information or actions we want the user to take.</p>
-
-<div class="note note-info "><p>
-    Ten other people are also viewing tickets for <a href="#">this flight</a>.
-    Use the code <code class="language-html highlighter-rouge">Travel_Light_2017</code> before you book your flight.
-  </p>
-  <button class="btn btn-sm note-cta">Call to Action</button></div>
-
-<hr />
-
-<h3 id="success-note-success">Success <code class="language-html highlighter-rouge">.note-success</code></h3>
-<p class="section-description">Useful when drawing attention to interactions that have produced successful results.</p>
-
-<div class="note note-success "><p>
-    Pack your bags! You’ll be on the next flight to Hawaii.
-    Use the code <code class="language-html highlighter-rouge">Travel_Light_2017</code> on your next flight. In the meantime you can <a href="#">invite a friend</a> to this flight.
-  </p>
-  <button class="btn btn-sm note-cta">Call to Action</button></div>
-
-<hr />
-
-<h3 id="warning-note-warning">Warning <code class="language-html highlighter-rouge">.note-warning</code></h3>
-<p class="section-description">Useful when drawing attention to critical information.</p>
-
-<div class="note note-warning "><p>
-    There are only 2 seats left on this flight! We recommend to <a href="#">book your tickets</a> as soon as possible.
-    Use the code <code class="language-html highlighter-rouge">Travel_Light_2017</code> before you book your flight.
-  </p>
-  <button class="btn btn-sm note-cta">Call to Action</button></div>
+<div class="language-css highlighter-rouge"><div class="highlight"><pre class="code-block"><code><span class="nc">.box-shadow</span> <span class="p">{</span> <span class="nl">box-shadow</span><span class="p">:</span> <span class="m">0</span> <span class="m">1px</span> <span class="m">2px</span> <span class="n">rgba</span><span class="p">(</span><span class="m">30</span><span class="p">,</span><span class="m">37</span><span class="p">,</span><span class="m">44</span><span class="p">,</span><span class="m">0.08</span><span class="p">)</span> <span class="p">}</span>
+<span class="nc">.box-shadow-hover</span> <span class="p">{</span> <span class="nl">box-shadow</span><span class="p">:</span> <span class="m">0</span> <span class="m">0</span> <span class="m">4px</span> <span class="m">1px</span> <span class="n">rgba</span><span class="p">(</span><span class="m">28</span><span class="p">,</span><span class="m">161</span><span class="p">,</span><span class="m">227</span><span class="p">,</span><span class="m">0.5</span><span class="p">)</span> <span class="p">}</span>
+<span class="nc">.box-shadow-active</span> <span class="p">{</span> <span class="nl">box-shadow</span><span class="p">:</span> <span class="m">0</span> <span class="m">0</span> <span class="m">4px</span> <span class="m">1px</span> <span class="n">rgba</span><span class="p">(</span><span class="m">51</span><span class="p">,</span><span class="m">196</span><span class="p">,</span><span class="m">116</span><span class="p">,</span><span class="m">0.75</span><span class="p">)</span> <span class="p">}</span>
+</code></pre></div></div>
 
 <hr />
 
 <ul class="col-container">
   <li class="css-stat-item col col-10">
     <span class="text-sm medium text-lighter block">Gzipped Size</span>
-    <span class="text-xxxl bold text-darker">358 <span class="text-lightest">B</span></span>
+    <span class="text-xxxl bold text-darker">109 <span class="text-lightest">B</span></span>
   </li>
   <li class="css-stat-item col col-10">
     <span class="text-sm medium text-lighter block">Declarations</span>
-    <span class="text-xxxl bold text-darker">12</span>
+    <span class="text-xxxl bold text-darker">3</span>
   </li>
   <li class="css-stat-item col col-10">
     <span class="text-sm medium text-lighter block">Selectors</span>
-    <span class="text-xxxl bold text-darker">14</span>
+    <span class="text-xxxl bold text-darker">3</span>
   </li>
 </ul>
 

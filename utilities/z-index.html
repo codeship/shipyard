@@ -1,0 +1,111 @@
+<html lang="en" class="env-production utilities-z-index">
+  <head>
+    <meta charset="utf-8" />
+    <title>Z-Index</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <meta name="theme-color" content="#20a5a8" />
+    <link media="screen" rel="stylesheet" type="text/css" integrity="sha256-ykLyqEsmScn8zNFsxR+20fkVuioJiNMLkcO4TYcis2k=" crossorigin="anonymous" href="/shipyard/assets/fonts-ca42f2a84b2649c9fcccd16cc51fb6d1f915ba2a0988d30b91c3b84d8722b369.css">
+    <link media="screen" rel="stylesheet" type="text/css" integrity="sha256-QCZr3H/ZlbjN2u7as4F9ePzFrtGJsdaiOmgntDe3FIg=" crossorigin="anonymous" href="/shipyard/assets/syntax-40266bdc7fd995b8cddaeedab3817d78fcc5aed189b1d6a23a6827b437b71488.css">
+    <link media="screen" rel="stylesheet" type="text/css" integrity="sha256-ituJumFVqBI+lqZSqnaYULVGUtNPp/UdrPD69fCW984=" crossorigin="anonymous" href="/shipyard/assets/application-8adb89ba6155a8123e96a652aa769850b54652d34fa7f51dacf0faf5f096f7ce.css">
+  </head>
+  <body>
+    <header class="header z-100">
+      <div class="container">
+        <h6 class="header-logo"><a href="/shipyard/">Shipyard</a></h6>
+        <button class="hamburger" shipyard="hamburger">
+          <span class="hamburger-button">Menu</span>
+        </button>
+        <ul class="header-list">
+          
+            <li class="header-item ">
+              <a href="/shipyard/" class="header-link">Installation</a>
+            </li>
+          
+            <li class="header-item ">
+              <a href="/shipyard/methodology" class="header-link">Methodology</a>
+            </li>
+          
+            <li class="header-item ">
+              <a href="/shipyard/components/" class="header-link">Components</a>
+            </li>
+          
+            <li class="header-item ">
+              <a href="/shipyard/utilities/" class="header-link">Utilities</a>
+            </li>
+          
+          <li class="header-item header-item-cta">
+            <a href="https://github.com/codeship/shipyard" target="_blank" class="header-link-cta" rel="noopener">Download</a>
+          </li>
+        </ul>
+      </div>
+    </header>
+    <div class="container"><h1>Z-Index</h1>
+
+<p class="text-light text-lg mt-15">Utilities for controlling the stack order of an element.</p>
+
+<hr />
+
+<h2 id="usage-z--index-">Usage <code class="language-html highlighter-rouge">.z-{ index }</code></h2>
+<p class="section-description">Control the stack order (or three-dimensional positioning) of an element, regardless of it’s order in the HTML.</p>
+
+<ul class="utilities-z-index-list relative mb-30">
+  <li class="utilities-z-index-item absolute bg-white z-50 align-center text-normal col-center">z-50</li>
+  <li class="utilities-z-index-item absolute bg-gray-lighter z-40 align-center text-normal col-center">z-40</li>
+  <li class="utilities-z-index-item absolute bg-gray-light z-30 align-center text-normal col-center">z-30</li>
+  <li class="utilities-z-index-item absolute bg-gray z-20 align-center text-normal col-center">z-20</li>
+  <li class="utilities-z-index-item absolute bg-gray-dark z-10 align-center text-normal col-center">z-10</li>
+  <li class="utilities-z-index-item absolute bg-gray-darker z-auto align-center text-normal col-center">z-auto</li>
+</ul>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="code-block"><code><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"absolute z-50"</span><span class="nt">&gt;</span>z-50<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"absolute z-40"</span><span class="nt">&gt;</span>z-40<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"absolute z-30"</span><span class="nt">&gt;</span>z-30<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"absolute z-20"</span><span class="nt">&gt;</span>z-20<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"absolute z-10"</span><span class="nt">&gt;</span>z-10<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"absolute z-auto"</span><span class="nt">&gt;</span>z-auto<span class="nt">&lt;/div&gt;</span>
+</code></pre></div></div>
+
+<hr />
+
+<h2 id="default-classes">Default Classes</h2>
+<p class="section-description">The following classes can be overridden by changing the default values of <code class="language-html highlighter-rouge">$z-indexes</code> variable.</p>
+
+<div class="language-css highlighter-rouge"><div class="highlight"><pre class="code-block"><code><span class="nc">.z-0</span> <span class="p">{</span> <span class="nl">z-index</span><span class="p">:</span> <span class="m">0</span> <span class="p">}</span>
+<span class="nc">.z-10</span> <span class="p">{</span> <span class="nl">z-index</span><span class="p">:</span> <span class="m">10</span> <span class="p">}</span>
+<span class="nc">.z-20</span> <span class="p">{</span> <span class="nl">z-index</span><span class="p">:</span> <span class="m">20</span> <span class="p">}</span>
+<span class="nc">.z-30</span> <span class="p">{</span> <span class="nl">z-index</span><span class="p">:</span> <span class="m">30</span> <span class="p">}</span>
+<span class="nc">.z-40</span> <span class="p">{</span> <span class="nl">z-index</span><span class="p">:</span> <span class="m">40</span> <span class="p">}</span>
+<span class="nc">.z-50</span> <span class="p">{</span> <span class="nl">z-index</span><span class="p">:</span> <span class="m">50</span> <span class="p">}</span>
+<span class="nc">.z-60</span> <span class="p">{</span> <span class="nl">z-index</span><span class="p">:</span> <span class="m">60</span> <span class="p">}</span>
+<span class="nc">.z-70</span> <span class="p">{</span> <span class="nl">z-index</span><span class="p">:</span> <span class="m">70</span> <span class="p">}</span>
+<span class="nc">.z-80</span> <span class="p">{</span> <span class="nl">z-index</span><span class="p">:</span> <span class="m">80</span> <span class="p">}</span>
+<span class="nc">.z-90</span> <span class="p">{</span> <span class="nl">z-index</span><span class="p">:</span> <span class="m">90</span> <span class="p">}</span>
+<span class="nc">.z-100</span> <span class="p">{</span> <span class="nl">z-index</span><span class="p">:</span> <span class="m">100</span> <span class="p">}</span>
+<span class="nc">.z-200</span> <span class="p">{</span> <span class="nl">z-index</span><span class="p">:</span> <span class="m">200</span> <span class="p">}</span>
+<span class="nc">.z-auto</span> <span class="p">{</span> <span class="nl">z-index</span><span class="p">:</span> <span class="nb">auto</span> <span class="p">}</span>
+</code></pre></div></div>
+
+<hr />
+
+<ul class="col-container">
+  <li class="css-stat-item col col-10">
+    <span class="text-sm medium text-lighter block">Gzipped Size</span>
+    <span class="text-xxxl bold text-darker">91 <span class="text-lightest">B</span></span>
+  </li>
+  <li class="css-stat-item col col-10">
+    <span class="text-sm medium text-lighter block">Declarations</span>
+    <span class="text-xxxl bold text-darker">13</span>
+  </li>
+  <li class="css-stat-item col col-10">
+    <span class="text-sm medium text-lighter block">Selectors</span>
+    <span class="text-xxxl bold text-darker">13</span>
+  </li>
+</ul>
+
+</div>
+    <footer class="align-center text-lightest">
+      &copy; Shipyard Framework 2017
+    </footer>
+    <script type="text/javascript" src="/shipyard/assets/application-c3373ace7156c429085b39536378d139c45118d95f6f8ebb40d1141d7bb4d03b.js" integrity="sha256-wzc6znFWxCkIWzlTY3jROcRRGNlfb467QNEUHXu00Ds=" crossorigin="anonymous"></script>
+  </body>
+</html>

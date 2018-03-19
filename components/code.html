@@ -6,10 +6,10 @@
     <meta name="theme-color" content="#20a5a8" />
     <link media="screen" rel="stylesheet" type="text/css" integrity="sha256-ykLyqEsmScn8zNFsxR+20fkVuioJiNMLkcO4TYcis2k=" crossorigin="anonymous" href="/shipyard/assets/fonts-ca42f2a84b2649c9fcccd16cc51fb6d1f915ba2a0988d30b91c3b84d8722b369.css">
     <link media="screen" rel="stylesheet" type="text/css" integrity="sha256-QCZr3H/ZlbjN2u7as4F9ePzFrtGJsdaiOmgntDe3FIg=" crossorigin="anonymous" href="/shipyard/assets/syntax-40266bdc7fd995b8cddaeedab3817d78fcc5aed189b1d6a23a6827b437b71488.css">
-    <link media="screen" rel="stylesheet" type="text/css" integrity="sha256-0crAn4W+R/FiD7KdWUVHhjA5+XE10o89RXyxDtaMUZU=" crossorigin="anonymous" href="/shipyard/assets/application-d1cac09f85be47f1620fb29d594547863039f97135d28f3d457cb10ed68c5195.css">
+    <link media="screen" rel="stylesheet" type="text/css" integrity="sha256-ituJumFVqBI+lqZSqnaYULVGUtNPp/UdrPD69fCW984=" crossorigin="anonymous" href="/shipyard/assets/application-8adb89ba6155a8123e96a652aa769850b54652d34fa7f51dacf0faf5f096f7ce.css">
   </head>
   <body>
-    <header class="header">
+    <header class="header z-100">
       <div class="container">
         <h6 class="header-logo"><a href="/shipyard/">Shipyard</a></h6>
         <button class="hamburger" shipyard="hamburger">
@@ -18,7 +18,11 @@
         <ul class="header-list">
           
             <li class="header-item ">
-              <a href="/shipyard/" class="header-link">Home</a>
+              <a href="/shipyard/" class="header-link">Installation</a>
+            </li>
+          
+            <li class="header-item ">
+              <a href="/shipyard/methodology" class="header-link">Methodology</a>
             </li>
           
             <li class="header-item ">
@@ -37,16 +41,14 @@
     </header>
     <div class="container"><h1>Shipyard Code Component</h1>
 
+<hr />
 
+<h2 id="inline-code-example-code-inline">Inline Code Example <code class="language-html highlighter-rouge">.code-inline</code></h2>
+<p class="mt-15 mb-15 text-normal">Vestibulum id ligula porta felis <code class="code-inline">euismod semper</code>. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Donec ullamcorper nulla non metus auctor fringilla. Sed posuere consectetur est at lobortis. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Aenean lacinia <code class="code-inline">bibendum nulla sed</code> consectetur. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Cras mattis consectetur purus sit amet fermentum. Maecenas faucibus mollis interdum. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. <code class="code-inline">Nullam id</code> dolor id nibh ultricies vehicula ut id elit. <code class="code-inline">Cras mattis consectetur</code> purus sit amet fermentum. Aenean lacinia bibendum nulla sed consectetur. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nullam id dolor id nibh ultricies vehicula ut id elit. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
 
 <hr />
 
-<h2>Inline Code Example <code class="code-inline ml-5">.code-inline</code></h2>
-<p class="p">Vestibulum id ligula porta felis <code class="code-inline">euismod semper</code>. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Donec ullamcorper nulla non metus auctor fringilla. Sed posuere consectetur est at lobortis. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Aenean lacinia <code class="code-inline">bibendum nulla sed</code> consectetur. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Cras mattis consectetur purus sit amet fermentum. Maecenas faucibus mollis interdum. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. <code class="code-inline">Nullam id</code> dolor id nibh ultricies vehicula ut id elit. <code class="code-inline">Cras mattis consectetur</code> purus sit amet fermentum. Aenean lacinia bibendum nulla sed consectetur. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nullam id dolor id nibh ultricies vehicula ut id elit. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
-
-<hr />
-
-<h2>Code Block Example <code class="code-inline ml-5">.code-block</code></h2>
+<h2 id="code-block-example-code-block">Code Block Example <code class="language-html highlighter-rouge">.code-block</code></h2>
 <pre class="code-block mt-15"><code>class Shipyard
   def foo
   end
@@ -82,16 +84,16 @@ end</code></pre>
 
 <ul class="col-container">
   <li class="css-stat-item col col-10">
-    <span class="text-sm medium text-lighter display-block">Gzipped Size</span>
-    <span class="text-xxxl strong text-darker">466 <span class="text-lightest">B</span></span>
+    <span class="text-sm medium text-lighter block">Gzipped Size</span>
+    <span class="text-xxxl bold text-darker">466 <span class="text-lightest">B</span></span>
   </li>
   <li class="css-stat-item col col-10">
-    <span class="text-sm medium text-lighter display-block">Declarations</span>
-    <span class="text-xxxl strong text-darker">12</span>
+    <span class="text-sm medium text-lighter block">Declarations</span>
+    <span class="text-xxxl bold text-darker">12</span>
   </li>
   <li class="css-stat-item col col-10">
-    <span class="text-sm medium text-lighter display-block">Selectors</span>
-    <span class="text-xxxl strong text-darker">32</span>
+    <span class="text-sm medium text-lighter block">Selectors</span>
+    <span class="text-xxxl bold text-darker">32</span>
   </li>
 </ul>
 
@@ -99,6 +101,6 @@ end</code></pre>
     <footer class="align-center text-lightest">
       &copy; Shipyard Framework 2017
     </footer>
-    <script type="text/javascript" src="/shipyard/assets/application-cd155d7ea62fc14fbd29945e183d8a560eef7e0148fecfe3e70a042b04ae7ce6.js" integrity="sha256-zRVdfqYvwU+9KZReGD2KVg7vfgFI/s/j5woEKwSufOY=" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="/shipyard/assets/application-c3373ace7156c429085b39536378d139c45118d95f6f8ebb40d1141d7bb4d03b.js" integrity="sha256-wzc6znFWxCkIWzlTY3jROcRRGNlfb467QNEUHXu00Ds=" crossorigin="anonymous"></script>
   </body>
 </html>

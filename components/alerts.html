@@ -6,10 +6,10 @@
     <meta name="theme-color" content="#20a5a8" />
     <link media="screen" rel="stylesheet" type="text/css" integrity="sha256-ykLyqEsmScn8zNFsxR+20fkVuioJiNMLkcO4TYcis2k=" crossorigin="anonymous" href="/shipyard/assets/fonts-ca42f2a84b2649c9fcccd16cc51fb6d1f915ba2a0988d30b91c3b84d8722b369.css">
     <link media="screen" rel="stylesheet" type="text/css" integrity="sha256-QCZr3H/ZlbjN2u7as4F9ePzFrtGJsdaiOmgntDe3FIg=" crossorigin="anonymous" href="/shipyard/assets/syntax-40266bdc7fd995b8cddaeedab3817d78fcc5aed189b1d6a23a6827b437b71488.css">
-    <link media="screen" rel="stylesheet" type="text/css" integrity="sha256-0crAn4W+R/FiD7KdWUVHhjA5+XE10o89RXyxDtaMUZU=" crossorigin="anonymous" href="/shipyard/assets/application-d1cac09f85be47f1620fb29d594547863039f97135d28f3d457cb10ed68c5195.css">
+    <link media="screen" rel="stylesheet" type="text/css" integrity="sha256-ituJumFVqBI+lqZSqnaYULVGUtNPp/UdrPD69fCW984=" crossorigin="anonymous" href="/shipyard/assets/application-8adb89ba6155a8123e96a652aa769850b54652d34fa7f51dacf0faf5f096f7ce.css">
   </head>
   <body>
-    <header class="header">
+    <header class="header z-100">
       <div class="container">
         <h6 class="header-logo"><a href="/shipyard/">Shipyard</a></h6>
         <button class="hamburger" shipyard="hamburger">
@@ -18,7 +18,11 @@
         <ul class="header-list">
           
             <li class="header-item ">
-              <a href="/shipyard/" class="header-link">Home</a>
+              <a href="/shipyard/" class="header-link">Installation</a>
+            </li>
+          
+            <li class="header-item ">
+              <a href="/shipyard/methodology" class="header-link">Methodology</a>
             </li>
           
             <li class="header-item ">
@@ -47,17 +51,17 @@
 <div role="alert" shipyard="alert" id="timed-alert-5s" class="alert alert-success alert-closed"><p class="alert-txt">
   Pack your bags! You'll be on the next flight to Hawaii.
   <span class="alert-timer alert-timer-on" data-duration="5"></span>
-</p><button class="alert-close v-center" shipyard="alert-close"><svg class="icon icon-x icon-outline alert-close-icon icon-outline-inverse center" viewBox="0 0 6 6" preserveAspectRatio="xMinYMin meet"><use xlink:href="/shipyard/assets/icons.svg#x"></use></svg></button></div>
+</p><button class="alert-close center-v" shipyard="alert-close"><svg class="icon icon-x icon-outline alert-close-icon icon-outline-inverse center" viewBox="0 0 6 6" preserveAspectRatio="xMinYMin meet"><use xlink:href="/shipyard/assets/icons.svg#x"></use></svg></button></div>
 
 <div role="alert" shipyard="alert" id="timed-alert-10s" class="alert alert-success alert-closed"><p class="alert-txt">
   Pack your bags! You'll be on the next flight to Tahiti.
   <span class="alert-timer alert-timer-on" data-duration="10"></span>
-</p><button class="alert-close v-center" shipyard="alert-close"><svg class="icon icon-x icon-outline alert-close-icon icon-outline-inverse center" viewBox="0 0 6 6" preserveAspectRatio="xMinYMin meet"><use xlink:href="/shipyard/assets/icons.svg#x"></use></svg></button></div>
+</p><button class="alert-close center-v" shipyard="alert-close"><svg class="icon icon-x icon-outline alert-close-icon icon-outline-inverse center" viewBox="0 0 6 6" preserveAspectRatio="xMinYMin meet"><use xlink:href="/shipyard/assets/icons.svg#x"></use></svg></button></div>
 
 <div role="alert" shipyard="alert" id="timed-alert-15s" class="alert alert-success alert-closed"><p class="alert-txt">
   Pack your bags! You'll be on the next flight to Corsica.
   <span class="alert-timer alert-timer-on" data-duration="15"></span>
-</p><button class="alert-close v-center" shipyard="alert-close"><svg class="icon icon-x icon-outline alert-close-icon icon-outline-inverse center" viewBox="0 0 6 6" preserveAspectRatio="xMinYMin meet"><use xlink:href="/shipyard/assets/icons.svg#x"></use></svg></button></div>
+</p><button class="alert-close center-v" shipyard="alert-close"><svg class="icon icon-x icon-outline alert-close-icon icon-outline-inverse center" viewBox="0 0 6 6" preserveAspectRatio="xMinYMin meet"><use xlink:href="/shipyard/assets/icons.svg#x"></use></svg></button></div>
 
 <p><button class="btn btn-primary mr-10" alert-trigger="#timed-alert-5s">5 Seconds</button>
 <button class="btn btn-primary mr-10" alert-trigger="#timed-alert-10s">10 Seconds</button>
@@ -71,7 +75,7 @@
 <div role="alert" shipyard="alert" class="alert"><p class="alert-txt">
   Ten other people are also viewing tickets for <a href="#">this flight</a>.
   Use the code <code class="code-inline">Travel_Light_2017</code> before you book your flight.
-</p><button class="alert-close v-center" shipyard="alert-close"><svg class="icon icon-x icon-outline alert-close-icon icon-outline-inverse center" viewBox="0 0 6 6" preserveAspectRatio="xMinYMin meet"><use xlink:href="/shipyard/assets/icons.svg#x"></use></svg></button></div>
+</p><button class="alert-close center-v" shipyard="alert-close"><svg class="icon icon-x icon-outline alert-close-icon icon-outline-inverse center" viewBox="0 0 6 6" preserveAspectRatio="xMinYMin meet"><use xlink:href="/shipyard/assets/icons.svg#x"></use></svg></button></div>
 
 <hr />
 
@@ -81,7 +85,7 @@
 <div role="alert" class="alert"><p class="alert-txt">
   Ten other people are also viewing tickets for <a href="#">this flight</a>.
   Use the code <code class="code-inline">Travel_Light_2017</code> before you book your flight.
-  <button class="alert-cta btn btn-sm">Call to Action</button>
+  <button class="btn btn-sm alert-cta">Call to Action</button>
 </p></div>
 
 <hr />
@@ -92,7 +96,7 @@
 <div role="alert" class="alert alert-info"><p class="alert-txt">
   Ten other people are also viewing tickets for <a href="#">this flight</a>.
   Use the code <code class="code-inline">Travel_Light_2017</code> before you book your flight.
-  <button class="alert-cta btn btn-sm">Call to Action</button>
+  <button class="btn btn-sm alert-cta">Call to Action</button>
 </p></div>
 
 <hr />
@@ -103,7 +107,7 @@
 <div role="alert" class="alert alert-success"><p class="alert-txt">
   Pack your bags! You'll be on the next flight to Hawaii.
   Use the code <code class="code-inline">Travel_Light_2017</code> on your next flight. In the meantime you can <a href="#">invite a friend</a> to this flight.
-  <button class="alert-cta btn btn-sm">Call to Action</button>
+  <button class="btn btn-sm alert-cta">Call to Action</button>
 </p></div>
 
 <hr />
@@ -114,7 +118,7 @@
 <div role="alert" class="alert alert-warning"><p class="alert-txt">
   There are only 2 seats left on this flight! We recommend to <a href="#">book your tickets</a> as soon as possible.
   Use the code <code class="code-inline">Travel_Light_2017</code> before you book your flight.
-  <button class="alert-cta btn btn-sm">Call to Action</button>
+  <button class="btn btn-sm alert-cta">Call to Action</button>
 </p></div>
 
 <hr />
@@ -125,23 +129,23 @@
 <div role="alert" class="alert alert-error"><p class="alert-txt">
   This flight is now sold out. Let's get you on the <a href="#">next flight to Kauai</a>.
   We hope the code <code class="code-inline">Travel_Light_2017</code> will be useful for your next flight.
-  <button class="alert-cta btn btn-sm">Call to Action</button>
+  <button class="btn btn-sm alert-cta">Call to Action</button>
 </p></div>
 
 <hr />
 
 <ul class="col-container">
   <li class="css-stat-item col col-10">
-    <span class="text-sm medium text-lighter display-block">Gzipped Size</span>
-    <span class="text-xxxl strong text-darker">640 <span class="text-lightest">B</span></span>
+    <span class="text-sm medium text-lighter block">Gzipped Size</span>
+    <span class="text-xxxl bold text-darker">618 <span class="text-lightest">B</span></span>
   </li>
   <li class="css-stat-item col col-10">
-    <span class="text-sm medium text-lighter display-block">Declarations</span>
-    <span class="text-xxxl strong text-darker">27</span>
+    <span class="text-sm medium text-lighter block">Declarations</span>
+    <span class="text-xxxl bold text-darker">24</span>
   </li>
   <li class="css-stat-item col col-10">
-    <span class="text-sm medium text-lighter display-block">Selectors</span>
-    <span class="text-xxxl strong text-darker">32</span>
+    <span class="text-sm medium text-lighter block">Selectors</span>
+    <span class="text-xxxl bold text-darker">29</span>
   </li>
 </ul>
 
@@ -149,6 +153,6 @@
     <footer class="align-center text-lightest">
       &copy; Shipyard Framework 2017
     </footer>
-    <script type="text/javascript" src="/shipyard/assets/application-cd155d7ea62fc14fbd29945e183d8a560eef7e0148fecfe3e70a042b04ae7ce6.js" integrity="sha256-zRVdfqYvwU+9KZReGD2KVg7vfgFI/s/j5woEKwSufOY=" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="/shipyard/assets/application-c3373ace7156c429085b39536378d139c45118d95f6f8ebb40d1141d7bb4d03b.js" integrity="sha256-wzc6znFWxCkIWzlTY3jROcRRGNlfb467QNEUHXu00Ds=" crossorigin="anonymous"></script>
   </body>
 </html>

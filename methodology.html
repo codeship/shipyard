@@ -1,4 +1,4 @@
-<html lang="en" class="env-production utilities-responsive">
+<html lang="en" class="env-production methodology">
   <head>
     <meta charset="utf-8" />
     <title>Mobile-first Methodology</title>
@@ -6,10 +6,10 @@
     <meta name="theme-color" content="#20a5a8" />
     <link media="screen" rel="stylesheet" type="text/css" integrity="sha256-ykLyqEsmScn8zNFsxR+20fkVuioJiNMLkcO4TYcis2k=" crossorigin="anonymous" href="/shipyard/assets/fonts-ca42f2a84b2649c9fcccd16cc51fb6d1f915ba2a0988d30b91c3b84d8722b369.css">
     <link media="screen" rel="stylesheet" type="text/css" integrity="sha256-QCZr3H/ZlbjN2u7as4F9ePzFrtGJsdaiOmgntDe3FIg=" crossorigin="anonymous" href="/shipyard/assets/syntax-40266bdc7fd995b8cddaeedab3817d78fcc5aed189b1d6a23a6827b437b71488.css">
-    <link media="screen" rel="stylesheet" type="text/css" integrity="sha256-0crAn4W+R/FiD7KdWUVHhjA5+XE10o89RXyxDtaMUZU=" crossorigin="anonymous" href="/shipyard/assets/application-d1cac09f85be47f1620fb29d594547863039f97135d28f3d457cb10ed68c5195.css">
+    <link media="screen" rel="stylesheet" type="text/css" integrity="sha256-ituJumFVqBI+lqZSqnaYULVGUtNPp/UdrPD69fCW984=" crossorigin="anonymous" href="/shipyard/assets/application-8adb89ba6155a8123e96a652aa769850b54652d34fa7f51dacf0faf5f096f7ce.css">
   </head>
   <body>
-    <header class="header">
+    <header class="header z-100">
       <div class="container">
         <h6 class="header-logo"><a href="/shipyard/">Shipyard</a></h6>
         <button class="hamburger" shipyard="hamburger">
@@ -18,7 +18,11 @@
         <ul class="header-list">
           
             <li class="header-item ">
-              <a href="/shipyard/" class="header-link">Home</a>
+              <a href="/shipyard/" class="header-link">Installation</a>
+            </li>
+          
+            <li class="header-item header-item-current">
+              <a href="/shipyard/methodology" class="header-link">Methodology</a>
             </li>
           
             <li class="header-item ">
@@ -37,25 +41,25 @@
     </header>
     <div class="container"><h1>Mobile-first Methodology</h1>
 
-<p class="text-light text-lg mt-15">Shipyard is a CSS Framework is built from mobile-first approach to front-end development. This means that by default, a class applies to all screen sizes unless otherwise specifed. In order to make something truly responsive, you need to first think about how you want it to look on all screen sizes, and then using the modifiers <code class="language-html highlighter-rouge">(x1-x4)</code> to define how the style will change as the screen size grows.</p>
+<p class="text-light text-lg mt-15">Shipyard is a CSS Framework is built from mobile-first approach to front-end development. This means that by default, a class applies to all screen sizes unless otherwise specifed. In order to make something truly responsive, you need to first think about how you want it to look on all screen sizes, and then using the modifiers <code class="language-html highlighter-rouge">(sm..xl)</code> to define how the style will change as the screen size grows.</p>
 
 <hr />
 
 <h2 id="responsive-demo">Responsive Demo</h2>
 
-<div class="box-secondary box-padding align-center">
-  <button class="btn btn-xs btn-x1-sm btn-x2-md btn-x3-lg btn-x4-xl">
-    <span class="display-inline display-x1-none">All Screens (.btn-xs)</span>
-    <span class="display-none display-x1-inline display-x2-none">Tablets &amp; Up (.btn-x1-sm)</span>
-    <span class="display-none display-x2-inline display-x3-none">Small Laptops &amp; Up (.btn-x2-md)</span>
-    <span class="display-none display-x3-inline display-x4-none">Wide Laptos &amp; Up (.btn-x3-lg)</span>
-    <span class="display-none display-x4-inline">Large Monitors &amp; Up (.btn-x4-xl)</span>
+<div class="box-secondary p-10 sm:p-15 md:p-20 lg:p-30 align-center">
+  <button class="btn btn-xs sm:btn-sm md:btn-md lg:btn-lg xl:btn-xl">
+    <span class="inline sm:hidden">.btn-xs</span>
+    <span class="hidden sm:inline md:hidden">.sm:btn-sm</span>
+    <span class="hidden md:inline lg:hidden">.md:btn-md</span>
+    <span class="hidden lg:inline xl:hidden">.lg:btn-lg</span>
+    <span class="hidden xl:inline">.xl:btn-xl</span>
   </button>
 </div>
 </div>
     <footer class="align-center text-lightest">
       &copy; Shipyard Framework 2017
     </footer>
-    <script type="text/javascript" src="/shipyard/assets/application-cd155d7ea62fc14fbd29945e183d8a560eef7e0148fecfe3e70a042b04ae7ce6.js" integrity="sha256-zRVdfqYvwU+9KZReGD2KVg7vfgFI/s/j5woEKwSufOY=" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="/shipyard/assets/application-c3373ace7156c429085b39536378d139c45118d95f6f8ebb40d1141d7bb4d03b.js" integrity="sha256-wzc6znFWxCkIWzlTY3jROcRRGNlfb467QNEUHXu00Ds=" crossorigin="anonymous"></script>
   </body>
 </html>

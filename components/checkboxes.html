@@ -6,10 +6,10 @@
     <meta name="theme-color" content="#20a5a8" />
     <link media="screen" rel="stylesheet" type="text/css" integrity="sha256-ykLyqEsmScn8zNFsxR+20fkVuioJiNMLkcO4TYcis2k=" crossorigin="anonymous" href="/shipyard/assets/fonts-ca42f2a84b2649c9fcccd16cc51fb6d1f915ba2a0988d30b91c3b84d8722b369.css">
     <link media="screen" rel="stylesheet" type="text/css" integrity="sha256-QCZr3H/ZlbjN2u7as4F9ePzFrtGJsdaiOmgntDe3FIg=" crossorigin="anonymous" href="/shipyard/assets/syntax-40266bdc7fd995b8cddaeedab3817d78fcc5aed189b1d6a23a6827b437b71488.css">
-    <link media="screen" rel="stylesheet" type="text/css" integrity="sha256-0crAn4W+R/FiD7KdWUVHhjA5+XE10o89RXyxDtaMUZU=" crossorigin="anonymous" href="/shipyard/assets/application-d1cac09f85be47f1620fb29d594547863039f97135d28f3d457cb10ed68c5195.css">
+    <link media="screen" rel="stylesheet" type="text/css" integrity="sha256-ituJumFVqBI+lqZSqnaYULVGUtNPp/UdrPD69fCW984=" crossorigin="anonymous" href="/shipyard/assets/application-8adb89ba6155a8123e96a652aa769850b54652d34fa7f51dacf0faf5f096f7ce.css">
   </head>
   <body>
-    <header class="header">
+    <header class="header z-100">
       <div class="container">
         <h6 class="header-logo"><a href="/shipyard/">Shipyard</a></h6>
         <button class="hamburger" shipyard="hamburger">
@@ -18,7 +18,11 @@
         <ul class="header-list">
           
             <li class="header-item ">
-              <a href="/shipyard/" class="header-link">Home</a>
+              <a href="/shipyard/" class="header-link">Installation</a>
+            </li>
+          
+            <li class="header-item ">
+              <a href="/shipyard/methodology" class="header-link">Methodology</a>
             </li>
           
             <li class="header-item ">
@@ -84,9 +88,9 @@
 <h2 id="stacked-checkbox-lists">Stacked Checkbox Lists</h2>
 <p class="section-description">Useful when you want to group a series of checkboxes together in a list (stacked by default).</p>
 
-<div class="col-container mb-15 mb-x1-30">
-  <div class="col col-100 col-x1-50 mb-15 mb-x1-0">
-    <div class="rounded bg-white box-padding">
+<div class="col-container mb-15 sm:mb-30">
+  <div class="col col-100 sm:col-50 mb-15 sm:mb-0">
+    <div class="rounded bg-white p-10 sm:p-15 md:p-20 lg:p-30">
       <ul class="input-list">
         
           <li class="input-item">
@@ -117,8 +121,8 @@
       </ul>
     </div>
   </div>
-  <div class="col col-100 col-x1-50">
-    <div class="box-secondary box-padding">
+  <div class="col col-100 sm:col-50">
+    <div class="box-secondary p-10 sm:p-15 md:p-20 lg:p-30">
       <ul class="input-list">
         
           <li class="input-item">
@@ -164,7 +168,7 @@
 <h2 id="inverse-checkbox-lists">Inverse Checkbox Lists</h2>
 <p class="section-description">Useful when the checkboxes are displayed on a dark background.</p>
 
-<div class="box-secondary box-padding bg-gray-darker">
+<div class="box-secondary p-10 sm:p-15 md:p-20 lg:p-30 bg-gray-darker">
   <ul class="input-list">
     
       <li class="input-item">
@@ -284,17 +288,17 @@
 <h2 id="checkbox-switches">Checkbox-Switches</h2>
 <p class="section-description">Switches are useful when the user has a choice to toggle on and off. Note: For the best UX, please make sure that the switch saves immediately each time it changes state.</p>
 
-<div class="box box-xs mb-15 pt-20 pb-20 pl-15 pr-15 pl-x1-30 pr-x1-30">
+<div class="box h-60 mb-15 pt-20 pb-20 pl-15 pr-15 sm:pl-30 sm:pr-30">
   <div class="col-container-nowrap">
-    <div class="components-checkboxes-switch-col col col-100 text-light text-overflow-ellipsis">Praesent commodo cursus magna, vel scelerisque aenean eu leo quam pellentesque ornare sem lacinia quam.</div>
+    <div class="components-checkboxes-switch-col col col-100 text-light ellipsis overflow-hidden white-space-nowrap">Praesent commodo cursus magna, vel scelerisque aenean eu leo quam pellentesque ornare sem lacinia quam.</div>
     <div class="col ml-15">
       <input type="checkbox" class="input input-switch" checked="" />
     </div>
   </div>
 </div>
-<div class="box-secondary box-xs pt-20 pb-20 pl-15 pr-15 pl-x1-30 pr-x1-30">
+<div class="box-secondary h-60 pt-20 pb-20 pl-15 pr-15 sm:pl-30 sm:pr-30">
   <div class="col-container-nowrap">
-    <div class="components-checkboxes-switch-col col col-100 text-light text-overflow-ellipsis">Praesent commodo cursus magna, vel scelerisque aenean eu leo quam pellentesque ornare sem lacinia quam.</div>
+    <div class="components-checkboxes-switch-col col col-100 text-light ellipsis overflow-hidden white-space-nowrap">Praesent commodo cursus magna, vel scelerisque aenean eu leo quam pellentesque ornare sem lacinia quam.</div>
     <div class="col ml-15">
       <input type="checkbox" class="input input-switch" />
     </div>
@@ -309,17 +313,17 @@
 <h2 id="secondary-checkbox-switches">Secondary Checkbox-Switches</h2>
 <p class="section-description">Useful when you don’t need to draw attention to the bright-red, off state.</p>
 
-<div class="box box-xs mb-15 pt-20 pb-20 pl-15 pr-15 pl-x1-30 pr-x1-30">
+<div class="box h-60 mb-15 pt-20 pb-20 pl-15 pr-15 sm:pl-30 sm:pr-30">
   <div class="col-container-nowrap">
-    <div class="components-checkboxes-switch-col col col-100 text-light text-overflow-ellipsis">Praesent commodo cursus magna, vel scelerisque aenean eu leo quam pellentesque ornare sem lacinia quam.</div>
+    <div class="components-checkboxes-switch-col col col-100 text-light ellipsis overflow-hidden white-space-nowrap">Praesent commodo cursus magna, vel scelerisque aenean eu leo quam pellentesque ornare sem lacinia quam.</div>
     <div class="col ml-15">
       <input type="checkbox" class="input input-switch-secondary" checked="" />
     </div>
   </div>
 </div>
-<div class="box-secondary box-xs pt-20 pb-20 pl-15 pr-15 pl-x1-30 pr-x1-30">
+<div class="box-secondary h-60 pt-20 pb-20 pl-15 pr-15 sm:pl-30 sm:pr-30">
   <div class="col-container-nowrap">
-    <div class="components-checkboxes-switch-col col col-100 text-light text-overflow-ellipsis">Praesent commodo cursus magna, vel scelerisque aenean eu leo quam pellentesque ornare sem lacinia quam.</div>
+    <div class="components-checkboxes-switch-col col col-100 text-light ellipsis overflow-hidden white-space-nowrap">Praesent commodo cursus magna, vel scelerisque aenean eu leo quam pellentesque ornare sem lacinia quam.</div>
     <div class="col ml-15">
       <input type="checkbox" class="input input-switch-secondary" />
     </div>
@@ -333,17 +337,17 @@
 <h2 id="warning-checkbox-switches">Warning Checkbox-Switches</h2>
 <p class="section-description">Useful to communicate that your object is only partially connected, and it needs additional attention.</p>
 
-<div class="box box-xs mb-15 pt-20 pb-20 pl-15 pr-15 pl-x1-30 pr-x1-30">
+<div class="box h-60 mb-15 pt-20 pb-20 pl-15 pr-15 sm:pl-30 sm:pr-30">
   <div class="col-container-nowrap">
-    <div class="components-checkboxes-switch-col col col-100 text-light text-overflow-ellipsis">Praesent commodo cursus magna, vel scelerisque aenean eu leo quam pellentesque ornare sem lacinia quam.</div>
+    <div class="components-checkboxes-switch-col col col-100 text-light ellipsis overflow-hidden white-space-nowrap">Praesent commodo cursus magna, vel scelerisque aenean eu leo quam pellentesque ornare sem lacinia quam.</div>
     <div class="col ml-15">
       <input type="checkbox" class="input input-switch-secondary input-switch-warning" checked="" />
     </div>
   </div>
 </div>
-<div class="box-secondary box-xs pt-20 pb-20 pl-15 pr-15 pl-x1-30 pr-x1-30">
+<div class="box-secondary h-60 pt-20 pb-20 pl-15 pr-15 sm:pl-30 sm:pr-30">
   <div class="col-container-nowrap">
-    <div class="components-checkboxes-switch-col col col-100 text-light text-overflow-ellipsis">Praesent commodo cursus magna, vel scelerisque aenean eu leo quam pellentesque ornare sem lacinia quam.</div>
+    <div class="components-checkboxes-switch-col col col-100 text-light ellipsis overflow-hidden white-space-nowrap">Praesent commodo cursus magna, vel scelerisque aenean eu leo quam pellentesque ornare sem lacinia quam.</div>
     <div class="col ml-15">
       <input type="checkbox" class="input input-switch-secondary input-switch-warning" />
     </div>
@@ -354,24 +358,24 @@
 
 <hr />
 
-<h2 id="checkbox-switch-sizes-input-switch--x1x4---smxl-">Checkbox-Switch Sizes <code class="language-html highlighter-rouge">input-switch-{ x1..x4 }-{ sm..xl }</code></h2>
+<h2 id="checkbox-switch-sizes--screen--input-switch--smxl-">Checkbox-Switch Sizes <code class="language-html highlighter-rouge">.{ screen }-input-switch-{ sm..xl }</code></h2>
 <p class="section-description">Each size can be used or altered at any breakpoint.</p>
 
 <ul class="input-list">
   <li class="input-item">
-    <input id="small-switch-on-sm" type="checkbox" class="input input-switch input-switch-sm align-middle" checked="" />
+    <input id="small-switch-on-sm" type="checkbox" class="input input-switch input-switch-sm center-obj" checked="" />
     <label for="small-switch-on-sm" class="text-sm text-light ml-5 medium">Small</label>
   </li>
   <li class="input-item">
-    <input id="small-switch-on-md" type="checkbox" class="input input-switch align-middle" checked="" />
+    <input id="small-switch-on-md" type="checkbox" class="input input-switch center-obj" checked="" />
     <label for="small-switch-on-md" class="text-sm text-light ml-5 medium">Medium (Default)</label>
   </li>
   <li class="input-item">
-    <input id="small-switch-on-lg" type="checkbox" class="input input-switch input-switch-lg align-middle" checked="" />
+    <input id="small-switch-on-lg" type="checkbox" class="input input-switch input-switch-lg center-obj" checked="" />
     <label for="small-switch-on-lg" class="text-sm text-light ml-5 medium">Large</label>
   </li>
   <li class="input-item">
-    <input id="small-switch-on-xl" type="checkbox" class="input input-switch input-switch-xl align-middle" checked="" />
+    <input id="small-switch-on-xl" type="checkbox" class="input input-switch input-switch-xl center-obj" checked="" />
     <label for="small-switch-on-xl" class="text-sm text-light ml-5 medium">X-Large</label>
   </li>
 </ul>
@@ -392,6 +396,6 @@
     <footer class="align-center text-lightest">
       &copy; Shipyard Framework 2017
     </footer>
-    <script type="text/javascript" src="/shipyard/assets/application-cd155d7ea62fc14fbd29945e183d8a560eef7e0148fecfe3e70a042b04ae7ce6.js" integrity="sha256-zRVdfqYvwU+9KZReGD2KVg7vfgFI/s/j5woEKwSufOY=" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="/shipyard/assets/application-c3373ace7156c429085b39536378d139c45118d95f6f8ebb40d1141d7bb4d03b.js" integrity="sha256-wzc6znFWxCkIWzlTY3jROcRRGNlfb467QNEUHXu00Ds=" crossorigin="anonymous"></script>
   </body>
 </html>

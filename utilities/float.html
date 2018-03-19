@@ -1,0 +1,97 @@
+<html lang="en" class="env-production utilities-float">
+  <head>
+    <meta charset="utf-8" />
+    <title>Float Utilities</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <meta name="theme-color" content="#20a5a8" />
+    <link media="screen" rel="stylesheet" type="text/css" integrity="sha256-ykLyqEsmScn8zNFsxR+20fkVuioJiNMLkcO4TYcis2k=" crossorigin="anonymous" href="/shipyard/assets/fonts-ca42f2a84b2649c9fcccd16cc51fb6d1f915ba2a0988d30b91c3b84d8722b369.css">
+    <link media="screen" rel="stylesheet" type="text/css" integrity="sha256-QCZr3H/ZlbjN2u7as4F9ePzFrtGJsdaiOmgntDe3FIg=" crossorigin="anonymous" href="/shipyard/assets/syntax-40266bdc7fd995b8cddaeedab3817d78fcc5aed189b1d6a23a6827b437b71488.css">
+    <link media="screen" rel="stylesheet" type="text/css" integrity="sha256-ituJumFVqBI+lqZSqnaYULVGUtNPp/UdrPD69fCW984=" crossorigin="anonymous" href="/shipyard/assets/application-8adb89ba6155a8123e96a652aa769850b54652d34fa7f51dacf0faf5f096f7ce.css">
+  </head>
+  <body>
+    <header class="header z-100">
+      <div class="container">
+        <h6 class="header-logo"><a href="/shipyard/">Shipyard</a></h6>
+        <button class="hamburger" shipyard="hamburger">
+          <span class="hamburger-button">Menu</span>
+        </button>
+        <ul class="header-list">
+          
+            <li class="header-item ">
+              <a href="/shipyard/" class="header-link">Installation</a>
+            </li>
+          
+            <li class="header-item ">
+              <a href="/shipyard/methodology" class="header-link">Methodology</a>
+            </li>
+          
+            <li class="header-item ">
+              <a href="/shipyard/components/" class="header-link">Components</a>
+            </li>
+          
+            <li class="header-item ">
+              <a href="/shipyard/utilities/" class="header-link">Utilities</a>
+            </li>
+          
+          <li class="header-item header-item-cta">
+            <a href="https://github.com/codeship/shipyard" target="_blank" class="header-link-cta" rel="noopener">Download</a>
+          </li>
+        </ul>
+      </div>
+    </header>
+    <div class="container"><h1>Float Utilities</h1>
+
+<div class="language-css highlighter-rouge"><div class="highlight"><pre class="code-block"><code><span class="nc">.float-none</span> <span class="p">{</span> <span class="nl">float</span><span class="p">:</span> <span class="nb">none</span> <span class="p">}</span>
+<span class="nc">.float-left</span> <span class="p">{</span> <span class="nl">float</span><span class="p">:</span> <span class="nb">left</span> <span class="p">}</span>
+<span class="nc">.float-right</span> <span class="p">{</span> <span class="nl">float</span><span class="p">:</span> <span class="nb">right</span> <span class="p">}</span>
+
+<span class="k">@media</span> <span class="n">screen</span> <span class="n">and</span> <span class="p">(</span><span class="n">min-width</span><span class="p">:</span>  <span class="m">576px</span><span class="p">)</span> <span class="p">{</span>
+  <span class="nc">.sm</span><span class="nd">:float-none</span> <span class="p">{</span> <span class="nl">float</span><span class="p">:</span> <span class="nb">none</span> <span class="p">}</span>
+  <span class="nc">.sm</span><span class="nd">:float-left</span> <span class="p">{</span> <span class="nl">float</span><span class="p">:</span> <span class="nb">left</span> <span class="p">}</span>
+  <span class="nc">.sm</span><span class="nd">:float-right</span> <span class="p">{</span> <span class="nl">float</span><span class="p">:</span> <span class="nb">right</span> <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="k">@media</span> <span class="n">screen</span> <span class="n">and</span> <span class="p">(</span><span class="n">min-width</span><span class="p">:</span>  <span class="m">768px</span><span class="p">)</span> <span class="p">{</span>
+  <span class="nc">.md</span><span class="nd">:float-none</span> <span class="p">{</span> <span class="nl">float</span><span class="p">:</span> <span class="nb">none</span> <span class="p">}</span>
+  <span class="nc">.md</span><span class="nd">:float-left</span> <span class="p">{</span> <span class="nl">float</span><span class="p">:</span> <span class="nb">left</span> <span class="p">}</span>
+  <span class="nc">.md</span><span class="nd">:float-right</span> <span class="p">{</span> <span class="nl">float</span><span class="p">:</span> <span class="nb">right</span> <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="k">@media</span> <span class="n">screen</span> <span class="n">and</span> <span class="p">(</span><span class="n">min-width</span><span class="p">:</span>  <span class="m">992px</span><span class="p">)</span> <span class="p">{</span>
+  <span class="nc">.lg</span><span class="nd">:float-none</span> <span class="p">{</span> <span class="nl">float</span><span class="p">:</span> <span class="nb">none</span> <span class="p">}</span>
+  <span class="nc">.lg</span><span class="nd">:float-left</span> <span class="p">{</span> <span class="nl">float</span><span class="p">:</span> <span class="nb">left</span> <span class="p">}</span>
+  <span class="nc">.lg</span><span class="nd">:float-right</span> <span class="p">{</span> <span class="nl">float</span><span class="p">:</span> <span class="nb">right</span> <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="k">@media</span> <span class="n">screen</span> <span class="n">and</span> <span class="p">(</span><span class="n">min-width</span><span class="p">:</span>  <span class="m">1200px</span><span class="p">)</span> <span class="p">{</span>
+  <span class="nc">.xl</span><span class="nd">:float-none</span> <span class="p">{</span> <span class="nl">float</span><span class="p">:</span> <span class="nb">none</span> <span class="p">}</span>
+  <span class="nc">.xl</span><span class="nd">:float-left</span> <span class="p">{</span> <span class="nl">float</span><span class="p">:</span> <span class="nb">left</span> <span class="p">}</span>
+  <span class="nc">.xl</span><span class="nd">:float-right</span> <span class="p">{</span> <span class="nl">float</span><span class="p">:</span> <span class="nb">right</span> <span class="p">}</span>
+<span class="p">}</span>
+<span class="nc">.clearfix</span><span class="nd">::after</span> <span class="p">{</span> <span class="nl">clear</span><span class="p">:</span> <span class="nb">both</span><span class="p">;</span> <span class="nl">content</span><span class="p">:</span> <span class="s1">""</span><span class="p">;</span> <span class="nl">display</span><span class="p">:</span> <span class="n">table</span> <span class="p">}</span>
+</code></pre></div></div>
+
+<hr />
+
+<ul class="col-container">
+  <li class="css-stat-item col col-10">
+    <span class="text-sm medium text-lighter block">Gzipped Size</span>
+    <span class="text-xxxl bold text-darker">189 <span class="text-lightest">B</span></span>
+  </li>
+  <li class="css-stat-item col col-10">
+    <span class="text-sm medium text-lighter block">Declarations</span>
+    <span class="text-xxxl bold text-darker">16</span>
+  </li>
+  <li class="css-stat-item col col-10">
+    <span class="text-sm medium text-lighter block">Selectors</span>
+    <span class="text-xxxl bold text-darker">16</span>
+  </li>
+</ul>
+
+</div>
+    <footer class="align-center text-lightest">
+      &copy; Shipyard Framework 2017
+    </footer>
+    <script type="text/javascript" src="/shipyard/assets/application-c3373ace7156c429085b39536378d139c45118d95f6f8ebb40d1141d7bb4d03b.js" integrity="sha256-wzc6znFWxCkIWzlTY3jROcRRGNlfb467QNEUHXu00Ds=" crossorigin="anonymous"></script>
+  </body>
+</html>

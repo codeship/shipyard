@@ -6,10 +6,10 @@
     <meta name="theme-color" content="#20a5a8" />
     <link media="screen" rel="stylesheet" type="text/css" integrity="sha256-ykLyqEsmScn8zNFsxR+20fkVuioJiNMLkcO4TYcis2k=" crossorigin="anonymous" href="/shipyard/assets/fonts-ca42f2a84b2649c9fcccd16cc51fb6d1f915ba2a0988d30b91c3b84d8722b369.css">
     <link media="screen" rel="stylesheet" type="text/css" integrity="sha256-QCZr3H/ZlbjN2u7as4F9ePzFrtGJsdaiOmgntDe3FIg=" crossorigin="anonymous" href="/shipyard/assets/syntax-40266bdc7fd995b8cddaeedab3817d78fcc5aed189b1d6a23a6827b437b71488.css">
-    <link media="screen" rel="stylesheet" type="text/css" integrity="sha256-0crAn4W+R/FiD7KdWUVHhjA5+XE10o89RXyxDtaMUZU=" crossorigin="anonymous" href="/shipyard/assets/application-d1cac09f85be47f1620fb29d594547863039f97135d28f3d457cb10ed68c5195.css">
+    <link media="screen" rel="stylesheet" type="text/css" integrity="sha256-ituJumFVqBI+lqZSqnaYULVGUtNPp/UdrPD69fCW984=" crossorigin="anonymous" href="/shipyard/assets/application-8adb89ba6155a8123e96a652aa769850b54652d34fa7f51dacf0faf5f096f7ce.css">
   </head>
   <body>
-    <header class="header">
+    <header class="header z-100">
       <div class="container">
         <h6 class="header-logo"><a href="/shipyard/">Shipyard</a></h6>
         <button class="hamburger" shipyard="hamburger">
@@ -18,7 +18,11 @@
         <ul class="header-list">
           
             <li class="header-item ">
-              <a href="/shipyard/" class="header-link">Home</a>
+              <a href="/shipyard/" class="header-link">Installation</a>
+            </li>
+          
+            <li class="header-item ">
+              <a href="/shipyard/methodology" class="header-link">Methodology</a>
             </li>
           
             <li class="header-item ">
@@ -105,7 +109,8 @@
 <p class="section-description">Here’s the raw CSS output if you’d like a peak under the hood.</p>
 
 <div class="language-css highlighter-rouge"><div class="highlight"><pre class="code-block"><code><span class="nc">.hr</span> <span class="p">{</span> <span class="nl">height</span><span class="p">:</span> <span class="m">0</span><span class="p">;</span> <span class="nl">border</span><span class="p">:</span> <span class="m">0</span> <span class="nb">solid</span> <span class="n">rgba</span><span class="p">(</span><span class="m">89</span><span class="p">,</span><span class="m">123</span><span class="p">,</span><span class="m">145</span><span class="p">,</span><span class="m">0.12</span><span class="p">);</span> <span class="nl">overflow</span><span class="p">:</span> <span class="nb">visible</span><span class="p">;</span> <span class="nl">position</span><span class="p">:</span> <span class="nb">relative</span><span class="p">;</span> <span class="nl">border-width</span><span class="p">:</span> <span class="m">2px</span> <span class="m">0</span> <span class="m">0</span><span class="p">;</span> <span class="nl">margin</span><span class="p">:</span> <span class="m">20px</span> <span class="m">0</span> <span class="p">}</span>
-<span class="k">@media</span> <span class="n">screen</span> <span class="n">and</span> <span class="p">(</span><span class="n">min-width</span><span class="p">:</span>  <span class="m">770px</span><span class="p">)</span> <span class="p">{</span>
+
+<span class="k">@media</span> <span class="n">screen</span> <span class="n">and</span> <span class="p">(</span><span class="n">min-width</span><span class="p">:</span>  <span class="m">576px</span><span class="p">)</span> <span class="p">{</span>
 <span class="nc">.hr</span> <span class="p">{</span> <span class="nl">margin</span><span class="p">:</span> <span class="m">30px</span> <span class="m">0</span> <span class="p">}</span>
 <span class="p">}</span>
 <span class="nc">.hr-dark</span> <span class="p">{</span> <span class="nl">border-color</span><span class="p">:</span> <span class="n">rgba</span><span class="p">(</span><span class="m">89</span><span class="p">,</span><span class="m">123</span><span class="p">,</span><span class="m">145</span><span class="p">,</span><span class="m">0.3</span><span class="p">)</span> <span class="p">}</span>
@@ -117,16 +122,16 @@
 
 <ul class="col-container">
   <li class="css-stat-item col col-10">
-    <span class="text-sm medium text-lighter display-block">Gzipped Size</span>
-    <span class="text-xxxl strong text-darker">184 <span class="text-lightest">B</span></span>
+    <span class="text-sm medium text-lighter block">Gzipped Size</span>
+    <span class="text-xxxl bold text-darker">185 <span class="text-lightest">B</span></span>
   </li>
   <li class="css-stat-item col col-10">
-    <span class="text-sm medium text-lighter display-block">Declarations</span>
-    <span class="text-xxxl strong text-darker">5</span>
+    <span class="text-sm medium text-lighter block">Declarations</span>
+    <span class="text-xxxl bold text-darker">5</span>
   </li>
   <li class="css-stat-item col col-10">
-    <span class="text-sm medium text-lighter display-block">Selectors</span>
-    <span class="text-xxxl strong text-darker">5</span>
+    <span class="text-sm medium text-lighter block">Selectors</span>
+    <span class="text-xxxl bold text-darker">5</span>
   </li>
 </ul>
 
@@ -134,6 +139,6 @@
     <footer class="align-center text-lightest">
       &copy; Shipyard Framework 2017
     </footer>
-    <script type="text/javascript" src="/shipyard/assets/application-cd155d7ea62fc14fbd29945e183d8a560eef7e0148fecfe3e70a042b04ae7ce6.js" integrity="sha256-zRVdfqYvwU+9KZReGD2KVg7vfgFI/s/j5woEKwSufOY=" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="/shipyard/assets/application-c3373ace7156c429085b39536378d139c45118d95f6f8ebb40d1141d7bb4d03b.js" integrity="sha256-wzc6znFWxCkIWzlTY3jROcRRGNlfb467QNEUHXu00Ds=" crossorigin="anonymous"></script>
   </body>
 </html>
