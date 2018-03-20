@@ -1,6 +1,5 @@
 require 'shipyard-framework/helpers/alert_helper'
 require 'shipyard-framework/helpers/box_helper'
-require 'shipyard-framework/helpers/button_helper'
 require 'shipyard-framework/helpers/form_helper'
 require 'shipyard-framework/helpers/icon_helper'
 require 'shipyard-framework/helpers/layout_helper'
@@ -12,7 +11,6 @@ module Shipyard
       initializer 'shipyard.view_helpers' do
         ActionView::Base.send :include, Shipyard::AlertHelper
         ActionView::Base.send :include, Shipyard::BoxHelper
-        ActionView::Base.send :include, Shipyard::ButtonHelper
         ActionView::Base.send :include, Shipyard::FormHelper
         ActionView::Base.send :include, Shipyard::IconHelper
         ActionView::Base.send :include, Shipyard::LayoutHelper
