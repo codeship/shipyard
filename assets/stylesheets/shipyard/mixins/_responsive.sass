@@ -35,23 +35,23 @@
         @content
 
 @mixin breakpoint-all
-  +media(max-width map-get($breakpoints, sm) - 1)
+  @media (max-width map-get($breakpoints, sm))
     @content
 
 @mixin breakpoint-sm
-  +media(min-width map-get($breakpoints, sm))
+  @media (min-width map-get($breakpoints, sm))
     @content
 
 @mixin breakpoint-md
-  +media(min-width map-get($breakpoints, md))
+  @media (min-width map-get($breakpoints, md))
     @content
 
 @mixin breakpoint-lg
-  +media(min-width map-get($breakpoints, lg))
+  @media (min-width map-get($breakpoints, lg))
     @content
 
 @mixin breakpoint-xl
-  +media(min-width map-get($breakpoints, xl))
+  @media (min-width map-get($breakpoints, xl))
     @content
 
 @mixin responsive-padding($properties: null, $divisor: 2)
