@@ -8,7 +8,8 @@ pwd
 echo -e "\n\n************** Environment **************"
 printenv | grep PERCY_PROJECT
 printenv | grep JENKINS_URL
-printenv | grep ghprbPullId
+echo -e "\n\n************** All Vars **************"
+printenv
 
 echo -e "\n\n************** Jekyll Build **************"
 JEKYLL_ENV=test jekyll build --baseurl=''
