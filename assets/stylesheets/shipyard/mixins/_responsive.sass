@@ -35,7 +35,7 @@
         @content
 
 @mixin breakpoint-all
-  @media (max-width map-get($breakpoints, sm))
+  @media (max-width map-get($breakpoints, sm) - 1)
     @content
 
 @mixin breakpoint-sm
