@@ -203,8 +203,8 @@ $shipyard-defaults: (
     prefix: 'text-shadow',
     responsive: false,
     values: (
-      xs: 0 1px 0 rgba(#000,.1),
-      sm: 0 1px 1px rgba(#000, .1)
+      '': 0 1px 0 rgba(#000,.1),
+      'sm': 0 1px 1px rgba(#000, .1)
     )
   ),
 
