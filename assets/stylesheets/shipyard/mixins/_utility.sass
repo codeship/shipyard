@@ -18,8 +18,10 @@
       .#{utility-class($prefix, $class)}
         #{$name}: $value
 
-      // Print out variants like: left, right, top, bottom
-      @if $utility-variants
+    // Print out variants like: left, right, top, bottom
+    @if $utility-variants
+      @each $class, $value in $utility-values
+        $value: if($value, $value, $class)
         @each $v-class, $v-prop in $utility-variants
           .#{utility-class($prefix + $v-class, $class)}
             #{$name}-#{$v-prop}: $value
@@ -38,8 +40,10 @@
             .#{$breakpoint + '\\:' + utility-class($prefix, $class)}
               #{$name}: $value
 
-            // Print out variants like: left, right, top, bottom
-            @if $utility-variants
+          // Print out variants like: left, right, top, bottom
+          @if $utility-variants
+            @each $class, $value in $utility-values
+              $value: if($value, $value, $class)
               @each $v-class, $v-prop in $utility-variants
                 .#{$breakpoint + '\\:' + utility-class($prefix + $v-class, $class)}
                   #{$name}-#{$v-prop}: $value
