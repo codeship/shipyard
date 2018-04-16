@@ -45,10 +45,11 @@ Useful in tight spaces where it's still important to show status, but not import
 
 ```erb
 {%- for status in page.statuses %}
+<!-- Status: {{ status | capitalize }} -->
 <span class="status status-xs status-{{ status }}">
   <%= icon :{{ status | replace: 'error', 'error_xs' }}, prefix: 'status-xs', class: 'status-icon' %>
 </span>
-<span class="text-{{ status }}">{{ status }}</span>
+<span class="text-{{ status }}">{{ status | capitalize }}</span>
 {% endfor -%}
 ```
 
@@ -87,10 +88,13 @@ Useful when next to standard text where where it's important to show the status 
   <span class="text-md medium ml-5 text-fail">Fail</span>
 </button>
 
-```html
+```erb
 {%- for status in page.statuses %}
-<span class="status status-sm status-{{ status }}"></span>
-<span class="text-{{ status }}">{{ status }}</span>
+<!-- Status: {{ status | capitalize }} -->
+<span class="status status-sm status-{{ status }}">
+  <%= icon :{{ status | replace: 'error', 'error_xs' }}, prefix: 'status-sm', class: 'status-icon' %>
+</span>
+<span class="text-{{ status }}">{{ status | capitalize }}</span>
 {% endfor -%}
 ```
 
