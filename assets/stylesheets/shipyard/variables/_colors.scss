@@ -1,5 +1,13 @@
 $shipyard-colors: (
+  // Shipyard: Black
   'black': #000,
+  'black-90': rgba(#000, .9),
+  'black-80': rgba(#000, .8),
+  'black-70': rgba(#000, .7),
+  'black-60': rgba(#000, .6),
+  'black-50': rgba(#000, .5),
+  'black-40': rgba(#000, .4),
+  'black-30': rgba(#000, .3),
 
   // Shipyard: White
   'white': #fff,
@@ -9,6 +17,7 @@ $shipyard-colors: (
   'white-60': rgba(#fff, .6),
   'white-50': rgba(#fff, .5),
   'white-40': rgba(#fff, .4),
+  'white-30': rgba(#fff, .3),
 
   // Shipyard: Gray
   'gray': #788594,

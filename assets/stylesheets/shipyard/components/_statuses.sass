@@ -7,8 +7,8 @@
   top: -1px
   position: relative
   display: inline-block
-  color: $text-color-lightest
-  border: 2px solid $border-color-light
+  color: $gray
+  border: 2px solid $gray
   border-radius: 50%
   vertical-align: middle
   background-clip: border-box
@@ -47,6 +47,7 @@
 
   &-running
     color: $teal
+    border-color: $border-color-light
     &-bg
       background-color: $teal
     &.status-xs,
@@ -216,7 +217,7 @@
 
 +component('text')
   &-skipped
-    color: $text-color-lightest
+    color: $gray
   &-waiting
     color: $blue
   &-running
