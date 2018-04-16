@@ -15,31 +15,31 @@ Useful in tight spaces where it's still important to show status, but not import
 <div class="mb-25">
   <button tooltip="skipped" class="btn btn-secondary btn-xs rounded-pill mr-5">
     <span class="status status-skipped status-xs">{% icon :skipped, prefix: 'status-xs', class: 'status-icon' %}</span>
-    <span class="text-sm medium ml-5 text-skipped">skipped</span>
+    <span class="text-sm medium ml-5 text-skipped">Skipped</span>
   </button>
   <button tooltip="waiting" class="btn btn-secondary btn-xs rounded-pill mr-5">
     <span class="status status-waiting status-xs">{% icon 'waiting', prefix: 'status-xs', class: 'status-icon' %}</span>
-    <span class="text-sm medium ml-5 text-waiting">waiting</span>
+    <span class="text-sm medium ml-5 text-waiting">Waiting</span>
   </button>
   <button tooltip="running" class="btn btn-secondary btn-xs rounded-pill mr-5">
     <span class="status status-running status-xs">{% icon :running, prefix: 'status-xs', class: 'status-icon' %}</span>
-    <span class="text-sm medium ml-5 text-running">running</span>
+    <span class="text-sm medium ml-5 text-running">Running</span>
   </button>
   <button tooltip="success" class="btn btn-secondary btn-xs rounded-pill mr-5">
     <span class="status status-success status-xs">{% icon :success, prefix: 'status-xs', class: 'status-icon' %}</span>
-    <span class="text-sm medium ml-5 text-success">success</span>
+    <span class="text-sm medium ml-5 text-success">Success</span>
   </button>
   <button tooltip="idle" class="btn btn-secondary btn-xs rounded-pill mr-5">
     <span class="status status-idle status-xs">{% icon :idle, prefix: 'status-xs', class: 'status-icon' %}</span>
-    <span class="text-sm medium ml-5 text-idle">idle</span>
+    <span class="text-sm medium ml-5 text-idle">Idle</span>
   </button>
   <button tooltip="error" class="btn btn-secondary btn-xs rounded-pill mr-5">
     <span class="status status-error status-xs">{% icon :error_xs, prefix: 'status-xs', class: 'status-icon' %}</span>
-    <span class="text-sm medium ml-5 text-error">error</span>
+    <span class="text-sm medium ml-5 text-error">Error</span>
   </button>
   <button tooltip="fail" class="btn btn-secondary btn-xs rounded-pill mr-5">
     <span class="status status-fail status-xs">{% icon :fail, prefix: 'status-xs', class: 'status-icon' %}</span>
-    <span class="text-sm medium ml-5 text-fail">fail</span>
+    <span class="text-sm medium ml-5 text-fail">Fail</span>
   </button>
 </div>
 
@@ -58,12 +58,34 @@ Useful in tight spaces where it's still important to show status, but not import
 Useful when next to standard text where where it's important to show the status of a particular object.
 {: .section-description }
 
-{% for status in page.statuses -%}
-  <button class="btn btn-secondary btn-sm rounded-pill mr-5">
-    <span class="status status-{{ status }} status-sm"></span>
-    <span class="text-md medium ml-5 text-{{ status }}">{{ status | capitalize }}</span>
-  </button>
-{% endfor %}
+<button tooltip="skipped" class="btn btn-secondary btn-sm rounded-pill mr-5">
+  <span class="status status-skipped status-sm">{% icon :skipped, prefix: 'status-sm', class: 'status-icon' %}</span>
+  <span class="text-md medium ml-5 text-skipped">Skipped</span>
+</button>
+<button tooltip="waiting" class="btn btn-secondary btn-sm rounded-pill mr-5">
+  <span class="status status-waiting status-sm">{% icon 'waiting', prefix: 'status-sm', class: 'status-icon' %}</span>
+  <span class="text-md medium ml-5 text-waiting">Waiting</span>
+</button>
+<button tooltip="running" class="btn btn-secondary btn-sm rounded-pill mr-5">
+  <span class="status status-running status-sm">{% icon :running, prefix: 'status-sm', class: 'status-icon' %}</span>
+  <span class="text-md medium ml-5 text-running">Running</span>
+</button>
+<button tooltip="success" class="btn btn-secondary btn-sm rounded-pill mr-5">
+  <span class="status status-success status-sm">{% icon :success, prefix: 'status-sm', class: 'status-icon' %}</span>
+  <span class="text-md medium ml-5 text-success">Success</span>
+</button>
+<button tooltip="idle" class="btn btn-secondary btn-sm rounded-pill mr-5">
+  <span class="status status-idle status-sm">{% icon :idle, prefix: 'status-sm', class: 'status-icon' %}</span>
+  <span class="text-md medium ml-5 text-idle">Idle</span>
+</button>
+<button tooltip="error" class="btn btn-secondary btn-sm rounded-pill mr-5">
+  <span class="status status-error status-sm">{% icon :error_xs, prefix: 'status-sm', class: 'status-icon' %}</span>
+  <span class="text-md medium ml-5 text-error">Error</span>
+</button>
+<button tooltip="fail" class="btn btn-secondary btn-sm rounded-pill mr-5">
+  <span class="status status-fail status-sm">{% icon :fail, prefix: 'status-sm', class: 'status-icon' %}</span>
+  <span class="text-md medium ml-5 text-fail">Fail</span>
+</button>
 
 ```html
 {%- for status in page.statuses %}

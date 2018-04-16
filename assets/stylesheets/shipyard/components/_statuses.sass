@@ -17,7 +17,6 @@
     &-bg
       background-color: $gray
 
-  &-idle,
   &-waiting,
   &-running
     &.status-xs,
@@ -68,9 +67,8 @@
     &.status-md:not(.status-inverse)
       color: #fff
       background-color: $yellow-dark
-    &.status-sm::after
-      border-color: $yellow
-    &.status-xs
+    &.status-xs,
+    &.status-sm
       border-color: transparent
       background-color: transparent
 
@@ -79,7 +77,8 @@
     border-color: $green
     &, &-bg
       background-color: $green
-    &.status-xs
+    &.status-xs,
+    &.status-sm
       border-color: transparent
       background-color: transparent
 
@@ -88,7 +87,8 @@
     border-color: $red
     &, &-bg
       background-color: $red
-    &.status-xs
+    &.status-xs,
+    &.status-sm
       border-color: transparent
       background-color: transparent
 
@@ -97,7 +97,8 @@
     border-color: $orange-dark
     &, &-bg
       background-color: $orange-dark
-    &.status-xs
+    &.status-xs,
+    &.status-sm
       border-color: transparent
       background-color: transparent
 
@@ -134,7 +135,7 @@
     left: 50%
     position: absolute
 
-  // Status: Icons (Medium)
+  // Status: Icons (X-Small)
   &-xs-icon
     margin: -2px 0 0 -2px
     +width-height(4px)
@@ -142,10 +143,17 @@
     &-waiting,
     &-running
       display: none
-    &-fail
-      +width-height(4px)
-    &-idle
-      +width-height(4px)
+    &-error-xs
+      fill: $orange-dark
+
+  // Status: Icons (Small)
+  &-sm-icon
+    margin: -3px 0 0 -3px
+    +width-height(6px)
+    &-skipped,
+    &-waiting,
+    &-running
+      display: none
     &-error-xs
       fill: $orange-dark
 
