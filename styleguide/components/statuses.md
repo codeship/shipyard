@@ -1,7 +1,7 @@
 ---
 title: Shipyard Statuses
 sass_file: shipyard/components/_statuses
-statuses: [skipped, waiting, running, success, idle, error, fail]
+statuses: [skipped, waiting, running, success, paused, error, fail]
 ---
 
 {% include page-heading.html page=page %}
@@ -29,9 +29,9 @@ Useful in tight spaces where it's still important to show status, but not import
     <span class="status status-success status-xs">{% icon :success, prefix: 'status-xs', class: 'status-icon' %}</span>
     <span class="text-sm medium ml-5 text-success">Success</span>
   </button>
-  <button tooltip="idle" class="btn btn-secondary btn-xs rounded-pill mr-5">
-    <span class="status status-idle status-xs">{% icon :idle, prefix: 'status-xs', class: 'status-icon' %}</span>
-    <span class="text-sm medium ml-5 text-idle">Idle</span>
+  <button tooltip="paused" class="btn btn-secondary btn-xs rounded-pill mr-5">
+    <span class="status status-paused status-xs">{% icon :paused, prefix: 'status-xs', class: 'status-icon' %}</span>
+    <span class="text-sm medium ml-5 text-paused">Paused</span>
   </button>
   <button tooltip="error" class="btn btn-secondary btn-xs rounded-pill mr-5">
     <span class="status status-error status-xs">{% icon :error_xs, prefix: 'status-xs', class: 'status-icon' %}</span>
@@ -75,9 +75,9 @@ Useful when next to standard text where where it's important to show the status 
   <span class="status status-success status-sm">{% icon :success, prefix: 'status-sm', class: 'status-icon' %}</span>
   <span class="text-md medium ml-5 text-success">Success</span>
 </button>
-<button tooltip="idle" class="btn btn-secondary btn-sm rounded-pill mr-5">
-  <span class="status status-idle status-sm">{% icon :idle, prefix: 'status-sm', class: 'status-icon' %}</span>
-  <span class="text-md medium ml-5 text-idle">Idle</span>
+<button tooltip="paused" class="btn btn-secondary btn-sm rounded-pill mr-5">
+  <span class="status status-paused status-sm">{% icon :paused, prefix: 'status-sm', class: 'status-icon' %}</span>
+  <span class="text-md medium ml-5 text-paused">Paused</span>
 </button>
 <button tooltip="error" class="btn btn-secondary btn-sm rounded-pill mr-5">
   <span class="status status-error status-sm">{% icon :error_xs, prefix: 'status-sm', class: 'status-icon' %}</span>
@@ -116,8 +116,8 @@ Useful when next to standard text where where it's important to show the status 
 <button tooltip="success" class="mr-5">
   <span class="status status-success status-md">{% icon :success, prefix: 'status-md', class: 'status-icon' %}</span>
 </button>
-<button tooltip="idle" class="mr-5">
-  <span class="status status-idle status-md">{% icon :idle, prefix: 'status-md', class: 'status-icon' %}</span>
+<button tooltip="paused" class="mr-5">
+  <span class="status status-paused status-md">{% icon :paused, prefix: 'status-md', class: 'status-icon' %}</span>
 </button>
 <button tooltip="error" class="mr-5">
   <span class="status status-error status-md">{% icon :error, prefix: 'status-md', class: 'status-icon' %}</span>
@@ -161,9 +161,9 @@ Useful when next to standard text where where it's important to show the status 
       {% icon :success, prefix: 'status-md', class: 'status-icon' %}
     </span>
   </div>
-  <div class="status-idle-bg p-20 pl-0 pr-0 col" tooltip="idle">
-    <span class="status status-inverse status-idle status-md">
-      {% icon :idle, prefix: 'status-md', class: 'status-icon' %}
+  <div class="status-paused-bg p-20 pl-0 pr-0 col" tooltip="paused">
+    <span class="status status-inverse status-paused status-md">
+      {% icon :paused, prefix: 'status-md', class: 'status-icon' %}
     </span>
   </div>
   <div class="status-error-bg p-20 pl-0 pr-0 col" tooltip="error">
@@ -204,8 +204,8 @@ Useful when next to standard text where where it's important to show the status 
 <button tooltip="success" class="mr-5">
   <span class="status status-success status-lg">{% icon :success, prefix: 'status-lg', class: 'status-icon' %}</span>
 </button>
-<button tooltip="idle" class="mr-5">
-  <span class="status status-idle status-lg">{% icon :idle, prefix: 'status-lg', class: 'status-icon' %}</span>
+<button tooltip="paused" class="mr-5">
+  <span class="status status-paused status-lg">{% icon :paused, prefix: 'status-lg', class: 'status-icon' %}</span>
 </button>
 <button tooltip="error" class="mr-5">
   <span class="status status-error status-lg">{% icon :error, prefix: 'status-lg', class: 'status-icon' %}</span>
@@ -249,9 +249,9 @@ Useful when next to standard text where where it's important to show the status 
       {% icon :success, prefix: 'status-lg', class: 'status-icon' %}
     </span>
   </div>
-  <div class="status-idle-bg p-20 pl-0 pr-0 col" tooltip="idle">
-    <span class="status status-inverse status-idle status-lg">
-      {% icon :idle, prefix: 'status-lg', class: 'status-icon' %}
+  <div class="status-paused-bg p-20 pl-0 pr-0 col" tooltip="paused">
+    <span class="status status-inverse status-paused status-lg">
+      {% icon :paused, prefix: 'status-lg', class: 'status-icon' %}
     </span>
   </div>
   <div class="status-error-bg p-20 pl-0 pr-0 col" tooltip="error">
@@ -292,8 +292,8 @@ Useful when next to standard text where where it's important to show the status 
 <button tooltip="success" class="mr-5">
   <span class="status status-success status-xl">{% icon :success, prefix: 'status-xl', class: 'status-icon' %}</span>
 </button>
-<button tooltip="idle" class="mr-5">
-  <span class="status status-idle status-xl">{% icon :idle, prefix: 'status-xl', class: 'status-icon' %}</span>
+<button tooltip="paused" class="mr-5">
+  <span class="status status-paused status-xl">{% icon :paused, prefix: 'status-xl', class: 'status-icon' %}</span>
 </button>
 <button tooltip="error" class="mr-5">
   <span class="status status-error status-xl">{% icon :error, prefix: 'status-xl', class: 'status-icon' %}</span>
@@ -337,9 +337,9 @@ Useful when next to standard text where where it's important to show the status 
       {% icon :success, prefix: 'status-xl', class: 'status-icon' %}
     </span>
   </div>
-  <div class="status-idle-bg p-10 sm:p-20 pl-0 pr-0 col" tooltip="idle">
-    <span class="status status-inverse status-idle status-xl">
-      {% icon :idle, prefix: 'status-xl', class: 'status-icon' %}
+  <div class="status-paused-bg p-10 sm:p-20 pl-0 pr-0 col" tooltip="paused">
+    <span class="status status-inverse status-paused status-xl">
+      {% icon :paused, prefix: 'status-xl', class: 'status-icon' %}
     </span>
   </div>
   <div class="status-error-bg p-10 sm:p-20 pl-0 pr-0 col" tooltip="error">
