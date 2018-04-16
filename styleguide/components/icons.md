@@ -34,9 +34,10 @@ The following icons are used primarily in the <a href="{{ site.baseurl }}/compon
 {: .section-description }
 
 <ul class="icon-list col-container">
+  {% iconitem :error_xs, class: 'center' %}
   {% iconitem :error, class: 'center' %}
   {% iconitem :fail, class: 'center' %}
-  {% iconitem :idle, class: 'center' %}
+  {% iconitem :paused, class: 'center' %}
   {% iconitem :running, class: 'center' %}
   {% iconitem :skipped, class: 'center' %}
   {% iconitem :success, class: 'center' %}

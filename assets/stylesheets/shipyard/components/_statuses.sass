@@ -17,7 +17,6 @@
     &-bg
       background-color: $gray
 
-  &-idle,
   &-waiting,
   &-running
     &.status-xs,
@@ -60,7 +59,7 @@
       border-color: rgba(#fff,.3)
       background-color: transparent
 
-  &-idle
+  &-paused
     color: $yellow-dark
     border-color: $yellow-dark
     &-bg
@@ -68,27 +67,40 @@
     &.status-md:not(.status-inverse)
       color: #fff
       background-color: $yellow-dark
-    &.status-xs::after,
-    &.status-sm::after
-      border-color: $yellow
+    &.status-xs,
+    &.status-sm
+      border-color: transparent
+      background-color: transparent
 
   &-success
     color: $green
     border-color: $green
     &, &-bg
       background-color: $green
+    &.status-xs,
+    &.status-sm
+      border-color: transparent
+      background-color: transparent
 
   &-fail
     color: $red
     border-color: $red
     &, &-bg
       background-color: $red
+    &.status-xs,
+    &.status-sm
+      border-color: transparent
+      background-color: transparent
 
   &-error
     color: $orange-dark
     border-color: $orange-dark
     &, &-bg
       background-color: $orange-dark
+    &.status-xs,
+    &.status-sm
+      border-color: transparent
+      background-color: transparent
 
   &-success,
   &-fail,
@@ -109,7 +121,7 @@
   &-sm
     +width-height(8px)
   &-md
-    +width-height(18px)
+    +width-height(14px)
   &-lg
     +width-height(22px)
     background-color: transparent
@@ -123,23 +135,46 @@
     left: 50%
     position: absolute
 
-  // Status: Icons (Medium)
-  &-md-icon
+  // Status: Icons (X-Small)
+  &-xs-icon
+    margin: -2px 0 0 -2px
+    +width-height(4px)
+    &-skipped,
+    &-waiting,
+    &-running
+      display: none
+    &-error-xs
+      fill: $orange-dark
+
+  // Status: Icons (Small)
+  &-sm-icon
     margin: -3px 0 0 -3px
     +width-height(6px)
+    &-skipped,
+    &-waiting,
+    &-running
+      display: none
+    &-error-xs
+      fill: $orange-dark
+
+  // Status: Icons (Medium)
+  &-md-icon
+    margin: -2px 0 0 -2px
+    +width-height(4px)
     &-skipped
       margin-left: 0
       transform: translatex(-.8px)
     &-waiting
-      stroke-width: 1.7
-      +width-height(8px, 2px)
-      margin: 0 0 0 -4px
-      transform: translatey(-.7px)
+      stroke-width: 1.5
+      +width-height(6px, 2px)
+      margin: 0 0 0 -3px
+      transform: translatey(-.5px)
     &-running
-      +width-height(16px)
-      margin: -8px 0 0 -8px
+      +width-height(12px)
+      margin: -6px 0 0 -6px
     &-success
-      margin-top: -2px
+      margin-top: 0
+      transform: translatey(-1.7px)
     &-error
       +width-height(2px, 6px)
       margin: -3px 0 0 -1px
@@ -186,7 +221,7 @@
     color: $blue
   &-running
     color: $teal
-  &-idle
+  &-paused
     color: $yellow-dark
   &-success
     color: $green
