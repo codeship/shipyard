@@ -8,7 +8,7 @@ statuses: [skipped, waiting, running, success, idle, error, fail]
 
 ---
 
-### X-Small Statuses `.status-xs`
+### X-Small Status Icons `.status-xs`
 Useful in tight spaces where it's still important to show status, but not important enough to compete for attention with other elements on the page.
 {: .section-description }
 
@@ -54,7 +54,7 @@ Useful in tight spaces where it's still important to show status, but not import
 
 ---
 
-### Status Circles `.status-sm`
+### Small Status Icons `.status-sm`
 Useful when next to standard text where where it's important to show the status of a particular object.
 {: .section-description }
 
@@ -74,7 +74,7 @@ Useful when next to standard text where where it's important to show the status 
 
 ---
 
-### Status Icons `.status-md`
+### Medium Status Icons `.status-md`
 Useful when next to standard text where where it's important to show the status of a particular object.
 {: .section-description }
 
@@ -110,7 +110,7 @@ Useful when next to standard text where where it's important to show the status 
 
 ---
 
-### Inverse Status Icons `.status-inverse.status-md`
+### Medium, Inverse Status Icons `.status-inverse.status-md`
 Useful when next to standard text where where it's important to show the status of a particular object.
 {: .section-description }
 
