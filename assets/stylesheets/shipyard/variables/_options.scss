@@ -320,6 +320,13 @@ $shipyard-defaults: (
     )
   ),
 
+  // Shipyard: Will-Change Utility
+  will-change: (
+    prefix: 'will-change',
+    responsive: false,
+    values: (transform, opacity)
+  ),
+
   // Shipyard: Z-Index Utility
   z-index: (
     prefix: 'z',
