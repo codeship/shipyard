@@ -68,27 +68,38 @@
     &.status-md:not(.status-inverse)
       color: #fff
       background-color: $yellow-dark
-    &.status-xs::after,
     &.status-sm::after
       border-color: $yellow
+    &.status-xs
+      border-color: transparent
+      background-color: transparent
 
   &-success
     color: $green
     border-color: $green
     &, &-bg
       background-color: $green
+    &.status-xs
+      border-color: transparent
+      background-color: transparent
 
   &-fail
     color: $red
     border-color: $red
     &, &-bg
       background-color: $red
+    &.status-xs
+      border-color: transparent
+      background-color: transparent
 
   &-error
     color: $orange-dark
     border-color: $orange-dark
     &, &-bg
       background-color: $orange-dark
+    &.status-xs
+      border-color: transparent
+      background-color: transparent
 
   &-success,
   &-fail,
@@ -122,6 +133,21 @@
     top: 50%
     left: 50%
     position: absolute
+
+  // Status: Icons (Medium)
+  &-xs-icon
+    margin: -2px 0 0 -2px
+    +width-height(4px)
+    &-skipped,
+    &-waiting,
+    &-running
+      display: none
+    &-fail
+      +width-height(4px)
+    &-idle
+      +width-height(4px)
+    &-error-triangle
+      fill: $orange-dark
 
   // Status: Icons (Medium)
   &-md-icon
