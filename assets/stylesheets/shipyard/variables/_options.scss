@@ -177,7 +177,7 @@ $shipyard-defaults: (
   white-space: (
     prefix: 'white-space',
     responsive: true,
-    values: (normal, pre, nowrap)
+    values: (normal, pre, pre-wrap, nowrap)
   ),
 
   // Shipyard: Text-Align Utilities
@@ -317,6 +317,16 @@ $shipyard-defaults: (
     values: (
       rotate-45: rotate(45deg),
       rotate-90: rotate(90deg)
+    )
+  ),
+
+  // Shipyard: Visibilty Utility
+  visibility: (
+    prefix: null,
+    responsive: false,
+    values: (
+      'invisible': hidden,
+      'visible': visible
     )
   ),
 
