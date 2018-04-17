@@ -320,6 +320,16 @@ $shipyard-defaults: (
     )
   ),
 
+  // Shipyard: Visibilty Utility
+  visibility: (
+    prefix: null,
+    responsive: false,
+    values: (
+      'invisible': hidden,
+      'visible': visible
+    )
+  ),
+
   // Shipyard: Will-Change Utility
   will-change: (
     prefix: 'will-change',
