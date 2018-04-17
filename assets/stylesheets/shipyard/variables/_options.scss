@@ -177,7 +177,7 @@ $shipyard-defaults: (
   white-space: (
     prefix: 'white-space',
     responsive: true,
-    values: (normal, pre, nowrap)
+    values: (normal, pre, pre-wrap, nowrap)
   ),
 
   // Shipyard: Text-Align Utilities
