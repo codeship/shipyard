@@ -30,6 +30,11 @@ plugins:
   - shipyard-framework
 ```
 
+## Running Builds on Codeship Pro
+1. Install [Homebrew](https://brew.sh/)
+2. Run `brew bundle`
+3. Run `jet steps`
+
 ## Running Builds on Jenkins
 1. Install [Homebrew](https://brew.sh/)
 2. Run `brew bundle`
