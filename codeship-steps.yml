@@ -1,14 +1,18 @@
 ---
-  - name: "Test"
+  -
+    name: "Test"
     type: "parallel"
     steps:
-      - service: "shipyard"
+      -
+        service: "shipyard"
         name: "Jekyll"
         command: "./ci/jekyll"
-      - service: "shipyard"
+      -
+        service: "shipyard"
         name: "RSpec"
         command: "./ci/rspec"
-      - service: "shipyard"
+      -
+        service: "shipyard"
         name: "Sass"
         command: "./ci/sass_lint"
 
