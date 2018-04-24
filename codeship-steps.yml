@@ -1,16 +1,16 @@
 ---
-  - name: Test
-    type: parallel
+  - name: "Test"
+    type: "parallel"
     steps:
-      - service: shipyard
-        name: Jekyll
-        command: ./ci/jekyll
-      - service: shipyard
-        name: RSpec
-        command: ./ci/rspec
-      - service: shipyard
-        name: Sass
-        command: ./ci/sass_lint
+      - service: "shipyard"
+        name: "Jekyll"
+        command: "./ci/jekyll"
+      - service: "shipyard"
+        name: "RSpec"
+        command: "./ci/rspec"
+      - service: "shipyard"
+        name: "Sass"
+        command: "./ci/sass_lint"
 
   # - name: Review
   #   type: manual
@@ -20,13 +20,13 @@
   #       name: Percy
   #       command: ./ci/percy
 
-  - name: Deploy
-    type: parallel
-    tag: master
-    steps:
-      - service: shipyard
-        name: RubyGems
-        command: echo "This step only runs in Travis CI builds at the moment: https://travis-ci.org/codeship/shipyard"
-      - service: shipyard
-        name: GitHub Pages
-        command: ./ci/deploy
+  # - name: Deploy
+  #   type: parallel
+  #   tag: master
+  #   steps:
+  #     - service: shipyard
+  #       name: RubyGems
+  #       command: echo "This step only runs in Travis CI builds at the moment: https://travis-ci.org/codeship/shipyard"
+  #     - service: shipyard
+  #       name: GitHub Pages
+  #       command: ./ci/deploy
