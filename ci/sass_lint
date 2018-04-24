@@ -4,7 +4,7 @@ color_end="\033[m"
 repository="https://github.com/codeship/shipyard.git"
 
 echo -e "************** Copy Master Branch **************"
-GIT_SSH_COMMAND="ssh -o StrictHostKeyChecking=no" git clone $repository --branch master --single-branch ci/master-tmp
+git clone $repository --branch master --single-branch ci/master-tmp
 
 echo -e "\n\n************** Compile Sass **************"
 bundle exec sass --no-cache --load-path assets/stylesheets --sourcemap=none --style compact assets/stylesheets/_shipyard.sass ci/master-tmp/branch-compact.css
