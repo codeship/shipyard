@@ -1,29 +1,32 @@
-- name: Test
-  type: parallel
-  steps:
-    - service: shipyard
-      name: Jekyll
-      command: ./ci/jekyll
-    - service: shipyard
-      name: RSpec
-      command: ./ci/rspec
-    - service: shipyard
-      name: Sass
-      command: ./ci/sass_lint
-- name: Review
-  type: manual
-  exclude: master
-  steps:
-    - service: shipyard
-      name: Percy
-      command: ./ci/percy
-- name: Deploy
-  type: parallel
-  tag: master
-  steps:
-    - service: shipyard
-      name: RubyGems
-      command: echo "This step only runs in Travis CI builds at the moment: https://travis-ci.org/codeship/shipyard"
-    - service: shipyard
-      name: GitHub Pages
-      command: ./ci/deploy
+---
+  - name: Test
+    type: parallel
+    steps:
+      - service: shipyard
+        name: Jekyll
+        command: ./ci/jekyll
+      - service: shipyard
+        name: RSpec
+        command: ./ci/rspec
+      - service: shipyard
+        name: Sass
+        command: ./ci/sass_lint
+
+  # - name: Review
+  #   type: manual
+  #   exclude: master
+  #   steps:
+  #     - service: shipyard
+  #       name: Percy
+  #       command: ./ci/percy
+
+  - name: Deploy
+    type: parallel
+    tag: master
+    steps:
+      - service: shipyard
+        name: RubyGems
+        command: echo "This step only runs in Travis CI builds at the moment: https://travis-ci.org/codeship/shipyard"
+      - service: shipyard
+        name: GitHub Pages
+        command: ./ci/deploy
