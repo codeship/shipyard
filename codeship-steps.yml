@@ -36,7 +36,7 @@
       command: ./ci/rubygems
     -
       service: shipyard
-      name: Percy
+      name: Update Percy
       command: ./ci/percy
     -
       service: shipyard
