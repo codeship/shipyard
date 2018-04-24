@@ -34,7 +34,11 @@
       service: shipyard
       name: RubyGems
       command: ./ci/rubygems
-    # -
-    #   service: shipyard
-    #   name: GitHub Pages
-    #   command: ./ci/deploy
+    -
+      service: shipyard
+      name: Percy
+      command: ./ci/percy
+    -
+      service: shipyard
+      name: GitHub Pages
+      command: ./ci/deploy
