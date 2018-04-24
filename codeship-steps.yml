@@ -13,8 +13,7 @@
     -
       service: shipyard
       name: Sass
-      command: exit 0
-      # command: ./ci/sass_lint
+      command: ./ci/sass_lint
 
 -
   name: Review
