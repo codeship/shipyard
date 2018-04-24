@@ -6,23 +6,19 @@
       -
         service: shipyard
         name: Debug
-        command: ls
-      -
-        service: shipyard
-        name: Root
-        command: ls /
+        command: ls /shipyard/
       -
         service: shipyard
         name: Jekyll
-        command: ../ci/jekyll
+        command: ./shipyard/ci/jekyll
       -
         service: shipyard
         name: RSpec
-        command: ../ci/rspec
+        command: ./shipyard/ci/jekyll
       -
         service: shipyard
         name: Sass
-        command: ../ci/sass_lint
+        command: ./shipyard/ci/jekyll
 
   -
     name: Review
