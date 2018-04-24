@@ -5,10 +5,6 @@
     steps:
       -
         service: shipyard
-        name: Debug
-        command: ls
-      -
-        service: shipyard
         name: Jekyll
         command: ./ci/jekyll
       -
