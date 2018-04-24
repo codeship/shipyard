@@ -6,7 +6,7 @@
       -
         service: shipyard
         name: Debug
-        command: pwd & ls -la
+        command: ls
       -
         service: shipyard
         name: Jekyll
