@@ -14,7 +14,7 @@
       -
         service: shipyard
         name: Sass
-        command: ./ci/jekyll
+        command: ./ci/sass_lint
 
   -
     name: Review
