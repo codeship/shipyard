@@ -1,5 +1,4 @@
 ---
   shipyard:
-    image: "codeship/shipyard:latest"
-    args:
-      workdir: /shipyard
+    image: codeship/shipyard:latest
+    working_dir: /shipyard/

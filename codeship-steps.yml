@@ -10,15 +10,15 @@
       -
         service: shipyard
         name: Jekyll
-        command: sh -c "./ci/jekyll"
+        command: ./ci/jekyll
       -
         service: shipyard
         name: RSpec
-        command: sh -c "rspec"
+        command: rspec
       -
         service: shipyard
         name: Sass
-        command: sh -c "./ci/jekyll"
+        command: ./ci/jekyll
 
   -
     name: Review
