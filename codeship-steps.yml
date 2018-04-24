@@ -10,15 +10,15 @@
       -
         service: shipyard
         name: Jekyll
-        command: ./shipyard/ci/jekyll
+        command: /shipyard/ci/jekyll
       -
         service: shipyard
         name: RSpec
-        command: ./shipyard/ci/jekyll
+        command: /shipyard/ci/jekyll
       -
         service: shipyard
         name: Sass
-        command: ./shipyard/ci/jekyll
+        command: /shipyard/ci/jekyll
 
   -
     name: Review
@@ -28,7 +28,7 @@
       -
         service: shipyard
         name: Percy
-        command: ../ci/percy
+        command: /shipyard/ci/percy
   # -
   #   name: Deploy
   #   type: parallel
