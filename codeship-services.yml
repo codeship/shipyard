@@ -1,3 +1,5 @@
 ---
-  shipyard: 
+  shipyard:
     image: "codeship/shipyard:latest"
+    args:
+      workdir: /shipyard
