@@ -9,16 +9,20 @@
         command: ls
       -
         service: shipyard
+        name: Root
+        command: ls /
+      -
+        service: shipyard
         name: Jekyll
-        command: ci/jekyll
+        command: ../ci/jekyll
       -
         service: shipyard
         name: RSpec
-        command: ci/rspec
+        command: ../ci/rspec
       -
         service: shipyard
         name: Sass
-        command: ci/sass_lint
+        command: ../ci/sass_lint
 
   -
     name: Review
@@ -28,7 +32,7 @@
       -
         service: shipyard
         name: Percy
-        command: ./ci/percy
+        command: ../ci/percy
 
   # - name: Deploy
   #   type: parallel
