@@ -20,13 +20,15 @@
         name: Sass
         command: ci/sass_lint
 
-  # - name: Review
-  #   type: manual
-  #   exclude: master
-  #   steps:
-  #     - service: shipyard
-  #       name: Percy
-  #       command: ./ci/percy
+  -
+    name: Review
+    type: manual
+    exclude: master
+    steps:
+      -
+        service: shipyard
+        name: Percy
+        command: ./ci/percy
 
   # - name: Deploy
   #   type: parallel
