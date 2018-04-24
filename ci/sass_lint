@@ -1,4 +1,6 @@
 #!/bin/bash
+set -e # halt script on error
+
 color_start="\033[32m"
 color_end="\033[m"
 repository="https://github.com/codeship/shipyard.git"

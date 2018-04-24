@@ -1,0 +1,4 @@
+#!/bin/bash
+set -e # halt script on error
+
+echo -e "This step only runs in Travis CI builds at the moment: https://travis-ci.org/codeship/shipyard"

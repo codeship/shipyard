@@ -27,10 +27,14 @@
 
 -
   name: Deploy
-  type: parallel
+  type: serial
   tag: master
   steps:
     -
       service: shipyard
-      name: GitHub Pages
-      command: ./ci/deploy
+      name: RubyGems
+      command: ./ci/rubygems
+    # -
+    #   service: shipyard
+    #   name: GitHub Pages
+    #   command: ./ci/deploy
