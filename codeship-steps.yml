@@ -29,14 +29,16 @@
         service: shipyard
         name: Percy
         command: ../ci/percy
-
-  # - name: Deploy
+  # -
+  #   name: Deploy
   #   type: parallel
   #   tag: master
   #   steps:
-  #     - service: shipyard
+  #     -
+  #       service: shipyard
   #       name: RubyGems
   #       command: echo "This step only runs in Travis CI builds at the moment: https://travis-ci.org/codeship/shipyard"
-  #     - service: shipyard
+  #     -
+  #       service: shipyard
   #       name: GitHub Pages
-  #       command: ./ci/deploy
+  #       command: ./shipyard/ci/deploy
