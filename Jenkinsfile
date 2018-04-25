@@ -30,10 +30,10 @@ pipeline {
         not { branch 'master' }
       }
       steps {
-        timeout(time: 10, unit: 'MINUTES') {
-          input 'Ready to review the styleguide?'
-        }
-        sh './ci/percy'
+        // timeout(time: 10, unit: 'MINUTES') {
+        //   input 'Ready to review the styleguide?'
+        // }
+        echo 'This step only runs in Codeship builds at the moment: https://app.codeship.com/projects/246808'
       }
     }
     stage('Deploy') {
@@ -41,7 +41,7 @@ pipeline {
       parallel {
         stage('Update Percy') {
           steps {
-            sh './ci/percy'
+            echo 'This step only runs in Codeship builds at the moment: https://app.codeship.com/projects/246808'
           }
         }
         stage('RubyGems') {
