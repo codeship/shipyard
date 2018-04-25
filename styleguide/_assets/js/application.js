@@ -1,3 +1,4 @@
+//= require vendor/prod-perfect
 //= require shipyard
 //= require views/components/alert-trigger
 //= require views/utilities/colors
