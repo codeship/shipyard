@@ -1,0 +1,5 @@
+shipyard:
+  build: .
+  cached: true
+  working_dir: /shipyard/
+  encrypted_env_file: codeship.env.encrypted
