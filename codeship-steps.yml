@@ -1,39 +1,39 @@
-# -
-#   name: Test
-#   type: parallel
-#   steps:
-#     -
-#       service: shipyard
-#       name: Jekyll
-#       command: ./ci/jekyll
-#     -
-#       service: shipyard
-#       name: RSpec
-#       command: rspec
-#     -
-#       service: shipyard
-#       name: Sass
-#       command: ./ci/sass_lint
+-
+  name: Test
+  type: parallel
+  steps:
+    -
+      service: shipyard
+      name: Jekyll
+      command: ./ci/jekyll
+    -
+      service: shipyard
+      name: RSpec
+      command: rspec
+    -
+      service: shipyard
+      name: Sass
+      command: ./ci/sass_lint
 
-# -
-#   name: Review
-#   type: manual
-#   exclude: master
-#   steps:
-#     -
-#       service: shipyard
-#       name: Percy
-#       command: ./ci/percy
+-
+  name: Review
+  type: manual
+  exclude: master
+  steps:
+    -
+      service: shipyard
+      name: Percy
+      command: ./ci/percy
 
 -
   name: Deploy
   type: parallel
-  # tag: master
+  tag: master
   steps:
-    # -
-    #   service: shipyard
-    #   name: Update Percy
-    #   command: ./ci/percy
+    -
+      service: shipyard
+      name: Update Percy
+      command: ./ci/percy
     -
       service: shipyard
       name: RubyGems
