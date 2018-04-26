@@ -2,7 +2,7 @@
 set -e # halt script on error
 
 echo -e "\n\n************** Git Clone GH-Pages Branch **************"
-GIT_SSH_COMMAND="ssh -o StrictHostKeyChecking=no" git clone git@github.com:codeship/shipyard.git --branch gh-pages --single-branch styleguide/_site
+git clone https://github.com/codeship/shipyard.git --branch gh-pages --single-branch styleguide/_site
 
 echo -e "\n\n************** Jekyll Build **************"
 cd styleguide
@@ -19,7 +19,8 @@ git status
 if [[ $CI_NAME = "codeship" ]]
 then
   git commit --allow-empty -m "Deploy to GitHub Pages: ${CI_COMMIT_ID} --skip-ci"
-  git push origin gh-pages
+  # push to GitHub using -q so the API token does not show
+  git push -q "https://${GITHUB_DEPLOY_USER_API_KEY}@github.com/codeship/shipyard gh-pages
 else
   git commit --allow-empty -m "Dry Run Deploy: --skip-ci"
   git push --dry-run origin gh-pages
