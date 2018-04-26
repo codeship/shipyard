@@ -15,29 +15,29 @@
       name: Sass
       command: ./ci/sass_lint
 
--
-  name: Review
-  type: manual
-  exclude: master
-  steps:
-    -
-      service: shipyard
-      name: Percy
-      command: ./ci/percy
+# -
+#   name: Review
+#   type: manual
+#   exclude: master
+#   steps:
+#     -
+#       service: shipyard
+#       name: Percy
+#       command: ./ci/percy
 
 -
   name: Deploy
-  type: serial
-  tag: master
+  type: parallel
+  # tag: master
   steps:
+    # -
+    #   service: shipyard
+    #   name: Update Percy
+    #   command: ./ci/percy
     -
       service: shipyard
       name: RubyGems
       command: ./ci/rubygems
-    -
-      service: shipyard
-      name: Update Percy
-      command: ./ci/percy
     -
       service: shipyard
       name: GitHub Pages
