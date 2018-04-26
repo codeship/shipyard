@@ -1,19 +1,19 @@
--
-  name: Test
-  type: parallel
-  steps:
-    -
-      service: shipyard
-      name: Jekyll
-      command: ./ci/jekyll
-    -
-      service: shipyard
-      name: RSpec
-      command: rspec
-    -
-      service: shipyard
-      name: Sass
-      command: ./ci/sass_lint
+# -
+#   name: Test
+#   type: parallel
+#   steps:
+#     -
+#       service: shipyard
+#       name: Jekyll
+#       command: ./ci/jekyll
+#     -
+#       service: shipyard
+#       name: RSpec
+#       command: rspec
+#     -
+#       service: shipyard
+#       name: Sass
+#       command: ./ci/sass_lint
 
 # -
 #   name: Review
