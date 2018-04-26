@@ -2,7 +2,7 @@
 set -e # halt script on error
 
 echo -e "\n\n************** Git Clone GH-Pages Branch **************"
-git clone git@github.com:codeship/shipyard.git --branch gh-pages --single-branch styleguide/_site
+GIT_SSH_COMMAND="ssh -o StrictHostKeyChecking=no" git clone git@github.com:codeship/shipyard.git --branch gh-pages --single-branch styleguide/_site
 
 echo -e "\n\n************** Jekyll Build **************"
 cd styleguide
