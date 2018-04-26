@@ -11,5 +11,5 @@ shipyard-*.gem
 .sass-cache
 .asset-cache
 .jekyll-cache
-codeship.aes
-codeship.env
+*.aes
+*.env

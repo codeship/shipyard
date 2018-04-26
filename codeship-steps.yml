@@ -27,17 +27,17 @@
 
 -
   name: Deploy
-  type: serial
+  type: parallel
   tag: master
   steps:
     -
       service: shipyard
-      name: RubyGems
-      command: ./ci/rubygems
-    -
-      service: shipyard
       name: Update Percy
       command: ./ci/percy
+    -
+      service: shipyard
+      name: RubyGems
+      command: ./ci/rubygems
     -
       service: shipyard
       name: GitHub Pages

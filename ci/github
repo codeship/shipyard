@@ -19,7 +19,9 @@ git status
 if [[ $CI_NAME = "codeship" ]]
 then
   git commit --allow-empty -m "Deploy to GitHub Pages: ${CI_COMMIT_ID} --skip-ci"
-  git push origin gh-pages
+
+  # Push to GitHub using -q so the API token does not show
+  git push -q "https://${GITHUB_DEPLOY_USER_API_KEY}@github.com/codeship/shipyard" gh-pages
 else
   git commit --allow-empty -m "Dry Run Deploy: --skip-ci"
   git push --dry-run origin gh-pages
