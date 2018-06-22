@@ -1,0 +1,10 @@
+<svg class="icon-stride-color" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
+    <defs>
+        <linearGradient id="stride-gradient" x1="7.39" y1="10.81" x2="0.45" y2="5.73" gradientTransform="matrix(1, 0, 0, -1, 0, 16)" gradientUnits="userSpaceOnUse">
+            <stop offset="0.18" stop-color="#325ba9"/>
+            <stop offset="1" stop-color="#4b7bbe"/>
+        </linearGradient>
+    </defs>
+    <path class="icon-stride-gradient" fill="url(#stride-gradient)" d="M4.58,2V4.52c0,3.53-1.77,4.89-4,5.1a.46.46,0,0,0-.41.46v4.17a.45.45,0,0,0,.46.46h0a9.11,9.11,0,0,0,9-9.5h0V2Z" transform="translate(-0.15 -1.97)"/>
+    <path fill="#4b7bbe" d="M15.88,14,9.92,2H4.58l6.3,12.35a.71.71,0,0,0,.62.38h4a.46.46,0,0,0,.46-.47A.46.46,0,0,0,15.88,14Z" transform="translate(-0.15 -1.97)"/>
+</svg>

@@ -67,6 +67,7 @@ If you need to style several paths inside of the icon, it's important to make su
   {% iconitem :hipchat_color, class: 'center icon-xl' %}
   {% iconitem :slack, class: 'center icon-xl' %}
   {% iconitem :slack_color, class: 'center icon-xl' %}
+  {% iconitem 'stride-color', class: 'center icon-xl' %}
   {% iconitem :webhook, class: 'center icon-xl' %}
   {% iconitem :webhook_color, class: 'center icon-xl' %}
 </ul>
