@@ -6,7 +6,7 @@ git clone https://github.com/codeship/shipyard.git --branch gh-pages --single-br
 
 echo -e "\n\n************** Jekyll Build **************"
 cd styleguide
-JEKYLL_ENV=production bundle exec jekyll build --verbose
+JEKYLL_ENV=production bundle exec jekyll build --trace --verbose
 
 echo -e "\n\n************** Commit & Push to GitHub Pages **************"
 cd _site

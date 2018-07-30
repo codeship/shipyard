@@ -6,7 +6,7 @@ cd ./styleguide
 pwd
 
 echo -e "\n\n************** Jekyll Build **************"
-JEKYLL_ENV=test jekyll build --baseurl=''
+JEKYLL_ENV=test jekyll build --trace --baseurl=''
 
 echo -e "\n\n************** Changed to Root Directory **************"
 cd ../
