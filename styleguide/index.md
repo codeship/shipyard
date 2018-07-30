@@ -21,7 +21,3 @@ Then add this line to your application's JavaScript file(s):
 ```javascript
 //= require shipyard
 ```
-
-## Jekyll Tools
-- `shipyard_css_classes`
-- `site.env`
