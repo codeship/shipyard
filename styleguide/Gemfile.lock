@@ -1,7 +1,7 @@
 PATH
   remote: ..
   specs:
-    shipyard-framework (1.00.0)
+    shipyard-framework (1.0)
       actionview (~> 5.2.0)
       sprockets (~> 4.0.0.beta8)
 
