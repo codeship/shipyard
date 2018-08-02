@@ -15,10 +15,12 @@ module Jekyll
 
     def load_sass_files
       Dir["#{@stylesheets_path}**/*.sass"].sort.map do |file|
+        dir = File.dirname(file)
+        puts dir
         sass = %(@import "shipyard/core"\n)
         sass += File.read(file)
-        compact_css = render(sass, :compact)
-        compressed_css = render(sass, :compressed)
+        compact_css = render(sass, :compact, dir)
+        compressed_css = render(sass, :compressed, dir)
         gzip_size = Zlib::Deflate.deflate(compressed_css).bytesize
 
         # Gather all the selectors
@@ -43,12 +45,12 @@ module Jekyll
       end
     end
 
-    def render(sass, style)
+    def render(sass, style, dir)
       SassC::Engine.new(
         sass,
         syntax: :sass,
         style: style,
-        load_paths: [Shipyard::stylesheets_path]
+        load_paths: [Shipyard::stylesheets_path, dir]
       ).render
     end
   end
