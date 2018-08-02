@@ -3,7 +3,6 @@ PATH
   specs:
     shipyard-framework (1.0)
       actionview (~> 5.2.0)
-      sprockets (~> 4.0.0.beta8)
 
 GEM
   remote: https://rubygems.org/
@@ -146,6 +145,7 @@ DEPENDENCIES
   rake
   sassc (~> 1.11.4)
   shipyard-framework!
+  sprockets (~> 4.0.0.beta8)
   uglifier
 
 BUNDLED WITH

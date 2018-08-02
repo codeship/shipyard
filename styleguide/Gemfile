@@ -1,6 +1,7 @@
 source 'https://rubygems.org'
 
 group :jekyll_plugins do
+  gem 'sprockets', '~> 4.0.0.beta8'
   gem 'jekyll', '~> 3.8.3'
   gem 'jekyll-assets', '~> 3.0.11'
   gem 'shipyard-framework', path: '../'
