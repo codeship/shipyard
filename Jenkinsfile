@@ -30,19 +30,19 @@ pipeline {
         not { branch 'master' }
       }
       parallel {
-        stage('Percy') {
+        stage('Browser Tests') {
           stages {
-            stage ('Percy-1') {
+            stage ('Chrome') {
               steps {
                 echo 'Hello world'
               }
             }
-            stage ('Percy-2') {
+            stage ('Safari') {
               steps {
                 echo 'Hello world'
               }
             }
-            stage ('Percy-3') {
+            stage ('Firefox') {
               steps {
                 echo 'Hello world'
               }
