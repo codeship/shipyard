@@ -10,7 +10,8 @@ pipeline {
       parallel {
         stage('Jekyll') {
           steps {
-            echo 'Hello world'
+            // sh './ci/jekyll'
+            echo 'Commented out as the Jekyll tests are a little broken at the moment.'
           }
         }
         stage('RSpec') {
@@ -49,9 +50,15 @@ pipeline {
             }
           }
         }
-        stage('QA') {
+        stage('Percy') {
+          when {
+            not { branch 'master' }
+          }
           steps {
-            echo 'Hello world'
+            // timeout(time: 10, unit: 'MINUTES') {
+            //   input 'Ready to review the styleguide?'
+            // }
+            echo 'This step only runs in Codeship builds at the moment: https://app.codeship.com/projects/246808'
           }
         }
         stage('Staging') {
