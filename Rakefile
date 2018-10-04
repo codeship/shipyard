@@ -60,9 +60,4 @@ namespace :shipyard do
     icons = Shipyard::Icons.new args.icon_directory, args.output_directory
     icons.write
   end
-
-  desc 'Publish project to npm as a scoped package @codeship/shipyard'
-  task :console do
-    sh 'npm publish --access public'
-  end
 end
