@@ -1,6 +1,6 @@
 {
   "name": "@codeship/shipyard",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A mobile-first SASS design system for CodeShip.",
   "main": "assets/stylesheets/_shipyard.sass",
   "scripts": {
