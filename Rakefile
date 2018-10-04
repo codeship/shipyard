@@ -54,6 +54,11 @@ namespace :shipyard do
     end
   end
 
+  desc 'Publish project to npm as scoped package @codeship/shipyard'
+  task :console do
+    sh 'npm publish --access public'
+  end
+
   desc 'Compiles Shipyard and custom icons into an external svg definitions file.'
   task :icons, [:icon_directory, :output_directory] do |t, args|
     args.with_defaults(:icon_directory => '/app/assets/icons/', :output_directory => '/public/assets/')
