@@ -2,7 +2,7 @@
 
 A light-weight, powerful, front-end framework for faster web development and useful tools for Ruby on Rails and Jekyll enthusiasts.
 
-## Installation
+## Installation 
 
 Add this line to your application's Gemfile:
 
