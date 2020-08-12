@@ -1,4 +1,4 @@
-FROM ruby:2.5
+FROM ruby:2.6
 
 MAINTAINER dev@codeship.com
 
@@ -9,7 +9,7 @@ WORKDIR /shipyard/
 RUN apt-get update -y && \
     apt-get install -y \
       build-essential \
-      openjdk-8-jdk \
+      openjdk-11-jdk \
       locales \
       nodejs \
       bc
@@ -25,12 +25,12 @@ ENV LC_ALL en_US.UTF-8
 COPY . ./
 
 # Install Shipyard Gems.
-RUN gem install bundler --pre --no-ri --no-rdoc && \
+RUN gem install bundler --pre --no-document && \
     bundle install --jobs 20 --retry 5
 
 # Install Styleguide Gems.
 WORKDIR /shipyard/styleguide/
-RUN gem install bundler --pre --no-ri --no-rdoc && \
+RUN gem install bundler --pre --no-document && \
     bundle install --jobs 20 --retry 5
 
 # Serve the site
