@@ -13,14 +13,13 @@ Gem::Specification.new do |spec|
 
   # Rails Dependencies
   spec.add_runtime_dependency 'actionview'
-
   spec.add_development_dependency 'bundler'
   spec.add_development_dependency 'sass'
   spec.add_development_dependency 'rspec', '~> 3.6'
   spec.add_development_dependency 'percy-cli', '~> 1.3.1'
-  spec.add_development_dependency 'html-proofer', '~> 3.9', '>= 3.9.1'
-  spec.add_development_dependency 'jekyll', '~> 3.8.3'
-  spec.add_development_dependency 'jekyll-assets', '~> 3.0.11'
+  spec.add_development_dependency 'html-proofer', '~> 3.15', '>= 3.15.3'
+  spec.add_development_dependency 'jekyll','~> 4.1', '>= 4.1.1'
+  spec.add_development_dependency 'jekyll-assets'
 
   spec.files = Dir['app/**/*']
   spec.files += Dir['lib/**/*']
