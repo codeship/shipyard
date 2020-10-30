@@ -14,7 +14,7 @@ Gem::Specification.new do |spec|
   # Rails Dependencies
   spec.add_runtime_dependency 'actionview'
   spec.add_development_dependency 'bundler'
-  spec.add_development_dependency 'sass'
+  spec.add_development_dependency 'sass', '~> 3.4', '>= 3.4.22'
   spec.add_development_dependency 'rspec', '~> 3.6'
   spec.add_development_dependency 'percy-cli', '~> 1.3.1'
   spec.add_development_dependency 'html-proofer', '~> 3.15', '>= 3.15.3'
