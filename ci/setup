@@ -1,6 +1,6 @@
 #!/bin/bash
 
 rvm use $(cat .ruby-version)
-gem install bundler --pre --no-ri --no-rdoc
+gem install bundler --pre --no-document
 bundle install
-(cd styleguide && gem install bundler --pre --no-ri --no-rdoc && bundle install)
+(cd styleguide && gem install bundler --pre --no-document && bundle install)

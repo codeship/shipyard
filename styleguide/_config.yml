@@ -44,7 +44,6 @@ kramdown:
       disable: false
       css_class: 'code-inline'
 plugins:
-  - jekyll-assets
   - shipyard-framework
 
 assets:
