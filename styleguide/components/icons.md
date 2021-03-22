@@ -58,6 +58,7 @@ If you need to style several paths inside of the icon, it's important to make su
   {% iconitem :codeship, class: 'center icon-xl' %}
   {% iconitem :email_color, class: 'center icon-xl' %}
   {% iconitem :flowdock_color, class: 'center icon-xl' %}
+  {% iconitem :auth0, class: 'center icon-xl' %}
   {% iconitem :github, class: 'center icon-xl' %}
   {% iconitem :gitlab, class: 'center icon-xl' %}
   {% iconitem :gitlab_color, class: 'center icon-xl' %}
