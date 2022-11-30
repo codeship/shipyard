@@ -32,3 +32,7 @@
       service: shipyard
       name: GitHub Pages
       command: ./ci/github
+    -
+      service: shipyard
+      name: NPM publish
+      command: ./ci/npm
